@@ -1,0 +1,12 @@
+.idea/
+node_modules/
+h7ml/.vuepress/.cache/
+h7ml/.vuepress/.temp/
+h7ml/.vuepress/dist/
+.pnpm-debug.log
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
+*.log
+h7ml/posts/coding/*.md
+

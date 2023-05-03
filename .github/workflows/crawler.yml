@@ -1,0 +1,129 @@
+name: crawler
+
+on:
+  schedule:
+    - cron: '00 20 * * *'
+  workflow_dispatch:
+
+jobs:
+  crawler:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: vitepress
+          fetch-depth: 0
+      - uses: szenius/set-timezone@v1.0
+        with:
+          timezoneLinux: 'Asia/Shanghai'
+      - name: Install pnpm  🚀
+        uses: pnpm/action-setup@v2.0.1
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Install dependencies  🚀
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm install
+
+      - name: Setup Node.js  🚀
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: crawler project  🚀
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          yarn run crawler
+      - name: build project  🚀
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          yarn run build
+      - name: server action  🚀
+        uses: easychen/github-action-server-chan@v1.0.0
+        with:
+          sendkey: ${{ secrets.SEND_KEY }}
+          title: '我是一个小测试😝'
+
+      - name: Deploy to Github 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml
+          branch: vitepress
+          folder: .
+          clean: true
+          single-commit: true
+          git-config-name: h7ml
+          git-config-email: h7ml@qq.com
+          commit-message: '[Bot] Deploy to GitHub'
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: Deploy to layer0 🚀
+        run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
+
+      - name: copy README.md 🚀
+        run: cp README.md h7ml/.vuepress/dist
+
+      - name: Upload h7ml 🚀
+        uses: actions/upload-artifact@v3
+        with:
+          name: h7ml
+          path: h7ml/.vuepress/dist
+
+      - name: Deploy to gh pages  🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml
+          branch: gh-pages
+          folder: h7ml/.vuepress/dist
+          clean: true
+          single-commit: true
+          git-config-name: h7ml[h7ml@qq.com]
+          git-config-email: h7ml@qq.com
+          commit-message: '[Bot] Deploy to GitHub Pages'
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+  tencent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to Tencent ☁️
+        uses: TencentCloudBase/cloudbase-action@v1.1.1
+        with:
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          envId: ${{ secrets.ENV_ID }}
+          staticSrcPath: ./
+    needs: crawler
+
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sync to Gitee  🚀
+        uses: wearerequired/git-mirror-action@master
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+        with:
+          source-repo: git@github.com:h7ml/h7ml.git
+          destination-repo: git@gitee.com:h7ml/h7ml.git
+
+      - name: Build Gitee Pages  🚀
+        uses: yanglbme/gitee-pages-action@main
+        with:
+          # 注意替换为你的 Gitee 用户名
+          gitee-username: h7ml
+          # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
+          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+          # 注意替换为你的 Gitee 仓库，仓库名严格区分大小写，请准确填写，否则会出错
+          gitee-repo: h7ml/h7ml
+          # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
+          branch: gh-pages
+    needs: crawler

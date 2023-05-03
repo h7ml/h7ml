@@ -1,0 +1,262 @@
+name: deploy
+
+on:
+  schedule:
+    - cron: '30 06 * * *'
+  workflow_dispatch:
+  push:
+    paths:
+      - 'h7ml/**'
+      - 'h7ml/posts/**'
+      - 'h7ml/posts/segmentfault/**'
+    branches:
+      - vitepress
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: vitepress
+          fetch-depth: 0
+
+      - name: Install pnpm  🚀
+        uses: pnpm/action-setup@v2.0.1
+        id: pnpm-install
+        with:
+          version: 7
+          run_install: false
+
+      - name: Install dependencies  🚀
+        if: steps.pnpm-cache.outputs.cache-hit != 'true'
+        run: pnpm update && pnpm install --no-frozen-lockfile
+
+      - name: Setup Node.js  🚀
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Build project  🚀
+        env:
+          NODE_OPTIONS: --max_old_space_size=4096
+        run: |
+          pnpm run build
+          pnpm run crawler:sitemap2txt
+
+      - name: copy README.md 🚀
+        run: cp README.md h7ml/.vuepress/dist
+
+      - name: Upload h7ml 🚀
+        uses: actions/upload-artifact@v3
+        with:
+          name: h7ml
+          path: h7ml/.vuepress/dist
+
+      - name: Deploy to gh pages  🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml
+          branch: gh-pages
+          folder: h7ml/.vuepress/dist
+          token: ${{ secrets.ACCESS_TOKEN }}
+          clean: true
+          single-commit: true
+          git-config-name: h7ml
+          git-config-email: h7ml@qq.com
+          commit-message: '[Bot] Deploy to GitHub Pages'
+      - name: Upload surge service and generate preview URL 🚀
+        id: deploy
+        run: |
+          export GITHUB_SHA=${{ github.sha }}
+          export GITHUB_SHA_SUB=${GITHUB_SHA: 0: 7 }
+          export DEPLOY_DOMAIN=https://h7ml-$GITHUB_SHA_SUB.surge.sh
+          npx surge --project ./h7ml/.vuepress/dist --domain $DEPLOY_DOMAIN --token ${{ secrets.surge_token }}
+          echo the preview URL is $DEPLOY_DOMAIN
+          echo "::set-output name=url::$DEPLOY_DOMAIN"
+
+      - name: Deploy to netlify 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml.github.io
+          branch: netlify
+          folder: h7ml/.vuepress/dist
+          clean: true
+          single-commit: true
+          git-config-name: h7ml
+          git-config-email: h7ml@qq.com
+          commit-message: '[Bot] Deploy to GitHub Pages'
+          token: ${{ secrets.ACCESS_TOKEN }}
+
+  #      - name: Deploy to layer0 🚀
+  #        run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
+
+  #  layer0:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Checkout  🚀
+  #        uses: actions/checkout@v3
+  #        with:
+  #          ref: gh-pages
+  #          fetch-depth: 0
+  #      - name: Setup Node.js
+  #        uses: actions/setup-node@v3
+  #        with:
+  #          node-version: 18
+  #
+  #      - name: Deploy to layer0 🚀
+  #        run: |
+  #          yarn global add @layer0/cli @layer0/core @layer0/prefetch @layer0/devtools
+  #          layer0 deploy --token=2NDcGiEpFUgUgLo9nY2xEWNv
+  #    needs: deploy
+
+  #  netlify:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Checkout  🚀
+  #        uses: actions/checkout@v3
+  #        with:
+  #          ref: gh-pages
+  #          fetch-depth: 0
+  #      - name: rm .git  🚀
+  #        run: |
+  #            rm -rf .git
+  #      - name: Deploy to netlify 🚀
+  #        uses: JamesIves/github-pages-deploy-action@v4
+  #        with:
+  #          repository-name: h7ml/h7ml.github.io
+  #          branch: netlify
+  #          folder: ./
+  #          clean: true
+  #          single-commit: true
+  #          git-config-name: h7ml
+  #          git-config-email: h7ml@qq.com
+  #          commit-message: '[Bot] Deploy to GitHub Pages'
+  #          token: ${{ secrets.ACCESS_TOKEN }}
+  #    needs: deploy
+
+  #  QuantCDN:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Checkout  🚀
+  #        uses: actions/checkout@v3
+  #        with:
+  #          ref: gh-pages
+  #          fetch-depth: 0
+  #      - name: Deploy to gh QuantCDN  🚀
+  #        uses: quantcdn/deploy-action@v2.0.0
+  #        with:
+  #          customer: 'h7ml'
+  #          project: 'h7ml'
+  #          token: ${{ secrets.QUANT_TOKEN }}
+  #          dir: './'
+  #          skip-unpublish: false
+  #    needs: deploy
+
+  vercel:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to vercel 🚀
+        uses: amondnet/vercel-action@master
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          github-token: ${{ secrets.GIT_TOKEN }}
+          vercel-args: '--prod' #Optional
+          vercel-org-id: ${{ secrets.ORG_ID}}
+          vercel-project-id: ${{ secrets.PROJECT_ID}}
+          working-directory: ./
+    needs: deploy
+
+  surge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to surge 🚀
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'h7ml.surge.sh'
+          project: './'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+    needs: deploy
+
+  tencent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to Tencent ☁️
+        uses: TencentCloudBase/cloudbase-action@v1.1.1
+        with:
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          envId: ${{ secrets.ENV_ID }}
+          staticSrcPath: ./
+    needs: deploy
+
+  #  sync:
+  #    runs-on: ubuntu-latest
+  #    steps:
+  #      - name: Sync to Gitee  🚀
+  #        uses: wearerequired/git-mirror-action@master
+  #        env:
+  #          SSH_PRIVATE_KEY: ${{ secrets.GITEE_RSA_PRIVATE_KEY }}
+  #        with:
+  #          source-repo: git@github.com:h7ml/h7ml.git
+  #          destination-repo: git@gitee.com:h7ml/h7ml.git
+
+  #      - name: Build Gitee Pages  🚀
+  #        uses: yanglbme/gitee-pages-action@main
+  #        with:
+  #          # 注意替换为你的 Gitee 用户名
+  #          gitee-username: h7ml
+  #          # 注意在 Settings->Secrets 配置 GITEE_PASSWORD
+  #          gitee-password: ${{ secrets.GITEE_PASSWORD }}
+  #          # 注意替换为你的 Gitee 仓库，仓库名严格区分大小写，请准确填写，否则会出错
+  #          gitee-repo: h7ml/h7ml
+  #          # 要部署的分支，默认是 master，若是其他分支，则需要指定（指定的分支必须存在）
+  #          branch: gh-pages
+  #    needs: deploy
+
+  clean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: 'Apocalypsor/Workflows-Cleaner'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install pipenv
+        run: python -m pip install --upgrade pipenv wheel
+      - name: Install dependencies
+        run: |
+          pipenv requirements > requirements.txt
+          pip install -r requirements.txt
+      - name: Clean
+        env:
+          GITHUB_REPO: 'h7ml/h7ml'
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          EXPIRE_TIME: '12h'
+        run: python run.py
+    needs: tencent

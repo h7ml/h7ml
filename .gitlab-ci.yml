@@ -1,0 +1,25 @@
+image: node:16.15.0
+
+stages:
+  - build
+
+cache:
+  paths:
+    - node_modules/
+
+before_script:
+  - yarn install
+  - npm install increase-memory-limit cross-env -g
+  - cross-env LIMIT=4096 increase-memory-limit
+
+build:
+  stage: build
+  script:
+    - yarn build
+    - rm -rf public
+    - mv h7ml/.vuepress/dist public
+  artifacts:
+    paths:
+      - public
+  only:
+    - vitepress

@@ -1,0 +1,14 @@
+.idea/
+node_modules/
+h7ml/.vuepress/.cache/
+h7ml/.vuepress/.temp/
+h7ml/.vuepress/dist/
+.pnpm-debug.log
+yarn-error.log
+yarn.lock
+package-lock.json
+*.log# Layer0 generated build directory
+.layer0
+.eslintcache
+script/task.js
+script/keydatas
