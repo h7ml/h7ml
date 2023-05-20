@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-说说你对 Redux 的理解？其工作原理？
+footer: 说说你对 Redux 的理解？其工作原理？
+order: 31
+star: 31
+date: 2023-05-20
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - React
+tag:
+  - interview
+  - React
+shortTitle: 前端物语|面试物语-说说你对 Redux 的理解？其工作原理？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 说说你对 Redux 的理解？其工作原理？
+---
+
 # 说说你对 Redux 的理解？其工作原理？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/52394be0-e2a5-11eb-ab90-d9ae814b240d.png)

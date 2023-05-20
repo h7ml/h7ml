@@ -83,6 +83,7 @@ date: 2023-02-24
 - [ 说说你是如何提高组件的渲染效率的？在 React 中如何避免不必要的 render？](https://www.h7ml.cn/posts/interview/React/improve_render)
 - [ React 中的 key 有什么作用？](https://www.h7ml.cn/posts/interview/React/key)
 - [ 说说 React 生命周期有哪些不同阶段？每个阶段对应的方法是？](https://www.h7ml.cn/posts/interview/React/life_cycle)
+- [ 说说你对 Redux 的理解？其工作原理？](https://www.h7ml.cn/posts/interview/React/redux)
 - [ 说说 React render 方法的原理？在什么时候会被触发？](https://www.h7ml.cn/posts/interview/React/render)
 - [ 说说 React 服务端渲染怎么做？原理是什么？](https://www.h7ml.cn/posts/interview/React/server_side_rendering)
 - [ 说说 React 中的 setState 执行机制](https://www.h7ml.cn/posts/interview/React/setState)
