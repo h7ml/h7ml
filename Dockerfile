@@ -6,15 +6,21 @@ WORKDIR /app
 
 # 将 package.json 和 package-lock.json 复制到工作目录
 COPY package*.json ./
+COPY pnpm-lock.yaml ./
+COPY .npmrc ./
 
-# 安装依赖包
-RUN npm install
+# 安装pnpm
+RUN npm install -g pnpm
+
+# 安装依赖
+RUN pnpm install
 
 # 打包项目
-RUN npm run build
+RUN pnpm build
 
-# 将 README.md 下载到 dist 目录下
-RUN wget https://raw.githubusercontent.com/h7ml/h7ml/main/README.md -P /app/h7ml/.vuepress/dist/
+
+# # 将 README.md 下载到 dist 目录下
+# RUN wget https://raw.githubusercontent.com/h7ml/h7ml/main/README.md -P /app/h7ml/.vuepress/dist/
 
 # 将所有文件复制到工作目录
 COPY . .
