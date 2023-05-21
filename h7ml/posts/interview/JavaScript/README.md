@@ -8,7 +8,7 @@ title: 前端物语|面试物语-JavaScript
 index: false
 dir:
   order: 1
-date: 2023-04-20
+date: 2023-05-21
 ---
 
 - [ == 和 ===区别，分别在什么情况使用](https://www.h7ml.cn/posts/interview/JavaScript/== \_===)
@@ -35,4 +35,5 @@ date: 2023-04-20
 - [ web 常见的攻击方式有哪些？如何防御？](https://www.h7ml.cn/posts/interview/JavaScript/security)
 - [ JavaScript 字符串的常用方法有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/string_api)
 - [ 谈谈 JavaScript 中的类型转换机制](https://www.h7ml.cn/posts/interview/JavaScript/type_conversion)
+- [ typeof 与 instanceof 区别](https://www.h7ml.cn/posts/interview/JavaScript/typeof_instanceof)
 - [ 如何判断一个元素是否在可视区域中？](https://www.h7ml.cn/posts/interview/JavaScript/visible)
