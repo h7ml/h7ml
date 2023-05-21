@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-举例说明你对尾递归的理解，有哪些应用场景
+footer: 举例说明你对尾递归的理解，有哪些应用场景
+order: 27
+star: 27
+date: 2023-05-21
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-举例说明你对尾递归的理解，有哪些应用场景
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 举例说明你对尾递归的理解，有哪些应用场景
+---
+
 # 举例说明你对尾递归的理解，有哪些应用场景
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/74db8fe0-815d-11eb-85f6-6fac77c0c9b3.png)

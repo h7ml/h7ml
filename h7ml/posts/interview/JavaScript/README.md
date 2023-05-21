@@ -34,6 +34,7 @@ date: 2023-05-21
 - [ 说说你对作用域链的理解](https://www.h7ml.cn/posts/interview/JavaScript/scope)
 - [ web 常见的攻击方式有哪些？如何防御？](https://www.h7ml.cn/posts/interview/JavaScript/security)
 - [ JavaScript 字符串的常用方法有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/string_api)
+- [ 举例说明你对尾递归的理解，有哪些应用场景](https://www.h7ml.cn/posts/interview/JavaScript/tail_recursion)
 - [ 谈谈 JavaScript 中的类型转换机制](https://www.h7ml.cn/posts/interview/JavaScript/type_conversion)
 - [ typeof 与 instanceof 区别](https://www.h7ml.cn/posts/interview/JavaScript/typeof_instanceof)
 - [ 如何判断一个元素是否在可视区域中？](https://www.h7ml.cn/posts/interview/JavaScript/visible)
