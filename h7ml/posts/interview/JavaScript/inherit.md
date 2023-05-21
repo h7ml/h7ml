@@ -1,10 +1,10 @@
 ---
 icon: question
 description: 前端物语|面试物语-Javascript 如何实现继承？
-footer: <a href='https://beian.mit.gov.cn/' target='blank'>浙ICP备2021037683号-2</a>Javascript 如何实现继承？
-order: 3
-star: 3
-date: 2023-02-27
+footer: Javascript 如何实现继承？
+order: 28
+star: 28
+date: 2023-05-21
 author: h7ml
 image: https://www.h7ml.cn/logo.png
 banner: https://www.h7ml.cn/logo.png
