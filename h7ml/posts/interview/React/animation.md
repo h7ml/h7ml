@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-在 react 中组件间过渡动画如何实现？
+footer: 在 react 中组件间过渡动画如何实现？
+order: 33
+star: 33
+date: 2023-05-23
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - React
+tag:
+  - interview
+  - React
+shortTitle: 前端物语|面试物语-在 react 中组件间过渡动画如何实现？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 在 react 中组件间过渡动画如何实现？
+---
+
 # 在 react 中组件间过渡动画如何实现？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/294f1e00-e4b0-11eb-ab90-d9ae814b240d.png)

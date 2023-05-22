@@ -75,6 +75,7 @@ date: 2023-02-24
 - [ 说说 Real DOM 和 Virtual DOM 的区别？优缺点？](https://www.h7ml.cn/posts/interview/React/Real_DOM_Virtual DOM)
 - [ 说说对 Redux 中间件的理解？常用的中间件有哪些？实现原理？](https://www.h7ml.cn/posts/interview/React/Redux_Middleware)
 - [ 说说 React 的事件机制？](https://www.h7ml.cn/posts/interview/React/SyntheticEvent)
+- [ 在 react 中组件间过渡动画如何实现？](https://www.h7ml.cn/posts/interview/React/animation)
 - [ 说说你在 React 项目是如何捕获错误的？](https://www.h7ml.cn/posts/interview/React/capture_error)
 - [ 说说对 React 中类组件和函数组件的理解？有什么区别？](https://www.h7ml.cn/posts/interview/React/class_function_component)
 - [ React 中组件之间如何通信？](https://www.h7ml.cn/posts/interview/React/communication)
