@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-什么是防抖和节流？有什么区别？如何实现？
+footer: 什么是防抖和节流？有什么区别？如何实现？
+order: 28
+star: 28
+date: 2023-05-22
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-什么是防抖和节流？有什么区别？如何实现？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 什么是防抖和节流？有什么区别？如何实现？
+---
+
 # 什么是防抖和节流？有什么区别？如何实现？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/912f1a10-8787-11eb-85f6-6fac77c0c9b3.png)

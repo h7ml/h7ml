@@ -23,6 +23,7 @@ date: 2023-02-24
 - [ 大文件上传如何做断点续传？](https://www.h7ml.cn/posts/interview/JavaScript/continue_to_upload)
 - [ 深拷贝浅拷贝的区别？如何实现一个深拷贝？](https://www.h7ml.cn/posts/interview/JavaScript/copy)
 - [ 说说 JavaScript 中的数据类型？存储上的差别？](https://www.h7ml.cn/posts/interview/JavaScript/data_type)
+- [ 什么是防抖和节流？有什么区别？如何实现？](https://www.h7ml.cn/posts/interview/JavaScript/debounce_throttle)
 - [ 说说 JavaScript 中的事件模型](https://www.h7ml.cn/posts/interview/JavaScript/event_Model)
 - [ 解释下什么是事件代理？应用场景？](https://www.h7ml.cn/posts/interview/JavaScript/event_agent)
 - [ 说说你对事件循环的理解](https://www.h7ml.cn/posts/interview/JavaScript/event_loop)
