@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-DOM 常见的操作有哪些？
+footer: DOM 常见的操作有哪些？
+order: 29
+star: 29
+date: 2023-05-24
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-DOM 常见的操作有哪些？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: DOM 常见的操作有哪些？
+---
+
 # DOM 常见的操作有哪些？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/a89c99a0-7fdc-11eb-ab90-d9ae814b240d.png)

@@ -14,6 +14,7 @@ date: 2023-02-24
 - [JavaScript](https://www.h7ml.cn/posts/interview/JavaScript)
 
 - [ == 和 ===区别，分别在什么情况使用](https://www.h7ml.cn/posts/interview/JavaScript/== \_===)
+- [ DOM 常见的操作有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/Dom)
 - [ ajax 原理是什么？如何实现？](https://www.h7ml.cn/posts/interview/JavaScript/ajax)
 - [ 数组的常用方法有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/array_api)
 - [ bind、call、apply 区别？如何实现一个 bind?](https://www.h7ml.cn/posts/interview/JavaScript/bind_call_apply)
