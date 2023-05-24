@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-谈谈 this 对象的理解
+footer: 谈谈 this 对象的理解
+order: 30
+star: 30
+date: 2023-05-24
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-谈谈 this 对象的理解
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 谈谈 this 对象的理解
+---
+
 # 谈谈 this 对象的理解
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/46c820d0-74b7-11eb-85f6-6fac77c0c9b3.png)
