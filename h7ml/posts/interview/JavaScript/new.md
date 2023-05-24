@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-说说 new 操作符具体干了什么？
+footer: 说说 new 操作符具体干了什么？
+order: 31
+star: 31
+date: 2023-05-24
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-说说 new 操作符具体干了什么？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: 说说 new 操作符具体干了什么？
+---
+
 # 说说 new 操作符具体干了什么？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/880d0010-7a39-11eb-85f6-6fac77c0c9b3.png)

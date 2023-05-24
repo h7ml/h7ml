@@ -33,6 +33,7 @@ date: 2023-02-24
 - [ 说说你了解的 js 数据结构？](https://www.h7ml.cn/posts/interview/JavaScript/js_data_structure)
 - [ 说说 Javascript 数字精度丢失的问题，如何解决？](https://www.h7ml.cn/posts/interview/JavaScript/loss_accuracy)
 - [ 说说 JavaScript 中内存泄漏的几种情况？](https://www.h7ml.cn/posts/interview/JavaScript/memory_leak)
+- [ 说说 new 操作符具体干了什么？](https://www.h7ml.cn/posts/interview/JavaScript/new)
 - [ 如何实现上拉加载，下拉刷新？](https://www.h7ml.cn/posts/interview/JavaScript/pull_up_loading_pull_down_refresh)
 - [ 说说你对正则表达式的理解？应用场景？](https://www.h7ml.cn/posts/interview/JavaScript/regexp)
 - [ 说说你对作用域链的理解](https://www.h7ml.cn/posts/interview/JavaScript/scope)
