@@ -1,3 +1,27 @@
+---
+icon: question
+description: 前端物语|面试物语-JavaScript 原型，原型链 ? 有什么特点？
+footer: JavaScript 原型，原型链 ? 有什么特点？
+order: 35
+star: 35
+date: 2023-05-26
+author: h7ml
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+category:
+  - interview
+  - JavaScript
+tag:
+  - interview
+  - JavaScript
+shortTitle: 前端物语|面试物语-JavaScript 原型，原型链 ? 有什么特点？
+isOriginal: false
+head:
+  - - meta
+    - name: keywords
+      content: JavaScript 原型，原型链 ? 有什么特点？
+---
+
 # JavaScript 原型，原型链 ? 有什么特点？
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/4500e170-725e-11eb-85f6-6fac77c0c9b3.png)
