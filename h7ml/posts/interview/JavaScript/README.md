@@ -8,10 +8,12 @@ title: 前端物语|面试物语-JavaScript
 index: false
 dir:
   order: 1
-date: 2023-05-25
+date: 2023-05-26
 ---
 
-- [ == 和 ===区别，分别在什么情况使用](https://www.h7ml.cn/posts/interview/JavaScript/== \_===) ,- [ DOM 常见的操作有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/Dom)
+- [ == 和 ===区别，分别在什么情况使用](https://www.h7ml.cn/posts/interview/JavaScript/== \_===)
+- [ 说说你对 BOM 的理解，常见的 BOM 对象你了解哪些？](https://www.h7ml.cn/posts/interview/JavaScript/BOM)
+- [ DOM 常见的操作有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/Dom)
 - [ ajax 原理是什么？如何实现？](https://www.h7ml.cn/posts/interview/JavaScript/ajax)
 - [ 数组的常用方法有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/array_api)
 - [ bind、call、apply 区别？如何实现一个 bind?](https://www.h7ml.cn/posts/interview/JavaScript/bind_call_apply)
@@ -26,6 +28,7 @@ date: 2023-05-25
 - [ 解释下什么是事件代理？应用场景？](https://www.h7ml.cn/posts/interview/JavaScript/event_agent)
 - [ 说说你对事件循环的理解](https://www.h7ml.cn/posts/interview/JavaScript/event_loop)
 - [ Javascript 中如何实现函数缓存？函数缓存有哪些应用场景？](https://www.h7ml.cn/posts/interview/JavaScript/function_cache)
+- [ 说说你对函数式编程的理解？优缺点？](https://www.h7ml.cn/posts/interview/JavaScript/functional_programming)
 - [ Javascript 如何实现继承？](https://www.h7ml.cn/posts/interview/JavaScript/inherit)
 - [ 说说你了解的 js 数据结构？](https://www.h7ml.cn/posts/interview/JavaScript/js_data_structure)
 - [ 说说 Javascript 数字精度丢失的问题，如何解决？](https://www.h7ml.cn/posts/interview/JavaScript/loss_accuracy)
