@@ -16,8 +16,13 @@ existsSync(freePath);
 
 // 获取文件夹中文件数量
 const getFileCount = async (dirPath) => {
-  const files = await fs.readdir(dirPath, { encoding: 'utf8' });
-  return files.filter((file) => path.extname(file) === '.md').length;
+  try {
+    const files = await fs.readdir(dirPath, { encoding: 'utf8' });
+    return files.filter((file) => path.extname(file) === '.md').lengt || 0;
+  } catch (err) {
+    console.log(err)
+    return 0;
+  }
 };
 
 // 标签
@@ -90,10 +95,10 @@ const scrapeArticle = async (page, host, link, skip) => {
     description,
     content,
   };
-  await saveElementPng(host + link, page, host);
-  const footer = `<div>crawler by <a class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" href="https://github.com/h7ml/h7ml/blob/vitepress/script/crawler/segmentfault.js">h7ml</a> Original address <a class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" href="${
-    host + link
-  }">segmentfault</a><p>${getNowDate('YYYY-MM-DD HH:mm:ss')}</p></div>`;
+
+  // await saveElementPng(host + link, page, host);
+  const footer = `<div>crawler by <a class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" href="https://github.com/h7ml/h7ml/blob/vitepress/script/crawler/segmentfault.js">h7ml</a> Original address <a class="repo-link" target="_blank" rel="noopener noreferrer" aria-label="GitHub" href="${host + link
+    }">segmentfault</a><p>${getNowDate('YYYY-MM-DD HH:mm:ss')}</p></div>`;
   const fileOrder = await getFileCount(path.join(__dirname, '../../h7ml/posts/segmentfault/'));
   const writeInfo = `---\nicon: hot\ndescription: ${description}\nfooter: ${footer}\norder: ${fileOrder}\nstar: ${fileOrder}\ndate: ${date}\nauthor: h7ml\nimage: https://www.h7ml.cn/logo.png\nbanner: https://www.h7ml.cn/logo.png\ncategory:\n  - segmentfault\n  - ${tag}\ntag:\n  - segmentfault\n  - ${tag}\nshortTitle: ${title}\ntitle: ${title}\nisOriginal: false\nhead:\n  - - meta\n    - name: keywords\n      content: ${description}\n---\n\n${content}`;
   await fs.writeFile(`${freePath}${pageInfo.base64Title}.md`, writeInfo, { encoding: 'utf8', flag: 'w' });
@@ -120,7 +125,9 @@ async function main() {
   // articleCount
   const articleCount = 3;
   try {
-    await page.goto(`https://segmentfault.com/channel/${tag}`, { timeout: 0 });
+    const url = `https://segmentfault.com/channel/${tag}`
+    console.log('%c [ url  ]-123', 'font-size:13px; background:pink; color:#bf2c9f;', url)
+    await page.goto(url, { timeout: 0 });
     await page.waitForTimeout(1000);
     await page.waitForSelector('.content-list-wrap');
     const host = 'https://segmentfault.com';

@@ -5,6 +5,7 @@
   "description": "每一个不曾起舞的日子,都是对生命的辜负!",
   "license": "MIT",
   "scripts": {
+    "cz": "czg",
     "build": "vuepress build h7ml",
     "clean-build": "vuepress build h7ml --clean-cache",
     "clean-dev": "vuepress dev h7ml --clean-cache",
@@ -72,7 +73,6 @@
     "node-unzip-2": "0.2.8",
     "nodemailer": "^6.9.3",
     "npm-check-updates": "^16.10.13",
-    "npm-run-all": "^4.1.5",
     "open-url-by-browser": "1.0.1",
     "prettier": "2.8.4",
     "puppeteer": "^19.11.1",
@@ -82,6 +82,9 @@
     "rss-parser": "^3.13.0",
     "shelljs": "0.8.5",
     "turndown": "^7.1.2",
+    "cz-git": "^1.6.1",
+    "czg": "^1.6.1",
+    "npm-run-all2": "^6.0.5",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-compression2": "^0.8.4",
     "vitepress-plugin-compression": "^0.1.4",
@@ -123,7 +126,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-customizable"
+      "path": "node_modules/cz-git"
     }
   },
   "husky": {
