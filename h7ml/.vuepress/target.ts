@@ -174,9 +174,7 @@ const plugins = {
     playground: {
       presets: ['ts', 'vue', 'jsx', 'tsx', 'js', 'json', 'css', 'less', 'scss', 'html'],
     },
-    presentation: {
-      plugins: ['highlight', 'math', 'search', 'notes', 'zoom'],
-    },
+    presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
     stylize: [
       {
         matcher: 'Recommended',
@@ -196,7 +194,7 @@ const plugins = {
     vPre: true,
     vuePlayground: true,
     imgMark: true,
-    linkCheck: true,
+    checkLinks: true,
   },
 };
 

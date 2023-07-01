@@ -62,11 +62,13 @@ jobs:
           commit-message: '[Bot] Deploy to GitHub'
           token: ${{ secrets.ACCESS_TOKEN }}
 
-      - name: Deploy to layer0 🚀
-        run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
+      # - name: Deploy to layer0 🚀
+      #   run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
 
       - name: copy README.md 🚀
-        run: cp README.md h7ml/.vuepress/dist
+        run: |
+          cd h7ml/.vuepress/dist
+          curl -o README.md https://nest.h7ml.cn/api/github.md
 
       - name: Upload h7ml 🚀
         uses: actions/upload-artifact@v3
