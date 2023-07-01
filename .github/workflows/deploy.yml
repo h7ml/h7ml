@@ -91,7 +91,7 @@ jobs:
           git-config-name: h7ml
           git-config-email: h7ml@qq.com
           commit-message: '[Bot] Deploy to GitHub Pages'
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
 
   #      - name: Deploy to layer0 🚀
   #        run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
@@ -137,7 +137,7 @@ jobs:
   #          git-config-name: h7ml
   #          git-config-email: h7ml@qq.com
   #          commit-message: '[Bot] Deploy to GitHub Pages'
-  #          token: ${{ secrets.ACCESS_TOKEN }}
+  #          token: ${{ secrets.GIT_TOKEN }}
   #    needs: deploy
 
   #  QuantCDN:
@@ -256,7 +256,7 @@ jobs:
       - name: Clean
         env:
           GITHUB_REPO: 'h7ml/h7ml'
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
           EXPIRE_TIME: '12h'
         run: python run.py
     needs: tencent
