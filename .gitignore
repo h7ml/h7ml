@@ -12,3 +12,4 @@ package-lock.json
 .eslintcache
 script/task.js
 script/keydatas
+.vercel

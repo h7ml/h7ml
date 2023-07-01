@@ -167,7 +167,7 @@ jobs:
           ref: gh-pages
           fetch-depth: 0
       - name: Deploy to vercel 🚀
-        uses: amondnet/vercel-action@master
+        uses: amondnet/vercel-action@v20
         with:
           vercel-token: ${{ secrets.VERCEL_TOKEN }}
           github-token: ${{ secrets.GIT_TOKEN }}
