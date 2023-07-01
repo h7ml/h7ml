@@ -64,7 +64,7 @@ jobs:
           repository-name: h7ml/h7ml
           branch: gh-pages
           folder: h7ml/.vuepress/dist
-          token: ${{ secrets.ACCESS_TOKEN }}
+          token: ${{ secrets.GIT_TOKEN }}
           clean: true
           single-commit: true
           git-config-name: h7ml
