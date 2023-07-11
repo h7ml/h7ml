@@ -5,7 +5,7 @@ date: 2023-7-11
 author: h7ml
 category: PostgreSQL
 tag: PostgreSQL
-title:  PostgreSQL的语法知识和常见查询操作
+title: PostgreSQL的语法知识和常见查询操作
 ---
 
 ## 1. 数据定义语句（DDL）
@@ -173,7 +173,7 @@ ALTER TABLE table_name DROP CONSTRAINT constraint_name;
 ```
 
 ### 2.21 查询列
-    
+
 ```sql
 SELECT column_name FROM table_name;
 ```
@@ -228,8 +228,8 @@ SELECT column1, column2 FROM table_name ORDER BY column1 ASC, column2 DESC LIMIT
 SELECT DISTINCT column1, column2 FROM table_name ORDER BY column1 ASC, column2 DESC LIMIT 10 OFFSET 10;
 ```
 
-### 3.9.  聚合函数
-    
+### 3.9. 聚合函数
+
 ```sql
 SELECT function(column) AS alias
 FROM table_name;
@@ -237,16 +237,16 @@ FROM table_name;
 
 > 常见的聚合函数有：AVG、COUNT、SUM、MIN、MAX。
 
-#### 3.10.  聚合函数并分组
-    
+#### 3.10. 聚合函数并分组
+
 ```sql
 SELECT function(column) AS alias
 FROM table_name
 GROUP BY column;
 ```
 
-#### 3.11.  聚合函数并分组并排序
-    
+#### 3.11. 聚合函数并分组并排序
+
 ```sql
 SELECT function(column) AS alias
 FROM table_name
@@ -254,8 +254,8 @@ GROUP BY column
 ORDER BY alias ASC;
 ```
 
-#### 3.12.  聚合函数并分组并排序并限制返回行数并跳过指定行数
-    
+#### 3.12. 聚合函数并分组并排序并限制返回行数并跳过指定行数
+
 ```sql
 SELECT function(column) AS alias
 FROM table_name
@@ -264,8 +264,8 @@ ORDER BY alias ASC
 LIMIT 10 OFFSET 10;
 ```
 
-#### 3.13.  聚合函数并分组并排序并限制返回行数并跳过指定行数并去重
-    
+#### 3.13. 聚合函数并分组并排序并限制返回行数并跳过指定行数并去重
+
 ```sql
 SELECT DISTINCT function(column) AS alias
 FROM table_name
@@ -274,8 +274,8 @@ ORDER BY alias ASC
 LIMIT 10 OFFSET 10;
 ```
 
-#### 3.14.  聚合函数并分组并排序并限制返回行数并跳过指定行数并去重并过滤
-    
+#### 3.14. 聚合函数并分组并排序并限制返回行数并跳过指定行数并去重并过滤
+
 ```sql
 SELECT DISTINCT function(column) AS alias
 FROM table_name
@@ -295,8 +295,8 @@ ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...;
 
 > 常见的条件操作符有：=、<、>、<=、>=、<>等。
 
-#### 3.14.  条件查询并分组
-    
+#### 3.14. 条件查询并分组
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -304,8 +304,8 @@ WHERE column1 = value1
 GROUP BY column2;
 ```
 
-#### 3.15.  条件查询并分组并排序
-    
+#### 3.15. 条件查询并分组并排序
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -314,8 +314,8 @@ GROUP BY column2
 ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...;
 ```
 
-#### 3.16.  条件查询并分组并排序并限制返回行数并跳过指定行数
-    
+#### 3.16. 条件查询并分组并排序并限制返回行数并跳过指定行数
+
 ```sql
 SELECT column1, column2, ...
 FROM table_name
@@ -325,11 +325,10 @@ ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...
 LIMIT 10 OFFSET 10;
 ```
 
-> ASC表示升序，DESC表示降序。
+> ASC 表示升序，DESC 表示降序。
 
+#### 3.17. 条件查询并分组并排序并限制返回行数并跳过指定行数并去重
 
-#### 3.17.  条件查询并分组并排序并限制返回行数并跳过指定行数并去重
-    
 ```sql
 SELECT DISTINCT column1, column2, ...
 FROM table_name
@@ -339,8 +338,8 @@ ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...
 LIMIT 10 OFFSET 10;
 ```
 
-### 3.18.  连接查询
-    
+### 3.18. 连接查询
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -349,8 +348,8 @@ JOIN table2 ON condition;
 
 > 常见的连接类型有：INNER JOIN、LEFT JOIN、RIGHT JOIN、FULL JOIN。
 
-### 3.19.  连接查询并分组
-    
+### 3.19. 连接查询并分组
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -358,8 +357,8 @@ JOIN table2 ON condition
 GROUP BY column1;
 ```
 
-#### 3.20.  连接查询并分组并排序
-    
+#### 3.20. 连接查询并分组并排序
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -368,8 +367,8 @@ GROUP BY column1
 ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...;
 ```
 
-#### 3.21.  连接查询并分组并排序并限制返回行数并跳过指定行数
-    
+#### 3.21. 连接查询并分组并排序并限制返回行数并跳过指定行数
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -379,26 +378,26 @@ ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...
 LIMIT 10 OFFSET 10;
 ```
 
+### 3.22. 子查询
 
-### 3.22.  子查询
-    
 ```sql
 SELECT column1, column2, ...
 FROM table1
 WHERE column1 IN (SELECT column1 FROM table2);
 ```
 
-### 3.23.  分组查询
-    
+### 3.23. 分组查询
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
 GROUP BY column1;
 ```
+
 > 常见的聚合函数有：AVG、COUNT、SUM、MIN、MAX。
 
-#### 3.24.  分组查询并排序
-    
+#### 3.24. 分组查询并排序
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -406,8 +405,8 @@ GROUP BY column1
 ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...;
 ```
 
-#### 3.25.  分组查询并排序并限制返回行数并跳过指定行数
-    
+#### 3.25. 分组查询并排序并限制返回行数并跳过指定行数
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -416,8 +415,8 @@ ORDER BY column1 ASC/DESC, column2 ASC/DESC, ...
 LIMIT 10 OFFSET 10;
 ```
 
-#### 3.26.  分组查询并排序并限制返回行数并跳过指定行数并去重
-    
+#### 3.26. 分组查询并排序并限制返回行数并跳过指定行数并去重
+
 ```sql
 SELECT DISTINCT column1, column2, ...
 FROM table1
@@ -427,7 +426,7 @@ LIMIT 10 OFFSET 10;
 ```
 
 ### 3.27 嵌套查询
-    
+
 ```sql
 SELECT column1, column2, ...
 FROM table1
@@ -435,7 +434,7 @@ WHERE column1 IN (SELECT column1 FROM table2);
 ```
 
 ### 3.28 更新操作
-    
+
 ```sql
 UPDATE table_name
 SET column1 = value1, column2 = value2, ...
@@ -443,18 +442,17 @@ WHERE condition;
 ```
 
 ### 3.29 删除操作
-    
+
 ```sql
 DELETE FROM table_name
 WHERE condition;
-``` 
+```
 
-## PostgreSQL特有功能
+## PostgreSQL 特有功能
 
-### 4.1. JSON数据类型
+### 4.1. JSON 数据类型
 
-PostgreSQL支持存储和查询JSON数据类型。
-
+PostgreSQL 支持存储和查询 JSON 数据类型。
 
 ```sql
 CREATE TABLE table_name (
@@ -470,7 +468,7 @@ FROM table_name;
 
 ### 4.2 全文搜索
 
-PostgreSQL提供全文搜索功能，可以在文本数据中进行高效的关键词搜索。
+PostgreSQL 提供全文搜索功能，可以在文本数据中进行高效的关键词搜索。
 
 ```sql
 CREATE INDEX idx_text_search ON table_name USING gin(to_tsvector('english', column));
@@ -482,7 +480,7 @@ WHERE to_tsvector('english', column) @@ to_tsquery('english', 'keyword');
 
 ### 4.3. 空间数据类型
 
-PostgreSQL支持空间数据类型和空间索引，用于存储和查询地理位置信息。
+PostgreSQL 支持空间数据类型和空间索引，用于存储和查询地理位置信息。
 
 ```sql
 CREATE TABLE table_name (

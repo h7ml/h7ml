@@ -11,4 +11,3 @@ date: 2023-7-11
 ---
 
 - [PostgreSQL](PostgreSQL.md)
-
