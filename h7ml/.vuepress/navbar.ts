@@ -11,6 +11,7 @@ export default navbar([
       'interview',
       'designPattern',
       { text: 'mysql', icon: 'mysql', link: 'mysql' },
+      { text: 'PostgreSQL', icon: 'PostgreSQL', link: 'PostgreSQL'  },
       { text: 'docker', icon: 'box', link: 'docker' },
       { text: 'rxjava', icon: 'java', link: 'rxjava' },
       { text: 'redis', icon: 'app', link: 'redis' },
