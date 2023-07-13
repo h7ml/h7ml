@@ -1,12 +1,28 @@
 ---
 icon: PostgreSQL
-order: 2
-date: 2023-7-11
+order: 1
+date: 2024-07-11
 author: h7ml
-category: PostgreSQL
-tag: PostgreSQL
 title: PostgreSQL的语法知识和常见查询操作
+description: PostgreSQL的语法知识和常见查询操作
+footer: <a href='https://beian.mit.gov.cn/' target='blank'>浙ICP备2021037683号-2</a>PostgreSQL的语法知识和常见查询操作
+star: 1
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+shortTitle: PostgreSQL的语法知识和常见查询操作
+category:
+  - PostgreSQL
+  - eventsource
+tag:
+  - PostgreSQL
+  - eventsource
+head:
+  - - meta
+    - name: keywords
+      content: PostgreSQL的语法知识和常见查询操作
 ---
+
+PostgreSQL的语法知识和常见查询操作
 
 ## 1. 数据定义语句（DDL）
 
