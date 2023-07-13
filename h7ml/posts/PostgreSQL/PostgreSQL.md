@@ -22,7 +22,7 @@ head:
       content: PostgreSQL的语法知识和常见查询操作
 ---
 
-PostgreSQL的语法知识和常见查询操作
+PostgreSQL 的语法知识和常见查询操作
 
 ## 1. 数据定义语句（DDL）
 
