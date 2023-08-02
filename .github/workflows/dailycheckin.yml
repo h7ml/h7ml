@@ -121,36 +121,36 @@ jobs:
           pip install dailycheckin --user
           dailycheckin
 
-  juejin:
-    runs-on: ubuntu-latest
-    name: juejin
-    steps:
-      - name: Checkout 🚀
-        uses: actions/checkout@v2
-        with:
-          repository: 'Wiederhoeft/juejin-helper'
-          branch: main
-      - name: Install pnpm  🚀
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-          run_install: false
-      - name: install dependencies  🚀
-        run: pnpm install
-      - name: start  🚀
-        env:
-          USER_COOKIE: ${{ secrets.USER_COOKIE }}
-          EMAIL_USER: dext7r@163.com
-          EMAIL_PASS: ${{ secrets.EMAIL_163PASS }}
-          USER_EMAIL: ${{ secrets.EMAIL_TO }}
-          USER_PRIVACY: ${{ secrets.USER_PRIVACY }}
-          category_id: ${{ secrets.category_id }}
-          theme_ids: ${{ secrets.theme_ids }}
-          tag_ids: ${{ secrets.tag_ids }}
-          coverImage: ${{ secrets.coverImage }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-        run: |
-          node index.js
+#  juejin:
+#    runs-on: ubuntu-latest
+#    name: juejin
+#    steps:
+#      - name: Checkout 🚀
+#        uses: actions/checkout@v2
+#        with:
+#          repository: 'Wiederhoeft/juejin-helper'
+#          branch: main
+#      - name: Install pnpm  🚀
+#        uses: pnpm/action-setup@v2
+#        with:
+#          version: 7
+#          run_install: false
+#      - name: install dependencies  🚀
+#        run: pnpm install
+#      - name: start  🚀
+#        env:
+#          USER_COOKIE: ${{ secrets.USER_COOKIE }}
+#          EMAIL_USER: dext7r@163.com
+#          EMAIL_PASS: ${{ secrets.EMAIL_163PASS }}
+#          USER_EMAIL: ${{ secrets.EMAIL_TO }}
+#          USER_PRIVACY: ${{ secrets.USER_PRIVACY }}
+#          category_id: ${{ secrets.category_id }}
+#          theme_ids: ${{ secrets.theme_ids }}
+#          tag_ids: ${{ secrets.tag_ids }}
+#          coverImage: ${{ secrets.coverImage }}
+#          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+#        run: |
+#          node index.js
 
   bilibili:
     runs-on: ubuntu-latest
