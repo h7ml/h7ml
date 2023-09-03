@@ -5,9 +5,6 @@ on:
     - cron: '30 06 * * *'
   workflow_dispatch:
   push:
-    paths:
-      - 'h7ml/**'
-      - 'h7ml/posts/**'
     branches:
       - vitepress
 permissions:
