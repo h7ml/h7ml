@@ -1,6 +1,6 @@
 ---
 home: true
-layout: BlogHome
+layout: Timeline
 icon: home
 title: 前端物语
 heroImage: /logo.png
