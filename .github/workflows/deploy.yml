@@ -60,7 +60,7 @@ jobs:
           repository-name: h7ml/h7ml
           branch: gh-pages
           folder: h7ml/.vuepress/dist
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN  }}
           clean: true
           single-commit: true
           git-config-name: h7ml
@@ -87,7 +87,7 @@ jobs:
           git-config-name: h7ml
           git-config-email: h7ml@qq.com
           commit-message: '[Bot] Deploy to GitHub Pages'
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN  }}
 
   #      - name: Deploy to layer0 🚀
   #        run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
@@ -166,7 +166,7 @@ jobs:
   #       uses: amondnet/vercel-action@v20
   #       with:
   #         vercel-token: ${{ secrets.VERCEL_TOKEN }}
-  #         github-token: ${{ secrets.GITHUB_TOKEN }}
+  #         github-token: ${{ secrets.ACCESS_TOKEN  }}
   #         vercel-args: '--prod' #Optional
   #         vercel-org-id: ${{ secrets.ORG_ID}}
   #         vercel-project-id: ${{ secrets.PROJECT_ID}}
@@ -252,7 +252,7 @@ jobs:
       - name: Clean
         env:
           GITHUB_REPO: 'h7ml/h7ml'
-          GITHUB_TOKEN: ${{ secrets.GIT_TOKEN }}
+          ACCESS_TOKEN: ${{ secrets.GIT_TOKEN }}
           EXPIRE_TIME: '12h'
         run: python run.py
     needs: tencent
