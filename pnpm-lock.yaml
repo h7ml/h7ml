@@ -2849,7 +2849,7 @@ packages:
   /@types/sax/1.2.4:
     resolution: {integrity: sha512-pSAff4IAxJjfAXUG6tFkO7dsSbTmf8CtUpfhhZ5VhkRpC4628tJhh3+V6H1E+/Gs9piSzYKT5yzHO5M4GG9jkw==}
     dependencies:
-      '@types/node': 18.17.14
+      '@types/node': 20.4.7
     dev: true
 
   /@types/semver/7.5.1:
@@ -6961,7 +6961,7 @@ packages:
       graceful-fs: 4.2.11
       inherits: 2.0.4
       mkdirp: 0.5.6
-      rimraf: 2.6.3
+      rimraf: 2.7.1
     dev: true
 
   /function-bind/1.1.1:
@@ -10654,6 +10654,13 @@ packages:
       glob: 7.2.3
     dev: true
 
+  /rimraf/2.7.1:
+    resolution: {integrity: sha512-uWjbaKIK3T1OSVptzX7Nl6PvQ3qAGtKEtVRjRuazjfL3Bx5eI409VZSqgND+4UNnmzLVdPj9FqFJNPqBZFve4w==}
+    hasBin: true
+    dependencies:
+      glob: 7.2.3
+    dev: true
+
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
     hasBin: true
@@ -11628,7 +11635,7 @@ packages:
     resolution: {integrity: sha512-J7Z2K08jbGcdA1kkQpJSqLF6T0tdQqpR2pnSUXsIchbPdTI9v3e85cLW0d6WDhwuAleOV71j2xWs8qMPfK7nKw==}
     engines: {node: '>=6'}
     dependencies:
-      rimraf: 2.6.3
+      rimraf: 2.7.1
     dev: true
 
   /to-fast-properties/2.0.0:
