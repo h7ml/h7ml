@@ -60,7 +60,7 @@ jobs:
           git-config-name: h7ml
           git-config-email: h7ml@qq.com
           commit-message: '[Bot] Deploy to GitHub'
-          token: ${{ secrets.GIT_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
       # - name: Deploy to layer0 🚀
       #   run: pnpm run layer0:deploy --token=${{secrets.LAYER0_DEPLOY_TOKEN}}
@@ -87,7 +87,7 @@ jobs:
           git-config-name: h7ml[h7ml@qq.com]
           git-config-email: h7ml@qq.com
           commit-message: '[Bot] Deploy to GitHub Pages'
-          token: ${{ secrets.GIT_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
 
   tencent:
     runs-on: ubuntu-latest

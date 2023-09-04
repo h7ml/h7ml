@@ -84,18 +84,18 @@ const headConfig = [
       src: 'https://hm.baidu.com/hm.js?35afc12d4ac49f5dd49db387044b8cd0',
     },
   ],
-  [
-    'script',
-    {
-      src: 'https://unpkg.com/react@18.2.0/umd/react.production.min.js',
-    },
-  ],
-  [
-    'script',
-    {
-      src: 'https://unpkg.com/react-dom/umd/react-dom.production.min.js',
-    },
-  ],
+  // [
+  //   'script',
+  //   {
+  //     src: 'https://unpkg.com/react@18.2.0/umd/react.production.min.js',
+  //   },
+  // ],
+  // [
+  //   'script',
+  //   {
+  //     src: 'https://unpkg.com/react-dom/umd/react-dom.production.min.js',
+  //   },
+  // ],
   [
     'script',
     {

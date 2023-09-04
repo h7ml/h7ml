@@ -1,8 +1,9 @@
+import { BlogLocaleConfig, PluginsOptions, PageInfo } from 'vuepress-theme-hope';
 import navbar from './navbar';
 import sidebar from './sidebar';
 
 const headConfig = require('./headConfig');
-const blog = {
+const blog: BlogLocaleConfig = {
   name: 'h7ml',
   avatar: '/logo.png',
   roundAvatar: true,
@@ -49,7 +50,7 @@ const author = {
   url: 'https://www.h7ml.cn',
 };
 
-const plugins = {
+const plugins: PluginsOptions = {
   blog: true,
   seo: {
     canonical: 'https://www.h7ml.cn',
@@ -160,7 +161,6 @@ const plugins = {
     chart: true,
     codetabs: true,
     container: true,
-    demo: true,
     echarts: true,
     figure: true,
     flowchart: true,
@@ -172,7 +172,7 @@ const plugins = {
     mark: true,
     mermaid: true,
     playground: {
-      presets: ['ts', 'vue', 'jsx', 'tsx', 'js', 'json', 'css', 'less', 'scss', 'html'],
+      presets: ['ts', 'vue'],
     },
     presentation: ['highlight', 'math', 'search', 'notes', 'zoom'],
     stylize: [
@@ -194,9 +194,12 @@ const plugins = {
     vPre: true,
     vuePlayground: true,
     imgMark: true,
-    checkLinks: true,
+    demo:{
+      react:'https://unpkg.com/react@18.2.0/umd/react.development.js',
+      reactDOM:'https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js',
+    }
   },
 };
 
-const pageInfo = ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime', 'Word', 'PageView'];
+const pageInfo: PageInfo[] = ['Author', 'Original', 'Date', 'Category', 'Tag', 'ReadingTime', 'Word', 'PageView'];
 export { blog, author, plugins, pageInfo, navbar, sidebar, headConfig };
