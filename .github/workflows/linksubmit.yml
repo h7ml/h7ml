@@ -20,7 +20,17 @@ jobs:
           wget https://raw.githubusercontent.com/h7ml/h7ml.github.io/netlify/sitemap.txt -O urls.txt
           go mod download
           go run link.go
-
+      - name: Commit files 🚀
+        run: |
+          git add log
+          git config --local user.email "h7ml@qq.com"
+          git config --local user.name "h7ml"
+          git commit --allow-empty -m ":rocket: Update log on $(date)" -a
+      - name: Push changes 🚀
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          branch: 'master'
   hot_page:
     runs-on: ubuntu-latest
     steps:
@@ -63,7 +73,7 @@ jobs:
       - name: Push changes 🚀
         uses: ad-m/github-push-action@master
         with:
-          github_token: ${{ secrets.GIT_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
           branch: 'vitepress'
 
       - name: build test  🚀
