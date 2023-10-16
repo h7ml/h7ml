@@ -194,10 +194,10 @@ const plugins: PluginsOptions = {
     vPre: true,
     vuePlayground: true,
     imgMark: true,
-    demo:{
-      react:'https://unpkg.com/react@18.2.0/umd/react.development.js',
-      reactDOM:'https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js',
-    }
+    demo: {
+      react: 'https://unpkg.com/react@18.2.0/umd/react.development.js',
+      reactDOM: 'https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js',
+    },
   },
 };
 

@@ -65,6 +65,5 @@ const config = defineUserConfig({
     '@theme-hope/components/NotFound': path.resolve(__dirname, './components/theme/NotFound/index.vue'),
     '@theme-hope/components/PageFooter': path.resolve(__dirname, './components/theme//PageFooter/index.vue'),
   },
-
 });
 export default config;
