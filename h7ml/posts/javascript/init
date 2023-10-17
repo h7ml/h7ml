@@ -1,0 +1,27 @@
+---
+icon: javascript
+order: 1
+date: 2024-09-07
+author: h7ml
+title: 微前端架构：拆分前端应用的艺术
+description: 深入了解微前端架构：探讨它的定义、形成背景、优缺点，以及如何设计和实施微前端系统，包括技术拆分方式、业务划分方式、架构设计、模式、设计理念和"微"害架构的影响。
+footer: <a href='https://beian.mit.gov.cn/' target='blank'>浙ICP备2021037683号-2</a>了解前沿的前端架构技术，提高应用程序的可维护性和可扩展性。
+star: 1
+image: https://www.h7ml.cn/logo.png
+banner: https://www.h7ml.cn/logo.png
+shortTitle: 微前端架构:拆分前端应用
+category:
+  - javascript
+  - 前端开发
+tag:
+  - javascript
+  - 微前端
+  - 前端架构
+  - 微前端设计
+  - 前端应用拆分
+  - 微前端模式
+head:
+  - - meta
+    - name: keywords
+      content: 微前端、前端架构、微前端设计、前端应用拆分、微前端模式
+---
