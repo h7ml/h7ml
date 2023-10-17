@@ -57,9 +57,9 @@ startTransition(() => {
 ```js
 const { useCallback, useState, useTransition, Suspense } = React;
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
+let currentValue = '';
+export default () => {
+  const [value, setValue] = useState('');
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (e) => {
@@ -69,19 +69,18 @@ export default () =>  {
   };
 
   return (
-          <div>
-            <input onChange={_.throttle(handleChange, 1000, { leading: false })} />
-            <div className={isPending ? "loading" : ""}>
-              {Array(50000)
-                      .fill("a")
-                      .map((item, index) => {
-                        return <div key={index}>{value}</div>;
-                      })}
-            </div>
-          </div>
+    <div>
+      <input onChange={_.throttle(handleChange, 1000, { leading: false })} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>;
+          })}
+      </div>
+    </div>
   );
-}
-
+};
 ```
 
 ```css
@@ -102,9 +101,9 @@ export default () =>  {
 ```js
 const { useCallback, useState, useTransition, Suspense } = React;
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
+let currentValue = '';
+export default () => {
+  const [value, setValue] = useState('');
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (e) => {
@@ -114,18 +113,18 @@ export default () =>  {
   };
 
   return (
-          <div>
-            <input onChange={_.debounce(handleChange, 1000)} />
-            <div className={isPending ? "loading" : ""}>
-              {Array(50000)
-                      .fill("a")
-                      .map((item, index) => {
-                        return <div key={index}>{value}</div>;
-                      })}
-            </div>
-          </div>
+    <div>
+      <input onChange={_.debounce(handleChange, 1000)} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>;
+          })}
+      </div>
+    </div>
   );
-}
+};
 ```
 
 ```css
@@ -133,6 +132,7 @@ export default () =>  {
   opacity: 0.5;
 }
 ```
+
 :::
 
 存在的问题：
@@ -145,9 +145,9 @@ export default () =>  {
 ```js
 const { useCallback, useState, useTransition, Suspense } = React;
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
+let currentValue = '';
+export default () => {
+  const [value, setValue] = useState('');
   const [isPending, startTransition] = useTransition();
 
   const handleChange = (e) => {
@@ -157,18 +157,18 @@ export default () =>  {
   };
 
   return (
-          <div>
-            <input onChange={handleChange} />
-            <div className={isPending ? 'loading' : ''}>
-              {
-                Array(50000).fill("a").map((item, index) => {
-                  return <div key={index}>{value}</div>;
-                })
-              }
-            </div>
-          </div>
+    <div>
+      <input onChange={handleChange} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>;
+          })}
+      </div>
+    </div>
   );
-}
+};
 ```
 
 ```css
@@ -176,8 +176,9 @@ export default () =>  {
   opacity: 0.5;
 }
 ```
-:::
-用 transition 机制的效果：
+
+::: 用 transition 机制的效果：
+
 - 用户可以及时看到输入内容，交互也较流畅；
 - 用户连续输入时，不会一直得不到响应(最迟 5s 必会开始更新渲染列表)；
 - 开始更新渲染后，协调过程是可中断的，不会长时间阻塞渲染引擎（进入浏览器渲染阶段依然会卡住）；
@@ -259,9 +260,7 @@ function startTransition(setPending, callback, options) {
 }
 ```
 
-当调用 startTransition 时，会先通过 setPending 将 isPending 改为 true，然后再通过 setPending 将 isPending 改为 false，并在 callback 中触发我们自己定义的更新。
-这里有一个奇怪的地方，3 次 setState 并没有合并在一起，而是触发了 2 次 react 更新，setPending(true) 为 1 次，setPending(false) 和 callback() 为第二次。
-这是因为
+当调用 startTransition 时，会先通过 setPending 将 isPending 改为 true，然后再通过 setPending 将 isPending 改为 false，并在 callback 中触发我们自己定义的更新。这里有一个奇怪的地方，3 次 setState 并没有合并在一起，而是触发了 2 次 react 更新，setPending(true) 为 1 次，setPending(false) 和 callback() 为第二次。这是因为
 
 ```
 ReactCurrentBatchConfig.transition = {}
@@ -275,9 +274,7 @@ ReactCurrentBatchConfig.transition = {}
 
 一次 react 更新，主核心的过程是 fiber tree 的协调（reconcile），协调的作用是找到 fiber tree 中发生变化的 fiber node，最小程度地对页面的 dom tree 结构进行调整。
 
-在进行协调时，react 提供了两种模式：Legacy mode - 同步阻塞模式和 Concurrent mode - 并行模式。
-这两种模式，区别在于 fiber tree 的协调过程是否可中断。 Legacy mode，协调过程不可中断；Concurrent mode，协调过程可中断。
-Legacy mode：
+在进行协调时，react 提供了两种模式：Legacy mode - 同步阻塞模式和 Concurrent mode - 并行模式。这两种模式，区别在于 fiber tree 的协调过程是否可中断。 Legacy mode，协调过程不可中断；Concurrent mode，协调过程可中断。 Legacy mode：
 
 ![Legacy mode](https://static.h7ml.cn/vitepress/assets/images/MicroFrontend/legacy-mode.jpeg)
 
@@ -372,8 +369,7 @@ react 在内部定义了 5 种类型的调度（Scheduler）优先级：
 
 5 种优先级的顺序为: ImmediatePriority > UserBlockingPriority > NormalPriority > LowPriority > IdlePriority。
 
-react 内部定义了 31 条 lane，lane 可以理解为每个任务所处的赛道。用二进制表示，按优先级从低到高依次为:
-![Lane优先级](https://static.h7ml.cn/vitepress/assets/images/MicroFrontend//lanes.png)
+react 内部定义了 31 条 lane，lane 可以理解为每个任务所处的赛道。用二进制表示，按优先级从低到高依次为: ![Lane优先级](https://static.h7ml.cn/vitepress/assets/images/MicroFrontend//lanes.png)
 
 lane 对应的位数越小，优先级最高。如 SyncLane 为 1，优先级最高； OffscreenLane 为 31， 优先级最低。
 
@@ -459,8 +455,7 @@ startTransition 方法执行过程中， setPending(true) 触发的更新优先�
 
 **useTransition 为何能表现出 throttle 效果**
 
-如果你一直输入，最多 5s，长列表必然会渲染，和 防抖 - throttle 效果一样。
-这是因为为了防止低优先级更新一直被高优先级更新中断而得不到处理，react 为每种类型的更新定义了最迟必须处理时间 - timeout。如果在 timeout 时间内更新未被处理，那么更新的优先级就会被提升到最高 - ImmediatePriority，优先处理。
+如果你一直输入，最多 5s，长列表必然会渲染，和 防抖 - throttle 效果一样。这是因为为了防止低优先级更新一直被高优先级更新中断而得不到处理，react 为每种类型的更新定义了最迟必须处理时间 - timeout。如果在 timeout 时间内更新未被处理，那么更新的优先级就会被提升到最高 - ImmediatePriority，优先处理。
 
 transition 更新的优先级为 NormalPriority，timeout 为 5000ms 即 5s。如果超过 5s， transition 更新还因为一直被高优先级更新中断而没有处理，它的优先级就会被提升为 ImmediatePriority，优先处理。这样就实现了 throttle 的效果。
 
@@ -492,12 +487,10 @@ function startTransition(scope) {
 
 ## React 如何优化性能
 
-React ，它本身的思路是纯 JS 写法，这种方式非常灵活，但是，这也使它在编译时很难做太多的事情，像上面这样的编译时优化是很难实现的。所以，我们可以看到 React 几个大版本的的优化主要都在运行时。
-进行运行时优化，关注的主要问题就是 CPU 和 IO。
+React ，它本身的思路是纯 JS 写法，这种方式非常灵活，但是，这也使它在编译时很难做太多的事情，像上面这样的编译时优化是很难实现的。所以，我们可以看到 React 几个大版本的的优化主要都在运行时。进行运行时优化，关注的主要问题就是 CPU 和 IO。
 
 - 首先，就是 CPU 的问题，主流浏览器的刷新频率一般是 60Hz，也就是每秒刷新 60 次，大概 16.6ms 浏览器刷新一次。由于 GUI 渲染线程和 JS 线程是互斥的，所以 JS 脚本执行和浏览器布局、绘制不能同时执行。在这 16.6ms 的时间里，浏览器既需要完成 JS 的执行，也需要完成样式的重排和重绘，如果 JS 执行的时间过长，超出了 16.6ms，这次刷新就没有时间执行样式布局和样式绘制了，于是在页面上就会表现为卡顿。
-- IO 的问题就比较好理解了，很多组件需要等待一些网络延迟，那么怎么样才能在网络延迟存在的情况下，减少用户对网络延迟的感知呢？就是 react 需要解决的问题。
-  React 引入 fiber 机制，可中断协调阶段，就是在 CPU 角度优化运行时性能。而 Suspense API 则是 IO 角度的优化，让新内容替换成旧内容的过程不闪屏，内容切换更流畅。
+- IO 的问题就比较好理解了，很多组件需要等待一些网络延迟，那么怎么样才能在网络延迟存在的情况下，减少用户对网络延迟的感知呢？就是 react 需要解决的问题。 React 引入 fiber 机制，可中断协调阶段，就是在 CPU 角度优化运行时性能。而 Suspense API 则是 IO 角度的优化，让新内容替换成旧内容的过程不闪屏，内容切换更流畅。
 
 ## Transition API 登场
 
