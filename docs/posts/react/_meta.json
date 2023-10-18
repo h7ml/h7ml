@@ -1,0 +1,12 @@
+[
+  "concurrent",
+  "diff",
+  "hook-api",
+  "hook",
+  "immer",
+  "reactQuery",
+  "redux",
+  "requestIdleCallback",
+  "setState",
+  "synthetic-event"
+]

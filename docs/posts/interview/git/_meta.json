@@ -1,0 +1,12 @@
+[
+  "command",
+  "conflict",
+  "fork_clone_branch",
+  "Git",
+  "gitRebase_ gitMerge",
+  "git_pull _git_fetch",
+  "git_reset_ git_revert",
+  "git_stash",
+  "HEAD_tree_index",
+  "Version_control"
+]

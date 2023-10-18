@@ -1,0 +1,17 @@
+[
+  "Array",
+  "async",
+  "class",
+  "Function",
+  "Generator",
+  "Iterator",
+  "Map",
+  "modular",
+  "Object",
+  "Promise",
+  "Proxy",
+  "Set",
+  "String",
+  "Symbol",
+  "VariableDeclarationDestructuring"
+]

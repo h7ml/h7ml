@@ -1,0 +1,77 @@
+[
+  {
+    "type": "dir",
+    "name": "algorithm",
+    "label": "algorithm"
+  },
+  {
+    "type": "dir",
+    "name": "applet",
+    "label": "applet"
+  },
+  {
+    "type": "dir",
+    "name": "css",
+    "label": "css"
+  },
+  {
+    "type": "dir",
+    "name": "design",
+    "label": "design"
+  },
+  {
+    "type": "dir",
+    "name": "es6",
+    "label": "es6"
+  },
+  {
+    "type": "dir",
+    "name": "git",
+    "label": "git"
+  },
+  {
+    "type": "dir",
+    "name": "http",
+    "label": "http"
+  },
+  {
+    "type": "dir",
+    "name": "JavaScript",
+    "label": "JavaScript"
+  },
+  {
+    "type": "dir",
+    "name": "linux",
+    "label": "linux"
+  },
+  {
+    "type": "dir",
+    "name": "NodeJS",
+    "label": "NodeJS"
+  },
+  {
+    "type": "dir",
+    "name": "React",
+    "label": "React"
+  },
+  {
+    "type": "dir",
+    "name": "typescript",
+    "label": "typescript"
+  },
+  {
+    "type": "dir",
+    "name": "vue",
+    "label": "vue"
+  },
+  {
+    "type": "dir",
+    "name": "vue3",
+    "label": "vue3"
+  },
+  {
+    "type": "dir",
+    "name": "webpack",
+    "label": "webpack"
+  }
+]

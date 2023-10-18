@@ -1,0 +1,13 @@
+[
+  {
+    "type": "dir",
+    "name": "ajax",
+    "label": "ajax"
+  },
+  "原生touch",
+  {
+    "type": "dir",
+    "name": "面向对象",
+    "label": "面向对象"
+  }
+]

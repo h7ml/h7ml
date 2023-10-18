@@ -1,0 +1,117 @@
+[
+  "browser",
+  {
+    "type": "dir",
+    "name": "coding",
+    "label": "coding"
+  },
+  {
+    "type": "dir",
+    "name": "designPattern",
+    "label": "designPattern"
+  },
+  {
+    "type": "dir",
+    "name": "docker",
+    "label": "docker"
+  },
+  {
+    "type": "dir",
+    "name": "ecmascript",
+    "label": "ecmascript"
+  },
+  {
+    "type": "dir",
+    "name": "engineering",
+    "label": "engineering"
+  },
+  "es6",
+  {
+    "type": "dir",
+    "name": "fullStackTale",
+    "label": "fullStackTale"
+  },
+  "git",
+  {
+    "type": "dir",
+    "name": "github",
+    "label": "github"
+  },
+  {
+    "type": "dir",
+    "name": "graphics",
+    "label": "graphics"
+  },
+  {
+    "type": "dir",
+    "name": "html",
+    "label": "html"
+  },
+  {
+    "type": "dir",
+    "name": "interview",
+    "label": "interview"
+  },
+  {
+    "type": "dir",
+    "name": "javascript",
+    "label": "javascript"
+  },
+  "js-engine",
+  {
+    "type": "dir",
+    "name": "linux",
+    "label": "linux"
+  },
+  "module",
+  {
+    "type": "dir",
+    "name": "mysql",
+    "label": "mysql"
+  },
+  {
+    "type": "dir",
+    "name": "Nestjs",
+    "label": "Nestjs"
+  },
+  {
+    "type": "dir",
+    "name": "nginx",
+    "label": "nginx"
+  },
+  {
+    "type": "dir",
+    "name": "PostgreSQL",
+    "label": "PostgreSQL"
+  },
+  {
+    "type": "dir",
+    "name": "Python",
+    "label": "Python"
+  },
+  {
+    "type": "dir",
+    "name": "react",
+    "label": "react"
+  },
+  {
+    "type": "dir",
+    "name": "redis",
+    "label": "redis"
+  },
+  {
+    "type": "dir",
+    "name": "rxjava",
+    "label": "rxjava"
+  },
+  {
+    "type": "dir",
+    "name": "vite",
+    "label": "vite"
+  },
+  {
+    "type": "dir",
+    "name": "vue",
+    "label": "vue"
+  }
+]
