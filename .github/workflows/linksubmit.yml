@@ -66,6 +66,7 @@ jobs:
 
       - name: Commit files 🚀
         run: |
+          git pull
           git add .
           git config --local user.email "h7ml@qq.com"
           git config --local user.name "h7ml"
