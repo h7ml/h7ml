@@ -46,105 +46,105 @@
 <summary> tag: juejin 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/juejin?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/juejin</a>
     </summary>
 
- 1 [一周的努力化为泡影，前端找工作是很难](https://juejin.cn/post/7299392213481439243)
+ 1 [阿里云又崩了，这次送什么](https://juejin.cn/post/7300550397781147657)
 
- 2 [听别人说Vue的拖拽库都断代了，我第一个不服](https://juejin.cn/post/7299353745506615347)
+ 2 [30岁之前透支，30岁之后还债。](https://juejin.cn/post/7300564263344128051)
 
- 3 [分布式系列第一弹：分布式一致性！](https://juejin.cn/post/7299477531640217663)
+ 3 [为什么稳定的大公司不向Flutter迁移?](https://juejin.cn/post/7299731886498349107)
 
- 4 [字节跳动360视频传输挑战赛火热报名](https://juejin.cn/post/7299052187884453897)
+ 4 [Vue3如何优雅的跨组件通信🚀🚀🚀](https://juejin.cn/post/7300102080902905867)
 
- 5 [JSON慢地要命: 看看有啥比它快!](https://juejin.cn/post/7299353265099423753)
+ 5 [GPT-4 Turbo来袭，程序员会失业吗？](https://juejin.cn/post/7300394277075795994)
 
- 6 [动态代理总结，面试你要知道的都在这里，无废话！](https://juejin.cn/post/7299731886497857587)
+ 6 [想给组件加上文档？ 试试 Storybook](https://juejin.cn/post/7299743820434309147)
 
- 7 [20行JS代码实现屏幕录制](https://juejin.cn/post/7299346813261512704)
+ 7 [现在个人想上架微信小游戏已经这么难了吗...](https://juejin.cn/post/7299750611921977356)
 
- 8 [🔥🔥🔥js数组常用方法汇总整理🔥🔥🔥，形象化通俗易懂，建议收藏](https://juejin.cn/post/7299037777386176524)
+ 8 [移动端APP版本治理](https://juejin.cn/post/7299799127625170955)
 
- 9 [服务器：重来一世，这一世我要踏至巅峰！](https://juejin.cn/post/7299357353543368716)
+ 9 [？北京七年前端带专找工作竟如此坎坷？近一个月面试复盘（附总结答案），快来学习呀](https://juejin.cn/post/7299696650896080922)
 
- 10 [AIGC工程师初体验:试用谷歌识图模型](https://juejin.cn/post/7299357353543630860)
+ 10 [面试题：谈谈Spring用到了哪些设计模式？](https://juejin.cn/post/7299859799780442163)
 
- 11 [后端项目经典分层架构介绍](https://juejin.cn/post/7299663440704061490)
+ 11 [浅聊JavaScript中的LHS和RHS查询](https://juejin.cn/post/7299797852199649289)
 
- 12 [面试题：谈谈Spring用到了哪些设计模式？](https://juejin.cn/post/7299859799780442163)
+ 12 [【实用且美观】墙裂推荐的十大工具🥽](https://juejin.cn/post/7299859799780294707)
 
- 13 [为什么稳定的大公司不向Flutter迁移?](https://juejin.cn/post/7299731886498349107)
+ 13 [关于并发编程，你必须需要掌握的Future机制！](https://juejin.cn/post/7300715626817290251)
 
- 14 [阿里面试：看过框架源码吗？举例说明一下](https://juejin.cn/post/7299354838929014824)
+ 14 [rollup和vue都在用的magic-string是个什么东西](https://juejin.cn/post/7299477531640561727)
 
- 15 [【超简单】一文解析宏任务与微任务：理解事件循环（Event Loop）机制](https://juejin.cn/post/7299487316489764916)
+ 15 [如何用三分钟写一个3D地球云层效果](https://juejin.cn/post/7299631414572662847)
 
- 16 [浅聊JavaScript中的LHS和RHS查询](https://juejin.cn/post/7299797852199649289)
+ 16 [三种“类型判断”的方法，一起手写instanceof方法的实现原理，面试官让你手写不再害怕](https://juejin.cn/post/7299742103688265769)
 
- 17 [前端 node 实现调用打印机和小票打印(TSPL )功能](https://juejin.cn/post/7299506825874604069)
+ 17 [iOS 仿花小猪首页滑动效果](https://juejin.cn/post/7299731897626345481)
 
- 18 [打造高效Python后端项目：这些工具你不能错过](https://juejin.cn/post/7299497816145166370)
+ 18 [总是听说图片懒加载，那你能讲清楚吗？（一）](https://juejin.cn/post/7300036605100130358)
 
- 19 [当问到你JS的防抖和节流优化，你能手写吗？（一）](https://juejin.cn/post/7299671709476356148)
+ 19 [『Nacos』注册配置中心入门指南](https://juejin.cn/post/7299378258530533410)
 
- 20 [Angular 17 Vite 带来了新的开发体验](https://juejin.cn/post/7299671781667962915)
+ 20 [Elasticsearch 科普与应用](https://juejin.cn/post/7299493010136219698)
 
- 21 [PyQt5-QLabel控件是什么？方法有哪些？具体如何使用？](https://juejin.cn/post/7299496875187273728)
+ 21 [仿mac系统交互设计的车载Pad操作系统](https://juejin.cn/post/7299709109879324691)
 
- 22 [YonBuilder做“人有我优”的低代码平台！](https://juejin.cn/post/7299491065395527719)
+ 22 [使用plasma 开发谷歌插件](https://juejin.cn/post/7299666003364446258)
 
- 23 [新购服务器项目部署指南—— Express + Vue + Nginx+ pm2 Nodejs项目部署全流程](https://juejin.cn/post/7299395194135003186)
+ 23 [一盏茶的功夫带你掌握烦人的 this 指向问题（ 一 ）](https://juejin.cn/post/7299991094628253736)
 
- 24 [实现细粒度的前端权限控制：深入理解 Vue 自定义指令的应用](https://juejin.cn/post/7299354844447653942)
+ 24 [Math 工具函数的妙用：常用的数值操作](https://juejin.cn/post/7299733832412479523)
 
- 25 [信贷系统中如何使用征信数据？](https://juejin.cn/post/7299354844447916086)
+ 25 [解锁智慧对话：提升效率的ChatGPT提示语指南](https://juejin.cn/post/7299743820434374683)
 
- 26 [如何用三分钟写一个3D地球云层效果](https://juejin.cn/post/7299631414572662847)
+ 26 [【AIGC】全新领域！(三)：情感分析更厉害的OpenAI！](https://juejin.cn/post/7299673335503683603)
 
- 27 [现在个人想上架微信小游戏已经这么难了吗...](https://juejin.cn/post/7299750611921977356)
+ 27 [TypeScript基础（五）泛型](https://juejin.cn/post/7299666003364610098)
 
- 28 [『Nacos』注册配置中心入门指南](https://juejin.cn/post/7299378258530533410)
+ 28 [DDD学习与感悟——总是觉得自己在CRUD怎么办？](https://juejin.cn/post/7299741943441457192)
 
- 29 [确保 Kubernetes 安全：不要低估错误配置带来的风险](https://juejin.cn/post/7299346813262348288)
+ 29 [总是听说图片懒加载，那你能讲清楚吗？（二）](https://juejin.cn/post/7300122001767301120)
 
- 30 [想给组件加上文档？ 试试 Storybook](https://juejin.cn/post/7299743820434309147)
+ 30 [大模型集体失控！南洋理工新型攻击，主流AI无一幸免](https://juejin.cn/post/7300140497872191525)
 
- 31 [三种“类型判断”的方法，一起手写instanceof方法的实现原理，面试官让你手写不再害怕](https://juejin.cn/post/7299742103688265769)
+ 31 [一盏茶的功夫带你掌握烦人的 this 指向问题（ 二 ）](https://juejin.cn/post/7300140026867613711)
 
- 32 [AIGC：LLM大型语言模型是怎么交流的？ ———分词](https://juejin.cn/post/7299631414571991103)
+ 32 [🔥🔥【干货满满】带你盘点OpenAI的最全知识点（第二篇）](https://juejin.cn/post/7299668106132340788)
 
- 33 [TypeScript基础（五）泛型](https://juejin.cn/post/7299666003364610098)
+ 33 [JavaScript小白速成：掌握WeakSet的神奇力量](https://juejin.cn/post/7300394277076664346)
 
- 34 [读完一个人的朝圣，我觉得每一个人身上都有男主的影子](https://juejin.cn/post/7299491065395789863)
+ 34 [Math 工具函数的妙用：数值比较和数学运算](https://juejin.cn/post/7299733832412954659)
 
- 35 [IDEA的这款API调试插件爱了](https://juejin.cn/post/7299395194133659698)
+ 35 [Javascript高级-Axios 与 Mock](https://juejin.cn/post/7299497816146018338)
 
- 36 [rollup和vue都在用的magic-string是个什么东西](https://juejin.cn/post/7299477531640561727)
+ 36 [【ES6】聊聊ES6中JS新增的两种“原始数据类型”及“类型判断”的四种方法（1）](https://juejin.cn/post/7300378651774238771)
 
- 37 [Elasticsearch 科普与应用](https://juejin.cn/post/7299493010136219698)
+ 37 ["前方高能！JavaScript预编译全解密，带你探索代码执行的幕后世界"](https://juejin.cn/post/7299731906253946907)
 
- 38 [Javascript高级-Axios 与 Mock](https://juejin.cn/post/7299497816146018338)
+ 38 [k8s中的pod资源](https://juejin.cn/post/7299667259902640138)
 
- 39 [解锁智慧对话：提升效率的ChatGPT提示语指南](https://juejin.cn/post/7299743820434374683)
+ 39 [Springboot3核心原理](https://juejin.cn/post/7299497816145674274)
 
- 40 [【AIGC】全新领域！(三)：情感分析更厉害的OpenAI！](https://juejin.cn/post/7299673335503683603)
+ 40 [老王探库之①mime-types](https://juejin.cn/post/7299745570813296694)
 
- 41 [🥳前端算法面试之0-1背包--每日一练](https://juejin.cn/post/7299346799210594316)
+ 41 [Vue.js响应系统的作用与实现](https://juejin.cn/post/7299642100426162227)
 
- 42 [🔥🔥带你盘点OpenAI的最全知识点（第一篇）](https://juejin.cn/post/7299142441079193615)
+ 42 [整理了七八年的笔记后，感觉很累，好像并不值得......](https://juejin.cn/post/7299741943442112552)
 
- 43 [🔥🔥【干货满满】带你盘点OpenAI的最全知识点（第二篇）](https://juejin.cn/post/7299668106132340788)
+ 43 [深入浅出理解单机Redis核心工作流程](https://juejin.cn/post/7299799127624384523)
 
- 44 [Vue.js响应系统的作用与实现](https://juejin.cn/post/7299642100426162227)
+ 44 [React状态管理？看这一篇就够了](https://juejin.cn/post/7299741943441408040)
 
- 45 [KaiwuDB x 奇瑞超级工厂 | 汽车行业能源管理平台成功实践](https://juejin.cn/post/7299497816145920034)
+ 45 [systemd socket 实现按需启动](https://juejin.cn/post/7299731906254241819)
 
- 46 [Springboot3核心原理](https://juejin.cn/post/7299497816145674274)
+ 46 [低p程序员互联网求生指南](https://juejin.cn/post/7299853894733168681)
 
- 47 ["前方高能！JavaScript预编译全解密，带你探索代码执行的幕后世界"](https://juejin.cn/post/7299731906253946907)
+ 47 [深入理解Prompt Engineering：Transformers与OpenAI的实践启示](https://juejin.cn/post/7299745570813886518)
 
- 48 [nginx里各配置含义解析](https://juejin.cn/post/7299497816146116642)
+ 48 [Ansible自动化部署工具-role模式安装filebeat实际案例分析](https://juejin.cn/post/7299497816145936418)
 
- 49 [云音乐社交直播活动校验自动化](https://juejin.cn/post/7299382289065377844)
+ 49 [TypeScript的本质:  类型编程](https://juejin.cn/post/7299497177189515273)
 
- 50 [阿里Java一面，难度适中！（下篇）](https://juejin.cn/post/7299346813262446592)
+ 50 [web 安全 XSS 攻击 url 参数](https://juejin.cn/post/7299745570812952630)
 </details>
 
 
@@ -152,75 +152,105 @@
 <summary> tag: 36kr 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/36kr?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/36kr</a>
     </summary>
 
- 1 [县城又一超级独角兽，诞生了](https://www.36kr.com/p/2513561671323655)
+ 1 [双 11 战报出炉，iPhone 15 和小米 14 卖疯了...](https://www.36kr.com/p/2515397845078022)
 
- 2 [张一鸣花90亿为马化腾试错](https://www.36kr.com/p/2513570759577607)
+ 2 [8点1氪丨官方通报知名博主在大连遭遇“鬼秤”事件；“双11”当天全国快递业务量达6.39亿件；55个品牌被移出中华老字号](https://www.36kr.com/p/2515970548584709)
 
- 3 [OpenAI引发创作狂欢：覆盖洗衣修车算命，2000+ GPT分身上线](https://www.36kr.com/p/2512454329258243)
+ 3 [1分钟诞生一个新GPT，3天内定制GPT大爆发，理想型男友、科研利器全网刷屏](https://www.36kr.com/p/2514833563914246)
 
- 4 [在夜校，年轻人用五百元“重启人生”](https://www.36kr.com/p/2514513702883591)
+ 4 [刘銮雄，我不怪许家印](https://www.36kr.com/p/2513865126383620)
 
- 5 [上班搞副业，我被开除了](https://www.36kr.com/p/2514604396531970)
+ 5 [1700元的林清轩香水，刺痛了谁？ ｜ 焦点分析](https://www.36kr.com/p/2512204564631809)
 
- 6 [消费降级的运动消费者，1688接得住吗？](https://www.36kr.com/p/2513850681397505)
+ 6 [“看完OpenAI大会，很庆幸没拿到融资”](https://www.36kr.com/p/2516160297148545)
 
- 7 [一天花费上千元，究竟是谁在静修](https://www.36kr.com/p/2514604059316229)
+ 7 [双十一的东西为什么越来越贵了？](https://www.36kr.com/p/2513831154487560)
 
- 8 [君乐宝投资茉酸奶，大公司又盯上新品牌｜焦点分析](https://www.36kr.com/p/2512324521070593)
+ 8 [双11最终数据来了，天猫、京东依旧不披露交易额](https://www.36kr.com/p/2514180314501121)
 
- 9 [12种个人成长策略，提升你的领导力](https://www.36kr.com/p/2496962340198535)
+ 9 [获得Visa收单主会员资质，跨境支付数字银行ONERWAY完成新一轮美元融资 | 早期项目](https://www.36kr.com/p/2515489945686022)
 
- 10 [8家消费公司拿到新钱；PICO回应裁员传闻；银发人群用户规模已达到3.25亿 | 创投大视野](https://www.36kr.com/p/2513119036428293)
+ 10 [“商场一哥”崩溃倒计时：暴跌480亿，无力回天](https://www.36kr.com/p/2513418707067016)
 
- 11 [双11狂欢：最后一公里的战争](https://www.36kr.com/p/2513502437576968)
+ 11 [体验 eSIM 版 iPad 10 一周后，它改变了我的工作方式](https://www.36kr.com/p/2514779558449152)
 
- 12 [中国公司全球化周报｜传SHEIN希望获得900亿美元的IPO估值 / 前10个月汽车出口累计近400万辆，新能源车出口增幅显著](https://www.36kr.com/p/2513492222841094)
+ 12 [36氪首发｜聚焦非标零部件在线制造领域，云工厂完成近亿元B+轮融资](https://www.36kr.com/p/2515332579447044)
 
- 13 [海外 New Things | Eleos Health获4000万美元B轮融资，打造人工智能健康平台助力医疗服务](https://www.36kr.com/p/2511252562968837)
+ 13 [Meta高管放弃82万美元年薪，离职创业，21年拿到全美TOP 1%收入，自称原因是运气好](https://www.36kr.com/p/2515415924969737)
 
- 14 [医疗健康行业周报 |睿璟生物获数千万元Pre-B轮融资；第九批药品国采纳入重点监控品种](https://www.36kr.com/p/2514797060149249)
+ 14 [能跟“猫主子”聊天了，生成式AI带来的全面革命：最快5年内破译第一种动物语言](https://www.36kr.com/p/2515416973693191)
 
- 15 [李宁的1000亿市值哪去了](https://www.36kr.com/p/2513895697289221)
+ 15 [单季狂揽10亿美金，这家丑鞋品牌拿捏年轻人｜营销观察](https://www.36kr.com/p/2512714203320328)
 
- 16 [1.2万张英伟达AI显卡将上线？实际只有128张](https://www.36kr.com/p/2513995903979529)
+ 16 [冲锋衣，冲疯了](https://www.36kr.com/p/2516169688486151)
 
- 17 [货拉拉，撑不起130亿美元估值](https://www.36kr.com/p/2513450546057474)
+ 17 [崩溃的阿里云，并非是单纯的坏事？](https://www.36kr.com/p/2516281963253766)
 
- 18 [乌镇世界互联网大会“关键词”：AI、AIGC和算力](https://www.36kr.com/p/2514648097415047)
+ 18 [奥特曼投资前苹果员工创立，这家公司首款AI硬件炸圈，支持访问ChatGPT](https://www.36kr.com/p/2515456508530689)
 
- 19 [海外 New Things | Elucid获8000万美元C轮融资，利用人工智能软件评估心血管疾病](https://www.36kr.com/p/2511250178212100)
+ 19 [36岁，他干出一个深圳独角兽](https://www.36kr.com/p/2516425090863110)
 
- 20 [利用日本的“金缮修复”理念重建自我价值](https://www.36kr.com/p/2480963656538246)
+ 20 [当lululemon和经期裤也能和平共处｜知料](https://www.36kr.com/p/2509298476957704)
 
- 21 [重启「猫晚」，天猫在下怎样一盘大棋？](https://www.36kr.com/p/2515012128198921)
+ 21 [一名哈佛硕士和一名武大博士，震惊了中国爸妈](https://www.36kr.com/p/2515870341746944)
 
- 22 [“目前最好的”AI聊天机器人，马斯克底气何在](https://www.36kr.com/p/2513375986700294)
+ 22 [不再“家家第一”，双11成了手机厂商的“牛夫人”？](https://www.36kr.com/p/2515286424756100)
 
- 23 [“我是投资人看不上的消费创业者”](https://www.36kr.com/p/2513586640867331)
+ 23 [iOS 17上成堆的bug，拖慢了下一代iPhone的研发进度](https://www.36kr.com/p/2513527395999878)
 
- 24 [本周双碳大事：首届中国碳市场大会召开；我国将选择100个城市和园区开展碳达峰试点；朝希资本完成9亿元超募](https://www.36kr.com/p/2514922514272520)
+ 24 [阿里全系产品崩了，谁会是阿里云的解铃人？](https://www.36kr.com/p/2516612071694215)
 
- 25 [为什么明星总在直播间啃鸡爪？](https://www.36kr.com/p/2513590760575233)
+ 25 [花5000元，把ChatGPT“戴”在身上？前苹果员工联手OpenAI，推出无屏“iPhone杀手”](https://www.36kr.com/p/2515390447931656)
 
- 26 [今年双11，中小商家在抖音站上C位](https://www.36kr.com/p/2514596630089988)
+ 26 [Altman亲手复刻“Grok”，背刺马斯克，定制GPT正式开放，最全第三方市场已出](https://www.36kr.com/p/2515419334414601)
 
- 27 [小米大模型：不搞军备竞赛](https://www.36kr.com/p/2508879215395073)
+ 27 [​北上广年轻人，不相信花束般的恋爱](https://www.36kr.com/p/2513187285651457)
 
- 28 [网易，“熊孩子生意”蹚出“翻身”路](https://www.36kr.com/p/2512444381892872)
+ 28 [丑衣服泛滥，年轻人买到怀疑人生](https://www.36kr.com/p/2516145570402308)
 
- 29 [国潮降温，李宁需要寻找新标签](https://www.36kr.com/p/2513955111571714)
+ 29 [ChatGPT最近被微软内部禁用，GPTs新bug：数据只要两句提示词就能套走](https://www.36kr.com/p/2516164692742403)
 
- 30 [韩漫，韩国的“晋江文学城”](https://www.36kr.com/p/2514033388507139)
+ 30 [36氪首发｜精密零组件AI制造「量匠」完成千万元天使轮融资，九合创投领投](https://www.36kr.com/p/2509678822211590)
 
- 31 [李书福再提IPO，极氪将赴美上市](https://www.36kr.com/p/2513489461186560)
+ 31 [宁德时代首席科学家吴凯：警惕储能一哄而上的风险  | 最前线](https://www.36kr.com/p/2516118158217476)
 
- 32 [阿斯利康的20亿美元赌局，GLP-1思路之变](https://www.36kr.com/p/2513844273483781)
+ 32 [这届双十一为何这么惨淡？年年玩套路，今年被套路反噬](https://www.36kr.com/p/2516194049073282)
 
- 33 [店播爆发、超头扩容，淘宝直播「两条腿走路」告捷](https://www.36kr.com/p/2515119909179396)
+ 33 [2028年人类将迎来AGI：DeepMind联合创始人长文预测未来AI发展](https://www.36kr.com/p/2516164119482373)
 
- 34 [如何将业务数字化](https://www.36kr.com/p/2513900727308292)
+ 34 [最前线 | 智驾全国都能开，阿维塔12售价30.08万元起](https://www.36kr.com/p/2515373825315081)
 
- 35 [北交所一周审核动态：18家企业更新进展 云星宇被要求重新提炼总结自身创新特征](https://www.36kr.com/p/2513854726279174)
+ 35 [女性反“粉红税”，还得靠老头](https://www.36kr.com/p/2515113554808840)
+
+ 36 [你是内向还是外向？别这么快下定论（上）](https://www.36kr.com/p/2471698691954568)
+
+ 37 [AI检测器又活了？成功率高达98%，吊打OpenAI](https://www.36kr.com/p/2515454051881216)
+
+ 38 [马拉松，中年男人的广场舞](https://www.36kr.com/p/2516184927031556)
+
+ 39 [燃油车大反击：为何还有这么多消费者买油车？](https://www.36kr.com/p/2514652775473026)
+
+ 40 [深蹲是人类本能，但更多年轻人蹲不下去了](https://www.36kr.com/p/2515357806924040)
+
+ 41 [滴滴Q3营收514亿：中国出行日均3130万单，拟进行不超过10亿美元回购](https://www.36kr.com/p/2516631883026433)
+
+ 42 [黑客入侵ChatGPT，OpenAI微软全被搞崩，“苏丹匿名者”：是我干的](https://www.36kr.com/p/2515418234949892)
+
+ 43 [半个奶茶圈都在推的“三品管”，究竟有什么来头？](https://www.36kr.com/p/2516145836314880)
+
+ 44 [微信支付更新，充话费有福了…](https://www.36kr.com/p/2512597384761604)
+
+ 45 [一地鸡毛，百亿A股突然宣布](https://www.36kr.com/p/2515486146072581)
+
+ 46 [36氪首发 | 专注下一代蛋白组学和免疫诊断技术研发，SPEAR BIO获数千万美元种子轮系列融资](https://www.36kr.com/p/2514826900262917)
+
+ 47 [亚朵酒店4.0系列重磅来袭，打造“吃得好、睡得好、工作好”的中国体验](https://www.36kr.com/p/2516186004689152)
+
+ 48 [行情不好的时候，中介一般会先卖什么房子](https://www.36kr.com/p/2516134234804226)
+
+ 49 [苹果M3在CPU测试中暴露出一个问题](https://www.36kr.com/p/2516185187995904)
+
+ 50 [UNC斯坦福等曝光GPT-4V意外漏洞，被人类哄骗数出8个葫芦娃，LeCun和Jim Fan震惊了](https://www.36kr.com/p/2516585065828354)
 </details>
 
 
@@ -228,65 +258,65 @@
 <summary> tag: baidu 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/baidu?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/baidu</a>
     </summary>
 
- 1 [警方通缉缅北电诈头目明学昌等4人](https://www.baidu.com/s?wd=%E8%AD%A6%E6%96%B9%E9%80%9A%E7%BC%89%E7%BC%85%E5%8C%97%E7%94%B5%E8%AF%88%E5%A4%B4%E7%9B%AE%E6%98%8E%E5%AD%A6%E6%98%8C%E7%AD%894%E4%BA%BA)
+ 1 [55个品牌被移出中华老字号](https://www.baidu.com/s?wd=55%E4%B8%AA%E5%93%81%E7%89%8C%E8%A2%AB%E7%A7%BB%E5%87%BA%E4%B8%AD%E5%8D%8E%E8%80%81%E5%AD%97%E5%8F%B7)
 
- 2 [冰岛进入紧急状态 火山或几天内喷发](https://www.baidu.com/s?wd=%E5%86%B0%E5%B2%9B%E8%BF%9B%E5%85%A5%E7%B4%A7%E6%80%A5%E7%8A%B6%E6%80%81%20%E7%81%AB%E5%B1%B1%E6%88%96%E5%87%A0%E5%A4%A9%E5%86%85%E5%96%B7%E5%8F%91)
+ 2 [女生失业被妈妈雇佣当司机 日薪20元](https://www.baidu.com/s?wd=%E5%A5%B3%E7%94%9F%E5%A4%B1%E4%B8%9A%E8%A2%AB%E5%A6%88%E5%A6%88%E9%9B%87%E4%BD%A3%E5%BD%93%E5%8F%B8%E6%9C%BA%20%E6%97%A5%E8%96%AA20%E5%85%83)
 
- 3 [中国十年“网事”](https://www.baidu.com/s?wd=%E4%B8%AD%E5%9B%BD%E5%8D%81%E5%B9%B4%E2%80%9C%E7%BD%91%E4%BA%8B%E2%80%9D)
+ 3 [向“新”而行折射中国经济新活力](https://www.baidu.com/s?wd=%E5%90%91%E2%80%9C%E6%96%B0%E2%80%9D%E8%80%8C%E8%A1%8C%E6%8A%98%E5%B0%84%E4%B8%AD%E5%9B%BD%E7%BB%8F%E6%B5%8E%E6%96%B0%E6%B4%BB%E5%8A%9B)
 
- 4 [阿里回应多款应用崩了](https://www.baidu.com/s?wd=%E9%98%BF%E9%87%8C%E5%9B%9E%E5%BA%94%E5%A4%9A%E6%AC%BE%E5%BA%94%E7%94%A8%E5%B4%A9%E4%BA%86)
+ 4 [16岁少女患十余种病体重22斤](https://www.baidu.com/s?wd=16%E5%B2%81%E5%B0%91%E5%A5%B3%E6%82%A3%E5%8D%81%E4%BD%99%E7%A7%8D%E7%97%85%E4%BD%93%E9%87%8D22%E6%96%A4)
 
- 5 [大妈买海鱼红烧后半夜发绿光](https://www.baidu.com/s?wd=%E5%A4%A7%E5%A6%88%E4%B9%B0%E6%B5%B7%E9%B1%BC%E7%BA%A2%E7%83%A7%E5%90%8E%E5%8D%8A%E5%A4%9C%E5%8F%91%E7%BB%BF%E5%85%89)
+ 5 [美军在叙利亚基地遭15枚火箭弹袭击](https://www.baidu.com/s?wd=%E7%BE%8E%E5%86%9B%E5%9C%A8%E5%8F%99%E5%88%A9%E4%BA%9A%E5%9F%BA%E5%9C%B0%E9%81%AD15%E6%9E%9A%E7%81%AB%E7%AE%AD%E5%BC%B9%E8%A2%AD%E5%87%BB)
 
- 6 [张译拒签《狂飙》实体书](https://www.baidu.com/s?wd=%E5%BC%A0%E8%AF%91%E6%8B%92%E7%AD%BE%E3%80%8A%E7%8B%82%E9%A3%99%E3%80%8B%E5%AE%9E%E4%BD%93%E4%B9%A6)
+ 6 [河南南阳一火车起火？多方回应](https://www.baidu.com/s?wd=%E6%B2%B3%E5%8D%97%E5%8D%97%E9%98%B3%E4%B8%80%E7%81%AB%E8%BD%A6%E8%B5%B7%E7%81%AB%EF%BC%9F%E5%A4%9A%E6%96%B9%E5%9B%9E%E5%BA%94)
 
- 7 [李佳琦双十一收入超250亿](https://www.baidu.com/s?wd=%E6%9D%8E%E4%BD%B3%E7%90%A6%E5%8F%8C%E5%8D%81%E4%B8%80%E6%94%B6%E5%85%A5%E8%B6%85250%E4%BA%BF)
+ 7 [小男孩拼尽全力扶瘫痪妈妈上轮椅](https://www.baidu.com/s?wd=%E5%B0%8F%E7%94%B7%E5%AD%A9%E6%8B%BC%E5%B0%BD%E5%85%A8%E5%8A%9B%E6%89%B6%E7%98%AB%E7%97%AA%E5%A6%88%E5%A6%88%E4%B8%8A%E8%BD%AE%E6%A4%85)
 
- 8 [的哥猥亵女乘客视频实为摆拍](https://www.baidu.com/s?wd=%E7%9A%84%E5%93%A5%E7%8C%A5%E4%BA%B5%E5%A5%B3%E4%B9%98%E5%AE%A2%E8%A7%86%E9%A2%91%E5%AE%9E%E4%B8%BA%E6%91%86%E6%8B%8D)
+ 8 [女乘客购票默认上铺？12306回应](https://www.baidu.com/s?wd=%E5%A5%B3%E4%B9%98%E5%AE%A2%E8%B4%AD%E7%A5%A8%E9%BB%98%E8%AE%A4%E4%B8%8A%E9%93%BA%EF%BC%9F12306%E5%9B%9E%E5%BA%94)
 
- 9 [你的双十一快递可能被烧了](https://www.baidu.com/s?wd=%E4%BD%A0%E7%9A%84%E5%8F%8C%E5%8D%81%E4%B8%80%E5%BF%AB%E9%80%92%E5%8F%AF%E8%83%BD%E8%A2%AB%E7%83%A7%E4%BA%86)
+ 9 [寒衣节](https://www.baidu.com/s?wd=%E5%AF%92%E8%A1%A3%E8%8A%82)
 
- 10 [头天付尾款次日降百元](https://www.baidu.com/s?wd=%E5%A4%B4%E5%A4%A9%E4%BB%98%E5%B0%BE%E6%AC%BE%E6%AC%A1%E6%97%A5%E9%99%8D%E7%99%BE%E5%85%83)
+ 10 [央行上海总部谈下调存量房贷](https://www.baidu.com/s?wd=%E5%A4%AE%E8%A1%8C%E4%B8%8A%E6%B5%B7%E6%80%BB%E9%83%A8%E8%B0%88%E4%B8%8B%E8%B0%83%E5%AD%98%E9%87%8F%E6%88%BF%E8%B4%B7)
 
- 11 [今年“双十一”冷清的原因找到了](https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E2%80%9C%E5%8F%8C%E5%8D%81%E4%B8%80%E2%80%9D%E5%86%B7%E6%B8%85%E7%9A%84%E5%8E%9F%E5%9B%A0%E6%89%BE%E5%88%B0%E4%BA%86)
+ 11 [幼童被海浪卷走好心大哥飞奔捞起](https://www.baidu.com/s?wd=%E5%B9%BC%E7%AB%A5%E8%A2%AB%E6%B5%B7%E6%B5%AA%E5%8D%B7%E8%B5%B0%E5%A5%BD%E5%BF%83%E5%A4%A7%E5%93%A5%E9%A3%9E%E5%A5%94%E6%8D%9E%E8%B5%B7)
 
- 12 [日媒批福原爱生活奢侈逃亡中国](https://www.baidu.com/s?wd=%E6%97%A5%E5%AA%92%E6%89%B9%E7%A6%8F%E5%8E%9F%E7%88%B1%E7%94%9F%E6%B4%BB%E5%A5%A2%E4%BE%88%E9%80%83%E4%BA%A1%E4%B8%AD%E5%9B%BD)
+ 12 [双11涉诈快递在派出所院里摆一地](https://www.baidu.com/s?wd=%E5%8F%8C11%E6%B6%89%E8%AF%88%E5%BF%AB%E9%80%92%E5%9C%A8%E6%B4%BE%E5%87%BA%E6%89%80%E9%99%A2%E9%87%8C%E6%91%86%E4%B8%80%E5%9C%B0)
 
- 13 [今年冬天会出现极端寒潮吗？](https://www.baidu.com/s?wd=%E4%BB%8A%E5%B9%B4%E5%86%AC%E5%A4%A9%E4%BC%9A%E5%87%BA%E7%8E%B0%E6%9E%81%E7%AB%AF%E5%AF%92%E6%BD%AE%E5%90%97%EF%BC%9F)
+ 13 [气温被快进多地冷得像12月](https://www.baidu.com/s?wd=%E6%B0%94%E6%B8%A9%E8%A2%AB%E5%BF%AB%E8%BF%9B%E5%A4%9A%E5%9C%B0%E5%86%B7%E5%BE%97%E5%83%8F12%E6%9C%88)
 
- 14 [大闸蟹跌出“白菜价”](https://www.baidu.com/s?wd=%E5%A4%A7%E9%97%B8%E8%9F%B9%E8%B7%8C%E5%87%BA%E2%80%9C%E7%99%BD%E8%8F%9C%E4%BB%B7%E2%80%9D)
+ 14 [200亿短剧生意 越土越暴利](https://www.baidu.com/s?wd=200%E4%BA%BF%E7%9F%AD%E5%89%A7%E7%94%9F%E6%84%8F%20%E8%B6%8A%E5%9C%9F%E8%B6%8A%E6%9A%B4%E5%88%A9)
 
- 15 [低价硝烟下天猫京东公布双11成绩](https://www.baidu.com/s?wd=%E4%BD%8E%E4%BB%B7%E7%A1%9D%E7%83%9F%E4%B8%8B%E5%A4%A9%E7%8C%AB%E4%BA%AC%E4%B8%9C%E5%85%AC%E5%B8%83%E5%8F%8C11%E6%88%90%E7%BB%A9)
+ 15 [山东安丘通报74名中学生恶心呕吐](https://www.baidu.com/s?wd=%E5%B1%B1%E4%B8%9C%E5%AE%89%E4%B8%98%E9%80%9A%E6%8A%A574%E5%90%8D%E4%B8%AD%E5%AD%A6%E7%94%9F%E6%81%B6%E5%BF%83%E5%91%95%E5%90%90)
 
- 16 [在菲被绑架的6名中国人遗体疑被发现](https://www.baidu.com/s?wd=%E5%9C%A8%E8%8F%B2%E8%A2%AB%E7%BB%91%E6%9E%B6%E7%9A%846%E5%90%8D%E4%B8%AD%E5%9B%BD%E4%BA%BA%E9%81%97%E4%BD%93%E7%96%91%E8%A2%AB%E5%8F%91%E7%8E%B0)
+ 16 [雪莉生前纪录片完整版公开](https://www.baidu.com/s?wd=%E9%9B%AA%E8%8E%89%E7%94%9F%E5%89%8D%E7%BA%AA%E5%BD%95%E7%89%87%E5%AE%8C%E6%95%B4%E7%89%88%E5%85%AC%E5%BC%80)
 
- 17 [尘封27年的命案因孩子一句话破了](https://www.baidu.com/s?wd=%E5%B0%98%E5%B0%8127%E5%B9%B4%E7%9A%84%E5%91%BD%E6%A1%88%E5%9B%A0%E5%AD%A9%E5%AD%90%E4%B8%80%E5%8F%A5%E8%AF%9D%E7%A0%B4%E4%BA%86)
+ 17 [常州华立是家怎样的企业](https://www.baidu.com/s?wd=%E5%B8%B8%E5%B7%9E%E5%8D%8E%E7%AB%8B%E6%98%AF%E5%AE%B6%E6%80%8E%E6%A0%B7%E7%9A%84%E4%BC%81%E4%B8%9A)
 
- 18 [新郎接亲时带开锁师傅3秒开门](https://www.baidu.com/s?wd=%E6%96%B0%E9%83%8E%E6%8E%A5%E4%BA%B2%E6%97%B6%E5%B8%A6%E5%BC%80%E9%94%81%E5%B8%88%E5%82%853%E7%A7%92%E5%BC%80%E9%97%A8)
+ 18 [河北一罐车疑气体泄漏车顶直接爆开](https://www.baidu.com/s?wd=%E6%B2%B3%E5%8C%97%E4%B8%80%E7%BD%90%E8%BD%A6%E7%96%91%E6%B0%94%E4%BD%93%E6%B3%84%E6%BC%8F%E8%BD%A6%E9%A1%B6%E7%9B%B4%E6%8E%A5%E7%88%86%E5%BC%80)
 
- 19 [医学生堆心脏大脑等器官造型雪人](https://www.baidu.com/s?wd=%E5%8C%BB%E5%AD%A6%E7%94%9F%E5%A0%86%E5%BF%83%E8%84%8F%E5%A4%A7%E8%84%91%E7%AD%89%E5%99%A8%E5%AE%98%E9%80%A0%E5%9E%8B%E9%9B%AA%E4%BA%BA)
+ 19 [胡润：中国千万净资产家庭达211万户](https://www.baidu.com/s?wd=%E8%83%A1%E6%B6%A6%EF%BC%9A%E4%B8%AD%E5%9B%BD%E5%8D%83%E4%B8%87%E5%87%80%E8%B5%84%E4%BA%A7%E5%AE%B6%E5%BA%AD%E8%BE%BE211%E4%B8%87%E6%88%B7)
 
- 20 [14岁天才少女被喊话：国家队等你](https://www.baidu.com/s?wd=14%E5%B2%81%E5%A4%A9%E6%89%8D%E5%B0%91%E5%A5%B3%E8%A2%AB%E5%96%8A%E8%AF%9D%EF%BC%9A%E5%9B%BD%E5%AE%B6%E9%98%9F%E7%AD%89%E4%BD%A0)
+ 20 [李佳琦的双11相当于打工人10万年](https://www.baidu.com/s?wd=%E6%9D%8E%E4%BD%B3%E7%90%A6%E7%9A%84%E5%8F%8C11%E7%9B%B8%E5%BD%93%E4%BA%8E%E6%89%93%E5%B7%A5%E4%BA%BA10%E4%B8%87%E5%B9%B4)
 
- 21 [陆家嘴回应买到“毒地块”](https://www.baidu.com/s?wd=%E9%99%86%E5%AE%B6%E5%98%B4%E5%9B%9E%E5%BA%94%E4%B9%B0%E5%88%B0%E2%80%9C%E6%AF%92%E5%9C%B0%E5%9D%97%E2%80%9D)
+ 21 [男子玉米地死亡 警方：酒后冻死](https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E7%8E%89%E7%B1%B3%E5%9C%B0%E6%AD%BB%E4%BA%A1%20%E8%AD%A6%E6%96%B9%EF%BC%9A%E9%85%92%E5%90%8E%E5%86%BB%E6%AD%BB)
 
- 22 [民进党高官被曝聚众淫乱](https://www.baidu.com/s?wd=%E6%B0%91%E8%BF%9B%E5%85%9A%E9%AB%98%E5%AE%98%E8%A2%AB%E6%9B%9D%E8%81%9A%E4%BC%97%E6%B7%AB%E4%B9%B1)
+ 22 [张译拒绝给狂飙实体书签名](https://www.baidu.com/s?wd=%E5%BC%A0%E8%AF%91%E6%8B%92%E7%BB%9D%E7%BB%99%E7%8B%82%E9%A3%99%E5%AE%9E%E4%BD%93%E4%B9%A6%E7%AD%BE%E5%90%8D)
 
- 23 [家长称孩子冬季校服拆开全是薄膜](https://www.baidu.com/s?wd=%E5%AE%B6%E9%95%BF%E7%A7%B0%E5%AD%A9%E5%AD%90%E5%86%AC%E5%AD%A3%E6%A0%A1%E6%9C%8D%E6%8B%86%E5%BC%80%E5%85%A8%E6%98%AF%E8%96%84%E8%86%9C)
+ 23 [江苏：课间10分钟“清空教室”](https://www.baidu.com/s?wd=%E6%B1%9F%E8%8B%8F%EF%BC%9A%E8%AF%BE%E9%97%B410%E5%88%86%E9%92%9F%E2%80%9C%E6%B8%85%E7%A9%BA%E6%95%99%E5%AE%A4%E2%80%9D)
 
- 24 [大批中国公民滞留俄罗斯？官方回应](https://www.baidu.com/s?wd=%E5%A4%A7%E6%89%B9%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E6%BB%9E%E7%95%99%E4%BF%84%E7%BD%97%E6%96%AF%EF%BC%9F%E5%AE%98%E6%96%B9%E5%9B%9E%E5%BA%94)
+ 24 [高学历逃离县城，考编的幻境破了](https://www.baidu.com/s?wd=%E9%AB%98%E5%AD%A6%E5%8E%86%E9%80%83%E7%A6%BB%E5%8E%BF%E5%9F%8E%EF%BC%8C%E8%80%83%E7%BC%96%E7%9A%84%E5%B9%BB%E5%A2%83%E7%A0%B4%E4%BA%86)
 
- 25 [常州通报企业家被约谈后坠楼身亡](https://www.baidu.com/s?wd=%E5%B8%B8%E5%B7%9E%E9%80%9A%E6%8A%A5%E4%BC%81%E4%B8%9A%E5%AE%B6%E8%A2%AB%E7%BA%A6%E8%B0%88%E5%90%8E%E5%9D%A0%E6%A5%BC%E8%BA%AB%E4%BA%A1)
+ 25 [缅北四大家族成员喊话家人放中国人](https://www.baidu.com/s?wd=%E7%BC%85%E5%8C%97%E5%9B%9B%E5%A4%A7%E5%AE%B6%E6%97%8F%E6%88%90%E5%91%98%E5%96%8A%E8%AF%9D%E5%AE%B6%E4%BA%BA%E6%94%BE%E4%B8%AD%E5%9B%BD%E4%BA%BA)
 
- 26 [两小孩地铁玩卡片引一群人围观](https://www.baidu.com/s?wd=%E4%B8%A4%E5%B0%8F%E5%AD%A9%E5%9C%B0%E9%93%81%E7%8E%A9%E5%8D%A1%E7%89%87%E5%BC%95%E4%B8%80%E7%BE%A4%E4%BA%BA%E5%9B%B4%E8%A7%82)
+ 26 [多国爆发臭虫危机 民众不敢去电影院](https://www.baidu.com/s?wd=%E5%A4%9A%E5%9B%BD%E7%88%86%E5%8F%91%E8%87%AD%E8%99%AB%E5%8D%B1%E6%9C%BA%20%E6%B0%91%E4%BC%97%E4%B8%8D%E6%95%A2%E5%8E%BB%E7%94%B5%E5%BD%B1%E9%99%A2)
 
- 27 [男子杀人逃深山 养8只恶犬防身](https://www.baidu.com/s?wd=%E7%94%B7%E5%AD%90%E6%9D%80%E4%BA%BA%E9%80%83%E6%B7%B1%E5%B1%B1%20%E5%85%BB8%E5%8F%AA%E6%81%B6%E7%8A%AC%E9%98%B2%E8%BA%AB)
+ 27 [汪涵起诉代言品牌索赔1044万](https://www.baidu.com/s?wd=%E6%B1%AA%E6%B6%B5%E8%B5%B7%E8%AF%89%E4%BB%A3%E8%A8%80%E5%93%81%E7%89%8C%E7%B4%A2%E8%B5%941044%E4%B8%87)
 
- 28 [以总理：将在必要时坚定与世界对抗](https://www.baidu.com/s?wd=%E4%BB%A5%E6%80%BB%E7%90%86%EF%BC%9A%E5%B0%86%E5%9C%A8%E5%BF%85%E8%A6%81%E6%97%B6%E5%9D%9A%E5%AE%9A%E4%B8%8E%E4%B8%96%E7%95%8C%E5%AF%B9%E6%8A%97)
+ 28 [浙江千亿富豪遭实名举报](https://www.baidu.com/s?wd=%E6%B5%99%E6%B1%9F%E5%8D%83%E4%BA%BF%E5%AF%8C%E8%B1%AA%E9%81%AD%E5%AE%9E%E5%90%8D%E4%B8%BE%E6%8A%A5)
 
- 29 [村民夜间偶遇野生大熊猫](https://www.baidu.com/s?wd=%E6%9D%91%E6%B0%91%E5%A4%9C%E9%97%B4%E5%81%B6%E9%81%87%E9%87%8E%E7%94%9F%E5%A4%A7%E7%86%8A%E7%8C%AB)
+ 29 [智能手机或将于2050年退场](https://www.baidu.com/s?wd=%E6%99%BA%E8%83%BD%E6%89%8B%E6%9C%BA%E6%88%96%E5%B0%86%E4%BA%8E2050%E5%B9%B4%E9%80%80%E5%9C%BA)
 
- 30 [张艺兴演唱会伴舞服装引热议](https://www.baidu.com/s?wd=%E5%BC%A0%E8%89%BA%E5%85%B4%E6%BC%94%E5%94%B1%E4%BC%9A%E4%BC%B4%E8%88%9E%E6%9C%8D%E8%A3%85%E5%BC%95%E7%83%AD%E8%AE%AE)
+ 30 [问界M5撞后车 余承东：客户误踩油门](https://www.baidu.com/s?wd=%E9%97%AE%E7%95%8CM5%E6%92%9E%E5%90%8E%E8%BD%A6%20%E4%BD%99%E6%89%BF%E4%B8%9C%EF%BC%9A%E5%AE%A2%E6%88%B7%E8%AF%AF%E8%B8%A9%E6%B2%B9%E9%97%A8)
 </details>
 
 
@@ -296,23 +326,23 @@
 
  1 [听说最近AI应用爆了？！来AI Studio玩转大模型应用](https://www.paddlepaddle.org.cn/support/news?action=detail&id=3397)
 
- 2 [易鲸捷否认贴牌Oracle；鸿蒙进教材：“纯血”版不再兼容安卓应用；大叔们遭AI女友“断崖式分手”｜Q资讯](https://www.infoq.cn/news/BUh7i3M3p44amlp0foJK)
+ 2 [各路大神献出自定义GPT，24小时Top 9名单在这](https://www.jiqizhixin.com/articles/2023-11-13-13)
 
- 3 [深度解锁用云经验！火山引擎公共云·城市分享会开启云上新未来](https://www.infoq.cn/news/plCgkM3joyRCdX3vCK6s)
+ 3 [连葫芦娃都数不明白，解说英雄联盟的GPT-4V面临幻觉挑战](https://www.jiqizhixin.com/articles/2023-11-13-12)
 
- 4 [多伦多大学团队使用AlphaFold获得对蛋白质结构的新见解](https://www.jiqizhixin.com/articles/2023-11-10-6)
+ 4 [GPT-4V数学推理如何？微软发布MathVista基准，评测报告长达112页](https://www.jiqizhixin.com/articles/2023-11-13-11)
 
- 5 [老黄H100再破纪录，4分钟训完GPT-3！全新「特供版」H20、L20和L2曝光，性能史诗级缩水](https://www.51cto.com/article/773072.html)
+ 5 [全新近似注意力机制HyperAttention：对长上下文友好、LLM推理提速50%](https://www.jiqizhixin.com/articles/2023-11-13-10)
 
  6 [凌志软件加入飞桨技术伙伴计划，共同探索“AI+金融”应用场景落地](https://www.paddlepaddle.org.cn/support/news?action=detail&id=3396)
 
- 7 [太疯狂，GPTs上线：奥特曼表演手搓马斯克大模型，还有人已搞出第三方市场（附教程）](https://www.jiqizhixin.com/articles/2023-11-10-5)
+ 7 [破解自注意力推理缺陷的奥秘，蚂蚁自研新一代Transformer或实现无损外推](https://www.jiqizhixin.com/articles/2023-11-13-9)
 
- 8 [智能手机替代品？前苹果设计师推出售价699美元的人工智能胸针AI Pin](https://www.51cto.com/article/773068.html)
+ 8 [低成本快速定制大模型，这次我们来深度探讨下RAG 和向量数据库](https://www.jiqizhixin.com/articles/2023-11-13-8)
 
- 9 [华人团队获最佳论文、最佳系统论文，CoRL获奖论文出炉](https://www.jiqizhixin.com/articles/2023-11-10-4)
+ 9 [Runway新功能「运动笔刷」再次惊艳AI圈：随手一涂，图片就动起来了](https://www.jiqizhixin.com/articles/2023-11-13-7)
 
- 10 [李飞飞团队新作：脑控机器人做家务，让脑机接口具备少样本学习能力](https://www.jiqizhixin.com/articles/2023-11-10-3)
+ 10 [斯坦福提出对比偏好学习：无需强化学习即可从人类反馈中学习](https://www.jiqizhixin.com/articles/2023-11-13-6)
 </details>
 
 
@@ -322,33 +352,35 @@
 
  1 [krahets/hello-algo](https://github.com/krahets/hello-algo)
 
- 2 [antirez/smallchat](https://github.com/antirez/smallchat)
+ 2 [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners)
 
- 3 [microsoft/generative-ai-for-beginners](https://github.com/microsoft/generative-ai-for-beginners)
+ 3 [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
 
- 4 [jmorganca/ollama](https://github.com/jmorganca/ollama)
+ 4 [antirez/smallchat](https://github.com/antirez/smallchat)
 
- 5 [SagerNet/sing-box](https://github.com/SagerNet/sing-box)
+ 5 [nz-m/SocialEcho](https://github.com/nz-m/SocialEcho)
 
- 6 [bensadeh/tailspin](https://github.com/bensadeh/tailspin)
+ 6 [girafe-ai/ml-course](https://github.com/girafe-ai/ml-course)
 
- 7 [nvim-lua/kickstart.nvim](https://github.com/nvim-lua/kickstart.nvim)
+ 7 [jmorganca/ollama](https://github.com/jmorganca/ollama)
 
- 8 [girafe-ai/ml-course](https://github.com/girafe-ai/ml-course)
+ 8 [bensadeh/tailspin](https://github.com/bensadeh/tailspin)
 
  9 [tinygrad/tinygrad](https://github.com/tinygrad/tinygrad)
 
- 10 [openai/whisper](https://github.com/openai/whisper)
+ 10 [SagerNet/sing-box](https://github.com/SagerNet/sing-box)
 
- 11 [huggingface/alignment-handbook](https://github.com/huggingface/alignment-handbook)
+ 11 [openai/whisper](https://github.com/openai/whisper)
 
- 12 [AILab-CVC/VideoCrafter](https://github.com/AILab-CVC/VideoCrafter)
+ 12 [huggingface/alignment-handbook](https://github.com/huggingface/alignment-handbook)
 
  13 [files-community/Files](https://github.com/files-community/Files)
 
- 14 [radames/Real-Time-Latent-Consistency-Model](https://github.com/radames/Real-Time-Latent-Consistency-Model)
+ 14 [expo/expo](https://github.com/expo/expo)
 
- 15 [withastro/astro](https://github.com/withastro/astro)
+ 15 [PKUFlyingPig/cs-self-learning](https://github.com/PKUFlyingPig/cs-self-learning)
+
+ 16 [withastro/astro](https://github.com/withastro/astro)
 </details>
 
 
@@ -356,205 +388,205 @@
 <summary> tag: bilibili 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/bilibili?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/bilibili</a>
     </summary>
 
- 1 [三国灭爸为什么活不长？【小约翰】](https://b23.tv/BV16a4y1Q7by)
+ 1 [刚来法国时帮过我的老太太成了homeless…](https://b23.tv/BV1ju4y1N7od)
 
- 2 [《原神》游戏剧情EP「轻涟」MV](https://b23.tv/BV17N411g7Ft)
+ 2 [能给人急死](https://b23.tv/BV1nj411a7Cz)
 
- 3 [各地人信念崩塌的瞬间！](https://b23.tv/BV1ba4y1Q7pV)
+ 3 [大师撤回了一次行骗🙏](https://b23.tv/BV1vc411X7Lc)
 
- 4 [这一刻水神无愧于正义之名，芙宁娜比肩神明！【原神 / 𝗖𝗮𝗹𝗹 𝗼𝗳 𝗦𝗶𝗹𝗲𝗻𝗰𝗲】](https://b23.tv/BV14u4y187Rg)
+ 4 [【胡夏】原神剧情曲《轻涟》（中文演绎版）](https://b23.tv/BV1eG41197wb)
 
- 5 [见证历史！全网首位元素伤害达到上限！神座芙卡洛斯归位！](https://b23.tv/BV1Qg4y1X7o6)
+ 5 [突然降温咋画捏?](https://b23.tv/BV1EN4y1D7ef)
 
- 6 [《崩坏：星穹铁道》千星纪游PV：「绥园伏鬼记」](https://b23.tv/BV1Xw411K7Mg)
+ 6 [《甄嬛传》之 甄嬛的一生 (上)](https://b23.tv/BV16j411h7bN)
 
- 7 [能给人急死](https://b23.tv/BV1nj411a7Cz)
+ 7 [这辣白菜第一了](https://b23.tv/BV1ZG411Q7er)
 
- 8 [这是个音乐游戏！！2023版](https://b23.tv/BV1ze411X7MN)
+ 8 [在毛毯上薅出艾伦](https://b23.tv/BV1X94y137YV)
 
- 9 [aespa《Drama》MV](https://b23.tv/BV1Se411X7d4)
+ 9 [这一刻水神无愧于正义之名，芙宁娜比肩神明！【原神 / 𝗖𝗮𝗹𝗹 𝗼𝗳 𝗦𝗶𝗹𝗲𝗻𝗰𝗲】](https://b23.tv/BV14u4y187Rg)
 
- 10 [你最喜欢上哪科老师的课？](https://b23.tv/BV1mM411S7SD)
+ 10 [三国灭爸为什么活不长？【小约翰】](https://b23.tv/BV16a4y1Q7by)
 
- 11 [网友：是谁教消防这么拍宣传片的？](https://b23.tv/BV1yc411R7EF)
+ 11 [小朋友：教练我长得让你恶心吗。             教练：我来大姨夫了](https://b23.tv/BV1oC4y17786)
 
- 12 [“ 我不是猎人 也不是猎物 ”](https://b23.tv/BV1R94y137TL)
+ 12 [各地人信念崩塌的瞬间！](https://b23.tv/BV1ba4y1Q7pV)
 
- 13 [《完蛋！我被逆天舍友包围了！》先导PV](https://b23.tv/BV1sj411h7Da)
+ 13 [【医学博士】得了破伤风还能活多久？| 这种伤口很有可能是破伤风！](https://b23.tv/BV1Fu4y1b7Ls)
 
- 14 [厕所也能成网红店？想你的风吹到了厕所](https://b23.tv/BV1AC4y1U7Ay)
+ 14 [【王德峰】通常人理解的“经济基础决定上层建筑”可能是错的](https://b23.tv/BV1Xe411D7xo)
 
- 15 [《甄嬛传》之 甄嬛的一生 (上)](https://b23.tv/BV16j411h7bN)
+ 15 [大连一座让人生活惬意的城市，每个人在这都值得无忧无虑。](https://b23.tv/BV1uj411a7xW)
 
- 16 [突然降温咋画捏?](https://b23.tv/BV1EN4y1D7ef)
+ 16 [见证历史！全网首位元素伤害达到上限！神座芙卡洛斯归位！](https://b23.tv/BV1Qg4y1X7o6)
 
- 17 [老一辈艺术家的从容与淡定～让你们看看正规军的青海摇！张诗尧青海摇原版](https://b23.tv/BV19w411K7yQ)
+ 17 [这是个音乐游戏！！2023版](https://b23.tv/BV1ze411X7MN)
 
  18 [还有哪个舍友不听话](https://b23.tv/BV1kg4y197pN)
 
- 19 [惊呆宠物医生，一只自己会看病的流浪狗](https://b23.tv/BV1PH4y1B7wf)
+ 19 [无特效！挑战全网最还原的琳妮特变咖啡杯魔术！](https://b23.tv/BV1vN4y1U7ez)
 
- 20 [大师撤回了一次行骗🙏](https://b23.tv/BV1vc411X7Lc)
+ 20 [复刻全球最受欢迎炸鸡，每年卖出上亿份，到底有多好吃？](https://b23.tv/BV1aM411D7g5)
 
- 21 [冬季限定装备-冰溜子上线！](https://b23.tv/BV1d84y1Q7m7)
+ 21 [不想起床？00后女兵喊你迎接美好的一天❤️](https://b23.tv/BV1KH4y1z7KP)
 
- 22 [去漫展就是为了这一刻…](https://b23.tv/BV1kg4y1X7kH)
+ 22 [幼儿园小女孩800米跑出3分11秒！](https://b23.tv/BV1xg4y197Bp)
 
- 23 [坚持不懈的青春万岁！冬泳健身可能有危险，请勿模仿](https://b23.tv/BV1HG411Q77f)
+ 23 [【手残联萌】9周年特别节目](https://b23.tv/BV1aM411S7xX)
 
- 24 [《商界小佬》](https://b23.tv/BV1TQ4y18723)
+ 24 [【动捕演员过家家】超级间谍的千面伪装](https://b23.tv/BV1ZQ4y18715)
 
- 25 [这辣白菜第一了](https://b23.tv/BV1ZG411Q7er)
+ 25 [我们把各国军人拉到一起开了个会，指了条未曾设想的道路](https://b23.tv/BV1KH4y1z7c8)
 
- 26 [【动捕演员过家家】超级间谍的千面伪装](https://b23.tv/BV1ZQ4y18715)
+ 26 [孩子：扣1把我复活](https://b23.tv/BV1qz4y1P7DG)
 
- 27 [醉里挑灯看剑，梦回吹角连营#辛弃疾](https://b23.tv/BV1pc411R7Yt)
+ 27 [去漫展就是为了这一刻…](https://b23.tv/BV1kg4y1X7kH)
 
- 28 [在吗？读个评论？](https://b23.tv/BV19g4y1X7h4)
+ 28 [《抽 象 主 播》](https://b23.tv/BV1nu4y1N7kT)
 
- 29 [这让人怎么下嘴啊？](https://b23.tv/BV1Hj411h7St)
+ 29 [一直赢我？卸磨杀驴搞我爱美丽就是你的不对了！](https://b23.tv/BV19a4y1S77F)
 
- 30 [【手残联萌】9周年特别节目](https://b23.tv/BV1aM411S7xX)
+ 30 [如果不是我的推荐，你可能永远不会知道这部电影，有些人活着真难](https://b23.tv/BV1q94y137bk)
 
- 31 [【王德峰】通常人理解的“经济基础决定上层建筑”可能是错的](https://b23.tv/BV1Xe411D7xo)
+ 31 [9.7分封神！漫威15年最强剧诞生！洛基“故事之神”最强形态！这一集我实名吹爆](https://b23.tv/BV1mz4y1P7xY)
 
- 32 [如果不是我的推荐，你可能永远不会知道这部电影，有些人活着真难](https://b23.tv/BV1q94y137bk)
+ 32 [这让人怎么下嘴啊？](https://b23.tv/BV1Hj411h7St)
 
- 33 [【医学博士】得了破伤风还能活多久？| 这种伤口很有可能是破伤风！](https://b23.tv/BV1Fu4y1b7Ls)
+ 33 [给你们点寄人篱下的压迫感](https://b23.tv/BV1UG411Q7CF)
 
- 34 [【中文版翻唱】「轻涟」（芙宁娜传说任务《水的女儿》）](https://b23.tv/BV1gw411T7xH)
+ 34 [当电诈分子遇到开挂保安](https://b23.tv/BV1xj411h72w)
 
- 35 [歌迷朋友们好，我又出歌了](https://b23.tv/BV1z94y1V7PE)
+ 35 [当个高执行力的女生有多爽！我的P人变J秘诀！](https://b23.tv/BV1RC4y1U7UZ)
 
- 36 [在毛毯上薅出艾伦](https://b23.tv/BV1X94y137YV)
+ 36 [当我知道妈妈是17W粉丝的网红后，被她粉丝骂了？](https://b23.tv/BV1MC4y1E7Qv)
 
- 37 [【明日方舟：终末地】首曝《终末地》玩法！这玩法确实新鲜   |魔法Zc目录 明日方舟：终末地](https://b23.tv/BV1aj411h7fN)
+ 37 [当我2023年再次听到这些歌。](https://b23.tv/BV1gg4y1Q7kS)
 
  38 [【轰】这个世界总要允许普通人存在吧？（上膛）](https://b23.tv/BV12C4y177df)
 
- 39 [“凡人之躯又如何？在王座上独守500年，无愧于水神之名！”](https://b23.tv/BV1v94y1V7r1)
+ 39 [绳子都脱了只能硬着头皮上了](https://b23.tv/BV1LM411D7zL)
 
- 40 [猝死前会有哪些征兆？哪些习惯会增加猝死概率？](https://b23.tv/BV1EG411Q7Cb)
+ 40 [降温了，是时候重温一遍了](https://b23.tv/BV18w411T7JV)
 
- 41 [这所学校，居然给学校里的猫，做了战斗力排行榜！](https://b23.tv/BV1JH4y1B7SW)
+ 41 [总决赛 我来咯【Shy场时刻08】](https://b23.tv/BV1HN4y1U78c)
 
- 42 [敌人是重生者，但我运气实在是太好了](https://b23.tv/BV1b94y1V7TR)
+ 42 [老一辈艺术家的从容与淡定～让你们看看正规军的青海摇！张诗尧青海摇原版](https://b23.tv/BV19w411K7yQ)
 
- 43 [【vlog】小缸team真是好，上班就往海边跑](https://b23.tv/BV16c411R7zy)
+ 43 [东北不能失去酸菜之三周探索版！](https://b23.tv/BV1aQ4y187Wq)
 
- 44 [轻舟已过 万重山](https://b23.tv/BV1xH4y1B7YX)
+ 44 [乐观奋斗的青春万岁！冬泳健身可能有危险，请勿模仿](https://b23.tv/BV1dM411f7wq)
 
- 45 [孩子：扣1把我复活](https://b23.tv/BV1qz4y1P7DG)
+ 45 [在吗？读个评论？](https://b23.tv/BV19g4y1X7h4)
 
- 46 [我们把各国军人拉到一起开了个会，指了条未曾设想的道路](https://b23.tv/BV1KH4y1z7c8)
+ 46 [开车跑了5天，还没跑出呼伦贝尔！](https://b23.tv/BV15c411R7Na)
 
- 47 [排骨的神仙吃法，每一口都是妈妈的味道~](https://b23.tv/BV1wC4y1n74T)
+ 47 [我在坐月子所以断更了，后续会陆续更新哦](https://b23.tv/BV1rg4y197XQ)
 
- 48 [无特效！挑战全网最还原的琳妮特变咖啡杯魔术！](https://b23.tv/BV1vN4y1U7ez)
+ 48 [背带宇宙之蒙面鸡人！！！](https://b23.tv/BV1Qu4y1N7xb)
 
- 49 [大连一座让人生活惬意的城市，每个人在这都值得无忧无虑。](https://b23.tv/BV1uj411a7xW)
+ 49 [“ 我不是猎人 也不是猎物 ”](https://b23.tv/BV1R94y137TL)
 
- 50 [当个高执行力的女生有多爽！我的P人变J秘诀！](https://b23.tv/BV1RC4y1U7UZ)
+ 50 [再不逃出去答辩就兜裤裆里了！](https://b23.tv/BV1HQ4y1872Y)
 
- 51 [幼儿园小女孩800米跑出3分11秒！](https://b23.tv/BV1xg4y197Bp)
+ 51 [【MrBeast公益】当我们为孩子们捐100口井时。。。](https://b23.tv/BV1Y84y1Q7xx)
 
- 52 [挑战城市暴走15公里到绵羊料理家!!!【第四期】](https://b23.tv/BV1Dj411h7bA)
+ 52 [养了500只蚊子，陪我玩沉浸式射击游戏](https://b23.tv/BV1Ka4y1S7iB)
 
- 53 [一直赢我？卸磨杀驴搞我爱美丽就是你的不对了！](https://b23.tv/BV19a4y1S77F)
+ 53 [敌人是重生者，但我运气实在是太好了](https://b23.tv/BV1b94y1V7TR)
 
- 54 [9.7分封神！漫威15年最强剧诞生！洛基“故事之神”最强形态！这一集我实名吹爆](https://b23.tv/BV1mz4y1P7xY)
+ 54 [【原神】所有角色换成芙宁娜大招，贴贴你，太可爱了！](https://b23.tv/BV1w94y1G7mV)
 
- 55 [【MrBeast公益】当我们为孩子们捐100口井时。。。](https://b23.tv/BV1Y84y1Q7xx)
+ 55 [【2023全球总决赛】11月11日 半决赛 WBG vs BLG](https://b23.tv/BV1jg4y1Q7Pg)
 
- 56 [《芙宁娜不休的独舞》——五百年后的芙宁娜，终于自由了](https://b23.tv/BV1eM411S7tD)
+ 56 [排骨的神仙吃法，每一口都是妈妈的味道~](https://b23.tv/BV1wC4y1n74T)
 
- 57 [开车跑了5天，还没跑出呼伦贝尔！](https://b23.tv/BV15c411R7Na)
+ 57 [当名台词有了回应2](https://b23.tv/BV1yC4y1U7HM)
 
- 58 [全校唯一作业交齐的班级](https://b23.tv/BV1iC4y177EZ)
+ 58 [在无尽的沙漠当中没有树木！该如何生存下去【我的世界】 P15](https://b23.tv/BV1UQ4y187WF)
 
- 59 [总决赛 我来咯【Shy场时刻08】](https://b23.tv/BV1HN4y1U78c)
+ 59 [醉里挑灯看剑，梦回吹角连营#辛弃疾](https://b23.tv/BV1pc411R7Yt)
 
- 60 [降温了，是时候重温一遍了](https://b23.tv/BV18w411T7JV)
+ 60 [“至此，艺术大成”](https://b23.tv/BV1dg4y1X7Mz)
 
- 61 [那些被阉割过的名言：这何止是误解！简直是反向理解！](https://b23.tv/BV1mc411R71D)
+ 61 [如何拥有“圣人”般，恐怖的行动力，如利剑般执行！](https://b23.tv/BV1bQ4y187wo)
 
- 62 [千万粉丝吃鸡一姐开什么车？沫子爱车曝光！](https://b23.tv/BV11g4y1X7Du)
+ 62 [爱你老妈，明天见](https://b23.tv/BV1Jc411X7fN)
 
- 63 [绳子都脱了只能硬着头皮上了](https://b23.tv/BV1LM411D7zL)
+ 63 [芙宁娜：谁教你这样卖东西的？](https://b23.tv/BV1E94y137u7)
 
- 64 [《赛文奥特曼》剧情解析：真假赛文之战，就算是奥特战士也要面对另一个自己](https://b23.tv/BV1kN411g7d6)
+ 64 [宠粉的路还在继续，接下来的路放在心里](https://b23.tv/BV13N41137p3)
 
- 65 [当我2023年再次听到这些歌。](https://b23.tv/BV1gg4y1Q7kS)
+ 65 [冬季限定装备-冰溜子上线！](https://b23.tv/BV1d84y1Q7m7)
 
- 66 [巧克力味的东西真的是能让有幸福感！只要1分钟就能搞定的爆浆巧克力蛋糕，热乎乎的我太幸福了~~~](https://b23.tv/BV1bQ4y1n7qp)
+ 66 [惊呆宠物医生，一只自己会看病的流浪狗](https://b23.tv/BV1PH4y1B7wf)
 
- 67 [乡村真人版海贼王（7）](https://b23.tv/BV1du4y1P7m3)
+ 67 [就算要被吃掉，也要保持微笑！](https://b23.tv/BV1bw411T7VY)
 
- 68 [真的只是某一瞬间.....](https://b23.tv/BV1uw411x7rS)
+ 68 [你最喜欢上哪科老师的课？](https://b23.tv/BV1mM411S7SD)
 
- 69 [【芙宁娜】⚡你能忍受芙芙噔噔的洗脑么⚡汪⚡](https://b23.tv/BV1KN411g7hn)
+ 69 [全校唯一作业交齐的班级](https://b23.tv/BV1iC4y177EZ)
 
- 70 [不想起床？00后女兵喊你迎接美好的一天❤️](https://b23.tv/BV1KH4y1z7KP)
+ 70 [黑老大害死退役兵王的小妹妹，兵王直接团灭黑帮，动作电影《胜利》](https://b23.tv/BV1G94y1375n)
 
- 71 [养了500只蚊子，陪我玩沉浸式射击游戏](https://b23.tv/BV1Ka4y1S7iB)
+ 71 [“只有你，还陪着我了…”](https://b23.tv/BV1yu4y1N7U7)
 
- 72 [【扁豆】这结局，不愧是中国第一官场剧！5000年的人情事故，终于被说明白了！《岁月》大结局](https://b23.tv/BV1Cu4y187XX)
+ 72 [轻舟已过 万重山](https://b23.tv/BV1xH4y1B7YX)
 
- 73 [有个网红妈妈是什么感觉？竟然还被她粉丝骂了….（第二期）](https://b23.tv/BV1MC4y1E7Qv)
+ 73 [幽默的高材生-付航脱口秀](https://b23.tv/BV19a4y1S7iM)
 
- 74 [再不逃出去答辩就兜裤裆里了！](https://b23.tv/BV1HQ4y1872Y)
+ 74 [逆  天  中  配4](https://b23.tv/BV16Q4y187qK)
 
- 75 [一开始就站错队了唉](https://b23.tv/BV1r94y1V7T1)
+ 75 [偷偷打扮成假发模特吓男朋友！结果居然…【升级版连环整蛊】](https://b23.tv/BV1jC4y1E7aG)
 
- 76 [《抽 象 主 播》](https://b23.tv/BV1nu4y1N7kT)
+ 76 [网友：是谁教消防这么拍宣传片的？](https://b23.tv/BV1yc411R7EF)
 
- 77 [对话陈奕迅!极限访谈20分钟!新专辑独家幕后丨HOPICO](https://b23.tv/BV13c411R76s)
+ 77 [千万粉丝吃鸡一姐开什么车？沫子爱车曝光！](https://b23.tv/BV11g4y1X7Du)
 
- 78 [【Stray Kids】 "樂 (LALALALA)" M/V](https://b23.tv/BV13N411g7Nx)
+ 78 [一不小心九段了](https://b23.tv/BV1zg4y197jo)
 
- 79 [老板让我滚出去](https://b23.tv/BV1dN4y1D7XD)
+ 79 [生而为入殓师 我很抱歉](https://b23.tv/BV1yM411f733)
 
- 80 [怎样继承舍友的财产](https://b23.tv/BV1Uw411p7ij)
+ 80 [自从有了它，大街上也敢吸毒？真实案例告诉你，毒品电子烟的危害。（上）](https://b23.tv/BV18w411T7Zc)
 
- 81 [【2023全球总决赛】11月11日 半决赛 WBG vs BLG](https://b23.tv/BV1jg4y1Q7Pg)
+ 81 [“凡人之躯又如何？在王座上独守500年，无愧于水神之名！”](https://b23.tv/BV1v94y1V7r1)
 
- 82 [带你沉浸式体验消防“Tank”](https://b23.tv/BV1Dw411s7tn)
+ 82 [人民的生存即为正义！原神史上最棒的角色塑造诞生？【水神芙宁娜考据鉴赏】](https://b23.tv/BV1jC4y1E7zE)
 
- 83 [探秘中国人开的豪华枪店！全是稀有顶级武器！国产武器一大堆！](https://b23.tv/BV1iz4y1P73Q)
+ 83 [炸裂！欢乐马戏团背后却隐藏无数巨型怪物？！《神奇数字马戏团》剧情讲解](https://b23.tv/BV1Gw411W7Fy)
 
- 84 [今天给燕子上一课！](https://b23.tv/BV1yg4y1X71R)
+ 84 [#跳高 记录？ 干就完了 #校运会](https://b23.tv/BV1Vz4y1P7Yg)
 
- 85 [大型美食节目之《走进味觉》](https://b23.tv/BV1dH4y1q7kp)
+ 85 [《科目三》室外分解教学，5分钟速成大摇子！](https://b23.tv/BV1F94y1G781)
 
- 86 [黑老大害死退役兵王的小妹妹，兵王直接团灭黑帮，动作电影《胜利》](https://b23.tv/BV1G94y1375n)
+ 86 [紫薯布丁烧｜宁艺卓231110 音乐银行aespa《Drama》舞台横版直拍](https://b23.tv/BV1Ub4y1u7FD)
 
- 87 [我在坐月子所以断更了，后续会陆续更新哦](https://b23.tv/BV1rg4y197XQ)
+ 87 [【心理科普】只有经历了高质量的“内摄”，才能懂得爱情。](https://b23.tv/BV1Cw411p7x1)
 
- 88 [生而为入殓师 我很抱歉](https://b23.tv/BV1yM411f733)
+ 88 [《低俗小说2》](https://b23.tv/BV1AH4y1B7eo)
 
- 89 [【罗翔】张三弄虚作假却风生水起，做真好人真难！经验世界无法给人自洽，我们该怎么办？](https://b23.tv/BV1k94y1V7vV)
+ 89 [四个罪犯把越狱当做牢房团建，差点逼疯监狱狱警【黑白看守所】](https://b23.tv/BV1Pg4y197ko)
 
- 90 [【颈椎自救】这5个动作做完就很舒服，快速缓解肩颈疼痛僵硬！](https://b23.tv/BV1Ez4y1P7H3)
+ 90 [【芙宁娜】⚡你能忍受芙芙噔噔的洗脑么⚡汪⚡](https://b23.tv/BV1KN411g7hn)
 
- 91 [合租室友有点神经衰弱](https://b23.tv/BV1184y1Q759)
+ 91 [阿尔图罗：临光在找你](https://b23.tv/BV1CM411f76B)
 
- 92 [戴夫大战僵尸](https://b23.tv/BV1FC4y1U7bp)
+ 92 [aespa《Drama》MV](https://b23.tv/BV1Se411X7d4)
 
- 93 [你好，可以去你家给你做饭吗？第十九顿饭-第十四家-活力男高中生](https://b23.tv/BV1Dw411K7hg)
+ 93 [Mini可颂不Mini，需要你细品](https://b23.tv/BV1iu4y1N7zo)
 
- 94 [紫薯布丁烧｜宁艺卓231110 音乐银行《Drama》舞台横版直拍](https://b23.tv/BV1Ub4y1u7FD)
+ 94 [《爱在西元前》，「爱」在心里面。](https://b23.tv/BV1qN411g71m)
 
- 95 [【操场银行】不要外放求你们了《Catallena》中文版半开麦唱跳舞台（内含多起舞台事故）](https://b23.tv/BV1vu4y187bn)
+ 95 [苏联城市住宅，“硬核浪漫”的真实写照！](https://b23.tv/BV12C4y1U7Nx)
 
- 96 [接力挑战？](https://b23.tv/BV1VN4y1D7wG)
+ 96 [大型美食节目之《走进味觉》](https://b23.tv/BV1dH4y1q7kp)
 
- 97 [自从有了它，大街上也敢吸毒？真实案例告诉你，毒品电子烟的危害。（上）](https://b23.tv/BV18w411T7Zc)
+ 97 [【中文版翻唱】「轻涟」（芙宁娜传说任务《水的女儿》）](https://b23.tv/BV1gw411T7xH)
 
- 98 [如何拥有“圣人”般，恐怖的行动力，如利剑般执行！](https://b23.tv/BV1bQ4y187wo)
+ 98 [一分钟打515个字，键盘侠跟她对线能赢吗？](https://b23.tv/BV1jb4y1g7s7)
 
- 99 [在无尽的沙漠当中没有树木！该如何生存下去【我的世界】 P15](https://b23.tv/BV1UQ4y187WF)
+ 99 [《商界小佬》](https://b23.tv/BV1TQ4y18723)
 
- 100 [死神：叫我小神神就行](https://b23.tv/BV1Mz4y1P7f8)
+ 100 [2023全球总决赛半决赛第一日宣传片](https://b23.tv/BV15a4y1S7Z9)
 </details>
 
 
@@ -562,105 +594,105 @@
 <summary> tag: zhihu 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/zhihu?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/zhihu</a>
     </summary>
 
- 1 [公安机关悬赏 10 万至 50 万 元通缉 4 名缅北果敢自治区电诈集团重要头目，哪些信息值得关注？](https://www.zhihu.com/question/629924503)
+ 1 [中国青少年抑郁症检出率四年间翻倍，患儿称「我爸也该去看病」，专家直言「生病的是教育」，如何看待该现象？](https://www.zhihu.com/question/630001362)
 
- 2 [S13 半决赛 JDG 1:3 不敌 T1 止步四强，他们这场比赛输在哪？](https://www.zhihu.com/question/629944560)
+ 2 [如何看待「杰出哥」放出疑似 TI 预选队伍参与假赛的录音？](https://www.zhihu.com/question/630003357)
 
- 3 [为什么纳西妲说捏碎神之心可以唤醒天理，水神王座炸了天理却毫无反应？](https://www.zhihu.com/question/629873847)
+ 3 [拜登下令，美军对叙利亚境内的两个军事目标发动空袭，如何看待此举？还有哪些信息值得关注？](https://www.zhihu.com/question/629990591)
 
- 4 [为什么偷袭珍珠港的是日本，美国不全力攻打日本而是先去打德国？](https://www.zhihu.com/question/629421489)
+ 4 [华为 Mate 60 Pro 本土零件价值占比达 47% ，该数据意味着什么？](https://www.zhihu.com/question/629990781)
 
- 5 [世界上什么最公平？](https://www.zhihu.com/question/625723249)
+ 5 [如果在山上挖一个池塘，不放鱼，里面会慢慢有鱼吗？](https://www.zhihu.com/question/436758812)
 
- 6 [在东北，不交暖气费会怎样？](https://www.zhihu.com/question/628883017)
+ 6 [联合国于加沙地带的办公室遭炮击，以色列总理近日表示「必要时坚决对抗全世界」，目前巴以局势如何？](https://www.zhihu.com/question/629944713)
 
- 7 [57 国联合谴责以色列，内塔尼亚胡称必要时会坚定与全世界对抗，如何看待这一发言？](https://www.zhihu.com/question/629938163)
+ 7 [北大回应「缅北电诈头目明学昌孙子读北大」，称「不是北大学生，无申请记录」，有哪些信息值得关注？](https://www.zhihu.com/question/630002968)
 
- 8 [医生家庭 70% 的孩子不会学医，对此你有什么看法？](https://www.zhihu.com/question/629583140)
+ 8 [S13 半决赛 Faker 赛后拒绝摄影师亮弱爆 Pose 要求，对此你有什么想说的？](https://www.zhihu.com/question/630007631)
 
- 9 [真正对你好的领导什么样？](https://www.zhihu.com/question/629308361)
+ 9 [多家银行存款利率下调，下调幅度从 10 个基点至 40 个基点不等，释放了什么信号？](https://www.zhihu.com/question/630041299)
 
- 10 [作为一个领导，怎么管理一个非常固执的员工？](https://www.zhihu.com/question/629343019)
+ 10 [缅甸缅北明家被通缉，是不是意味着缅北冲突即将结束？](https://www.zhihu.com/question/629924710)
 
- 11 [同盟军捡到的武器哪来的？](https://www.zhihu.com/question/628482682)
+ 11 [10 月份社会融资规模增量为 1.85 万亿元，比上年同期多 9108 亿元，这一数据说明了什么？](https://www.zhihu.com/question/630038759)
 
- 12 [S13 全球总决赛最终对决 T1 vs WBG 你更看好谁？](https://www.zhihu.com/question/629944276)
+ 12 [李佳琦团队回应双十一收入 250 亿「从不公布数据」，哪些信息值得关注？](https://www.zhihu.com/question/630007735)
 
- 13 [如果一定要推荐一个历史学者，你会推荐谁？](https://www.zhihu.com/question/621253280)
+ 13 [为什么 Ning 连续多年一直对 Tarzan 输出呢，当初 Tarzan 是怎么惹到 Ning 的？](https://www.zhihu.com/question/629851427)
 
- 14 [你如何看待沃尔沃新上市的纯电 MPV EM90？](https://www.zhihu.com/question/629950984)
+ 14 [数百民众到拜登宅邸附近抗议，多国大规模集会呼吁巴以停火，国际舆论压力将如何影响巴以局势走向？](https://www.zhihu.com/question/629993688)
 
- 15 [武术里的 " 听劲 "，“明劲 "「暗劲」有什么科学依据？](https://www.zhihu.com/question/626500726)
+ 15 [猫剪指甲的时候总是「托马斯回旋」该怎么办？](https://www.zhihu.com/question/629248609)
 
- 16 [你能接受孩子健康快乐且平庸吗？](https://www.zhihu.com/question/629930446)
+ 16 [如果用一句话来描述你的一生，你会写什么？](https://www.zhihu.com/question/629137152)
 
- 17 [JDG 止步四强主教练 Homme 发声「明年我将暂时离开舞台」，如何评价他的执教生涯与此刻的选择？](https://www.zhihu.com/question/629947665)
+ 17 [又一家医院被指贩卖出生证，南宁城和医院相关负责人被采取刑事强制措施，哪些信息值得关注？](https://www.zhihu.com/question/630014908)
 
- 18 [为什么很多软件「另存为」的时候只能一层层选文件夹而不能直接输地址呢？](https://www.zhihu.com/question/628399152)
+ 18 [为什么上班明明没做什么体力活，却感觉身体好累？](https://www.zhihu.com/question/630011625)
 
- 19 [联合国称加沙数家医院受到直接打击，世卫与希法医院失去联系，如何评价以方此举？](https://www.zhihu.com/question/629941061)
+ 19 [数据结构到底是用来干什么的？](https://www.zhihu.com/question/424194778)
 
- 20 [对于租房住且做饭少的年轻人来说，空气炸锅、烤箱、蒸烤一体机、微波炉，哪个最实用？](https://www.zhihu.com/question/515562533)
+ 20 [电影《无价之宝》有哪些值得分析的细节？](https://www.zhihu.com/question/629566206)
 
- 21 [如何以「起风了，我还是会想起你」为开头写一句话？](https://www.zhihu.com/question/629868166)
+ 21 [油表灯亮了才去加油对车子有危害吗？](https://www.zhihu.com/question/583889684)
 
- 22 [2024 年 Kanavi 和 Ruler 还有可能继续留在 JDG 吗？](https://www.zhihu.com/question/624486484)
+ 22 [小家改造，推荐购买哪些超值的冰箱？](https://www.zhihu.com/question/627937939)
 
- 23 [如何评价 S13 半决赛 knight 的表现？](https://www.zhihu.com/question/629922617)
+ 23 [为什么总有人低估人类徒手战力?](https://www.zhihu.com/question/623561639)
 
- 24 [为什么玩乐器的人都不喜欢让别人碰自己的乐器？](https://www.zhihu.com/question/377421755)
+ 24 [vivo X100 和 vivo X100 Pro 有何区别，哪款更值得入手？](https://www.zhihu.com/question/629729474)
 
- 25 [湖北襄阳健桥医院贩卖出生证 6 人被批捕，13 名相关责任人被立案，还有哪些信息值得关注？](https://www.zhihu.com/question/629927344)
+ 25 [57 国联合谴责以色列，内塔尼亚胡称必要时会坚定与全世界对抗，如何看待这一发言？](https://www.zhihu.com/question/629938163)
 
- 26 [想到的第一句含有地名的古诗词有哪些？](https://www.zhihu.com/question/629940158)
+ 26 [日本大阪府部分居民血检异常，疑与水体受污染有关，如何从医学角度解读？将对身体带来哪些影响？](https://www.zhihu.com/question/629998848)
 
- 27 [大城市真的有那么多机会吗？](https://www.zhihu.com/question/422648061)
+ 27 [2023 年你的消费观发生了哪些变化？](https://www.zhihu.com/question/629358720)
 
- 28 [自媒体行业现状如何？](https://www.zhihu.com/question/480844849)
+ 28 [《惊奇队长 2》开分 5.4，知乎推荐度 37%，创下漫威最差开局，这一评分符合你的预期吗？](https://www.zhihu.com/question/629838237)
 
- 29 [含有「旧」字的古诗词有哪些？](https://www.zhihu.com/question/629953026)
+ 29 [为什么现在涡轮增压的车型那么多，是自然吸气不好了吗？](https://www.zhihu.com/question/629238483)
 
- 30 [如何评价 S13 半决赛 JDG 打野 Kanavi 的表现？](https://www.zhihu.com/question/629944500)
+ 30 [2023 年你最大的消费是哪笔？背后有哪些故事？](https://www.zhihu.com/question/629358146)
 
- 31 [如何评价 S13 半决赛 Faker 的表现？](https://www.zhihu.com/question/629938245)
+ 31 [为什么大家一边倒的用手机拍月亮，但没什么人敢拍太阳？](https://www.zhihu.com/question/629985977)
 
- 32 [童年的创伤会影响整个人生吗？](https://www.zhihu.com/question/565697130)
+ 32 [2023 年有什么好看又实用的破壁机推荐？](https://www.zhihu.com/question/627943220)
 
- 33 [「过了次啥也没买的双十一」，今年双十一是真的卖不动了吗，如此冷清背后的原因有哪些？](https://www.zhihu.com/question/629937136)
+ 33 [皮肤健康的情况下，还需要护肤吗？](https://www.zhihu.com/question/625913056)
 
- 34 [如何评价漫威电影《惊奇队长 2》（The Marvels）？](https://www.zhihu.com/question/629159066)
+ 34 [最近流行的「早干晚湿」猫咪喂养法，真的适合猫咪吗？有什么科学依据？](https://www.zhihu.com/question/628944816)
 
- 35 [为什么恐怖片里信奉正神的神职人员斗不过恶灵、邪神？](https://www.zhihu.com/question/543052194)
+ 35 [电诈及关联犯罪惩戒办法征求意见，被追刑责惩戒期限拟为 3 年，你希望如何惩戒电信诈骗？](https://www.zhihu.com/question/630021986)
 
- 36 [如何评价 S13 半决赛 Kanavi 在最后一局中的一系列操作？](https://www.zhihu.com/question/629944295)
+ 36 [《甄嬛传》中果郡王真的无心朝政和皇位吗？](https://www.zhihu.com/question/628885323)
 
- 37 [S13 半决赛 T1 3:1 淘汰 JDG 连续两年晋级总决赛，如何评价这场比赛？](https://www.zhihu.com/question/629932216)
+ 37 [《水浒传》里郑屠和武大郎都是做小生意的，为什么一个那么嚣张一个那么懦弱？](https://www.zhihu.com/question/629957905)
 
- 38 [S13 半决赛 T1 淘汰 JDG 晋级总决赛，Faker 能否收获第四个世界冠军？](https://www.zhihu.com/question/629924361)
+ 38 [如何评价最新发布的 vivo X100 系列？有哪些亮点值得关注？](https://www.zhihu.com/question/629986146)
 
- 39 [钟南山称近期将有新冠病毒感染小高峰，老年人需接种二代疫苗，此轮病毒毒株有哪些特征？该如何做好个人防护？](https://www.zhihu.com/question/629855713)
+ 39 [客观地说，张译主演的电影《无价之宝》到底怎么样？](https://www.zhihu.com/question/629565849)
 
- 40 [随着 TheShy 打入 S13 总决赛，他的历史地位能够达到上单位第一人了吗？](https://www.zhihu.com/question/629869857)
+ 40 [如何看待华为发布的首款轿车智界 S7 预订已经突破 10000 台？](https://www.zhihu.com/question/630021887)
 
- 41 [欧洲、韩国等多地爆发床虱危机，臭虫以人类血液为食，哪些信息值得关注？](https://www.zhihu.com/question/629914594)
+ 41 [如何看待搭载自研端侧大模型的 vivo X100 系列？为什么要持续发展手机大模型？](https://www.zhihu.com/question/629986815)
 
- 42 [《原神》「水仙」系列故事在 4.2 落幕，这究竟讲了一个什么样的故事？](https://www.zhihu.com/question/629696967)
+ 42 [加沙地带最大医院医疗系统已经崩溃，「加沙仅有两家医院可提供医疗服务」，这将带来哪些影响？](https://www.zhihu.com/question/629990600)
 
- 43 [如何评价 S13 半决赛 369 的表现？](https://www.zhihu.com/question/629922536)
+ 43 [如何评价德川家康的三河家臣团？](https://www.zhihu.com/question/628786370)
 
- 44 [温州市永嘉县桥头镇一民房坍塌，4 人遇难，具体情况如何？哪些信息值得关注？](https://www.zhihu.com/question/629913421)
+ 44 [双十一消费频现「陷阱」，货不对版 、「保价」不保、以旧当新… 消费者该如何有效维权？](https://www.zhihu.com/question/630002914)
 
- 45 [日本知名乳业品牌明治牛奶检出兽药，宣布召回 4.5 万瓶已上市的瓶装牛奶，如何看待此事？](https://www.zhihu.com/question/629922322)
+ 45 [如何评价电视剧《无所畏惧》中，小保姆兰兰这个角色？](https://www.zhihu.com/question/629240452)
 
- 46 [理性消费回归、国货潮牌「走红」、头部主播「退烧」，「双 11」15 年背后的消费变化有哪些值得关注？](https://www.zhihu.com/question/629917908)
+ 46 [美防长警告以色列不要升级地区局势，称「把冲突控制在加沙」，透露了这位「铁杆盟友」的哪些担忧？](https://www.zhihu.com/question/629992741)
 
- 47 [00 后自嘲用「塑料英语」搞外贸，七百多名非洲商贩在群里等国货，如何看待这种需求和商机？](https://www.zhihu.com/question/629774496)
+ 47 [冰岛近期发生一系列强烈地震，由于担心地震引起火山爆发，冰岛日前宣布进入紧急状态，有哪些信息值得关注？](https://www.zhihu.com/question/629942619)
 
- 48 [《我爱我家》中，那个老爷子到底是多大的领导退下来的？](https://www.zhihu.com/question/50253581)
+ 48 [vscode 和 pycharm 哪个更好用？](https://www.zhihu.com/question/305437193)
 
- 49 [阿里、京东发布「双十一」成绩单，成交额订单量创新高，哪些信息值得关注？](https://www.zhihu.com/question/629916403)
+ 49 [如果你想做的事很容易就能坚持下去，人生会开挂吗？](https://www.zhihu.com/question/629602417)
 
- 50 [S13 全球总决赛 T1 和 Faker 有可能「重铸 LCK 荣光」吗？](https://www.zhihu.com/question/629260103)
+ 50 [小伙伴们你们是固定时间洗车，还是洗车看心情？](https://www.zhihu.com/question/629697412)
 </details>
 
 
@@ -668,65 +700,65 @@
 <summary> tag: tieba 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/tieba?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/tieba</a>
     </summary>
 
- 1 [T1晋级S13总决赛](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20212999&amp;topic_name=T1%E6%99%8B%E7%BA%A7S13%E6%80%BB%E5%86%B3%E8%B5%9B)
+ 1 [清算时刻！LPL韩援打分](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20392592&amp;topic_name=%E6%B8%85%E7%AE%97%E6%97%B6%E5%88%BB%EF%BC%81LPL%E9%9F%A9%E6%8F%B4%E6%89%93%E5%88%86)
 
- 2 [JDG分锅大会](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20384945&amp;topic_name=JDG%E5%88%86%E9%94%85%E5%A4%A7%E4%BC%9A)
+ 2 [缅甸果敢四大家族成员忏悔视频](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20398663&amp;topic_name=%E7%BC%85%E7%94%B8%E6%9E%9C%E6%95%A2%E5%9B%9B%E5%A4%A7%E5%AE%B6%E6%97%8F%E6%88%90%E5%91%98%E5%BF%8F%E6%82%94%E8%A7%86%E9%A2%91)
 
- 3 [WBG vs T1几几开](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20386190&amp;topic_name=WBG%20vs%20T1%E5%87%A0%E5%87%A0%E5%BC%80)
+ 3 [相亲65个女生终于上岸了](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20392693&amp;topic_name=%E7%9B%B8%E4%BA%B265%E4%B8%AA%E5%A5%B3%E7%94%9F%E7%BB%88%E4%BA%8E%E4%B8%8A%E5%B2%B8%E4%BA%86)
 
- 4 [如何评价UP主做游戏亏600万](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20388429&amp;topic_name=%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7UP%E4%B8%BB%E5%81%9A%E6%B8%B8%E6%88%8F%E4%BA%8F600%E4%B8%87)
+ 4 [高校贴吧头像东方化异变](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20406596&amp;topic_name=%E9%AB%98%E6%A0%A1%E8%B4%B4%E5%90%A7%E5%A4%B4%E5%83%8F%E4%B8%9C%E6%96%B9%E5%8C%96%E5%BC%82%E5%8F%98)
 
- 5 [Kanavi 冒充Tarzan](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20385027&amp;topic_name=Kanavi%20%E5%86%92%E5%85%85Tarzan)
+ 5 [假如WBG夺冠](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20412219&amp;topic_name=%E5%81%87%E5%A6%82WBG%E5%A4%BA%E5%86%A0)
 
- 6 [京东直播间被疯狂清算](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20387672&amp;topic_name=%E4%BA%AC%E4%B8%9C%E7%9B%B4%E6%92%AD%E9%97%B4%E8%A2%AB%E7%96%AF%E7%8B%82%E6%B8%85%E7%AE%97)
+ 6 [航吧口吧都看的人是什么成分](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20408513&amp;topic_name=%E8%88%AA%E5%90%A7%E5%8F%A3%E5%90%A7%E9%83%BD%E7%9C%8B%E7%9A%84%E4%BA%BA%E6%98%AF%E4%BB%80%E4%B9%88%E6%88%90%E5%88%86)
 
- 7 [S13反飞机甲终极形态](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20388820&amp;topic_name=S13%E5%8F%8D%E9%A3%9E%E6%9C%BA%E7%94%B2%E7%BB%88%E6%9E%81%E5%BD%A2%E6%80%81)
+ 7 [如何评价新番《药屋少女的呢喃》](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20413421&amp;topic_name=%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7%E6%96%B0%E7%95%AA%E3%80%8A%E8%8D%AF%E5%B1%8B%E5%B0%91%E5%A5%B3%E7%9A%84%E5%91%A2%E5%96%83%E3%80%8B)
 
- 8 [JDG教练红米道歉](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20387431&amp;topic_name=JDG%E6%95%99%E7%BB%83%E7%BA%A2%E7%B1%B3%E9%81%93%E6%AD%89)
+ 8 [预测TGA2023提名名单](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20414425&amp;topic_name=%E9%A2%84%E6%B5%8BTGA2023%E6%8F%90%E5%90%8D%E5%90%8D%E5%8D%95)
 
- 9 [怀化通报食堂疑似鼠头异物调查情况](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20375078&amp;topic_name=%E6%80%80%E5%8C%96%E9%80%9A%E6%8A%A5%E9%A3%9F%E5%A0%82%E7%96%91%E4%BC%BC%E9%BC%A0%E5%A4%B4%E5%BC%82%E7%89%A9%E8%B0%83%E6%9F%A5%E6%83%85%E5%86%B5)
+ 9 [助学金当事人被举报直播敛财](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20415385&amp;topic_name=%E5%8A%A9%E5%AD%A6%E9%87%91%E5%BD%93%E4%BA%8B%E4%BA%BA%E8%A2%AB%E4%B8%BE%E6%8A%A5%E7%9B%B4%E6%92%AD%E6%95%9B%E8%B4%A2)
 
- 10 [S13爆梗合集](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20359120&amp;topic_name=S13%E7%88%86%E6%A2%97%E5%90%88%E9%9B%86)
+ 10 [扎导新作《月球叛军》正式预告](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20415392&amp;topic_name=%E6%89%8E%E5%AF%BC%E6%96%B0%E4%BD%9C%E3%80%8A%E6%9C%88%E7%90%83%E5%8F%9B%E5%86%9B%E3%80%8B%E6%AD%A3%E5%BC%8F%E9%A2%84%E5%91%8A)
 
- 11 [清华和北大换上了情头](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20383600&amp;topic_name=%E6%B8%85%E5%8D%8E%E5%92%8C%E5%8C%97%E5%A4%A7%E6%8D%A2%E4%B8%8A%E4%BA%86%E6%83%85%E5%A4%B4)
+ 11 [与世界逆行指数](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20412351&amp;topic_name=%E4%B8%8E%E4%B8%96%E7%95%8C%E9%80%86%E8%A1%8C%E6%8C%87%E6%95%B0)
 
- 12 [4名缅北电诈集团头目被公开通缉](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20384286&amp;topic_name=4%E5%90%8D%E7%BC%85%E5%8C%97%E7%94%B5%E8%AF%88%E9%9B%86%E5%9B%A2%E5%A4%B4%E7%9B%AE%E8%A2%AB%E5%85%AC%E5%BC%80%E9%80%9A%E7%BC%89)
+ 12 [贫困生去看演唱会合理吗](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20414689&amp;topic_name=%E8%B4%AB%E5%9B%B0%E7%94%9F%E5%8E%BB%E7%9C%8B%E6%BC%94%E5%94%B1%E4%BC%9A%E5%90%88%E7%90%86%E5%90%97)
 
- 13 [官方通报B太遭遇鬼秤事件](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20373570&amp;topic_name=%E5%AE%98%E6%96%B9%E9%80%9A%E6%8A%A5B%E5%A4%AA%E9%81%AD%E9%81%87%E9%AC%BC%E7%A7%A4%E4%BA%8B%E4%BB%B6)
+ 13 [博主爆料Ti预选赛打假赛](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20397388&amp;topic_name=%E5%8D%9A%E4%B8%BB%E7%88%86%E6%96%99Ti%E9%A2%84%E9%80%89%E8%B5%9B%E6%89%93%E5%81%87%E8%B5%9B)
 
- 14 [周冬雨金鸡奖念稿被喷](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20362171&amp;topic_name=%E5%91%A8%E5%86%AC%E9%9B%A8%E9%87%91%E9%B8%A1%E5%A5%96%E5%BF%B5%E7%A8%BF%E8%A2%AB%E5%96%B7)
+ 14 [人在美国 你问我答](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20408363&amp;topic_name=%E4%BA%BA%E5%9C%A8%E7%BE%8E%E5%9B%BD%20%E4%BD%A0%E9%97%AE%E6%88%91%E7%AD%94)
 
- 15 [双十一你买了什么？](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20361511&amp;topic_name=%E5%8F%8C%E5%8D%81%E4%B8%80%E4%BD%A0%E4%B9%B0%E4%BA%86%E4%BB%80%E4%B9%88%EF%BC%9F)
+ 15 [WBG vs T1几几开](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20386190&amp;topic_name=WBG%20vs%20T1%E5%87%A0%E5%87%A0%E5%BC%80)
 
- 16 [Bin 我打得太差了](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20359010&amp;topic_name=Bin%20%E6%88%91%E6%89%93%E5%BE%97%E5%A4%AA%E5%B7%AE%E4%BA%86)
+ 16 [如何评价Homme对369的使用方式](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20403976&amp;topic_name=%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7Homme%E5%AF%B9369%E7%9A%84%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F)
 
- 17 [谁是下一个超级上单？](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20361615&amp;topic_name=%E8%B0%81%E6%98%AF%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%B6%85%E7%BA%A7%E4%B8%8A%E5%8D%95%EF%BC%9F)
+ 17 [日本部分居民血检异常](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20402342&amp;topic_name=%E6%97%A5%E6%9C%AC%E9%83%A8%E5%88%86%E5%B1%85%E6%B0%91%E8%A1%80%E6%A3%80%E5%BC%82%E5%B8%B8)
 
- 18 [后悔结婚了](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20360636&amp;topic_name=%E5%90%8E%E6%82%94%E7%BB%93%E5%A9%9A%E4%BA%86)
+ 18 [斗破苍穹真人版电影定档](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20403527&amp;topic_name=%E6%96%97%E7%A0%B4%E8%8B%8D%E7%A9%B9%E7%9C%9F%E4%BA%BA%E7%89%88%E7%94%B5%E5%BD%B1%E5%AE%9A%E6%A1%A3)
 
- 19 [日本明治牛奶检出兽药残留](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20382326&amp;topic_name=%E6%97%A5%E6%9C%AC%E6%98%8E%E6%B2%BB%E7%89%9B%E5%A5%B6%E6%A3%80%E5%87%BA%E5%85%BD%E8%8D%AF%E6%AE%8B%E7%95%99)
+ 19 [林心如大尺度戏会考虑霍建华感受](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20409741&amp;topic_name=%E6%9E%97%E5%BF%83%E5%A6%82%E5%A4%A7%E5%B0%BA%E5%BA%A6%E6%88%8F%E4%BC%9A%E8%80%83%E8%99%91%E9%9C%8D%E5%BB%BA%E5%8D%8E%E6%84%9F%E5%8F%97)
 
- 20 [这该怎么怼回去？](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20362097&amp;topic_name=%E8%BF%99%E8%AF%A5%E6%80%8E%E4%B9%88%E6%80%BC%E5%9B%9E%E5%8E%BB%EF%BC%9F)
+ 20 [冰岛24小时内1400次地震](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20403026&amp;topic_name=%E5%86%B0%E5%B2%9B24%E5%B0%8F%E6%97%B6%E5%86%851400%E6%AC%A1%E5%9C%B0%E9%9C%87)
 
- 21 [同学做的导体百分百绝缘？](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20357049&amp;topic_name=%E5%90%8C%E5%AD%A6%E5%81%9A%E7%9A%84%E5%AF%BC%E4%BD%93%E7%99%BE%E5%88%86%E7%99%BE%E7%BB%9D%E7%BC%98%EF%BC%9F)
+ 21 [Zeus喊话TheShy](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20392243&amp;topic_name=Zeus%E5%96%8A%E8%AF%9DTheShy)
 
- 22 [绷不住吊图大赛](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20336352&amp;topic_name=%E7%BB%B7%E4%B8%8D%E4%BD%8F%E5%90%8A%E5%9B%BE%E5%A4%A7%E8%B5%9B)
+ 22 [S13爆梗合集](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20359120&amp;topic_name=S13%E7%88%86%E6%A2%97%E5%90%88%E9%9B%86)
 
- 23 [如何看待冬泳怪鸽频繁开直播](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20340329&amp;topic_name=%E5%A6%82%E4%BD%95%E7%9C%8B%E5%BE%85%E5%86%AC%E6%B3%B3%E6%80%AA%E9%B8%BD%E9%A2%91%E7%B9%81%E5%BC%80%E7%9B%B4%E6%92%AD)
+ 23 [JDG分锅大会](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20384945&amp;topic_name=JDG%E5%88%86%E9%94%85%E5%A4%A7%E4%BC%9A)
 
- 24 [原神再陷抄袭风波](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20357032&amp;topic_name=%E5%8E%9F%E7%A5%9E%E5%86%8D%E9%99%B7%E6%8A%84%E8%A2%AD%E9%A3%8E%E6%B3%A2)
+ 24 [清华和北大换上了情头](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20383600&amp;topic_name=%E6%B8%85%E5%8D%8E%E5%92%8C%E5%8C%97%E5%A4%A7%E6%8D%A2%E4%B8%8A%E4%BA%86%E6%83%85%E5%A4%B4)
 
- 25 [为“在吗”正名](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20325505&amp;topic_name=%E4%B8%BA%E2%80%9C%E5%9C%A8%E5%90%97%E2%80%9D%E6%AD%A3%E5%90%8D)
+ 25 [4名缅北电诈集团头目被公开通缉](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20384286&amp;topic_name=4%E5%90%8D%E7%BC%85%E5%8C%97%E7%94%B5%E8%AF%88%E9%9B%86%E5%9B%A2%E5%A4%B4%E7%9B%AE%E8%A2%AB%E5%85%AC%E5%BC%80%E9%80%9A%E7%BC%89)
 
- 26 [《博德3》获金摇杆年度终极游戏](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20334429&amp;topic_name=%E3%80%8A%E5%8D%9A%E5%BE%B73%E3%80%8B%E8%8E%B7%E9%87%91%E6%91%87%E6%9D%86%E5%B9%B4%E5%BA%A6%E7%BB%88%E6%9E%81%E6%B8%B8%E6%88%8F)
+ 26 [S13反飞机甲终极形态](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20388820&amp;topic_name=S13%E5%8F%8D%E9%A3%9E%E6%9C%BA%E7%94%B2%E7%BB%88%E6%9E%81%E5%BD%A2%E6%80%81)
 
- 27 [孙吧真正的老鼠人](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20352057&amp;topic_name=%E5%AD%99%E5%90%A7%E7%9C%9F%E6%AD%A3%E7%9A%84%E8%80%81%E9%BC%A0%E4%BA%BA)
+ 27 [官方通报B太遭遇鬼秤事件](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20373570&amp;topic_name=%E5%AE%98%E6%96%B9%E9%80%9A%E6%8A%A5B%E5%A4%AA%E9%81%AD%E9%81%87%E9%AC%BC%E7%A7%A4%E4%BA%8B%E4%BB%B6)
 
- 28 [网飞《三体》发布新片段](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20335239&amp;topic_name=%E7%BD%91%E9%A3%9E%E3%80%8A%E4%B8%89%E4%BD%93%E3%80%8B%E5%8F%91%E5%B8%83%E6%96%B0%E7%89%87%E6%AE%B5)
+ 28 [如何评价UP主做游戏亏600万](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20388429&amp;topic_name=%E5%A6%82%E4%BD%95%E8%AF%84%E4%BB%B7UP%E4%B8%BB%E5%81%9A%E6%B8%B8%E6%88%8F%E4%BA%8F600%E4%B8%87)
 
- 29 [《洛基2》高分收官](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20339977&amp;topic_name=%E3%80%8A%E6%B4%9B%E5%9F%BA2%E3%80%8B%E9%AB%98%E5%88%86%E6%94%B6%E5%AE%98)
+ 29 [切尔西4比4曼城](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20390256&amp;topic_name=%E5%88%87%E5%B0%94%E8%A5%BF4%E6%AF%944%E6%9B%BC%E5%9F%8E)
 
- 30 [方便面吧大聪明](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20329816&amp;topic_name=%E6%96%B9%E4%BE%BF%E9%9D%A2%E5%90%A7%E5%A4%A7%E8%81%AA%E6%98%8E)
+ 30 [谁是下一个超级上单？](https://tieba.baidu.com/hottopic/browse/hottopic?topic_id=20361615&amp;topic_name=%E8%B0%81%E6%98%AF%E4%B8%8B%E4%B8%80%E4%B8%AA%E8%B6%85%E7%BA%A7%E4%B8%8A%E5%8D%95%EF%BC%9F)
 </details>
 
 
@@ -734,107 +766,105 @@
 <summary> tag: weibo 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/weibo?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/weibo</a>
     </summary>
 
- 1 [1名中国人被越南判处死刑](https://s.weibo.com/weibo?q=%231%E5%90%8D%E4%B8%AD%E5%9B%BD%E4%BA%BA%E8%A2%AB%E8%B6%8A%E5%8D%97%E5%88%A4%E5%A4%84%E6%AD%BB%E5%88%91%23&t=31&band_rank=1&Refer=top)
+ 1 [春晚导演 汗流浃背了](https://s.weibo.com/weibo?q=%E6%98%A5%E6%99%9A%E5%AF%BC%E6%BC%94%20%E6%B1%97%E6%B5%81%E6%B5%83%E8%83%8C%E4%BA%86&t=31&band_rank=1&Refer=top)
 
- 2 [冰岛24小时内1400次地震](https://s.weibo.com/weibo?q=%23%E5%86%B0%E5%B2%9B24%E5%B0%8F%E6%97%B6%E5%86%851400%E6%AC%A1%E5%9C%B0%E9%9C%87%23&t=31&band_rank=1&Refer=top)
+ 2 [雪莉生前纪录片完整版公开](https://s.weibo.com/weibo?q=%23%E9%9B%AA%E8%8E%89%E7%94%9F%E5%89%8D%E7%BA%AA%E5%BD%95%E7%89%87%E5%AE%8C%E6%95%B4%E7%89%88%E5%85%AC%E5%BC%80%23&t=31&band_rank=1&Refer=top)
 
- 3 [雪天8大健康提醒](https://s.weibo.com/weibo?q=%23%E9%9B%AA%E5%A4%A98%E5%A4%A7%E5%81%A5%E5%BA%B7%E6%8F%90%E9%86%92%23&t=31&band_rank=1&Refer=top)
+ 3 [手把手教你跨省看病怎么走医保](https://s.weibo.com/weibo?q=%23%E6%89%8B%E6%8A%8A%E6%89%8B%E6%95%99%E4%BD%A0%E8%B7%A8%E7%9C%81%E7%9C%8B%E7%97%85%E6%80%8E%E4%B9%88%E8%B5%B0%E5%8C%BB%E4%BF%9D%23&t=31&band_rank=1&Refer=top)
 
- 4 [吴磊的百度网盘变了](https://s.weibo.com/weibo?q=%23%E5%90%B4%E7%A3%8A%E7%9A%84%E7%99%BE%E5%BA%A6%E7%BD%91%E7%9B%98%E5%8F%98%E4%BA%86&t=31&band_rank=1&Refer=top)
+ 4 [在何猷君身上看到了生理性喜欢的样子](https://s.weibo.com/weibo?q=%23%E5%9C%A8%E4%BD%95%E7%8C%B7%E5%90%9B%E8%BA%AB%E4%B8%8A%E7%9C%8B%E5%88%B0%E4%BA%86%E7%94%9F%E7%90%86%E6%80%A7%E5%96%9C%E6%AC%A2%E7%9A%84%E6%A0%B7%E5%AD%90%23&t=31&band_rank=1&Refer=top)
 
- 5 [浙江一大妈买海鱼红烧后半夜发绿光](https://s.weibo.com/weibo?q=%23%E6%B5%99%E6%B1%9F%E4%B8%80%E5%A4%A7%E5%A6%88%E4%B9%B0%E6%B5%B7%E9%B1%BC%E7%BA%A2%E7%83%A7%E5%90%8E%E5%8D%8A%E5%A4%9C%E5%8F%91%E7%BB%BF%E5%85%89%23&t=31&band_rank=1&Refer=top)
+ 5 [网友吐槽政务大厅全天工作6个小时](https://s.weibo.com/weibo?q=%23%E7%BD%91%E5%8F%8B%E5%90%90%E6%A7%BD%E6%94%BF%E5%8A%A1%E5%A4%A7%E5%8E%85%E5%85%A8%E5%A4%A9%E5%B7%A5%E4%BD%9C6%E4%B8%AA%E5%B0%8F%E6%97%B6%23&t=31&band_rank=1&Refer=top)
 
- 6 [冰岛宣布进入紧急状态](https://s.weibo.com/weibo?q=%23%E5%86%B0%E5%B2%9B%E5%AE%A3%E5%B8%83%E8%BF%9B%E5%85%A5%E7%B4%A7%E6%80%A5%E7%8A%B6%E6%80%81%23&t=31&band_rank=1&Refer=top)
+ 6 [苹果公司将禁止摇一摇跳转广告](https://s.weibo.com/weibo?q=%23%E8%8B%B9%E6%9E%9C%E5%85%AC%E5%8F%B8%E5%B0%86%E7%A6%81%E6%AD%A2%E6%91%87%E4%B8%80%E6%91%87%E8%B7%B3%E8%BD%AC%E5%B9%BF%E5%91%8A%23&t=31&band_rank=1&Refer=top)
 
- 7 [2女生捡到3千现金后报警交还](https://s.weibo.com/weibo?q=%232%E5%A5%B3%E7%94%9F%E6%8D%A1%E5%88%B03%E5%8D%83%E7%8E%B0%E9%87%91%E5%90%8E%E6%8A%A5%E8%AD%A6%E4%BA%A4%E8%BF%98%23&t=31&band_rank=1&Refer=top)
+ 7 [柳智敏打歌时发现衣服上有针](https://s.weibo.com/weibo?q=%23%E6%9F%B3%E6%99%BA%E6%95%8F%E6%89%93%E6%AD%8C%E6%97%B6%E5%8F%91%E7%8E%B0%E8%A1%A3%E6%9C%8D%E4%B8%8A%E6%9C%89%E9%92%88%23&t=31&band_rank=1&Refer=top)
 
- 8 [多国爆发床虱危机](https://s.weibo.com/weibo?q=%23%E5%A4%9A%E5%9B%BD%E7%88%86%E5%8F%91%E5%BA%8A%E8%99%B1%E5%8D%B1%E6%9C%BA%23&t=31&band_rank=1&Refer=top)
+ 8 [这是烤冷面那我吃的是什么](https://s.weibo.com/weibo?q=%E8%BF%99%E6%98%AF%E7%83%A4%E5%86%B7%E9%9D%A2%E9%82%A3%E6%88%91%E5%90%83%E7%9A%84%E6%98%AF%E4%BB%80%E4%B9%88&t=31&band_rank=1&Refer=top)
 
- 9 [官方通报企业家被约谈后坠楼身亡](https://s.weibo.com/weibo?q=%23%E5%AE%98%E6%96%B9%E9%80%9A%E6%8A%A5%E4%BC%81%E4%B8%9A%E5%AE%B6%E8%A2%AB%E7%BA%A6%E8%B0%88%E5%90%8E%E5%9D%A0%E6%A5%BC%E8%BA%AB%E4%BA%A1%23&t=31&band_rank=1&Refer=top)
+ 9 [绝迹](https://s.weibo.com/weibo?q=%E7%BB%9D%E8%BF%B9&t=31&band_rank=1&Refer=top)
 
- 10 [爱奇艺回复白鹿](https://s.weibo.com/weibo?q=%23%E7%88%B1%E5%A5%87%E8%89%BA%E5%9B%9E%E5%A4%8D%E7%99%BD%E9%B9%BF%23&t=31&band_rank=1&Refer=top)
+ 10 [南航白菜价机票尴尬了谁](https://s.weibo.com/weibo?q=%23%E5%8D%97%E8%88%AA%E7%99%BD%E8%8F%9C%E4%BB%B7%E6%9C%BA%E7%A5%A8%E5%B0%B4%E5%B0%AC%E4%BA%86%E8%B0%81%23&t=31&band_rank=1&Refer=top)
 
- 11 [张译马面裙](https://s.weibo.com/weibo?q=%23%E5%BC%A0%E8%AF%91%E9%A9%AC%E9%9D%A2%E8%A3%99%23&t=31&band_rank=1&Refer=top)
+ 11 [小S好炸裂的回复](https://s.weibo.com/weibo?q=%E5%B0%8FS%E5%A5%BD%E7%82%B8%E8%A3%82%E7%9A%84%E5%9B%9E%E5%A4%8D&t=31&band_rank=1&Refer=top)
 
- 12 [儿媳为带公婆吃自助撒谎只要10元](https://s.weibo.com/weibo?q=%23%E5%84%BF%E5%AA%B3%E4%B8%BA%E5%B8%A6%E5%85%AC%E5%A9%86%E5%90%83%E8%87%AA%E5%8A%A9%E6%92%92%E8%B0%8E%E5%8F%AA%E8%A6%8110%E5%85%83%23&t=31&band_rank=1&Refer=top)
+ 12 [朴彩英新发色](https://s.weibo.com/weibo?q=%23%E6%9C%B4%E5%BD%A9%E8%8B%B1%E6%96%B0%E5%8F%91%E8%89%B2%23&t=31&band_rank=1&Refer=top)
 
- 13 [唯有张遮是陈旧的羁绊](https://s.weibo.com/weibo?q=%E5%94%AF%E6%9C%89%E5%BC%A0%E9%81%AE%E6%98%AF%E9%99%88%E6%97%A7%E7%9A%84%E7%BE%81%E7%BB%8A&t=31&band_rank=1&Refer=top)
+ 13 [你的男孩TizzyT来了](https://s.weibo.com/weibo?q=%23%E4%BD%A0%E7%9A%84%E7%94%B7%E5%AD%A9TizzyT%E6%9D%A5%E4%BA%86%23&t=31&band_rank=1&Refer=top)
 
- 14 [T1晋级S13总决赛](https://s.weibo.com/weibo?q=%23T1%E6%99%8B%E7%BA%A7S13%E6%80%BB%E5%86%B3%E8%B5%9B%23&t=31&band_rank=1&Refer=top)
+ 14 [1020事件](https://s.weibo.com/weibo?q=1020%E4%BA%8B%E4%BB%B6&t=31&band_rank=1&Refer=top)
 
- 15 [红米发文道歉](https://s.weibo.com/weibo?q=%23%E7%BA%A2%E7%B1%B3%E5%8F%91%E6%96%87%E9%81%93%E6%AD%89%23&t=31&band_rank=1&Refer=top)
+ 15 [iPhone15双11最后两小时降价](https://s.weibo.com/weibo?q=%23iPhone15%E5%8F%8C11%E6%9C%80%E5%90%8E%E4%B8%A4%E5%B0%8F%E6%97%B6%E9%99%8D%E4%BB%B7%23&t=31&band_rank=1&Refer=top)
 
- 16 [陈乔恩 和身边的朋友渐行渐远](https://s.weibo.com/weibo?q=%E9%99%88%E4%B9%94%E6%81%A9%20%E5%92%8C%E8%BA%AB%E8%BE%B9%E7%9A%84%E6%9C%8B%E5%8F%8B%E6%B8%90%E8%A1%8C%E6%B8%90%E8%BF%9C&t=31&band_rank=1&Refer=top)
+ 16 [何猷君 小金土豆](https://s.weibo.com/weibo?q=%E4%BD%95%E7%8C%B7%E5%90%9B%20%E5%B0%8F%E9%87%91%E5%9C%9F%E8%B1%86&t=31&band_rank=1&Refer=top)
 
- 17 [Faker晋级决赛时的表情](https://s.weibo.com/weibo?q=Faker%E6%99%8B%E7%BA%A7%E5%86%B3%E8%B5%9B%E6%97%B6%E7%9A%84%E8%A1%A8%E6%83%85&t=31&band_rank=1&Refer=top)
+ 17 [山东74名学生腹泻呕吐采样为诺如病毒](https://s.weibo.com/weibo?q=%23%E5%B1%B1%E4%B8%9C74%E5%90%8D%E5%AD%A6%E7%94%9F%E8%85%B9%E6%B3%BB%E5%91%95%E5%90%90%E9%87%87%E6%A0%B7%E4%B8%BA%E8%AF%BA%E5%A6%82%E7%97%85%E6%AF%92%23&t=31&band_rank=1&Refer=top)
 
- 18 [王子璇也是追星女](https://s.weibo.com/weibo?q=%23%E7%8E%8B%E5%AD%90%E7%92%87%E4%B9%9F%E6%98%AF%E8%BF%BD%E6%98%9F%E5%A5%B3%23&t=31&band_rank=1&Refer=top)
+ 18 [蔡国庆回复陈楚生](https://s.weibo.com/weibo?q=%23%E8%94%A1%E5%9B%BD%E5%BA%86%E5%9B%9E%E5%A4%8D%E9%99%88%E6%A5%9A%E7%94%9F%23&t=31&band_rank=1&Refer=top)
 
- 19 [韩国警方否认权志龙销毁证据](https://s.weibo.com/weibo?q=%23%E9%9F%A9%E5%9B%BD%E8%AD%A6%E6%96%B9%E5%90%A6%E8%AE%A4%E6%9D%83%E5%BF%97%E9%BE%99%E9%94%80%E6%AF%81%E8%AF%81%E6%8D%AE%23&t=31&band_rank=1&Refer=top)
+ 19 [此时此刻](https://s.weibo.com/weibo?q=%E6%AD%A4%E6%97%B6%E6%AD%A4%E5%88%BB&t=31&band_rank=1&Refer=top)
 
- 20 [WBG赢了血赚输了不亏](https://s.weibo.com/weibo?q=WBG%E8%B5%A2%E4%BA%86%E8%A1%80%E8%B5%9A%E8%BE%93%E4%BA%86%E4%B8%8D%E4%BA%8F&t=31&band_rank=1&Refer=top)
+ 20 [小米汽车信息首曝](https://s.weibo.com/weibo?q=%23%E5%B0%8F%E7%B1%B3%E6%B1%BD%E8%BD%A6%E4%BF%A1%E6%81%AF%E9%A6%96%E6%9B%9D%23&t=31&band_rank=1&Refer=top)
 
- 21 [为什么奶茶圈都在推三品管](https://s.weibo.com/weibo?q=%23%E4%B8%BA%E4%BB%80%E4%B9%88%E5%A5%B6%E8%8C%B6%E5%9C%88%E9%83%BD%E5%9C%A8%E6%8E%A8%E4%B8%89%E5%93%81%E7%AE%A1%23&t=31&band_rank=1&Refer=top)
+ 21 [墨西哥性侵犯遭黑帮私刑被狗吃掉生殖器](https://s.weibo.com/weibo?q=%23%E5%A2%A8%E8%A5%BF%E5%93%A5%E6%80%A7%E4%BE%B5%E7%8A%AF%E9%81%AD%E9%BB%91%E5%B8%AE%E7%A7%81%E5%88%91%E8%A2%AB%E7%8B%97%E5%90%83%E6%8E%89%E7%94%9F%E6%AE%96%E5%99%A8%23&t=31&band_rank=1&Refer=top)
 
- 22 [阿里全系产品崩了](https://s.weibo.com/weibo?q=%23%E9%98%BF%E9%87%8C%E5%85%A8%E7%B3%BB%E4%BA%A7%E5%93%81%E5%B4%A9%E4%BA%86%23&t=31&band_rank=1&Refer=top)
+ 22 [防胃癌这5种要少吃不吃](https://s.weibo.com/weibo?q=%23%E9%98%B2%E8%83%83%E7%99%8C%E8%BF%995%E7%A7%8D%E8%A6%81%E5%B0%91%E5%90%83%E4%B8%8D%E5%90%83%23&t=31&band_rank=1&Refer=top)
 
- 23 [第一批用上减肥神药的人怎样了](https://s.weibo.com/weibo?q=%23%E7%AC%AC%E4%B8%80%E6%89%B9%E7%94%A8%E4%B8%8A%E5%87%8F%E8%82%A5%E7%A5%9E%E8%8D%AF%E7%9A%84%E4%BA%BA%E6%80%8E%E6%A0%B7%E4%BA%86%23&t=31&band_rank=1&Refer=top)
+ 23 [宁安如梦歹毒运镜加一](https://s.weibo.com/weibo?q=%23%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6%E6%AD%B9%E6%AF%92%E8%BF%90%E9%95%9C%E5%8A%A0%E4%B8%80%23&t=31&band_rank=1&Refer=top)
 
- 24 [毕业才发现跟大学老师不是一个阶层的](https://s.weibo.com/weibo?q=%E6%AF%95%E4%B8%9A%E6%89%8D%E5%8F%91%E7%8E%B0%E8%B7%9F%E5%A4%A7%E5%AD%A6%E8%80%81%E5%B8%88%E4%B8%8D%E6%98%AF%E4%B8%80%E4%B8%AA%E9%98%B6%E5%B1%82%E7%9A%84&t=31&band_rank=1&Refer=top)
+ 24 [林俊杰都不知道自己有这份副业](https://s.weibo.com/weibo?q=%E6%9E%97%E4%BF%8A%E6%9D%B0%E9%83%BD%E4%B8%8D%E7%9F%A5%E9%81%93%E8%87%AA%E5%B7%B1%E6%9C%89%E8%BF%99%E4%BB%BD%E5%89%AF%E4%B8%9A&t=31&band_rank=1&Refer=top)
 
- 25 [补气血做好这三点](https://s.weibo.com/weibo?q=%E8%A1%A5%E6%B0%94%E8%A1%80%E5%81%9A%E5%A5%BD%E8%BF%99%E4%B8%89%E7%82%B9&t=31&band_rank=1&Refer=top)
+ 25 [清华女博士毕业做占星师月入3万](https://s.weibo.com/weibo?q=%23%E6%B8%85%E5%8D%8E%E5%A5%B3%E5%8D%9A%E5%A3%AB%E6%AF%95%E4%B8%9A%E5%81%9A%E5%8D%A0%E6%98%9F%E5%B8%88%E6%9C%88%E5%85%A53%E4%B8%87%23&t=31&band_rank=1&Refer=top)
 
- 26 [57国联合谴责以色列](https://s.weibo.com/weibo?q=%2357%E5%9B%BD%E8%81%94%E5%90%88%E8%B0%B4%E8%B4%A3%E4%BB%A5%E8%89%B2%E5%88%97%23&t=31&band_rank=1&Refer=top)
+ 26 [缅北电诈头目明学昌年轻时惯于偷抢](https://s.weibo.com/weibo?q=%23%E7%BC%85%E5%8C%97%E7%94%B5%E8%AF%88%E5%A4%B4%E7%9B%AE%E6%98%8E%E5%AD%A6%E6%98%8C%E5%B9%B4%E8%BD%BB%E6%97%B6%E6%83%AF%E4%BA%8E%E5%81%B7%E6%8A%A2%23&t=31&band_rank=1&Refer=top)
 
- 27 [刘畊宏带假肢女孩跳本草纲目](https://s.weibo.com/weibo?q=%23%E5%88%98%E7%95%8A%E5%AE%8F%E5%B8%A6%E5%81%87%E8%82%A2%E5%A5%B3%E5%AD%A9%E8%B7%B3%E6%9C%AC%E8%8D%89%E7%BA%B2%E7%9B%AE%23&t=31&band_rank=1&Refer=top)
+ 27 [爱奇艺尖叫之夜完整版名单](https://s.weibo.com/weibo?q=%23%E7%88%B1%E5%A5%87%E8%89%BA%E5%B0%96%E5%8F%AB%E4%B9%8B%E5%A4%9C%E5%AE%8C%E6%95%B4%E7%89%88%E5%90%8D%E5%8D%95%23&t=31&band_rank=1&Refer=top)
 
- 28 [宋雨琦裙子上绑丝巾](https://s.weibo.com/weibo?q=%23%E5%AE%8B%E9%9B%A8%E7%90%A6%E8%A3%99%E5%AD%90%E4%B8%8A%E7%BB%91%E4%B8%9D%E5%B7%BE%23&t=31&band_rank=1&Refer=top)
+ 28 [女生最无声的炫富是什么](https://s.weibo.com/weibo?q=%E5%A5%B3%E7%94%9F%E6%9C%80%E6%97%A0%E5%A3%B0%E7%9A%84%E7%82%AB%E5%AF%8C%E6%98%AF%E4%BB%80%E4%B9%88&t=31&band_rank=1&Refer=top)
 
- 29 [宁安如梦连更](https://s.weibo.com/weibo?q=%23%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6%E8%BF%9E%E6%9B%B4%23&t=31&band_rank=1&Refer=top)
+ 29 [小水 淡妆浓抹总相宜](https://s.weibo.com/weibo?q=%E5%B0%8F%E6%B0%B4%20%E6%B7%A1%E5%A6%86%E6%B5%93%E6%8A%B9%E6%80%BB%E7%9B%B8%E5%AE%9C&t=31&band_rank=1&Refer=top)
 
- 30 [结婚的意义是什么](https://s.weibo.com/weibo?q=%E7%BB%93%E5%A9%9A%E7%9A%84%E6%84%8F%E4%B9%89%E6%98%AF%E4%BB%80%E4%B9%88&t=31&band_rank=1&Refer=top)
+ 30 [妻子被推出产房丈夫献花并深情亲吻](https://s.weibo.com/weibo?q=%23%E5%A6%BB%E5%AD%90%E8%A2%AB%E6%8E%A8%E5%87%BA%E4%BA%A7%E6%88%BF%E4%B8%88%E5%A4%AB%E7%8C%AE%E8%8A%B1%E5%B9%B6%E6%B7%B1%E6%83%85%E4%BA%B2%E5%90%BB%23&t=31&band_rank=1&Refer=top)
 
- 31 [JDG发博告别S13](https://s.weibo.com/weibo?q=JDG%E5%8F%91%E5%8D%9A%E5%91%8A%E5%88%ABS13&t=31&band_rank=1&Refer=top)
+ 31 [大张伟 其实你可以一生当一个小朋友](https://s.weibo.com/weibo?q=%E5%A4%A7%E5%BC%A0%E4%BC%9F%20%E5%85%B6%E5%AE%9E%E4%BD%A0%E5%8F%AF%E4%BB%A5%E4%B8%80%E7%94%9F%E5%BD%93%E4%B8%80%E4%B8%AA%E5%B0%8F%E6%9C%8B%E5%8F%8B&t=31&band_rank=1&Refer=top)
 
- 32 [张凌赫说下一部一定是现偶](https://s.weibo.com/weibo?q=%23%E5%BC%A0%E5%87%8C%E8%B5%AB%E8%AF%B4%E4%B8%8B%E4%B8%80%E9%83%A8%E4%B8%80%E5%AE%9A%E6%98%AF%E7%8E%B0%E5%81%B6%23&t=31&band_rank=1&Refer=top)
+ 32 [55个品牌被移出中华老字号](https://s.weibo.com/weibo?q=%2355%E4%B8%AA%E5%93%81%E7%89%8C%E8%A2%AB%E7%A7%BB%E5%87%BA%E4%B8%AD%E5%8D%8E%E8%80%81%E5%AD%97%E5%8F%B7%23&t=31&band_rank=1&Refer=top)
 
- 33 [米勒预测WBG零封T1](https://s.weibo.com/weibo?q=%23%E7%B1%B3%E5%8B%92%E9%A2%84%E6%B5%8BWBG%E9%9B%B6%E5%B0%81T1%23&t=31&band_rank=1&Refer=top)
+ 33 [男子上厕所时马桶突然着火](https://s.weibo.com/weibo?q=%23%E7%94%B7%E5%AD%90%E4%B8%8A%E5%8E%95%E6%89%80%E6%97%B6%E9%A9%AC%E6%A1%B6%E7%AA%81%E7%84%B6%E7%9D%80%E7%81%AB%23&t=31&band_rank=1&Refer=top)
 
- 34 [赵露思将进组珠帘玉幕](https://s.weibo.com/weibo?q=%23%E8%B5%B5%E9%9C%B2%E6%80%9D%E5%B0%86%E8%BF%9B%E7%BB%84%E7%8F%A0%E5%B8%98%E7%8E%89%E5%B9%95%23&t=31&band_rank=1&Refer=top)
+ 34 [天蝎座 保持舒适距离](https://s.weibo.com/weibo?q=%E5%A4%A9%E8%9D%8E%E5%BA%A7%20%E4%BF%9D%E6%8C%81%E8%88%92%E9%80%82%E8%B7%9D%E7%A6%BB&t=31&band_rank=1&Refer=top)
 
- 35 [周柯宇易扬人设](https://s.weibo.com/weibo?q=%23%E5%91%A8%E6%9F%AF%E5%AE%87%E6%98%93%E6%89%AC%E4%BA%BA%E8%AE%BE%23&t=31&band_rank=1&Refer=top)
+ 35 [销冠坐到哪儿都是销冠](https://s.weibo.com/weibo?q=%E9%94%80%E5%86%A0%E5%9D%90%E5%88%B0%E5%93%AA%E5%84%BF%E9%83%BD%E6%98%AF%E9%94%80%E5%86%A0&t=31&band_rank=1&Refer=top)
 
- 36 [切尔西vs曼城](https://s.weibo.com/weibo?q=%23%E5%88%87%E5%B0%94%E8%A5%BFvs%E6%9B%BC%E5%9F%8E%23&t=31&band_rank=1&Refer=top)
+ 36 [张艺兴一个人的相声](https://s.weibo.com/weibo?q=%23%E5%BC%A0%E8%89%BA%E5%85%B4%E4%B8%80%E4%B8%AA%E4%BA%BA%E7%9A%84%E7%9B%B8%E5%A3%B0%23&t=31&band_rank=1&Refer=top)
 
- 37 [杨幂个人ins更新](https://s.weibo.com/weibo?q=%23%E6%9D%A8%E5%B9%82%E4%B8%AA%E4%BA%BAins%E6%9B%B4%E6%96%B0%23&t=31&band_rank=1&Refer=top)
+ 37 [AG](https://s.weibo.com/weibo?q=AG&t=31&band_rank=1&Refer=top)
 
- 38 [负面情绪要不要跟好朋友分享](https://s.weibo.com/weibo?q=%E8%B4%9F%E9%9D%A2%E6%83%85%E7%BB%AA%E8%A6%81%E4%B8%8D%E8%A6%81%E8%B7%9F%E5%A5%BD%E6%9C%8B%E5%8F%8B%E5%88%86%E4%BA%AB&t=31&band_rank=1&Refer=top)
+ 38 [4岁娃凌晨街头挨冻代驾小哥果断调头](https://s.weibo.com/weibo?q=%234%E5%B2%81%E5%A8%83%E5%87%8C%E6%99%A8%E8%A1%97%E5%A4%B4%E6%8C%A8%E5%86%BB%E4%BB%A3%E9%A9%BE%E5%B0%8F%E5%93%A5%E6%9E%9C%E6%96%AD%E8%B0%83%E5%A4%B4%23&t=31&band_rank=1&Refer=top)
 
- 39 [薛之谦双层挑染发色](https://s.weibo.com/weibo?q=%23%E8%96%9B%E4%B9%8B%E8%B0%A6%E5%8F%8C%E5%B1%82%E6%8C%91%E6%9F%93%E5%8F%91%E8%89%B2%23&t=31&band_rank=1&Refer=top)
+ 39 [张凌赫跳女团舞](https://s.weibo.com/weibo?q=%23%E5%BC%A0%E5%87%8C%E8%B5%AB%E8%B7%B3%E5%A5%B3%E5%9B%A2%E8%88%9E%23&t=31&band_rank=1&Refer=top)
 
- 40 [369企图冒充TheShy](https://s.weibo.com/weibo?q=369%E4%BC%81%E5%9B%BE%E5%86%92%E5%85%85TheShy&t=31&band_rank=1&Refer=top)
+ 40 [这就是成年人的电视剧吗](https://s.weibo.com/weibo?q=%E8%BF%99%E5%B0%B1%E6%98%AF%E6%88%90%E5%B9%B4%E4%BA%BA%E7%9A%84%E7%94%B5%E8%A7%86%E5%89%A7%E5%90%97&t=31&band_rank=1&Refer=top)
 
- 41 [歌手2024 踢馆名单](https://s.weibo.com/weibo?q=%E6%AD%8C%E6%89%8B2024%20%E8%B8%A2%E9%A6%86%E5%90%8D%E5%8D%95&t=31&band_rank=1&Refer=top)
+ 41 [杨幂小时候唱小红帽](https://s.weibo.com/weibo?q=%E6%9D%A8%E5%B9%82%E5%B0%8F%E6%97%B6%E5%80%99%E5%94%B1%E5%B0%8F%E7%BA%A2%E5%B8%BD&t=31&band_rank=1&Refer=top)
 
- 42 [WBG决赛对战T1](https://s.weibo.com/weibo?q=%23WBG%E5%86%B3%E8%B5%9B%E5%AF%B9%E6%88%98T1%23&t=31&band_rank=1&Refer=top)
+ 42 [迪丽热巴黑粉被强执](https://s.weibo.com/weibo?q=%23%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E9%BB%91%E7%B2%89%E8%A2%AB%E5%BC%BA%E6%89%A7%23&t=31&band_rank=1&Refer=top)
 
- 43 [缅北](https://s.weibo.com/weibo?q=%E7%BC%85%E5%8C%97&t=31&band_rank=1&Refer=top)
+ 43 [张遮是姜雪宁的第一选择](https://s.weibo.com/weibo?q=%23%E5%BC%A0%E9%81%AE%E6%98%AF%E5%A7%9C%E9%9B%AA%E5%AE%81%E7%9A%84%E7%AC%AC%E4%B8%80%E9%80%89%E6%8B%A9%23&t=31&band_rank=1&Refer=top)
 
- 44 [宁安如梦](https://s.weibo.com/weibo?q=%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6&t=31&band_rank=1&Refer=top)
+ 44 [难听](https://s.weibo.com/weibo?q=%E9%9A%BE%E5%90%AC&t=31&band_rank=1&Refer=top)
 
- 45 [Ruler和Faker  一墙之隔胜负之分](https://s.weibo.com/weibo?q=Ruler%E5%92%8CFaker%20%20%E4%B8%80%E5%A2%99%E4%B9%8B%E9%9A%94%E8%83%9C%E8%B4%9F%E4%B9%8B%E5%88%86&t=31&band_rank=1&Refer=top)
+ 45 [宁安如梦团综定档](https://s.weibo.com/weibo?q=%23%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6%E5%9B%A2%E7%BB%BC%E5%AE%9A%E6%A1%A3%23&t=31&band_rank=1&Refer=top)
 
- 46 [五月天重返八万人](https://s.weibo.com/weibo?q=%23%E4%BA%94%E6%9C%88%E5%A4%A9%E9%87%8D%E8%BF%94%E5%85%AB%E4%B8%87%E4%BA%BA%23&t=31&band_rank=1&Refer=top)
+ 46 [宁安如梦热度](https://s.weibo.com/weibo?q=%E5%AE%81%E5%AE%89%E5%A6%82%E6%A2%A6%E7%83%AD%E5%BA%A6&t=31&band_rank=1&Refer=top)
 
- 47 [孙俪 婚姻里付出不被认可是悲哀的事](https://s.weibo.com/weibo?q=%E5%AD%99%E4%BF%AA%20%E5%A9%9A%E5%A7%BB%E9%87%8C%E4%BB%98%E5%87%BA%E4%B8%8D%E8%A2%AB%E8%AE%A4%E5%8F%AF%E6%98%AF%E6%82%B2%E5%93%80%E7%9A%84%E4%BA%8B&t=31&band_rank=1&Refer=top)
+ 47 [陈楚生王栎鑫你俩是握了个脚吗](https://s.weibo.com/weibo?q=%23%E9%99%88%E6%A5%9A%E7%94%9F%E7%8E%8B%E6%A0%8E%E9%91%AB%E4%BD%A0%E4%BF%A9%E6%98%AF%E6%8F%A1%E4%BA%86%E4%B8%AA%E8%84%9A%E5%90%97%23&t=31&band_rank=1&Refer=top)
 
- 48 [迪丽热巴红秀十一月刊封面](https://s.weibo.com/weibo?q=%23%E8%BF%AA%E4%B8%BD%E7%83%AD%E5%B7%B4%E7%BA%A2%E7%A7%80%E5%8D%81%E4%B8%80%E6%9C%88%E5%88%8A%E5%B0%81%E9%9D%A2%23&t=31&band_rank=1&Refer=top)
+ 48 [卧床休息是养肝的最好方法](https://s.weibo.com/weibo?q=%23%E5%8D%A7%E5%BA%8A%E4%BC%91%E6%81%AF%E6%98%AF%E5%85%BB%E8%82%9D%E7%9A%84%E6%9C%80%E5%A5%BD%E6%96%B9%E6%B3%95%23&t=31&band_rank=1&Refer=top)
 
- 49 [快进到相信TheShy](https://s.weibo.com/weibo?q=%E5%BF%AB%E8%BF%9B%E5%88%B0%E7%9B%B8%E4%BF%A1TheShy&t=31&band_rank=1&Refer=top)
+ 49 [提醒在冰岛中国公民防范火山地震灾害](https://s.weibo.com/weibo?q=%23%E6%8F%90%E9%86%92%E5%9C%A8%E5%86%B0%E5%B2%9B%E4%B8%AD%E5%9B%BD%E5%85%AC%E6%B0%91%E9%98%B2%E8%8C%83%E7%81%AB%E5%B1%B1%E5%9C%B0%E9%9C%87%E7%81%BE%E5%AE%B3%23&t=31&band_rank=1&Refer=top)
 
- 50 [徐娇眼镜戒指](https://s.weibo.com/weibo?q=%23%E5%BE%90%E5%A8%87%E7%9C%BC%E9%95%9C%E6%88%92%E6%8C%87%23&t=31&band_rank=1&Refer=top)
-
- 51 [压力给到WBG](https://s.weibo.com/weibo?q=%23%E5%8E%8B%E5%8A%9B%E7%BB%99%E5%88%B0WBG%23&t=31&band_rank=1&Refer=top)
+ 50 [余承东称问界试驾车事故系误踩油门导致](https://s.weibo.com/weibo?q=%23%E4%BD%99%E6%89%BF%E4%B8%9C%E7%A7%B0%E9%97%AE%E7%95%8C%E8%AF%95%E9%A9%BE%E8%BD%A6%E4%BA%8B%E6%95%85%E7%B3%BB%E8%AF%AF%E8%B8%A9%E6%B2%B9%E9%97%A8%E5%AF%BC%E8%87%B4%23&t=31&band_rank=1&Refer=top)
 </details>
 
 
@@ -842,105 +872,105 @@
 <summary> tag: newsqq 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/newsqq?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/newsqq</a>
     </summary>
 
- 1 [时政微纪录丨习近平总书记京冀行](https://new.qq.com/rain/a/20231112V01Q9800)
+ 1 [学习进行时丨历次APEC会议上 习近平主席高瞻远瞩 倡导携手构建亚太命运共同体](https://new.qq.com/rain/a/20231113A074WF00)
 
- 2 [空军飞行员回忆与外机空中缠斗5分钟：对方害怕了就灰溜溜地逃跑了](https://new.qq.com/rain/a/20231112V06TQH00)
+ 2 [广东省卫健委“一把手”投案自首：疫情期间被提拔，前领导上个月落马](https://new.qq.com/rain/a/20231113A09IO600)
 
- 3 [湖南凤凰一旅游客车被越野车别车并逼停，涉事者疑为当地国企领导](https://new.qq.com/rain/a/20231112A0698P00)
+ 3 [为期10天，国安部部长陈一新首次出访，释放重要信号](https://new.qq.com/rain/a/20231113A09S8S00)
 
- 4 [乌镇“网事”｜100秒速览中国十年“网事”](https://new.qq.com/rain/a/20231112A04XN700)
+ 4 [数读中国 | 数字社会建设取得新成就：获得感、幸福感不断提升](https://new.qq.com/rain/a/20231113A05JTK00)
 
- 5 [美军新型隐身轰炸机首飞，意味着什么？专家解读](https://new.qq.com/rain/a/20231112A06MOD00)
+ 5 [床虱危机为何席卷全球？吸食人血量是蚊子的7倍！或已蔓延至香港](https://new.qq.com/rain/a/20231113A08UYF00)
 
- 6 [网曝大批中国公民滞留俄罗斯无法回国？官方：气垫船运力不足导致](https://new.qq.com/rain/a/20231112A03COY00)
+ 6 [江苏常州企业家坠楼公司发讣告后删除，姐姐回应正在准备追悼会](https://new.qq.com/rain/a/20231113A09ZVE00)
 
- 7 [同一片区内发现6具遗体，菲警方：正确认是否为此前被绑架的6名中国人](https://new.qq.com/rain/a/20231112A04YJW00)
+ 7 [意大利街头出现狮子，市民被吓到不敢动！马戏团团长：它很乖，从不咬人](https://new.qq.com/rain/a/20231113A08EIR00)
 
- 8 [知名打假人王海举报一职校克扣学生巨额实习报酬，知情人：已介入调查](https://new.qq.com/rain/a/20231112A04TEY00)
+ 8 [山东潍坊一学校74名学生集体上吐下泻，官方：系诺如病毒感染](https://new.qq.com/rain/a/20231113A09TBD00)
 
- 9 [美媒：好莱坞名流之子涉嫌谋杀分尸华裔妻子](https://new.qq.com/rain/a/20231112A05DBK00)
+ 9 [投资恒大巨亏！资本大鳄刘銮雄最新发声，不怪甘比和许家印](https://new.qq.com/rain/a/20231113A08DY500)
 
- 10 [内塔尼亚胡：“必要时坚决对抗世界”](https://new.qq.com/rain/a/20231112A05SLD00)
+ 10 [问界M5撞上后车？华为余承东：客户试驾误踩油门踏板，AEB功能未介入](https://new.qq.com/rain/a/20231113A08I8Q00)
 
- 11 [斩谣周报 | 中日友好医院是日本人建的医院？发生交通事故斑马线外3万、线内30万？别信！](https://new.qq.com/rain/a/20231111A02LM100)
+ 11 [今日辟谣（2023年11月13日）](https://new.qq.com/rain/a/20231113A08DY400)
 
- 12 [越南宣判18人死刑，包括1名中国人](https://new.qq.com/rain/a/20231112A06EXX00)
+ 12 [马斯克：中国聪明人比美国多，大陆100%会统一台湾](https://new.qq.com/rain/a/20231113A083IN00)
 
- 13 [又见“领导刚走就出事”，安全排查到底查了啥](https://new.qq.com/rain/a/20231112A075RF00)
+ 13 [英国政坛“戏剧性”人事变动：前首相卡梅伦“复出”任外交大臣](https://new.qq.com/rain/a/20231113A08NXB00)
 
- 14 [多个中央单位机关行政编制数量出现调整，民政部等减编](https://new.qq.com/rain/a/20231112A00U4B00)
+ 14 [外媒：俄军恢复对基辅导弹袭击](https://new.qq.com/rain/a/20231113A05F0500)
 
- 15 [丈夫殴打怀3胎妻子，2个孩子哭着下跪阻止，女子称被打得满嘴是血](https://new.qq.com/rain/a/20231112V02FC200)
+ 15 [孙业礼已任文旅部党组书记，胡和平不再担任](https://new.qq.com/rain/a/20231113A09LJE00)
 
- 16 [强砍种植户近3万棵树？官方通报：确属违规，不涉及赔偿](https://new.qq.com/rain/a/20231112A05I7500)
+ 16 [美ONE回应李佳琦双十一收入超250亿：从不公布数据](https://new.qq.com/rain/a/20231113A027N700)
 
- 17 [落实中央重大战略决策，吉林省委书记、省长率队“南下”](https://new.qq.com/rain/a/20231112A06HUZ00)
+ 17 [上海一咖啡店推出6200元一杯天价咖啡，市监局：都是实行市场调节价](https://new.qq.com/rain/a/20231113A096VL00)
 
- 18 [探望被羁押的丈夫在看守所门口吸毒！江西一女子因吸食“依托咪酯”被行拘](https://new.qq.com/rain/a/20231112A04OHV00)
+ 18 [越开越多的县城零食店，正朝万店狂奔，还能赚钱吗？](https://new.qq.com/rain/a/20231113A04TR500)
 
- 19 [以人类血液为食：多国爆发床虱危机，从欧洲疯狂蔓延到韩国](https://new.qq.com/rain/a/20231112A03JRS00)
+ 19 [马斯克：美国现在缺芯片，一年后就缺变压器，两年后缺电](https://new.qq.com/rain/a/20231113A01KWO00)
 
- 20 [孩子的一句话，尘封27年的命案破了！](https://new.qq.com/rain/a/20231112A04XMM00)
+ 20 [起底被通缉的缅北电诈头目明学昌：为人低调狡猾，年轻时惯于偷抢](https://new.qq.com/rain/a/20231113V07WT600)
 
- 21 [JDG1-3不敌T1，止步4强！kanavi狂失误，JDG痛失好局](https://new.qq.com/rain/a/20231112A061E900)
+ 21 [黄日华踢贵州球员后续：大批粉丝脱粉，村超队长回应被赞有格局](https://new.qq.com/rain/a/20231113A05NUI00)
 
- 22 [女方未退彩礼男方追砍两人？四川凉山警方：两嫌疑人当场被控制，原因待调查](https://new.qq.com/rain/a/20231112A03Y1600)
+ 22 [NASA拍到地球“凝视幽灵”](https://new.qq.com/rain/a/20231113A00NH500)
 
- 23 [“贷款上班”成现实？181人贷超2600万，监管部门回应：存在违规问题](https://new.qq.com/rain/a/20231112A062RJ00)
+ 23 [多地再为民营经济撑腰：内蒙古要求工商联积极主动帮企业要账](https://new.qq.com/rain/a/20231113A08HZ200)
 
- 24 [“客户看房面积越来越小”，一线操盘手：北京600万元左右的房更好卖](https://new.qq.com/rain/a/20231112A06Q0U00)
+ 24 [一人失能、全家失衡，4400万失能老人的照护困局](https://new.qq.com/rain/a/20231113A02RAI00)
 
- 25 [履新不久后，新任足协主席“南下”调研期间探班国足](https://new.qq.com/rain/a/20231112A06ITU00)
+ 25 [消息称苹果公司将叫停摇一摇跳转广告，多家头部App收到通知](https://new.qq.com/rain/a/20231113A0889L00)
 
- 26 [中国斡旋后，沙特和伊朗最重大的进展来了](https://new.qq.com/rain/a/20231112A00ZTL00)
+ 26 [缅北电诈“四大家族”成员落网，忏悔视频曝光：再别抱有任何幻想](https://new.qq.com/rain/a/20231113V0420Z00)
 
- 27 [日本大阪府部分居民血检异常　疑与水体受污染有关](https://new.qq.com/rain/a/20231112A06LK900)
+ 27 [全家感染，罪魁祸首是支原体还是新冠？专家提醒：吃药别靠猜](https://new.qq.com/rain/a/20231113A05QH900)
 
- 28 [海南海口一镇长开会怒砸水瓶后村民拍桌回怼？当地回应：已组织核查](https://new.qq.com/rain/a/20231112A004LE00)
+ 28 [美媒：缅北电诈园开始针对非中国公民 以防引北京注意](https://new.qq.com/rain/a/20231113A01KDB00)
 
- 29 [特朗普提出法律动议，支持媒体直播他出庭受审](https://new.qq.com/rain/a/20231112A06NR600)
+ 29 [《请回答1988》德善狗焕BE！李惠利柳俊烈分手，结束7年感情](https://new.qq.com/rain/a/20231113V04WSU00)
 
- 30 [湖南汽车坠江致4死监控曝光 家属：两人逃出后返回救妻子遇难](https://new.qq.com/rain/a/20231112V043ZB00)
+ 30 [江苏发布青少年近视防控责任清单，课间10分钟“清空教室”](https://new.qq.com/rain/a/20231113A06Z3U00)
 
- 31 [一天内全国有近20场马拉松同时进行，非洲人和中年人快不够用了](https://new.qq.com/rain/a/20231110A04X4Y00)
+ 31 [缅军战机坠毁，反政府武装称对此负责，缅军方：国家面临分裂风险](https://new.qq.com/rain/a/20231113A01JOT00)
 
- 32 [猪价为何又现“跌跌不休”，未来猪价走势如何？专家解答](https://new.qq.com/rain/a/20231112A00OZR00)
+ 32 [华为Mate 60 Pro手机拆解：国产零件价值占比达47%](https://new.qq.com/rain/a/20231113A00P0H00)
 
- 33 [买酱板鸭吃出多只虫子，摊主称“死不了”，佛山男子持喇叭喊话](https://new.qq.com/rain/a/20231111A05ZKF00)
+ 33 [日媒称1名日本男子在湖南省高院被判刑，外交部回应](https://new.qq.com/rain/a/20231113A0881P00)
 
- 34 [多地卫健部门督导检查医院出生证管理情况，强调抓好废证管理](https://new.qq.com/rain/a/20231112A05WSF00)
+ 34 [为何总有体育馆塌顶：暴雪之下掩藏多少行业沉疴](https://new.qq.com/rain/a/20231113A00CH700)
 
- 35 [双十一战报：天猫累计访问用户超8亿，京东超60个品牌销售破10亿](https://new.qq.com/rain/a/20231112A007WK00)
+ 35 [宜宾3岁男童家门口失踪已3天：多支救援力量在附近山区搜救，警方已立案侦查](https://new.qq.com/rain/a/20231113A06LPC00)
 
- 36 [一天1400次地震！冰岛火山或再次喷发，游客凌晨逃离，专家：前所未有](https://new.qq.com/rain/a/20231112A04XNP00)
+ 36 [白宫官员称美方过去几十年试图塑造或改变中国的努力已失败，外交部回应](https://new.qq.com/rain/a/20231113A05UP300)
 
- 37 [导演车径行生命定格于63岁，众多好友发文痛悼](https://new.qq.com/rain/a/20231112A044NC00)
+ 37 [缅北电诈头目明学昌孙子读北大？北京大学：不是北大学生，无申请记录](https://new.qq.com/rain/a/20231113A0310800)
 
- 38 [G7外长会议对中国表达所谓关切，卷入两场战争的美国还能兼顾其它吗](https://new.qq.com/rain/a/20231111A08A4600)
+ 38 [胡润：中国千万净资产家庭达211万户](https://new.qq.com/rain/a/20231113A07JQZ00)
 
- 39 [大妈码头买海鱼带回家，做好红烧鱼竟在半夜泛绿光：手碰了也粘上荧光](https://new.qq.com/rain/a/20231112V05LHF00)
+ 39 [网友称为防止猥亵，女乘客购票默认为列车上铺？12306：系随机出票](https://new.qq.com/rain/a/20231113A04YP300)
 
- 40 [走访苏州争议“毒地块”：学校外挂着警示牌，房子降价三成也没人要](https://new.qq.com/rain/a/20231112A00V9X00)
+ 40 [关于网传“东山镇镇长在会议现场摔瓶子”一事的通报](https://new.qq.com/rain/a/20231113A02XJQ00)
 
- 41 [28岁加纳足球运动员比赛中突然倒地身亡，直播画面记录下悲剧一幕](https://new.qq.com/rain/a/20231112V04YGU00)
+ 41 [外媒：因以色列对加沙希法医院采取行动 哈马斯暂停人质谈判](https://new.qq.com/rain/a/20231113A00LCC00)
 
- 42 [涉嫌贩卖出生医学证明 广西南宁相关医院责任人已被采取刑事强制措施 ](https://new.qq.com/rain/a/20231112A04DM300)
+ 42 [朝鲜外务省机构发公报，要求解散美国主导的“联合国军司令部”](https://new.qq.com/rain/a/20231113A04MOM00)
 
- 43 [网传“重庆江津区一所小学食堂里出现鼠头？” 官方辟谣](https://new.qq.com/rain/a/20231111A06JZT00)
+ 43 [证监系统任职28年 期货业协会会长安青松被带走](https://new.qq.com/rain/a/20231113A0732H00)
 
- 44 [低价硝烟下，天猫称双11订单量和成交总额全面增长，京东称齐创新高](https://new.qq.com/rain/a/20231112A016E000)
+ 44 [知名主持人白燕升曝7岁儿子被一男子抱摔，警方：已介入处理](https://new.qq.com/rain/a/20231113A07VOQ00)
 
- 45 [患癌事件院长之子中学就发表论文？教育公平容不下“我的院长父亲”](https://new.qq.com/rain/a/20231111A083LI00)
+ 45 [海南一镇长开会怒砸水瓶后村民拍桌回怼？当地政府：该会涉及土整项目](https://new.qq.com/rain/a/20231113A08IAK00)
 
- 46 [最“卷”的双11：谁在制造全网最低价？](https://new.qq.com/rain/a/20231112A04MC100)
+ 46 [公安部公开悬赏缅甸明氏家族当家人，有人在其名下工地发现两具尸体](https://new.qq.com/rain/a/20231113A03LJI00)
 
- 47 [金莎回应与小19岁男友恋情争议：不喜欢我们这对的，可以尽情说](https://new.qq.com/rain/a/20231112A04TCL00)
+ 47 [某剧组在上海一高校内拍摄用激光笔驱赶学生引发不满，校方回应](https://new.qq.com/rain/a/20231113A03WN500)
 
- 48 [华为压顶，小鹏开战](https://new.qq.com/rain/a/20231111A0843P00)
+ 48 [天津助学金事件当事人被网友举报利用流量打赏敛财，巡视组回应](https://new.qq.com/rain/a/20231113A056SO00)
 
- 49 [营口一舞蹈学校教师殴打学生被行拘15日，学校被责令整顿3天 家长：希望学校正视错误](https://new.qq.com/rain/a/20231112A05JHL00)
+ 49 [200亿短剧生意，越土越暴利](https://new.qq.com/rain/a/20231113A053B300)
 
- 50 [女子电梯内遇人带面具拿刀在背后做捅人动作，物业：刀是假的，是业主家小孩的恶作剧，已道歉](https://new.qq.com/rain/a/20231112V06N1X00)
+ 50 [又来？新一轮冷空气蓄势待发！15日起影响我国大部地区 | 天气展望](https://new.qq.com/rain/a/20231113A02HMB00)
 </details>
 
 
@@ -948,105 +978,105 @@
 <summary> tag: toutiao 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/toutiao?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/toutiao</a>
     </summary>
 
- 1 [警方公开通缉缅北果敢4名电诈头目](https://www.toutiao.com/trending/7300405920620937266/)
+ 1 [余承东回应问界M5试驾车事故](https://www.toutiao.com/trending/7300906087400603686/)
 
- 2 [阿里回应多款产品“崩了”](https://www.toutiao.com/trending/7300201805449953292/)
+ 2 [华为Mate60Pro本土零件价值占比47%](https://www.toutiao.com/trending/7300503495043383308/)
 
- 3 [100秒速览中国十年“网事”](https://www.toutiao.com/trending/7300116425207709706/)
+ 3 [“家门口”就医 要“有”还要“优”](https://www.toutiao.com/trending/7296021715052662322/)
 
- 4 [大妈买海鱼红烧后半夜发绿光](https://www.toutiao.com/trending/7300464544717996084/)
+ 4 [余承东曾称“倒车想撞都难”](https://www.toutiao.com/trending/7300199705941245979/)
 
- 5 [菲警方发现6具遗体 2名死者为中国人](https://www.toutiao.com/trending/7300488533469298699/)
+ 5 [多国爆发臭虫危机民众不敢去电影院](https://www.toutiao.com/trending/7300853010270257163/)
 
- 6 [制片人可以内定演员吗](https://www.toutiao.com/trending/7300389665616429056/)
+ 6 [官方通报镇长在会议现场摔瓶子](https://www.toutiao.com/trending/7300371360029769737/)
 
- 7 [这届年轻人双11消费变了](https://www.toutiao.com/trending/7299403549221748786/)
+ 7 [问界M5事故为何没触发后向AEB](https://www.toutiao.com/trending/7300828954149126179/)
 
- 8 [5人驾车坠江4人遇难 监控曝光](https://www.toutiao.com/trending/7300534509618298891/)
+ 8 [英国前首相卡梅伦出任英外交大臣](https://www.toutiao.com/trending/7300882632475148297/)
 
- 9 [低价硝烟下天猫京东公布双11战绩](https://www.toutiao.com/trending/7299748779240996873/)
+ 9 [日本大阪府部分居民血检异常](https://www.toutiao.com/trending/7300576288610189312/)
 
- 10 [大批中国公民滞留俄罗斯？官方回应](https://www.toutiao.com/trending/7300099254470017063/)
+ 10 [多家银行存款利率下调](https://www.toutiao.com/trending/7300881473103396891/)
 
- 11 [媒体：加沙巷战以军“不败而败”](https://www.toutiao.com/trending/7295954228789513755/)
+ 11 [多地可低价代缴采暖费？假的](https://www.toutiao.com/trending/7300383882963058742/)
 
- 12 [广州一工地挖破燃气管道？假的](https://www.toutiao.com/trending/7300359393495744538/)
+ 12 [中国通缉缅北电诈头目引外媒关注](https://www.toutiao.com/trending/7300422593033535524/)
 
- 13 [镇长砸水瓶后村民拍桌回怼？当地回应](https://www.toutiao.com/trending/7300241051108065316/)
+ 13 [缅军战机被击落 战况更趋激烈](https://www.toutiao.com/trending/7300698497508966452/)
 
- 14 [官方通报企业家跳楼身亡：正调查](https://www.toutiao.com/trending/7300551732994510355/)
+ 14 [李佳琦团队回应双十一收入250亿](https://www.toutiao.com/trending/7300224436957872140/)
 
- 15 [从“双十一”看消费新态势](https://www.toutiao.com/trending/7300240746157637644/)
+ 15 [缅北明学昌家族究竟犯下何滔天罪孽](https://www.toutiao.com/trending/7300543634477154358/)
 
- 16 [中科院院士钟万勰逝世](https://www.toutiao.com/trending/7300532500861255721/)
+ 16 [马斯克：中国大陆会统一台湾](https://www.toutiao.com/trending/7300612362330898444/)
 
- 17 [多国爆发床虱危机](https://www.toutiao.com/trending/7300189621428682778/)
+ 17 [媒体评学生实习领导提成600万](https://www.toutiao.com/trending/7300857397911191604/)
 
- 18 [美加州郡长：对中国有意见你去过吗](https://www.toutiao.com/trending/7300376950537715746/)
+ 18 [缅北四大家族魏超仁之子录忏悔视频](https://www.toutiao.com/trending/7300328144571990066/)
 
- 19 [双11京东手机销量榜：小米14第七](https://www.toutiao.com/trending/7300106434766143528/)
+ 19 [国家气候中心：厄尔尼诺事件已形成](https://www.toutiao.com/trending/7300163966959878144/)
 
- 20 [中缅边境口岸每天大量中国籍人员入境](https://www.toutiao.com/trending/7300106035157532699/)
+ 20 [《无所畏惧》反派全员伪君子](https://www.toutiao.com/trending/7300405112906711091/)
 
- 21 [以总理：战后加沙将“非军事化”](https://www.toutiao.com/trending/7300457938543378447/)
+ 21 [以色列总理谈在加沙的三大主要目标](https://www.toutiao.com/trending/7300457186122006591/)
 
- 22 [以总理：将在必要时坚定与世界对抗](https://www.toutiao.com/trending/7299797115580678196/)
+ 22 [巴以冲突已致双方超1.25万人死亡](https://www.toutiao.com/trending/7300209496536645669/)
 
- 23 [伊拉克武装组织对以色列发动袭击](https://www.toutiao.com/trending/7300098803154026532/)
+ 23 [传苹果公司将叫停摇一摇跳转广告](https://www.toutiao.com/trending/7300895194140770319/)
 
- 24 [巴勒斯坦谴责以军袭击加沙医院](https://www.toutiao.com/trending/7300024282745143337/)
+ 24 [以色列称阿巴斯不应接管加沙](https://www.toutiao.com/trending/7295954228789530139/)
 
- 25 [林高远林诗栋获WTT太原站男双冠军](https://www.toutiao.com/trending/7300559287116857394/)
+ 25 [缅北四大家族成员称家族将杜绝电诈](https://www.toutiao.com/trending/7300479648324124712/)
 
- 26 [红薯摊小狗有自己的被子和玩具](https://www.toutiao.com/trending/7299862810870169609/)
+ 26 [专家：巴以冲突让俄军看到了希望](https://www.toutiao.com/trending/7300789393978032180/)
 
- 27 [张艺兴伴舞回应背带裤造型争议](https://www.toutiao.com/trending/7300363529687662619/)
+ 27 [埃尔多安：内塔尼亚胡该离开了](https://www.toutiao.com/trending/7300870253007863843/)
 
- 28 [爸爸喝醉把儿子忘地铁上了](https://www.toutiao.com/trending/7299771426507063350/)
+ 28 [媒体：果敢明家工地挖出尸体为中国人](https://www.toutiao.com/trending/7300794004134694409/)
 
- 29 [京东数据：双11湖北购买力全国第十](https://www.toutiao.com/trending/7300494793288482831/)
+ 29 [胡锡进：天猫京东双11成交额无须瞒着](https://www.toutiao.com/trending/7300513777429643279/)
 
- 30 [张艺兴伴舞服饰有点眼熟](https://www.toutiao.com/trending/7300091392679510016/)
+ 30 [曹云金回应听云轩叫“干德云”](https://www.toutiao.com/trending/7296865336115072553/)
 
- 31 [美媒：美国众议院已“完全失控”](https://www.toutiao.com/trending/7300182287470362662/)
+ 31 [新坦克300街拍曝光](https://www.toutiao.com/trending/7300868278204203008/)
 
- 32 [一次性擦脚纸双十一销量暴涨2700%](https://www.toutiao.com/trending/7300473853213343759/)
+ 32 [朝鲜要求解散“联合国军司令部”](https://www.toutiao.com/trending/7300453848525570086/)
 
- 33 [国企领导车辆别停旅游客车？官方回应](https://www.toutiao.com/trending/7300546029613485595/)
+ 33 [已有49名记者在加沙地带遇难](https://www.toutiao.com/trending/7300772872862040102/)
 
- 34 [男子杀人逃深山 养8只恶犬防身](https://www.toutiao.com/trending/7300382849503821863/)
+ 34 [中国会否同意购买美国波音737MAX](https://www.toutiao.com/trending/7300787107462086671/)
 
- 35 [华为官宣：2道题悬赏200万](https://www.toutiao.com/trending/7300384658833801266/)
+ 35 [拼多多50元鞋利润3元每月挣七八千](https://www.toutiao.com/trending/7300207476429815862/)
 
- 36 [多地降温羽绒服价格大跳水](https://www.toutiao.com/trending/7300194639457222696/)
+ 36 [女乘客购票默认上铺？12306回应](https://www.toutiao.com/trending/7300825292384239650/)
 
- 37 [家中起火3人死亡 法院判物业需赔偿](https://www.toutiao.com/trending/7300491617075789843/)
+ 37 [林心如夸小S演大尺度戏放得开](https://www.toutiao.com/trending/7300581963214094348/)
 
- 38 [拜登出席活动“犯迷糊”来回徘徊](https://www.toutiao.com/trending/7300423130311622656/)
+ 38 [7岁男童发热咳嗽6天 肺部发生实变](https://www.toutiao.com/trending/7300724039331856422/)
 
- 39 [越南宣判18人死刑 包括1名中国人](https://www.toutiao.com/trending/7300550622275715072/)
+ 39 [专家谈印度又试验新型导弹](https://www.toutiao.com/trending/7300906222709342271/)
 
- 40 [李显龙：不认为大陆会对台湾动武](https://www.toutiao.com/trending/7299708319357206528/)
+ 40 [92岁妈妈把女儿家打造成从前模样](https://www.toutiao.com/trending/7300752367711387667/)
 
- 41 [重庆女生布置浪漫场景求婚男友](https://www.toutiao.com/trending/7300373141506687027/)
+ 41 [中方：中国领土我们一寸也不会放弃](https://www.toutiao.com/trending/7300870674044682303/)
 
- 42 [江苏南通一男一女坠河男子不幸遇难](https://www.toutiao.com/trending/7300509340799565858/)
+ 42 [女子凌晨三点发现家中惊现陌生男子](https://www.toutiao.com/trending/7300439561573204005/)
 
- 43 [双11国货崛起](https://www.toutiao.com/trending/7300371149232767002/)
+ 43 [狐狸脑袋卡进杯子蹲在路边等待救援](https://www.toutiao.com/trending/7300683524004053002/)
 
- 44 [张杰晒和三个女儿的背影照](https://www.toutiao.com/trending/7300178438860570687/)
+ 44 [张靓颖演唱会唱《如果这就是爱情》](https://www.toutiao.com/trending/7300200126834802715/)
 
- 45 [儿媳为带公婆吃自助撒谎称只要10元](https://www.toutiao.com/trending/7300012158547394579/)
+ 45 [男子玉米地死亡 警方：酒后冻死](https://www.toutiao.com/trending/7300875093776744499/)
 
- 46 [肺炎支原体感染15个热点问题解答](https://www.toutiao.com/trending/7300378406405799972/)
+ 46 [吃干锅被店员加错菜又挑出还多收8块](https://www.toutiao.com/trending/7300499787961335844/)
 
- 47 [美股反弹能否更进一步](https://www.toutiao.com/trending/7300067966823956530/)
+ 47 [华为11月28日将发大波新品](https://www.toutiao.com/trending/7300472239072215094/)
 
- 48 [当朋友无意间拍了张你巨好看的照片](https://www.toutiao.com/trending/7299837148139077668/)
+ 48 [岸田称日本面临二战以来最严重威胁](https://www.toutiao.com/trending/7300125343858294823/)
 
- 49 [中纪委巡查披露高龄补贴打到社保卡](https://www.toutiao.com/trending/7300517861876596751/)
+ 49 [3D还原校长强奸猥亵22名学生案](https://www.toutiao.com/trending/7300830020887380019/)
 
- 50 [网络招嫖被骗后自首还算不算嫖娼](https://www.toutiao.com/trending/7299835973352914954/)
+ 50 [C罗假装主罚任意球掩护队友进球](https://www.toutiao.com/trending/7300271329373061172/)
 </details>
 
 
@@ -1140,81 +1170,69 @@
 <summary> tag: v2ex 🔍 server: <a href="https://nestjs.h7ml.cn/api/hotapi/v2ex?q=github" target="_blank">https://nestjs.h7ml.cn/api/hotapi/v2ex</a>
     </summary>
 
- 1 [阿里云 OSS 挂了？](https://www.v2ex.com/t/991209#reply74)
+ 1 [备忘录+翻译+文件搜索+ChatGPT=Airy，给 V 站老哥前 1000 个用户都送终身会员](https://www.v2ex.com/t/991541#reply1009)
 
- 2 [「抽奖送码🎁」我的稍后阅读应用得到了小众软件的推荐（ios/mac）](https://www.v2ex.com/t/991178#reply65)
+ 2 [[年终总结]程序员回乡当教师的年收入，以及一年近况](https://www.v2ex.com/t/991351#reply229)
 
- 3 [再一次被 MAC 外接屏幕系统震惊，说好的环保呢](https://www.v2ex.com/t/991224#reply55)
+ 3 [煞笔女人，想离婚了](https://www.v2ex.com/t/991508#reply184)
 
- 4 [阿里云崩了？](https://www.v2ex.com/t/991212#reply50)
+ 4 [[送码] Mac 平台最强休息提醒工具，欢迎体验！](https://www.v2ex.com/t/991317#reply141)
 
- 5 [如何看待放假还被 @？](https://www.v2ex.com/t/991169#reply38)
+ 5 [提车交作业了，我是前几天卡罗拉双擎 VS 帕萨特 280 的 V 友，最终提的思域混动先锋版](https://www.v2ex.com/t/991342#reply102)
 
- 6 [TIM - QQ 办公简洁版寄了？](https://www.v2ex.com/t/991091#reply36)
+ 6 [用了几年 mac 了，还是不习惯。](https://www.v2ex.com/t/991332#reply77)
 
- 7 [Google play 订阅 ChatGPT plus 方法求教](https://www.v2ex.com/t/991122#reply34)
+ 7 [搭建私人像册，最合适/经济的机型是什么？](https://www.v2ex.com/t/991318#reply76)
 
- 8 [纯好奇小调查，你们有在网上买过药吗？](https://www.v2ex.com/t/991234#reply32)
+ 8 [[求职][Base 贵阳或远程]30+年工作经验,分析师架构师双证, Java /C++](https://www.v2ex.com/t/991415#reply76)
 
- 9 [Macos 换回 win，求教目前好用的 airdrop 平替方案](https://www.v2ex.com/t/991208#reply30)
+ 9 [关于 mybatis 的疑惑](https://www.v2ex.com/t/991335#reply70)
 
- 10 [iPhone 怎么方便的解锁 Windows 电脑呢](https://www.v2ex.com/t/991181#reply28)
+ 10 [自己长辈父母一代， 4G 流量蹭蹭的涨，还说没怎么用？](https://www.v2ex.com/t/991517#reply63)
 
- 11 [怎么让唱歌变好听](https://www.v2ex.com/t/991125#reply26)
+ 11 [大家能不能把我服务器发挂？](https://www.v2ex.com/t/991398#reply57)
 
- 12 [一个关于 5G 的疑问](https://www.v2ex.com/t/991134#reply24)
+ 12 [VPS 自建节点协议选择](https://www.v2ex.com/t/991340#reply47)
 
- 13 [肉身去国外有啥可以做的](https://www.v2ex.com/t/991112#reply22)
+ 13 [裁员后是去申请失业金还是继续交灵活就业社保？](https://www.v2ex.com/t/991362#reply46)
 
- 14 [GPT 是程序员卖给资本家的绞索](https://www.v2ex.com/t/991204#reply22)
+ 14 [灵动岛 vs 刘海哪个更好用？](https://www.v2ex.com/t/991310#reply45)
 
- 15 [小米 13 国行刷了国际版 MIUI 居然可以用 esim](https://www.v2ex.com/t/991269#reply18)
+ 15 [想海鲜市场收个安卓手机](https://www.v2ex.com/t/991368#reply45)
 
- 16 [小程序 300 块现在看样子是强制咯](https://www.v2ex.com/t/991096#reply18)
+ 16 [老婆诉讼离婚，银行卡流水被查，婚前婚后财产混同了，求支招](https://www.v2ex.com/t/991559#reply40)
 
- 17 [农行任务中心完成任务抽奖， 50 元微信立减金，亲测秒到。](https://www.v2ex.com/t/991150#reply17)
+ 17 [求大家推荐一个录像比较好的安卓手机](https://www.v2ex.com/t/991489#reply39)
 
- 18 [如何查询 Magic Trackpad 保修状态](https://www.v2ex.com/t/991166#reply17)
+ 18 [阿里云昨天全球爆炸没人讨论吗？](https://www.v2ex.com/t/991327#reply38)
 
- 19 [美区账号如何绑定国内信用卡，好给交通卡用啊](https://www.v2ex.com/t/991258#reply16)
+ 19 [双十一买的 DX4600 Pro，玩了两个星期，系统基本被我摸明白了，非常逆天](https://www.v2ex.com/t/991429#reply37)
 
- 20 [问一个前端 canvas rotate transform 的坐标问题](https://www.v2ex.com/t/991114#reply16)
+ 20 [新款 iPhone SE 什么时候发布？](https://www.v2ex.com/t/991312#reply35)
 
- 21 [如何拯救 Android 糟糕的分享菜单？](https://www.v2ex.com/t/991084#reply15)
+ 21 [AI 毕业设计生成器](https://www.v2ex.com/t/991319#reply35)
 
- 22 [有没有那种学习英语口语发声的 app，类似于跟读的 app， app 读一句话，你可以有一个时间停顿也跟着读一句话，这样练习发声比较方便](https://www.v2ex.com/t/991094#reply15)
+ 22 [HSBC HK 如何隐藏 root？](https://www.v2ex.com/t/991504#reply34)
 
- 23 [广东电信拿不到公网 ip 了吗](https://www.v2ex.com/t/991192#reply15)
+ 23 [Quantumult X 有啥好使的去广告 Config？](https://www.v2ex.com/t/991309#reply34)
 
- 24 [除了方便面还有什么可以吃饱的方便食品推荐吗？](https://www.v2ex.com/t/991293#reply14)
+ 24 [以润为目标，研究什么技术栈收益最大？](https://www.v2ex.com/t/991421#reply33)
 
- 25 [联想拯救者 y7000p 安全吗？](https://www.v2ex.com/t/991082#reply14)
+ 25 [轻断食是不是伪科学？](https://www.v2ex.com/t/991525#reply32)
 
- 26 [爽了几年的 bug 双不限给玩挂了](https://www.v2ex.com/t/991165#reply14)
+ 26 ["消息称苹果公司将禁止摇一摇跳转广告，多家头部 App 收到通知"](https://www.v2ex.com/t/991592#reply32)
 
- 27 [家宽 ddns 如何复用域名及申请 ssl 证书？](https://www.v2ex.com/t/991243#reply13)
+ 27 [双十一没管住手开了 wps 超级会员 pro,77 个月续到 2030 年去了, 有什么羊毛和好活可以整的吗?](https://www.v2ex.com/t/991333#reply30)
 
- 28 [能否结合阿里云 ECS 和群晖，实现快速访问和 4T 硬盘兼得](https://www.v2ex.com/t/991265#reply13)
+ 28 [AppStore 国区有 300 块钱，不知道买啥？](https://www.v2ex.com/t/991449#reply29)
 
- 29 [有没有数学和算法好的朋友，计算线性回归用啥算法最快？](https://www.v2ex.com/t/991152#reply13)
+ 29 [文件存在却报错： no such file or directory ，记录下调试过程](https://www.v2ex.com/t/991345#reply27)
 
- 30 [tp6 路由未加载](https://www.v2ex.com/t/991171#reply13)
+ 30 [家用 NAS 用什么软件构建内网，全平台都能用的，现在手机连不上](https://www.v2ex.com/t/991372#reply27)
 
- 31 [分享一下 Quantumult X 启用链式代理](https://www.v2ex.com/t/991183#reply13)
+ 31 [Vision Pro 会限制成人内容吗？](https://www.v2ex.com/t/991436#reply27)
 
- 32 [语雀好像又崩了？](https://www.v2ex.com/t/991213#reply13)
-
- 33 [请教一个关于中职生实习就业的问题](https://www.v2ex.com/t/991250#reply12)
-
- 34 [Java 中一个保存了 1 万个整数的 ArrayList 占多少内存？](https://www.v2ex.com/t/991104#reply12)
-
- 35 [Linux 否能实现 Windows 那种机械硬盘休眠策略？](https://www.v2ex.com/t/991190#reply12)
-
- 36 [过保的苹果手机自费返厂更换新机后出现的保修日期怪事](https://www.v2ex.com/t/991089#reply11)
-
- 37 [家里联通宽带部署服务 套 cloudflare 的 CDN 然后路由器防火墙里选择只能 cf 的 ip 入站 会不会安全些](https://www.v2ex.com/t/991153#reply11)
-
- 38 [Bilibili 视频和直播的 CDN 是不是太拉了？还是单纯的技术不行？](https://www.v2ex.com/t/991228#reply11)
+ 32 [公司违法辞退，该如何维权？](https://www.v2ex.com/t/991495#reply24)
 </details>
 
 
