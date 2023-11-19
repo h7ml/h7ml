@@ -27,7 +27,6 @@ head:
 
 ES6（ECMAScript 2015）引入了一种新的基本数据类型——Symbol。Symbol 类型的引入使得开发者能够创建一种独一无二的值，这在某些场景下非常有用。
 
-
 ## 1. Symbol 的基本概念
 
 Symbol 是一种原始数据类型，它的值是唯一且不可变的。通过 Symbol() 函数创建一个新的 Symbol，每次调用都会返回一个不同的值。
@@ -49,7 +48,7 @@ console.log(symbolWithDescription.toString()); // Symbol(mySymbol)
 
 ## 2. Symbol 的主要特性
 
-### 2.1  唯一性
+### 2.1 唯一性
 
 Symbol 类型的值是唯一的，即使两个 Symbol 使用相同的描述（description），它们也是不相等的。
 
@@ -90,14 +89,13 @@ console.log(globalSymbol === retrievedSymbol); // true
 
 ### 2.4 属性检索
 
-Symbol 类型的值不能通过 Object.keys()、Object.getOwnPropertyNames() 检索，但是可以通过 Object.getOwnPropertySymbols() 方法检索。
-如果需要检索对象的所有属性，可以使用 Reflect.ownKeys() 方法。
+Symbol 类型的值不能通过 Object.keys()、Object.getOwnPropertyNames() 检索，但是可以通过 Object.getOwnPropertySymbols() 方法检索。如果需要检索对象的所有属性，可以使用 Reflect.ownKeys() 方法。
 
 ```javascript
 const myObject = {
   [Symbol('property1')]: 'value1',
   [Symbol('property2')]: 'value2',
-  regularProperty: 'regularValue'
+  regularProperty: 'regularValue',
 };
 
 const symbolProperties = Object.getOwnPropertySymbols(myObject);
@@ -146,7 +144,7 @@ const obj = {
   },
   publicMethod() {
     console.log('Public method');
-  }
+  },
 };
 ```
 
@@ -163,7 +161,7 @@ const myLibrary = {
   },
   publicMethod() {
     console.log('Public method');
-  }
+  },
 };
 
 const myModule = {
@@ -174,7 +172,7 @@ const myModule = {
   },
   publicMethod() {
     console.log('Public method');
-  }
+  },
 };
 ```
 
