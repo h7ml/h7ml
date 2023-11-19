@@ -9,7 +9,7 @@ footer: <a href='https://beian.mit.gov.cn/' target='blank'>浙ICP备2021037683�
 star: 1
 image: https://www.h7ml.cn/logo.png
 banner: https://www.h7ml.cn/logo.png
-shortTitle: 微前端架构:拆分前端应用
+shortTitle: Symbol 类型与特性
 category:
   - javascript
   - 前端开发
