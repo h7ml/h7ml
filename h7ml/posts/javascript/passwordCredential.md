@@ -28,6 +28,7 @@ head:
 ---
 
 # 深入了解 Chrome 的 PasswordCredential
+
 在现代网络生态系统中，用户帐户和密码是用户身份验证的关键元素。为了提供更好的用户体验和安全性，浏览器提供了许多 API 以便开发者更好地管理用户凭据。其中，Chrome 提供了 PasswordCredential 对象，为用户的密码管理和自动填充提供了便利。
 
 ::: vue-demo PasswordCredential
@@ -43,54 +44,59 @@ head:
     </form>
 
     <p class="message">PasswordCredential is {{ message }}</p>
-    <button @click="storeCredential">Store default Credential</button> <br>
-    <button @click="retrieveCredential">Retrieve Credential</button> <br>
-    <button @click="updateCredential">Update Credential</button> <br>
-    <button @click="deleteCredential">Delete Credential</button> <br>
+    <button @click="storeCredential">Store default Credential</button>
+    <br />
+    <button @click="retrieveCredential">Retrieve Credential</button>
+    <br />
+    <button @click="updateCredential">Update Credential</button>
+    <br />
+    <button @click="deleteCredential">Delete Credential</button>
+    <br />
     <code>{{ message }}</code>
-
   </div>
 </template>
 
 <script>
   export default {
-    data: () => ({ message: "", isWebCredentialSupported: false, username: "", password: "" }),
+    data: () => ({ message: '', isWebCredentialSupported: false, username: '', password: '' }),
     methods: {
       storeCredential() {
         const passwordCredential = new PasswordCredential({
           id: this.username || 'h7ml',
           password: this.password || 'zfy666',
           name: this.username || '子非鱼',
-          iconURL: 'https://www.h7ml.cn/logo.png'
+          iconURL: 'https://www.h7ml.cn/logo.png',
         });
 
-        navigator.credentials.store(passwordCredential)
-            .then(() => {
-              this.message = 'Password credential stored successfully';
-            })
-            .catch((error) => {
-              console.error('Error storing password credential:', error);
-              this.message = 'Error storing password credential';
-            });
+        navigator.credentials
+          .store(passwordCredential)
+          .then(() => {
+            this.message = 'Password credential stored successfully';
+          })
+          .catch((error) => {
+            console.error('Error storing password credential:', error);
+            this.message = 'Error storing password credential';
+          });
       },
 
       retrieveCredential() {
-        navigator.credentials.get({ password: true })
-            .then((credential) => {
-              if (credential) {
-                this.message = 'Retrieved username credential: ' + credential.id;
-                // 使用凭据进行登录等操作
-                this.username = credential.id;
-                this.password = credential.password;
-              } else {
-                this.message = 'No saved password credential found';
-                // 提示用户进行登录
-              }
-            })
-            .catch((error) => {
-              console.error('Error retrieving password credential:', error);
-              this.message = 'Error retrieving password credential';
-            });
+        navigator.credentials
+          .get({ password: true })
+          .then((credential) => {
+            if (credential) {
+              this.message = 'Retrieved username credential: ' + credential.id;
+              // 使用凭据进行登录等操作
+              this.username = credential.id;
+              this.password = credential.password;
+            } else {
+              this.message = 'No saved password credential found';
+              // 提示用户进行登录
+            }
+          })
+          .catch((error) => {
+            console.error('Error retrieving password credential:', error);
+            this.message = 'Error retrieving password credential';
+          });
       },
 
       updateCredential() {
@@ -99,20 +105,21 @@ head:
       },
 
       deleteCredential() {
-        navigator.credentials.preventSilentAccess()
-            .then(() => {
-              this.message = 'Prevented silent access to password credentials';
-            })
-            .catch((error) => {
-              console.error('Error preventing silent access:', error);
-            });
+        navigator.credentials
+          .preventSilentAccess()
+          .then(() => {
+            this.message = 'Prevented silent access to password credentials';
+          })
+          .catch((error) => {
+            console.error('Error preventing silent access:', error);
+          });
       },
     },
     mounted() {
       this.isWebCredentialSupported = 'credentials' in navigator;
       this.message = this.isWebCredentialSupported
-          ? "Web Credential Management API is supported"
-          : "Web Credential Management API is not supported";
+        ? 'Web Credential Management API is supported'
+        : 'Web Credential Management API is not supported';
     },
   };
 </script>
@@ -128,22 +135,20 @@ head:
     color: #f00;
   }
 </style>
-
-
 ```
 
 :::
 
 ## 1. PasswordCredential 是什么？
 
-``PasswordCredential`` 是一个 ``Web Credential Management API`` 的一部分，它允许开发者在不牺牲安全性的前提下管理用户的密码。这个 ``API`` 可以通过以下方式创建：
+`PasswordCredential` 是一个 `Web Credential Management API` 的一部分，它允许开发者在不牺牲安全性的前提下管理用户的密码。这个 `API` 可以通过以下方式创建：
 
 ```javascript
 const passwordCredential = new PasswordCredential({
-    id: 'h7ml@qq.com',
-    password: 'zfy666',
-    name: 'h7ml',
-    iconURL: 'https://www.h7ml.cn/logo.png'
+  id: 'h7ml@qq.com',
+  password: 'zfy666',
+  name: 'h7ml',
+  iconURL: 'https://www.h7ml.cn/logo.png',
 });
 ```
 
@@ -151,10 +156,11 @@ const passwordCredential = new PasswordCredential({
 
 ## 2. 保存密码凭据
 
-通过使用 ``navigator.credentials.store()`` 方法，我们可以将用户的密码凭据保存到浏览器中。这使得用户在下一次访问网站时能够自动填充他们的凭据信息。
+通过使用 `navigator.credentials.store()` 方法，我们可以将用户的密码凭据保存到浏览器中。这使得用户在下一次访问网站时能够自动填充他们的凭据信息。
 
 ```javascript
-navigator.credentials.store(passwordCredential)
+navigator.credentials
+  .store(passwordCredential)
   .then(() => {
     console.log('Password credential stored successfully');
   })
@@ -165,11 +171,11 @@ navigator.credentials.store(passwordCredential)
 
 ## 3. 获取已保存的密码凭据
 
-
 通过 `navigator.credentials.get()` 方法，我们可以检索已保存在浏览器中的密码凭据。这允许我们自动填充登录表单，提供更好的用户体验。
 
 ```javascript
-navigator.credentials.get({ password: true })
+navigator.credentials
+  .get({ password: true })
   .then((credential) => {
     if (credential) {
       console.log('Retrieved password credential:', credential);
@@ -189,26 +195,25 @@ navigator.credentials.get({ password: true })
 如果用户选择登出或希望删除已保存的密码凭据，可以使用 `navigator.credentials.preventSilentAccess()` 方法。
 
 ```javascript
-navigator.credentials.preventSilentAccess()
+navigator.credentials
+  .preventSilentAccess()
   .then(() => {
     console.log('Prevented silent access to password credentials');
   })
   .catch((error) => {
     console.error('Error preventing silent access:', error);
   });
-
 ```
 
-## 5.  new PasswordCredential() 的参数
+## 5. new PasswordCredential() 的参数
 
 `PasswordCredential` 构造函数接受一个包含以下属性的对象：
 
-| 属性 | 类型 | 描述 |
-| --- | --- | --- |
-| id | String | 用户的唯一标识符，通常是用户的电子邮件地址。 |
-| password | String | 用户的密码。 |
-| name | String | 用户的姓名。 |
-| iconURL | String | 用户的头像 URL。 |
-
+| 属性     | 类型   | 描述                                         |
+| -------- | ------ | -------------------------------------------- |
+| id       | String | 用户的唯一标识符，通常是用户的电子邮件地址。 |
+| password | String | 用户的密码。                                 |
+| name     | String | 用户的姓名。                                 |
+| iconURL  | String | 用户的头像 URL。                             |
 
 `Chrome` 的 `PasswordCredential` 提供了一种方便且安全的方式来处理用户的密码凭据。通过有效使用这一功能，开发者可以提供更加流畅和安全的用户体验，同时避免了明文存储和传输密码的潜在风险。在开发中，务必结合最佳实践来使用这一功能，以确保用户数据的隐私和安全性。
