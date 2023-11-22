@@ -43,7 +43,7 @@ head:
     </form>
 
     <p class="message">PasswordCredential is {{ message }}</p>
-    <button @click="storeCredential">Store Credential</button> <br>
+    <button @click="storeCredential">Store default Credential</button> <br>
     <button @click="retrieveCredential">Retrieve Credential</button> <br>
     <button @click="updateCredential">Update Credential</button> <br>
     <button @click="deleteCredential">Delete Credential</button> <br>
@@ -58,9 +58,9 @@ head:
     methods: {
       storeCredential() {
         const passwordCredential = new PasswordCredential({
-          id: this.username,
-          password: this.password,
-          name: this.username,
+          id: this.username || 'h7ml',
+          password: this.password || 'zfy666',
+          name: this.username || '子非鱼',
           iconURL: 'https://www.h7ml.cn/logo.png'
         });
 
@@ -198,5 +198,17 @@ navigator.credentials.preventSilentAccess()
   });
 
 ```
+
+## 5.  new PasswordCredential() 的参数
+
+`PasswordCredential` 构造函数接受一个包含以下属性的对象：
+
+| 属性 | 类型 | 描述 |
+| --- | --- | --- |
+| id | String | 用户的唯一标识符，通常是用户的电子邮件地址。 |
+| password | String | 用户的密码。 |
+| name | String | 用户的姓名。 |
+| iconURL | String | 用户的头像 URL。 |
+
 
 `Chrome` 的 `PasswordCredential` 提供了一种方便且安全的方式来处理用户的密码凭据。通过有效使用这一功能，开发者可以提供更加流畅和安全的用户体验，同时避免了明文存储和传输密码的潜在风险。在开发中，务必结合最佳实践来使用这一功能，以确保用户数据的隐私和安全性。
