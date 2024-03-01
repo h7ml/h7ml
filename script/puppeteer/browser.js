@@ -1,4 +1,4 @@
-const puppeteer = require('puppeteer');
+const puppeteer = require('puppeteer-core');
 const fs = require('fs');
 require('events').EventEmitter.defaultMaxListeners = 0; // 解除限制
 // 将元素保存为png

@@ -78,7 +78,7 @@
     "npm-run-all2": "^6.1.1",
     "open-url-by-browser": "1.0.1",
     "prettier": "2.8.4",
-    "puppeteer": "^19.11.1",
+    "puppeteer-core": "^19.11.1",
     "pushstate-server": "3.1.0",
     "qrcode": "^1.5.3",
     "rimraf": "^4.4.1",

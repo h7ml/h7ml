@@ -28,8 +28,11 @@ COPY . .
 # 第二阶段：部署阶段
 FROM nginx
 
+# 清空默认的 Nginx 静态文件目录
+RUN rm -rf /usr/share/nginx/html/*
+
 # 复制打包后的 dist 文件夹到默认的 Nginx 静态文件目录
-COPY --from=build /app/h7ml/.vuepress/dist /usr/share/nginx/html
+COPY --from=build /app/h7ml/.vuepress/dist/ /usr/share/nginx/html/
 
 # 将 Nginx 配置文件复制到默认的 Nginx 配置文件目录
 COPY nginx.conf /etc/nginx/conf.d/default.conf
