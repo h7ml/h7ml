@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress';
-import { getDirname, path } from '@vuepress/utils';
+import { getDirname, path } from 'vuepress/utils';
 import { searchConsolePlugin } from 'vuepress-plugin-china-search-console';
 // import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
