@@ -13,7 +13,6 @@ date: 2023-02-24
 
 - [JavaScript](https://www.h7ml.cn/posts/interview/JavaScript)
 
-- [ == 和 ===区别，分别在什么情况使用](https://www.h7ml.cn/posts/interview/JavaScript/== \_===)
 - [ 说说你对 BOM 的理解，常见的 BOM 对象你了解哪些？](https://www.h7ml.cn/posts/interview/JavaScript/BOM)
 - [ DOM 常见的操作有哪些？](https://www.h7ml.cn/posts/interview/JavaScript/Dom)
 - [ ajax 原理是什么？如何实现？](https://www.h7ml.cn/posts/interview/JavaScript/ajax)

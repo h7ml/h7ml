@@ -150,4 +150,4 @@ const headConfig = [
   ],
 ];
 
-module.exports = headConfig;
+export default headConfig;

@@ -35,8 +35,6 @@ footer: <a href='https://beian.mit.gov.cn/' target='blank'>浙ICP备2021037683�
 
 <BiliBili bvid="BV1kt411o7C3" low-quality />
 
-<SiKong></SiKong>
-
 ![libie](https://v1.jinrishici.com/shuqing/libie.png)
 
 <!-- ::: tabs#fruit
@@ -183,21 +181,21 @@ c2(no)->op2->e
 
 ```js
 export default () => {
-  const message = '十分帅';
+  const message = '十分帅'
 
   const handler = () => {
-    alert(message);
-  };
+    alert(message)
+  }
 
   return (
-    <div className="box">
+    <div className='box'>
       h7ml
-      <span id="very" onClick={handler}>
+      <span id='very' onClick={handler}>
         {message}
       </span>
     </div>
-  );
-};
+  )
+}
 ```
 
 ```css
@@ -220,19 +218,19 @@ export default () => {
   </div>
 </template>
 <script>
-  export default {
-    data: () => ({ message: '十分帅' }),
-    methods: {
-      handler() {
-        alert(this.message);
-      },
-    },
-  };
+export default {
+  data: () => ({ message: '十分帅' }),
+  methods: {
+    handler() {
+      alert(this.message)
+    }
+  }
+}
 </script>
 <style>
-  .box span {
-    color: red;
-  }
+.box span {
+  color: red;
+}
 </style>
 ```
 
@@ -245,23 +243,23 @@ export default () => {
 ```js
 export default class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { message: '帅' };
+    super(props)
+    this.state = { message: '帅' }
   }
   handler() {
     this.setState((state) => ({
-      message: `十分${state.message}`,
-    }));
+      message: `十分${state.message}`
+    }))
   }
   render() {
     return (
-      <div className="box">
+      <div className='box'>
         <code>h7ml</code>
-        <span id="powerful" onClick={this.handler.bind(this)}>
+        <span id='powerful' onClick={this.handler.bind(this)}>
           {this.state.message}
         </span>
       </div>
-    );
+    )
   }
 }
 ```
@@ -288,27 +286,27 @@ export default class App extends React.Component {
   </div>
 </template>
 <script>
-  const { ref } = Vue;
+const { ref } = Vue
 
-  export default {
-    setup() {
-      const message = ref('powerful');
+export default {
+  setup() {
+    const message = ref('powerful')
 
-      const handler = () => {
-        message.value = 'very ' + message.value;
-      };
+    const handler = () => {
+      message.value = 'very ' + message.value
+    }
 
-      return {
-        message,
-        handler,
-      };
-    },
-  };
+    return {
+      message,
+      handler
+    }
+  }
+}
 </script>
 <style>
-  .box span {
-    color: red;
-  }
+.box span {
+  color: red;
+}
 </style>
 ```
 
@@ -328,19 +326,19 @@ export default class App extends React.Component {
   </div>
 </template>
 <script>
-  export default {
-    data: () => ({ message: 'powerful' }),
-    methods: {
-      handler() {
-        this.message = 'very ' + this.message;
-      },
-    },
-  };
+export default {
+  data: () => ({ message: 'powerful' }),
+  methods: {
+    handler() {
+      this.message = 'very ' + this.message
+    }
+  }
+}
 </script>
 <style>
-  .box span {
-    color: red;
-  }
+.box span {
+  color: red;
+}
 </style>
 ```
 
@@ -354,9 +352,9 @@ export default class App extends React.Component {
 
 ```vue
 <script setup>
-  import { ref } from 'vue';
+import { ref } from 'vue'
 
-  const msg = ref('你好交互演示!');
+const msg = ref('你好交互演示!')
 </script>
 
 <template>
@@ -375,10 +373,10 @@ export default class App extends React.Component {
 
 ```vue
 <script setup>
-  import { ref } from 'vue';
-  import Comp from './Comp.vue';
+import { ref } from 'vue'
+import Comp from './Comp.vue'
 
-  const msg = ref('Hello Playground!');
+const msg = ref('Hello Playground!')
 </script>
 
 <template>
@@ -392,10 +390,10 @@ export default class App extends React.Component {
 
 ```vue
 <script setup>
-  import { useBattery } from '@vueuse/core';
-  import { ref } from 'vue';
+import { useBattery } from '@vueuse/core'
+import { ref } from 'vue'
 
-  const { charging, level } = useBattery();
+const { charging, level } = useBattery()
 </script>
 
 <template>
