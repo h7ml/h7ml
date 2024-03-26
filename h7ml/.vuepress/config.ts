@@ -1,5 +1,5 @@
 import { defineUserConfig } from 'vuepress';
-import { getDirname, path } from 'vuepress/utils';
+import {  path } from 'vuepress/utils';
 import { searchConsolePlugin } from 'vuepress-plugin-china-search-console';
 // import { googleAnalyticsPlugin } from '@vuepress/plugin-google-analytics'
 
@@ -38,6 +38,7 @@ const config = defineUserConfig({
     // }),
   ],
   theme,
+  // @ts-ignore
   head: headConfig,
   alias: {
     '@theme-hope/components/MarkdownContent': path.resolve(__dirname, './components/theme/MarkdownContent/index.vue'),
