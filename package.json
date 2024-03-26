@@ -8,6 +8,7 @@
     "build": "vuepress-vite build h7ml",
     "clean-dev": "vuepress-vite dev h7ml --clean-cache",
     "dev": "vuepress-vite dev h7ml",
+    "crawler:sitemap2txt": "node ./script/crawler/sitemap2txt.js",
     "update-package": "pnpm dlx vp-update"
   },
   "devDependencies": {
