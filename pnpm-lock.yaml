@@ -42,8 +42,8 @@ devDependencies:
     specifier: ^1.7.3
     version: 1.7.3
   reveal.js:
-    specifier: ^5.0.5
-    version: 5.0.5
+    specifier: ^5.1.0
+    version: 5.1.0
   vue:
     specifier: ^3.4.21
     version: 3.4.21
@@ -55,13 +55,13 @@ devDependencies:
     version: 2.1.5
   vuepress-plugin-md-enhance:
     specifier: 2.0.0-rc.32
-    version: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9)
+    version: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.1.0)(vuepress@2.0.0-rc.9)
   vuepress-plugin-search-pro:
     specifier: 2.0.0-rc.32
     version: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.32
-    version: 2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9)
+    version: 2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.1.0)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9)
 
 packages:
 
@@ -3597,8 +3597,8 @@ packages:
     engines: {iojs: '>=1.0.0', node: '>=0.10.0'}
     dev: true
 
-  /reveal.js@5.0.5:
-    resolution: {integrity: sha512-MPWPV/cRlkZhh72dAGYv/bUCr9ulwM2/ucCqiL/KN4tvhb6VvN49iwOyWHE08wppj8lMQXi2xbS3kyKgfyTYqg==}
+  /reveal.js@5.1.0:
+    resolution: {integrity: sha512-KDt7m0+xwKV6nAZt4CNPVFBf42sTKRQapg0bGGKB5PKO5XvChnMfwlZkybydHiQJ7p5+6LbHKRGrhXODdoNIaA==}
     engines: {node: '>=18.0.0'}
     dev: true
 
@@ -4049,7 +4049,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-plugin-md-enhance@2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9):
+  /vuepress-plugin-md-enhance@2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.1.0)(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-zZK8aEfbq26J5w8o9xGWXCHHrL3PYk25tloTPcx96nZWYPeD+5fMFAtVpHte0rXBWUf0MBtDQxddSeATteBE7Q==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -4132,7 +4132,7 @@ packages:
       flowchart.ts: 3.0.0
       js-yaml: 4.1.0
       mermaid: 10.9.0
-      reveal.js: 5.0.5
+      reveal.js: 5.1.0
       vue: 3.4.21
       vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
       vuepress-plugin-sass-palette: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
@@ -4208,7 +4208,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-theme-hope@2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9):
+  /vuepress-theme-hope@2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.1.0)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-5S5qg5xa0TErqVjpubhBN5oy0QmROd+ja5EQKfORUCKdXKQvx0soojQZnCPkXsUEXonwiZ12oCLN2+UGO03eng==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -4268,7 +4268,7 @@ packages:
       vue: 3.4.21
       vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
       vuepress-plugin-components: 2.0.0-rc.32(artplayer@5.1.1)(dashjs@4.7.4)(hls.js@1.5.7)(mpegts.js@1.7.3)(vuepress@2.0.0-rc.9)
-      vuepress-plugin-md-enhance: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9)
+      vuepress-plugin-md-enhance: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.1.0)(vuepress@2.0.0-rc.9)
       vuepress-plugin-sass-palette: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
       vuepress-plugin-search-pro: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
       vuepress-shared: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
