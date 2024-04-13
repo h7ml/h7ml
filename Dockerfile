@@ -4,6 +4,9 @@ FROM gplane/pnpm:latest as builder
 # 设置工作目录
 WORKDIR /app
 
+# 将所有文件复制到工作目录
+COPY . .
+
 # 将 package.json 和 package-lock.json 复制到工作目录
 COPY package*.json ./
 COPY pnpm-lock.yaml ./
@@ -17,9 +20,6 @@ RUN pnpm run build
 
 # # 将 README.md 下载到 dist 目录下
 # RUN wget https://raw.githubusercontent.com/h7ml/h7ml/main/README.md -P /app/h7ml/.vuepress/dist/
-
-# 将所有文件复制到工作目录
-COPY . .
 
 # 第二阶段：部署阶段
 FROM nginx:alpine as nginx
