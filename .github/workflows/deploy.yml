@@ -1,12 +1,14 @@
 name: deploy
 
 on:
-  schedule:
-    - cron: '30 06 * * *'
+  # schedule:
+  #   - cron: '30 06 * * *'
   workflow_dispatch:
   push:
     branches:
       - vitepress
+    paths:
+      - 'h7ml/**' 
 permissions:
   contents: read
   pages: write
