@@ -54,8 +54,8 @@ devDependencies:
     specifier: ^2.1.5
     version: 2.1.5
   vuepress-plugin-md-enhance:
-    specifier: 2.0.0-rc.32
-    version: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9)
+    specifier: 2.0.0-rc.36
+    version: 2.0.0-rc.36(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9)
   vuepress-plugin-search-pro:
     specifier: 2.0.0-rc.32
     version: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
@@ -995,6 +995,13 @@ packages:
       '@types/mdurl': 1.0.5
     dev: true
 
+  /@types/markdown-it@14.0.0:
+    resolution: {integrity: sha512-2rStaAqMaLQNfo9mg2HNlley75jUTAkZKqlk3pxDSgaFk44zd+CAVpczpoh6/RtOzfUtwpEyD6lsHWUfKbVSDg==}
+    dependencies:
+      '@types/linkify-it': 3.0.5
+      '@types/mdurl': 1.0.5
+    dev: true
+
   /@types/mdast@3.0.15:
     resolution: {integrity: sha512-LnwD+mUEfxWMa1QpDraczIn6k0Ee3SMicuYSSzS6ZYl2gKS09EClnJYGd8Du6rfc5r/GZEk5o1mRb8TaTj03sQ==}
     dependencies:
@@ -1304,6 +1311,21 @@ packages:
 
   /@vuepress/helper@2.0.0-rc.21(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-yKIG8hwsrA63uWo9hx9u7KBc0HvotKe2/0wVZtUdvdsibG3UYNI9enYQNa8MdqbxF92mmlFkPZdosGjUTA+BYw==}
+    peerDependencies:
+      vuepress: 2.0.0-rc.9
+    dependencies:
+      '@vue/shared': 3.4.21
+      cheerio: 1.0.0-rc.12
+      fflate: 0.8.2
+      gray-matter: 4.0.3
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
+    transitivePeerDependencies:
+      - typescript
+    dev: true
+
+  /@vuepress/helper@2.0.0-rc.24(vuepress@2.0.0-rc.9):
+    resolution: {integrity: sha512-qXC+tXTKfZ7eJ+h3wYC/7Q903Tbqcz9Vqxku63R6pmcpbsRtt3l8XQRdJ/LMT5yX0wZln4Qzx1NY6S4psr0lzw==}
     peerDependencies:
       vuepress: 2.0.0-rc.9
     dependencies:
@@ -3664,6 +3686,16 @@ packages:
       source-map-js: 1.2.0
     dev: true
 
+  /sass@1.75.0:
+    resolution: {integrity: sha512-ShMYi3WkrDWxExyxSZPst4/okE9ts46xZmJDSawJQrnte7M1V9fScVB+uNXOVKRBt0PggHOwoZcn8mYX4trnBw==}
+    engines: {node: '>=14.0.0'}
+    hasBin: true
+    dependencies:
+      chokidar: 3.6.0
+      immutable: 4.3.5
+      source-map-js: 1.2.0
+    dev: true
+
   /sax@1.2.1:
     resolution: {integrity: sha512-8I2a3LovHTOpm7NV5yOyO8IHqgVsfK4+UuySrXU8YXkSRX7k6hCV9b3HrkKCr3nMpgj+0bmocaJJWpvp1oc7ZA==}
     dev: true
@@ -4143,6 +4175,100 @@ packages:
       - typescript
     dev: true
 
+  /vuepress-plugin-md-enhance@2.0.0-rc.36(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9):
+    resolution: {integrity: sha512-FvQ4foaqsE13WEXN2TaBqtSEN3tKnkkuDX7daLbNPQ1z0ghaMgcCDJ+ehEwwcNgXSs1vlbTRYL/Tf4M4RC1nfA==}
+    engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
+    peerDependencies:
+      '@types/reveal.js': ^5.0.0
+      '@vue/repl': ^4.1.1
+      chart.js: ^4.0.0
+      echarts: ^5.0.0
+      flowchart.ts: ^2.0.0 || ^3.0.0
+      katex: ^0.16.0
+      kotlin-playground: ^1.23.0
+      markmap-lib: ^0.15.5 || ^0.16.0
+      markmap-toolbar: ^0.15.5 || ^0.16.0
+      markmap-view: ^0.15.5 || ^0.16.0
+      mathjax-full: ^3.2.2
+      mermaid: ^10.8.0
+      reveal.js: ^5.0.0
+      sandpack-vue3: ^3.0.0
+      sass-loader: ^14.0.0
+      vuepress: 2.0.0-rc.9
+    peerDependenciesMeta:
+      '@types/reveal.js':
+        optional: true
+      '@vue/repl':
+        optional: true
+      chart.js:
+        optional: true
+      echarts:
+        optional: true
+      flowchart.ts:
+        optional: true
+      katex:
+        optional: true
+      kotlin-playground:
+        optional: true
+      markmap-lib:
+        optional: true
+      markmap-toolbar:
+        optional: true
+      markmap-view:
+        optional: true
+      mathjax-full:
+        optional: true
+      mermaid:
+        optional: true
+      reveal.js:
+        optional: true
+      sandpack-vue3:
+        optional: true
+      sass-loader:
+        optional: true
+    dependencies:
+      '@mdit/plugin-alert': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-align': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-attrs': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-container': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-demo': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-figure': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-footnote': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-img-lazyload': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-img-mark': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-img-size': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-include': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-katex': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-mark': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-mathjax': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-stylize': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-sub': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-sup': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-tab': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-tasklist': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-tex': 0.8.0(markdown-it@14.1.0)
+      '@mdit/plugin-uml': 0.8.0(markdown-it@14.1.0)
+      '@types/markdown-it': 14.0.0
+      '@vue/repl': 4.1.1
+      '@vuepress/helper': 2.0.0-rc.24(vuepress@2.0.0-rc.9)
+      '@vueuse/core': 10.9.0(vue@3.4.21)
+      balloon-css: 1.2.0
+      chart.js: 4.4.2
+      echarts: 5.5.0
+      flowchart.ts: 3.0.0
+      js-yaml: 4.1.0
+      mermaid: 10.9.0
+      reveal.js: 5.0.5
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
+      vuepress-plugin-sass-palette: 2.0.0-rc.36(vuepress@2.0.0-rc.9)
+      vuepress-shared: 2.0.0-rc.36(vuepress@2.0.0-rc.9)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - markdown-it
+      - typescript
+    dev: true
+
   /vuepress-plugin-sass-palette@2.0.0-rc.32(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-3tHHQU1E5cCo/udiZ4t0PL6OrWMxuP67+/tj3U5R9Zls6zM1aNE+Dw8I6/Of+HRTzctsQFxGPH0lZa05gS49UQ==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
@@ -4158,6 +4284,26 @@ packages:
       sass: 1.72.0
       vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
       vuepress-shared: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: true
+
+  /vuepress-plugin-sass-palette@2.0.0-rc.36(vuepress@2.0.0-rc.9):
+    resolution: {integrity: sha512-kOfZHGZxfplVq/z7QtHmsrKfOlR6/s37QA/DilIYGFzj8XVL8h1eJ0ty7J1ySTZFVvDkK7r3TVVQZ2sPIEjbYQ==}
+    engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
+    peerDependencies:
+      sass-loader: ^14.0.0
+      vuepress: 2.0.0-rc.9
+    peerDependenciesMeta:
+      sass-loader:
+        optional: true
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.24(vuepress@2.0.0-rc.9)
+      chokidar: 3.6.0
+      sass: 1.75.0
+      vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
+      vuepress-shared: 2.0.0-rc.36(vuepress@2.0.0-rc.9)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - typescript
@@ -4194,6 +4340,27 @@ packages:
       vuepress: 2.0.0-rc.9
     dependencies:
       '@vuepress/helper': 2.0.0-rc.21(vuepress@2.0.0-rc.9)
+      '@vueuse/core': 10.9.0(vue@3.4.21)
+      cheerio: 1.0.0-rc.12
+      dayjs: 1.11.10
+      execa: 8.0.1
+      fflate: 0.8.2
+      gray-matter: 4.0.3
+      semver: 7.6.0
+      vue: 3.4.21
+      vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - typescript
+    dev: true
+
+  /vuepress-shared@2.0.0-rc.36(vuepress@2.0.0-rc.9):
+    resolution: {integrity: sha512-a4XLodJk5U8qeon7jNqsyLGNUgOAdVr8YBZD7E9BGiu84+S3P6e5SCJLCLQ17v37jwdLoYwT2Fv67k586GAx7w==}
+    engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
+    peerDependencies:
+      vuepress: 2.0.0-rc.9
+    dependencies:
+      '@vuepress/helper': 2.0.0-rc.24(vuepress@2.0.0-rc.9)
       '@vueuse/core': 10.9.0(vue@3.4.21)
       cheerio: 1.0.0-rc.12
       dayjs: 1.11.10
