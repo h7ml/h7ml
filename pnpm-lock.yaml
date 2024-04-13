@@ -33,8 +33,8 @@ devDependencies:
     specifier: ^3.0.0
     version: 3.0.0
   hls.js:
-    specifier: ^1.5.7
-    version: 1.5.7
+    specifier: ^1.5.8
+    version: 1.5.8
   mermaid:
     specifier: ^10.9.0
     version: 10.9.0
@@ -61,7 +61,7 @@ devDependencies:
     version: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
   vuepress-theme-hope:
     specifier: 2.0.0-rc.32
-    version: 2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9)
+    version: 2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.8)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9)
 
 packages:
 
@@ -2683,8 +2683,8 @@ packages:
     requiresBuild: true
     dev: true
 
-  /hls.js@1.5.7:
-    resolution: {integrity: sha512-Hnyf7ojTBtXHeOW1/t6wCBJSiK1WpoKF9yg7juxldDx8u3iswrkPt2wbOA/1NiwU4j27DSIVoIEJRAhcdMef/A==}
+  /hls.js@1.5.8:
+    resolution: {integrity: sha512-hJYMPfLhWO7/7+n4f9pn6bOheCGx0WgvVz7k3ouq3Pp1bja48NN+HeCQu3XCGYzqWQF/wo7Sk6dJAyWVJD8ECA==}
     dev: true
 
   /html-entities@1.4.0:
@@ -4002,7 +4002,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-plugin-components@2.0.0-rc.32(artplayer@5.1.1)(dashjs@4.7.4)(hls.js@1.5.7)(mpegts.js@1.7.3)(vuepress@2.0.0-rc.9):
+  /vuepress-plugin-components@2.0.0-rc.32(artplayer@5.1.1)(dashjs@4.7.4)(hls.js@1.5.8)(mpegts.js@1.7.3)(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-ndu3lXnmS3AzYwqXn+mTJNItXux0MiPj2BzE8uH5HL473uAtzE8nS3q0gvcAt8CNbOSElJt+I5Hz4AO8/hbtAA==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -4037,7 +4037,7 @@ packages:
       balloon-css: 1.2.0
       create-codepen: 1.0.1
       dashjs: 4.7.4
-      hls.js: 1.5.7
+      hls.js: 1.5.8
       mpegts.js: 1.7.3
       qrcode: 1.5.3
       vue: 3.4.21
@@ -4208,7 +4208,7 @@ packages:
       - typescript
     dev: true
 
-  /vuepress-theme-hope@2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.7)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9):
+  /vuepress-theme-hope@2.0.0-rc.32(@vue/repl@4.1.1)(@vuepress/plugin-feed@2.0.0-rc.21)(artplayer@5.1.1)(chart.js@4.4.2)(dashjs@4.7.4)(echarts@5.5.0)(flowchart.ts@3.0.0)(hls.js@1.5.8)(markdown-it@14.1.0)(mermaid@10.9.0)(mpegts.js@1.7.3)(reveal.js@5.0.5)(vuepress-plugin-search-pro@2.0.0-rc.32)(vuepress@2.0.0-rc.9):
     resolution: {integrity: sha512-5S5qg5xa0TErqVjpubhBN5oy0QmROd+ja5EQKfORUCKdXKQvx0soojQZnCPkXsUEXonwiZ12oCLN2+UGO03eng==}
     engines: {node: '>=18.16.0', npm: '>=8', pnpm: '>=7', yarn: '>=2'}
     peerDependencies:
@@ -4267,7 +4267,7 @@ packages:
       gray-matter: 4.0.3
       vue: 3.4.21
       vuepress: 2.0.0-rc.9(@vuepress/bundler-vite@2.0.0-rc.9)(vue@3.4.21)
-      vuepress-plugin-components: 2.0.0-rc.32(artplayer@5.1.1)(dashjs@4.7.4)(hls.js@1.5.7)(mpegts.js@1.7.3)(vuepress@2.0.0-rc.9)
+      vuepress-plugin-components: 2.0.0-rc.32(artplayer@5.1.1)(dashjs@4.7.4)(hls.js@1.5.8)(mpegts.js@1.7.3)(vuepress@2.0.0-rc.9)
       vuepress-plugin-md-enhance: 2.0.0-rc.32(@vue/repl@4.1.1)(chart.js@4.4.2)(echarts@5.5.0)(flowchart.ts@3.0.0)(markdown-it@14.1.0)(mermaid@10.9.0)(reveal.js@5.0.5)(vuepress@2.0.0-rc.9)
       vuepress-plugin-sass-palette: 2.0.0-rc.32(vuepress@2.0.0-rc.9)
       vuepress-plugin-search-pro: 2.0.0-rc.32(vuepress@2.0.0-rc.9)

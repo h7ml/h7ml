@@ -21,7 +21,7 @@
     "dashjs": "^4.7.4",
     "echarts": "^5.5.0",
     "flowchart.ts": "^3.0.0",
-    "hls.js": "^1.5.7",
+    "hls.js": "^1.5.8",
     "mermaid": "^10.9.0",
     "mpegts.js": "^1.7.3",
     "reveal.js": "^5.0.5",
