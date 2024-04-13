@@ -1,5 +1,5 @@
 # 第一阶段：构建阶段
-FROM node:16-alpine AS build
+FROM gplane/pnpm:latest AS builder
 
 # 设置工作目录
 WORKDIR /app
@@ -9,15 +9,11 @@ COPY package*.json ./
 COPY pnpm-lock.yaml ./
 COPY .npmrc ./
 
-# 安装pnpm
-RUN npm install -g pnpm
-
 # 安装依赖
 RUN pnpm install
 
 # 打包项目
-RUN pnpm build
-
+RUN pnpm run build
 
 # # 将 README.md 下载到 dist 目录下
 # RUN wget https://raw.githubusercontent.com/h7ml/h7ml/main/README.md -P /app/h7ml/.vuepress/dist/
@@ -26,7 +22,7 @@ RUN pnpm build
 COPY . .
 
 # 第二阶段：部署阶段
-FROM nginx
+FROM nginx:alpine AS nginx
 
 # 清空默认的 Nginx 静态文件目录
 RUN rm -rf /usr/share/nginx/html/*
