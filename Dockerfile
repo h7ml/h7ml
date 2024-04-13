@@ -1,5 +1,5 @@
 # 第一阶段：构建阶段
-FROM gplane/pnpm:latest AS builder
+FROM gplane/pnpm:latest as builder
 
 # 设置工作目录
 WORKDIR /app
@@ -22,7 +22,7 @@ RUN pnpm run build
 COPY . .
 
 # 第二阶段：部署阶段
-FROM nginx:alpine AS nginx
+FROM nginx:alpine as nginx
 
 # 清空默认的 Nginx 静态文件目录
 RUN rm -rf /usr/share/nginx/html/*
