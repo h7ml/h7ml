@@ -3,16 +3,14 @@
                                 -- h7ml
   </pre>
 
-  <img align='right' src="https://nakoruru.h7ml.cn/proxy/www.h7ml.cn/logo.png" width="230">
+  <img align='right' src="https://nakoruru.h7ml.cn/proxy/github-readme-stats.vercel.app/api?username=h7ml&show_icons=true&hide_title=true&count_private=true" width="230">
 
 ## About Me ℹ️
 
 [![前端物语](https://nakoruru.h7ml.cn/proxy/img.shields.io/badge/前端物语-4ABF8A?logo=Bloglovin&logoColor=fff)](https://www.h7ml.cn?q=github)
-[![GitHub Stars](https://nakoruru.h7ml.cn/proxy/img.shields.io/github/stars/h7ml?color=2da44e&label=GitHub%20Stars&logo=Github)](https://github.com/h7ml)
 [![visitors](https://nakoruru.h7ml.cn/proxy/visitor-badge.laobi.icu/badge?page_id=h7ml.h7ml)](https://github.com/h7ml)
 [![CodeTime](https://nakoruru.h7ml.cn/proxy/img.shields.io/endpoint?style=social&url=https%3A%2F%2Fapi.codetime.dev%2Fshield%3Fid%3D3645%26project%3D%26in%3D0)](https://codetime.dev/zh-CN)
 [![WakeTime](https://wakatime.com/badge/user/78c90c00-b60a-4b53-aca3-cdaada528717/project/46a7c70b-3644-4dc1-8364-2089f67f939e.svg)](https://nakoruru.h7ml.cn/proxy/wakatime.com/share/@78c90c00-b60a-4b53-aca3-cdaada528717/e2a927a0-e579-4e6e-98cb-d769bbc3de2c.png)
-[![🔥](https://nakoruru.h7ml.cn/proxy/img.shields.io/badge/Hotapi-D24939?logo=Bloglovin&logoColor=red)](https://nestjs.h7ml.cn/#/hotapi?q=github)
 
 
 <details>
@@ -84,12 +82,8 @@
 
 </details>
 
-## GitHub Stats 📊
-
-![h7ml's github stats](https://nakoruru.h7ml.cn/proxy/github-readme-stats.vercel.app/api?username=h7ml&show_icons=true&hide_title=true&count_private=true)
-![Top Langs](https://nakoruru.h7ml.cn/proxy/github-readme-stats.vercel.app/api/top-langs/?username=h7ml&layout=compact)
 
 ### Activity Graph: 📉 
 
-[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=h7ml&theme=react-dark)](https://github.com/h7ml/github-readme-activity-graph)
+[![Ashutosh's github activity graph](https://github-readme-activity-graph.vercel.app/graph?username=h7ml&theme=react-dark)](https://github.com/h7ml)
 
