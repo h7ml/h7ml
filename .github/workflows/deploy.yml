@@ -1,0 +1,150 @@
+name: Build Website
+
+on:
+  push:
+    branches: [rspress]
+    paths:
+      - 'docs/**'
+
+  schedule:
+    - cron: '15 0 * * *'
+  workflow_dispatch:
+  watch:
+    types: started
+  repository_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          ref: rspress
+          fetch-depth: 0
+      - name: Install Pnpm
+        run: corepack enable
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+          cache: 'pnpm'
+
+      - name: Nx Cache
+        id: nx-cache
+        uses: actions/cache@v3
+        with:
+          path: .nx-cache
+          key: nx-${{ github.ref_name }}-${{ github.sha }}
+          restore-keys: |
+            nx-${{ github.ref_name }}-
+            nx-
+
+      - name: Install Dependencies
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build Main Doc
+        run: pnpm build
+      - name: copy README.md
+        run: cp README.md doc_build
+
+      - name: Upload h7ml
+        uses: actions/upload-artifact@v3
+        with:
+          name: h7ml
+          path: doc_build
+
+      - name: Deploy to gh pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml
+          branch: gh-pages
+          folder: doc_build
+          token: ${{ secrets.ACCESS_TOKEN  }}
+          clean: true
+          single-commit: true
+          git-config-name: github-actions[bot]
+          git-config-email: action@h7ml.cn
+          commit-message: '[Bot] Deploy to GitHub Pages'
+      - name: Upload surge service and generate preview URL 🚀
+        id: deploy
+        run: |
+          export GITHUB_SHA=${{ github.sha }}
+          export GITHUB_SHA_SUB=${GITHUB_SHA: 0: 7 }
+          export DEPLOY_DOMAIN=https://h7ml-$GITHUB_SHA_SUB.surge.sh
+          npx surge --project ./doc_build --domain $DEPLOY_DOMAIN --token ${{ secrets.surge_token }}
+          echo the preview URL is $DEPLOY_DOMAIN
+          echo "::set-output name=url::$DEPLOY_DOMAIN"
+
+      - name: Deploy to netlify 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          repository-name: h7ml/h7ml.github.io
+          branch: netlify
+          folder: doc_build
+          clean: true
+          single-commit: true
+          git-config-name: h7ml
+          git-config-email: h7ml@qq.com
+          commit-message: '[Bot] Deploy to GitHub Pages'
+          token: ${{ secrets.ACCESS_TOKEN  }}
+  surge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to surge 🚀
+        uses: dswistowski/surge-sh-action@v1
+        with:
+          domain: 'h7ml.surge.sh'
+          project: './'
+          login: ${{ secrets.surge_login }}
+          token: ${{ secrets.surge_token }}
+    needs: deploy
+
+  tencent:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout  🚀
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          fetch-depth: 0
+      - name: Deploy to Tencent ☁️
+        uses: TencentCloudBase/cloudbase-action@v1.1.1
+        with:
+          secretId: ${{ secrets.SECRET_ID }}
+          secretKey: ${{ secrets.SECRET_KEY }}
+          envId: ${{ secrets.ENV_ID }}
+          staticSrcPath: ./
+    needs: deploy
+
+  clean:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: 'Apocalypsor/Workflows-Cleaner'
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'
+      - name: Install pipenv
+        run: python -m pip install --upgrade pipenv wheel
+      - name: Install dependencies
+        run: |
+          pipenv requirements > requirements.txt
+          pip install -r requirements.txt
+      - name: Clean
+        env:
+          GITHUB_REPO: 'h7ml/h7ml'
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          EXPIRE_TIME: '12h'
+        run: python run.py
+    needs: tencent
