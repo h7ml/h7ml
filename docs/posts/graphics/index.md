@@ -11,20 +11,20 @@ dir:
 date: 2021-01-17
 ---
 
-- [svg](svg.md)
+- [svg](./svg.md)
 
-- [canvas](canvas.md)
+- [canvas](./canvas.md)
 
-- [webgl](webgl.md)
+- [webgl](./webgl.md)
 
-- [baiduMap](baiduMap.md)
+- [baiduMap](./baiduMap.md)
 
-- [erharts](erharts.md)
+- [erharts](./erharts.md)
 
-- [openlayers](openlayers.md)
+- [openlayers](./openlayers.md)
 
-- [three](three.md)
+- [three](./three.md)
 
-- [fabric](fabric.md)
+- [fabric](./fabric.md)
 
-- [konva](konva.md)
+- [konva](./konva.md)

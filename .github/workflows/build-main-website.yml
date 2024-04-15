@@ -1,4 +1,4 @@
-name: Build Main Website
+name: Build Website
 
 on:
   push:
@@ -12,10 +12,9 @@ on:
   watch:
     types: started
   repository_dispatch:
-    types: 手动触发
 
 jobs:
-  build-main-website:
+  build-website:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -46,14 +45,14 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build Main Doc
-        run:  pnpm build
+        run: pnpm build
 
-      - name: Deploy to vercel 🚀
-        uses: amondnet/vercel-action@v20
-        with:
-          vercel-token: ${{ secrets.VERCEL_TOKEN }}
-          github-token: ${{ secrets.ACCESS_TOKEN  }}
-          vercel-args: '--prod' #Optional
-          vercel-org-id: ${{ secrets.ORG_ID}}
-          vercel-project-id: ${{ secrets.RSPRESSID }}
-          working-directory: ./doc_build/
+      # - name: Deploy to vercel 🚀
+      #   uses: amondnet/vercel-action@v20
+      #   with:
+      #     vercel-token: ${{ secrets.VERCEL_TOKEN }}
+      #     github-token: ${{ secrets.ACCESS_TOKEN  }}
+      #     vercel-args: '--prod' #Optional
+      #     vercel-org-id: ${{ secrets.ORG_ID}}
+      #     vercel-project-id: ${{ secrets.RSPRESSID }}
+      #     working-directory: ./doc_build/

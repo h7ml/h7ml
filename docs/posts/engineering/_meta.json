@@ -4,7 +4,6 @@
   "gitattributes",
   "gitignore",
   "license",
-  "package-json",
   "prettierrc",
   "tsconfig_json"
 ]

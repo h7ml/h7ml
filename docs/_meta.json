@@ -6,7 +6,7 @@
   },
   {
     "text": "前端博文",
-    "link": "/posts/",
-    "activeMatch": "/posts/"
+    "link": "/posts",
+    "activeMatch": "/posts"
   }
 ]
