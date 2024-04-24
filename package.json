@@ -8,15 +8,15 @@
     "preview": "rspress preview"
   },
   "dependencies": {
-    "@rspress/core": "^1.18.1",
-    "@rspress/shared": "^1.18.1",
-    "@rspress/theme-default": "^1.18.1",
+    "@rspress/core": "^1.18.4",
+    "@rspress/shared": "^1.18.4",
+    "@rspress/theme-default": "^1.18.4",
     "js-yaml": "^4.1.0",
     "react": "^18.2.0",
-    "rspress": "^1.18.1"
+    "rspress": "^1.18.4"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18.2.78"
+    "@types/react": "^18.2.79"
   }
 }
