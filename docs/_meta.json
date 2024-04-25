@@ -1,11 +1,6 @@
 [
   {
     "text": "前端物语",
-    "link": "/",
-    "activeMatch": "/"
-  },
-  {
-    "text": "前端博文",
     "link": "/posts",
     "activeMatch": "/posts"
   }

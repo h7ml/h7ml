@@ -2,13 +2,8 @@
   "browser",
   {
     "type": "dir",
-    "name": "coding",
-    "label": "coding"
-  },
-  {
-    "type": "dir",
     "name": "designPattern",
-    "label": "designPattern"
+    "label": "设计模式"
   },
   {
     "type": "dir",
@@ -19,11 +14,6 @@
     "type": "dir",
     "name": "ecmascript",
     "label": "ecmascript"
-  },
-  {
-    "type": "dir",
-    "name": "engineering",
-    "label": "engineering"
   },
   "es6",
   {
@@ -40,17 +30,12 @@
   {
     "type": "dir",
     "name": "graphics",
-    "label": "graphics"
+    "label": "图形学"
   },
   {
     "type": "dir",
     "name": "html",
     "label": "html"
-  },
-  {
-    "type": "dir",
-    "name": "interview",
-    "label": "interview"
   },
   {
     "type": "dir",

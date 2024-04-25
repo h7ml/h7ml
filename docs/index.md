@@ -1,6 +1,6 @@
 ---
 pageType: home
-
+titleSuffix: '-每一个不曾起舞的日子，都是对生命的辜负!💃'
 hero:
   name: h7ml
   text: 每一个不曾起舞的日子，都是对生命的辜负!💃
@@ -15,29 +15,23 @@ hero:
     src: https://www.h7ml.cn/logo.png
     alt: h7ml Logo
 features:
-  - title: 设计模式系列
-    details: 深入理解设计模式
+  - title: 设计模式
     link: /posts/designPattern/adapter.html
     icon: 🏃🏻‍♀️
   - title: 图形学
-    details: 深入理解图形学
-    link: /posts/graphics/baiduMap.html
+    link: /posts/graphics/konva.html
     icon: 📦
   - title: EcmaScript
-    details: 深入理解 EcmaScript
     link: /posts/ecmascript/Array.html
     icon: 🎨
-  - title: 工程化
-    details: 前端工程化
-    link: /posts/engineering/editorconfig.html
+  - title: mysql
+    link: /posts/mysql/affair.html
     icon: 🌍
   - title: linux
-    details: 深入理解 linux
-    link: /posts/linux
+    link: /posts/linux/command.html
     icon: 🌈
   - title: JavaScript
-    details: 深入理解 JavaScript
-    link: /posts/javascript/passwordCredential.html
+    link: /posts/javascript/basic/basic.html
     icon: 🔥
 ---
 
