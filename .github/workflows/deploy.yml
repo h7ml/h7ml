@@ -1,4 +1,4 @@
-name: Build Website
+name: Website
 
 on:
   push:
@@ -9,6 +9,23 @@ on:
   schedule:
     - cron: '15 0 * * *'
   workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to deploy'
+        required: true
+        default: 'rspress'
+      clean:
+        description: 'Clean the old deployment'
+        required: false
+        default: 'false'
+      surge:
+        description: 'Deploy to surge'
+        required: false
+        default: 'false'
+      tencent:
+        description: 'Deploy to Tencent'
+        required: false
+        default: 'false'
   watch:
     types: started
   repository_dispatch:
@@ -49,11 +66,11 @@ jobs:
       - name: copy README.md
         run: cp README.md doc_build
 
-      - name: Upload h7ml
-        uses: actions/upload-artifact@v3
-        with:
-          name: h7ml
-          path: doc_build
+      # - name: Upload h7ml
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: h7ml
+      #     path: doc_build
 
       - name: Deploy to gh pages
         uses: JamesIves/github-pages-deploy-action@v4
@@ -67,15 +84,15 @@ jobs:
           git-config-name: github-actions[bot]
           git-config-email: action@h7ml.cn
           commit-message: '[Bot] Deploy to GitHub Pages'
-      - name: Upload surge service and generate preview URL 🚀
-        id: deploy
-        run: |
-          export GITHUB_SHA=${{ github.sha }}
-          export GITHUB_SHA_SUB=${GITHUB_SHA: 0: 7 }
-          export DEPLOY_DOMAIN=https://h7ml-$GITHUB_SHA_SUB.surge.sh
-          npx surge --project ./doc_build --domain $DEPLOY_DOMAIN --token ${{ secrets.surge_token }}
-          echo the preview URL is $DEPLOY_DOMAIN
-          echo "::set-output name=url::$DEPLOY_DOMAIN"
+      # - name: Upload surge service and generate preview URL 🚀
+      #   id: deploy
+      #   run: |
+      #     export GITHUB_SHA=${{ github.sha }}
+      #     export GITHUB_SHA_SUB=${GITHUB_SHA: 0: 7 }
+      #     export DEPLOY_DOMAIN=https://h7ml-$GITHUB_SHA_SUB.surge.sh
+      #     npx surge --project ./doc_build --domain $DEPLOY_DOMAIN --token ${{ secrets.surge_token }}
+      #     echo the preview URL is $DEPLOY_DOMAIN
+      #     echo "::set-output name=url::$DEPLOY_DOMAIN"
 
       - name: Deploy to netlify 🚀
         uses: JamesIves/github-pages-deploy-action@v4
@@ -107,6 +124,7 @@ jobs:
     needs: deploy
 
   tencent:
+    if: github.event.inputs.tencent == 'true'
     runs-on: ubuntu-latest
     steps:
       - name: Checkout  🚀
