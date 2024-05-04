@@ -1,11 +1,4 @@
 [
-  "baiduMap",
-  "canvas",
-  "erharts",
-  "fabric",
   "konva",
-  "openlayers",
-  "svg",
-  "three",
-  "webgl"
+  "svg"
 ]

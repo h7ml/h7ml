@@ -8,15 +8,15 @@
     "preview": "rspress preview"
   },
   "dependencies": {
-    "@rspress/core": "^1.18.4",
-    "@rspress/shared": "^1.18.4",
-    "@rspress/theme-default": "^1.18.4",
+    "@rspress/core": "^1.19.1",
+    "@rspress/shared": "^1.19.1",
+    "@rspress/theme-default": "^1.19.1",
     "js-yaml": "^4.1.0",
-    "react": "^18.2.0",
-    "rspress": "^1.18.4"
+    "react": "^18.3.1",
+    "rspress": "^1.19.1"
   },
   "devDependencies": {
     "@types/node": "^20",
-    "@types/react": "^18.2.79"
+    "@types/react": "^18.3.1"
   }
 }

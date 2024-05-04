@@ -8,7 +8,8 @@ category: linux
 tag: linux
 ---
 
-## 文件目录类（频繁）
+
+# Linux 常用命令
 
 ## pwd 显示当前工作目录的绝对路径
 
