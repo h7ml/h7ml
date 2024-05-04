@@ -1,15 +1,10 @@
 ---
-icon: diagram
-order: 1
-author: h7ml
-category: design
-tag: design
-title: 面试物语
-index: false
-dir:
-  order: 1
-date: 2023-02-24
+overview: true
+sidebar_label: 概览
+sidebar_position: 1
 ---
+
+# 概览
 
 - [JavaScript](https://www.h7ml.cn/posts/interview/JavaScript)
 

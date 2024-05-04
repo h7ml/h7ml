@@ -3,5 +3,17 @@
     "text": "前端物语",
     "link": "/posts",
     "activeMatch": "/posts"
+  },
+  {
+    "text": "积微成著",
+    "link": "/up",
+    "activeMatch": "/up",
+    "items": [
+      {
+        "text": "rust",
+        "link": "/up/rust",
+        "activeMatch": "/up/rust"
+      }
+    ]
   }
 ]
