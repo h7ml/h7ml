@@ -7,11 +7,6 @@
   },
   {
     "type": "dir",
-    "name": "docker",
-    "label": "docker"
-  },
-  {
-    "type": "dir",
     "name": "ecmascript",
     "label": "ecmascript"
   },
@@ -43,17 +38,7 @@
     "label": "javascript"
   },
   "js-engine",
-  {
-    "type": "dir",
-    "name": "linux",
-    "label": "linux"
-  },
   "module",
-  {
-    "type": "dir",
-    "name": "mysql",
-    "label": "mysql"
-  },
   {
     "type": "dir",
     "name": "Nestjs",
@@ -61,28 +46,8 @@
   },
   {
     "type": "dir",
-    "name": "nginx",
-    "label": "nginx"
-  },
-  {
-    "type": "dir",
-    "name": "PostgreSQL",
-    "label": "PostgreSQL"
-  },
-  {
-    "type": "dir",
-    "name": "Python",
-    "label": "Python"
-  },
-  {
-    "type": "dir",
     "name": "react",
     "label": "react"
-  },
-  {
-    "type": "dir",
-    "name": "redis",
-    "label": "redis"
   },
   {
     "type": "dir",
