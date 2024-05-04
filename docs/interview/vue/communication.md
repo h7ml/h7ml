@@ -80,7 +80,7 @@ props:{
     // 字符串形式
  name:String // 接收的类型参数
     // 对象形式
-    age:{  
+    age:{
         type:Number, // 接收的类型为数值
         defaule:18,  // 默认值为18
        require:true // age属性必须传递
@@ -103,7 +103,7 @@ props:{
 `Chilfen.vue`
 
 ```js
-this.$emit('add', good);
+this.$emit('add', good)
 ```
 
 `Father.vue`
@@ -120,9 +120,9 @@ this.$emit('add', good);
 父组件
 
 ```js
-<Children ref="foo" />;
+<Children ref="foo" />
 
-this.$refs.foo; // 获取子组件实例，通过子组件实例我们就能拿到对应的数据
+this.$refs.foo // 获取子组件实例，通过子组件实例我们就能拿到对应的数据
 ```
 
 ### EventBus
@@ -138,35 +138,36 @@ this.$refs.foo; // 获取子组件实例，通过子组件实例我们就能拿
 // 创建一个中央时间总线类
 class Bus {
   constructor() {
-    this.callbacks = {}; // 存放事件的名字
+    this.callbacks = {} // 存放事件的名字
   }
+
   $on(name, fn) {
-    this.callbacks[name] = this.callbacks[name] || [];
-    this.callbacks[name].push(fn);
+    this.callbacks[name] = this.callbacks[name] || []
+    this.callbacks[name].push(fn)
   }
+
   $emit(name, args) {
-    if (this.callbacks[name]) {
-      this.callbacks[name].forEach((cb) => cb(args));
-    }
+    if (this.callbacks[name])
+      this.callbacks[name].forEach(cb => cb(args))
   }
 }
 
 // main.js
-Vue.prototype.$bus = new Bus(); // 将$bus挂载到vue实例的原型上
+Vue.prototype.$bus = new Bus() // 将$bus挂载到vue实例的原型上
 // 另一种方式
-Vue.prototype.$bus = new Vue(); // Vue已经实现了Bus的功能
+Vue.prototype.$bus = new Vue() // Vue已经实现了Bus的功能
 ```
 
 `Children1.vue`
 
 ```js
-this.$bus.$emit('foo');
+this.$bus.$emit('foo')
 ```
 
 `Children2.vue`
 
 ```js
-this.$bus.$on('foo', this.handle);
+this.$bus.$on('foo', this.handle)
 ```
 
 ### $parent 或$ root
@@ -227,7 +228,7 @@ provide(){
 后代组件
 
 ```js
-inject: ['foo']; // 获取到祖先组件传递过来的值
+inject: ['foo'] // 获取到祖先组件传递过来的值
 ```
 
 ### `vuex`

@@ -31,7 +31,7 @@ head:
 一个经典的面试题
 
 ```js
-0.1 + 0.2 === 0.3; // false
+0.1 + 0.2 === 0.3 // false
 ```
 
 为什么是`false`呢?
@@ -97,7 +97,7 @@ head:
 再回到问题上
 
 ```js
-0.1 + 0.2 === 0.3; // false
+0.1 + 0.2 === 0.3 // false
 ```
 
 通过上面的学习，我们知道，在`javascript`语言中，0.1 和 0.2 都转化成二进制后再进行运算
@@ -120,7 +120,7 @@ head:
 它的长度是 16，所以可以使用 `toPrecision(16)` 来做精度运算，超过的精度会自动做凑整处理
 
 ```js
-(0.10000000000000000555).toPrecision(16);
+(0.10000000000000000555).toPrecision(16)
 // 返回 0.1000000000000000，去掉末尾的零后正好为 0.1
 ```
 
@@ -170,7 +170,7 @@ parseFloat(1.4000000000000001.toPrecision(12)) === 1.4  // True
 
 ```js
 function strip(num, precision = 12) {
-  return +parseFloat(num.toPrecision(precision));
+  return +Number.parseFloat(num.toPrecision(precision))
 }
 ```
 
@@ -181,10 +181,10 @@ function strip(num, precision = 12) {
  * 精确加法
  */
 function add(num1, num2) {
-  const num1Digits = (num1.toString().split('.')[1] || '').length;
-  const num2Digits = (num2.toString().split('.')[1] || '').length;
-  const baseNum = Math.pow(10, Math.max(num1Digits, num2Digits));
-  return (num1 * baseNum + num2 * baseNum) / baseNum;
+  const num1Digits = (num1.toString().split('.')[1] || '').length
+  const num2Digits = (num2.toString().split('.')[1] || '').length
+  const baseNum = 10 ** Math.max(num1Digits, num2Digits)
+  return (num1 * baseNum + num2 * baseNum) / baseNum
 }
 ```
 

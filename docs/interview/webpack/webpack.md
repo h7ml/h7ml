@@ -49,10 +49,10 @@ head:
 
 ```js
 window.moduleA = {
-  method1: function () {
-    console.log('moduleA#method1');
+  method1() {
+    console.log('moduleA#method1')
   },
-};
+}
 ```
 
 这种方式也并没有解决第一种方式的依赖等问题
@@ -62,17 +62,17 @@ window.moduleA = {
 ```js
 // module-a.js
 (function ($) {
-  var name = 'module-a';
+  const name = 'module-a'
 
   function method1() {
-    console.log(name + '#method1');
-    $('body').animate({ margin: '200px' });
+    console.log(`${name}#method1`)
+    $('body').animate({ margin: '200px' })
   }
 
   window.moduleA = {
-    method1: method1,
-  };
-})(jQuery);
+    method1,
+  }
+})(jQuery)
 ```
 
 上述的方式都是早期解决模块的方式，但是仍然存在一些没有解决的问题。例如，我们是用过`script`标签在页面引入这些模块的，这些模块的加载并不受代码的控制，时间一久维护起来也十分的麻烦

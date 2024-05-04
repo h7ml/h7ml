@@ -63,13 +63,13 @@ head:
 
 ```js
 function process(n) {
-  let a = 1;
-  let b = 2;
-  let sum = a + b;
-  for (let i = 0; i < n; i++) {
-    sum += i;
-  }
-  return sum;
+  const a = 1
+  const b = 2
+  let sum = a + b
+  for (let i = 0; i < n; i++)
+    sum += i
+
+  return sum
 }
 ```
 
@@ -79,11 +79,10 @@ function process(n) {
 
 ```js
 function process(n) {
-  let count = 0;
+  let count = 0
   for (let i = 0; i < n; i++) {
-    for (let i = 0; i < n; i++) {
-      count += 1;
-    }
+    for (let i = 0; i < n; i++)
+      count += 1
   }
 }
 ```
@@ -94,16 +93,15 @@ function process(n) {
 
 ```js
 function process(n) {
-  let sum = 0;
+  let sum = 0
+  for (let i = 0; i < n; i++)
+    sum += i
+
   for (let i = 0; i < n; i++) {
-    sum += i;
+    for (let i = 0; i < n; i++)
+      sum += 1
   }
-  for (let i = 0; i < n; i++) {
-    for (let i = 0; i < n; i++) {
-      sum += 1;
-    }
-  }
-  return sum;
+  return sum
 }
 ```
 
@@ -113,10 +111,9 @@ function process(n) {
 
 ```js
 function process(n) {
-  let i = 1; // ①
-  while (i <= n) {
-    i = i * 2; // ②
-  }
+  let i = 1 // ①
+  while (i <= n)
+    i = i * 2 // ②
 }
 ```
 
@@ -135,9 +132,9 @@ function process(n) {
 下面给出空间复杂度为`O(1)`的示例，如下
 
 ```js
-let a = 1;
-let b = 2;
-let c = 3;
+const a = 1
+const b = 2
+const c = 3
 ```
 
 上述代码的临时空间不会随着`n`的变化而变化，因此空间复杂度为`O(1)`

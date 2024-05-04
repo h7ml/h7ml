@@ -65,8 +65,8 @@ head:
 创建一个`store`的公共数据区域
 
 ```js
-import { createStore } from 'redux'; // 引入一个第三方的方法
-const store = createStore(); // 创建数据的公共存储区域（管理员）
+import { createStore } from 'redux' // 引入一个第三方的方法
+const store = createStore() // 创建数据的公共存储区域（管理员）
 ```
 
 还需要创建一个记录本去辅助管理数据，也就是`reduecer`，本质就是一个函数，接收两个参数`state`，`action`，返回`state`
@@ -75,21 +75,21 @@ const store = createStore(); // 创建数据的公共存储区域（管理员）
 // 设置默认值
 const initialState = {
   counter: 0,
-};
+}
 
-const reducer = (state = initialState, action) => {};
+function reducer(state = initialState, action) {}
 ```
 
 然后就可以将记录本传递给`store`，两者建立连接。如下：
 
 ```js
-const store = createStore(reducer);
+const store = createStore(reducer)
 ```
 
 如果想要获取`store`里面的数据，则通过`store.getState()`来获取当前`state`
 
 ```js
-console.log(store.getState());
+console.log(store.getState())
 ```
 
 下面再看看如何更改`store`里面数据，是通过`dispatch`来派发`action`，通常`action`中都会有`type`属性，也可以携带其他的数据
@@ -97,33 +97,33 @@ console.log(store.getState());
 ```js
 store.dispatch({
   type: 'INCREMENT',
-});
+})
 
 store.dispath({
   type: 'DECREMENT',
-});
+})
 
 store.dispatch({
   type: 'ADD_NUMBER',
   number: 5,
-});
+})
 ```
 
 下面再来看看修改`reducer`中的处理逻辑：
 
 ```js
-const reducer = (state = initialState, action) => {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return { ...state, counter: state.counter + 1 };
+      return { ...state, counter: state.counter + 1 }
     case 'DECREMENT':
-      return { ...state, counter: state.counter - 1 };
+      return { ...state, counter: state.counter - 1 }
     case 'ADD_NUMBER':
-      return { ...state, counter: state.counter + action.number };
+      return { ...state, counter: state.counter + action.number }
     default:
-      return state;
+      return state
   }
-};
+}
 ```
 
 注意，`reducer`是一个纯函数，不需要直接修改`state`
@@ -132,8 +132,8 @@ const reducer = (state = initialState, action) => {
 
 ```js
 store.subscribe(() => {
-  console.log(store.getState());
-});
+  console.log(store.getState())
+})
 ```
 
 在`React`项目中，会搭配`react-redux`进行使用
@@ -141,48 +141,48 @@ store.subscribe(() => {
 完整代码如下：
 
 ```js
-const redux = require('redux');
+const redux = require('redux')
 
 const initialState = {
   counter: 0,
-};
+}
 
 // 创建reducer
-const reducer = (state = initialState, action) => {
+function reducer(state = initialState, action) {
   switch (action.type) {
     case 'INCREMENT':
-      return { ...state, counter: state.counter + 1 };
+      return { ...state, counter: state.counter + 1 }
     case 'DECREMENT':
-      return { ...state, counter: state.counter - 1 };
+      return { ...state, counter: state.counter - 1 }
     case 'ADD_NUMBER':
-      return { ...state, counter: state.counter + action.number };
+      return { ...state, counter: state.counter + action.number }
     default:
-      return state;
+      return state
   }
-};
+}
 
 // 根据reducer创建store
-const store = redux.createStore(reducer);
+const store = redux.createStore(reducer)
 
 store.subscribe(() => {
-  console.log(store.getState());
-});
+  console.log(store.getState())
+})
 
 // 修改store中的state
 store.dispatch({
   type: 'INCREMENT',
-});
+})
 // console.log(store.getState());
 
 store.dispatch({
   type: 'DECREMENT',
-});
+})
 // console.log(store.getState());
 
 store.dispatch({
   type: 'ADD_NUMBER',
   number: 5,
-});
+})
 // console.log(store.getState());
 ```
 

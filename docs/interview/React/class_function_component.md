@@ -37,10 +37,16 @@ head:
 ```jsx
 class Welcome extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
+
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return (
+      <h1>
+        Hello,
+        {this.props.name}
+      </h1>
+    )
   }
 }
 ```
@@ -51,7 +57,12 @@ class Welcome extends React.Component {
 
 ```jsx
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return (
+    <h1>
+      Hello,
+      {props.name}
+    </h1>
+  )
 }
 ```
 
@@ -77,7 +88,12 @@ function Welcome(props) {
 
 ```jsx
 function Welcome(props) {
-  return <h1>Hello, {props.name}</h1>;
+  return (
+    <h1>
+      Hello,
+      {props.name}
+    </h1>
+  )
 }
 ```
 
@@ -86,10 +102,16 @@ function Welcome(props) {
 ```jsx
 class Welcome extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
+
   render() {
-    return <h1>Hello, {this.props.name}</h1>;
+    return (
+      <h1>
+        Hello,
+        {this.props.name}
+      </h1>
+    )
   }
 }
 ```
@@ -101,16 +123,19 @@ class Welcome extends React.Component {
 如果想要管理`state`状态，可以使用`useState`，如下：
 
 ```jsx
-const FunctionalComponent = () => {
-  const [count, setCount] = React.useState(0);
+function FunctionalComponent() {
+  const [count, setCount] = React.useState(0)
 
   return (
     <div>
-      <p>count: {count}</p>
+      <p>
+        count:
+        {count}
+      </p>
       <button onClick={() => setCount(count + 1)}>Click</button>
     </div>
-  );
-};
+  )
+}
 ```
 
 在使用`hooks`情况下，一般如果函数组件调用`state`，则需要创建一个类组件或者`state`提升到你的父组件中，然后通过`props`对象传递到子组件
@@ -124,12 +149,12 @@ const FunctionalComponent = () => {
 但是函数组件使用`useEffect`也能够完成替代生命周期的作用，这里给出一个简单的例子：
 
 ```jsx
-const FunctionalComponent = () => {
+function FunctionalComponent() {
   useEffect(() => {
-    console.log('Hello');
-  }, []);
-  return <h1>Hello, World</h1>;
-};
+    console.log('Hello')
+  }, [])
+  return <h1>Hello, World</h1>
+}
 ```
 
 上述简单的例子对应类组件中的`componentDidMount`生命周期
@@ -137,14 +162,14 @@ const FunctionalComponent = () => {
 如果在`useEffect`回调函数中`return`一个函数，则`return`函数会在组件卸载的时候执行，正如`componentWillUnmount`
 
 ```jsx
-const FunctionalComponent = () => {
+function FunctionalComponent() {
   React.useEffect(() => {
     return () => {
-      console.log('Bye');
-    };
-  }, []);
-  return <h1>Bye, World</h1>;
-};
+      console.log('Bye')
+    }
+  }, [])
+  return <h1>Bye, World</h1>
+}
 ```
 
 ### 调用方式
@@ -154,10 +179,10 @@ const FunctionalComponent = () => {
 ```jsx
 // 你的代码
 function SayHi() {
-  return <p>Hello, React</p>;
+  return <p>Hello, React</p>
 }
 // React内部
-const result = SayHi(props); // » <p>Hello, React</p >
+const result = SayHi(props) // » <p>Hello, React</p >
 ```
 
 如果是一个类组件，则需要将组件进行实例化，然后调用实例对象的`render`方法：
@@ -166,12 +191,12 @@ const result = SayHi(props); // » <p>Hello, React</p >
 // 你的代码
 class SayHi extends React.Component {
   render() {
-    return <p>Hello, React</p>;
+    return <p>Hello, React</p>
   }
 }
 // React内部
-const instance = new SayHi(props); // » SayHi {}
-const result = instance.render(); // » <p>Hello, React</p >
+const instance = new SayHi(props) // » SayHi {}
+const result = instance.render() // » <p>Hello, React</p >
 ```
 
 ### 获取渲染的值
@@ -183,14 +208,14 @@ const result = instance.render(); // » <p>Hello, React</p >
 ```jsx
 function ProfilePage(props) {
   const showMessage = () => {
-    alert('Followed ' + props.user);
-  };
+    alert(`Followed ${props.user}`)
+  }
 
   const handleClick = () => {
-    setTimeout(showMessage, 3000);
-  };
+    setTimeout(showMessage, 3000)
+  }
 
-  return <button onClick={handleClick}>Follow</button>;
+  return <button onClick={handleClick}>Follow</button>
 }
 ```
 
@@ -199,15 +224,15 @@ function ProfilePage(props) {
 ```jsx
 class ProfilePage extends React.Component {
   showMessage() {
-    alert('Followed ' + this.props.user);
+    alert(`Followed ${this.props.user}`)
   }
 
   handleClick() {
-    setTimeout(this.showMessage.bind(this), 3000);
+    setTimeout(this.showMessage.bind(this), 3000)
   }
 
   render() {
-    return <button onClick={this.handleClick.bind(this)}>Follow</button>;
+    return <button onClick={this.handleClick.bind(this)}>Follow</button>
   }
 }
 ```

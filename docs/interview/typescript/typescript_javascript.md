@@ -50,8 +50,8 @@ console.log(hello);
 编译文件后：
 
 ```js
-const hello = 'Hello World!';
-console.log(hello);
+const hello = 'Hello World!'
+console.log(hello)
 ```
 
 ## 二、特性
@@ -86,7 +86,7 @@ function Add(left: number, right: number): number {
 当类型没有给出时，TypeScript 编译器利用类型推断来推断类型，如下：
 
 ```ts
-let str = 'string';
+const str = 'string'
 ```
 
 变量 `str` 被推断为字符串类型，这种推断发生在初始化变量和成员，设置默认参数值和决定函数返回值时

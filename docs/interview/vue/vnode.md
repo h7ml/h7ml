@@ -55,7 +55,7 @@ const app = new Vue({
   data: {
     foo: 'foo',
   },
-});
+})
 ```
 
 观察`render`的`render`，我们能得到虚拟`DOM`
@@ -284,24 +284,27 @@ if (normalizationType === ALWAYS_NORMALIZE) {
 在规范化`children`后，就去创建`VNode`
 
 ```js
-let vnode, ns;
+let vnode, ns
 // 对tag进行判断
 if (typeof tag === 'string') {
-  let Ctor;
-  ns = (context.$vnode && context.$vnode.ns) || config.getTagNamespace(tag);
+  let Ctor
+  ns = (context.$vnode && context.$vnode.ns) || config.getTagNamespace(tag)
   if (config.isReservedTag(tag)) {
     // 如果是内置的节点，则直接创建一个普通VNode
-    vnode = new VNode(config.parsePlatformTagName(tag), data, children, undefined, undefined, context);
-  } else if (isDef((Ctor = resolveAsset(context.$options, 'components', tag)))) {
+    vnode = new VNode(config.parsePlatformTagName(tag), data, children, undefined, undefined, context)
+  }
+  else if (isDef((Ctor = resolveAsset(context.$options, 'components', tag)))) {
     // component
     // 如果是component类型，则会通过createComponent创建VNode节点
-    vnode = createComponent(Ctor, data, context, children, tag);
-  } else {
-    vnode = new VNode(tag, data, children, undefined, undefined, context);
+    vnode = createComponent(Ctor, data, context, children, tag)
   }
-} else {
+  else {
+    vnode = new VNode(tag, data, children, undefined, undefined, context)
+  }
+}
+else {
   // direct component options / constructor
-  vnode = createComponent(tag, data, context, children);
+  vnode = createComponent(tag, data, context, children)
 }
 ```
 

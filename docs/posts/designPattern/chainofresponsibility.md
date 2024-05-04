@@ -28,39 +28,42 @@ date: 2022-02-04 10:10:46
  * @return {boolean}
  */
 const isNumber = function (s) {
-  const e = ['e', 'E'];
-  s = s.trim();
+  const e = ['e', 'E']
+  s = s.trim()
 
-  let pointSeen = false;
-  let eSeen = false;
-  let numberSeen = false;
-  let numberAfterE = true;
+  let pointSeen = false
+  let eSeen = false
+  let numberSeen = false
+  let numberAfterE = true
   for (let i = 0; i < s.length; i++) {
-    if ('0' <= s.charAt(i) && s.charAt(i) <= '9') {
-      numberSeen = true;
-      numberAfterE = true;
-    } else if (s.charAt(i) === '.') {
-      if (eSeen || pointSeen) {
-        return false;
-      }
-      pointSeen = true;
-    } else if (e.includes(s.charAt(i))) {
-      if (eSeen || !numberSeen) {
-        return false;
-      }
-      numberAfterE = false;
-      eSeen = true;
-    } else if (s.charAt(i) === '-' || s.charAt(i) === '+') {
-      if (i != 0 && !e.includes(s.charAt(i - 1))) {
-        return false;
-      }
-    } else {
-      return false;
+    if (s.charAt(i) >= '0' && s.charAt(i) <= '9') {
+      numberSeen = true
+      numberAfterE = true
+    }
+    else if (s.charAt(i) === '.') {
+      if (eSeen || pointSeen)
+        return false
+
+      pointSeen = true
+    }
+    else if (e.includes(s.charAt(i))) {
+      if (eSeen || !numberSeen)
+        return false
+
+      numberAfterE = false
+      eSeen = true
+    }
+    else if (s.charAt(i) === '-' || s.charAt(i) === '+') {
+      if (i != 0 && !e.includes(s.charAt(i - 1)))
+        return false
+    }
+    else {
+      return false
     }
   }
 
-  return numberSeen && numberAfterE;
-};
+  return numberSeen && numberAfterE
+}
 ```
 
 如果只是为了刷题 `AC` 也没啥毛病，但如果在业务中写出这么多 `if`、`else` 大概就要被打了。
@@ -130,7 +133,6 @@ class StdoutLogger extends Logger
     }
 }
 
-
 class EmailLogger extends Logger
 {
 
@@ -195,61 +197,58 @@ Sending to stderr: An error has occurred.
 
 ```js
 const Handler = function (fn) {
-  this.handler = fn;
-  this.next = null;
-};
+  this.handler = fn
+  this.next = null
+}
 
 Handler.prototype.setNext = function setNext(h) {
-  this.next = h;
-  return h;
-};
+  this.next = h
+  return h
+}
 
 Handler.prototype.passRequest = function () {
-  const ret = this.handler.apply(this, arguments);
-  this.next && this.next.passRequest.apply(this.next, arguments);
-};
+  const ret = this.handler.apply(this, arguments)
+  this.next && this.next.passRequest.apply(this.next, arguments)
+}
 ```
 
 接下来实现不同的 `Logger` 。
 
 ```js
-const ERR = 3;
-const NOTICE = 5;
-const DEBUG = 7;
+const ERR = 3
+const NOTICE = 5
+const DEBUG = 7
 
 const StdoutLogger = function (msg, level) {
   // 根据等级判断自己是否处理
-  if (level <= DEBUG) {
-    console.log('Writting to stdout: ' + msg);
-  }
-};
+  if (level <= DEBUG)
+    console.log(`Writting to stdout: ${msg}`)
+}
 
 const EmailLogger = function (msg, level) {
   // 根据等级判断自己是否处理
-  if (level <= NOTICE) {
-    console.log('Sending via email: ' + msg);
-  }
-};
+  if (level <= NOTICE)
+    console.log(`Sending via email: ${msg}`)
+}
 
 const StderrLogger = function (msg, level) {
   // 根据等级判断自己是否处理
-  if (level <= ERR) {
-    console.log('Sending to stderr: ' + msg);
-  }
-};
+  if (level <= ERR)
+    console.log(`Sending to stderr: ${msg}`)
+}
 ```
 
 然后进行测试：
 
 ```js
-const StdoutHandler = new Handler(StdoutLogger);
-const EmailHandler = new Handler(EmailLogger);
-const StderrHandler = new Handler(StderrLogger);
-StdoutHandler.setNext(EmailHandler).setNext(StderrHandler);
+const StdoutHandler = new Handler(StdoutLogger)
+const EmailHandler = new Handler(EmailLogger)
+const StderrHandler = new Handler(StderrLogger)
+StdoutHandler.setNext(EmailHandler).setNext(StderrHandler)
 
-StdoutHandler.passRequest('Entering function y.', DEBUG);
-StdoutHandler.passRequest('Step1 completed.', NOTICE);
-StdoutHandler.passRequest('An error has occurred.', ERR);
+StdoutHandler.passRequest('Entering function y.', DEBUG)
+StdoutHandler.passRequest('Step1 completed.', NOTICE)
+StdoutHandler.passRequest('An error has occurred.', ERR)
 ```
 
 输出内容和 `java` 代码是一致的。
@@ -264,39 +263,38 @@ StdoutHandler.passRequest('An error has occurred.', ERR);
 
 ```js
 function Handler(fn) {
-  this.handler = fn;
-  this.next = null;
+  this.handler = fn
+  this.next = null
 }
 
 Handler.prototype.setNext = function setNext(h) {
-  this.next = h;
-  return h;
-};
+  this.next = h
+  return h
+}
 
 Handler.prototype.passRequest = function () {
-  const ret = this.handler.apply(this, arguments);
+  const ret = this.handler.apply(this, arguments)
   // 提前结束
-  if (ret) {
-    return ret;
-  }
+  if (ret)
+    return ret
 
   // 向后传递
-  if (this.next) {
-    return this.next.passRequest.apply(this.next, arguments);
-  }
-  return ret;
-};
+  if (this.next)
+    return this.next.passRequest.apply(this.next, arguments)
+
+  return ret
+}
 ```
 
 数字预处理一下，去掉前后空白和 `+`、`-` 便于后续的判断。
 
 ```js
 function preProcessing(v) {
-  let value = v.trim();
-  if (value.startsWith('+') || value.startsWith('-')) {
-    value = value.substring(1);
-  }
-  return value;
+  let value = v.trim()
+  if (value.startsWith('+') || value.startsWith('-'))
+    value = value.substring(1)
+
+  return value
 }
 ```
 
@@ -305,17 +303,16 @@ function preProcessing(v) {
 ```js
 // 判断是否是整数
 function isInteger(integer) {
-  integer = preProcessing(integer);
-  if (!integer) {
-    return false;
-  }
+  integer = preProcessing(integer)
+  if (!integer)
+    return false
+
   for (let i = 0; i < integer.length; i++) {
-    if (!/[0-9]/.test(integer.charAt(i))) {
-      return false;
-    }
+    if (!/[0-9]/.test(integer.charAt(i)))
+      return false
   }
 
-  return true;
+  return true
 }
 ```
 
@@ -324,41 +321,36 @@ function isInteger(integer) {
 ```js
 // 判断是否是小数
 function isFloat(floatVal) {
-  floatVal = preProcessing(floatVal);
-  if (!floatVal) {
-    return false;
-  }
+  floatVal = preProcessing(floatVal)
+  if (!floatVal)
+    return false
+
   function checkPart(part) {
-    if (part === '') {
-      return true;
-    }
-    if (!/[0-9]/.test(part.charAt(0)) || !/[0-9]/.test(part.charAt(part.length - 1))) {
-      return false;
-    }
+    if (part === '')
+      return true
 
-    if (!isInteger(part)) {
-      return false;
-    }
+    if (!/[0-9]/.test(part.charAt(0)) || !/[0-9]/.test(part.charAt(part.length - 1)))
+      return false
 
-    return true;
+    if (!isInteger(part))
+      return false
+
+    return true
   }
-  const pos = floatVal.indexOf('.');
-  if (pos === -1) {
-    return false;
-  }
+  const pos = floatVal.indexOf('.')
+  if (pos === -1)
+    return false
 
-  if (floatVal.length === 1) {
-    return false;
-  }
+  if (floatVal.length === 1)
+    return false
 
-  const first = floatVal.substring(0, pos);
-  const second = floatVal.substring(pos + 1, floatVal.length);
+  const first = floatVal.substring(0, pos)
+  const second = floatVal.substring(pos + 1, floatVal.length)
 
-  if (checkPart(first) && checkPart(second)) {
-    return true;
-  }
+  if (checkPart(first) && checkPart(second))
+    return true
 
-  return false;
+  return false
 }
 ```
 
@@ -367,66 +359,56 @@ function isFloat(floatVal) {
 ```js
 // 判断是否是科学计数法
 function isScienceFormat(s) {
-  s = preProcessing(s);
-  if (!s) {
-    return false;
-  }
-  function checkHeadAndEndForSpace(part) {
-    if (part.startsWith(' ') || part.endsWith(' ')) {
-      return false;
-    }
+  s = preProcessing(s)
+  if (!s)
+    return false
 
-    return true;
+  function checkHeadAndEndForSpace(part) {
+    if (part.startsWith(' ') || part.endsWith(' '))
+      return false
+
+    return true
   }
   function validatePartBeforeE(first) {
-    if (!first) {
-      return false;
-    }
+    if (!first)
+      return false
 
-    if (!checkHeadAndEndForSpace(first)) {
-      return false;
-    }
+    if (!checkHeadAndEndForSpace(first))
+      return false
 
-    if (!isInteger(first) && !isFloat(first)) {
-      return false;
-    }
+    if (!isInteger(first) && !isFloat(first))
+      return false
 
-    return true;
+    return true
   }
 
   function validatePartAfterE(second) {
-    if (!second) {
-      return false;
-    }
+    if (!second)
+      return false
 
-    if (!checkHeadAndEndForSpace(second)) {
-      return false;
-    }
+    if (!checkHeadAndEndForSpace(second))
+      return false
 
-    if (!isInteger(second)) {
-      return false;
-    }
+    if (!isInteger(second))
+      return false
 
-    return true;
+    return true
   }
-  s = s.toLowerCase();
-  let pos = s.indexOf('e');
-  if (pos === -1) {
-    return false;
-  }
+  s = s.toLowerCase()
+  const pos = s.indexOf('e')
+  if (pos === -1)
+    return false
 
-  if (s.length === 1) {
-    return false;
-  }
+  if (s.length === 1)
+    return false
 
-  const first = s.substring(0, pos);
-  const second = s.substring(pos + 1, s.length);
+  const first = s.substring(0, pos)
+  const second = s.substring(pos + 1, s.length)
 
-  if (!validatePartBeforeE(first) || !validatePartAfterE(second)) {
-    return false;
-  }
+  if (!validatePartBeforeE(first) || !validatePartAfterE(second))
+    return false
 
-  return true;
+  return true
 }
 ```
 
@@ -435,33 +417,30 @@ function isScienceFormat(s) {
 ```js
 function isHex(hex) {
   function isValidChar(c) {
-    const validChar = ['a', 'b', 'c', 'd', 'e', 'f'];
+    const validChar = ['a', 'b', 'c', 'd', 'e', 'f']
     for (let i = 0; i < validChar.length; i++) {
-      if (c === validChar[i]) {
-        return true;
-      }
+      if (c === validChar[i])
+        return true
     }
 
-    return false;
+    return false
   }
-  hex = preProcessing(hex);
-  if (!hex) {
-    return false;
-  }
-  hex = hex.toLowerCase();
-  if (hex.startsWith('0x')) {
-    hex = hex.substring(2);
-  } else {
-    return false;
-  }
+  hex = preProcessing(hex)
+  if (!hex)
+    return false
+
+  hex = hex.toLowerCase()
+  if (hex.startsWith('0x'))
+    hex = hex.substring(2)
+  else
+    return false
 
   for (let i = 0; i < hex.length; i++) {
-    if (!/[0-9]/.test(hex.charAt(0)) && !isValidChar(hex.charAt(i))) {
-      return false;
-    }
+    if (!/[0-9]/.test(hex.charAt(0)) && !isValidChar(hex.charAt(i)))
+      return false
   }
 
-  return true;
+  return true
 }
 ```
 
@@ -473,15 +452,15 @@ function isHex(hex) {
  * @return {boolean}
  */
 const isNumber = function (s) {
-  const isIntegerHandler = new Handler(isInteger);
-  const isFloatHandler = new Handler(isFloat);
-  const isScienceFormatHandler = new Handler(isScienceFormat);
-  const isHexHandler = new Handler(isHex);
+  const isIntegerHandler = new Handler(isInteger)
+  const isFloatHandler = new Handler(isFloat)
+  const isScienceFormatHandler = new Handler(isScienceFormat)
+  const isHexHandler = new Handler(isHex)
 
-  isIntegerHandler.setNext(isFloatHandler).setNext(isScienceFormatHandler).setNext(isHexHandler);
+  isIntegerHandler.setNext(isFloatHandler).setNext(isScienceFormatHandler).setNext(isHexHandler)
 
-  return isIntegerHandler.passRequest(s);
-};
+  return isIntegerHandler.passRequest(s)
+}
 ```
 
 通过责任链的设计模式，每一个函数都可以很好的进行复用，并且未来如果要新增一种类型判断，只需要加到责任链中即可，和之前的判断也完全独立。

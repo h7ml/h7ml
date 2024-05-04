@@ -94,17 +94,17 @@ lastUpdated: false
 为了在数据更新操作之后操作 DOM，我们可以在数据变化之后立即使用`Vue.nextTick(callback)`；这样回调函数会在 DOM 更新完成后被调用，就可以拿到最新的 DOM 元素了。
 
 ```js
-//第一个demo
-this.msg = '我是测试文字';
+// 第一个demo
+this.msg = '我是测试文字'
 this.$nextTick(() => {
-  console.log(document.querySelector('.msg').offsetHeight); // 20
-});
+  console.log(document.querySelector('.msg').offsetHeight) // 20
+})
 
-//第二个demo
-this.childName = '我是子组件名字';
+// 第二个demo
+this.childName = '我是子组件名字'
 this.$nextTick(() => {
-  this.$refs.child.showName(); // 我是子组件名字
-});
+  this.$refs.child.showName() // 我是子组件名字
+})
 ```
 
 ### 事件轮询
@@ -112,16 +112,16 @@ this.$nextTick(() => {
 Vue.js 在修改数据的时候，不会立马修改数据，而是要等同一事件轮询的数据都更新完之后，再统一进行视图更新。 知乎上的例子：
 
 ```js
-//改变数据
-vm.message = 'changed';
+// 改变数据
+vm.message = 'changed'
 
-//想要立即使用更新后的DOM。这样不行，因为设置message后DOM还没有更新
-console.log(vm.$el.textContent); // 并不会得到'changed'
+// 想要立即使用更新后的DOM。这样不行，因为设置message后DOM还没有更新
+console.log(vm.$el.textContent) // 并不会得到'changed'
 
-//这样可以，nextTick里面的代码会在DOM更新后执行
+// 这样可以，nextTick里面的代码会在DOM更新后执行
 Vue.nextTick(() => {
-  console.log(vm.$el.textContent); //可以得到'changed'
-});
+  console.log(vm.$el.textContent) // 可以得到'changed'
+})
 ```
 
 ![](https://static.h7ml.cn/vitepress/assets/images/nextTick.png)
@@ -235,7 +235,7 @@ export const nextTick = (function () {
 调用过程很简单，但是有点不太寻常：你需要先给他绑回调：
 
 ```js
-var mo = new MutationObserver(callback);
+const mo = new MutationObserver(callback)
 ```
 
 通过给`MutationObserver`的构造函数传入一个回调，能得到一个`MutationObserver`实例，这个回调就会在`MutationObserver`实例监听到变动时触发。
@@ -243,10 +243,10 @@ var mo = new MutationObserver(callback);
 这个时候你只是给 MutationObserver 实例绑定好了回调，他具体监听哪个 DOM、监听节点删除还是监听属性修改，还没有设置。而调用他的 observer 方法就可以完成这一步:
 
 ```js
-var domTarget = document.xxx;
+const domTarget = document.xxx
 mo.observe(domTarget, {
-  characterData: true, //说明监听文本内容的修改。
-});
+  characterData: true, // 说明监听文本内容的修改。
+})
 ```
 
 ![](https://static.h7ml.cn/vitepress/assets/images/nextTick2.png)
@@ -258,25 +258,24 @@ mo.observe(domTarget, {
 ### 实现一个简易的 nextTick
 
 ```js
-let callbacks = [];
-let pending = false;
+const callbacks = []
+let pending = false
 
 function nextTick(cb) {
-  callbacks.push(cb);
+  callbacks.push(cb)
 
   if (!pending) {
-    pending = true;
-    setTimeout(flushCallback, 0);
+    pending = true
+    setTimeout(flushCallback, 0)
   }
 }
 
 function flushCallback() {
-  pending = false;
-  let copies = callbacks.slice();
-  callbacks.length = 0;
-  for (let i = 0; i < copies.length; i++) {
-    copies[i]();
-  }
+  pending = false
+  const copies = callbacks.slice()
+  callbacks.length = 0
+  for (let i = 0; i < copies.length; i++)
+    copies[i]()
 }
 ```
 

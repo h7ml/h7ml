@@ -57,7 +57,7 @@ head:
 前端向后端发送目标的页码`page`以及每页显示数据的数量`pageSize`，默认情况每次取 10 条数据，则每一条数据的起始位置`start`为：
 
 ```js
-const start = (page - 1) * pageSize;
+const start = (page - 1) * pageSize
 ```
 
 当确定了`limit`和`start`的值后，就能够确定`SQL`语句：
@@ -83,37 +83,39 @@ SELECT COUNT(*) FROM record
 代码如下所示：
 
 ```js
-router.all('/api', function (req, res, next) {
-  var param = '';
+router.all('/api', (req, res, next) => {
+  let param = ''
   // 获取参数
-  if (req.method == 'POST') {
-    param = req.body;
-  } else {
-    param = req.query || req.params;
-  }
+  if (req.method == 'POST')
+    param = req.body
+  else
+    param = req.query || req.params
+
   if (param.page == '' || param.page == null || param.page == undefined) {
-    res.end(JSON.stringify({ msg: '请传入参数page', status: '102' }));
-    return;
+    res.end(JSON.stringify({ msg: '请传入参数page', status: '102' }))
+    return
   }
-  const pageSize = param.pageSize || 10;
-  const start = (param.page - 1) * pageSize;
-  const sql = `SELECT * FROM record limit ${pageSize} OFFSET ${start};`;
-  pool.getConnection(function (err, connection) {
-    if (err) throw err;
-    connection.query(sql, function (err, results) {
-      connection.release();
+  const pageSize = param.pageSize || 10
+  const start = (param.page - 1) * pageSize
+  const sql = `SELECT * FROM record limit ${pageSize} OFFSET ${start};`
+  pool.getConnection((err, connection) => {
+    if (err)
+      throw err
+    connection.query(sql, (err, results) => {
+      connection.release()
       if (err) {
-        throw err;
-      } else {
+        throw err
+      }
+      else {
         // 计算总页数
-        var allCount = results[0][0]['COUNT(*)'];
-        var allPage = parseInt(allCount) / 20;
-        var pageStr = allPage.toString();
+        const allCount = results[0][0]['COUNT(*)']
+        let allPage = Number.parseInt(allCount) / 20
+        const pageStr = allPage.toString()
         // 不能被整除
-        if (pageStr.indexOf('.') > 0) {
-          allPage = parseInt(pageStr.split('.')[0]) + 1;
-        }
-        var list = results[1];
+        if (pageStr.indexOf('.') > 0)
+          allPage = Number.parseInt(pageStr.split('.')[0]) + 1
+
+        const list = results[1]
         res.end(
           JSON.stringify({
             msg: '操作成功',
@@ -123,11 +125,11 @@ router.all('/api', function (req, res, next) {
             totalCount: allCount,
             data: list,
           })
-        );
+        )
       }
-    });
-  });
-});
+    })
+  })
+})
 ```
 
 ## 三、总结

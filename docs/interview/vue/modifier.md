@@ -202,7 +202,7 @@ head:
 还可以通过以下方式自定义一些全局的键盘码别名
 
 ```js
-Vue.config.keyCodes.f2 = 113;
+Vue.config.keyCodes.f2 = 113
 ```
 
 ### v-bind 修饰符

@@ -79,14 +79,14 @@ Javascript 具有自动垃圾回收机制（GC：Garbage Collecation），也就
 举个例子：
 
 ```js
-var m = 0,
-  n = 19; // 把 m,n,add() 标记为进入环境。
-add(m, n); // 把 a, b, c标记为进入环境。
-console.log(n); // a,b,c标记为离开环境，等待垃圾回收。
+const m = 0
+const n = 19 // 把 m,n,add() 标记为进入环境。
+add(m, n) // 把 a, b, c标记为进入环境。
+console.log(n) // a,b,c标记为离开环境，等待垃圾回收。
 function add(a, b) {
-  a++;
-  var c = a + b;
-  return c;
+  a++
+  const c = a + b
+  return c
 }
 ```
 
@@ -106,7 +106,7 @@ console.log('hello world');
 如果需要这块内存被垃圾回收机制释放，只需要设置如下：
 
 ```js
-arr = null;
+arr = null
 ```
 
 通过设置`arr`为`null`，就解除了对数组`[1,2,3,4]`的引用，引用次数变为 0，就被垃圾回收了
@@ -121,7 +121,7 @@ arr = null;
 
 ```js
 function foo(arg) {
-  bar = 'this is a hidden global variable';
+  bar = 'this is a hidden global variable'
 }
 ```
 
@@ -129,10 +129,10 @@ function foo(arg) {
 
 ```js
 function foo() {
-  this.variable = 'potential accidental global';
+  this.variable = 'potential accidental global'
 }
 // foo 调用自己，this 指向了全局对象（window）
-foo();
+foo()
 ```
 
 上述使用严格模式，可以避免意外的全局变量
@@ -156,22 +156,22 @@ setInterval(function() {
 
 ```js
 function bindEvent() {
-  var obj = document.createElement('XXX');
-  var unused = function () {
-    console.log(obj, '闭包内引用obj obj不会被释放');
-  };
-  obj = null; // 解决方法
+  let obj = document.createElement('XXX')
+  const unused = function () {
+    console.log(obj, '闭包内引用obj obj不会被释放')
+  }
+  obj = null // 解决方法
 }
 ```
 
 没有清理对`DOM`元素的引用同样造成内存泄露
 
 ```js
-const refA = document.getElementById('refA');
-document.body.removeChild(refA); // dom删除了
-console.log(refA, 'refA'); // 但是还存在引用能console出整个div 没有被回收
-refA = null;
-console.log(refA, 'refA'); // 解除引用
+const refA = document.getElementById('refA')
+document.body.removeChild(refA) // dom删除了
+console.log(refA, 'refA') // 但是还存在引用能console出整个div 没有被回收
+refA = null
+console.log(refA, 'refA') // 解除引用
 ```
 
 包括使用事件监听`addEventListener`监听的时候，在不监听的情况下使用`removeEventListener`取消对事件监听

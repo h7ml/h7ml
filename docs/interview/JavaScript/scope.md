@@ -36,10 +36,10 @@ head:
 
 ```js
 function myFunction() {
-  let inVariable = '函数内部变量';
+  const inVariable = '函数内部变量'
 }
-myFunction(); //要先执行这个函数，否则根本不知道里面是啥
-console.log(inVariable); // Uncaught ReferenceError: inVariable is not defined
+myFunction() // 要先执行这个函数，否则根本不知道里面是啥
+console.log(inVariable) // Uncaught ReferenceError: inVariable is not defined
 ```
 
 上述例子中，函数`myFunction`内部创建一个`inVariable`变量，当我们在全局访问这个变量的时候，系统会报错
@@ -59,12 +59,12 @@ console.log(inVariable); // Uncaught ReferenceError: inVariable is not defined
 
 ```js
 // 全局变量
-var greeting = 'Hello World!';
+const greeting = 'Hello World!'
 function greet() {
-  console.log(greeting);
+  console.log(greeting)
 }
 // 打印 'Hello World!'
-greet();
+greet()
 ```
 
 ### 函数作用域
@@ -73,13 +73,13 @@ greet();
 
 ```js
 function greet() {
-  var greeting = 'Hello World!';
-  console.log(greeting);
+  const greeting = 'Hello World!'
+  console.log(greeting)
 }
 // 打印 'Hello World!'
-greet();
+greet()
 // 报错： Uncaught ReferenceError: greeting is not defined
-console.log(greeting);
+console.log(greeting)
 ```
 
 可见上述代码中在函数内部声明的变量或函数，在函数外部是无法访问的，这说明在函数内部定义的变量或者方法只是函数作用域
@@ -91,14 +91,14 @@ ES6 引入了`let`和`const`关键字,和`var`关键字不同，在大括号中�
 ```js
 {
   // 块级作用域中的变量
-  let greeting = 'Hello World!';
-  var lang = 'English';
-  console.log(greeting); // Prints 'Hello World!'
+  const greeting = 'Hello World!'
+  var lang = 'English'
+  console.log(greeting) // Prints 'Hello World!'
 }
 // 变量 'English'
-console.log(lang);
+console.log(lang)
 // 报错：Uncaught ReferenceError: greeting is not defined
-console.log(greeting);
+console.log(greeting)
 ```
 
 ## 二、词法作用域
@@ -106,15 +106,15 @@ console.log(greeting);
 词法作用域，又叫静态作用域，变量被创建时就确定好了，而非执行阶段确定的。也就是说我们写好代码时它的作用域就确定了，`JavaScript` 遵循的就是词法作用域
 
 ```js
-var a = 2;
+const a = 2
 function foo() {
-  console.log(a);
+  console.log(a)
 }
 function bar() {
-  var a = 3;
-  foo();
+  const a = 3
+  foo()
 }
-bar();
+bar()
 ```
 
 上述代码改变成一张图
@@ -140,18 +140,18 @@ bar();
 下面代码演示下：
 
 ```js
-var sex = '男';
+const sex = '男'
 function person() {
-  var name = '张三';
+  const name = '张三'
   function student() {
-    var age = 18;
-    console.log(name); // 张三
-    console.log(sex); // 男
+    const age = 18
+    console.log(name) // 张三
+    console.log(sex) // 男
   }
-  student();
-  console.log(age); // Uncaught ReferenceError: age is not defined
+  student()
+  console.log(age) // Uncaught ReferenceError: age is not defined
 }
-person();
+person()
 ```
 
 上述代码主要主要做了以下工作：

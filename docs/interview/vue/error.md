@@ -46,17 +46,18 @@ head:
 ```js
 apiClient.interceptors.response.use(
   (response) => {
-    return response;
+    return response
   },
   (error) => {
     if (error.response.status == 401) {
-      router.push({ name: 'Login' });
-    } else {
-      message.error('出错了');
-      return Promise.reject(error);
+      router.push({ name: 'Login' })
+    }
+    else {
+      message.error('出错了')
+      return Promise.reject(error)
     }
   }
-);
+)
 ```
 
 ### 代码逻辑问题
@@ -70,7 +71,7 @@ Vue.config.errorHandler = function (err, vm, info) {
   // handle error
   // `info` 是 Vue 特定的错误信息，比如错误所在的生命周期钩子
   // 只在 2.2.0+ 可用
-};
+}
 ```
 
 `errorHandler`指定组件的渲染和观察期间未捕获错误的处理函数。这个处理函数被调用时，可获取错误信息和 `Vue` 实例
@@ -120,10 +121,10 @@ Vue.component('cat', {
     },
   },
   errorCaptured(err, vm, info) {
-    console.log(`cat EC: ${err.toString()}\ninfo: ${info}`);
-    return false;
+    console.log(`cat EC: ${err.toString()}\ninfo: ${info}`)
+    return false
   },
-});
+})
 ```
 
 定义一个子组件`kitten`，其中`dontexist()`并没有定义，存在错误
@@ -137,7 +138,7 @@ Vue.component('kitten', {
       type: String,
     },
   },
-});
+})
 ```
 
 页面中使用组件

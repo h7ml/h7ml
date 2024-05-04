@@ -122,23 +122,23 @@ class Context {
 ```js
 const strategies = {
   FirstStrategy() {
-    console.log('Called FirstStrategy');
+    console.log('Called FirstStrategy')
   },
   SecondStrategy() {
-    console.log('Called SecondStrategy');
+    console.log('Called SecondStrategy')
   },
   ThirdStrategy() {
-    console.log('Called ThirdStrategy');
+    console.log('Called ThirdStrategy')
   },
-};
+}
 
-const execute = (strategy) => {
-  return strategies[strategy]();
-};
+function execute(strategy) {
+  return strategies[strategy]()
+}
 
-execute('FirstStrategy');
-execute('SecondStrategy');
-execute('ThirdStrategy');
+execute('FirstStrategy')
+execute('SecondStrategy')
+execute('ThirdStrategy')
 ```
 
 上边主要演示了思想，实际开发中，我们完全可以把每种策略分文件单独写然后再 `import`。
@@ -215,7 +215,7 @@ const rule = {
       validator: (rule, value) => value > 18,
     },
   ],
-};
+}
 ```
 
 `Element` 会帮助我们校验 `name` 是否是 `string`、`age` 是否是 `number`。而 `Element` 其实是用的一个开源的 **[async-validator](https://github.com/yiminghe/async-validator)** 校验库。
@@ -229,21 +229,21 @@ const rule = {
 然后是上边截图中的 `validator/index.ts` 文件，将这些策略导出。
 
 ```js
-import string from './string';
-import method from './method';
-import number from './number';
-import boolean from './boolean';
-import regexp from './regexp';
-import integer from './integer';
-import float from './float';
-import array from './array';
-import object from './object';
-import enumValidator from './enum';
-import pattern from './pattern';
-import date from './date';
-import required from './required';
-import type from './type';
-import any from './any';
+import string from './string'
+import method from './method'
+import number from './number'
+import boolean from './boolean'
+import regexp from './regexp'
+import integer from './integer'
+import float from './float'
+import array from './array'
+import object from './object'
+import enumValidator from './enum'
+import pattern from './pattern'
+import date from './date'
+import required from './required'
+import type from './type'
+import any from './any'
 
 export default {
   string,
@@ -263,7 +263,7 @@ export default {
   email: type,
   required,
   any,
-};
+}
 ```
 
 校验前会执行下边的代码，通过 `type` 填充相应的 `validator`。

@@ -46,16 +46,16 @@ const app = new Vue({
   el: '#app',
   data: () => {
     item: {
-      oldProperty: '旧属性';
+      oldProperty: '旧属性'
     }
   },
   methods: {
     addProperty() {
-      this.items.newProperty = '新属性'; // 为items添加新属性
-      console.log(this.items); // 输出带有newProperty的items
+      this.items.newProperty = '新属性' // 为items添加新属性
+      console.log(this.items) // 输出带有newProperty的items
     },
   },
-});
+})
 ```
 
 点击按钮，发现结果不及预期，数据虽然更新了（`console`打印出了新属性），但页面并没有更新
@@ -88,14 +88,14 @@ Object.defineProperty(obj, 'foo', {
 当我们访问`foo`属性或者设置`foo`值的时候都能够触发`setter`与`getter`
 
 ```js
-obj.foo;
-obj.foo = 'new';
+obj.foo
+obj.foo = 'new'
 ```
 
 但是我们为`obj`添加新属性的时候，却无法触发事件属性的拦截
 
 ```js
-obj.bar = '新属性';
+obj.bar = '新属性'
 ```
 
 原因是一开始`obj`的`foo`属性被设成了响应式数据，而`bar`是后面新增的属性，并没有通过`Object.defineProperty`设置成响应式数据
@@ -147,16 +147,16 @@ function set (target: Array<any> | Object, key: any, val: any): any {
 function defineReactive(obj, key, val) {
   Object.defineProperty(obj, key, {
     get() {
-      console.log(`get ${key}:${val}`);
-      return val;
+      console.log(`get ${key}:${val}`)
+      return val
     },
     set(newVal) {
       if (newVal !== val) {
-        console.log(`set ${key}:${newVal}`);
-        val = newVal;
+        console.log(`set ${key}:${newVal}`)
+        val = newVal
       }
     },
-  });
+  })
 }
 ```
 

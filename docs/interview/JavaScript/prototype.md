@@ -40,7 +40,7 @@ head:
 
 ```js
 function doSomething() {}
-console.log(doSomething.prototype);
+console.log(doSomething.prototype)
 ```
 
 控制台输出
@@ -76,14 +76,14 @@ console.log(doSomething.prototype);
 
 ```js
 function Person(name) {
-  this.name = name;
-  this.age = 18;
+  this.name = name
+  this.age = 18
   this.sayName = function () {
-    console.log(this.name);
-  };
+    console.log(this.name)
+  }
 }
 // 第二步 创建实例
-var person = new Person('person');
+const person = new Person('person')
 ```
 
 根据代码，我们可以得到下图
@@ -111,31 +111,31 @@ var person = new Person('person');
 每个对象的`__proto__`都是指向它的构造函数的原型对象`prototype`的
 
 ```js
-person1.__proto__ === Person.prototype;
+person1.__proto__ === Person.prototype
 ```
 
 构造函数是一个函数对象，是通过 `Function`构造器产生的
 
 ```js
-Person.__proto__ === Function.prototype;
+Person.__proto__ === Function.prototype
 ```
 
 原型对象本身是一个普通对象，而普通对象的构造函数都是`Object`
 
 ```js
-Person.prototype.__proto__ === Object.prototype;
+Person.prototype.__proto__ === Object.prototype
 ```
 
 刚刚上面说了，所有的构造器都是函数对象，函数对象都是 `Function`构造产生的
 
 ```js
-Object.__proto__ === Function.prototype;
+Object.__proto__ === Function.prototype
 ```
 
 `Object`的原型对象也有`__proto__`属性指向`null`，`null`是原型链的顶端
 
 ```js
-Object.prototype.__proto__ === null;
+Object.prototype.__proto__ === null
 ```
 
 下面作出总结：

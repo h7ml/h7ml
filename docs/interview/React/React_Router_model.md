@@ -52,17 +52,17 @@ head:
 // 1.import { BrowserRouter as Router } from "react-router-dom";
 // 2.import { HashRouter as Router } from "react-router-dom";
 
-import React from 'react';
+import React from 'react'
 import {
   BrowserRouter as Router,
   // HashRouter as Router
   Switch,
   Route,
-} from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Backend from './pages/Backend';
-import Admin from './pages/Admin';
+} from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Backend from './pages/Backend'
+import Admin from './pages/Admin'
 
 function App() {
   return (
@@ -72,10 +72,10 @@ function App() {
       <Route path="/admin" component={Admin} />
       <Route path="/" component={Home} />
     </Router>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ## 三、实现原理
@@ -99,21 +99,22 @@ export default App;
 然后通过`context`将`location`数据往后代组件传递，如下：
 
 ```jsx
-import React, { Component } from 'react';
-import { Provider } from './context';
+import React, { Component } from 'react'
+import { Provider } from './context'
 // 该组件下Api提供给子组件使用
 class HashRouter extends Component {
   constructor() {
-    super();
+    super()
     this.state = {
       location: {
         pathname: window.location.hash.slice(1) || '/',
       },
-    };
+    }
   }
+
   // url路径变化 改变location
   componentDidMount() {
-    window.location.hash = window.location.hash || '/';
+    window.location.hash = window.location.hash || '/'
     window.addEventListener('hashchange', () => {
       this.setState(
         {
@@ -123,18 +124,19 @@ class HashRouter extends Component {
           },
         },
         () => console.log(this.state.location)
-      );
-    });
+      )
+    })
   }
+
   render() {
-    let value = {
+    const value = {
       location: this.state.location,
-    };
-    return <Provider value={value}>{this.props.children}</Provider>;
+    }
+    return <Provider value={value}>{this.props.children}</Provider>
   }
 }
 
-export default HashRouter;
+export default HashRouter
 ```
 
 ### Router
@@ -142,29 +144,29 @@ export default HashRouter;
 `Router`组件主要做的是通过`BrowserRouter`传过来的当前值，通过`props`传进来的`path`与`context`传进来的`pathname`进行匹配，然后决定是否执行渲染组件
 
 ```js
-import React, { Component } from 'react';
-import { Consumer } from './context';
-const { pathToRegexp } = require('path-to-regexp');
+import React, { Component } from 'react'
+import { Consumer } from './context'
+const { pathToRegexp } = require('path-to-regexp')
 class Route extends Component {
   render() {
     return (
       <Consumer>
         {(state) => {
-          console.log(state);
-          let { path, component: Component } = this.props;
-          let pathname = state.location.pathname;
-          let reg = pathToRegexp(path, [], { end: false });
+          console.log(state)
+          const { path, component: Component } = this.props
+          const pathname = state.location.pathname
+          const reg = pathToRegexp(path, [], { end: false })
           // 判断当前path是否包含pathname
-          if (pathname.match(reg)) {
-            return <Component></Component>;
-          }
-          return null;
+          if (pathname.match(reg))
+            return <Component></Component>
+
+          return null
         }}
       </Consumer>
-    );
+    )
   }
 }
-export default Route;
+export default Route
 ```
 
 ## 参考文献

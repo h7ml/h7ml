@@ -49,57 +49,64 @@ const list = {
       avatar: 'https://reqres.in/img/faces/3-image.jpg',
     },
   ],
-};
-export const getDataMock = () =>
-  new Promise((resolve, reject) => {
+}
+export function getDataMock() {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(list);
-    }, 2000);
-  });
+      resolve(list)
+    }, 2000)
+  })
+}
 ```
 
 然后是列表组件：
 
 ```js
-import React from 'react';
-import { getDataMock } from './mock';
+import React from 'react'
+import { getDataMock } from './mock'
 
 export default function UserList() {
   // 使用三个 state 分别保存用户列表，loading 状态和错误状态
-  const [users, setUsers] = React.useState([]);
-  const [loading, setLoading] = React.useState(false);
-  const [error, setError] = React.useState(null);
+  const [users, setUsers] = React.useState([])
+  const [loading, setLoading] = React.useState(false)
+  const [error, setError] = React.useState(null)
 
   // 定义获取用户的回调函数
   const fetchUsers = async () => {
-    setLoading(true);
+    setLoading(true)
     try {
-      const res = await getDataMock();
+      const res = await getDataMock()
       // 请求成功后将用户数据放入 state
-      setUsers(res.data);
-    } catch (err) {
-      // 请求失败将错误状态放入 state
-      setError(err);
+      setUsers(res.data)
     }
-    setLoading(false);
-  };
+    catch (err) {
+      // 请求失败将错误状态放入 state
+      setError(err)
+    }
+    setLoading(false)
+  }
 
   return (
     <div className="user-list">
       <button onClick={fetchUsers} disabled={loading}>
         {loading ? 'Loading...' : 'Show Users'}
       </button>
-      {error && <div style={{ color: 'red' }}>Failed: {String(error)}</div>}
+      {error && (
+        <div style={{ color: 'red' }}>
+          Failed:
+          {String(error)}
+        </div>
+      )}
       <br />
       <ul>
-        {users &&
-          users.length > 0 &&
-          users.map((user) => {
-            return <li key={user.id}>{user.first_name}</li>;
-          })}
+        {users
+        && users.length > 0
+        && users.map((user) => {
+          return <li key={user.id}>{user.first_name}</li>
+        })}
       </ul>
     </div>
-  );
+  )
 }
 ```
 
@@ -198,51 +205,51 @@ public class Main {
 让我们用 `js` 来改写一下：
 
 ```js
-const Cook = function () {};
+const Cook = function () {}
 Cook.prototype.prepare = function () {
-  console.log('准备干净锅');
-};
+  console.log('准备干净锅')
+}
 Cook.prototype.prepareIngredients = function () {
-  throw new Error('子类必须重写 prepareIngredients 方法');
-};
+  throw new Error('子类必须重写 prepareIngredients 方法')
+}
 Cook.prototype.cooking = function () {
-  throw new Error('子类必须重写 cooking 方法');
-};
+  throw new Error('子类必须重写 cooking 方法')
+}
 Cook.prototype.startCook = function () {
-  this.prepare();
-  this.prepareIngredients();
-  this.cooking();
-};
-const TomatoEgg = function () {};
-TomatoEgg.prototype = new Cook();
+  this.prepare()
+  this.prepareIngredients()
+  this.cooking()
+}
+const TomatoEgg = function () {}
+TomatoEgg.prototype = new Cook()
 TomatoEgg.prototype.prepareIngredients = function () {
-  console.log('拌鸡蛋、切西红柿');
-};
+  console.log('拌鸡蛋、切西红柿')
+}
 TomatoEgg.prototype.cooking = function () {
-  console.log('热油,炒鸡蛋,出锅');
-  console.log('少油,炒西红柿,加盐、加糖,加鸡蛋炒');
-  console.log('出锅');
-};
+  console.log('热油,炒鸡蛋,出锅')
+  console.log('少油,炒西红柿,加盐、加糖,加鸡蛋炒')
+  console.log('出锅')
+}
 
-const Potato = function () {};
-Potato.prototype = new Cook();
+const Potato = function () {}
+Potato.prototype = new Cook()
 Potato.prototype.prepareIngredients = function () {
-  console.log('切土豆片、腌肉');
-};
+  console.log('切土豆片、腌肉')
+}
 Potato.prototype.cooking = function () {
-  console.log('热油,炒土豆片,出锅');
-  console.log('加油,蒜姜辣椒爆香,炒肉、加土豆炒');
-  console.log('加生抽、加盐、加老抽上色');
-  console.log('出锅');
-};
+  console.log('热油,炒土豆片,出锅')
+  console.log('加油,蒜姜辣椒爆香,炒肉、加土豆炒')
+  console.log('加生抽、加盐、加老抽上色')
+  console.log('出锅')
+}
 
-const tomatoEgg = new TomatoEgg();
-tomatoEgg.startCook();
+const tomatoEgg = new TomatoEgg()
+tomatoEgg.startCook()
 
-const potato = new Potato();
-potato.startCook();
+const potato = new Potato()
+potato.startCook()
 
-console.log('开吃!');
+console.log('开吃!')
 ```
 
 上边是 `js` 照猫画虎的去按照 `java` 的形式去实现模版方法，作为函数是一等公民的 `js` ，也许我们可以换一种方式。
@@ -256,44 +263,44 @@ console.log('开吃!');
 ```js
 const Cook = function ({ prepareIngredients, cooking }) {
   const prepare = function () {
-    console.log('准备干净锅');
-  };
+    console.log('准备干净锅')
+  }
   const startCook = function () {
-    prepare();
-    prepareIngredients();
-    cooking();
-  };
+    prepare()
+    prepareIngredients()
+    cooking()
+  }
   return {
     startCook,
-  };
-};
+  }
+}
 
 const tomatoEgg = Cook({
   prepareIngredients() {
-    console.log('拌鸡蛋、切西红柿');
+    console.log('拌鸡蛋、切西红柿')
   },
   cooking() {
-    console.log('热油,炒鸡蛋,出锅');
-    console.log('少油,炒西红柿,加盐、加糖,加鸡蛋炒');
-    console.log('出锅');
+    console.log('热油,炒鸡蛋,出锅')
+    console.log('少油,炒西红柿,加盐、加糖,加鸡蛋炒')
+    console.log('出锅')
   },
-});
-tomatoEgg.startCook();
+})
+tomatoEgg.startCook()
 
 const potato = Cook({
   prepareIngredients() {
-    console.log('切土豆片、腌肉');
+    console.log('切土豆片、腌肉')
   },
   cooking() {
-    console.log('热油,炒土豆片,出锅');
-    console.log('加油,蒜姜辣椒爆香,炒肉、加土豆炒');
-    console.log('加生抽、加盐、加老抽上色');
-    console.log('出锅');
+    console.log('热油,炒土豆片,出锅')
+    console.log('加油,蒜姜辣椒爆香,炒肉、加土豆炒')
+    console.log('加生抽、加盐、加老抽上色')
+    console.log('出锅')
   },
-});
-potato.startCook();
+})
+potato.startCook()
 
-console.log('开吃!');
+console.log('开吃!')
 ```
 
 通过组合的方式，代码会变得更加清爽简单，不需要再定义 `TomatoEgg` 类和 `Potato` 类，只需要简单的传参。
@@ -305,41 +312,41 @@ console.log('开吃!');
 回到开头异步请求的例子，我们可以定义一个请求 `Hook` ，将 `loaing` 处理、数据返回处理这些步骤封装起来，外界只需要传递请求的方法即可。
 
 ```js
-import { useState, useCallback } from 'react';
+import { useCallback, useState } from 'react'
 export default (asyncFunction) => {
   // 设置三个异步逻辑相关的 state
-  const [data, setData] = useState(null);
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [data, setData] = useState(null)
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
   // 定义一个 callback 用于执行异步逻辑
   const execute = useCallback(() => {
     // 请求开始时，设置 loading 为 true，清除已有数据和 error 状态
-    setLoading(true);
-    setData(null);
-    setError(null);
+    setLoading(true)
+    setData(null)
+    setError(null)
     return asyncFunction()
       .then((response) => {
         // 请求成功时，将数据写进 state，设置 loading 为 false
-        setData(response);
-        setLoading(false);
+        setData(response)
+        setLoading(false)
       })
       .catch((error) => {
         // 请求失败时，设置 loading 为 false，并设置错误状态
-        setError(error);
-        setLoading(false);
-      });
-  }, [asyncFunction]);
+        setError(error)
+        setLoading(false)
+      })
+  }, [asyncFunction])
 
-  return { execute, loading, data, error };
-};
+  return { execute, loading, data, error }
+}
 ```
 
 业务调用的地方使用上边的 `Hook` 即可。
 
 ```js
-import React from 'react';
-import useAsync from './useAsync';
-import { getDataMock } from './mock';
+import React from 'react'
+import useAsync from './useAsync'
+import { getDataMock } from './mock'
 
 export default function UserList() {
   // 通过 useAsync 这个函数，只需要提供异步逻辑的实现
@@ -349,26 +356,31 @@ export default function UserList() {
     loading,
     error,
   } = useAsync(async () => {
-    const res = await getDataMock();
-    return res.data;
-  });
+    const res = await getDataMock()
+    return res.data
+  })
 
   return (
     <div className="user-list">
       <button onClick={fetchUsers} disabled={loading}>
         {loading ? 'Loading...' : 'Show Users'}
       </button>
-      {error && <div style={{ color: 'red' }}>Failed: {String(error)}</div>}
+      {error && (
+        <div style={{ color: 'red' }}>
+          Failed:
+          {String(error)}
+        </div>
+      )}
       <br />
       <ul>
-        {users &&
-          users.length > 0 &&
-          users.map((user) => {
-            return <li key={user.id}>{user.first_name}</li>;
-          })}
+        {users
+        && users.length > 0
+        && users.map((user) => {
+          return <li key={user.id}>{user.first_name}</li>
+        })}
       </ul>
     </div>
-  );
+  )
 }
 ```
 

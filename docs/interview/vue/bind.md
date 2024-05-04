@@ -79,11 +79,11 @@ head:
 ```js
 class Vue {
   constructor(options) {
-    this.$options = options;
-    this.$data = options.data; // 对data选项做响应式处理
-    observe(this.$data); // 代理data到vm上
-    proxy(this); // 执行编译
-    new Compile(options.el, this);
+    this.$options = options
+    this.$data = options.data // 对data选项做响应式处理
+    observe(this.$data) // 代理data到vm上
+    proxy(this) // 执行编译
+    new Compile(options.el, this)
   }
 }
 ```
@@ -92,21 +92,22 @@ class Vue {
 
 ```js
 function observe(obj) {
-  if (typeof obj !== 'object' || obj == null) {
-    return;
-  }
-  new Observer(obj);
+  if (typeof obj !== 'object' || obj == null)
+    return
+
+  new Observer(obj)
 }
 
 class Observer {
   constructor(value) {
-    this.value = value;
-    this.walk(value);
+    this.value = value
+    this.walk(value)
   }
+
   walk(obj) {
     Object.keys(obj).forEach((key) => {
-      defineReactive(obj, key, obj[key]);
-    });
+      defineReactive(obj, key, obj[key])
+    })
   }
 }
 ```
@@ -120,33 +121,36 @@ class Observer {
 ```js
 class Compile {
   constructor(el, vm) {
-    this.$vm = vm;
-    this.$el = document.querySelector(el); // 获取dom
-    if (this.$el) {
-      this.compile(this.$el);
-    }
+    this.$vm = vm
+    this.$el = document.querySelector(el) // 获取dom
+    if (this.$el)
+      this.compile(this.$el)
   }
+
   compile(el) {
-    const childNodes = el.childNodes;
+    const childNodes = el.childNodes
     Array.from(childNodes).forEach((node) => {
       // 遍历子元素
       if (this.isElement(node)) {
         // 判断是否为节点
-        console.log('编译元素' + node.nodeName);
-      } else if (this.isInterpolation(node)) {
-        console.log('编译插值⽂本' + node.textContent); // 判断是否为插值文本 {{}}
+        console.log(`编译元素${node.nodeName}`)
+      }
+      else if (this.isInterpolation(node)) {
+        console.log(`编译插值⽂本${node.textContent}`) // 判断是否为插值文本 {{}}
       }
       if (node.childNodes && node.childNodes.length > 0) {
         // 判断是否有子元素
-        this.compile(node); // 对子元素进行递归遍历
+        this.compile(node) // 对子元素进行递归遍历
       }
-    });
+    })
   }
+
   isElement(node) {
-    return node.nodeType == 1;
+    return node.nodeType == 1
   }
+
   isInterpolation(node) {
-    return node.nodeType == 3 && /\{\{(.*)\}\}/.test(node.textContent);
+    return node.nodeType == 3 && /\{\{(.*)\}\}/.test(node.textContent)
   }
 }
 ```
@@ -168,17 +172,17 @@ class Compile {
 // 负责更新视图
 class Watcher {
   constructor(vm, key, updater) {
-    this.vm = vm;
-    this.key = key;
-    this.updaterFn = updater; // 创建实例时，把当前实例指定到Dep.target静态属性上
+    this.vm = vm
+    this.key = key
+    this.updaterFn = updater // 创建实例时，把当前实例指定到Dep.target静态属性上
 
-    Dep.target = this; // 读一下key，触发get
-    vm[key]; // 置空
-    Dep.target = null;
+    Dep.target = this // 读一下key，触发get
+    vm[key] // 置空
+    Dep.target = null
   } // 未来执行dom更新函数，由dep调用的
 
   update() {
-    this.updaterFn.call(this.vm, this.vm[this.key]);
+    this.updaterFn.call(this.vm, this.vm[this.key])
   }
 }
 ```
@@ -188,13 +192,15 @@ class Watcher {
 ```js
 class Dep {
   constructor() {
-    this.deps = []; // 依赖管理
+    this.deps = [] // 依赖管理
   }
+
   addDep(dep) {
-    this.deps.push(dep);
+    this.deps.push(dep)
   }
+
   notify() {
-    this.deps.forEach((dep) => dep.update());
+    this.deps.forEach(dep => dep.update())
   }
 }
 ```
@@ -204,9 +210,9 @@ class Dep {
 ```js
 class Watcher {
   constructor(vm, key, updateFn) {
-    Dep.target = this;
-    this.vm[this.key];
-    Dep.target = null;
+    Dep.target = this
+    this.vm[this.key]
+    Dep.target = null
   }
 }
 ```
@@ -215,18 +221,19 @@ class Watcher {
 
 ```js
 function defineReactive(obj, key, val) {
-  this.observe(val);
-  const dep = new Dep();
+  this.observe(val)
+  const dep = new Dep()
   Object.defineProperty(obj, key, {
     get() {
-      Dep.target && dep.addDep(Dep.target); // Dep.target也就是Watcher实例
-      return val;
+      Dep.target && dep.addDep(Dep.target) // Dep.target也就是Watcher实例
+      return val
     },
     set(newVal) {
-      if (newVal === val) return;
-      dep.notify(); // 通知dep执行更新方法
+      if (newVal === val)
+        return
+      dep.notify() // 通知dep执行更新方法
     },
-  });
+  })
 }
 ```
 
@@ -237,5 +244,5 @@ function defineReactive(obj, key, val) {
 
 面试官 VUE 系列总进度：3／33
 
-[说说你对 vue 的理解\?](http://mp.weixin.qq.com/s?__biz=MzU1OTgxNDQ1Nw==&mid=2247484101&idx=1&sn=83b0983f0fca7d7c556e4cb0bff8c9b8&chksm=fc10c093cb674985ef3bd2966f66fc28c5eb70b0037e4be1af4bf54fb6fa9571985abd31d52f&scene=21#wechat_redirect)  
+[说说你对 vue 的理解\?](http://mp.weixin.qq.com/s?__biz=MzU1OTgxNDQ1Nw==&mid=2247484101&idx=1&sn=83b0983f0fca7d7c556e4cb0bff8c9b8&chksm=fc10c093cb674985ef3bd2966f66fc28c5eb70b0037e4be1af4bf54fb6fa9571985abd31d52f&scene=21#wechat_redirect)
 [说说你对 SPA（单页应用）的理解\?](http://mp.weixin.qq.com/s?__biz=MzU1OTgxNDQ1Nw==&mid=2247484119&idx=1&sn=d171b28a00d42549d279498944a98519&chksm=fc10c081cb6749976814aaeda6a6433db418223cec57edda7e15b9e5a0ca69ad549655639c61&scene=21#wechat_redirect)

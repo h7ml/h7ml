@@ -35,7 +35,7 @@ head:
 ```jsx
 class Foo extends React.Component {
   render() {
-    return <h1> Foo </h1>;
+    return <h1> Foo </h1>
   }
 }
 ```
@@ -44,7 +44,7 @@ class Foo extends React.Component {
 
 ```js
 function Foo() {
-  return <h1> Foo </h1>;
+  return <h1> Foo </h1>
 }
 ```
 
@@ -95,26 +95,30 @@ return React.createElement(
 
 ```jsx
 class Foo extends React.Component {
-  state = { count: 0 };
+  state = { count: 0 }
 
   increment = () => {
-    const { count } = this.state;
+    const { count } = this.state
 
-    const newCount = count < 10 ? count + 1 : count;
+    const newCount = count < 10 ? count + 1 : count
 
-    this.setState({ count: newCount });
-  };
+    this.setState({ count: newCount })
+  }
 
   render() {
-    const { count } = this.state;
-    console.log('Foo render');
+    const { count } = this.state
+    console.log('Foo render')
 
     return (
       <div>
-        <h1> {count} </h1>
+        <h1>
+          {' '}
+          {count}
+          {' '}
+        </h1>
         <button onClick={this.increment}>Increment</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -125,21 +129,25 @@ class Foo extends React.Component {
 
 ```jsx
 function Foo() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   function increment() {
-    const newCount = count < 10 ? count + 1 : count;
-    setCount(newCount);
+    const newCount = count < 10 ? count + 1 : count
+    setCount(newCount)
   }
 
-  console.log('Foo render');
+  console.log('Foo render')
 
   return (
     <div>
-      <h1> {count} </h1>
+      <h1>
+        {' '}
+        {count}
+        {' '}
+      </h1>
       <button onClick={increment}>Increment</button>
     </div>
-  );
+  )
 }
 ```
 
@@ -149,25 +157,25 @@ function Foo() {
 
 ```js
 class App extends React.Component {
-  state = { name: 'App' };
+  state = { name: 'App' }
   render() {
     return (
       <div className="App">
         <Foo />
         <button onClick={() => this.setState({ name: 'App' })}>Change name</button>
       </div>
-    );
+    )
   }
 }
 
 function Foo() {
-  console.log('Foo render');
+  console.log('Foo render')
 
   return (
     <div>
       <h1> Foo </h1>
     </div>
-  );
+  )
 }
 ```
 
@@ -177,24 +185,24 @@ function Foo() {
 
 ```jsx
 function App() {
-  const [name, setName] = useState('App');
+  const [name, setName] = useState('App')
 
   return (
     <div className="App">
       <Foo />
       <button onClick={() => setName('aaa')}>{name}</button>
     </div>
-  );
+  )
 }
 
 function Foo() {
-  console.log('Foo render');
+  console.log('Foo render')
 
   return (
     <div>
       <h1> Foo </h1>
     </div>
-  );
+  )
 }
 ```
 

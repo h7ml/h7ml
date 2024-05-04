@@ -237,7 +237,7 @@ new CopyWebpackPlugin({
       },
     },
   ],
-});
+})
 ```
 
 复制的规则在`patterns`属性中设置：

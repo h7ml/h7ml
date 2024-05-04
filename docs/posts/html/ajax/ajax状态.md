@@ -27,9 +27,9 @@
 ## json 对象
 
 ```js
-JSON.parse(); // josn字符串转为数据结构
-JSON.stringify(); // 数据结构转为字符串
-eval(); // 将具有 js 格式的字符串转换为 js 执行，可以转换除了 json 以外的任意 js 字符串
+JSON.parse() // josn字符串转为数据结构
+JSON.stringify() // 数据结构转为字符串
+eval() // 将具有 js 格式的字符串转换为 js 执行，可以转换除了 json 以外的任意 js 字符串
 ```
 
 ### 数组深拷贝

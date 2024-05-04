@@ -111,16 +111,16 @@ FunctionExectionContext = { // 函数执行上下文
 举个例子
 
 ```js
-let a = 20;
-const b = 30;
-var c;
+const a = 20
+const b = 30
+let c
 
 function multiply(e, f) {
-  var g = 20;
-  return e * f * g;
+  const g = 20
+  return e * f * g
 }
 
-c = multiply(20, 30);
+c = multiply(20, 30)
 ```
 
 执行上下文如下：
@@ -208,17 +208,17 @@ FunctionExectionContext = {
 举个例子：
 
 ```js
-let a = 'Hello World!';
+const a = 'Hello World!'
 function first() {
-  console.log('Inside first function');
-  second();
-  console.log('Again inside first function');
+  console.log('Inside first function')
+  second()
+  console.log('Again inside first function')
 }
 function second() {
-  console.log('Inside second function');
+  console.log('Inside second function')
 }
-first();
-console.log('Inside Global Execution Context');
+first()
+console.log('Inside Global Execution Context')
 ```
 
 转化成图的形式

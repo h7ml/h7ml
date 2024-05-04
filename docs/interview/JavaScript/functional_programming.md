@@ -38,13 +38,12 @@ head:
 
 ```js
 // 命令式编程
-var array = [0, 1, 2, 3];
-for (let i = 0; i < array.length; i++) {
-  array[i] = Math.pow(array[i], 2);
-}
+const array = [0, 1, 2, 3]
+for (let i = 0; i < array.length; i++)
+  array[i] = array[i] ** 2;
 
 // 函数式方式
-[0, 1, 2, 3].map((num) => Math.pow(num, 2));
+[0, 1, 2, 3].map(num => num ** 2)
 ```
 
 简单来讲，就是要把过程逻辑写成函数，定义好输入参数，只关心它的输出结果
@@ -68,7 +67,7 @@ for (let i = 0; i < array.length; i++) {
 举一个简单的例子
 
 ```js
-let double = (value) => value * 2;
+const double = value => value * 2
 ```
 
 特性：
@@ -82,8 +81,8 @@ let double = (value) => value * 2;
 
 ```js
 test('double(2) 等于 4', () => {
-  expect(double(2)).toBe(4);
-});
+  expect(double(2)).toBe(4)
+})
 ```
 
 - 不依赖外部环境计算，不会产生副作用，提高函数的复用性
@@ -106,14 +105,13 @@ test('double(2) 等于 4', () => {
 
 ```js
 const forEach = function (arr, fn) {
-  for (let i = 0; i < arr.length; i++) {
-    fn(arr[i]);
-  }
-};
-let arr = [1, 2, 3];
+  for (let i = 0; i < arr.length; i++)
+    fn(arr[i])
+}
+const arr = [1, 2, 3]
 forEach(arr, (item) => {
-  console.log(item);
-});
+  console.log(item)
+})
 ```
 
 上面通过高阶函数 `forEach`来抽象循环如何做的逻辑，直接关注做了什么
@@ -121,17 +119,17 @@ forEach(arr, (item) => {
 高阶函数存在缓存的特性，主要是利用闭包作用
 
 ```js
-const once = (fn) => {
-  let done = false;
+function once(fn) {
+  let done = false
   return function () {
-    if (!done) {
-      fn.apply(this, fn);
-    } else {
-      console.log('该函数已经执行');
-    }
-    done = true;
-  };
-};
+    if (!done)
+      fn.apply(this, fn)
+    else
+      console.log('该函数已经执行')
+
+    done = true
+  }
+}
 ```
 
 ### 柯里化
@@ -141,7 +139,7 @@ const once = (fn) => {
 一个二元函数如下：
 
 ```js
-let fn = (x, y) => x + y;
+const fn = (x, y) => x + y
 ```
 
 转化成柯里化函数如下：
@@ -150,12 +148,12 @@ let fn = (x, y) => x + y;
 const curry = function (fn) {
   return function (x) {
     return function (y) {
-      return fn(x, y);
-    };
-  };
-};
-let myfn = curry(fn);
-console.log(myfn(1)(2));
+      return fn(x, y)
+    }
+  }
+}
+const myfn = curry(fn)
+console.log(myfn(1)(2))
 ```
 
 上面的`curry`函数只能处理二元情况，下面再来实现一个实现多参数的情况
@@ -166,15 +164,15 @@ const curry = function (fn) {
   return function curriedFn(...args) {
     if (args.length < fn.length) {
       return function () {
-        return curriedFn(...args.concat([...arguments]));
-      };
+        return curriedFn(...args.concat([...arguments]))
+      }
     }
-    return fn(...args);
-  };
-};
-const fn = (x, y, z, a) => x + y + z + a;
-const myfn = curry(fn);
-console.log(myfn(1)(2)(3)(1));
+    return fn(...args)
+  }
+}
+const fn = (x, y, z, a) => x + y + z + a
+const myfn = curry(fn)
+console.log(myfn(1)(2)(3)(1))
 ```
 
 关于柯里化函数的意义如下：
@@ -190,14 +188,14 @@ console.log(myfn(1)(2)(3)(1));
 
 ```js
 function afn(a) {
-  return a * 2;
+  return a * 2
 }
 function bfn(b) {
-  return b * 3;
+  return b * 3
 }
-const compose = (a, b) => (c) => a(b(c));
-let myfn = compose(afn, bfn);
-console.log(myfn(2));
+const compose = (a, b) => c => a(b(c))
+const myfn = compose(afn, bfn)
+console.log(myfn(2))
 ```
 
 可以看到`compose`实现一个简单的功能：形成了一个新的函数，而这个函数就是一条从 `bfn -> afn` 的流水线
@@ -205,19 +203,19 @@ console.log(myfn(2));
 下面再来看看如何实现一个多函数组合：
 
 ```js
-const compose =
-  (...fns) =>
-  (val) =>
-    fns.reverse().reduce((acc, fn) => fn(acc), val);
+function compose(...fns) {
+  return val =>
+    fns.reverse().reduce((acc, fn) => fn(acc), val)
+}
 ```
 
 `compose`执行是从右到左的。而管道函数，执行顺序是从左到右执行的
 
 ```js
-const pipe =
-  (...fns) =>
-  (val) =>
-    fns.reduce((acc, fn) => fn(acc), val);
+function pipe(...fns) {
+  return val =>
+    fns.reduce((acc, fn) => fn(acc), val)
+}
 ```
 
 组合函数与管道函数的意义在于：可以把很多小函数组合起来完成更复杂的逻辑

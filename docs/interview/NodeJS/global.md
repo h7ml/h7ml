@@ -81,8 +81,8 @@ index.js 文件如下：
 
 ```js
 process.argv.forEach((val, index) => {
-  console.log(`${index}: ${val}`);
-});
+  console.log(`${index}: ${val}`)
+})
 ```
 
 输出如下：
@@ -106,31 +106,31 @@ process.argv.forEach((val, index) => {
 最常用的输入内容的方式：console.log
 
 ```js
-console.log('hello');
+console.log('hello')
 ```
 
 清空控制台：console.clear
 
 ```js
-console.clear;
+console.clear
 ```
 
 打印函数的调用栈：console.trace
 
 ```js
 function test() {
-  demo();
+  demo()
 }
 
 function demo() {
-  foo();
+  foo()
 }
 
 function foo() {
-  console.trace();
+  console.trace()
 }
 
-test();
+test()
 ```
 
 ![](https://static.h7ml.cn/vitepress/assets/images/interview/91b6dbb0-c2a3-11eb-85f6-6fac77c0c9b3.png)
@@ -164,7 +164,7 @@ setTimeout(callback,delay[,...args])
 全局命名空间对象，墙面讲到的`process`、`console`、`setTimeout`等都有放到`global`中
 
 ```js
-console.log(process === global.process); // true
+console.log(process === global.process) // true
 ```
 
 ### 模块级别的全局对象
@@ -184,7 +184,7 @@ console.log(process === global.process); // true
 从 `/Users/mjr` 运行 `node example.js`：
 
 ```js
-console.log(__dirname);
+console.log(__dirname)
 // 打印: /Users/mjr
 ```
 
@@ -195,7 +195,7 @@ console.log(__dirname);
 从 `/Users/mjr` 运行 `node example.js`：
 
 ```js
-console.log(__filename);
+console.log(__filename)
 // 打印: /Users/mjr/example.js
 ```
 
@@ -204,9 +204,9 @@ console.log(__filename);
 `module.exports` 用于指定一个模块所导出的内容，即可以通过 `require()` 访问的内容
 
 ```js
-exports.name = name;
-exports.age = age;
-exports.sayHello = sayHello;
+exports.name = name
+exports.age = age
+exports.sayHello = sayHello
 ```
 
 #### module

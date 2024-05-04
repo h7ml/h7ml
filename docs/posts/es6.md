@@ -46,13 +46,13 @@ star: true
 ### 变量提升
 
 ```js
-console.log(a); // 输出 undefined
-console.log(b); // 报错
-console.log(c); // 报错
+console.log(a) // 输出 undefined
+console.log(b) // 报错
+console.log(c) // 报错
 
-var a = 'var';
-let b = 'let';
-const c = 'const';
+var a = 'var'
+let b = 'let'
+const c = 'const'
 ```
 
 [为什么 let 和 const 不存在变量提升？ - 知乎](https://www.zhihu.com/question/535442142/answer/2510328090)
@@ -60,13 +60,13 @@ const c = 'const';
 ### 挂载到全局对象
 
 ```js
-var a = 'var';
-let b = 'let';
-const c = 'const';
+const a = 'var'
+const b = 'let'
+const c = 'const'
 
-console.log(window.a); // 输出 var
-console.log(window.b); // 输出 undefined
-console.log(window.c); // 输出 undefined
+console.log(window.a) // 输出 var
+console.log(window.b) // 输出 undefined
+console.log(window.c) // 输出 undefined
 ```
 
 ### 重复声明
@@ -85,25 +85,25 @@ let b; // 报错
 ```js
 function fn() {
   if (true) {
-    var a = 'var';
-    let b = 'let';
+    var a = 'var'
+    const b = 'let'
 
-    console.log(a); // 输出 var
-    console.log(b); // 输出 let
+    console.log(a) // 输出 var
+    console.log(b) // 输出 let
   }
 
-  console.log(a); // 输出 var
-  console.log(b); // 报错
+  console.log(a) // 输出 var
+  console.log(b) // 报错
 }
 
-fn();
+fn()
 ```
 
 ### const 常量定义
 
 ```js
-const NAME = 'h7ml';
-NAME = 'h7ml1996'; // 报错
+const NAME = 'h7ml'
+NAME = 'h7ml1996' // 报错
 ```
 
 ## 模板字符串
@@ -111,14 +111,14 @@ NAME = 'h7ml1996'; // 报错
 模板字符串 (template string) 是增强版的字符串，用反引号(**`**)标识。它可以当作普通字符串、定义多行字符串或者在字符串中嵌入变量、函数调用以及表达式
 
 ```js
-let name = 'h7ml';
-let age = 18;
+const name = 'h7ml'
+const age = 18
 
 /* ES5 拼接字符串 */
-let es5Str = '我叫: ' + name + '，我的年龄是: ' + (age + 1) + ' 岁';
+const es5Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
 
 /* ES6 模板字符串 */
-let es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`;
+const es6Str = `我叫: ${name}，我的年龄是: ${age + 1} 岁`
 ```
 
 ## 解构赋值
@@ -193,11 +193,11 @@ add(10, 0); // 10
 
 ```js
 function log(name, ...params) {
-  console.log(name, params);
+  console.log(name, params)
 }
 
-log('h7ml', 1, 2); // h7ml [1, 2]
-log('h7ml', 1, 2, 3); // h7ml [1, 2, 3]
+log('h7ml', 1, 2) // h7ml [1, 2]
+log('h7ml', 1, 2, 3) // h7ml [1, 2, 3]
 ```
 
 ::: tip 剩余参数(rest 参数)
@@ -292,12 +292,12 @@ function fn() {
 ```js
 // 举个 🌰 求出一个数组最大元素
 /* ES5 写法 */
-Math.max.apply(null, [2022, 520, 1314]);
+Math.max.apply(null, [2022, 520, 1314])
 
 /* ES6 写法 */
-Math.max(...[2022, 520, 1314]);
+Math.max(...[2022, 520, 1314])
 // 等同于
-Math.max(2022, 520, 1314);
+Math.max(2022, 520, 1314)
 ```
 
 ### 拷贝数组/对象
@@ -322,14 +322,14 @@ const { ...obj2 } = obj1;
 
 ```js
 /* 合并数组 */
-const arr1 = [1, 2, 3];
-const arr2 = ['a', 'b', 'c'];
-const arr = [...arr1, ...arr2];
+const arr1 = [1, 2, 3]
+const arr2 = ['a', 'b', 'c']
+const arr = [...arr1, ...arr2]
 
 /* 合并对象 */
-const obj1 = { name: 'h7ml' };
-const obj2 = { age: 18 };
-const obj = { ...obj1, ...obj2 };
+const obj1 = { name: 'h7ml' }
+const obj2 = { age: 18 }
+const obj = { ...obj1, ...obj2 }
 ```
 
 ### 使用表达式
@@ -388,13 +388,13 @@ const arrayLike = {
   1: 'b',
   2: 'c',
   length: 3,
-};
+}
 
 // ES5 写法
-var arr1 = [].slice.call(arrayLike); // ['a', 'b', 'c']
+const arr1 = [].slice.call(arrayLike) // ['a', 'b', 'c']
 
 // ES6 写法
-let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
+const arr2 = Array.from(arrayLike) // ['a', 'b', 'c']
 ```
 
 ::: tip Array.from()
@@ -404,11 +404,11 @@ let arr2 = Array.from(arrayLike); // ['a', 'b', 'c']
 在字符串转为数组时 `Array.from()` 能正确处理各种 `Unicode` 字符，可以避免 `JavaScript` 将大于 `\uFFFF` 的 `Unicode` 字符算作两个字符的 `bug`
 
 ```js
-'𠮷'.length; // 2
-Array.from('𠮷').length; // 1
+'𠮷'.length // 2
+Array.from('𠮷').length // 1
 
-'👪'.length; // 2
-Array.from('👪').length; // 1
+'👪'.length // 2
+Array.from('👪').length // 1
 ```
 
 :::
@@ -418,9 +418,9 @@ Array.from('👪').length; // 1
 `Array.of()` 用于将一组值转换为数组
 
 ```js
-Array.of(3, 11, 8); // [3,11,8]
-Array.of(3); // [3]
-Array.of(3).length; // 1
+Array.of(3, 11, 8) // [3,11,8]
+Array.of(3) // [3]
+Array.of(3).length // 1
 ```
 
 ::: tip Array.of()
@@ -428,9 +428,9 @@ Array.of(3).length; // 1
 `Array.of()` 方法的主要目的是弥补数组构造函数 `Array()` 的不足(因为参数个数的不同会导致`Array()`的行为有差异)
 
 ```js
-Array(); // []
-Array(3); // [, , ,]
-Array(3, 11, 8); // [3, 11, 8]
+Array() // []
+Array(3) // [, , ,]
+Array(3, 11, 8) // [3, 11, 8]
 ```
 
 `Array.of()` 总是返回参数值组成的数组。如果没有参数就返回一个空数组
@@ -438,7 +438,7 @@ Array(3, 11, 8); // [3, 11, 8]
 ```js
 /* Array.of() 的模拟实现 */
 function ArrayOf() {
-  return [].slice.call(arguments);
+  return [].slice.call(arguments)
 }
 ```
 
@@ -449,10 +449,10 @@ function ArrayOf() {
 `includes()` 方法返回一个布尔值，表示某个数组是否包含给定的值(`ES2016` 引入)
 
 ```js
-const arr = [1, 2, NaN];
-arr.includes(2); // true
-arr.includes(4); // false
-arr.includes(NaN); // true
+const arr = [1, 2, Number.NaN]
+arr.includes(2) // true
+arr.includes(4) // false
+arr.includes(Number.NaN) // true
 ```
 
 ::: tip includes() 和 indexOf() 的对比
@@ -468,15 +468,15 @@ arr.includes(NaN); // true
 `findIndex()` 方法用于找出第一个符合条件的数组成员的位置，如果**没有符合条件的成员则返回 `-1`**
 
 ```js
-const arr = [1, 5, 10, 15];
+const arr = [1, 5, 10, 15]
 
 /* find() */
-arr.find((item) => item > 9); // 10
-arr.find((item) => item === 9); // undefined
+arr.find(item => item > 9) // 10
+arr.find(item => item === 9) // undefined
 
 /* findIndex() */
-arr.findIndex((item) => item > 9); // 2
-arr.findIndex((item) => item === 9); // -1
+arr.findIndex(item => item > 9) // 2
+arr.findIndex(item => item === 9) // -1
 ```
 
 ### 实例方法: at()
@@ -484,11 +484,11 @@ arr.findIndex((item) => item === 9); // -1
 `at()` 方法接受一个整数(支持负数)作为参数返回对应位置的成员，如果**参数位置超出了数组范围则返回 `undefined`**
 
 ```js
-const arr = ['h7ml', 18];
+const arr = ['h7ml', 18]
 
-arr.at(0); // 'h7ml'
-arr.at(-1); // 18
-arr.at(99); // undefined
+arr.at(0) // 'h7ml'
+arr.at(-1) // 18
+arr.at(99) // undefined
 ```
 
 ### 实例方法: flat() 和 flatMap()
@@ -499,17 +499,17 @@ arr.at(99); // undefined
 
 ```js
 /* flat() */
-const arr1 = [1, 2, [3, [4, 5]]];
-const arr2 = [1, 2, , 4, 5];
+const arr1 = [1, 2, [3, [4, 5]]]
+const arr2 = [1, 2, , 4, 5]
 
-arr1.flat(); // [1, 2, 3, [4, 5]]
-arr1.flat(2); // [1, 2, 3, 4, 5]
+arr1.flat() // [1, 2, 3, [4, 5]]
+arr1.flat(2) // [1, 2, 3, 4, 5]
 
-arr2.flat(); // [1, 2, 4, 5]
+arr2.flat() // [1, 2, 4, 5]
 
 /* flatMap() */
-const arr = [1, 2, 3, 4];
-arr.flatMap((x) => [[x * 2]]); // [[2], [4], [6], [8]]
+const arr = [1, 2, 3, 4]
+arr.flatMap(x => [[x * 2]]) // [[2], [4], [6], [8]]
 // 相当于 [[2, 4], [3, 6], [4, 8]].flat()
 ```
 
@@ -559,11 +559,11 @@ const obj = {
 ```js
 const obj = {
   f() {
-    this.name = 'h7ml';
+    this.name = 'h7ml'
   },
-};
+}
 
-new obj.f(); // 报错
+new obj.f() // 报错
 ```
 
 :::
@@ -603,15 +603,15 @@ const obj = { [key]: 'h7ml'};
 属性名表达式如果是一个对象会自动将其转为字符串 `[object Object]`
 
 ```js
-const keyA = { a: 1 };
-const keyB = { b: 2 };
+const keyA = { a: 1 }
+const keyB = { b: 2 }
 
 const obj = {
   [keyA]: 'valueA',
   [keyB]: 'valueB',
-};
+}
 
-console.log(obj); // {[object Object]: 'valueB'}
+console.log(obj) // {[object Object]: 'valueB'}
 ```
 
 :::
@@ -621,8 +621,8 @@ console.log(obj); // {[object Object]: 'valueB'}
 `Object.is()` 方法用来比较两个值是否严格相等，严格比较运算符 (`===`) 的行为基本一致
 
 ```js
-Object.is('key', 'key'); // true
-Object.is({}, {}); // false
+Object.is('key', 'key') // true
+Object.is({}, {}) // false
 ```
 
 ::: tip Object.is() 与 === 的不同之处
@@ -631,12 +631,12 @@ Object.is({}, {}); // false
 
 ```js
 /* +0 不等于 -0 */
-+0 === -0; // true
-Object.is(+0, -0); // false
++0 === -0 // true
+Object.is(+0, -0) // false
 
 /* NaN 等于自身 */
-NaN === NaN; // false
-Object.is(NaN, NaN); // true
+Number.NaN === Number.NaN // false
+Object.is(Number.NaN, Number.NaN) // true
 ```
 
 :::
@@ -646,26 +646,26 @@ Object.is(NaN, NaN); // true
 `Object.assign()` 方法用于对象的合并，将源对象的所有可枚举属性复制到目标对象（第一个参数是目标对象后面的参数都是源对象）
 
 ```js
-const target = { a: 1, b: 1 };
+const target = { a: 1, b: 1 }
 
-const source1 = { b: 2, c: 2 };
-const source2 = { c: 3 };
+const source1 = { b: 2, c: 2 }
+const source2 = { c: 3 }
 
-Object.assign(target, source1, source2);
+Object.assign(target, source1, source2)
 ```
 
 #### 只有一个参数时会直接返回该参数
 
 ```js
-const obj = { a: 1 };
-Object.assign(obj) === obj; // true
+const obj = { a: 1 }
+Object.assign(obj) === obj // true
 ```
 
 #### 传入参数不是对象时会先转成对象再返回
 
 ```js
-typeof Object.assign(1); // "object"
-typeof Object.assign(true); // "object"
+typeof Object.assign(1) // "object"
+typeof Object.assign(true) // "object"
 ```
 
 ##### 传入非对象类型的场景
@@ -697,7 +697,7 @@ Object.assign({ a: 1 }, [1, 2]); // {0: 1, 1: 2, a: 1}
 ##### 传入数组时会把数组当对象处理
 
 ```js
-Object.assign([1, 2, 3], [4, 5]); // [4, 5, 3]
+Object.assign([1, 2, 3], [4, 5]) // [4, 5, 3]
 ```
 
 ::: tip Object.assign() 总结和应用场景
@@ -719,27 +719,27 @@ Object.assign([1, 2, 3], [4, 5]); // [4, 5, 3]
 /* 为对象添加属性 */
 class Point {
   constructor(x, y) {
-    Object.assign(this, { x, y });
+    Object.assign(this, { x, y })
   }
 }
 
 /* 为对象添加方法 */
 Object.assign(Function.prototype, {
   log() {},
-});
+})
 
 /* 拷贝对象 */
-const clone = (origin) => Object.assign({}, origin);
+const clone = origin => Object.assign({}, origin)
 
 /* 合并多个对象 */
-const merge = (target, ...sources) => Object.assign(target, ...sources);
+const merge = (target, ...sources) => Object.assign(target, ...sources)
 
 /* 为属性指定默认值 */
-const DEFAULTS = { duration: 2000 };
+const DEFAULTS = { duration: 2000 }
 function toast(options) {
-  options = Object.assign({}, DEFAULTS, options);
+  options = Object.assign({}, DEFAULTS, options)
 }
-toast({ content: '提示' }); // {duration: 2000, content: '提示'}
+toast({ content: '提示' }) // {duration: 2000, content: '提示'}
 ```
 
 :::
@@ -753,10 +753,10 @@ toast({ content: '提示' }); // {duration: 2000, content: '提示'}
 `Object.entries()` 方法返回一个数组（二维数组），其成员为参数对象自身的（不含继承的）所有可遍历属性的键值对数组(`ES2017` 引入)
 
 ```js
-const obj = { name: 'h7ml', age: 18 };
-Object.keys(obj); // ['name', 'age']
-Object.values(obj); //  ['h7ml', 18]
-Object.entries(obj); // [['name', 'h7ml'], ['age', 18]]
+const obj = { name: 'h7ml', age: 18 }
+Object.keys(obj) // ['name', 'age']
+Object.values(obj) //  ['h7ml', 18]
+Object.entries(obj) // [['name', 'h7ml'], ['age', 18]]
 ```
 
 ### Object.fromEntries()
@@ -764,15 +764,15 @@ Object.entries(obj); // [['name', 'h7ml'], ['age', 18]]
 `Object.fromEntries()` 方法是 `Object.entries()` 的逆操作，用于将键值对的数据结构还原为对象
 
 ```js
-Object.fromEntries([['name', 'h7ml']]); // {name: 'h7ml'}
+Object.fromEntries([['name', 'h7ml']]) // {name: 'h7ml'}
 
 /* Map 转对象 */
-const map = new Map([['name', 'h7ml']]);
-Object.fromEntries(map); // {name: 'h7ml'}
+const map = new Map([['name', 'h7ml']])
+Object.fromEntries(map) // {name: 'h7ml'}
 
 /* 将查询字符串转为对象 */
-const params = 'name=h7ml&age=18';
-Object.fromEntries(new URLSearchParams(params)); // {name: 'h7ml', age: '18'}
+const params = 'name=h7ml&age=18'
+Object.fromEntries(new URLSearchParams(params)) // {name: 'h7ml', age: '18'}
 ```
 
 ### 对象遍历方法对比
@@ -819,15 +819,15 @@ const firstName = message?.body?.user?.firstName || 'default';
 
 ```js
 /* 属性是否存在 */
-obj?.prop;
-obj?.[expr];
+obj?.prop
+obj?.[expr]
 // 等同于
-obj == null ? undefined : obj.prop;
+obj == null ? undefined : obj.prop
 
 /* 函数或对象方法是否存在 */
-func?.(...args);
+func?.(...args)
 // 等同于
-func == null ? undefined : func();
+func == null ? undefined : func()
 ```
 
 ::: tip 注意点
@@ -887,19 +887,19 @@ const D = undefined || 'h7ml'; // 'h7ml'
 
 ```js
 /* 或赋值运算符 */
-x ||= y;
+x ||= y
 // 等同于
-x || (x = y);
+x || (x = y)
 
 /* 与赋值运算符 */
-x &&= y;
+x &&= y
 // 等同于
-x && (x = y);
+x && (x = y)
 
 /* Null 赋值运算符 */
-x ??= y;
+x ??= y
 // 等同于
-x ?? (x = y);
+x ?? (x = y)
 ```
 
 ## ESModule
@@ -953,15 +953,15 @@ export { name as nickname };
 
 ```js
 // index.js
-import { name, log } from './util';
+import { log, name } from './util'
 
 /* 使用 as 关键字重命名 */
-import { name as nickname, log as logName } from './util';
+import { log as logName, name as nickname } from './util'
 
 /* 模块的整体加载 */
-import * as util from './util';
-util.name; // h7ml
-util.log(); // h7ml
+import * as util from './util'
+util.name // h7ml
+util.log() // h7ml
 ```
 
 ### export default 命令
@@ -1050,11 +1050,11 @@ export {util};
 ```js
 import('./dialogBox.js')
   .then((dialogBox) => {
-    dialogBox.open();
+    dialogBox.open()
   })
   .catch((error) => {
     /* Error handling */
-  });
+  })
 ```
 
 ::: tip import() 函数的使用场景
@@ -1097,7 +1097,7 @@ import('./dialogBox.js')
 ::: tip 小技巧利用顶层的 `this` 等于 `undefined` 这个语法点可以判断当前代码是否在 ES6 模块之中
 
 ```js
-const isNotModuleScript = this !== undefined;
+const isNotModuleScript = this !== undefined
 ```
 
 :::
@@ -1124,22 +1124,22 @@ const isNotModuleScript = this !== undefined;
 ```js
 /* 基本用法 */
 new Promise((resolve, reject) => {
-  setTimeout(() => resolve('成功'), 1000);
+  setTimeout(() => resolve('成功'), 1000)
 }).then((res) => {
-  console.log(res);
-});
+  console.log(res)
+})
 
 /* 链式调用 */
 ajax('/get/1')
   .then((res) => {
-    console.log(res);
-    return ajax('/get/2');
+    console.log(res)
+    return ajax('/get/2')
   })
   .then((res) => {
-    console.log(res);
-    return ajax('/get/3');
+    console.log(res)
+    return ajax('/get/3')
   })
-  .then((res) => console.log(res));
+  .then(res => console.log(res))
 ```
 
 ::: tip 实例方法
@@ -1151,15 +1151,15 @@ ajax('/get/1')
 ```js
 /*  实现 finally 方法 */
 Promise.prototype.finally = function (callback) {
-  const P = this.constructor;
+  const P = this.constructor
   return this.then(
-    (value) => P.resolve(callback()).then(() => value),
-    (reason) =>
+    value => P.resolve(callback()).then(() => value),
+    reason =>
       P.resolve(callback()).then(() => {
-        throw reason;
+        throw reason
       })
-  );
-};
+  )
+}
 ```
 
 :::

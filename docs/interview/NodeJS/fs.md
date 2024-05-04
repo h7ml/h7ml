@@ -35,7 +35,7 @@ fs（filesystem），该模块提供本地文件的读写能力，基本上是`P
 导入模块如下：
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 ```
 
 这个模块对所有文件系统操作提供异步（不具有`sync` 后缀）和同步（具有 `sync` 后缀）两种操作方式，而供开发者选择
@@ -111,13 +111,13 @@ drwxr-xr-x 1 PandaShen 197121 0 Jun 28 14:41 core
 结果为返回文件的内容
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
-let buf = fs.readFileSync('1.txt');
-let data = fs.readFileSync('1.txt', 'utf8');
+const buf = fs.readFileSync('1.txt')
+const data = fs.readFileSync('1.txt', 'utf8')
 
-console.log(buf); // <Buffer 48 65 6c 6c 6f>
-console.log(data); // Hello
+console.log(buf) // <Buffer 48 65 6c 6c 6f>
+console.log(data) // Hello
 ```
 
 #### fs.readFile
@@ -125,13 +125,12 @@ console.log(data); // Hello
 异步读取方法 `readFile` 与 `readFileSync` 的前两个参数相同，最后一个参数为回调函数，函数内有两个参数 `err`（错误）和 `data`（数据），该方法没有返回值，回调函数在读取文件成功后执行
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
 fs.readFile('1.txt', 'utf8', (err, data) => {
-  if (!err) {
-    console.log(data); // Hello
-  }
-});
+  if (!err)
+    console.log(data) // Hello
+})
 ```
 
 ### 文件写入
@@ -147,12 +146,12 @@ fs.readFile('1.txt', 'utf8', (err, data) => {
 - 第三个参数为 options，默认值为 null，其中有 encoding（编码，默认为 utf8）、 flag（标识位，默认为 w）和 mode（权限位，默认为 0o666），也可直接传入 encoding
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
-fs.writeFileSync('2.txt', 'Hello world');
-let data = fs.readFileSync('2.txt', 'utf8');
+fs.writeFileSync('2.txt', 'Hello world')
+const data = fs.readFileSync('2.txt', 'utf8')
 
-console.log(data); // Hello world
+console.log(data) // Hello world
 ```
 
 #### writeFile
@@ -160,15 +159,15 @@ console.log(data); // Hello world
 异步写入，`writeFile` 与 `writeFileSync` 的前三个参数相同，最后一个参数为回调函数，函数内有一个参数 `err`（错误），回调函数在文件写入数据成功后执行
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
 fs.writeFile('2.txt', 'Hello world', (err) => {
   if (!err) {
     fs.readFile('2.txt', 'utf8', (err, data) => {
-      console.log(data); // Hello world
-    });
+      console.log(data) // Hello world
+    })
   }
-});
+})
 ```
 
 ### 文件追加写入
@@ -182,10 +181,10 @@ fs.writeFile('2.txt', 'Hello world', (err) => {
 - 第三个参数为 options，默认值为 null，其中有 encoding（编码，默认为 utf8）、 flag（标识位，默认为 a）和 mode（权限位，默认为 0o666），也可直接传入 encoding
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
-fs.appendFileSync('3.txt', ' world');
-let data = fs.readFileSync('3.txt', 'utf8');
+fs.appendFileSync('3.txt', ' world')
+const data = fs.readFileSync('3.txt', 'utf8')
 ```
 
 #### appendFile
@@ -193,15 +192,15 @@ let data = fs.readFileSync('3.txt', 'utf8');
 异步追加写入方法 `appendFile` 与 `appendFileSync` 的前三个参数相同，最后一个参数为回调函数，函数内有一个参数 `err`（错误），回调函数在文件追加写入数据成功后执行
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
 fs.appendFile('3.txt', ' world', (err) => {
   if (!err) {
     fs.readFile('3.txt', 'utf8', (err, data) => {
-      console.log(data); // Hello world
-    });
+      console.log(data) // Hello world
+    })
   }
-});
+})
 ```
 
 ### 文件拷贝
@@ -211,12 +210,12 @@ fs.appendFile('3.txt', ' world', (err) => {
 同步拷贝
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
-fs.copyFileSync('3.txt', '4.txt');
-let data = fs.readFileSync('4.txt', 'utf8');
+fs.copyFileSync('3.txt', '4.txt')
+const data = fs.readFileSync('4.txt', 'utf8')
 
-console.log(data); // Hello world
+console.log(data) // Hello world
 ```
 
 #### copyFile
@@ -224,13 +223,13 @@ console.log(data); // Hello world
 异步拷贝
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
 fs.copyFile('3.txt', '4.txt', () => {
   fs.readFile('4.txt', 'utf8', (err, data) => {
-    console.log(data); // Hello world
-  });
-});
+    console.log(data) // Hello world
+  })
+})
 ```
 
 ### 创建目录
@@ -241,7 +240,7 @@ fs.copyFile('3.txt', '4.txt', () => {
 
 ```js
 // 假设已经有了 a 文件夹和 a 下的 b 文件夹
-fs.mkdirSync('a/b/c');
+fs.mkdirSync('a/b/c')
 ```
 
 #### mkdir
@@ -250,8 +249,9 @@ fs.mkdirSync('a/b/c');
 
 ```js
 fs.mkdir('a/b/c', (err) => {
-  if (!err) console.log('创建成功');
-});
+  if (!err)
+    console.log('创建成功')
+})
 ```
 
 ## 参考文献

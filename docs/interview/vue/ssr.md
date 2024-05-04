@@ -123,21 +123,21 @@ src
 路由配置
 
 ```js
-import Vue from 'vue';
-import Router from 'vue-router';
+import Vue from 'vue'
+import Router from 'vue-router'
 
-Vue.use(Router);
-//导出⼯⼚函数
+Vue.use(Router)
+// 导出⼯⼚函数
 
 export function createRouter() {
   return new Router({
     mode: 'history',
     routes: [
       // 客户端没有编译器，这⾥要写成渲染函数
-      { path: '/', component: { render: (h) => h('div', 'index page') } },
-      { path: '/detail', component: { render: (h) => h('div', 'detail page') } },
+      { path: '/', component: { render: h => h('div', 'index page') } },
+      { path: '/detail', component: { render: h => h('div', 'detail page') } },
     ],
-  });
+  })
 }
 ```
 
@@ -146,19 +146,19 @@ export function createRouter() {
 跟之前不同，主文件是负责创建`vue`实例的工厂，每次请求均会有独立的`vue`实例创建
 
 ```js
-import Vue from 'vue';
-import App from './App.vue';
-import { createRouter } from './router';
+import Vue from 'vue'
+import App from './App.vue'
+import { createRouter } from './router'
 // 导出Vue实例⼯⼚函数，为每次请求创建独⽴实例
 // 上下⽂⽤于给vue实例传递参数
 export function createApp(context) {
-  const router = createRouter();
+  const router = createRouter()
   const app = new Vue({
     router,
     context,
-    render: (h) => h(App),
-  });
-  return { app, router };
+    render: h => h(App),
+  })
+  return { app, router }
 }
 ```
 
@@ -167,20 +167,20 @@ export function createApp(context) {
 它的任务是创建`Vue`实例并根据传入`url`指定首屏
 
 ```js
-import { createApp } from './main';
+import { createApp } from './main'
 // 返回⼀个函数，接收请求上下⽂，返回创建的vue实例
 export default (context) => {
   // 这⾥返回⼀个Promise，确保路由或组件准备就绪
   return new Promise((resolve, reject) => {
-    const { app, router } = createApp(context);
+    const { app, router } = createApp(context)
     // 跳转到⾸屏的地址
-    router.push(context.url);
+    router.push(context.url)
     // 路由就绪，返回结果
     router.onReady(() => {
-      resolve(app);
-    }, reject);
-  });
-};
+      resolve(app)
+    }, reject)
+  })
+}
 ```
 
 编写客户端入口`entry-client.js`
@@ -188,13 +188,13 @@ export default (context) => {
 客户端入口只需创建`vue`实例并执行挂载，这⼀步称为激活
 
 ```js
-import { createApp } from './main';
+import { createApp } from './main'
 // 创建vue、router实例
-const { app, router } = createApp();
+const { app, router } = createApp()
 // 路由就绪，执⾏挂载
 router.onReady(() => {
-  app.$mount('#app');
-});
+  app.$mount('#app')
+})
 ```
 
 对`webpack`进行配置
@@ -209,18 +209,18 @@ npm install webpack-node-externals lodash.merge -D
 
 ```js
 // 两个插件分别负责打包客户端和服务端
-const VueSSRServerPlugin = require('vue-server-renderer/server-plugin');
-const VueSSRClientPlugin = require('vue-server-renderer/client-plugin');
-const nodeExternals = require('webpack-node-externals');
-const merge = require('lodash.merge');
+const VueSSRServerPlugin = require('vue-server-renderer/server-plugin')
+const VueSSRClientPlugin = require('vue-server-renderer/client-plugin')
+const nodeExternals = require('webpack-node-externals')
+const merge = require('lodash.merge')
 // 根据传⼊环境变量决定⼊⼝⽂件和相应配置项
-const TARGET_NODE = process.env.WEBPACK_TARGET === 'node';
-const target = TARGET_NODE ? 'server' : 'client';
+const TARGET_NODE = process.env.WEBPACK_TARGET === 'node'
+const target = TARGET_NODE ? 'server' : 'client'
 module.exports = {
   css: {
     extract: false,
   },
-  outputDir: './dist/' + target,
+  outputDir: `./dist/${target}`,
   configureWebpack: () => ({
     // 将 entry 指向应⽤程序的 server / client ⽂件
     entry: `./src/entry-${target}.js`,
@@ -240,11 +240,11 @@ module.exports = {
     // 外置化应⽤程序依赖模块。可以使服务器构建速度更快，并⽣成较⼩的打包⽂件。
     externals: TARGET_NODE
       ? nodeExternals({
-          // 不要外置化webpack需要处理的依赖模块。
-          // 可以在这⾥添加更多的⽂件类型。例如，未处理 *.vue 原始⽂件，
-          // 还应该将修改`global`（例如polyfill）的依赖模块列⼊⽩名单
-          whitelist: [/\.css$/],
-        })
+        // 不要外置化webpack需要处理的依赖模块。
+        // 可以在这⾥添加更多的⽂件类型。例如，未处理 *.vue 原始⽂件，
+        // 还应该将修改`global`（例如polyfill）的依赖模块列⼊⽩名单
+        whitelist: [/\.css$/],
+      })
       : undefined,
     optimization: {
       splitChunks: undefined,
@@ -256,9 +256,8 @@ module.exports = {
   }),
   chainWebpack: (config) => {
     // cli4项⽬添加
-    if (TARGET_NODE) {
-      config.optimization.delete('splitChunks');
-    }
+    if (TARGET_NODE)
+      config.optimization.delete('splitChunks')
 
     config.module
       .rule('vue')
@@ -266,10 +265,10 @@ module.exports = {
       .tap((options) => {
         merge(options, {
           optimizeSSR: false,
-        });
-      });
+        })
+      })
   },
-};
+}
 ```
 
 对脚本进行配置，安装依赖
@@ -318,9 +317,9 @@ npm install -S vuex
 创建`vuex`工厂函数
 
 ```js
-import Vue from 'vue';
-import Vuex from 'vuex';
-Vue.use(Vuex);
+import Vue from 'vue'
+import Vuex from 'vuex'
+Vue.use(Vuex)
 export function createStore() {
   return new Vuex.Store({
     state: {
@@ -328,25 +327,25 @@ export function createStore() {
     },
     mutations: {
       add(state) {
-        state.count += 1;
+        state.count += 1
       },
     },
-  });
+  })
 }
 ```
 
 在`main.js`文件中挂载`store`
 
 ```js
-import { createStore } from './store';
+import { createStore } from './store'
 export function createApp(context) {
   // 创建实例
-  const store = createStore();
+  const store = createStore()
   const app = new Vue({
     store, // 挂载
-    render: (h) => h(App),
-  });
-  return { app, router, store };
+    render: h => h(App),
+  })
+  return { app, router, store }
 }
 ```
 
@@ -360,7 +359,7 @@ export function createStore() {
     mutations: {
       // 加⼀个初始化
       init(state, count) {
-        state.count = count;
+        state.count = count
       },
     },
     actions: {
@@ -368,13 +367,13 @@ export function createStore() {
       getCount({ commit }) {
         return new Promise((resolve) => {
           setTimeout(() => {
-            commit('init', Math.random() * 100);
-            resolve();
-          }, 1000);
-        });
+            commit('init', Math.random() * 100)
+            resolve()
+          }, 1000)
+        })
       },
     },
-  });
+  })
 }
 ```
 
@@ -385,28 +384,27 @@ export default {
   asyncData({ store, route }) {
     // 约定预取逻辑编写在预取钩⼦asyncData中
     // 触发 action 后，返回 Promise 以便确定请求结果
-    return store.dispatch('getCount');
+    return store.dispatch('getCount')
   },
-};
+}
 ```
 
 服务端数据预取，`entry-server.js`
 
 ```js
-import { createApp } from './app';
+import { createApp } from './app'
 export default (context) => {
   return new Promise((resolve, reject) => {
     // 拿出store和router实例
-    const { app, router, store } = createApp(context);
-    router.push(context.url);
+    const { app, router, store } = createApp(context)
+    router.push(context.url)
     router.onReady(() => {
       // 获取匹配的路由组件数组
-      const matchedComponents = router.getMatchedComponents();
+      const matchedComponents = router.getMatchedComponents()
 
       // 若⽆匹配则抛出异常
-      if (!matchedComponents.length) {
-        return reject({ code: 404 });
-      }
+      if (!matchedComponents.length)
+        return reject({ code: 404 })
 
       // 对所有匹配的路由组件调⽤可能存在的`asyncData()`
       Promise.all(
@@ -415,7 +413,7 @@ export default (context) => {
             return Component.asyncData({
               store,
               route: router.currentRoute,
-            });
+            })
           }
         })
       )
@@ -424,26 +422,25 @@ export default (context) => {
           // store 已经填充⼊渲染应⽤所需状态
           // 将状态附加到上下⽂，且 `template` 选项⽤于 renderer 时，
           // 状态将⾃动序列化为 `window.__INITIAL_STATE__`，并注⼊ HTML
-          context.state = store.state;
+          context.state = store.state
 
-          resolve(app);
+          resolve(app)
         })
-        .catch(reject);
-    }, reject);
-  });
-};
+        .catch(reject)
+    }, reject)
+  })
+}
 ```
 
 客户端在挂载到应用程序之前，`store` 就应该获取到状态，`entry-client.js`
 
 ```js
 // 导出store
-const { app, router, store } = createApp();
+const { app, router, store } = createApp()
 // 当使⽤ template 时，context.state 将作为 window.__INITIAL_STATE__ 状态⾃动嵌⼊到最终的 HTML
 // 在客户端挂载到应⽤程序之前，store 就应该获取到状态：
-if (window.__INITIAL_STATE__) {
-  store.replaceState(window.__INITIAL_STATE__);
-}
+if (window.__INITIAL_STATE__)
+  store.replaceState(window.__INITIAL_STATE__)
 ```
 
 客户端数据预取处理，`main.js`
@@ -451,7 +448,7 @@ if (window.__INITIAL_STATE__) {
 ```js
 Vue.mixin({
   beforeMount() {
-    const { asyncData } = this.$options;
+    const { asyncData } = this.$options
     if (asyncData) {
       // 将获取数据操作分配给 promise
       // 以便在组件中，我们可以在数据准备就绪后
@@ -459,38 +456,38 @@ Vue.mixin({
       this.dataPromise = asyncData({
         store: this.$store,
         route: this.$route,
-      });
+      })
     }
   },
-});
+})
 ```
 
 修改服务器启动文件
 
 ```js
 // 获取⽂件路径
-const resolve = (dir) => require('path').resolve(__dirname, dir);
+const resolve = dir => require('node:path').resolve(__dirname, dir)
 // 第 1 步：开放dist/client⽬录，关闭默认下载index⻚的选项，不然到不了后⾯路由
-app.use(express.static(resolve('../dist/client'), { index: false }));
+app.use(express.static(resolve('../dist/client'), { index: false }))
 // 第 2 步：获得⼀个createBundleRenderer
-const { createBundleRenderer } = require('vue-server-renderer');
+const { createBundleRenderer } = require('vue-server-renderer')
 // 第 3 步：服务端打包⽂件地址
-const bundle = resolve('../dist/server/vue-ssr-server-bundle.json');
+const bundle = resolve('../dist/server/vue-ssr-server-bundle.json')
 // 第 4 步：创建渲染器
 const renderer = createBundleRenderer(bundle, {
   runInNewContext: false, // https://ssr.vuejs.org/zh/api/#runinnewcontext
-  template: require('fs').readFileSync(resolve('../public/index.html'), 'utf8'), // 宿主⽂件
+  template: require('node:fs').readFileSync(resolve('../public/index.html'), 'utf8'), // 宿主⽂件
   clientManifest: require(resolve('../dist/client/vue-ssr-clientmanifest.json')), // 客户端清单
-});
+})
 app.get('*', async (req, res) => {
   // 设置url和title两个重要参数
   const context = {
     title: 'ssr test',
     url: req.url,
-  };
-  const html = await renderer.renderToString(context);
-  res.send(html);
-});
+  }
+  const html = await renderer.renderToString(context)
+  res.send(html)
+})
 ```
 
 ### 小结

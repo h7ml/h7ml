@@ -153,13 +153,13 @@ enum Direction {
 通过编译后，`javascript`如下：
 
 ```ts
-var Direction;
+let Direction;
 (function (Direction) {
-  Direction[(Direction['Up'] = 0)] = 'Up';
-  Direction[(Direction['Down'] = 1)] = 'Down';
-  Direction[(Direction['Left'] = 2)] = 'Left';
-  Direction[(Direction['Right'] = 3)] = 'Right';
-})(Direction || (Direction = {}));
+  Direction[(Direction.Up = 0)] = 'Up'
+  Direction[(Direction.Down = 1)] = 'Down'
+  Direction[(Direction.Left = 2)] = 'Left'
+  Direction[(Direction.Right = 3)] = 'Right'
+})(Direction || (Direction = {}))
 ```
 
 上述代码可以看到， `Direction[Direction["Up"] = 0] = "Up"`可以分成
@@ -199,16 +199,16 @@ enum Direction {
 编译后，`js`代码如下：
 
 ```js
-var Direction;
+let Direction;
 (function (Direction) {
-  Direction['Up'] = 'Up';
-  Direction['Down'] = 'Down';
-  Direction['Left'] = 'Left';
-  Direction['Right'] = 'Right';
+  Direction.Up = 'Up'
+  Direction.Down = 'Down'
+  Direction.Left = 'Left'
+  Direction.Right = 'Right'
 })(Direction || (Direction = {}));
 (function (Direction) {
-  Direction[(Direction['Center'] = 1)] = 'Center';
-})(Direction || (Direction = {}));
+  Direction[(Direction.Center = 1)] = 'Center'
+})(Direction || (Direction = {}))
 ```
 
 可以看到，`Direction`对象属性回叠加

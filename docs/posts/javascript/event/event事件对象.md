@@ -3,7 +3,7 @@
 早期火狐不兼容 event 需要传参 ev
 
 ```js
-var ev = ev || event;
+var ev = ev || event
 ```
 
 - 鼠标按下/单击：mousedown，支持
@@ -35,6 +35,6 @@ var ev = ev || event;
 兼容:
 
 ```js
-e.wheelDalta ? e.wheelDalta < 0 : e.datail > 0;
+e.wheelDalta ? e.wheelDalta < 0 : e.datail > 0
 // chrome是否存在 ? chrome < 0 是否向下为true : firefox < 0 是否向下
 ```

@@ -140,34 +140,34 @@ star: true
 
 ```js
 function normalizeParams(params) {
-  if (!params) {
-    return '';
-  }
+  if (!params)
+    return ''
+
   return Object.keys(params)
-    .map((key) => `${key}=${params[key]}`)
-    .join('&');
+    .map(key => `${key}=${params[key]}`)
+    .join('&')
 }
 
 function jsonp(url, params) {
   return new Promise((resolve) => {
-    const callback = `jsonp_${Date.now()}`;
+    const callback = `jsonp_${Date.now()}`
     window[callback] = function (data) {
-      resolve(data);
-      document.body.removeChild(scriptEle);
-    };
-    params.cb = callback;
-    const scriptEle = document.createElement('script');
-    scriptEle.src = `${url}${url.includes('?') ? '&' : '?'}${normalizeParams(params)}`;
-    document.body.appendChild(scriptEle);
-  });
+      resolve(data)
+      document.body.removeChild(scriptEle)
+    }
+    params.cb = callback
+    const scriptEle = document.createElement('script')
+    scriptEle.src = `${url}${url.includes('?') ? '&' : '?'}${normalizeParams(params)}`
+    document.body.appendChild(scriptEle)
+  })
 }
 
 jsonp('https://www.baidu.com/sugrec', {
   prod: 'pc',
   wd: '跨域',
 }).then((res) => {
-  console.log(res);
-});
+  console.log(res)
+})
 ```
 
 :::
@@ -315,10 +315,10 @@ jsonp('https://www.baidu.com/sugrec', {
 
 ```js
 /* 读取 */
-document.cookie;
+document.cookie
 
 /* 写入 */
-document.cookie = 'name=h7ml';
+document.cookie = 'name=h7ml'
 ```
 
 ::: tip Cookie 的缺点
@@ -361,16 +361,16 @@ document.cookie = 'name=h7ml';
 
 ```js
 /* 存储数据 setItem() */
-localStorage.setItem('name', 'h7ml');
+localStorage.setItem('name', 'h7ml')
 
 /* 读取数据 getItem() */
-localStorage.getItem('name');
+localStorage.getItem('name')
 
 /* 删除指定数据 removeItem() */
-localStorage.removeItem('name');
+localStorage.removeItem('name')
 
 /* 清空数据 clear() */
-localStorage.clear();
+localStorage.clear()
 ```
 
 ::: tip sessionStorage localStorage 和 cookie 的区别
@@ -412,21 +412,21 @@ localStorage.clear();
 打开/创建一个 IndexedDB 数据库，并指定数据库的版本号 (版本号只能为整数)
 
 ```js
-const request = window.indexedDB.open('myDatabase', 1);
-let db;
+const request = window.indexedDB.open('myDatabase', 1)
+let db
 
 // 成功回调
 request.onsuccess = function (event) {
   // 获取 indexedDB 实例
-  db = event.target.result;
+  db = event.target.result
   // 也可以使用 request.result 获取 indexedDB 实例
-  console.log('连接 IndexedDB 成功');
-};
+  console.log('连接 IndexedDB 成功')
+}
 
 // 失败回调
 request.onerror = function () {
-  console.log('连接 IndexedDB 失败');
-};
+  console.log('连接 IndexedDB 失败')
+}
 ```
 
 创建一个对象仓库(类似于数据库中的表)
@@ -434,13 +434,13 @@ request.onerror = function () {
 ```js
 // upgradeneeded 事件会在初始化数据库或版本发生更新时被调用
 request.onupgradeneeded = function (event) {
-  const db = event.target.result;
+  const db = event.target.result
   // 创建对象仓库并指定主键
   const objectStore = db.createObjectStore('userInfo', {
     keyPath: 'id',
     autoIncrement: false,
-  });
-  console.log('创建对象仓库成功');
+  })
+  console.log('创建对象仓库成功')
 
   /**
    * 定义存储对象的数据项
@@ -450,59 +450,59 @@ request.onupgradeneeded = function (event) {
    */
   objectStore.createIndex('id', 'id', {
     unique: true,
-  });
-  objectStore.createIndex('name', 'name');
-};
+  })
+  objectStore.createIndex('name', 'name')
+}
 ```
 
 添加数据
 
 ```js
 // 创建事务指并定表格名称和读写权限
-const transaction = db.transaction(['userInfo'], 'readwrite');
+const transaction = db.transaction(['userInfo'], 'readwrite')
 // 获取 Object Store 对象
-const objectStore = transaction.objectStore('userInfo');
+const objectStore = transaction.objectStore('userInfo')
 
 /* 添加数据 */
-objectStore.add({ id: 1, name: 'test' });
+objectStore.add({ id: 1, name: 'test' })
 ```
 
 获取数据
 
 ```js
-const transaction = db.transaction(['userInfo'], 'readonly');
-const objectStore = transaction.objectStore('userInfo');
+const transaction = db.transaction(['userInfo'], 'readonly')
+const objectStore = transaction.objectStore('userInfo')
 
-const objectStoreRequest = objectStore.get(1);
+const objectStoreRequest = objectStore.get(1)
 objectStoreRequest.onsuccess = function () {
-  console.log('获取数据', objectStoreRequest.result);
-};
+  console.log('获取数据', objectStoreRequest.result)
+}
 ```
 
 修改数据
 
 ```js
-const transaction = db.transaction(['userInfo'], 'readwrite');
-const objectStore = transaction.objectStore('userInfo');
+const transaction = db.transaction(['userInfo'], 'readwrite')
+const objectStore = transaction.objectStore('userInfo')
 
-const objectStoreRequest = objectStore.get(1);
+const objectStoreRequest = objectStore.get(1)
 objectStoreRequest.onsuccess = function () {
-  const data = objectStoreRequest.result;
-  data.name = 'h7ml';
-  objectStore.put(data);
-};
+  const data = objectStoreRequest.result
+  data.name = 'h7ml'
+  objectStore.put(data)
+}
 ```
 
 删除数据
 
 ```js
-const transaction = db.transaction(['userInfo'], 'readwrite');
-const objectStore = transaction.objectStore('userInfo');
+const transaction = db.transaction(['userInfo'], 'readwrite')
+const objectStore = transaction.objectStore('userInfo')
 
-const objectStoreRequest = objectStore.delete(1);
+const objectStoreRequest = objectStore.delete(1)
 objectStoreRequest.onsuccess = function () {
-  console.log('删除成功');
-};
+  console.log('删除成功')
+}
 ```
 
 ::: tip 在日常开发中可以使用如下类库简化代码量

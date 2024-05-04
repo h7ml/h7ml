@@ -179,134 +179,133 @@ JavaScript 解释器的设计应该包括以下几个部分：
 ```js
 // 词法分析器
 function tokenize(code) {
-  const tokens = [];
-  let pos = 0;
+  const tokens = []
+  let pos = 0
 
   while (pos < code.length) {
-    let match = null;
+    let match = null
 
     // 匹配关键字和标识符
-    match = code.slice(pos).match(/^(\s+|let|if|else|while|for|[a-zA-Z]\w*)/);
+    match = code.slice(pos).match(/^(\s+|let|if|else|while|for|[a-zA-Z]\w*)/)
     if (match) {
-      tokens.push({ type: match[1].trim() });
-      pos += match[0].length;
-      continue;
+      tokens.push({ type: match[1].trim() })
+      pos += match[0].length
+      continue
     }
 
     // 匹配数字
-    match = code.slice(pos).match(/^(\d+)/);
+    match = code.slice(pos).match(/^(\d+)/)
     if (match) {
-      tokens.push({ type: 'number', value: Number(match[1]) });
-      pos += match[0].length;
-      continue;
+      tokens.push({ type: 'number', value: Number(match[1]) })
+      pos += match[0].length
+      continue
     }
 
     // 匹配运算符
-    match = code.slice(pos).match(/^(\+|\-|\*|\/|\=|\>|\<|\!|\&|\|)/);
+    match = code.slice(pos).match(/^(\+|\-|\*|\/|\=|\>|\<|\!|\&|\|)/)
     if (match) {
-      tokens.push({ type: 'operator', value: match[1] });
-      pos += match[0].length;
-      continue;
+      tokens.push({ type: 'operator', value: match[1] })
+      pos += match[0].length
+      continue
     }
 
     // 匹配括号和分号
-    match = code.slice(pos).match(/^(\(|\)|\{|\}|\;)/);
+    match = code.slice(pos).match(/^(\(|\)|\{|\}|\;)/)
     if (match) {
-      tokens.push({ type: match[1] });
-      pos += match[0].length;
-      continue;
+      tokens.push({ type: match[1] })
+      pos += match[0].length
+      continue
     }
 
     // 无法匹配的字符
-    throw new Error(`Unexpected character at position ${pos}`);
+    throw new Error(`Unexpected character at position ${pos}`)
   }
 
-  return tokens;
+  return tokens
 }
 
 // 语法分析器
 function parse(tokens) {
-  let pos = 0;
+  let pos = 0
 
   function parseExpression() {
     // 匹配数字
     if (tokens[pos].type === 'number') {
-      const node = { type: 'NumberLiteral', value: tokens[pos].value };
-      pos++;
-      return node;
+      const node = { type: 'NumberLiteral', value: tokens[pos].value }
+      pos++
+      return node
     }
 
     // 匹配标识符
     if (tokens[pos].type === 'let') {
-      const node = { type: 'VariableDeclaration', name: tokens[pos + 1].type };
-      pos += 2;
-      return node;
+      const node = { type: 'VariableDeclaration', name: tokens[pos + 1].type }
+      pos += 2
+      return node
     }
 
     // 匹配括号
     if (tokens[pos].type === '(') {
-      pos++;
-      const node = parseExpression();
-      if (tokens[pos].type !== ')') {
-        throw new Error(`Expected ')' at position ${pos}`);
-      }
-      pos++;
-      return node;
+      pos++
+      const node = parseExpression()
+      if (tokens[pos].type !== ')')
+        throw new Error(`Expected ')' at position ${pos}`)
+
+      pos++
+      return node
     }
 
     // 无法匹配的表达式
-    throw new Error(`Unexpected token at position ${pos}`);
+    throw new Error(`Unexpected token at position ${pos}`)
   }
 
   function parseStatement() {
     // 匹配变量声明语句
     if (tokens[pos].type === 'let') {
-      const node = { type: 'VariableDeclaration', name: tokens[pos + 1].type };
-      pos += 2;
-      if (tokens[pos].type !== '=') {
-        throw new Error(`Expected '=' at position ${pos}`);
-      }
-      pos++;
-      node.value = parseExpression();
-      if (tokens[pos].type !== ';') {
-        throw new Error(`Expected ';' at position ${pos}`);
-      }
-      pos++;
-      return node;
+      const node = { type: 'VariableDeclaration', name: tokens[pos + 1].type }
+      pos += 2
+      if (tokens[pos].type !== '=')
+        throw new Error(`Expected '=' at position ${pos}`)
+
+      pos++
+      node.value = parseExpression()
+      if (tokens[pos].type !== ';')
+        throw new Error(`Expected ';' at position ${pos}`)
+
+      pos++
+      return node
     }
 
     // 匹配条件语句
     if (tokens[pos].type === 'if') {
-      const node = { type: 'IfStatement' };
-      pos++;
-      if (tokens[pos].type !== '(') {
-        throw new Error(`Expected '(' at position ${pos}`);
-      }
-      pos++;
-      node.test = parseExpression();
-      if (tokens[pos].type !== ')') {
-        throw new Error(`Expected ')' at position ${pos}`);
-      }
-      pos++;
-      node.consequent = parseStatement();
+      const node = { type: 'IfStatement' }
+      pos++
+      if (tokens[pos].type !== '(')
+        throw new Error(`Expected '(' at position ${pos}`)
+
+      pos++
+      node.test = parseExpression()
+      if (tokens[pos].type !== ')')
+        throw new Error(`Expected ')' at position ${pos}`)
+
+      pos++
+      node.consequent = parseStatement()
       if (tokens[pos].type === 'else') {
-        pos++;
-        node.alternate = parseStatement();
+        pos++
+        node.alternate = parseStatement()
       }
-      return node;
+      return node
     }
 
     // 无法匹配的语句
-    throw new Error(`Unexpected token at position ${pos}`);
+    throw new Error(`Unexpected token at position ${pos}`)
   }
 
-  const ast = { type: 'Program', body: [] };
+  const ast = { type: 'Program', body: [] }
 
-  while (pos < tokens.length) {
-    ast.body.push(parseStatement());
-  }
+  while (pos < tokens.length)
+    ast.body.push(parseStatement())
 
-  return ast;
+  return ast
 }
 
 const code = `
@@ -316,12 +315,12 @@ const code = `
   } else {
     console.log('Non-positive');
   }
-`;
+`
 
-const tokens = tokenize(code);
-const ast = parse(tokens);
+const tokens = tokenize(code)
+const ast = parse(tokens)
 
-console.log(ast);
+console.log(ast)
 ```
 
 :::
@@ -432,23 +431,19 @@ tokenize 函数中，遍历源代码中的每个字符，并根据其类型生�
 
 ```js
 function generate(node) {
-  if (node.type === 'Program') {
-    return node.body.map(generate).join('\n');
-  }
+  if (node.type === 'Program')
+    return node.body.map(generate).join('\n')
 
-  if (node.type === 'NumberLiteral') {
-    return node.value;
-  }
+  if (node.type === 'NumberLiteral')
+    return node.value
 
-  if (node.type === 'Identifier') {
-    return node.name;
-  }
+  if (node.type === 'Identifier')
+    return node.name
 
-  if (node.type === 'CallExpression') {
-    return `${node.name}(${node.params.map(generate).join(', ')})`;
-  }
+  if (node.type === 'CallExpression')
+    return `${node.name}(${node.params.map(generate).join(', ')})`
 
-  throw new Error(`Invalid AST node: ${node.type}`);
+  throw new Error(`Invalid AST node: ${node.type}`)
 }
 ```
 
@@ -464,75 +459,75 @@ function generate(node) {
 
 ```js
 function execute(code) {
-  const program = compile(code);
-  const bytecode = generate(program);
-  const instructions = parse(bytecode);
-  const vm = createVM(instructions);
-  const result = vm.run();
-  return result;
+  const program = compile(code)
+  const bytecode = generate(program)
+  const instructions = parse(bytecode)
+  const vm = createVM(instructions)
+  const result = vm.run()
+  return result
 }
 
 function createVM(instructions) {
-  let ip = 0;
-  let sp = -1;
-  const stack = new Array(256).fill(0);
+  let ip = 0
+  let sp = -1
+  const stack = Array.from({ length: 256 }).fill(0)
 
   function push(value) {
-    stack[++sp] = value;
+    stack[++sp] = value
   }
 
   function pop() {
-    return stack[sp--];
+    return stack[sp--]
   }
 
   function run() {
     while (ip < instructions.length) {
-      const instruction = instructions[ip++];
+      const instruction = instructions[ip++]
 
       switch (instruction.opcode) {
         case 'LOAD': {
-          push(instruction.value);
-          break;
+          push(instruction.value)
+          break
         }
         case 'ADD': {
-          const b = pop();
-          const a = pop();
-          push(a + b);
-          break;
+          const b = pop()
+          const a = pop()
+          push(a + b)
+          break
         }
         case 'SUB': {
-          const b = pop();
-          const a = pop();
-          push(a - b);
-          break;
+          const b = pop()
+          const a = pop()
+          push(a - b)
+          break
         }
         case 'MUL': {
-          const b = pop();
-          const a = pop();
-          push(a * b);
-          break;
+          const b = pop()
+          const a = pop()
+          push(a * b)
+          break
         }
         case 'DIV': {
-          const b = pop();
-          const a = pop();
-          push(a / b);
-          break;
+          const b = pop()
+          const a = pop()
+          push(a / b)
+          break
         }
         case 'PRINT': {
-          const value = pop();
-          console.log(value);
-          break;
+          const value = pop()
+          console.log(value)
+          break
         }
         default: {
-          throw new Error(`Invalid opcode: ${instruction.opcode}`);
+          throw new Error(`Invalid opcode: ${instruction.opcode}`)
         }
       }
     }
 
-    return pop();
+    return pop()
   }
 
-  return { run };
+  return { run }
 }
 ```
 

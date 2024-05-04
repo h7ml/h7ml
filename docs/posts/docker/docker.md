@@ -692,7 +692,7 @@ services:
       - ./redis/redis.conf:/etc/redis.conf:ro
     ports:
       - '6379:6379'
-    command: ['redis-server', '/etc/redis.conf']
+    command: [redis-server, /etc/redis.conf]
 
   # 服务名称
   database:
@@ -749,14 +749,14 @@ volumes:
 另外一种指定镜像的方式就是直接采用 `Dockerfile` 来构建镜像，通过 build 这个配置我们能够定义构建的环境目录，这与 docker build 中的环境目录是同一个含义。如果我们通过这种方式指定镜像，那么 Docker Compose 先会帮助我们执行镜像的构建，之后再通过这个镜像启动容器。
 
 ```yaml
-## ......
+# # ......
 webapp:
   build:
     context: ./webapp
     dockerfile: webapp-dockerfile
     args:
       - JAVA_VERSION=1.6
-## ......
+# # ......
 ```
 
 在配置文件里，我们还能用 Map 的形式来定义 build，在这种格式下，我们能够指定更多的镜像构建参数，例如 Dockerfile 的文件名，构建参数等等。
@@ -802,11 +802,11 @@ webapp:
 如果我们想把属于 Docker Compose 项目以外的数据卷引入进来直接使用，我们可以将数据卷定义为外部引入，通过 external 这个配置就能完成这个定义。
 
 ```yaml
-## ......
+# # ......
 volumes:
   mysql-data:
     external: true
-## ......
+# # ......
 ```
 
 在加入 external 定义后，Docker Compose 在创建项目时不会直接创建数据卷，而是优先从 Docker Engine 中已有的数据卷里寻找并直接采用。
@@ -827,7 +827,7 @@ networks:
       driver: default
       config:
         - subnet: 10.10.1.0/24
-## ......
+# # ......
 ```
 
 在这里，我们为网络定义了网络驱动的类型，并指定了子网的网段。
@@ -839,13 +839,13 @@ networks:
 网络别名的定义方式很简单，这里需要将之前简单的网络 List 定义结构修改成 Map 结构，以便在网络中加入更多的定义。
 
 ```yaml
-## ......
+# # ......
 database:
   networks:
     backend:
       aliases:
         - backend.database
-## ......
+# # ......
 webapp:
   networks:
     backend:
@@ -854,7 +854,7 @@ webapp:
     frontend:
       aliases:
         - frontend.webapp
-## ......
+# # ......
 ```
 
 在我们进行这样的配置后，我们便可以使用这里我们所设置的网络别名对其他容器进行访问了。
@@ -901,7 +901,7 @@ services:
     volumes:
       - ../redis/redis.conf:/etc/redis/redis.conf:ro
       - ../redis/data:/data
-    command: ['redis-server', '/etc/redis/redis.conf']
+    command: [redis-server, /etc/redis/redis.conf]
     ports:
       - '6379:6379'
 

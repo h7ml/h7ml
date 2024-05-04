@@ -40,11 +40,11 @@ Real DOM，真实 `DOM`，意思为文档对象模型，是一个结构化文本
 
 ```jsx
 // 创建 h1 标签，右边千万不能加引号
-const vDom = <h1>Hello World</h1>;
+const vDom = <h1>Hello World</h1>
 // 找到 <div id="root"></div> 节点
-const root = document.getElementById('root');
+const root = document.getElementById('root')
 // 把创建的 h1 标签渲染到 root 节点上
-ReactDOM.render(vDom, root);
+ReactDOM.render(vDom, root)
 ```
 
 上述中，`ReactDOM.render()` 用于将你创建好的虚拟 `DOM` 节点插入到某个真实节点上，并渲染到页面上

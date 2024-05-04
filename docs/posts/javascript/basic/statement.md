@@ -13,17 +13,17 @@ star: true
 ## if
 
 ```js
-if (i > 1) {
-  alert('yes');
-} else {
-  alert('no');
-}
+if (i > 1)
+  alert('yes')
+else
+  alert('no')
 ```
 
 如果只有一条可以省略 {}，但容易导致错误，应该避免
 
 ```js
-if (i > 1) alert('yes');
+if (i > 1)
+  alert('yes')
 ```
 
 ## do-while
@@ -31,28 +31,26 @@ if (i > 1) alert('yes');
 - 语句最少执行一次
 
 ```js
-var i = 0;
-do {
-  i += 2;
-} while (i < 10);
+let i = 0
+do
+  i += 2
+while (i < 10)
 ```
 
 ## while
 
 ```js
-var i = 0;
-while (i < 10) {
-  i += 2;
-}
+let i = 0
+while (i < 10)
+  i += 2
 ```
 
 ## for
 
 ```js
-var a = 0;
-for (var i = 0; a < 10; i++) {
-  a += 1;
-}
+let a = 0
+for (let i = 0; a < 10; i++)
+  a += 1
 ```
 
 ## for in
@@ -60,23 +58,22 @@ for (var i = 0; a < 10; i++) {
 - 遍历数组/对象
 
 ```js
-var arr = ['Saab', 'Volvo', 'BMW'];
+const arr = ['Saab', 'Volvo', 'BMW']
 
-for (var x in arr) {
-  document.write(arr[x] + '<br />');
-}
+for (const x in arr)
+  document.write(`${arr[x]}<br />`)
 ```
 
 ## for of
 
 ```js
-let arr = [
+const arr = [
   [1, 2],
   ['a', 'b'],
-];
-for (var [key, value] of arr) {
-  console.log(key + ',' + value);
-}
+]
+for (const [key, value] of arr)
+  console.log(`${key},${value}`)
+
 // 1,2
 // a,b
 ```
@@ -100,11 +97,11 @@ with (obj) {
 ```js
 switch (i) {
   case '0':
-    alert('1'); // i为0时
-    break; // 退出
+    alert('1') // i为0时
+    break // 退出
 
   default: // 默认执行
-    alert('default');
+    alert('default')
 }
 ```
 

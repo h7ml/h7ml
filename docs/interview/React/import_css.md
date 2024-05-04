@@ -126,11 +126,11 @@ export default Test;
 组件中引入：
 
 ```js
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
-import Home from './Home';
+import Home from './Home'
 
-import './App.css';
+import './App.css'
 
 export default class App extends PureComponent {
   render() {
@@ -140,7 +140,7 @@ export default class App extends PureComponent {
         <p className="desc">我是App中的一段文字描述</p>
         <Home />
       </div>
-    );
+    )
   }
 }
 ```
@@ -154,11 +154,11 @@ export default class App extends PureComponent {
 这种方式是`webpack`特工的方案，只需要配置`webpack`配置文件中`modules:true`即可
 
 ```jsx
-import React, { PureComponent } from 'react';
+import React, { PureComponent } from 'react'
 
-import Home from './Home';
+import Home from './Home'
 
-import './App.module.css';
+import './App.module.css'
 
 export default class App extends PureComponent {
   render() {
@@ -168,7 +168,7 @@ export default class App extends PureComponent {
         <p className="desc">我是App中的一段文字描述</p>
         <Home />
       </div>
-    );
+    )
   }
 }
 ```
@@ -205,27 +205,27 @@ export const SelfLink = styled.div`
   height: 50px;
   border: 1px solid red;
   color: yellow;
-`;
+`
 
 export const SelfButton = styled.div`
   height: 150px;
   width: 150px;
-  color: ${(props) => props.color};
-  background-image: url(${(props) => props.src});
+  color: ${props => props.color};
+  background-image: url(${props => props.src});
   background-size: 150px 150px;
-`;
+`
 ```
 
 引入样式组件也很简单：
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
-import { SelfLink, SelfButton } from './style';
+import { SelfButton, SelfLink } from './style'
 
 class Test extends Component {
   constructor(props, context) {
-    super(props);
+    super(props)
   }
 
   render() {
@@ -236,11 +236,11 @@ class Test extends Component {
           SelfButton
         </SelfButton>
       </div>
-    );
+    )
   }
 }
 
-export default Test;
+export default Test
 ```
 
 ## 三、区别

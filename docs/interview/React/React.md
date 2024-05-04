@@ -41,11 +41,16 @@ React，用于构建用户界面的 JavaScript 库，只提供了 UI 层面的�
 ```jsx
 class HelloMessage extends React.Component {
   render() {
-    return <div>Hello {this.props.name}</div>;
+    return (
+      <div>
+        Hello
+        {this.props.name}
+      </div>
+    )
   }
 }
 
-ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById('hello-example'));
+ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById('hello-example'))
 ```
 
 上述这种类似 `XML` 形式就是 `JSX`，最终会被 `babel` 编译为合法的 `JS` 语句调用
@@ -79,23 +84,23 @@ ReactDOM.render(<HelloMessage name="Taylor" />, document.getElementById('hello-e
 const map = new Map.map(document.getElementById('map'), {
   zoom: 4,
   center: { lat, lng },
-});
+})
 
 // 创建标记
 const marker = new Map.marker({
   position: { lat, lng },
   title: 'Hello Marker',
-});
+})
 
 // 地图上添加标记
-marker.setMap(map);
+marker.setMap(map)
 ```
 
 而用 `React` 实现上述功能则如下：
 
 ```jsx
 <Map zoom={4} center={(lat, lng)}>
-  <Marker position={(lat, lng)} title={'Hello Marker'} />
+  <Marker position={(lat, lng)} title="Hello Marker" />
 </Map>
 ```
 
@@ -110,13 +115,13 @@ marker.setMap(map);
 函数式组件如下：
 
 ```jsx
-const Header = () => {
+function Header() {
   return (
     <Jumbotron style={{ backgroundColor: 'orange' }}>
       <h1>TODO App</h1>
     </Jumbotron>
-  );
-};
+  )
+}
 ```
 
 类组件（有状态组件）如下：
@@ -124,17 +129,18 @@ const Header = () => {
 ```jsx
 class Dashboard extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
 
-    this.state = {};
+    this.state = {}
   }
+
   render() {
     return (
       <div className="dashboard">
         <ToDoForm />
         <ToDolist />
       </div>
-    );
+    )
   }
 }
 ```

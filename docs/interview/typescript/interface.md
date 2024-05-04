@@ -45,7 +45,7 @@ interface interface_name {}
 例如有一个函数，这个函数接受一个 `User` 对象，然后返回这个 `User` 对象的 `name` 属性:
 
 ```ts
-const getUserName = (user) => user.name;
+const getUserName = user => user.name
 ```
 
 可以看到，参数需要有一个`user`的`name`属性，可以通过接口描述`user`参数的结构

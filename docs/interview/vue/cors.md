@@ -68,18 +68,17 @@ CORS （Cross-Origin Resource Sharing，跨域资源共享）是一个系统，�
 
 ```js
 app.use(async (ctx, next) => {
-  ctx.set('Access-Control-Allow-Origin', '*');
+  ctx.set('Access-Control-Allow-Origin', '*')
   ctx.set(
     'Access-Control-Allow-Headers',
     'Content-Type, Content-Length, Authorization, Accept, X-Requested-With , yourHeaderFeild'
-  );
-  ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS');
-  if (ctx.method == 'OPTIONS') {
-    ctx.body = 200;
-  } else {
-    await next();
-  }
-});
+  )
+  ctx.set('Access-Control-Allow-Methods', 'PUT, POST, GET, DELETE, OPTIONS')
+  if (ctx.method == 'OPTIONS')
+    ctx.body = 200
+  else
+    await next()
+})
 ```
 
 ps: `Access-Control-Allow-Origin` 设置为\*其实意义不大，可以说是形同虚设，实际应用中，上线前我们会将`Access-Control-Allow-Origin` 值设为我们目标`host`
@@ -105,8 +104,8 @@ amodule.exports = {
     proxy: {
       '/api': {
         // '/api'是代理标识，用于告诉node，url前面是/api的就是使用代理的
-        target: 'http://xxx.xxx.xx.xx:8080', //目标地址，一般是指后台服务器地址
-        changeOrigin: true, //是否跨域
+        target: 'http://xxx.xxx.xx.xx:8080', // 目标地址，一般是指后台服务器地址
+        changeOrigin: true, // 是否跨域
         pathRewrite: {
           // pathRewrite 的作用是把实际Request Url中的'/api'用""代替
           '^/api': '',
@@ -114,13 +113,13 @@ amodule.exports = {
       },
     },
   },
-};
+}
 ```
 
 通过`axios`发送请求中，配置请求的根路径
 
 ```js
-axios.defaults.baseURL = '/api';
+axios.defaults.baseURL = '/api'
 ```
 
 **方案二**
@@ -130,12 +129,12 @@ axios.defaults.baseURL = '/api';
 以`express`框架为例
 
 ```js
-var express = require('express');
-const proxy = require('http-proxy-middleware');
-const app = express();
-app.use(express.static(__dirname + '/'));
-app.use('/api', proxy({ target: 'http://localhost:4000', changeOrigin: false }));
-module.exports = app;
+const express = require('express')
+const proxy = require('http-proxy-middleware')
+const app = express()
+app.use(express.static(`${__dirname}/`))
+app.use('/api', proxy({ target: 'http://localhost:4000', changeOrigin: false }))
+module.exports = app
 ```
 
 **方案三**

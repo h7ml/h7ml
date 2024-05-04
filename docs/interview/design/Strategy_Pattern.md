@@ -42,20 +42,19 @@ head:
 若使用`if`来实现，代码则如下：
 
 ```js
-var calculateBouns = function (salary, level) {
-  if (level === 'A') {
-    return salary * 4;
-  }
-  if (level === 'B') {
-    return salary * 3;
-  }
-  if (level === 'C') {
-    return salary * 2;
-  }
-};
+const calculateBouns = function (salary, level) {
+  if (level === 'A')
+    return salary * 4
+
+  if (level === 'B')
+    return salary * 3
+
+  if (level === 'C')
+    return salary * 2
+}
 // 调用如下：
-console.log(calculateBouns(4000, 'A')); // 16000
-console.log(calculateBouns(2500, 'B')); // 7500
+console.log(calculateBouns(4000, 'A')) // 16000
+console.log(calculateBouns(2500, 'B')) // 7500
 ```
 
 从上述可有看到，函数内部包含过多`if...else`，并且后续改正的时候，需要在函数内部添加逻辑，违反了开放封闭原则
@@ -63,21 +62,21 @@ console.log(calculateBouns(2500, 'B')); // 7500
 而如果使用策略模式，就是先定义一系列算法，把它们一个个封装起来，将不变的部分和变化的部分隔开，如下：
 
 ```js
-var obj = {
-  A: function (salary) {
-    return salary * 4;
+const obj = {
+  A(salary) {
+    return salary * 4
   },
-  B: function (salary) {
-    return salary * 3;
+  B(salary) {
+    return salary * 3
   },
-  C: function (salary) {
-    return salary * 2;
+  C(salary) {
+    return salary * 2
   },
-};
-var calculateBouns = function (level, salary) {
-  return obj[level](salary);
-};
-console.log(calculateBouns('A', 10000)); // 40000
+}
+const calculateBouns = function (level, salary) {
+  return obj[level](salary)
+}
+console.log(calculateBouns('A', 10000)) // 40000
 ```
 
 上述代码中，`obj`对应的是策略类，而`calculateBouns`对应上下通信类
@@ -85,21 +84,19 @@ console.log(calculateBouns('A', 10000)); // 40000
 又比如实现一个表单校验的代码，常常会像如下写法：
 
 ```js
-var registerForm = document.getElementById('registerForm');
+const registerForm = document.getElementById('registerForm')
 registerForm.onsubmit = function () {
   if (registerForm.userName.value === '') {
-    alert('用户名不能为空');
-    return;
+    alert('用户名不能为空')
+    return
   }
   if (registerForm.password.value.length < 6) {
-    alert('密码的长度不能小于6位');
-    return;
+    alert('密码的长度不能小于6位')
+    return
   }
-  if (!/(^1[3|5|8][0-9]{9}$)/.test(registerForm.phoneNumber.value)) {
-    alert('手机号码格式不正确');
-    return;
-  }
-};
+  if (!/(^1[3|5|8][0-9]{9}$)/.test(registerForm.phoneNumber.value))
+    alert('手机号码格式不正确')
+}
 ```
 
 上述代码包含多处`if`语句，并且违反了开放封闭原则，如果应用中还有其他的表单，需要重复编写代码
@@ -107,74 +104,70 @@ registerForm.onsubmit = function () {
 此处也可以使用策略模式进行重构校验，第一步确定不变的内容，即策略规则对象，如下：
 
 ```js
-var strategy = {
-  isNotEmpty: function (value, errorMsg) {
-    if (value === '') {
-      return errorMsg;
-    }
+const strategy = {
+  isNotEmpty(value, errorMsg) {
+    if (value === '')
+      return errorMsg
   },
   // 限制最小长度
-  minLength: function (value, length, errorMsg) {
-    if (value.length < length) {
-      return errorMsg;
-    }
+  minLength(value, length, errorMsg) {
+    if (value.length < length)
+      return errorMsg
   },
   // 手机号码格式
-  mobileFormat: function (value, errorMsg) {
-    if (!/(^1[3|5|8][0-9]{9}$)/.test(value)) {
-      return errorMsg;
-    }
+  mobileFormat(value, errorMsg) {
+    if (!/(^1[3|5|8][0-9]{9}$)/.test(value))
+      return errorMsg
   },
-};
+}
 ```
 
 然后找出变的地方，作为环境类`context`，负责接收用户的要求并委托给策略规则对象，如下`Validator`类：
 
 ```js
-var Validator = function () {
-  this.cache = []; // 保存效验规则
-};
+const Validator = function () {
+  this.cache = [] // 保存效验规则
+}
 Validator.prototype.add = function (dom, rule, errorMsg) {
-  var str = rule.split(':');
-  this.cache.push(function () {
+  const str = rule.split(':')
+  this.cache.push(() => {
     // str 返回的是 minLength:6
-    var strategy = str.shift();
-    str.unshift(dom.value); // 把input的value添加进参数列表
-    str.push(errorMsg); // 把errorMsg添加进参数列表
-    return strategys[strategy].apply(dom, str);
-  });
-};
+    const strategy = str.shift()
+    str.unshift(dom.value) // 把input的value添加进参数列表
+    str.push(errorMsg) // 把errorMsg添加进参数列表
+    return strategys[strategy].apply(dom, str)
+  })
+}
 Validator.prototype.start = function () {
-  for (var i = 0, validatorFunc; (validatorFunc = this.cache[i++]); ) {
-    var msg = validatorFunc(); // 开始效验 并取得效验后的返回信息
-    if (msg) {
-      return msg;
-    }
+  for (var i = 0, validatorFunc; (validatorFunc = this.cache[i++]);) {
+    const msg = validatorFunc() // 开始效验 并取得效验后的返回信息
+    if (msg)
+      return msg
   }
-};
+}
 ```
 
 通过`validator.add`方法添加校验规则和错误信息提示，使用如下：
 
 ```js
-var validateFunc = function () {
-  var validator = new Validator(); // 创建一个Validator对象
+const validateFunc = function () {
+  const validator = new Validator() // 创建一个Validator对象
   /* 添加一些效验规则 */
-  validator.add(registerForm.userName, 'isNotEmpty', '用户名不能为空');
-  validator.add(registerForm.password, 'minLength:6', '密码长度不能小于6位');
-  validator.add(registerForm.userName, 'mobileFormat', '手机号码格式不正确');
+  validator.add(registerForm.userName, 'isNotEmpty', '用户名不能为空')
+  validator.add(registerForm.password, 'minLength:6', '密码长度不能小于6位')
+  validator.add(registerForm.userName, 'mobileFormat', '手机号码格式不正确')
 
-  var errorMsg = validator.start(); // 获得效验结果
-  return errorMsg; // 返回效验结果
-};
-var registerForm = document.getElementById('registerForm');
+  const errorMsg = validator.start() // 获得效验结果
+  return errorMsg // 返回效验结果
+}
+var registerForm = document.getElementById('registerForm')
 registerForm.onsubmit = function () {
-  var errorMsg = validateFunc();
+  const errorMsg = validateFunc()
   if (errorMsg) {
-    alert(errorMsg);
-    return false;
+    alert(errorMsg)
+    return false
   }
-};
+}
 ```
 
 上述通过策略模式完成表单的验证，并且可以随时调用，在修改表单验证规则的时候，也非常方便，通过传递参数即可调用

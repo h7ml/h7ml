@@ -67,7 +67,7 @@ head:
 基本代码如下：
 
 ```js
-const { Duplex } = require('stream');
+const { Duplex } = require('node:stream')
 
 const myDuplex = new Duplex({
   read(size) {
@@ -76,7 +76,7 @@ const myDuplex = new Duplex({
   write(chunk, encoding, callback) {
     // ...
   },
-});
+})
 ```
 
 ### 双工流
@@ -90,13 +90,13 @@ const myDuplex = new Duplex({
 基本代码如下所示：
 
 ```js
-const { Transform } = require('stream');
+const { Transform } = require('node:stream')
 
 const myTransform = new Transform({
   transform(chunk, encoding, callback) {
     // ...
   },
-});
+})
 ```
 
 ## 三、应用场景
@@ -116,16 +116,16 @@ const myTransform = new Transform({
 使用`stream`流返回文件，`res`也是一个`stream`对象，通过`pipe`管道将文件数据返回
 
 ```js
-const server = http.createServer(function (req, res) {
-  const method = req.method; // 获取请求方法
+const server = http.createServer((req, res) => {
+  const method = req.method // 获取请求方法
   if (method === 'GET') {
     // get 请求
-    const fileName = path.resolve(__dirname, 'data.txt');
-    let stream = fs.createReadStream(fileName);
-    stream.pipe(res); // 将 res 作为 stream 的 dest
+    const fileName = path.resolve(__dirname, 'data.txt')
+    const stream = fs.createReadStream(fileName)
+    stream.pipe(res) // 将 res 作为 stream 的 dest
   }
-});
-server.listen(8000);
+})
+server.listen(8000)
 ```
 
 ### 文件操作
@@ -133,22 +133,22 @@ server.listen(8000);
 创建一个可读数据流`readStream`，一个可写数据流`writeStream`，通过`pipe`管道把数据流转过去
 
 ```js
-const fs = require('fs');
-const path = require('path');
+const fs = require('node:fs')
+const path = require('node:path')
 
 // 两个文件名
-const fileName1 = path.resolve(__dirname, 'data.txt');
-const fileName2 = path.resolve(__dirname, 'data-bak.txt');
+const fileName1 = path.resolve(__dirname, 'data.txt')
+const fileName2 = path.resolve(__dirname, 'data-bak.txt')
 // 读取文件的 stream 对象
-const readStream = fs.createReadStream(fileName1);
+const readStream = fs.createReadStream(fileName1)
 // 写入文件的 stream 对象
-const writeStream = fs.createWriteStream(fileName2);
+const writeStream = fs.createWriteStream(fileName2)
 // 通过 pipe执行拷贝，数据流转
-readStream.pipe(writeStream);
+readStream.pipe(writeStream)
 // 数据读取完成监听，即拷贝完成
-readStream.on('end', function () {
-  console.log('拷贝完成');
-});
+readStream.on('end', () => {
+  console.log('拷贝完成')
+})
 ```
 
 ### 一些打包工具的底层操作

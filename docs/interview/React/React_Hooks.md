@@ -56,18 +56,23 @@ head:
 首先给出一个例子，如下：
 
 ```js
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 function Example() {
   // 声明一个叫 "count" 的 state 变量
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>
+        You clicked
+        {count}
+        {' '}
+        times
+      </p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
-  );
+  )
 }
 ```
 
@@ -78,19 +83,24 @@ function Example() {
 ```js
 class Example extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       count: 0,
-    };
+    }
   }
 
   render() {
     return (
       <div>
-        <p>You clicked {this.state.count} times</p>
+        <p>
+          You clicked
+          {this.state.count}
+          {' '}
+          times
+        </p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>Click me</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -113,26 +123,32 @@ class Example extends React.Component {
 ```js
 class Example extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       count: 0,
-    };
+    }
   }
 
   componentDidMount() {
-    document.title = `You clicked ${this.state.count} times`;
+    document.title = `You clicked ${this.state.count} times`
   }
+
   componentDidUpdate() {
-    document.title = `You clicked ${this.state.count} times`;
+    document.title = `You clicked ${this.state.count} times`
   }
 
   render() {
     return (
       <div>
-        <p>You clicked {this.state.count} times</p>
+        <p>
+          You clicked
+          {this.state.count}
+          {' '}
+          times
+        </p>
         <button onClick={() => this.setState({ count: this.state.count + 1 })}>Click me</button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -144,19 +160,24 @@ class Example extends React.Component {
 对应的`useEffect`示例如下：
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 function Example() {
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
 
   useEffect(() => {
-    document.title = `You clicked ${count} times`;
-  });
+    document.title = `You clicked ${count} times`
+  })
   return (
     <div>
-      <p>You clicked {count} times</p>
+      <p>
+        You clicked
+        {count}
+        {' '}
+        times
+      </p>
       <button onClick={() => setCount(count + 1)}>Click me</button>
     </div>
-  );
+  )
 }
 ```
 
@@ -166,8 +187,8 @@ function Example() {
 
 ```js
 useEffect(() => {
-  document.title = `You clicked ${count} times`;
-}, [count]); // 仅在 count 更改时更新
+  document.title = `You clicked ${count} times`
+}, [count]) // 仅在 count 更改时更新
 ```
 
 上述传入第二个参数后，如果 `count` 的值是 `5`，而且我们的组件重渲染的时候 `count` 还是等于 `5`，React 将对前一次渲染的 `[5]` 和后一次渲染的 `[5]` 进行比较，如果是相等则跳过`effects`执行
@@ -177,14 +198,14 @@ useEffect(() => {
 ```jsx
 useEffect(() => {
   function handleStatusChange(status) {
-    setIsOnline(status.isOnline);
+    setIsOnline(status.isOnline)
   }
 
-  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange);
+  ChatAPI.subscribeToFriendStatus(props.friend.id, handleStatusChange)
   return () => {
-    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange);
-  };
-});
+    ChatAPI.unsubscribeFromFriendStatus(props.friend.id, handleStatusChange)
+  }
+})
 ```
 
 所以， `useEffect`相当于`componentDidMount`，`componentDidUpdate` 和 `componentWillUnmount` 这三个生命周期函数的组合

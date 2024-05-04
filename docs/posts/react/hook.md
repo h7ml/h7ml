@@ -47,7 +47,7 @@ function App() {
 ### 创建更新对象
 
 ```js
-const update = { action, next: null };
+const update = { action, next: null }
 ```
 
 对于 `App` 来说，点击 `p` 标签产生的 `update` 的 `action` 为 `num => num + 1`。
@@ -83,20 +83,21 @@ return (
 ```js
 function dispatchAction(queue, action) {
   // 创建update
-  const update = { action, next: null };
+  const update = { action, next: null }
 
   // 环状单向链表操作
   if (queue.pending === null) {
-    update.next = update;
-  } else {
-    update.next = queue.pending.next;
-    queue.pending.next = update;
+    update.next = update
+  }
+  else {
+    update.next = queue.pending.next
+    queue.pending.next = update
   }
 
-  queue.pending = update;
+  queue.pending = update
 
   // 模拟React开始调度更新
-  schedule();
+  schedule()
 }
 ```
 
@@ -137,8 +138,8 @@ queue.pending = u1 ---> u0
 详情略...
 
 ```js
-let workInProgressHook;
-let isMount = true;
+let workInProgressHook
+let isMount = true
 
 // App组件对应的fiber对象
 const fiber = {
@@ -146,82 +147,84 @@ const fiber = {
   memoizedState: null,
   // 指向App函数
   stateNode: App,
-};
+}
 
 function schedule() {
-  workInProgressHook = fiber.memoizedState;
-  const app = fiber.stateNode();
-  isMount = false;
-  return app;
+  workInProgressHook = fiber.memoizedState
+  const app = fiber.stateNode()
+  isMount = false
+  return app
 }
 
 function dispatchAction(queue, action) {
   // 创建update
-  const update = { action, next: null };
+  const update = { action, next: null }
 
   // 环状单向链表操作
   if (queue.pending === null) {
-    update.next = update;
-  } else {
-    update.next = queue.pending.next;
-    queue.pending.next = update;
+    update.next = update
+  }
+  else {
+    update.next = queue.pending.next
+    queue.pending.next = update
   }
 
-  queue.pending = update;
+  queue.pending = update
 
   // 模拟React开始调度更新
-  schedule();
+  schedule()
 }
 
 function useState(initialState) {
-  let hook;
+  let hook
 
   if (isMount) {
     hook = {
       queue: { pending: null },
       memoizedState: initialState,
       next: null,
-    };
-
-    if (!fiber.memoizedState) {
-      fiber.memoizedState = hook;
-    } else {
-      workInProgressHook.next = hook;
     }
-    workInProgressHook = hook;
-  } else {
-    hook = workInProgressHook;
-    workInProgressHook = workInProgressHook.next;
+
+    if (!fiber.memoizedState)
+      fiber.memoizedState = hook
+    else
+      workInProgressHook.next = hook
+
+    workInProgressHook = hook
+  }
+  else {
+    hook = workInProgressHook
+    workInProgressHook = workInProgressHook.next
   }
 
-  let baseState = hook.memoizedState;
+  let baseState = hook.memoizedState
   if (hook.queue.pending) {
-    let firstUpdate = hook.queue.pending.next;
+    let firstUpdate = hook.queue.pending.next
 
     do {
-      const action = firstUpdate.action;
-      baseState = action(baseState);
-      firstUpdate = firstUpdate.next;
-    } while (firstUpdate !== hook.queue.pending);
+      const action = firstUpdate.action
+      baseState = action(baseState)
+      firstUpdate = firstUpdate.next
+    } while (firstUpdate !== hook.queue.pending)
 
-    hook.queue.pending = null;
+    hook.queue.pending = null
   }
-  hook.memoizedState = baseState;
+  hook.memoizedState = baseState
 
-  return [baseState, dispatchAction.bind(null, hook.queue)];
+  return [baseState, dispatchAction.bind(null, hook.queue)]
 }
 
 function App() {
-  const [num, updateNum] = useState(0);
+  const [num, updateNum] = useState(0)
 
-  console.log(`${isMount ? 'mount' : 'update'} num: `, num);
+  console.log(`${isMount ? 'mount' : 'update'} num: `, num)
   return {
     onClick() {
-      updateNum((num) => num + 1);
+      updateNum(num => num + 1)
     },
-  };
+  }
 }
 
-const app = schedule();
-app.onClick();
+const app = schedule()
+app.onClick()
 ```

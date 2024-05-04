@@ -29,7 +29,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: pnpm
 
       - name: Nx Cache
         id: nx-cache
@@ -100,8 +100,8 @@ jobs:
       - name: Deploy to surge 🚀
         uses: dswistowski/surge-sh-action@v1
         with:
-          domain: 'h7ml.surge.sh'
-          project: './'
+          domain: h7ml.surge.sh
+          project: ./
           login: ${{ secrets.surge_login }}
           token: ${{ secrets.surge_token }}
     needs: deploy
@@ -130,7 +130,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: 'Apocalypsor/Workflows-Cleaner'
+          repository: Apocalypsor/Workflows-Cleaner
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
@@ -143,8 +143,8 @@ jobs:
           pip install -r requirements.txt
       - name: Clean
         env:
-          GITHUB_REPO: 'h7ml/h7ml'
+          GITHUB_REPO: h7ml/h7ml
           GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-          EXPIRE_TIME: '12h'
+          EXPIRE_TIME: 12h
         run: python run.py
     needs: tencent

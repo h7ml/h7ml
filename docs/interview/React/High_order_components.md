@@ -36,7 +36,7 @@ head:
 在`React`中，高阶组件即接受一个或多个组件作为参数并且返回一个组件，本质也就是一个函数，并不是一个组件
 
 ```jsx
-const EnhancedComponent = highOrderComponent(WrappedComponent);
+const EnhancedComponent = highOrderComponent(WrappedComponent)
 ```
 
 上述代码中，该函数接受一个组件`WrappedComponent`作为参数，返回加工过的新组件`EnhancedComponent`
@@ -48,16 +48,16 @@ const EnhancedComponent = highOrderComponent(WrappedComponent);
 最基本的高阶组件的编写模板如下：
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default (WrappedComponent) => {
   return class EnhancedComponent extends Component {
     // do something
     render() {
-      return <WrappedComponent />;
+      return <WrappedComponent />
     }
-  };
-};
+  }
+}
 ```
 
 通过对传入的原始组件 `WrappedComponent` 做一些你想要的操作（比如操作 props，提取 state，给原始组件包裹其他元素等），从而加工出想要的组件 `EnhancedComponent`
@@ -84,25 +84,26 @@ export default (WrappedComponent) => {
 function withLogging(WrappedComponent) {
   class Enhance extends WrappedComponent {
     componentWillReceiveProps() {
-      console.log('Current props', this.props);
-      console.log('Next props', nextProps);
+      console.log('Current props', this.props)
+      console.log('Next props', nextProps)
     }
+
     render() {
-      const { forwardedRef, ...rest } = this.props;
+      const { forwardedRef, ...rest } = this.props
       // 把 forwardedRef 赋值给 ref
-      return <WrappedComponent {...rest} ref={forwardedRef} />;
+      return <WrappedComponent {...rest} ref={forwardedRef} />
     }
   }
 
   // React.forwardRef 方法会传入 props 和 ref 两个参数给其回调函数
   // 所以这边的 ref 是由 React.forwardRef 提供的
   function forwardRef(props, ref) {
-    return <Enhance {...props} forwardRef={ref} />;
+    return <Enhance {...props} forwardRef={ref} />
   }
 
-  return React.forwardRef(forwardRef);
+  return React.forwardRef(forwardRef)
 }
-const EnhancedComponent = withLogging(SomeComponent);
+const EnhancedComponent = withLogging(SomeComponent)
 ```
 
 ## 三、应用场景
@@ -112,16 +113,16 @@ const EnhancedComponent = withLogging(SomeComponent);
 举个例子，存在一个组件，需要从缓存中获取数据，然后渲染。一般情况，我们会如下编写：
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 class MyComponent extends Component {
   componentWillMount() {
-    let data = localStorage.getItem('data');
-    this.setState({ data });
+    const data = localStorage.getItem('data')
+    this.setState({ data })
   }
 
   render() {
-    return <div>{this.state.data}</div>;
+    return <div>{this.state.data}</div>
   }
 }
 ```
@@ -131,29 +132,29 @@ class MyComponent extends Component {
 下面就可以通过高价组件来进行改写，如下：
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 function withPersistentData(WrappedComponent) {
   return class extends Component {
     componentWillMount() {
-      let data = localStorage.getItem('data');
-      this.setState({ data });
+      const data = localStorage.getItem('data')
+      this.setState({ data })
     }
 
     render() {
       // 通过{...this.props} 把传递给当前组件的属性继续传递给被包装的组件WrappedComponent
-      return <WrappedComponent data={this.state.data} {...this.props} />;
+      return <WrappedComponent data={this.state.data} {...this.props} />
     }
-  };
+  }
 }
 
 class MyComponent2 extends Component {
   render() {
-    return <div>{this.props.data}</div>;
+    return <div>{this.props.data}</div>
   }
 }
 
-const MyComponentWithPersistentData = withPersistentData(MyComponent2);
+const MyComponentWithPersistentData = withPersistentData(MyComponent2)
 ```
 
 再比如组件渲染性能监控，如下：
@@ -161,32 +162,35 @@ const MyComponentWithPersistentData = withPersistentData(MyComponent2);
 ```jsx
 class Home extends React.Component {
   render() {
-    return <h1>Hello World.</h1>;
+    return <h1>Hello World.</h1>
   }
 }
 function withTiming(WrappedComponent) {
   return class extends WrappedComponent {
     constructor(props) {
-      super(props);
-      this.start = 0;
-      this.end = 0;
+      super(props)
+      this.start = 0
+      this.end = 0
     }
+
     componentWillMount() {
-      super.componentWillMount && super.componentWillMount();
-      this.start = Date.now();
+      super.componentWillMount && super.componentWillMount()
+      this.start = Date.now()
     }
+
     componentDidMount() {
-      super.componentDidMount && super.componentDidMount();
-      this.end = Date.now();
-      console.log(`${WrappedComponent.name} 组件渲染时间为 ${this.end - this.start} ms`);
+      super.componentDidMount && super.componentDidMount()
+      this.end = Date.now()
+      console.log(`${WrappedComponent.name} 组件渲染时间为 ${this.end - this.start} ms`)
     }
+
     render() {
-      return super.render();
+      return super.render()
     }
-  };
+  }
 }
 
-export default withTiming(Home);
+export default withTiming(Home)
 ```
 
 ## 参考文献

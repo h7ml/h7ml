@@ -63,19 +63,19 @@ head:
 代表库为`require.js`
 
 ```js
-/** main.js 入口文件/主模块 **/
+/** main.js 入口文件/主模块 */
 // 首先用config()指定各模块路径和引用名
 require.config({
   baseUrl: 'js/lib',
   paths: {
-    jquery: 'jquery.min', //实际路径为js/lib/jquery.min.js
+    jquery: 'jquery.min', // 实际路径为js/lib/jquery.min.js
     underscore: 'underscore.min',
   },
-});
+})
 // 执行基本操作
-require(['jquery', 'underscore'], function ($, _) {
+require(['jquery', 'underscore'], ($, _) => {
   // some code here
-});
+})
 ```
 
 ### CommonJs
@@ -84,10 +84,10 @@ require(['jquery', 'underscore'], function ($, _) {
 
 ```js
 // a.js
-module.exports = { foo, bar };
+module.exports = { foo, bar }
 
 // b.js
-const { foo, bar } = require('./a.js');
+const { foo, bar } = require('./a.js')
 ```
 
 其有如下特点：
@@ -118,7 +118,7 @@ let readfile = _fs.readfile;
 
 ```js
 // ES6模块
-import { stat, exists, readFile } from 'fs';
+import { exists, readFile, stat } from 'node:fs'
 ```
 
 上述代码，只加载 3 个方法，其他方法不加载，即 `ES6` 可以在编译时就完成模块加载
@@ -157,7 +157,7 @@ export { firstName, lastName, year };
 
 ```js
 export function multiply(x, y) {
-  return x * y;
+  return x * y
 }
 ```
 
@@ -197,26 +197,26 @@ import { lastName as surname } from './profile.js';
 
 ```js
 // circle.js
+// main.js
+import * as circle from './circle'
+
 export function area(radius) {
-  return Math.PI * radius * radius;
+  return Math.PI * radius * radius
 }
 
 export function circumference(radius) {
-  return 2 * Math.PI * radius;
+  return 2 * Math.PI * radius
 }
-
-// main.js
-import * as circle from './circle';
-console.log(circle); // {area:area,circumference:circumference}
+console.log(circle) // {area:area,circumference:circumference}
 ```
 
 输入的变量都是只读的，不允许修改，但是如果是对象，允许修改属性
 
 ```js
-import { a } from './xxx.js';
+import { a } from './xxx.js'
 
-a.foo = 'hello'; // 合法操作
-a = {}; // Syntax Error : 'a' is read-only;
+a.foo = 'hello' // 合法操作
+a = {} // Syntax Error : 'a' is read-only;
 ```
 
 不过建议即使能修改，但我们不建议。因为修改之后，我们很难差错
@@ -224,7 +224,7 @@ a = {}; // Syntax Error : 'a' is read-only;
 `import`后面我们常接着`from`关键字，`from`指定模块文件的位置，可以是相对路径，也可以是绝对路径
 
 ```js
-import { a } from './a';
+import { a } from './a'
 ```
 
 如果只有一个模块名，需要有配置文件，告诉引擎模块的位置
@@ -244,8 +244,7 @@ import { foo } from 'my_module';
 多次重复执行同样的导入，只会执行一次
 
 ```js
-import 'lodash';
-import 'lodash';
+import 'lodash'
 ```
 
 上面的情况，大家都能看到用户在导入模块的时候，需要知道加载的变量名和函数，否则无法加载
@@ -255,7 +254,7 @@ import 'lodash';
 ```js
 // export-default.js
 export default function () {
-  console.log('foo');
+  console.log('foo')
 }
 ```
 
@@ -263,8 +262,8 @@ export default function () {
 
 ```js
 // import-default.js
-import customName from './export-default';
-customName(); // 'foo'
+import customName from './export-default'
+customName() // 'foo'
 ```
 
 ### 动态加载
@@ -276,7 +275,7 @@ customName(); // 'foo'
 ```js
 import('/modules/myModule.mjs').then((module) => {
   // Do something with the module.
-});
+})
 ```
 
 ### 复合写法
@@ -320,10 +319,10 @@ export default {
 
 ```js
 function App() {
-  return <div className="App">组件化开发 ---- 模块化</div>;
+  return <div className="App">组件化开发 ---- 模块化</div>
 }
 
-export default App;
+export default App
 ```
 
 包括完成一些复杂应用的时候，我们也可以拆分成各个模块

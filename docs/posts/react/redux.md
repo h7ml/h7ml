@@ -75,12 +75,12 @@ npm install redux react-redux --save
 在 Redux 中，我们通过创建一个 Store 来保存应用程序的状态。一个 Redux 应用只有一个全局唯一的 Store，类似于全局变量存储仓库。
 
 ```js
-import { createStore } from 'redux';
-import reducer from './reducer';
+import { createStore } from 'redux'
+import reducer from './reducer'
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-export default store;
+export default store
 ```
 
 ### 创建 reducer
@@ -91,16 +91,16 @@ Reducer 是一个纯函数，用于处理应用程序状态的变化。它接收
 const defaultStore = {
   inputValue: 'h7ml',
   list: ['前端', '前端物语'],
-};
+}
 
 export default (state = defaultStore, action) => {
   if (action.type === 'value/changeInput') {
-    let newState = JSON.parse(JSON.stringify(state));
-    newState.inputValue = action.payload;
-    return newState;
+    const newState = JSON.parse(JSON.stringify(state))
+    newState.inputValue = action.payload
+    return newState
   }
-  return state;
-};
+  return state
+}
 ```
 
 ### 创建 action
@@ -108,10 +108,12 @@ export default (state = defaultStore, action) => {
 Action 是一个普通的 JavaScript 对象，它描述了发生的事件和带有的数据。Action 必须包含一个 type 字段，用于标识它的类型。其他字段可以用来传递任意数据。
 
 ```js
-export const changeInputAction = (value) => ({
-  type: 'value/changeInput',
-  payload: value,
-});
+export function changeInputAction(value) {
+  return {
+    type: 'value/changeInput',
+    payload: value,
+  }
+}
 ```
 
 ### 组件中使用
@@ -119,18 +121,18 @@ export const changeInputAction = (value) => ({
 在组件中，我们可以通过 React 的 useState 来获取 Store 中的状态，并且使用 store.subscribe 来订阅状态变化，以便在状态发生变化时更新组件。
 
 ```js
-import './App.css';
-import store from './store';
-import { useState } from 'react';
-import { Input } from 'antd';
-import 'antd/dist/antd.css';
+import './App.css'
+import { useState } from 'react'
+import { Input } from 'antd'
+import store from './store'
+import 'antd/dist/antd.css'
 
 function App() {
-  const [appData, setAppData] = useState(store.getState());
+  const [appData, setAppData] = useState(store.getState())
 
   store.subscribe(() => {
-    setAppData(store.getState());
-  });
+    setAppData(store.getState())
+  })
 
   // ... 省略其它代码
 
@@ -138,19 +140,19 @@ function App() {
     const action = {
       type: 'value/changeInput',
       payload: e.target.value,
-    };
-    store.dispatch(action);
-  };
+    }
+    store.dispatch(action)
+  }
 
   return (
     <div>
-      <Input placeholder={'Write Something'} onChange={changeInputValue} />
+      <Input placeholder="Write Something" onChange={changeInputValue} />
       {/* ... 省略其它代码 */}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 ## 总结
@@ -166,27 +168,27 @@ export default App;
 Action Creator 是一个函数，用来创建 Action 对象。它封装了创建 Action 的过程，使得代码更加简洁和易于维护。
 
 ```js
-const defaultStore = 'Write something';
+const defaultStore = 'Write something'
 
-const inputValue = (state = defaultStore, action) => {
+function inputValue(state = defaultStore, action) {
   if (action.type === 'value/changeInput') {
-    let newState = JSON.parse(JSON.stringify(state));
-    newState = action.payload;
-    return newState;
+    let newState = JSON.parse(JSON.stringify(state))
+    newState = action.payload
+    return newState
   }
-  return state;
-};
+  return state
+}
 
 export class inputValueAction {
   static changeInput = (input) => {
     return {
       type: 'value/changeInput',
       payload: input,
-    };
-  };
+    }
+  }
 }
 
-export default inputValue;
+export default inputValue
 ```
 
 ### 拆分 Reducer
@@ -234,12 +236,12 @@ export default combineReducers({
 在根组件中，我们可以使用 combineReducers 函数将所有子 Reducer 合并成一个 Root Reducer，并传递给 createStore 函数来创建 Store
 
 ```js
-import { createStore } from 'redux';
-import rootReducer from './reducers';
+import { createStore } from 'redux'
+import rootReducer from './reducers'
 
-const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const store = createStore(rootReducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__())
 
-export default store;
+export default store
 ```
 
 ## react-redux
@@ -253,19 +255,21 @@ export default store;
 Provider 组件是一个顶层组件，它接受 Redux 的 store 作为 props，并使得整个应用程序中的所有组件都能够访问到 Redux 的 store。通过 Provider 组件，我们无需手动将 store 传递给每个需要使用它的组件，而是让 React 的 Context 机制来帮助我们自动传递 store。
 
 ```js
-import React from 'react';
-import { Provider } from 'react-redux';
-import store from './store'; // 导入Redux的store
+import React from 'react'
+import { Provider } from 'react-redux'
+import store from './store' // 导入Redux的store
 
-import App from './App';
+import App from './App'
 
-const Root = () => (
-  <Provider store={store}>
-    <App />
-  </Provider>
-);
+function Root() {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  )
+}
 
-export default Root;
+export default Root
 ```
 
 在上面的例子中，我们使用 Provider 将 Redux 的 store 传递给整个应用程序，从而让 App 组件及其子组件都可以访问到 Redux 的 store。
@@ -275,23 +279,25 @@ export default Root;
 react-redux 提供了 connect 函数，它允许我们将组件连接到 Redux 的 store，从而可以访问 store 中的状态和派发 action。
 
 ```js
-import React from 'react';
-import { connect } from 'react-redux';
+import React from 'react'
+import { connect } from 'react-redux'
 
-const App = (props) => {
+function App(props) {
   // 可以通过props访问store中的状态
-  const { inputValue, list } = props;
+  const { inputValue, list } = props
 
   // ... 省略其它代码
-};
+}
 
 // mapStateToProps函数：将store中的状态映射为组件的props
-const mapStateToProps = (state) => ({
-  inputValue: state.inputValue,
-  list: state.list,
-});
+function mapStateToProps(state) {
+  return {
+    inputValue: state.inputValue,
+    list: state.list,
+  }
+}
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps)(App)
 ```
 
 我们使用 connect 函数将 App 组件连接到 Redux 的 store，通过 mapStateToProps 函数将 store 中的状态映射为组件的 props。现在，App 组件可以通过 props 来访问 Redux 的状态，同时还可以通过 dispatch 方法派发 action 来更新状态。

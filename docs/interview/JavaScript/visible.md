@@ -81,7 +81,7 @@ head:
 公式如下：
 
 ```js
-el.offsetTop - document.documentElement.scrollTop <= viewPortHeight;
+el.offsetTop - document.documentElement.scrollTop <= viewPortHeight
 ```
 
 代码实现：
@@ -89,11 +89,11 @@ el.offsetTop - document.documentElement.scrollTop <= viewPortHeight;
 ```js
 function isInViewPortOfOne(el) {
   // viewPortHeight 兼容所有浏览器写法
-  const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-  const offsetTop = el.offsetTop;
-  const scrollTop = document.documentElement.scrollTop;
-  const top = offsetTop - scrollTop;
-  return top <= viewPortHeight;
+  const viewPortHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+  const offsetTop = el.offsetTop
+  const scrollTop = document.documentElement.scrollTop
+  const top = offsetTop - scrollTop
+  return top <= viewPortHeight
 }
 ```
 
@@ -102,9 +102,9 @@ function isInViewPortOfOne(el) {
 返回值是一个 `DOMRect`对象，拥有`left`, `top`, `right`, `bottom`, `x`, `y`, `width`, 和 `height`属性
 
 ```js
-const target = document.querySelector('.target');
-const clientRect = target.getBoundingClientRect();
-console.log(clientRect);
+const target = document.querySelector('.target')
+const clientRect = target.getBoundingClientRect()
+console.log(clientRect)
 
 // {
 //   bottom: 556.21875,
@@ -133,11 +133,11 @@ console.log(clientRect);
 
 ```js
 function isInViewPort(element) {
-  const viewWidth = window.innerWidth || document.documentElement.clientWidth;
-  const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-  const { top, right, bottom, left } = element.getBoundingClientRect();
+  const viewWidth = window.innerWidth || document.documentElement.clientWidth
+  const viewHeight = window.innerHeight || document.documentElement.clientHeight
+  const { top, right, bottom, left } = element.getBoundingClientRect()
 
-  return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight;
+  return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight
 }
 ```
 
@@ -170,14 +170,14 @@ const observer = new IntersectionObserver(callback, options);
 // 上段代码中被省略的 callback
 const callback = function (entries, observer) {
   entries.forEach((entry) => {
-    entry.time; // 触发的时间
-    entry.rootBounds; // 根元素的位置矩形，这种情况下为视窗位置
-    entry.boundingClientRect; // 被观察者的位置举行
-    entry.intersectionRect; // 重叠区域的位置矩形
-    entry.intersectionRatio; // 重叠区域占被观察者面积的比例（被观察者不是矩形时也按照矩形计算）
-    entry.target; // 被观察者
-  });
-};
+    entry.time // 触发的时间
+    entry.rootBounds // 根元素的位置矩形，这种情况下为视窗位置
+    entry.boundingClientRect // 被观察者的位置举行
+    entry.intersectionRect // 重叠区域的位置矩形
+    entry.intersectionRatio // 重叠区域占被观察者面积的比例（被观察者不是矩形时也按照矩形计算）
+    entry.target // 被观察者
+  })
+}
 ```
 
 #### 传入被观察者
@@ -185,8 +185,8 @@ const callback = function (entries, observer) {
 通过 `observer.observe(target)` 这一行代码即可简单的注册被观察者
 
 ```js
-const target = document.querySelector('.target');
-observer.observe(target);
+const target = document.querySelector('.target')
+observer.observe(target)
 ```
 
 ### 三、案例分析
@@ -217,12 +217,12 @@ observer.observe(target);
 往`container`插入 1000 个元素
 
 ```js
-const $container = $('.container');
+const $container = $('.container')
 
 // 插入 100000 个 <div class="target"></div>
 function createTargets() {
-  const htmlString = new Array(100000).fill('<div class="target"></div>').join('');
-  $container.html(htmlString);
+  const htmlString = Array.from({ length: 100000 }).fill('<div class="target"></div>').join('')
+  $container.html(htmlString)
 }
 ```
 
@@ -230,11 +230,11 @@ function createTargets() {
 
 ```js
 function isInViewPort(element) {
-  const viewWidth = window.innerWidth || document.documentElement.clientWidth;
-  const viewHeight = window.innerHeight || document.documentElement.clientHeight;
-  const { top, right, bottom, left } = element.getBoundingClientRect();
+  const viewWidth = window.innerWidth || document.documentElement.clientWidth
+  const viewHeight = window.innerHeight || document.documentElement.clientHeight
+  const { top, right, bottom, left } = element.getBoundingClientRect()
 
-  return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight;
+  return top >= 0 && left >= 0 && right <= viewWidth && bottom <= viewHeight
 }
 ```
 
@@ -242,13 +242,12 @@ function isInViewPort(element) {
 
 ```js
 $(window).on('scroll', () => {
-  console.log('scroll !');
+  console.log('scroll !')
   $targets.each((index, element) => {
-    if (isInViewPort(element)) {
-      $(element).css('background-color', 'yellow');
-    }
-  });
-});
+    if (isInViewPort(element))
+      $(element).css('background-color', 'yellow')
+  })
+})
 ```
 
 通过上述方式，可以看到可视区域颜色会变成黄色了，但是可以明显看到有卡顿的现象，原因在于我们绑定了`scroll`事件，`scroll`事件伴随了大量的计算，会造成资源方面的浪费
@@ -258,7 +257,7 @@ $(window).on('scroll', () => {
 首先创建一个观察者
 
 ```js
-const observer = new IntersectionObserver(getYellow, { threshold: 1.0 });
+const observer = new IntersectionObserver(getYellow, { threshold: 1.0 })
 ```
 
 `getYellow`回调函数实现对背景颜色改变，如下：
@@ -266,8 +265,8 @@ const observer = new IntersectionObserver(getYellow, { threshold: 1.0 });
 ```js
 function getYellow(entries, observer) {
   entries.forEach((entry) => {
-    $(entry.target).css('background-color', 'yellow');
-  });
+    $(entry.target).css('background-color', 'yellow')
+  })
 }
 ```
 
@@ -275,8 +274,8 @@ function getYellow(entries, observer) {
 
 ```js
 $targets.each((index, element) => {
-  observer.observe(element);
-});
+  observer.observe(element)
+})
 ```
 
 可以看到功能同样完成，并且页面不会出现卡顿的情况

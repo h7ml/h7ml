@@ -35,30 +35,30 @@ head:
 如下例子：
 
 ```jsx
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 
 export default class App extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       message: 'Hello World',
-    };
+    }
   }
 
   render() {
     return (
       <div>
         <h2>{this.state.message}</h2>
-        <button onClick={(e) => this.changeText()}>面试官系列</button>
+        <button onClick={e => this.changeText()}>面试官系列</button>
       </div>
-    );
+    )
   }
 
   changeText() {
     this.setState({
       message: 'JS每日一题',
-    });
+    })
   }
 }
 ```
@@ -85,11 +85,11 @@ changeText() {
 Component.prototype.setState = function (partialState, callback) {
   invariant(
     typeof partialState === 'object' || typeof partialState === 'function' || partialState == null,
-    'setState(...): takes an object of state variables to update or a ' +
-      'function which returns an object of state variables.'
-  );
-  this.updater.enqueueSetState(this, partialState, callback, 'setState');
-};
+    'setState(...): takes an object of state variables to update or a '
+    + 'function which returns an object of state variables.'
+  )
+  this.updater.enqueueSetState(this, partialState, callback, 'setState')
+}
 ```
 
 从上面可以看到`setState`第一个参数可以是一个对象，或者是一个函数，而第二个参数是一个回调函数，用于可以实时的获取到更新之后的数据
@@ -172,19 +172,19 @@ componentDidMount() {
 handleClick = () => {
   this.setState({
     count: this.state.count + 1,
-  });
-  console.log(this.state.count); // 1
+  })
+  console.log(this.state.count) // 1
 
   this.setState({
     count: this.state.count + 1,
-  });
-  console.log(this.state.count); // 1
+  })
+  console.log(this.state.count) // 1
 
   this.setState({
     count: this.state.count + 1,
-  });
-  console.log(this.state.count); // 1
-};
+  })
+  console.log(this.state.count) // 1
+}
 ```
 
 点击按钮触发事件，打印的都是 1，页面显示 `count` 的值为 2
@@ -209,12 +209,12 @@ Object.assign(
 ```jsx
 onClick = () => {
   this.setState((prevState, props) => {
-    return { count: prevState.count + 1 };
-  });
+    return { count: prevState.count + 1 }
+  })
   this.setState((prevState, props) => {
-    return { count: prevState.count + 1 };
-  });
-};
+    return { count: prevState.count + 1 }
+  })
+}
 ```
 
 而在`setTimeout`或者原生`dom`事件中，由于是同步的操作，所以并不会进行覆盖现象

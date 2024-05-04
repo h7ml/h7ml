@@ -64,12 +64,12 @@ head:
 
 ```js
 // 获取目标元素
-const lis = document.getElementsByTagName('li');
+const lis = document.getElementsByTagName('li')
 // 循环遍历绑定事件
 for (let i = 0; i < lis.length; i++) {
   lis[i].onclick = function (e) {
-    console.log(e.target.innerHTML);
-  };
+    console.log(e.target.innerHTML)
+  }
 }
 ```
 
@@ -77,15 +77,14 @@ for (let i = 0; i < lis.length; i++) {
 
 ```js
 // 给父层元素绑定事件
-document.getElementById('list').addEventListener('click', function (e) {
+document.getElementById('list').addEventListener('click', (e) => {
   // 兼容性处理
-  var event = e || window.event;
-  var target = event.target || event.srcElement;
+  const event = e || window.event
+  const target = event.target || event.srcElement
   // 判断是否匹配目标元素
-  if (target.nodeName.toLocaleLowerCase === 'li') {
-    console.log('the content is: ', target.innerHTML);
-  }
-});
+  if (target.nodeName.toLocaleLowerCase === 'li')
+    console.log('the content is: ', target.innerHTML)
+})
 ```
 
 还有一种场景是上述列表项并不多，我们给每个列表项都绑定了事件
@@ -111,26 +110,25 @@ document.getElementById('list').addEventListener('click', function (e) {
 使用事件委托
 
 ```js
-const oBtn = document.getElementById('btn');
-const oUl = document.getElementById('ul1');
-const num = 4;
+const oBtn = document.getElementById('btn')
+const oUl = document.getElementById('ul1')
+const num = 4
 
-//事件委托，添加的子元素也有事件
+// 事件委托，添加的子元素也有事件
 oUl.onclick = function (ev) {
-  ev = ev || window.event;
-  const target = ev.target || ev.srcElement;
-  if (target.nodeName.toLowerCase() == 'li') {
-    console.log('the content is: ', target.innerHTML);
-  }
-};
+  ev = ev || window.event
+  const target = ev.target || ev.srcElement
+  if (target.nodeName.toLowerCase() == 'li')
+    console.log('the content is: ', target.innerHTML)
+}
 
-//添加新节点
+// 添加新节点
 oBtn.onclick = function () {
-  num++;
-  const oLi = document.createElement('li');
-  oLi.innerHTML = `item ${num}`;
-  oUl.appendChild(oLi);
-};
+  num++
+  const oLi = document.createElement('li')
+  oLi.innerHTML = `item ${num}`
+  oUl.appendChild(oLi)
+}
 ```
 
 可以看到，使用事件委托，在动态绑定事件的情况下是可以减少很多重复工作的

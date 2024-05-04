@@ -74,18 +74,18 @@ head:
 
 ```js
 function bubbleSort(arr) {
-  const len = arr.length;
+  const len = arr.length
   for (let i = 0; i < len - 1; i++) {
     for (let j = 0; j < len - 1 - i; j++) {
       if (arr[j] > arr[j + 1]) {
         // 相邻元素两两对比
-        var temp = arr[j + 1]; // 元素交换
-        arr[j + 1] = arr[j];
-        arr[j] = temp;
+        const temp = arr[j + 1] // 元素交换
+        arr[j + 1] = arr[j]
+        arr[j] = temp
       }
     }
   }
-  return arr;
+  return arr
 }
 ```
 
@@ -103,20 +103,20 @@ function bubbleSort(arr) {
 
 ```js
 function bubbleSort1(arr) {
-  const i = arr.length - 1; //初始时,最后位置保持不变
+  const i = arr.length - 1 // 初始时,最后位置保持不变
   while (i > 0) {
-    let pos = 0; //每趟开始时,无记录交换
+    let pos = 0 // 每趟开始时,无记录交换
     for (let j = 0; j < i; j++) {
       if (arr[j] > arr[j + 1]) {
-        let tmp = arr[j];
-        arr[j] = arr[j + 1];
-        arr[j + 1] = tmp;
-        pos = j; //记录最后交换的位置
+        const tmp = arr[j]
+        arr[j] = arr[j + 1]
+        arr[j + 1] = tmp
+        pos = j // 记录最后交换的位置
       }
     }
-    i = pos; //为下一趟排序作准备
+    i = pos // 为下一趟排序作准备
   }
-  return arr;
+  return arr
 }
 ```
 

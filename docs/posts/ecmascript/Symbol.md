@@ -3,8 +3,8 @@
 符号本身是原始类型，所以 typeof 操作符对符号返回 symbol。
 
 ```js
-let sym = Symbol();
-console.log(typeof sym); // symbol
+const sym = Symbol()
+console.log(typeof sym) // symbol
 ```
 
 ## 声明
@@ -18,88 +18,88 @@ console.log(typeof sym); // symbol
 7. 可以被 Object.getOwnPropertySymbols() 和 Reflect.ownKeys() 取到
 
 ```js
-let sy = Symbol('name'); // 不能用 new 命令,参数是备注
-Symbol('KK') == Symbol('KK'); // false
-typeof Symbol('KK'); // 'symbol'
+const sy = Symbol('name') // 不能用 new 命令,参数是备注
+Symbol('KK') == Symbol('KK') // false
+typeof Symbol('KK') // 'symbol'
 ```
 
 作为属性名
 
 ```js
-let sy = Symbol('name');
-var obj = {}; // 设置symbol属性
-obj[sy] = 'kk';
+const sy = Symbol('name')
+const obj = {} // 设置symbol属性
+obj[sy] = 'kk'
 
 // 获取
-obj.sy; // undefined 不能使用.运算符获取
-obj[sy]; // kk
+obj.sy // undefined 不能使用.运算符获取
+obj[sy] // kk
 ```
 
 为了避免创建符号包装对象，Symbol()函数不能与 new 关键字一起作为构造函数使用。
 
 ```js
-let myBoolean = new Boolean();
-console.log(typeof myBoolean); // "object"
+const myBoolean = new Boolean()
+console.log(typeof myBoolean) // "object"
 
-let myString = new String();
-console.log(typeof myString); // "object"
+const myString = new String()
+console.log(typeof myString) // "object"
 
-let myNumber = new Number();
-console.log(typeof myNumber); // "object"
+const myNumber = new Number()
+console.log(typeof myNumber) // "object"
 
-let mySymbol = new Symbol(); // TypeError: Symbol is not a constructor
+const mySymbol = new Symbol() // TypeError: Symbol is not a constructor
 ```
 
 如果要包装对象
 
 ```js
-let mySymbol = Symbol();
-let myWrappedSymbol = Object(mySymbol);
-console.log(typeof myWrappedSymbol); // "object"
+const mySymbol = Symbol()
+const myWrappedSymbol = Object(mySymbol)
+console.log(typeof myWrappedSymbol) // "object"
 ```
 
 - 全局符号注册表第一次调用会检查全局的注册表，不存在则生成新的符号添加到注册表，存在则会直接返回对于的。
 
 ```js
-let fooGlobalSymbol = Symbol.for('foo'); // 创建新符号
-let otherFooGlobalSymbol = Symbol.for('foo'); // 重用已有符号
+const fooGlobalSymbol = Symbol.for('foo') // 创建新符号
+const otherFooGlobalSymbol = Symbol.for('foo') // 重用已有符号
 ```
 
 与 Symbol()定义的符号也并不等同
 
 ```js
-let localSymbol = Symbol('foo');
-let globalSymbol = Symbol.for('foo');
-console.log(localSymbol === globalSymbol); // false
+const localSymbol = Symbol('foo')
+const globalSymbol = Symbol.for('foo')
+console.log(localSymbol === globalSymbol) // false
 ```
 
 Symbol.for()的任何值都会被转换为字符串
 
 ```js
-let emptyGlobalSymbol = Symbol.for();
-console.log(emptyGlobalSymbol); // Symbol(undefined)
+const emptyGlobalSymbol = Symbol.for()
+console.log(emptyGlobalSymbol) // Symbol(undefined)
 ```
 
 Symbol.keyFor()来查询全局注册表
 
 ```js
 // 创建全局符号
-let s = Symbol.for('foo');
-console.log(Symbol.keyFor(s)); // foo
+const s = Symbol.for('foo')
+console.log(Symbol.keyFor(s)) // foo
 // 创建普通符号
-let s2 = Symbol('bar');
-console.log(Symbol.keyFor(s2)); // undefined
+const s2 = Symbol('bar')
+console.log(Symbol.keyFor(s2)) // undefined
 // 如果传给Symbol.keyFor()的不是符号，则该方法抛出TypeError：
-Symbol.keyFor(123); // TypeError: 123 is not a symbol
+Symbol.keyFor(123) // TypeError: 123 is not a symbol
 ```
 
 计算属性语法中使用符号作为属性：
 
 ```js
-let s1 = Symbol('foo'),
-  s2 = Symbol('bar'),
-  s3 = Symbol('baz'),
-  s4 = Symbol('qux');
+const s1 = Symbol('foo')
+const s2 = Symbol('bar')
+const s3 = Symbol('baz')
+const s4 = Symbol('qux')
 Object.defineProperties(
   {
     [s1]: 'foo val',
@@ -108,8 +108,8 @@ Object.defineProperties(
     [s3]: { value: 'baz val' },
     [s4]: { value: 'qux val' },
   }
-);
-console.log(o);
+)
+console.log(o)
 // {Symbol(foo): foo val, Symbol(bar): bar val,
 // Symbol(baz): baz val, Symbol(qux): qux val}
 ```
@@ -132,8 +132,8 @@ console.log(barSymbol);
 ## Symbol.for()
 
 ```js
-var sy = Symbol('a');
-console.log(Symbol.for('a')); // Symbol(a)
+const sy = Symbol('a')
+console.log(Symbol.for('a')) // Symbol(a)
 ```
 
 1. 全局搜索是否存在该名称
@@ -141,8 +141,8 @@ console.log(Symbol.for('a')); // Symbol(a)
 3. 使两个 Symbol 类型的变量相等，生成同一个 Hash 值
 
 ```js
-Symbol('Yellow') === Symbol.for('Yellow'); // false
-Symbol.for('Yellow') === Symbol.for('Yellow'); // true
+Symbol('Yellow') === Symbol.for('Yellow') // false
+Symbol.for('Yellow') === Symbol.for('Yellow') // true
 ```
 
 ## Symbol.keyFor(sym)
@@ -151,14 +151,14 @@ Symbol.for('Yellow') === Symbol.for('Yellow'); // true
 2. 找到返回该 Symbol 的 key 值，字符串类型。否则 undefined
 
 ```js
-var globalSym = Symbol.for('foo'); // 创建一个全局 Symbol
-Symbol.keyFor(globalSym); // "foo"
+const globalSym = Symbol.for('foo') // 创建一个全局 Symbol
+Symbol.keyFor(globalSym) // "foo"
 
-var localSym = Symbol();
-Symbol.keyFor(localSym); // undefined，
+const localSym = Symbol()
+Symbol.keyFor(localSym) // undefined，
 
 // 以下Symbol不是保存在全局Symbol注册表中
-Symbol.keyFor(Symbol.iterator); // undefined
+Symbol.keyFor(Symbol.iterator) // undefined
 ```
 
 ### Symbol.asyncIterator
@@ -169,8 +169,8 @@ Symbol.keyFor(Symbol.iterator); // undefined
 class Foo {
   async *[Symbol.asyncIterator]() {}
 }
-let f = new Foo();
-console.log(f[Symbol.asyncIterator]());
+const f = new Foo()
+console.log(f[Symbol.asyncIterator]())
 // AsyncGenerator {<suspended>}
 ```
 
@@ -181,23 +181,23 @@ console.log(f[Symbol.asyncIterator]());
 ```js
 class Emitter {
   constructor(max) {
-    this.max = max;
-    this.asyncIdx = 0;
+    this.max = max
+    this.asyncIdx = 0
   }
+
   async *[Symbol.asyncIterator]() {
-    while (this.asyncIdx < this.max) {
-      yield new Promise((resolve) => resolve(this.asyncIdx++));
-    }
+    while (this.asyncIdx < this.max)
+      yield new Promise(resolve => resolve(this.asyncIdx++))
   }
 }
 async function asyncCount() {
-  let emitter = new Emitter(5);
+  const emitter = new Emitter(5)
   for await (const x of emitter) {
     // next 调用后的 value
-    console.log(x);
+    console.log(x)
   }
 }
-asyncCount();
+asyncCount()
 // 0
 // 1
 // 2
@@ -213,16 +213,16 @@ instanceof 操作符可以用来确定一个对象实例的原型链上是否有
 
 ```js
 class Bar {}
-let b = new Bar();
-console.log(b instanceof Bar); // true
+const b = new Bar()
+console.log(b instanceof Bar) // true
 ```
 
 ES6 中，instanceof 操作符会使用 Symbol.hasInstance 函数来确定关系
 
 ```js
 class Bar {}
-let b = new Bar();
-console.log(Bar[Symbol.hasInstance](b)); // true
+const b = new Bar()
+console.log(Bar[Symbol.hasInstance](b)) // true
 ```
 
 Baz 继承了 Bar 并覆写了 Symbol.hasInstance，instanceof 操作符也会在原型链上寻找这个属性，所以说就就跟在原型链上寻找其他属性一样，这里重新定义了这个函数
@@ -248,24 +248,24 @@ console.log(b instanceof Baz); // false 同上，返回的值是转换为 Boolea
 - 如果是 true，则被忽略
 
 ```js
-let initial = ['foo'];
-let array = ['bar'];
-console.log(array[Symbol.isConcatSpreadable]); // undefined
-console.log(initial.concat(array)); // ['foo', 'bar']
-array[Symbol.isConcatSpreadable] = false;
-console.log(initial.concat(array)); // ['foo', Array(1)]
+const initial = ['foo']
+const array = ['bar']
+console.log(array[Symbol.isConcatSpreadable]) // undefined
+console.log(initial.concat(array)) // ['foo', 'bar']
+array[Symbol.isConcatSpreadable] = false
+console.log(initial.concat(array)) // ['foo', Array(1)]
 
-let arrayLikeObject = { length: 1, 0: 'baz' };
-console.log(arrayLikeObject[Symbol.isConcatSpreadable]); // undefined
-console.log(initial.concat(arrayLikeObject)); // ['foo', {...}]
-arrayLikeObject[Symbol.isConcatSpreadable] = true;
-console.log(initial.concat(arrayLikeObject)); // ['foo', 'baz']
+const arrayLikeObject = { length: 1, 0: 'baz' }
+console.log(arrayLikeObject[Symbol.isConcatSpreadable]) // undefined
+console.log(initial.concat(arrayLikeObject)) // ['foo', {...}]
+arrayLikeObject[Symbol.isConcatSpreadable] = true
+console.log(initial.concat(arrayLikeObject)) // ['foo', 'baz']
 
-let otherObject = new Set().add('qux');
-console.log(otherObject[Symbol.isConcatSpreadable]); // undefined
-console.log(initial.concat(otherObject)); // ['foo', Set(1)]
-otherObject[Symbol.isConcatSpreadable] = true;
-console.log(initial.concat(otherObject)); // ['foo']
+const otherObject = new Set().add('qux')
+console.log(otherObject[Symbol.isConcatSpreadable]) // undefined
+console.log(initial.concat(otherObject)) // ['foo', Set(1)]
+otherObject[Symbol.isConcatSpreadable] = true
+console.log(initial.concat(otherObject)) // ['foo']
 ```
 
 ### Symbol.iterator
@@ -278,8 +278,8 @@ console.log(initial.concat(otherObject)); // ['foo']
 class Foo {
   *[Symbol.iterator]() {}
 }
-let f = new Foo();
-console.log(f[Symbol.iterator]());
+const f = new Foo()
+console.log(f[Symbol.iterator]())
 // Generator {<suspended>}
 ```
 
@@ -318,9 +318,9 @@ count();
 - 正则表达式的原型上就有 Symbol.match 这个函数
 
 ```js
-console.log(RegExp.prototype[Symbol.match]);
+console.log(RegExp.prototype[Symbol.match])
 // ƒ [Symbol.match]() { [native code] }
-console.log('foobar'.match(/bar/));
+console.log('foobar'.match(/bar/))
 // ["bar", index: 3, input: "foobar", groups: undefined]
 ```
 
@@ -355,9 +355,9 @@ console.log('barbaz'.match(new StringMatcher('qux'))); // false
 - 正则表达式原型上也有 Symbol.replace
 
 ```js
-console.log(RegExp.prototype[Symbol.replace]);
+console.log(RegExp.prototype[Symbol.replace])
 // ƒ [Symbol.replace]() { [native code] }
-console.log('foobarbaz'.replace(/bar/, 'qux'));
+console.log('foobarbaz'.replace(/bar/, 'qux'))
 // 'fooquxbaz'
 ```
 
@@ -390,9 +390,9 @@ console.log('barfoobaz'.replace(new StringReplacer('foo'), 'qux')); // "barquxba
 - 正则表达式原型上也有 Symbol.search
 
 ```js
-console.log(RegExp.prototype[Symbol.search]);
+console.log(RegExp.prototype[Symbol.search])
 // ƒ [Symbol.search]() { [native code] }
-console.log('foobar'.search(/bar/)); // 3
+console.log('foobar'.search(/bar/)) // 3
 ```
 
 search 方法传入非正则表达式值会被转换为 RegExp 对象，重新定义 Symbol.search 函数以取代默认对正则表达式求值的行为
@@ -451,9 +451,9 @@ console.log(baz instanceof Baz); // false
 
 ```js
 class MyArr extends Array {}
-const a = new MyArr(1, 2, 3);
-const b = a.map((item) => item + 1);
-b instanceof MyArr; // true
+const a = new MyArr(1, 2, 3)
+const b = a.map(item => item + 1)
+b instanceof MyArr // true
 ```
 
 1. MyArr 继承 Array，a 是 MyArr 构造的实例，b 又是 a 实例衍生的对象。
@@ -463,13 +463,13 @@ b instanceof MyArr; // true
 ```js
 class MyArray extends Array {
   static get [Symbol.species]() {
-    return Array;
+    return Array
   }
 }
-const a = new MyArray(1, 2, 3);
-const b = a.filter((x) => x < 5);
-b instanceof Array; // true
-b instanceof MyArray; // false
+const a = new MyArray(1, 2, 3)
+const b = a.filter(x => x < 5)
+Array.isArray(b) // true
+b instanceof MyArray // false
 ```
 
 这样，衍生出来的 b 则不是 MyArray 构造出来的了，而是 return 返回 Array 的实例
@@ -481,9 +481,9 @@ b instanceof MyArray; // false
 - 正则表达式原型上也有 Symbol.split
 
 ```js
-console.log(RegExp.prototype[Symbol.split]);
+console.log(RegExp.prototype[Symbol.split])
 // ƒ [Symbol.split]() { [native code] }
-console.log('foobarbaz'.split(/bar/));
+console.log('foobarbaz'.split(/bar/))
 // ['foo', 'baz']
 ```
 
@@ -546,10 +546,10 @@ console.log(String(bar)); // "string bar"
 - toString()获取对象标识时，会查找 Symbol.toStringTag 指定的实例标识符，默认为"Object"。
 
 ```js
-let s = new Set();
-console.log(s); // Set(0) {}
-console.log(s.toString()); // [object Set]
-console.log(s[Symbol.toStringTag]); // Set
+const s = new Set()
+console.log(s) // Set(0) {}
+console.log(s.toString()) // [object Set]
+console.log(s[Symbol.toStringTag]) // Set
 ```
 
 内置类型已经定义了 Symbol.toStringTag 属性，但自定义类需要自己定义：

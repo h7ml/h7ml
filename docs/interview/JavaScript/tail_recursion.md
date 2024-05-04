@@ -44,13 +44,13 @@ head:
 
 ```js
 function pow(x, n) {
-  let result = 1;
+  let result = 1
 
   // 再循环中，用 x 乘以 result n 次
-  for (let i = 0; i < n; i++) {
-    result *= x;
-  }
-  return result;
+  for (let i = 0; i < n; i++)
+    result *= x
+
+  return result
 }
 ```
 
@@ -58,11 +58,10 @@ function pow(x, n) {
 
 ```js
 function pow(x, n) {
-  if (n == 1) {
-    return x;
-  } else {
-    return x * pow(x, n - 1);
-  }
+  if (n == 1)
+    return x
+  else
+    return x * pow(x, n - 1)
 }
 ```
 
@@ -106,11 +105,12 @@ pow(x, n) =
 
 ```js
 function factorial(n) {
-  if (n === 1) return 1;
-  return n * factorial(n - 1);
+  if (n === 1)
+    return 1
+  return n * factorial(n - 1)
 }
 
-factorial(5); // 120
+factorial(5) // 120
 ```
 
 如果`n`等于 5，这个方法要执行 5 次，才返回最终的计算表达式，这样每次都要保存这个方法，就容易造成栈溢出，复杂度为`O(n)`
@@ -119,11 +119,12 @@ factorial(5); // 120
 
 ```js
 function factorial(n, total) {
-  if (n === 1) return total;
-  return factorial(n - 1, n * total);
+  if (n === 1)
+    return total
+  return factorial(n - 1, n * total)
 }
 
-factorial(5, 1); // 120
+factorial(5, 1) // 120
 ```
 
 可以看到，每一次返回的就是一个新的函数，不带上一个函数的参数，也就不需要储存上一个函数了。尾递归只需要保存一个调用栈，复杂度 O(1)
@@ -134,10 +135,10 @@ factorial(5, 1); // 120
 
 ```js
 function sumArray(arr, total) {
-  if (arr.length === 1) {
-    return total;
-  }
-  return sum(arr, total + arr.pop());
+  if (arr.length === 1)
+    return total
+
+  return sum(arr, total + arr.pop())
 }
 ```
 
@@ -145,10 +146,10 @@ function sumArray(arr, total) {
 
 ```js
 function factorial2(n, start = 1, total = 1) {
-  if (n <= 2) {
-    return total;
-  }
-  return factorial2(n - 1, total, total + start);
+  if (n <= 2)
+    return total
+
+  return factorial2(n - 1, total, total + start)
 }
 ```
 

@@ -58,20 +58,20 @@ head:
 然后，我们给`button`和它的父元素，加入点击事件
 
 ```js
-var button = document.getElementById('clickMe');
+const button = document.getElementById('clickMe')
 
 button.onclick = function () {
-  console.log('1.Button');
-};
+  console.log('1.Button')
+}
 document.body.onclick = function () {
-  console.log('2.body');
-};
+  console.log('2.body')
+}
 document.onclick = function () {
-  console.log('3.document');
-};
+  console.log('3.document')
+}
 window.onclick = function () {
-  console.log('4.window');
-};
+  console.log('4.window')
+}
 ```
 
 点击按钮，输出如下
@@ -108,8 +108,8 @@ window.onclick = function () {
 - 通过`JS`代码绑定
 
 ```js
-var btn = document.getElementById('.btn');
-btn.onclick = fun;
+const btn = document.getElementById('.btn')
+btn.onclick = fun
 ```
 
 #### 特性
@@ -134,7 +134,7 @@ btn.onclick = fun2;
 删除 `DOM0` 级事件处理程序只要将对应事件属性置为`null`即可
 
 ```js
-btn.onclick = null;
+btn.onclick = null
 ```
 
 ### 标准事件模型
@@ -198,17 +198,17 @@ btn.addEventListener(‘click’, showMessage3, false);
 设置点击事件
 
 ```js
-var div = document.getElementById('div');
-var p = document.getElementById('p');
+const div = document.getElementById('div')
+const p = document.getElementById('p')
 
 function onClickFn(event) {
-  var tagName = event.currentTarget.tagName;
-  var phase = event.eventPhase;
-  console.log(tagName, phase);
+  const tagName = event.currentTarget.tagName
+  const phase = event.eventPhase
+  console.log(tagName, phase)
 }
 
-div.addEventListener('click', onClickFn, false);
-p.addEventListener('click', onClickFn, false);
+div.addEventListener('click', onClickFn, false)
+p.addEventListener('click', onClickFn, false)
 ```
 
 上述使用了`eventPhase`，返回一个代表当前执行阶段的整数值。1 为捕获阶段、2 为事件对象触发阶段、3 为冒泡阶段
@@ -225,8 +225,8 @@ DIV 3
 如果把第三个参数都改为`true`
 
 ```js
-div.addEventListener('click', onClickFn, true);
-p.addEventListener('click', onClickFn, true);
+div.addEventListener('click', onClickFn, true)
+p.addEventListener('click', onClickFn, true)
 ```
 
 输出如下

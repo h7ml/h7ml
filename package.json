@@ -1,11 +1,14 @@
 {
   "name": "rspress-doc-template",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "rspress dev",
     "build": "rspress build",
-    "preview": "rspress preview"
+    "preview": "rspress preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "dependencies": {
     "@rspress/core": "^1.19.1",
@@ -16,7 +19,9 @@
     "rspress": "^1.19.1"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^2.16.1",
     "@types/node": "^20",
-    "@types/react": "^18.3.1"
+    "@types/react": "^18.3.1",
+    "eslint": "^9.2.0"
   }
 }

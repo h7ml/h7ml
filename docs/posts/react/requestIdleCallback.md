@@ -33,7 +33,7 @@ lastUpdated: false
 ![](https://alvin-cdn.oss-cn-shenzhen.aliyuncs.com/images/browser-frame2.webp)
 
 ```js
-window.requestIdleCallback(workLoop, { timeout: 50 });
+window.requestIdleCallback(workLoop, { timeout: 50 })
 
 // 优先级较低的工作
 function workLoop(deadline) {
@@ -43,9 +43,8 @@ function workLoop(deadline) {
   }
 
   // 有未完成的任务 则重新调度
-  if (works.length > 0) {
-    window.requestIdleCallback(workLoop, { timeout: 50 });
-  }
+  if (works.length > 0)
+    window.requestIdleCallback(workLoop, { timeout: 50 })
 }
 ```
 
@@ -79,33 +78,34 @@ function workLoop(deadline) {
 ::: tab React polyfill
 
 ```js
-export let requestHostCallback; // 类似requestIdleCallback
-export let cancelHostCallback; // 类似cancelIdleCallback
-export let requestHostTimeout; // 非dom环境的实现
-export let cancelHostTimeout; // 取消requestHostTimeout
-export let shouldYieldToHost; // 判断任务是否超时,需要被打断
-export let requestPaint; //
-export let getCurrentTime; // 获取当前时间
-export let forceFrameRate; // 根据fps计算帧时间
+export let requestHostCallback // 类似requestIdleCallback
+export let cancelHostCallback // 类似cancelIdleCallback
+export let requestHostTimeout // 非dom环境的实现
+export let cancelHostTimeout // 取消requestHostTimeout
+export let shouldYieldToHost // 判断任务是否超时,需要被打断
+export let requestPaint //
+export let getCurrentTime // 获取当前时间
+export let forceFrameRate // 根据fps计算帧时间
 // 非dom环境
 if (typeof window === 'undefined' || typeof MessageChannel !== 'function') {
-  let _callback = null; // 正在执行的回调
-  let _timeoutID = null;
+  let _callback = null // 正在执行的回调
+  let _timeoutID = null
   const _flushCallback = function () {
     // 如果回调存在则执行，
     if (_callback !== null) {
       try {
-        const currentTime = getCurrentTime();
-        const hasRemainingTime = true;
+        const currentTime = getCurrentTime()
+        const hasRemainingTime = true
         // hasRemainingTime 类似deadline.didTimeout
-        _callback(hasRemainingTime, currentTime);
-        _callback = null;
-      } catch (e) {
-        setTimeout(_flushCallback, 0);
-        throw e;
+        _callback(hasRemainingTime, currentTime)
+        _callback = null
+      }
+      catch (e) {
+        setTimeout(_flushCallback, 0)
+        throw e
       }
     }
-  };
+  }
 
   // ...
 
@@ -113,66 +113,71 @@ if (typeof window === 'undefined' || typeof MessageChannel !== 'function') {
     // 若_callback存在，表示当下有任务再继续，
     if (_callback !== null) {
       // setTimeout的第三个参数可以延后执行任务。
-      setTimeout(requestHostCallback, 0, cb);
-    } else {
-      // 否则直接执行。
-      _callback = cb;
-      setTimeout(_flushCallback, 0);
+      setTimeout(requestHostCallback, 0, cb)
     }
-  };
+    else {
+      // 否则直接执行。
+      _callback = cb
+      setTimeout(_flushCallback, 0)
+    }
+  }
   cancelHostCallback = function () {
-    _callback = null;
-  };
+    _callback = null
+  }
   requestHostTimeout = function (cb, ms) {
-    _timeoutID = setTimeout(cb, ms);
-  };
+    _timeoutID = setTimeout(cb, ms)
+  }
   cancelHostTimeout = function () {
-    clearTimeout(_timeoutID);
-  };
+    clearTimeout(_timeoutID)
+  }
   shouldYieldToHost = function () {
-    return false;
-  };
-  requestPaint = forceFrameRate = function () {};
-} else {
+    return false
+  }
+  requestPaint = forceFrameRate = function () {}
+}
+else {
   // 一大堆的浏览器方法的判断，有performance， requestAnimationFrame， cancelAnimationFrame
   // ...
   const performWorkUntilDeadline = () => {
     if (scheduledHostCallback !== null) {
-      const currentTime = getCurrentTime();
+      const currentTime = getCurrentTime()
       // yieldInterval每帧的时间，deadline为最终期限时间
-      deadline = currentTime + yieldInterval;
-      const hasTimeRemaining = true;
+      deadline = currentTime + yieldInterval
+      const hasTimeRemaining = true
       try {
-        const hasMoreWork = scheduledHostCallback(hasTimeRemaining, currentTime);
+        const hasMoreWork = scheduledHostCallback(hasTimeRemaining, currentTime)
         if (!hasMoreWork) {
-          isMessageLoopRunning = false;
-          scheduledHostCallback = null;
-        } else {
-          // 如果有更多的工作，就把下一个消息事件安排在前一个消息事件的最后
-          port.postMessage(null);
+          isMessageLoopRunning = false
+          scheduledHostCallback = null
         }
-      } catch (error) {
-        // 如果调度任务抛出，则退出当前浏览器任务，以便观察错误。
-        port.postMessage(null);
-        throw error;
+        else {
+          // 如果有更多的工作，就把下一个消息事件安排在前一个消息事件的最后
+          port.postMessage(null)
+        }
       }
-    } else {
-      isMessageLoopRunning = false;
+      catch (error) {
+        // 如果调度任务抛出，则退出当前浏览器任务，以便观察错误。
+        port.postMessage(null)
+        throw error
+      }
     }
-    needsPaint = false;
-  };
+    else {
+      isMessageLoopRunning = false
+    }
+    needsPaint = false
+  }
 
-  const channel = new MessageChannel();
-  const port = channel.port2;
-  channel.port1.onmessage = performWorkUntilDeadline;
+  const channel = new MessageChannel()
+  const port = channel.port2
+  channel.port1.onmessage = performWorkUntilDeadline
 
   requestHostCallback = function (callback) {
-    scheduledHostCallback = callback;
+    scheduledHostCallback = callback
     if (!isMessageLoopRunning) {
-      isMessageLoopRunning = true;
-      port.postMessage(null);
+      isMessageLoopRunning = true
+      port.postMessage(null)
     }
-  };
+  }
 }
 ```
 
@@ -182,95 +187,95 @@ if (typeof window === 'undefined' || typeof MessageChannel !== 'function') {
 
 ```js
 class RequestIdle {
-  deadlineTime = null;
-  callback = () => {};
-  channel = null;
-  port1 = null;
-  port2 = null;
-  isWaitingAvailableFrame = true;
+  deadlineTime = null
+  callback = () => {}
+  channel = null
+  port1 = null
+  port2 = null
+  isWaitingAvailableFrame = true
 
   constructor() {
-    this.channel = new MessageChannel();
-    this.port1 = this.channel.port1;
-    this.port2 = this.channel.port2;
+    this.channel = new MessageChannel()
+    this.port1 = this.channel.port1
+    this.port2 = this.channel.port2
     this.port2.onmessage = () => {
-      const timeRemaining = () => this.deadlineTime - performance.now();
-      const _timeRemain = timeRemaining();
+      const timeRemaining = () => this.deadlineTime - performance.now()
+      const _timeRemain = timeRemaining()
       if (_timeRemain > 0 && this.callback && this.isWaitingAvailableFrame) {
         const deadline = {
           timeRemaining,
           didTimeout: _timeRemain < 0,
-        };
-        this.callback(deadline);
-        this.isWaitingAvailableFrame = false;
-      } else if (this.isWaitingAvailableFrame) {
-        this.RequestIdleCallback(this.callback);
+        }
+        this.callback(deadline)
+        this.isWaitingAvailableFrame = false
       }
-    };
+      else if (this.isWaitingAvailableFrame) {
+        this.RequestIdleCallback(this.callback)
+      }
+    }
   }
 
   RequestIdleCallback = function (cb) {
-    const SECONDE_DURATION = 1000;
-    const FRAME_DURATION = SECONDE_DURATION / 60;
-    this.callback = cb;
-    this.isWaitingAvailableFrame = true;
+    const SECONDE_DURATION = 1000
+    const FRAME_DURATION = SECONDE_DURATION / 60
+    this.callback = cb
+    this.isWaitingAvailableFrame = true
     if (!document.hidden) {
       requestAnimationFrame((rafTime) => {
-        this.deadlineTime = rafTime + FRAME_DURATION;
-        this.port1.postMessage(null);
-      });
-    } else {
-      this.deadlineTime = performance.now() + SECONDE_DURATION;
-      this.port1.postMessage(null);
+        this.deadlineTime = rafTime + FRAME_DURATION
+        this.port1.postMessage(null)
+      })
     }
-  };
+    else {
+      this.deadlineTime = performance.now() + SECONDE_DURATION
+      this.port1.postMessage(null)
+    }
+  }
 }
 ```
 
 调用：
 
 ```js
-const idle = new RequestIdle();
+const idle = new RequestIdle()
 
-idle.RequestIdleCallback(workLoop);
+idle.RequestIdleCallback(workLoop)
 
 function workLoop(deadline) {
-  console.log(`本帧剩余时间 ${parseInt(deadline.timeRemaining())}`);
+  console.log(`本帧剩余时间 ${Number.parseInt(deadline.timeRemaining())}`)
 
   // 如果帧内有富余的时间，或者超时 则执行任务
-  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && works.length > 0) {
-    console.log(33);
-  }
+  while ((deadline.timeRemaining() > 0 || deadline.didTimeout) && works.length > 0)
+    console.log(33)
 
   // 有未完成的任务 则重新调度
-  if (works.length > 0) {
-    idle.RequestIdleCallback(workLoop);
-  }
+  if (works.length > 0)
+    idle.RequestIdleCallback(workLoop)
 }
 
 function sleep(delay) {
-  for (let start = Date.now(); Date.now() - start <= delay; ) {
+  for (let start = Date.now(); Date.now() - start <= delay;) {
     // ...
   }
 }
 
 const works = [
   () => {
-    console.log('第一个任务开始');
-    sleep(20);
-    console.log('第一个任务结束');
+    console.log('第一个任务开始')
+    sleep(20)
+    console.log('第一个任务结束')
   },
   () => {
-    console.log('第二个任务开始');
-    sleep(20);
-    console.log('第二个任务结束');
+    console.log('第二个任务开始')
+    sleep(20)
+    console.log('第二个任务结束')
   },
   () => {
-    console.log('第三个任务开始');
-    sleep(20);
-    console.log('第三个任务结束');
+    console.log('第三个任务开始')
+    sleep(20)
+    console.log('第三个任务结束')
   },
-];
+]
 ```
 
 :::

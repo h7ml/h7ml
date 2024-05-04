@@ -32,10 +32,10 @@ head:
 
 什么是集合？什么又是字典？
 
-- 集合  
+- 集合
   是由一堆无序的、相关联的，且不重复的内存结构【数学中称为元素】组成的组合
 
-- 字典  
+- 字典
   是一些元素的集合。每个元素有一个称作 key 的域，不同元素的 key 各不相同
 
 区别？
@@ -50,7 +50,7 @@ head:
 `Set`本身是一个构造函数，用来生成 Set 数据结构
 
 ```js
-const s = new Set();
+const s = new Set()
 ```
 
 ### 增删改查
@@ -70,7 +70,7 @@ const s = new Set();
 当添加实例中已经存在的元素，`set`不会进行处理添加
 
 ```js
-s.add(1).add(2).add(2); // 2只被添加了一次
+s.add(1).add(2).add(2) // 2只被添加了一次
 ```
 
 ### delete()
@@ -78,7 +78,7 @@ s.add(1).add(2).add(2); // 2只被添加了一次
 删除某个值，返回一个布尔值，表示删除是否成功
 
 ```js
-s.delete(1);
+s.delete(1)
 ```
 
 ### has()
@@ -86,7 +86,7 @@ s.delete(1);
 返回一个布尔值，判断该值是否为`Set`的成员
 
 ```js
-s.has(2);
+s.has(2)
 ```
 
 ### clear()
@@ -94,7 +94,7 @@ s.has(2);
 清除所有成员，没有返回值
 
 ```js
-s.clear();
+s.clear()
 ```
 
 ### 遍历
@@ -185,7 +185,7 @@ let difference = new Set([...a].filter((x) => !b.has(x)));
 `Map`本身是一个构造函数，用来生成 `Map` 数据结构
 
 ```js
-const m = new Map();
+const m = new Map()
 ```
 
 ### 增删改查
@@ -348,7 +348,7 @@ map.forEach(function (value, key, map) {
 创建`WeakSet`实例
 
 ```js
-const ws = new WeakSet();
+const ws = new WeakSet()
 ```
 
 `WeakSet`可以接受一个具有 `Iterable`接口的对象作为参数
@@ -357,8 +357,8 @@ const ws = new WeakSet();
 const a = [
   [1, 2],
   [3, 4],
-];
-const ws = new WeakSet(a);
+]
+const ws = new WeakSet(a)
 // WeakSet {[1, 2], [3, 4]}
 ```
 
@@ -444,13 +444,13 @@ wm.get(element); // "some information"
 下面代码中，键值`obj`会在`WeakMap`产生新的引用，当你修改`obj`不会影响到内部
 
 ```js
-const wm = new WeakMap();
-let key = {};
-let obj = { foo: 1 };
+const wm = new WeakMap()
+const key = {}
+let obj = { foo: 1 }
 
-wm.set(key, obj);
-obj = null;
-wm.get(key);
+wm.set(key, obj)
+obj = null
+wm.get(key)
 // Object {foo: 1}
 ```
 

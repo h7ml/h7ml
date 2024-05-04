@@ -56,20 +56,20 @@ head:
 ```js
 // async 函数
 app.use(async (ctx, next) => {
-  const start = Date.now();
-  await next();
-  const ms = Date.now() - start;
-  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-});
+  const start = Date.now()
+  await next()
+  const ms = Date.now() - start
+  console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+})
 
 // 普通函数
 app.use((ctx, next) => {
-  const start = Date.now();
+  const start = Date.now()
   return next().then(() => {
-    const ms = Date.now() - start;
-    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`);
-  });
-});
+    const ms = Date.now() - start
+    console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
+  })
+})
 ```
 
 下面则通过中间件封装`http`请求过程中几个常用的功能：
@@ -100,16 +100,16 @@ module.exports = (options) => async (ctx, next) {
 ### 日志模块
 
 ```js
-const fs = require('fs');
-module.exports = (options) => async (ctx, next) => {
-  const startTime = Date.now();
-  const requestTime = new Date();
-  await next();
-  const ms = Date.now() - startTime;
-  let logout = `${ctx.request.ip} -- ${requestTime} -- ${ctx.method} -- ${ctx.url} -- ${ms}ms`;
+const fs = require('node:fs')
+module.exports = options => async (ctx, next) => {
+  const startTime = Date.now()
+  const requestTime = new Date()
+  await next()
+  const ms = Date.now() - startTime
+  const logout = `${ctx.request.ip} -- ${requestTime} -- ${ctx.method} -- ${ctx.url} -- ${ms}ms`
   // 输出日志文件
-  fs.appendFileSync('./log.txt', logout + '\n');
-};
+  fs.appendFileSync('./log.txt', `${logout}\n`)
+}
 ```
 
 `Koa`存在很多第三方的中间件，如`koa-bodyparser`、`koa-static`等
@@ -122,42 +122,43 @@ module.exports = (options) => async (ctx, next) => {
 
 ```js
 // 文件：my-koa-bodyparser.js
-const querystring = require('querystring');
+const querystring = require('node:querystring')
 
 module.exports = function bodyParser() {
   return async (ctx, next) => {
     await new Promise((resolve, reject) => {
       // 存储数据的数组
-      let dataArr = [];
+      const dataArr = []
 
       // 接收数据
-      ctx.req.on('data', (data) => dataArr.push(data));
+      ctx.req.on('data', data => dataArr.push(data))
 
       // 整合数据并使用 Promise 成功
       ctx.req.on('end', () => {
         // 获取请求数据的类型 json 或表单
-        let contentType = ctx.get('Content-Type');
+        const contentType = ctx.get('Content-Type')
 
         // 获取数据 Buffer 格式
-        let data = Buffer.concat(dataArr).toString();
+        const data = Buffer.concat(dataArr).toString()
 
         if (contentType === 'application/x-www-form-urlencoded') {
           // 如果是表单提交，则将查询字符串转换成对象赋值给 ctx.request.body
-          ctx.request.body = querystring.parse(data);
-        } else if (contentType === 'applaction/json') {
+          ctx.request.body = querystring.parse(data)
+        }
+        else if (contentType === 'applaction/json') {
           // 如果是 json，则将字符串格式的对象转换成对象赋值给 ctx.request.body
-          ctx.request.body = JSON.parse(data);
+          ctx.request.body = JSON.parse(data)
         }
 
         // 执行成功的回调
-        resolve();
-      });
-    });
+        resolve()
+      })
+    })
 
     // 继续向下执行
-    await next();
-  };
-};
+    await next()
+  }
+}
 ```
 
 ### koa-static
@@ -165,43 +166,45 @@ module.exports = function bodyParser() {
 `koa-static` 中间件的作用是在服务器接到请求时，帮我们处理静态文件
 
 ```js
-const fs = require('fs');
-const path = require('path');
-const mime = require('mime');
-const { promisify } = require('util');
+const fs = require('node:fs')
+const path = require('node:path')
+const { promisify } = require('node:util')
+const mime = require('mime')
 
 // 将 stat 和 access 转换成 Promise
-const stat = promisify(fs.stat);
-const access = promisify(fs.access);
+const stat = promisify(fs.stat)
+const access = promisify(fs.access)
 
 module.exports = function (dir) {
   return async (ctx, next) => {
     // 将访问的路由处理成绝对路径，这里要使用 join 因为有可能是 /
-    let realPath = path.join(dir, ctx.path);
+    const realPath = path.join(dir, ctx.path)
 
     try {
       // 获取 stat 对象
-      let statObj = await stat(realPath);
+      const statObj = await stat(realPath)
 
       // 如果是文件，则设置文件类型并直接响应内容，否则当作文件夹寻找 index.html
       if (statObj.isFile()) {
-        ctx.set('Content-Type', `${mime.getType()};charset=utf8`);
-        ctx.body = fs.createReadStream(realPath);
-      } else {
-        let filename = path.join(realPath, 'index.html');
+        ctx.set('Content-Type', `${mime.getType()};charset=utf8`)
+        ctx.body = fs.createReadStream(realPath)
+      }
+      else {
+        const filename = path.join(realPath, 'index.html')
 
         // 如果不存在该文件则执行 catch 中的 next 交给其他中间件处理
-        await access(filename);
+        await access(filename)
 
         // 存在设置文件类型并响应内容
-        ctx.set('Content-Type', 'text/html;charset=utf8');
-        ctx.body = fs.createReadStream(filename);
+        ctx.set('Content-Type', 'text/html;charset=utf8')
+        ctx.body = fs.createReadStream(filename)
       }
-    } catch (e) {
-      await next();
     }
-  };
-};
+    catch (e) {
+      await next()
+    }
+  }
+}
 ```
 
 ## 三、总结

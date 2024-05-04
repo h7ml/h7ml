@@ -59,13 +59,13 @@ npm i @types/react-dom -s
 主要作用是用于展示 `UI`，如果使用 `js` 声明，则如下所示：
 
 ```jsx
-import * as React from 'React';
+import * as React from 'React'
 
-export const Logo = (props) => {
-  const { logo, className, alt } = props;
+export function Logo(props) {
+  const { logo, className, alt } = props
 
-  return <img src={logo} className={className} alt={alt} />;
-};
+  return <img src={logo} className={className} alt={alt} />
+}
 ```
 
 但这时候 `ts` 会出现报错提示，原因在于没有定义 `porps` 类型，这时候就可以使用 `interface` 接口去定义 `porps` 即可，如下：

@@ -49,21 +49,21 @@ const data = [
   { id: 1, name: 'def' },
   { id: 2, name: 'ghi' },
   { id: 3, name: 'jkl' },
-];
+]
 
-const ListItem = (props) => {
-  return <li>{props.name}</li>;
-};
+function ListItem(props) {
+  return <li>{props.name}</li>
+}
 
-const List = () => {
+function List() {
   return (
     <ul>
-      {data.map((item) => (
+      {data.map(item => (
         <ListItem name={item.name}></ListItem>
       ))}
     </ul>
-  );
-};
+  )
+}
 ```
 
 然后在输出就可以看到`react`所提示的警告信息：
@@ -77,15 +77,15 @@ Each child in a list should have a unique "key" prop.
 在这里可以使用列表的`id`属性作为`key`值以解决上面这个警告
 
 ```jsx
-const List = () => {
+function List() {
   return (
     <ul>
-      {data.map((item) => (
+      {data.map(item => (
         <ListItem name={item.name} key={item.id}></ListItem>
       ))}
     </ul>
-  );
-};
+  )
+}
 ```
 
 ## 二、作用

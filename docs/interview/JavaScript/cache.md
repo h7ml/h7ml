@@ -71,7 +71,7 @@ Path=/docs   # /docs/Web/ 下的资源会带 Cookie 首部
 关于`cookie`的使用如下：
 
 ```js
-document.cookie = '名字=值';
+document.cookie = '名字=值'
 ```
 
 关于`cookie`的修改，首先要确定`domain`和`path`属性都是相同的才可以，其中有一个不同得时候都会创建出一个新的`cookie`
@@ -101,31 +101,31 @@ document.cookie =name=bb; domain=aa.net; path=/  # 客户端设置
 设置
 
 ```js
-localStorage.setItem('username', 'cfangxu');
+localStorage.setItem('username', 'cfangxu')
 ```
 
 获取
 
 ```js
-localStorage.getItem('username');
+localStorage.getItem('username')
 ```
 
 获取键名
 
 ```js
-localStorage.key(0); //获取第一个键名
+localStorage.key(0) // 获取第一个键名
 ```
 
 删除
 
 ```js
-localStorage.removeItem('username');
+localStorage.removeItem('username')
 ```
 
 一次性清除所有存储
 
 ```js
-localStorage.clear();
+localStorage.clear()
 ```
 
 `localStorage` 也不是完美的，它有两个缺点：
@@ -134,8 +134,8 @@ localStorage.clear();
 - 只能存入字符串，无法直接存对象
 
 ```js
-localStorage.setItem('key', { name: 'value' });
-console.log(localStorage.getItem('key')); // '[object, Object]'
+localStorage.setItem('key', { name: 'value' })
+console.log(localStorage.getItem('key')) // '[object, Object]'
 ```
 
 ### sessionStorage

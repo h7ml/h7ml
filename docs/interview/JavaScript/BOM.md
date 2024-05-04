@@ -45,14 +45,14 @@ head:
 因此所有在全局作用域中声明的变量、函数都会变成`window`对象的属性和方法
 
 ```js
-var name = 'js每日一题';
+const name = 'js每日一题'
 function lookName() {
-  alert(this.name);
+  alert(this.name)
 }
 
-console.log(window.name); //js每日一题
-lookName(); //js每日一题
-window.lookName(); //js每日一题
+console.log(window.name) // js每日一题
+lookName() // js每日一题
+window.lookName() // js每日一题
 ```
 
 关于窗口控制方法如下：
@@ -76,7 +76,7 @@ window.open('htttp://www.vue3js.cn','topFrame')
 `window.open()` 会返回新窗口的引用，也就是新窗口的 `window` 对象
 
 ```js
-const myWin = window.open('http://www.vue3js.cn', 'myWin');
+const myWin = window.open('http://www.vue3js.cn', 'myWin')
 ```
 
 `window.close()` 仅用于通过 `window.open()` 打开的窗口
@@ -137,14 +137,14 @@ http://foouser:barpassword@www.wrox.com:80/WileyCDA/?q=javascript#contents
 接收一个整数数字或者字符串参数：向最近的一个记录中包含指定字符串的页面跳转，
 
 ```js
-history.go('maixaofei.com');
+history.go('maixaofei.com')
 ```
 
 当参数为整数数字的时候，正数表示向前跳转指定的页面，负数为向后跳转指定的页面
 
 ```js
-history.go(3); //向前跳转三个记录
-history.go(-1); //向后跳转一个记录
+history.go(3) // 向前跳转三个记录
+history.go(-1) // 向后跳转一个记录
 ```
 
 - `history.forward()`：向前跳转一个页面

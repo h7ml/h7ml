@@ -35,20 +35,27 @@ head:
 ```jsx
 class Button extends React.Component {
   constructor() {
-    super();
+    super()
     this.state = {
       count: 0,
-    };
+    }
   }
 
   updateCount() {
     this.setState((prevState, props) => {
-      return { count: prevState.count + 1 };
-    });
+      return { count: prevState.count + 1 }
+    })
   }
 
   render() {
-    return <button onClick={() => this.updateCount()}>Clicked {this.state.count} times</button>;
+    return (
+      <button onClick={() => this.updateCount()}>
+        Clicked
+        {this.state.count}
+        {' '}
+        times
+      </button>
+    )
   }
 }
 ```
@@ -61,7 +68,7 @@ this.setState(
     name: 'JS每日一题',
   },
   () => console.log('setState finished')
-);
+)
 ```
 
 ## 二、props
@@ -77,11 +84,16 @@ this.setState(
 ```jsx
 class Welcome extends React.Component {
   render() {
-    return <h1>Hello {this.props.name}</h1>;
+    return (
+      <h1>
+        Hello
+        {this.props.name}
+      </h1>
+    )
   }
 }
 
-const element = <Welcome name="Sara" onNameChanged={this.handleName} />;
+const element = <Welcome name="Sara" onNameChanged={this.handleName} />
 ```
 
 上述 `name` 属性与 `onNameChanged` 方法都能在子组件的 `props` 变量中访问

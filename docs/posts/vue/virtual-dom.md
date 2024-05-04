@@ -35,10 +35,10 @@ lastUpdated: false
 对应的 virtual DOM（伪代码）：
 
 ```js
-var Vnode = {
+const Vnode = {
   tag: 'div',
   children: [{ tag: 'p', text: '123' }],
-};
+}
 ```
 
 （温馨提示：`VNode`和`oldVNode`都是对象，一定要记住）

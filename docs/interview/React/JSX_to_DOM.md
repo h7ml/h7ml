@@ -50,7 +50,7 @@ React.createElement(
     className: 'profile',
   }),
   React.createElement(Hello, null)
-);
+)
 ```
 
 在转化过程中，`babel`在编译时会判断 JSX 中组件的首字母：
@@ -62,7 +62,7 @@ React.createElement(
 最终都会通过`RenderDOM.render(...)`方法进行挂载，如下：
 
 ```jsx
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'))
 ```
 
 ## 二、过程
@@ -80,14 +80,15 @@ ReactDOM.render(<App />, document.getElementById('root'));
 class ClassComponent extends Component {
   static defaultProps = {
     color: 'pink',
-  };
+  }
+
   render() {
     return (
       <div className="border">
         <h3>ClassComponent</h3>
         <p className={this.props.color}>{this.props.name}</p>
       </div>
-    );
+    )
   }
 }
 
@@ -97,7 +98,7 @@ function FunctionComponent(props) {
       FunctionComponent
       <p>{props.name}</p>
     </div>
-  );
+  )
 }
 
 const jsx = (
@@ -107,7 +108,7 @@ const jsx = (
     <FunctionComponent name="函数组件" />
     <ClassComponent name="类组件" color="red" />
   </div>
-);
+)
 ```
 
 这些类别最终都会被转化成`React.createElement`这种形式
@@ -117,18 +118,18 @@ const jsx = (
 ```js
 function createElement(type, config, ...children) {
   if (config) {
-    delete config.__self;
-    delete config.__source;
+    delete config.__self
+    delete config.__source
   }
   // ! 源码中做了详细处理，⽐如过滤掉key、ref等
   const props = {
     ...config,
-    children: children.map((child) => (typeof child === 'object' ? child : createTextNode(child))),
-  };
+    children: children.map(child => (typeof child === 'object' ? child : createTextNode(child))),
+  }
   return {
     type,
     props,
-  };
+  }
 }
 function createTextNode(text) {
   return {
@@ -137,11 +138,11 @@ function createTextNode(text) {
       children: [],
       nodeValue: text,
     },
-  };
+  }
 }
 export default {
   createElement,
-};
+}
 ```
 
 `createElement`会根据传入的节点信息进行一个判断：
@@ -165,77 +166,78 @@ ReactDOM.render(element, container[, callback])
 
 ```js
 function render(vnode, container) {
-  console.log('vnode', vnode); // 虚拟DOM对象
+  console.log('vnode', vnode) // 虚拟DOM对象
   // vnode _> node
-  const node = createNode(vnode, container);
-  container.appendChild(node);
+  const node = createNode(vnode, container)
+  container.appendChild(node)
 }
 
 // 创建真实DOM节点
 function createNode(vnode, parentNode) {
-  let node = null;
-  const { type, props } = vnode;
-  if (type === TEXT) {
-    node = document.createTextNode('');
-  } else if (typeof type === 'string') {
-    node = document.createElement(type);
-  } else if (typeof type === 'function') {
-    node = type.isReactComponent ? updateClassComponent(vnode, parentNode) : updateFunctionComponent(vnode, parentNode);
-  } else {
-    node = document.createDocumentFragment();
-  }
-  reconcileChildren(props.children, node);
-  updateNode(node, props);
-  return node;
+  let node = null
+  const { type, props } = vnode
+  if (type === TEXT)
+    node = document.createTextNode('')
+  else if (typeof type === 'string')
+    node = document.createElement(type)
+  else if (typeof type === 'function')
+    node = type.isReactComponent ? updateClassComponent(vnode, parentNode) : updateFunctionComponent(vnode, parentNode)
+  else
+    node = document.createDocumentFragment()
+
+  reconcileChildren(props.children, node)
+  updateNode(node, props)
+  return node
 }
 
 // 遍历下子vnode，然后把子vnode->真实DOM节点，再插入父node中
 function reconcileChildren(children, node) {
   for (let i = 0; i < children.length; i++) {
-    let child = children[i];
+    const child = children[i]
     if (Array.isArray(child)) {
-      for (let j = 0; j < child.length; j++) {
-        render(child[j], node);
-      }
-    } else {
-      render(child, node);
+      for (let j = 0; j < child.length; j++)
+        render(child[j], node)
+    }
+    else {
+      render(child, node)
     }
   }
 }
 function updateNode(node, nextVal) {
   Object.keys(nextVal)
-    .filter((k) => k !== 'children')
+    .filter(k => k !== 'children')
     .forEach((k) => {
       if (k.slice(0, 2) === 'on') {
-        let eventName = k.slice(2).toLocaleLowerCase();
-        node.addEventListener(eventName, nextVal[k]);
-      } else {
-        node[k] = nextVal[k];
+        const eventName = k.slice(2).toLocaleLowerCase()
+        node.addEventListener(eventName, nextVal[k])
       }
-    });
+      else {
+        node[k] = nextVal[k]
+      }
+    })
 }
 
 // 返回真实dom节点
 // 执行函数
 function updateFunctionComponent(vnode, parentNode) {
-  const { type, props } = vnode;
-  let vvnode = type(props);
-  const node = createNode(vvnode, parentNode);
-  return node;
+  const { type, props } = vnode
+  const vvnode = type(props)
+  const node = createNode(vvnode, parentNode)
+  return node
 }
 
 // 返回真实dom节点
 // 先实例化，再执行render函数
 function updateClassComponent(vnode, parentNode) {
-  const { type, props } = vnode;
-  let cmp = new type(props);
-  const vvnode = cmp.render();
-  const node = createNode(vvnode, parentNode);
-  return node;
+  const { type, props } = vnode
+  const cmp = new type(props)
+  const vvnode = cmp.render()
+  const node = createNode(vvnode, parentNode)
+  return node
 }
 export default {
   render,
-};
+}
 ```
 
 ## 三、总结

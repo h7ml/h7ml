@@ -16,8 +16,8 @@ name=value;[expires=date];[path=path];[domain=somewhere.com];[secure]，
   - 设置的 cookie 的路径，和加载当前文件的路径，必须一致，如果不一致，cookie 访问失败。
 
 ```js
-'username=xxx;path=' + '/code14/cookie'; // 可以访问当前与html同一路径
-'username=xxx;path=' + '/code14/cookie/111'; // 设置其他路径后 不能访问
+'username=xxx;path=' + '/code14/cookie' // 可以访问当前与html同一路径
+'username=xxx;path=' + '/code14/cookie/111' // 设置其他路径后 不能访问
 ```
 
 - [domain=somewhere.com]：domain 限制访问域名
@@ -25,7 +25,7 @@ name=value;[expires=date];[path=path];[domain=somewhere.com];[secure]，
   - 如果加载当前文件域名和设置的域名不一致，设置 cookie 失败。不能设置
 
 ```js
-document.cookie = 'username=xxx;domain=' + 'localhostxxx'; // 设置失败
+document.cookie = 'username=xxx;domain=' + 'localhostxxx' // 设置失败
 ```
 
 - secure
@@ -33,19 +33,19 @@ document.cookie = 'username=xxx;domain=' + 'localhostxxx'; // 设置失败
   - 设置字段后，只能 https 协议加载 cookie.
 
 ```js
-document.cookie = 'username=xxx;secure';
+document.cookie = 'username=xxx;secure'
 ```
 
 ## 获取 cookie
 
 ```js
-document.cookie;
+document.cookie
 ```
 
 ## 设置 cookie
 
 ```js
-document.cookie = 'username=xxx';
+document.cookie = 'username=xxx'
 ```
 
 ## 转码储存
@@ -54,39 +54,43 @@ document.cookie = 'username=xxx';
 - decodeURIComponent()：将对应的字符编译成中文
 
 ```js
-document.cookie = 'username=' + encodeURIComponent('蜘蛛侠');
+document.cookie = `username=${encodeURIComponent('蜘蛛侠')}`
 ```
 
 ## 转码获取
 
 ```js
-decodeURIComponent(document.cookie);
+decodeURIComponent(document.cookie)
 ```
 
 ## 删除 cookie
 
 ```js
-document.cookie = 'username=;expires=' + new Date(0);
+document.cookie = `username=;expires=${new Date(0)}`
 ```
 
 ## setCookie 封装
 
 ```js
 function setCookie(name, value, { expires, path, domain, secure }) {
-  var str = encodeURIComponent(name) + '=' + encodeURIComponent(value);
-  if (expires) str += ';expires=' + afterOfDate(expires);
-  if (path) str += ';path=' + path;
-  if (domain) str += ';domain=' + domain;
-  if (secure) str += ';secure';
-  document.cookie = str;
+  let str = `${encodeURIComponent(name)}=${encodeURIComponent(value)}`
+  if (expires)
+    str += `;expires=${afterOfDate(expires)}`
+  if (path)
+    str += `;path=${path}`
+  if (domain)
+    str += `;domain=${domain}`
+  if (secure)
+    str += ';secure'
+  document.cookie = str
 }
 
 // 获取n天后的时间
 function afterOfDate(n) {
-  var date = new Date();
-  var day = date.getDate();
-  date.setDate(n + day);
-  return date;
+  const date = new Date()
+  const day = date.getDate()
+  date.setDate(n + day)
+  return date
 }
 ```
 
@@ -117,7 +121,7 @@ getCookie("名字2")
 
 ```js
 function removeCookie(name) {
-  document.cookie = encodeURIComponent(name) + '=;expires=' + new Date(0);
+  document.cookie = `${encodeURIComponent(name)}=;expires=${new Date(0)}`
 }
 ```
 

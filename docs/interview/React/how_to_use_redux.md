@@ -69,13 +69,13 @@ head:
 导入`conect`如下：
 
 ```js
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 ```
 
 用法如下：
 
 ```js
-connect(mapStateToProps, mapDispatchToProps)(MyComponent);
+connect(mapStateToProps, mapDispatchToProps)(MyComponent)
 ```
 
 可以传递两个参数：
@@ -91,12 +91,12 @@ connect(mapStateToProps, mapDispatchToProps)(MyComponent);
 如下：
 
 ```jsx
-const mapStateToProps = (state) => {
+function mapStateToProps(state) {
   return {
     // prop : state.xxx  | 意思是将state中的某个数据映射到props中
     foo: state.bar,
-  };
-};
+  }
+}
 ```
 
 组件内部就能够通过`props`获取到`store`中的数据
@@ -122,29 +122,30 @@ export default Foo
 将`redux`中的`dispatch`映射到组件内部的`props`中
 
 ```jsx
-const mapDispatchToProps = (dispatch) => {
+function mapDispatchToProps(dispatch) {
   // 默认传递参数就是dispatch
   return {
     onClick: () => {
       dispatch({
         type: 'increatment',
-      });
+      })
     },
-  };
-};
+  }
+}
 ```
 
 ```js
 class Foo extends Component {
   constructor(props) {
-    super(props);
+    super(props)
   }
+
   render() {
-    return <button onClick={this.props.onClick}>点击increase</button>;
+    return <button onClick={this.props.onClick}>点击increase</button>
   }
 }
-Foo = connect()(Foo);
-export default Foo;
+Foo = connect()(Foo)
+export default Foo
 ```
 
 ### 小结
@@ -169,16 +170,16 @@ export default Foo;
 参考如下：
 
 ```js
-reducers / todoReducer.js;
-filterReducer.js;
-actions / todoAction.js;
-filterActions.js;
-components / todoList.js;
-todoItem.js;
-filter.js;
-containers / todoListContainer.js;
-todoItemContainer.js;
-filterContainer.js;
+reducers / todoReducer.js
+filterReducer.js
+actions / todoAction.js
+filterActions.js
+components / todoList.js
+todoItem.js
+filter.js
+containers / todoListContainer.js
+todoItemContainer.js
+filterContainer.js
 ```
 
 #### 按功能组织
@@ -190,18 +191,18 @@ filterContainer.js;
 参考如下：
 
 ```js
-todoList / actions.js;
-actionTypes.js;
-index.js;
-reducer.js;
-views / components.js;
-containers.js;
-filter / actions.js;
-actionTypes.js;
-index.js;
-reducer.js;
-views / components.js;
-container.js;
+todoList / actions.js
+actionTypes.js
+index.js
+reducer.js
+views / components.js
+containers.js
+filter / actions.js
+actionTypes.js
+index.js
+reducer.js
+views / components.js
+container.js
 ```
 
 每个功能模块对应一个目录，每个目录下包含同样的角色文件：
@@ -215,17 +216,17 @@ container.js;
 其中`index`模块用于导出对外的接口
 
 ```js
-import * as actions from './actions.js';
-import reducer from './reducer.js';
-import view from './views/container.js';
+import * as actions from './actions.js'
+import reducer from './reducer.js'
+import view from './views/container.js'
 
-export { actions, reducer, view };
+export { actions, reducer, view }
 ```
 
 导入方法如下：
 
 ```js
-import { actions, reducer, view as TodoList } from './xxxx';
+import { view as TodoList, actions, reducer } from './xxxx'
 ```
 
 ## 参考文献

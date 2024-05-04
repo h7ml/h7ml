@@ -33,28 +33,28 @@ head:
 ```js
 class sup {
   constructor(name) {
-    this.name = name;
+    this.name = name
   }
 
   printName() {
-    console.log(this.name);
+    console.log(this.name)
   }
 }
 
 class sub extends sup {
   constructor(name, age) {
-    super(name); // super代表的事父类的构造函数
-    this.age = age;
+    super(name) // super代表的事父类的构造函数
+    this.age = age
   }
 
   printAge() {
-    console.log(this.age);
+    console.log(this.age)
   }
 }
 
-let jack = new sub('jack', 20);
-jack.printName(); //输出 : jack
-jack.printAge(); //输出 : 20
+const jack = new sub('jack', 20)
+jack.printName() // 输出 : jack
+jack.printAge() // 输出 : 20
 ```
 
 在上面的例子中，可以看到通过 `super` 关键字实现调用父类，`super` 代替的是父类的构建函数，使用 `super(name)` 相当于调用 `sup.prototype.constructor.call(this,name)`
@@ -72,8 +72,8 @@ jack.printAge(); //输出 : 20
 ```js
 class sub extends sup {
   constructor(name, age) {
-    this.age = age;
-    super(name); // super代表的事父类的构造函数
+    this.age = age
+    super(name) // super代表的事父类的构造函数
   }
 }
 ```
@@ -88,8 +88,8 @@ class sub extends sup {
 
 ```js
 // React 内部
-const instance = new YourComponent(props);
-instance.props = props;
+const instance = new YourComponent(props)
+instance.props = props
 ```
 
 所以无论有没有 `constructor`，在 `render` 中 `this.props` 都是可以使用的，这是 `React` 自动附带的，是可以不写的：
@@ -97,7 +97,12 @@ instance.props = props;
 ```jsx
 class HelloMessage extends React.Component {
   render() {
-    return <div>nice to meet you! {this.props.name}</div>;
+    return (
+      <div>
+        nice to meet you!
+        {this.props.name}
+      </div>
+    )
   }
 }
 ```
@@ -109,9 +114,9 @@ class HelloMessage extends React.Component {
 ```jsx
 class Button extends React.Component {
   constructor(props) {
-    super(); // 没传入 props
-    console.log(props); //  {}
-    console.log(this.props); //  undefined
+    super() // 没传入 props
+    console.log(props) //  {}
+    console.log(this.props) //  undefined
     // ...
   }
 }
@@ -122,9 +127,9 @@ class Button extends React.Component {
 ```jsx
 class Button extends React.Component {
   constructor(props) {
-    super(props); // 没传入 props
-    console.log(props); //  {}
-    console.log(this.props); //  {}
+    super(props) // 没传入 props
+    console.log(props) //  {}
+    console.log(this.props) //  {}
     // ...
   }
 }

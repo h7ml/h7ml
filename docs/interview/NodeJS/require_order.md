@@ -83,7 +83,7 @@ head:
 在`window`下输出如下：
 
 ```js
-['c:\\nodejs\\node_modules', 'c:\\node_modules'];
+['c:\\nodejs\\node_modules', 'c:\\node_modules']
 ```
 
 可以看出`module path`的生成规则为：从当前文件目录开始查找`node_modules`目录；然后依次进入父目录，查找父目录下的`node_modules`目录，依次迭代，直到根目录下的`node_modules`目录

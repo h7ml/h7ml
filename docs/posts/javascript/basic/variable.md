@@ -17,28 +17,28 @@ ECMAScript 分为两种数据类型： 1、原始值：最简单的数据（`und
 ### 原始值不能有属性
 
 ```js
-let person = 'Tomiaa';
-person.age = 17; // 添加并不会报错
-console.log(person.age); // undefind
+const person = 'Tomiaa'
+person.age = 17 // 添加并不会报错
+console.log(person.age) // undefind
 
-let person1 = new String('Tomiaa');
-person1.age = 17;
-console.log(person1.age); // 17
+const person1 = new String('Tomiaa')
+person1.age = 17
+console.log(person1.age) // 17
 
-console.log(typeof person); // string
-console.log(typeof person1); // object
+console.log(typeof person) // string
+console.log(typeof person1) // object
 ```
 
 ### 复制值
 
 ```js
-let num = 6;
-let num2 = num; // num2 得到 6，num2 与 num 是完全独立的，互不影响。创建了该值的副本
+const num = 6
+const num2 = num // num2 得到 6，num2 与 num 是完全独立的，互不影响。创建了该值的副本
 
-let obj = {}; // 引用值储存在堆内存上
-let obj1 = obj; // 只会复制指针
-obj1.name = 'tom';
-console.log(obj.name); // 'tom';
+const obj = {} // 引用值储存在堆内存上
+const obj1 = obj // 只会复制指针
+obj1.name = 'tom'
+console.log(obj.name) // 'tom';
 // 引用值赋值是储存的是该值的内存地址，obj1 = obj时只是把地址赋值，指向的是同一个内存地址。访问的都是指向同一个对象。
 ```
 
@@ -49,14 +49,14 @@ console.log(obj.name); // 'tom';
 ```js
 function add(num) {
   // 函数内部相当于 let num = undefind;
-  num += 10;
-  return num;
+  num += 10
+  return num
 }
-let count = 20;
+const count = 20
 
-let result = add(count);
-console.log(count); // 20，没有变化
-console.log(result); // 30
+const result = add(count)
+console.log(count) // 20，没有变化
+console.log(result) // 30
 ```
 
 - 引用值传递
@@ -64,24 +64,24 @@ console.log(result); // 30
 ```js
 function setName(obj) {
   // 同样是赋值了，但赋值的是引用地址，操作的是同一个内存地址
-  obj.name = 'tomiaa';
+  obj.name = 'tomiaa'
 }
-let person = {};
-setName(person);
-console.log(person.name); // "tomiaa"
+const person = {}
+setName(person)
+console.log(person.name) // "tomiaa"
 ```
 
 例 2：
 
 ```js
 function setName(obj) {
-  obj.name = 'greg'; // 对传入的地址赋值
-  obj = {}; // obj 被赋值了新的内存地址
-  obj.name = 'tom';
+  obj.name = 'greg' // 对传入的地址赋值
+  obj = {} // obj 被赋值了新的内存地址
+  obj.name = 'tom'
 }
-let person = {};
-setName(person);
-console.log(person.name); // "greg"
+const person = {}
+setName(person)
+console.log(person.name) // "greg"
 ```
 
 ## 上下文
@@ -93,11 +93,11 @@ console.log(person.name); // "greg"
 eval()调用内部存在第三种上下文。
 
 ```js
-var color = 'blue';
+const color = 'blue'
 function changeColor() {
-  let redColor = 'red';
+  const redColor = 'red'
   function swapColors() {
-    let tempColor = redColor;
+    const tempColor = redColor
     // 这里可以访问color、redColor 和tempColor
   }
   // 这里可以访问color 和redColor，但访问不到tempColor
@@ -119,29 +119,29 @@ with (Promise) {
 
 ```js
 (function temp() {
-  var str = 'str1';
-})();
+  const str = 'str1'
+})()
 console.log(str); // 错误。无法访问函数作用域中的变量
 
 (function temp1() {
-  name = 'tom'; // 省略了 var 会被添加到全局上下文，函数执行结束后变量依然存在
-})();
-console.log(name); // 'tom'
+  name = 'tom' // 省略了 var 会被添加到全局上下文，函数执行结束后变量依然存在
+})()
+console.log(name) // 'tom'
 ```
 
 ### 标识符查找
 
 ```js
-var color = 'blue';
+const color = 'blue'
 function getColor() {
-  return color; // 当前函数作用域不存在 color，就会往上一级作用域查找，直到全局上下文。
+  return color // 当前函数作用域不存在 color，就会往上一级作用域查找，直到全局上下文。
 }
 
 function getColor1() {
-  let color1 = 'red';
+  const color1 = 'red'
   {
-    let color1 = 'green';
-    return color1; // green 这里查找 color1 标识符要比上一个函数快，因为不要切换作用域，js 引擎在查找标识符做了很多工作，未来可能微不足道了
+    const color1 = 'green'
+    return color1 // green 这里查找 color1 标识符要比上一个函数快，因为不要切换作用域，js 引擎在查找标识符做了很多工作，未来可能微不足道了
   }
 }
 ```
@@ -166,10 +166,10 @@ JavaScript 通过自动内存管理内存的分配和闲置资源的回收：确
 
 ```js
 function fn() {
-  let obj1 = {};
-  let obj2 = {};
-  obj1.data = obj2;
-  obj2.list = obj1;
+  const obj1 = {}
+  const obj2 = {}
+  obj1.data = obj2
+  obj2.list = obj1
 }
 ```
 
@@ -178,14 +178,14 @@ function fn() {
 但引用计数的问题在 IE8 之前也有许多问题，BOM 和 DOM 对象是 C++实现的，并非 js 引擎的标记清理，只要设计了 DOM 和 BOM 对象就无法避开引用的问题。
 
 ```js
-let dom = document.getElementById('app');
-let obj = {};
-obj.element = dom;
-dom.data = obj;
+const dom = document.getElementById('app')
+const obj = {}
+obj.element = dom
+dom.data = obj
 
 // 需要手动切断循环引用
-obj.element = null;
-dom.data = null;
+obj.element = null
+dom.data = null
 ```
 
 在 IE9 中把 BOM 和 DOM 对象都改成了 js 对象，从而避免了两套垃圾回收算法与内存泄露的问题。
@@ -200,15 +200,15 @@ dom.data = null;
 
 ```js
 function fn() {
-  let obj = { name: 'tom' };
-  return obj; // 返回了 obj 的引用
+  const obj = { name: 'tom' }
+  return obj // 返回了 obj 的引用
   // 在函数执行完毕后，超出上下文后 obj 就会被自动解除引用，无需手动解除
 }
 
-let globalObj = fn(); // 全局变量
+let globalObj = fn() // 全局变量
 
 // 解除引用
-globalObj = null;
+globalObj = null
 ```
 
 使用`const`与`let`可以更早的让垃圾回收程序处理。
@@ -219,10 +219,10 @@ globalObj = null;
 
 ```js
 function fn() {
-  this.name = 'tom';
+  this.name = 'tom'
 }
-let o1 = new fn();
-let o2 = new fn();
+const o1 = new fn()
+const o2 = new fn()
 ```
 
 `o1`和`o2`共享相同的隐藏类、构造函数以及原型。
@@ -230,7 +230,7 @@ let o2 = new fn();
 如果后续代码做了添加操作：
 
 ```js
-o1.age = 12;
+o1.age = 12
 ```
 
 此时两个类的实例就会对应不同的隐藏类。
@@ -239,17 +239,17 @@ o1.age = 12;
 
 ```js
 function fn(age) {
-  this.name = 'tom';
-  this.age = age;
+  this.name = 'tom'
+  this.age = age
 }
-let o1 = new fn();
-let o2 = new fn(12);
+const o1 = new fn()
+const o2 = new fn(12)
 ```
 
 如果后续代码做了删除操作：
 
 ```js
-delete o2.age;
+delete o2.age
 ```
 
 此时两个类的实例就会对应不同的隐藏类（与动态添加的后果是一样的）。
@@ -258,13 +258,13 @@ delete o2.age;
 
 ```js
 function fn(age) {
-  this.name = 'tom';
-  this.age = age;
+  this.name = 'tom'
+  this.age = age
 }
-let o1 = new fn();
-let o2 = new fn(12);
+const o1 = new fn()
+const o2 = new fn(12)
 
-o2.age = null;
+o2.age = null
 // 这样可以保持隐藏类不变，并且继续共享
 ```
 
@@ -274,17 +274,17 @@ o2.age = null;
 
 ```js
 function fn() {
-  name = 'tom'; // 相当于 window.name = 'tom'
+  name = 'tom' // 相当于 window.name = 'tom'
 }
 ```
 
 - 定时器也会导致内存泄漏
 
 ```js
-let name = 'tom';
+const name = 'tom'
 setInterval(() => {
-  console.log(name);
-}, 1000);
+  console.log(name)
+}, 1000)
 ```
 
 定时器一直执行就会导致`name`一直被引用。
@@ -293,8 +293,8 @@ setInterval(() => {
 
 ```js
 function globalFun() {
-  const obj = { name: 'tom' };
-  return () => obj;
+  const obj = { name: 'tom' }
+  return () => obj
 }
 ```
 

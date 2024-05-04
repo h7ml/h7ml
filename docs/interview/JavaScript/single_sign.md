@@ -84,28 +84,28 @@ SSO 一般都需要一个独立的认证中心（passport），子系统的登�
 
 ```js
 // 获取 token
-var token = result.data.token;
+const token = result.data.token
 
 // 动态创建一个不可见的iframe，在iframe中加载一个跨域HTML
-var iframe = document.createElement('iframe');
-iframe.src = 'http://app1.com/localstorage.html';
-document.body.append(iframe);
+const iframe = document.createElement('iframe')
+iframe.src = 'http://app1.com/localstorage.html'
+document.body.append(iframe)
 // 使用postMessage()方法将token传递给iframe
-setTimeout(function () {
-  iframe.contentWindow.postMessage(token, 'http://app1.com');
-}, 4000);
-setTimeout(function () {
-  iframe.remove();
-}, 6000);
+setTimeout(() => {
+  iframe.contentWindow.postMessage(token, 'http://app1.com')
+}, 4000)
+setTimeout(() => {
+  iframe.remove()
+}, 6000)
 
 // 在这个iframe所加载的HTML中绑定一个事件监听器，当事件被触发时，把接收到的token数据写入localStorage
 window.addEventListener(
   'message',
-  function (event) {
-    localStorage.setItem('token', event.data);
+  (event) => {
+    localStorage.setItem('token', event.data)
   },
   false
-);
+)
 ```
 
 前端通过 `iframe`+`postMessage()` 方式，将同一份 `Token` 写入到了多个域下的 `LocalStorage` 中，前端每次在向后端发送请求之前，都会主动从 `LocalStorage` 中读取`Token`并在请求中携带，这样就实现了同一份`Token` 被多个域所共享

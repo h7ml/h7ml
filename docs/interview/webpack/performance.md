@@ -92,7 +92,7 @@ npm install css-minimizer-webpack-plugin -D
 配置方法如下：
 
 ```js
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
+const CssMinimizerPlugin = require('css-minimizer-webpack-plugin')
 module.exports = {
   // ...
   optimization: {
@@ -103,7 +103,7 @@ module.exports = {
       }),
     ],
   },
-};
+}
 ```
 
 ### Html 文件代码压缩
@@ -142,7 +142,7 @@ new ComepressionPlugin({
   threshold: 500, // 设置文件多大开始压缩
   minRatio: 0.7, // 至少压缩的比例
   algorithm: 'gzip', // 采用的压缩算法
-});
+})
 ```
 
 ### 图片压缩
@@ -193,7 +193,7 @@ module: {
         },
       ],
     },
-  ];
+  ]
 }
 ```
 

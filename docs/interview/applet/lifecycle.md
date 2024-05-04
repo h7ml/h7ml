@@ -101,14 +101,14 @@ head:
 ```js
 Component({
   pageLifetimes: {
-    show: function () {
+    show() {
       // 页面被展示
     },
-    hide: function () {
+    hide() {
       // 页面被隐藏
     },
   },
-});
+})
 ```
 
 ## 三、执行过程

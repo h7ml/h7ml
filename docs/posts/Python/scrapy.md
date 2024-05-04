@@ -102,7 +102,6 @@ scrapy genspider test www.baidu.com
 ```python
 import scrapy
 
-
 class TestSpider(scrapy.Spider):
     name = 'test'
     allowed_domains = ['www.baidu.com']
@@ -181,7 +180,6 @@ class Scrapy01TestItem(scrapy.Item):
 import scrapy
 from scrapy_01_test.items import Scrapy01TestItem
 
-
 class TestSpider(scrapy.Spider):
     name = 'test'
     allowed_domains = ['bbs.mihoyo.com']
@@ -240,12 +238,10 @@ ITEM_PIPELINES = {
 # Don't forget to add your pipeline to the ITEM_PIPELINES setting
 # See: https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 
-
 # useful for handling different item types with a single interface
 import urllib.request
 
 from itemadapter import ItemAdapter
-
 
 # 必须在setings中开启管道才能使用
 class Scrapy01TestPipeline:
@@ -271,7 +267,6 @@ class Scrapy01TestPipeline:
         # 关闭
         self.fb.close()
 
-
 # 多管道开始
 #    在 settings 中开启管道
 #    'scrapy_01_test.pipelines.DownLoadYS': 301,
@@ -295,7 +290,6 @@ class DownLoadYS:
 # https://docs.scrapy.org/en/latest/topics/items.html
 
 import scrapy
-
 
 class Scrapy01TestItem(scrapy.Item):
     # define the fields for your item here like:

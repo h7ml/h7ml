@@ -207,49 +207,48 @@ recognition.stop(); // 停止语音识别
 :::react-demo React 代码实现
 
 ```jsx
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react'
 
 function WebkitSpeechRecognition() {
-  const [recognition, setRecognition] = useState(null);
-  const [recognitionStatus, setRecognitionStatus] = useState('Recognition not started');
-  const [recognizedText, setRecognizedText] = useState('');
+  const [recognition, setRecognition] = useState(null)
+  const [recognitionStatus, setRecognitionStatus] = useState('Recognition not started')
+  const [recognizedText, setRecognizedText] = useState('')
 
   useEffect(() => {
     if (window.webkitSpeechRecognition) {
-      const recognition = new webkitSpeechRecognition();
-      recognition.continuous = true;
-      recognition.interimResults = true;
+      const recognition = new webkitSpeechRecognition()
+      recognition.continuous = true
+      recognition.interimResults = true
 
       recognition.onstart = () => {
-        setRecognitionStatus('Recognition started');
-      };
+        setRecognitionStatus('Recognition started')
+      }
 
       recognition.onend = () => {
-        setRecognitionStatus('Recognition ended');
-      };
+        setRecognitionStatus('Recognition ended')
+      }
 
       recognition.onresult = (event) => {
-        const recognized = event.results[event.results.length - 1][0].transcript;
-        setRecognizedText(recognized);
-      };
+        const recognized = event.results[event.results.length - 1][0].transcript
+        setRecognizedText(recognized)
+      }
 
-      setRecognition(recognition);
-    } else {
-      setRecognitionStatus('Recognition not supported');
+      setRecognition(recognition)
     }
-  }, []);
+    else {
+      setRecognitionStatus('Recognition not supported')
+    }
+  }, [])
 
   const startRecognition = () => {
-    if (recognition) {
-      recognition.start();
-    }
-  };
+    if (recognition)
+      recognition.start()
+  }
 
   const stopRecognition = () => {
-    if (recognition) {
-      recognition.stop();
-    }
-  };
+    if (recognition)
+      recognition.stop()
+  }
 
   return (
     <div>
@@ -258,10 +257,10 @@ function WebkitSpeechRecognition() {
       <p>{recognitionStatus}</p>
       <p>{recognizedText}</p>
     </div>
-  );
+  )
 }
 
-export default WebkitSpeechRecognition;
+export default WebkitSpeechRecognition
 ```
 
 :::

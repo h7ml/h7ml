@@ -39,8 +39,8 @@ head:
 ```js
 class Node {
   constructor(val) {
-    this.val = val;
-    this.next = null;
+    this.val = val
+    this.next = null
   }
 }
 ```
@@ -70,10 +70,10 @@ class Node {
 遍历很好理解，就是根据`next`指针遍历下去，直到为`null`，如下：
 
 ```js
-let current = head;
+let current = head
 while (current) {
-  console.log(current.val);
-  current = current.next;
+  console.log(current.val)
+  current = current.next
 }
 ```
 
@@ -94,13 +94,13 @@ while (current) {
 相关代码如下所示：
 
 ```js
-let current = head;
+let current = head
 while (current < position) {
-  pervious = current;
-  current = current.next;
+  pervious = current
+  current = current.next
 }
-pervious.next = node;
-node.next = current;
+pervious.next = node
+node.next = current
 ```
 
 如果在头节点进行插入操作的时候，会实现`previousNode`节点为`undefined`，不适合上述方式
@@ -124,11 +124,11 @@ node.next = current;
 
 ```js
 while (current != node) {
-  pervious = current;
-  current = current.next;
-  nextNode = current.next;
+  pervious = current
+  current = current.next
+  nextNode = current.next
 }
-pervious.next = nextNode;
+pervious.next = nextNode
 ```
 
 同样如何希望删除节点处理行为一致，可以在头节点前面添加一个虚拟头节点

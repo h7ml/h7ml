@@ -48,45 +48,45 @@ head:
 
 ```js
 function update() {
-  app.innerText = obj.foo;
+  app.innerText = obj.foo
 }
 
 function defineReactive(obj, key, val) {
   Object.defineProperty(obj, key, {
     get() {
-      console.log(`get ${key}:${val}`);
-      return val;
+      console.log(`get ${key}:${val}`)
+      return val
     },
     set(newVal) {
       if (newVal !== val) {
-        val = newVal;
-        update();
+        val = newVal
+        update()
       }
     },
-  });
+  })
 }
 ```
 
 调用`defineReactive`，数据发生变化触发`update`方法，实现数据响应式
 
 ```js
-const obj = {};
-defineReactive(obj, 'foo', '');
+const obj = {}
+defineReactive(obj, 'foo', '')
 setTimeout(() => {
-  obj.foo = new Date().toLocaleTimeString();
-}, 1000);
+  obj.foo = new Date().toLocaleTimeString()
+}, 1000)
 ```
 
 在对象存在多个`key`情况下，需要进行遍历
 
 ```js
 function observe(obj) {
-  if (typeof obj !== 'object' || obj == null) {
-    return;
-  }
+  if (typeof obj !== 'object' || obj == null)
+    return
+
   Object.keys(obj).forEach((key) => {
-    defineReactive(obj, key, obj[key]);
-  });
+    defineReactive(obj, key, obj[key])
+  })
 }
 ```
 
@@ -94,19 +94,19 @@ function observe(obj) {
 
 ```js
 function defineReactive(obj, key, val) {
-  observe(val);
+  observe(val)
   Object.defineProperty(obj, key, {
     get() {
-      console.log(`get ${key}:${val}`);
-      return val;
+      console.log(`get ${key}:${val}`)
+      return val
     },
     set(newVal) {
       if (newVal !== val) {
-        val = newVal;
-        update();
+        val = newVal
+        update()
       }
     },
-  });
+  })
 }
 ```
 
@@ -129,22 +129,22 @@ set(newVal) {
 const obj = {
   foo: 'foo',
   bar: 'bar',
-};
-observe(obj);
-delete obj.foo; // no ok
-obj.jar = 'xxx'; // no ok
+}
+observe(obj)
+delete obj.foo // no ok
+obj.jar = 'xxx' // no ok
 ```
 
 当我们对一个数组进行监听的时候，并不那么好使了
 
 ```js
-const arrData = [1, 2, 3, 4, 5];
+const arrData = [1, 2, 3, 4, 5]
 arrData.forEach((val, index) => {
-  defineProperty(arrData, index, val);
-});
-arrData.push(); // no ok
-arrData.pop(); // no ok
-arrDate[0] = 99; // ok
+  defineProperty(arrData, index, val)
+})
+arrData.push() // no ok
+arrData.pop() // no ok
+arrDate[0] = 99 // ok
 ```
 
 可以看到数据的`api`无法劫持到，从而无法实现数据响应式，
@@ -171,28 +171,28 @@ arrDate[0] = 99; // ok
 
 ```js
 function reactive(obj) {
-  if (typeof obj !== 'object' && obj != null) {
-    return obj;
-  }
+  if (typeof obj !== 'object' && obj != null)
+    return obj
+
   // Proxy相当于在对象外层加拦截
   const observed = new Proxy(obj, {
     get(target, key, receiver) {
-      const res = Reflect.get(target, key, receiver);
-      console.log(`获取${key}:${res}`);
-      return res;
+      const res = Reflect.get(target, key, receiver)
+      console.log(`获取${key}:${res}`)
+      return res
     },
     set(target, key, value, receiver) {
-      const res = Reflect.set(target, key, value, receiver);
-      console.log(`设置${key}:${value}`);
-      return res;
+      const res = Reflect.set(target, key, value, receiver)
+      console.log(`设置${key}:${value}`)
+      return res
     },
     deleteProperty(target, key) {
-      const res = Reflect.deleteProperty(target, key);
-      console.log(`删除${key}:${res}`);
-      return res;
+      const res = Reflect.deleteProperty(target, key)
+      console.log(`删除${key}:${res}`)
+      return res
     },
-  });
-  return observed;
+  })
+  return observed
 }
 ```
 
@@ -201,15 +201,15 @@ function reactive(obj) {
 ```js
 const state = reactive({
   foo: 'foo',
-});
+})
 // 1.获取
-state.foo; // ok
+state.foo // ok
 // 2.设置已存在属性
-state.foo = 'fooooooo'; // ok
+state.foo = 'fooooooo' // ok
 // 3.设置不存在属性
-state.dong = 'dong'; // ok
+state.dong = 'dong' // ok
 // 4.删除属性
-delete state.dong; // ok
+delete state.dong // ok
 ```
 
 再测试嵌套对象情况，这时候发现就不那么 OK 了
@@ -217,10 +217,10 @@ delete state.dong; // ok
 ```js
 const state = reactive({
   bar: { a: 1 },
-});
+})
 
 // 设置嵌套对象属性
-state.bar.a = 10; // no ok
+state.bar.a = 10 // no ok
 ```
 
 如果要解决，需要在`get`之上再进行一层代理
@@ -247,12 +247,12 @@ function reactive(obj) {
 
 ```js
 function observe(obj) {
-  if (typeof obj !== 'object' || obj == null) {
-    return;
-  }
+  if (typeof obj !== 'object' || obj == null)
+    return
+
   Object.keys(obj).forEach((key) => {
-    defineReactive(obj, key, obj[key]);
-  });
+    defineReactive(obj, key, obj[key])
+  })
 }
 ```
 
@@ -260,37 +260,37 @@ function observe(obj) {
 
 ```js
 function reactive(obj) {
-  if (typeof obj !== 'object' && obj != null) {
-    return obj;
-  }
+  if (typeof obj !== 'object' && obj != null)
+    return obj
+
   // Proxy相当于在对象外层加拦截
   const observed = new Proxy(obj, {
     get(target, key, receiver) {
-      const res = Reflect.get(target, key, receiver);
-      console.log(`获取${key}:${res}`);
-      return res;
+      const res = Reflect.get(target, key, receiver)
+      console.log(`获取${key}:${res}`)
+      return res
     },
     set(target, key, value, receiver) {
-      const res = Reflect.set(target, key, value, receiver);
-      console.log(`设置${key}:${value}`);
-      return res;
+      const res = Reflect.set(target, key, value, receiver)
+      console.log(`设置${key}:${value}`)
+      return res
     },
     deleteProperty(target, key) {
-      const res = Reflect.deleteProperty(target, key);
-      console.log(`删除${key}:${res}`);
-      return res;
+      const res = Reflect.deleteProperty(target, key)
+      console.log(`删除${key}:${res}`)
+      return res
     },
-  });
-  return observed;
+  })
+  return observed
 }
 ```
 
 `Proxy`可以直接监听数组的变化（`push`、`shift`、`splice`）
 
 ```js
-const obj = [1, 2, 3];
-const proxtObj = reactive(obj);
-obj.psuh(4); // ok
+const obj = [1, 2, 3]
+const proxtObj = reactive(obj)
+obj.psuh(4) // ok
 ```
 
 `Proxy`有多达 13 种拦截方法,不限于`apply`、`ownKeys`、`deleteProperty`、`has`等等，这是`Object.defineProperty`不具备的

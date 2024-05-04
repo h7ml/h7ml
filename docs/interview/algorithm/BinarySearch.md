@@ -57,25 +57,28 @@ head:
 
 ```js
 function BinarySearch(arr, target) {
-  if (arr.length <= 1) return -1;
+  if (arr.length <= 1)
+    return -1
   // 低位下标
-  let lowIndex = 0;
+  let lowIndex = 0
   // 高位下标
-  let highIndex = arr.length - 1;
+  let highIndex = arr.length - 1
 
   while (lowIndex <= highIndex) {
     // 中间下标
-    const midIndex = Math.floor((lowIndex + highIndex) / 2);
+    const midIndex = Math.floor((lowIndex + highIndex) / 2)
     if (target < arr[midIndex]) {
-      highIndex = midIndex - 1;
-    } else if (target > arr[midIndex]) {
-      lowIndex = midIndex + 1;
-    } else {
+      highIndex = midIndex - 1
+    }
+    else if (target > arr[midIndex]) {
+      lowIndex = midIndex + 1
+    }
+    else {
       // target === arr[midIndex]
-      return midIndex;
+      return midIndex
     }
   }
-  return -1;
+  return -1
 }
 ```
 
@@ -83,27 +86,31 @@ function BinarySearch(arr, target) {
 
 ```js
 function BinarySearchFirst(arr, target) {
-  if (arr.length <= 1) return -1;
+  if (arr.length <= 1)
+    return -1
   // 低位下标
-  let lowIndex = 0;
+  let lowIndex = 0
   // 高位下标
-  let highIndex = arr.length - 1;
+  let highIndex = arr.length - 1
 
   while (lowIndex <= highIndex) {
     // 中间下标
-    const midIndex = Math.floor((lowIndex + highIndex) / 2);
+    const midIndex = Math.floor((lowIndex + highIndex) / 2)
     if (target < arr[midIndex]) {
-      highIndex = midIndex - 1;
-    } else if (target > arr[midIndex]) {
-      lowIndex = midIndex + 1;
-    } else {
+      highIndex = midIndex - 1
+    }
+    else if (target > arr[midIndex]) {
+      lowIndex = midIndex + 1
+    }
+    else {
       // 当 target 与 arr[midIndex] 相等的时候，如果 midIndex 为0或者前一个数比 target 小那么就找到了第一个等于给定值的元素，直接返回
-      if (midIndex === 0 || arr[midIndex - 1] < target) return midIndex;
+      if (midIndex === 0 || arr[midIndex - 1] < target)
+        return midIndex
       // 否则高位下标为中间下标减1，继续查找
-      highIndex = midIndex - 1;
+      highIndex = midIndex - 1
     }
   }
-  return -1;
+  return -1
 }
 ```
 
@@ -127,38 +134,39 @@ function BinarySearchFirst(arr, target) {
 ```js
 function search(nums, target) {
   // 如果为空或者是空数组的情况
-  if (nums == null || !nums.length) {
-    return -1;
-  }
+  if (nums == null || !nums.length)
+    return -1
+
   // 搜索区间是前闭后闭
-  let begin = 0,
-    end = nums.length - 1;
+  let begin = 0
+  let end = nums.length - 1
   while (begin <= end) {
     // 下面这样写是考虑大数情况下避免溢出
-    let mid = begin + ((end - begin) >> 1);
-    if (nums[mid] == target) {
-      return mid;
-    }
+    const mid = begin + ((end - begin) >> 1)
+    if (nums[mid] == target)
+      return mid
+
     // 如果左边是有序的
     if (nums[begin] <= nums[mid]) {
-      //同时target在[ nums[begin],nums[mid] ]中，那么就在这段有序区间查找
+      // 同时target在[ nums[begin],nums[mid] ]中，那么就在这段有序区间查找
       if (nums[begin] <= target && target <= nums[mid]) {
-        end = mid - 1;
-      } else {
-        //否则去反方向查找
-        begin = mid + 1;
+        end = mid - 1
       }
-      //如果右侧是有序的
-    } else {
-      //同时target在[ nums[mid],nums[end] ]中，那么就在这段有序区间查找
-      if (nums[mid] <= target && target <= nums[end]) {
-        begin = mid + 1;
-      } else {
-        end = mid - 1;
+      else {
+        // 否则去反方向查找
+        begin = mid + 1
       }
+      // 如果右侧是有序的
+    }
+    else {
+      // 同时target在[ nums[mid],nums[end] ]中，那么就在这段有序区间查找
+      if (nums[mid] <= target && target <= nums[end])
+        begin = mid + 1
+      else
+        end = mid - 1
     }
   }
-  return -1;
+  return -1
 }
 ```
 

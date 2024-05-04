@@ -18,14 +18,14 @@ date: 2022-01-07 08:20:25
 
 ```js
 // src/util/request.js
-import Http from '../http';
+import Http from '../http'
 
 export function get(options) {
-  return Http.get(options);
+  return Http.get(options)
 }
 
 export function post(obj) {
-  return Http.post(options);
+  return Http.post(options)
 }
 ```
 
@@ -213,34 +213,34 @@ class ProxyExample {
 
 ```js
 function RealImage(filename) {
-  this.filename = filename;
+  this.filename = filename
   const loadImageFromDisk = () => {
-    console.log('Loading   ' + filename);
-  };
-  loadImageFromDisk();
+    console.log(`Loading   ${filename}`)
+  }
+  loadImageFromDisk()
   return {
     displayImage: () => {
-      console.log('Displaying ' + filename);
+      console.log(`Displaying ${filename}`)
     },
-  };
+  }
 }
 
 function ProxyImage(filename) {
-  this.filename = filename;
-  let image = null;
+  this.filename = filename
+  let image = null
   return {
     displayImage: () => {
-      if (image === null) {
-        image = RealImage(filename);
-      }
-      image.displayImage();
+      if (image === null)
+        image = RealImage(filename)
+
+      image.displayImage()
     },
-  };
+  }
 }
 
 // Test
-const image = ProxyImage('HiRes_10MB_Photo1');
-image.displayImage();
+const image = ProxyImage('HiRes_10MB_Photo1')
+image.displayImage()
 ```
 
 整体思想是一样的，但 `js` 不用定义接口，也不用定义类，看起来精简了不少。只需要实现和原对象一样的返回即可。
@@ -254,11 +254,11 @@ image.displayImage();
 ```js
 // src/util/requestNew.js
 
-import { post as Post, get as Get } from './request.js';
+import { get as Get, post as Post } from './request.js'
 
-let graytype = -1;
+let graytype = -1
 
-const getNewParams = (params) => {
+function getNewParams(params) {
   // 将 graytype 加入
   if (graytype !== -1) {
     newParams = {
@@ -267,26 +267,26 @@ const getNewParams = (params) => {
         ...params.headers,
         graytype,
       },
-    };
+    }
   }
-  return newParams;
-};
-export const get = async (params) => {
-  const response = await Get(getNewParams(params));
-  const res = response.data;
-  if (res.graytype !== undefined && res.graytype !== null) {
-    graytype = res.graytype;
-  }
-  return response;
-};
-export const post = async (params) => {
-  const response = await Post(getNewParams(params));
-  const res = response.data;
-  if (res.graytype !== undefined && res.graytype !== null) {
-    graytype = res.graytype;
-  }
-  return response;
-};
+  return newParams
+}
+export async function get(params) {
+  const response = await Get(getNewParams(params))
+  const res = response.data
+  if (res.graytype !== undefined && res.graytype !== null)
+    graytype = res.graytype
+
+  return response
+}
+export async function post(params) {
+  const response = await Post(getNewParams(params))
+  const res = response.data
+  if (res.graytype !== undefined && res.graytype !== null)
+    graytype = res.graytype
+
+  return response
+}
 ```
 
 我们将原有的 `get` 和 `post` 导入，因为还需要导出 `get` 和 `post` ，所以将导入的重命名为 `Get` 和 `Post` 。

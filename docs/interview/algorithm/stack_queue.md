@@ -39,7 +39,7 @@ head:
 ```js
 class Stack {
   constructor() {
-    this.items = [];
+    this.items = []
   }
 
   /**
@@ -47,42 +47,42 @@ class Stack {
    * @param {*} element 新元素
    */
   push(element) {
-    this.items.push(element);
+    this.items.push(element)
   }
 
   /**
    * 移除栈顶的元素，同时返回被移除的元素
    */
   pop() {
-    return this.items.pop();
+    return this.items.pop()
   }
 
   /**
    * 返回栈顶的元素，不对栈做任何修改（这个方法不会移除栈顶的元素，仅仅返回它）
    */
   peek() {
-    return this.items[this.items.length - 1];
+    return this.items[this.items.length - 1]
   }
 
   /**
    * 如果栈里没有任何元素就返回true,否则返回false
    */
   isEmpty() {
-    return this.items.length === 0;
+    return this.items.length === 0
   }
 
   /**
    * 移除栈里的所有元素
    */
   clear() {
-    this.items = [];
+    this.items = []
   }
 
   /**
    * 返回栈里的元素个数。这个方法和数组的length属性很类似
    */
   size() {
-    return this.items.length;
+    return this.items.length
   }
 }
 ```
@@ -105,17 +105,19 @@ class Stack {
 ```js
 class Queue {
   constructor() {
-    this.list = [];
-    this.frontIndex = 0;
-    this.tailIndex = 0;
+    this.list = []
+    this.frontIndex = 0
+    this.tailIndex = 0
   }
+
   enqueue(item) {
-    this.list[this.tailIndex++] = item;
+    this.list[this.tailIndex++] = item
   }
+
   unqueue() {
-    const item = this.list[this.frontIndex];
-    this.frontIndex++;
-    return item;
+    const item = this.list[this.frontIndex]
+    this.frontIndex++
+    return item
   }
 }
 ```
@@ -133,32 +135,36 @@ class Queue {
 ```js
 class Queue {
   constructor(size) {
-    this.size = size; // 长度需要限制, 来达到空间的利用, 代表空间的长度
-    this.list = [];
-    this.font = 0; // 指向首元素
-    this.rear = 0; // 指向准备插入元素的位置
+    this.size = size // 长度需要限制, 来达到空间的利用, 代表空间的长度
+    this.list = []
+    this.font = 0 // 指向首元素
+    this.rear = 0 // 指向准备插入元素的位置
   }
+
   enQueue() {
-    if (this.isFull() == true) {
-      return false;
-    }
-    this.rear = this.rear % this.k;
-    this._data[this.rear++] = value;
-    return true;
+    if (this.isFull() == true)
+      return false
+
+    this.rear = this.rear % this.k
+    this._data[this.rear++] = value
+    return true
   }
+
   deQueue() {
-    if (this.isEmpty()) {
-      return false;
-    }
-    this.font++;
-    this.font = this.font % this.k;
-    return true;
+    if (this.isEmpty())
+      return false
+
+    this.font++
+    this.font = this.font % this.k
+    return true
   }
+
   isEmpty() {
-    return this.font == this.rear - 1;
+    return this.font == this.rear - 1
   }
+
   isFull() {
-    return this.rear % this.k == this.font;
+    return this.rear % this.k == this.font
   }
 }
 ```

@@ -88,7 +88,7 @@ module.exports = {
   globals: {
     defineOptions: 'readonly', // unplugin-vue-define-options vite 插件的全局变量
   },
-};
+}
 ```
 
 ## 配置不要做格式校验的文件

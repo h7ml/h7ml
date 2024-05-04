@@ -131,11 +131,11 @@ function invokeInsertHook(vnode, queue, initial) {
   // delay insert hooks for component root nodes, invoke them after the
   // element is really inserted
   if (isTrue(initial) && isDef(vnode.parent)) {
-    vnode.parent.data.pendingInsert = queue;
-  } else {
-    for (let i = 0; i < queue.length; ++i) {
-      queue[i].data.hook.insert(queue[i]);
-    }
+    vnode.parent.data.pendingInsert = queue
+  }
+  else {
+    for (let i = 0; i < queue.length; ++i)
+      queue[i].data.hook.insert(queue[i])
   }
 }
 ```
@@ -191,16 +191,15 @@ export function mountComponent(vm: Component, el: ?Element, hydrating?: boolean)
 function flushSchedulerQueue() {
   // ...
   // 获取到 updatedQueue
-  callUpdatedHooks(updatedQueue);
+  callUpdatedHooks(updatedQueue)
 }
 function callUpdatedHooks(queue) {
-  let i = queue.length;
+  let i = queue.length
   while (i--) {
-    const watcher = queue[i];
-    const vm = watcher.vm;
-    if (vm._watcher === watcher && vm._isMounted) {
-      callHook(vm, 'updated');
-    }
+    const watcher = queue[i]
+    const vm = watcher.vm
+    if (vm._watcher === watcher && vm._isMounted)
+      callHook(vm, 'updated')
   }
 }
 ```

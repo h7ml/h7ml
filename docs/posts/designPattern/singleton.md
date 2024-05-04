@@ -76,17 +76,17 @@ public class Singleton {
 
 ```js
 const Singleton = function () {
-  this.instance = null;
-};
+  this.instance = null
+}
 Singleton.getInstance = function (name) {
-  if (!this.instance) {
-    this.instance = new Singleton();
-  }
-  return this.instance;
-};
-const a = Singleton.getInstance();
-const b = Singleton.getInstance();
-console.log(a === b); // true
+  if (!this.instance)
+    this.instance = new Singleton()
+
+  return this.instance
+}
+const a = Singleton.getInstance()
+const b = Singleton.getInstance()
+console.log(a === b) // true
 ```
 
 但上边就真的是邯郸学步一样的模仿了 `java` 的实现，事实上，`js` 创建对象并不一定需要通过 `new` 的方式，下边我们详细讨论下。
@@ -100,28 +100,28 @@ console.log(a === b); // true
 通常的单例对象可能会是下边的样子，暴露几个方法供外界使用。
 
 ```js
-var Singleton = {
-  method1: function () {
+const Singleton = {
+  method1() {
     // ...
   },
-  method2: function () {
+  method2() {
     // ...
   },
-};
+}
 ```
 
 但如果`Singleton` 有私有属性，可以写成下边的样子：
 
 ```js
-var Singleton = {
+const Singleton = {
   privateVar: '我是私有属性',
-  method1: function () {
+  method1() {
     // ...
   },
-  method2: function () {
+  method2() {
     // ...
   },
-};
+}
 ```
 
 但此时外界就可以通过 `Singleton` 随意修改 `privateVar` 的值。
@@ -129,25 +129,25 @@ var Singleton = {
 为了解决这个问题，我们可以借助闭包，通过 `IIFE (Immediately Invoked Function Expression)` 将一些属性和方法私有化。
 
 ```js
-var myInstance = (function () {
-  var privateVar = '';
+const myInstance = (function () {
+  const privateVar = ''
 
   function privateMethod() {
     // ...
   }
 
   return {
-    method1: function () {},
-    method2: function () {},
-  };
-})();
+    method1() {},
+    method2() {},
+  }
+})()
 ```
 
 但随着 `ES6` 、`Webpack` 的出现，我们很少像上边那样去定义一个模块了，而是通过单文件，一个文件就是一个模块，同时也可以看成一个**单例对象**。
 
 ```js
 // singleton.js
-const somePrivateState = [];
+const somePrivateState = []
 
 function privateMethod() {
   // ...
@@ -160,14 +160,14 @@ export default {
   method2() {
     // ...
   },
-};
+}
 ```
 
 然后使用的时候 `import` 即可。
 
 ```js
 // main.js
-import Singleton from './singleton.js';
+import Singleton from './singleton.js'
 // ...
 ```
 
@@ -175,7 +175,7 @@ import Singleton from './singleton.js';
 
 ```js
 // main2.js
-import Singleton from './singleton.js';
+import Singleton from './singleton.js'
 ```
 
 但这两个不同文件的 `Singleton` 仍旧是同一个对象，这是 `ES Moudule` 的特性。
@@ -186,18 +186,17 @@ import Singleton from './singleton.js';
 
 ```js
 function __webpack_require__(moduleId) {
-  var cachedModule = __webpack_module_cache__[moduleId];
+  const cachedModule = __webpack_module_cache__[moduleId]
 
   // 单例模式的应用
-  if (cachedModule !== undefined) {
-    return cachedModule.exports;
-  }
+  if (cachedModule !== undefined)
+    return cachedModule.exports
 
-  var module = (__webpack_module_cache__[moduleId] = {
+  const module = (__webpack_module_cache__[moduleId] = {
     exports: {},
-  });
-  __webpack_modules__[moduleId](module, module.exports, __webpack_require__);
-  return module.exports;
+  })
+  __webpack_modules__[moduleId](module, module.exports, __webpack_require__)
+  return module.exports
 }
 ```
 
@@ -400,10 +399,10 @@ if ('undefined' !== typeof module) {
 此时，我们可以新建一个模块，然后 `export` 一个实例化对象，其他页面去使用这个对象就实现单例模式了。
 
 ```js
-import EventEmitter from 'eventemitter3';
+import EventEmitter from 'eventemitter3'
 // 全局唯一的事件总线
-const event = new EventEmitter();
-export default event;
+const event = new EventEmitter()
+export default event
 ```
 
 # 总

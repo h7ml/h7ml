@@ -60,22 +60,22 @@ head:
 
 ```jsx
 export default class App2 extends React.PureComponent {
-  state = { show: true };
+  state = { show: true }
 
-  onToggle = () => this.setState({ show: !this.state.show });
+  onToggle = () => this.setState({ show: !this.state.show })
 
   render() {
-    const { show } = this.state;
+    const { show } = this.state
     return (
-      <div className={'container'}>
-        <div className={'square-wrapper'}>
-          <CSSTransition in={show} timeout={500} classNames={'fade'} unmountOnExit={true}>
-            <div className={'square'} />
+      <div className="container">
+        <div className="square-wrapper">
+          <CSSTransition in={show} timeout={500} classNames="fade" unmountOnExit={true}>
+            <div className="square" />
           </CSSTransition>
         </div>
         <Button onClick={this.onToggle}>toggle</Button>
       </div>
-    );
+    )
   }
 }
 ```
@@ -124,31 +124,31 @@ export default class App2 extends React.PureComponent {
 下面给出一个按钮入场和出场的示例，如下：
 
 ```jsx
-import { SwitchTransition, CSSTransition } from 'react-transition-group';
+import { CSSTransition, SwitchTransition } from 'react-transition-group'
 
 export default class SwitchAnimation extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       isOn: true,
-    };
+    }
   }
 
   render() {
-    const { isOn } = this.state;
+    const { isOn } = this.state
 
     return (
       <SwitchTransition mode="out-in">
         <CSSTransition classNames="btn" timeout={500} key={isOn ? 'on' : 'off'}>
-          {<button onClick={this.btnClick.bind(this)}>{isOn ? 'on' : 'off'}</button>}
+          <button onClick={this.btnClick.bind(this)}>{isOn ? 'on' : 'off'}</button>
         </CSSTransition>
       </SwitchTransition>
-    );
+    )
   }
 
   btnClick() {
-    this.setState({ isOn: !this.state.isOn });
+    this.setState({ isOn: !this.state.isOn })
   }
 }
 ```
@@ -196,16 +196,16 @@ export default class SwitchAnimation extends PureComponent {
 如下：
 
 ```jsx
-import React, { PureComponent } from 'react';
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import React, { PureComponent } from 'react'
+import { CSSTransition, TransitionGroup } from 'react-transition-group'
 
 export default class GroupAnimation extends PureComponent {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       friends: [],
-    };
+    }
   }
 
   render() {
@@ -217,18 +217,18 @@ export default class GroupAnimation extends PureComponent {
               <CSSTransition classNames="friend" timeout={300} key={index}>
                 <div>{item}</div>
               </CSSTransition>
-            );
+            )
           })}
         </TransitionGroup>
-        <button onClick={(e) => this.addFriend()}>+friend</button>
+        <button onClick={e => this.addFriend()}>+friend</button>
       </div>
-    );
+    )
   }
 
   addFriend() {
     this.setState({
       friends: [...this.state.friends, 'coderwhy'],
-    });
+    })
   }
 }
 ```

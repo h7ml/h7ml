@@ -197,9 +197,6 @@ title: 数据库设计
 
    <img src="assets/image-20210724135649341.png" alt="image-20210724135649341" style="zoom:70%;" />
 
-
-
-
    建表语句如下：
 
 ```sql

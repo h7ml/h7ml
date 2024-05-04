@@ -37,13 +37,13 @@ head:
 返回的对象可以直接用于渲染函数和计算属性内，并且会在发生变更时触发相应的更新。也可以作为最小化的跨组件状态存储器
 
 ```js
-Vue.observable({ count: 1 });
+Vue.observable({ count: 1 })
 ```
 
 其作用等同于
 
 ```js
-new vue({ count: 1 });
+new vue({ count: 1 })
 ```
 
 在 `Vue 2.x` 中，被传入的对象会直接被 `Vue.observable` 变更，它和被返回的对象是同一个对象

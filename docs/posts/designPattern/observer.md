@@ -37,12 +37,12 @@ getAddress().then((res) => {
 // A、B、C 三个模块都是不同人写的，提供了不同的方法供我们调用
 
 getAddress().then((res) => {
-  const address = res.address;
-  A.update(address);
-  B.next(address);
-  C.change(address);
-  D.init(address);
-});
+  const address = res.address
+  A.update(address)
+  B.next(address)
+  C.change(address)
+  D.init(address)
+})
 ```
 
 可以看到各个模块和获取地址模块耦合严重，`A`、`B`、`C` 模块有变化或者有新增模块，都需要深入到获取地址的代码去修改，一不小心可能就改出问题了。
@@ -143,7 +143,6 @@ class XiaoGang implements Observer {
     }
 }
 
-
 public class Main {
     public static void main(String[] args) {
         WindLiang windliang = new WindLiang(); // Subject
@@ -175,62 +174,60 @@ public class Main {
 下边用 `js` 改写为推模式：
 
 ```js
-const WindLiang = () => {
-  const list = [];
-  let post = '还没更新';
+function WindLiang() {
+  const list = []
+  let post = '还没更新'
   return {
     attach(update) {
-      list.push(update);
+      list.push(update)
     },
     detach(update) {
-      let findIndex = -1;
+      let findIndex = -1
       for (let i = 0; i < list.length; i++) {
         if (list[i] === update) {
-          findIndex = i;
-          break;
+          findIndex = i
+          break
         }
       }
-      if (findIndex !== -1) {
-        list.splice(findIndex, 1);
-      }
+      if (findIndex !== -1)
+        list.splice(findIndex, 1)
     },
     notifyObserver() {
-      for (let i = 0; i < list.length; i++) {
-        list[i](post);
-      }
+      for (let i = 0; i < list.length; i++)
+        list[i](post)
     },
     writePost(p) {
-      post = p;
+      post = p
     },
-  };
-};
+  }
+}
 
 const XiaoMing = {
   update(post) {
-    console.log('我收到了' + post + ' 并且点了个赞');
+    console.log(`我收到了${post} 并且点了个赞`)
   },
-};
+}
 
 const XiaoYang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且转发了');
+    console.log(`我收到了${post} 并且转发了`)
   },
-};
+}
 
 const XiaoGang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且收藏');
+    console.log(`我收到了${post} 并且收藏`)
   },
-};
+}
 
-windliang = WindLiang();
+windliang = WindLiang()
 
-windliang.attach(XiaoMing.update);
-windliang.attach(XiaoYang.update);
-windliang.attach(XiaoGang.update);
+windliang.attach(XiaoMing.update)
+windliang.attach(XiaoYang.update)
+windliang.attach(XiaoGang.update)
 
-windliang.writePost('新文章-观察者模式，balabala');
-windliang.notifyObserver();
+windliang.writePost('新文章-观察者模式，balabala')
+windliang.notifyObserver()
 ```
 
 在 `js` 中，我们可以直接将 `update` 方法传给 `Subject` ，同时采取推模式，调用 `update` 的时候直接将数据传给观察者，看起来会简洁很多。
@@ -242,17 +239,17 @@ windliang.notifyObserver();
 ```js
 // 页面里有三个模块 A，B，C 需要拿到地址后再进行下一步
 // A、B、C 三个模块都是不同人写的，提供了不同的方法供我们调用
-const observers = [];
+const observers = []
 // 注册观察者
-observers.push(A.update);
-observers.push(B.next);
-obervers.push(C.change);
+observers.push(A.update)
+observers.push(B.next)
+obervers.push(C.change)
 
 // getAddress 异步请求
 getAddress().then((res) => {
-  const address = res.address;
-  observers.forEach((update) => update(address));
-});
+  const address = res.address
+  observers.forEach(update => update(address))
+})
 ```
 
 通过观察者模式我们将获取地址后的操作解耦了出来，未来有新增模块只需要注册观察者即可。

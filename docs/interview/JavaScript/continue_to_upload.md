@@ -87,48 +87,48 @@ head:
 读取文件内容：
 
 ```js
-const input = document.querySelector('input');
+const input = document.querySelector('input')
 input.addEventListener('change', function () {
-  var file = this.files[0];
-});
+  const file = this.files[0]
+})
 ```
 
 可以使用`md5`实现文件的唯一性
 
 ```js
-const md5code = md5(file);
+const md5code = md5(file)
 ```
 
 然后开始对文件进行分割
 
 ```js
-var reader = new FileReader();
-reader.readAsArrayBuffer(file);
-reader.addEventListener('load', function (e) {
-  //每10M切割一段,这里只做一个切割演示，实际切割需要循环切割，
-  var slice = e.target.result.slice(0, 10 * 1024 * 1024);
-});
+const reader = new FileReader()
+reader.readAsArrayBuffer(file)
+reader.addEventListener('load', (e) => {
+  // 每10M切割一段,这里只做一个切割演示，实际切割需要循环切割，
+  const slice = e.target.result.slice(0, 10 * 1024 * 1024)
+})
 ```
 
 h5 上传一个（一片）
 
 ```js
-const formdata = new FormData();
-formdata.append('0', slice);
-//这里是有一个坑的，部分设备无法获取文件名称，和文件类型，这个在最后给出解决方案
-formdata.append('filename', file.filename);
-var xhr = new XMLHttpRequest();
-xhr.addEventListener('load', function () {
-  //xhr.responseText
-});
-xhr.open('POST', '');
-xhr.send(formdata);
-xhr.addEventListener('progress', updateProgress);
-xhr.upload.addEventListener('progress', updateProgress);
+const formdata = new FormData()
+formdata.append('0', slice)
+// 这里是有一个坑的，部分设备无法获取文件名称，和文件类型，这个在最后给出解决方案
+formdata.append('filename', file.filename)
+const xhr = new XMLHttpRequest()
+xhr.addEventListener('load', () => {
+  // xhr.responseText
+})
+xhr.open('POST', '')
+xhr.send(formdata)
+xhr.addEventListener('progress', updateProgress)
+xhr.upload.addEventListener('progress', updateProgress)
 
 function updateProgress(event) {
   if (event.lengthComputable) {
-    //进度条
+    // 进度条
   }
 }
 ```
@@ -142,38 +142,38 @@ function checkFileType(type, file, back) {
    * file input.change=> this.files[0]
    * back callback(boolean)
    */
-  var args = arguments;
-  if (args.length != 3) {
-    back(0);
-  }
-  var type = args[0]; // type = '(png|jpg)' , 'png'
-  var file = args[1];
-  var back = typeof args[2] == 'function' ? args[2] : function () {};
+  const args = arguments
+  if (args.length != 3)
+    back(0)
+
+  var type = args[0] // type = '(png|jpg)' , 'png'
+  var file = args[1]
+  var back = typeof args[2] == 'function' ? args[2] : function () {}
   if (file.type == '') {
     // 如果系统无法获取文件类型，则读取二进制流，对二进制进行解析文件类型
-    var imgType = [
-      'ff d8 ff', //jpg
-      '89 50 4e', //png
+    const imgType = [
+      'ff d8 ff', // jpg
+      '89 50 4e', // png
 
-      '0 0 0 14 66 74 79 70 69 73 6F 6D', //mp4
-      '0 0 0 18 66 74 79 70 33 67 70 35', //mp4
-      '0 0 0 0 66 74 79 70 33 67 70 35', //mp4
-      '0 0 0 0 66 74 79 70 4D 53 4E 56', //mp4
-      '0 0 0 0 66 74 79 70 69 73 6F 6D', //mp4
+      '0 0 0 14 66 74 79 70 69 73 6F 6D', // mp4
+      '0 0 0 18 66 74 79 70 33 67 70 35', // mp4
+      '0 0 0 0 66 74 79 70 33 67 70 35', // mp4
+      '0 0 0 0 66 74 79 70 4D 53 4E 56', // mp4
+      '0 0 0 0 66 74 79 70 69 73 6F 6D', // mp4
 
-      '0 0 0 18 66 74 79 70 6D 70 34 32', //m4v
-      '0 0 0 0 66 74 79 70 6D 70 34 32', //m4v
+      '0 0 0 18 66 74 79 70 6D 70 34 32', // m4v
+      '0 0 0 0 66 74 79 70 6D 70 34 32', // m4v
 
-      '0 0 0 14 66 74 79 70 71 74 20 20', //mov
-      '0 0 0 0 66 74 79 70 71 74 20 20', //mov
-      '0 0 0 0 6D 6F 6F 76', //mov
+      '0 0 0 14 66 74 79 70 71 74 20 20', // mov
+      '0 0 0 0 66 74 79 70 71 74 20 20', // mov
+      '0 0 0 0 6D 6F 6F 76', // mov
 
-      '4F 67 67 53 0 02', //ogg
-      '1A 45 DF A3', //ogg
+      '4F 67 67 53 0 02', // ogg
+      '1A 45 DF A3', // ogg
 
-      '52 49 46 46 x x x x 41 56 49 20', //avi (RIFF fileSize fileType LIST)(52 49 46 46,DC 6C 57 09,41 56 49 20,4C 49 53 54)
-    ];
-    var typeName = [
+      '52 49 46 46 x x x x 41 56 49 20', // avi (RIFF fileSize fileType LIST)(52 49 46 46,DC 6C 57 09,41 56 49 20,4C 49 53 54)
+    ]
+    const typeName = [
       'jpg',
       'png',
       'mp4',
@@ -189,44 +189,46 @@ function checkFileType(type, file, back) {
       'ogg',
       'ogg',
       'avi',
-    ];
-    var sliceSize = /png|jpg|jpeg/.test(type) ? 3 : 12;
-    var reader = new FileReader();
-    reader.readAsArrayBuffer(file);
-    reader.addEventListener('load', function (e) {
-      var slice = e.target.result.slice(0, sliceSize);
-      reader = null;
+    ]
+    const sliceSize = /png|jpg|jpeg/.test(type) ? 3 : 12
+    let reader = new FileReader()
+    reader.readAsArrayBuffer(file)
+    reader.addEventListener('load', (e) => {
+      const slice = e.target.result.slice(0, sliceSize)
+      reader = null
       if (slice && slice.byteLength == sliceSize) {
-        var view = new Uint8Array(slice);
-        var arr = [];
-        view.forEach(function (v) {
-          arr.push(v.toString(16));
-        });
-        view = null;
-        var idx = arr.join(' ').indexOf(imgType);
+        let view = new Uint8Array(slice)
+        let arr = []
+        view.forEach((v) => {
+          arr.push(v.toString(16))
+        })
+        view = null
+        var idx = arr.join(' ').indexOf(imgType)
         if (idx > -1) {
-          back(typeName[idx]);
-        } else {
-          arr = arr.map(function (v) {
-            if (i > 3 && i < 8) {
-              return 'x';
-            }
-            return v;
-          });
-          var idx = arr.join(' ').indexOf(imgType);
-          if (idx > -1) {
-            back(typeName[idx]);
-          } else {
-            back(false);
-          }
+          back(typeName[idx])
         }
-      } else {
-        back(false);
+        else {
+          arr = arr.map((v) => {
+            if (i > 3 && i < 8)
+              return 'x'
+
+            return v
+          })
+          var idx = arr.join(' ').indexOf(imgType)
+          if (idx > -1)
+            back(typeName[idx])
+          else
+            back(false)
+        }
       }
-    });
-  } else {
-    var type = file.name.match(/\.(\w+)$/)[1];
-    back(type);
+      else {
+        back(false)
+      }
+    })
+  }
+  else {
+    var type = file.name.match(/\.(\w+)$/)[1]
+    back(type)
   }
 }
 ```
@@ -234,16 +236,16 @@ function checkFileType(type, file, back) {
 调用方法如下
 
 ```js
-checkFileType('(mov|mp4|avi)', file, function (fileType) {
+checkFileType('(mov|mp4|avi)', file, (fileType) => {
   // fileType = mp4,
   // 如果file的类型不在枚举之列，则返回false
-});
+})
 ```
 
 上面上传文件的一步，可以改成：
 
 ```js
-formdata.append('filename', md5code + '.' + fileType);
+formdata.append('filename', `${md5code}.${fileType}`)
 ```
 
 有了切割上传后，也就有了文件唯一标识信息，断点续传变成了后台的一个小小的逻辑判断

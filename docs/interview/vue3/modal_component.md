@@ -181,21 +181,21 @@ $modal.show({
 在`Vue2`中，我们可以借助`Vue`实例以及`Vue.extend`的方式获得组件实例，然后挂载到`body`上
 
 ```js
-import Modal from './Modal.vue';
-const ComponentClass = Vue.extend(Modal);
-const instance = new ComponentClass({ el: document.createElement('div') });
-document.body.appendChild(instance.$el);
+import Modal from './Modal.vue'
+const ComponentClass = Vue.extend(Modal)
+const instance = new ComponentClass({ el: document.createElement('div') })
+document.body.appendChild(instance.$el)
 ```
 
 虽然`Vue3`移除了`Vue.extend`方法，但可以通过`createVNode`实现
 
 ```js
-import Modal from './Modal.vue';
-const container = document.createElement('div');
-const vnode = createVNode(Modal);
-render(vnode, container);
-const instance = vnode.component;
-document.body.appendChild(container);
+import Modal from './Modal.vue'
+const container = document.createElement('div')
+const vnode = createVNode(Modal)
+render(vnode, container)
+const instance = vnode.component
+document.body.appendChild(container)
 ```
 
 在`Vue2`中，可以通过`this`的形式调用全局 API
@@ -203,9 +203,9 @@ document.body.appendChild(container);
 ```js
 export default {
   install(vue) {
-    vue.prototype.$create = create;
+    vue.prototype.$create = create
   },
-};
+}
 ```
 
 而在 Vue3 的 `setup` 中已经没有 `this`概念了，需要调用`app.config.globalProperties`挂载到全局
@@ -213,9 +213,9 @@ export default {
 ```js
 export default {
   install(app) {
-    app.config.globalProperties.$create = create;
+    app.config.globalProperties.$create = create
   },
-};
+}
 ```
 
 ### 事件处理
@@ -257,7 +257,7 @@ app.config.globalProperties.$modal = {
   show({}) {
     /* 监听 确定、取消 事件 */
   },
-};
+}
 ```
 
 下面再来目睹下`_hub`是如何实现

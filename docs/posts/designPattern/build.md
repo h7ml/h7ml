@@ -207,11 +207,11 @@ _这里也只讨论变种的建造者模式。_
 
 ```js
 function getPhone(size, type, screen, price = 100, discount) {
-  console.log('size', size);
-  console.log('type', type);
-  console.log('screen', screen);
-  console.log('price', price);
-  console.log('discount', discount);
+  console.log('size', size)
+  console.log('type', type)
+  console.log('screen', screen)
+  console.log('price', price)
+  console.log('discount', discount)
 }
 ```
 
@@ -219,14 +219,14 @@ function getPhone(size, type, screen, price = 100, discount) {
 
 ```js
 function getPhone({ size, type = 'iOS', screen = 'OLED', price = 100, discount } = {}) {
-  console.log('size', size);
-  console.log('type', type);
-  console.log('screen', screen);
-  console.log('price', price);
-  console.log('discount', discount);
+  console.log('size', size)
+  console.log('type', type)
+  console.log('screen', screen)
+  console.log('price', price)
+  console.log('discount', discount)
 }
 
-getPhone({ size: 4, discount: 0.1, type: 'android' }); // 只需要传递需要的参数
+getPhone({ size: 4, discount: 0.1, type: 'android' }) // 只需要传递需要的参数
 ```
 
 上边的写法可以很方便的设置默认值，并且参数的顺序也不再重要，未来再扩展的时候也不需要太担心其他地方调用时候传参是否会引起问题。
@@ -235,14 +235,14 @@ getPhone({ size: 4, discount: 0.1, type: 'android' }); // 只需要传递需要�
 
 ```js
 function getPhone({ size, type = 'iOS', screen = 'OLED', price = 100, discount }) {
-  console.log('size', size);
-  console.log('type', type);
-  console.log('screen', screen);
-  console.log('price', price);
-  console.log('discount', discount);
+  console.log('size', size)
+  console.log('type', type)
+  console.log('screen', screen)
+  console.log('price', price)
+  console.log('discount', discount)
 }
 
-getPhone();
+getPhone()
 ```
 
 ![image-20220225083640409](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220225083640409.png)

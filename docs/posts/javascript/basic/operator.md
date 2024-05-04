@@ -17,50 +17,50 @@ ECMAScript 中的操作符比较独特，包括字符串、数值、布尔值，
 ### 递增/递减
 
 ```js
-++n; // 先自增 1，再运算
-n++; // 先运算，再自增 1
---n; // n-- 同理
-!n; // 转换为 Boolean 值
+++n // 先自增 1，再运算
+n++ // 先运算，再自增 1
+--n // n-- 同理
+!n // 转换为 Boolean 值
 ```
 
 操作符在前，先自递增/递减后再进行运算。
 
 ```js
-let num1 = 2;
-let num2 = 20;
-let num3 = --num1 + num2;
-let num4 = num1 + num2;
-console.log(num3); // 21
-console.log(num4); // 21
+let num1 = 2
+const num2 = 20
+const num3 = --num1 + num2
+const num4 = num1 + num2
+console.log(num3) // 21
+console.log(num4) // 21
 ```
 
 操作符在后，先运算再进行自递增/递减。
 
 ```js
-let num1 = 2;
-let num2 = 20;
-let num3 = num1-- + num2;
-let num4 = num1 + num2;
-console.log(num3); // 22
-console.log(num4); // 21
+let num1 = 2
+const num2 = 20
+const num3 = num1-- + num2
+const num4 = num1 + num2
+console.log(num3) // 22
+console.log(num4) // 21
 ```
 
 ```js
-let s1 = '2'; // 是有效的数值形式：则转换为数值再应用改变。
-let s2 = 'z'; // 不是有效的数值：则将变量的值设置为NaN 。
-let b = false; // 如果是false，则转换为0 再应用改变。如果是true，则转换为1 再应用改变。
-let f = 1.1; // 对于浮点值，加1 或减1。
+let s1 = '2' // 是有效的数值形式：则转换为数值再应用改变。
+let s2 = 'z' // 不是有效的数值：则将变量的值设置为NaN 。
+let b = false // 如果是false，则转换为0 再应用改变。如果是true，则转换为1 再应用改变。
+let f = 1.1 // 对于浮点值，加1 或减1。
 let o = {
   // 开头说过，如果是对象，valueOf()方法取得可以操作的值，再应用上面的规则。如果是NaN，则调用toString()并再次应用其他规则。
   valueOf() {
-    return -1;
+    return -1
   },
-};
-s1++; // 值变成数值3
-s2++; // 值变成NaN
-b++; // 值变成数值1
-f--; // 值变成0.10000000000000009（因为浮点数不精确）
-o--; // 值变成-2
+}
+s1++ // 值变成数值3
+s2++ // 值变成NaN
+b++ // 值变成数值1
+f-- // 值变成0.10000000000000009（因为浮点数不精确）
+o-- // 值变成-2
 ```
 
 ### 一个变量同时等于两个值
@@ -68,15 +68,15 @@ o--; // 值变成-2
 参考上面所说的，如果是对象，操作符会先调用 valueOf 取值，重写 valueOf 即可使 o == 1 且 o == 2
 
 ```js
-let o = {
+const o = {
   a: 0,
   valueOf() {
-    return ++this.a;
+    return ++this.a
   },
-};
+}
 if (o == 1 && o == 2) {
   // true
-  console.log('yes');
+  console.log('yes')
 }
 // yes
 ```
@@ -84,25 +84,25 @@ if (o == 1 && o == 2) {
 ### 一元加和减
 
 ```js
-let s1 = '01';
-let s2 = '1.1';
-let s3 = 'z';
-let b = false;
-let f = 1.1;
+let s1 = '01'
+let s2 = '1.1'
+let s3 = 'z'
+let b = false
+let f = 1.1
 let o = {
   valueOf() {
-    return -1;
+    return -1
   },
-};
-s1 = +s1; // 值变成数值1
-s1 = -s1; // 值变成数值-1
-s2 = +s2; // 值变成数值1.1
-s2 = -s2; // 值变成数值-1.1
-s3 = +s3; // 值变成NaN
-b = +b; // 值变成数值0
-f = +f; // 不变，还是1.1
-f = -f; // 变成-1.1
-o = +o; // 值变成数值-1
+}
+s1 = +s1 // 值变成数值1
+s1 = -s1 // 值变成数值-1
+s2 = +s2 // 值变成数值1.1
+s2 = -s2 // 值变成数值-1.1
+s3 = +s3 // 值变成NaN
+b = +b // 值变成数值0
+f = +f // 不变，还是1.1
+f = -f // 变成-1.1
+o = +o // 值变成数值-1
 ```
 
 ## 算术运算符
@@ -116,19 +116,19 @@ o = +o; // 值变成数值-1
 - \- \* / % 只能数学运算 隐式用 Number 转换 不能转 ---> NaN
 
 ```js
-alert([10] + 10); // '1010'
-alert([1, 2, 3] + 10); // '1,2,310'
-alert({ name: 'joth' } + 10); // '[object Object]10'
-alert(null + 10); // 10
-alert(undefined + 10); // NaN
-alert(true + 10); // 11
+alert([10] + 10) // '1010'
+alert([1, 2, 3] + 10) // '1,2,310'
+alert({ name: 'joth' } + 10) // '[object Object]10'
+alert(null + 10) // 10
+alert(undefined + 10) // NaN
+alert(true + 10) // 11
 
-alert(null - 10); // -10
-alert(undefined * 10); // NaN
-alert([10, 20] / 10); // NaN
+alert(null - 10) // -10
+alert(undefined * 10) // NaN
+alert([10, 20] / 10) // NaN
 
-alert(1 % 0); // NaN
-alert(100 % null); // NaN
+alert(1 % 0) // NaN
+alert(100 % null) // NaN
 ```
 
 ## 比较运算符
@@ -139,10 +139,10 @@ alert(100 % null); // NaN
 - 特例 undefined == null 为真（ js 真理）undefined 值是由 null 值派生而来的，因此 ECMA-262 将它们定义为表面上相等
 
 ```js
-'10' == 10; // true
-'10' === 10; // false
-undefined == null; // true
-undefined === null; // false 数据类型不同
+'10' == 10 // true
+'10' === 10 // false
+undefined == null // true
+undefined === null // false 数据类型不同
 ```
 
 ## 逻辑运算符
@@ -152,21 +152,21 @@ undefined === null; // false 数据类型不同
 - 或 || 或运算见真则真
 
 ```js
-!false; // true
-!!false; // false
+!false // true
+!!false // false
 
 // 与运算：与运算见假则假
-true && false; // false
-false && true; // false
-false && false; // false
-true && true; // true
+true && false // false
+false && true // false
+false && false // false
+true && true // true
 
 // 或运算：或运算见真则真
-true || false; // true
-false || true; // true
-true || true; // true
-false || false; // false
-10 > 3 && '10' > '3'; // false
+true || false // true
+false || true // true
+true || true // true
+false || false // false
+10 > 3 && '10' > '3' // false
 ```
 
 ## 短路运算
@@ -176,12 +176,12 @@ false || false; // false
 
 ```js
 // 短路与
-10 && null; // null
-undefined && 'abc'; // undefined
+10 && null // null
+undefined && 'abc' // undefined
 
 // 短路或
-10 || null; // 10
-undefined || 'abc'; // 'abc'
+10 || null // 10
+undefined || 'abc' // 'abc'
 ```
 
 ## 三目运算符
@@ -189,7 +189,7 @@ undefined || 'abc'; // 'abc'
 - 方法: ? : ---> 判断条件 ? 当条件为真时 返回的值 ： 当条件为假时返回的值
 
 ```js
-var y = -20 > 0 ? 1 : -20 == 0 ? 0 : -1;
+const y = -20 > 0 ? 1 : -20 == 0 ? 0 : -1
 ```
 
 ## 赋值运算符
@@ -197,11 +197,11 @@ var y = -20 > 0 ? 1 : -20 == 0 ? 0 : -1;
 - = 赋值 += -= \*= /= %=
 
 ```js
-a += 5; // 等价于 a = a + 5;
-a -= 10; // 等价于 a = a - 10;
-a *= 3; // 等价于 a = a * 3
-a /= 2; // 等价于 a = a / 2
-a %= 2; // 等价于 a = a % 2
+a += 5 // 等价于 a = a + 5;
+a -= 10 // 等价于 a = a - 10;
+a *= 3 // 等价于 a = a * 3
+a /= 2 // 等价于 a = a / 2
+a %= 2 // 等价于 a = a % 2
 ```
 
 ## 隐式类型转换
@@ -213,14 +213,14 @@ a %= 2; // 等价于 a = a % 2
 ## 括号/逗号运算符
 
 ```js
-var a = (1, 2, 2, 1, 0); // 0 返回最后一项
+const a = (1, 2, 2, 1, 0) // 0 返回最后一项
 ```
 
 - 应用
 
 ```js
-const arr = [{ a: 1 }, { a: 2 }];
-arr.reduce((prev, next) => ((prev += 2), prev + next.a), 0); // 7
+const arr = [{ a: 1 }, { a: 2 }]
+arr.reduce((prev, next) => ((prev += 2), prev + next.a), 0) // 7
 ```
 
 ## 指数运算符
@@ -228,12 +228,12 @@ arr.reduce((prev, next) => ((prev += 2), prev + next.a), 0); // 7
 - ES2016 新增了一个指数运算符（\*\*）
 
 ```js
-2 ** 2; // 4
-2 ** 3; // 8
+2 ** 2 // 4
+2 ** 3 // 8
 
-2 ** (3 ** 2); // 512，相当于 2 ** (3 ** 2)
-a **= 2; // 等同于 a = a * a;
-b **= 3; // 等同于 b = b * b * b;
+2 ** (3 ** 2) // 512，相当于 2 ** (3 ** 2)
+a **= 2 // 等同于 a = a * a;
+b **= 3 // 等同于 b = b * b * b;
 ```
 
 ## 位操作符
@@ -268,8 +268,8 @@ b **= 3; // 等同于 b = b * b * b;
 1111 1111 1111 1111 1111 1111 1110 1110 （这就是 -18 的二进制表示）
 
 ```js
-let num = -18;
-console.log(num.toString(2)); // '-10010'
+const num = -18
+console.log(num.toString(2)) // '-10010'
 ```
 
 输出'-10010'，这个过程会求处二补数，然后符合逻辑的表示出来。ECMA 中存在无符号的整数，也就是说无符号的整数比有符号的范围更大，因为符号位可以用来表示数值。
@@ -279,9 +279,9 @@ console.log(num.toString(2)); // '-10010'
 ~ 来表示，作用是返回数值的补数。
 
 ```js
-let num1 = 25; // 二进制00000000000000000000000000011001
-let num2 = ~num1; // 二进制11111111111111111111111111100110 这里取反后还减了 1
-console.log(num2); // -26
+const num1 = 25 // 二进制00000000000000000000000000011001
+const num2 = ~num1 // 二进制11111111111111111111111111100110 这里取反后还减了 1
+console.log(num2) // -26
 ```
 
 这样的结果比`-num1 - 1`结果更快，位操作符是在底层表示进行的。
@@ -289,10 +289,10 @@ console.log(num2); // -26
 应用
 
 ```js
-let a = 25.513;
-~~a; // 25 取整
-let b = 5.9;
-~~b; // 5 取整
+const a = 25.513
+~~a // 25 取整
+const b = 5.9
+~~b // 5 取整
 ```
 
 ~a 反补减 1 得 -26，再~ 反补得到正 26 减 1 得到 25。
@@ -302,8 +302,8 @@ let b = 5.9;
 & 来表示，两个数的位 1 1 得 1，0 1 得 0， 0 0 得 0。
 
 ```js
-let result = 25 & 3;
-console.log(result); // 1
+const result = 25 & 3
+console.log(result) // 1
 ```
 
 25 = 0000 0000 0000 0000 0000 0000 0001 1001
@@ -321,8 +321,8 @@ console.log(result); // 1
 | 来表示，看懂了按位与那么按位或也是同理。有一个位为 1 则为 1，都为 0 时则为 0。
 
 ```js
-let result = 25 | 3;
-console.log(result); // 27
+const result = 25 | 3
+console.log(result) // 27
 // 25 = 0000 0000 0000 0000 0000 0000 0001 1001
 //  3 = 0000 0000 0000 0000 0000 0000 0000 0011
 // 得   0000 0000 0000 0000 0000 0000 0001 1011
@@ -334,8 +334,8 @@ console.log(result); // 27
 ^ 来表示，它只有在一位是 1，一位是 0 时才会得 1。都是 0 或都是 1 则得 0。
 
 ```js
-let result = 25 ^ 3;
-console.log(result); // 26
+const result = 25 ^ 3
+console.log(result) // 26
 // 25 = 0000 0000 0000 0000 0000 0000 0001 1001
 //  3 = 0000 0000 0000 0000 0000 0000 0000 0011
 // 得   0000 0000 0000 0000 0000 0000 0001 1010
@@ -349,9 +349,9 @@ console.log(result); // 26
 << 表示，二进制位向左移动的位数
 
 ```js
-let oldValue = 2; // 二进制表示 10
-let newValue = oldValue << 5; // 二进制表示 1000000
-console.log(newValue); // 十进制 64
+const oldValue = 2 // 二进制表示 10
+const newValue = oldValue << 5 // 二进制表示 1000000
+console.log(newValue) // 十进制 64
 ```
 
 2 的二进制 10，向左移 5，补了 5 个 0,1000000 即为 64。
@@ -363,9 +363,9 @@ console.log(newValue); // 十进制 64
 \>\> 表示，与左移同理，也会保留符号。
 
 ```js
-let oldValue = 64; // 二进制表示 1000000
-let newValue = oldValue >> 5; // 二进制表示 10
-console.log(newValue); // 十进制 2
+const oldValue = 64 // 二进制表示 1000000
+const newValue = oldValue >> 5 // 二进制表示 10
+console.log(newValue) // 十进制 2
 ```
 
 ### 无符号右移

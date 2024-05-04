@@ -35,7 +35,7 @@ head:
 例如我们在在一个 `TypeScript` 工程下建立一个文件 `1.ts`，声明一个变量`a`，如下：
 
 ```ts
-const a = 1;
+const a = 1
 ```
 
 然后在另一个文件同样声明一个变量`a`，这时候会出现错误信息
@@ -47,9 +47,9 @@ const a = 1;
 如果需要解决这个问题，则通过`import`或者`export`引入模块系统即可，如下：
 
 ```ts
-const a = 10;
+const a = 10
 
-export default a;
+export default a
 ```
 
 在`typescript`中，`export`关键字可以导出变量或者类型，用法与`es6`模块一致，如下：
@@ -64,7 +64,7 @@ export type Person = {
 通过`import` 引入模块，如下：
 
 ```ts
-import { a, Person } from './export';
+import { Person, a } from './export'
 ```
 
 ## 二、命名空间
@@ -89,7 +89,7 @@ namespace SomeNameSpaceName {
 使用方式如下：
 
 ```ts
-SomeNameSpaceName.SomeClassName;
+SomeNameSpaceName.SomeClassName
 ```
 
 命名空间本质上是一个对象，作用是将一系列相关的全局变量组织到一个对象的属性，如下：
@@ -107,14 +107,14 @@ namespace Letter {
 编译成`js`如下：
 
 ```js
-var Letter;
+let Letter;
 (function (Letter) {
-  Letter.a = 1;
-  Letter.b = 2;
-  Letter.c = 3;
+  Letter.a = 1
+  Letter.b = 2
+  Letter.c = 3
   // ...
-  Letter.z = 26;
-})(Letter || (Letter = {}));
+  Letter.z = 26
+})(Letter || (Letter = {}))
 ```
 
 ## 三、区别

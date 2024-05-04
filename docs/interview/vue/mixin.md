@@ -49,16 +49,16 @@ head:
 定义一个`mixin`对象，有组件`options`的`data`、`methods`属性
 
 ```js
-var myMixin = {
-  created: function () {
-    this.hello();
+const myMixin = {
+  created() {
+    this.hello()
   },
   methods: {
-    hello: function () {
-      console.log('hello from mixin!');
+    hello() {
+      console.log('hello from mixin!')
     },
   },
-};
+}
 ```
 
 组件通过`mixins`属性调用`mixin`对象
@@ -66,7 +66,7 @@ var myMixin = {
 ```js
 Vue.component('componentA', {
   mixins: [myMixin],
-});
+})
 ```
 
 该组件在使用的时候，混合了`mixin`里面的方法，在自动执行`created`生命钩子，执行`hello`方法
@@ -77,10 +77,10 @@ Vue.component('componentA', {
 
 ```js
 Vue.mixin({
-  created: function () {
-    console.log('全局混入');
+  created() {
+    console.log('全局混入')
   },
-});
+})
 ```
 
 使用全局混入需要特别注意，因为它会影响到每一个组件实例（包括第三方组件）
@@ -109,14 +109,14 @@ const Modal = {
   data() {
     return {
       isShowing: false,
-    };
+    }
   },
   methods: {
     toggleShow() {
-      this.isShowing = !this.isShowing;
+      this.isShowing = !this.isShowing
     },
   },
-};
+}
 ```
 
 定义一个`tooltip`提示框，内部通过`isShowing`来控制显示
@@ -127,14 +127,14 @@ const Tooltip = {
   data() {
     return {
       isShowing: false,
-    };
+    }
   },
   methods: {
     toggleShow() {
-      this.isShowing = !this.isShowing;
+      this.isShowing = !this.isShowing
     },
   },
-};
+}
 ```
 
 通过观察上面两个组件，发现两者的逻辑是相同，代码控制显示也是相同的，这时候`mixin`就派上用场了
@@ -146,14 +146,14 @@ const toggle = {
   data() {
     return {
       isShowing: false,
-    };
+    }
   },
   methods: {
     toggleShow() {
-      this.isShowing = !this.isShowing;
+      this.isShowing = !this.isShowing
     },
   },
-};
+}
 ```
 
 两个组件在使用上，只需要引入`mixin`
@@ -162,12 +162,12 @@ const toggle = {
 const Modal = {
   template: '#modal',
   mixins: [toggle],
-};
+}
 
 const Tooltip = {
   template: '#tooltip',
   mixins: [toggle],
-};
+}
 ```
 
 通过上面小小的例子，让我们知道了`Mixin`对于封装一些可复用的功能如此有趣、方便、实用
@@ -260,39 +260,38 @@ strats.provide = mergeDataOrFn;
 
 ```js
 strats.data = function (parentVal, childVal, vm) {
-  return mergeDataOrFn(parentVal, childVal, vm);
-};
+  return mergeDataOrFn(parentVal, childVal, vm)
+}
 
 function mergeDataOrFn(parentVal, childVal, vm) {
   return function mergedInstanceDataFn() {
-    var childData = childVal.call(vm, vm); // 执行data挂的函数得到对象
-    var parentData = parentVal.call(vm, vm);
-    if (childData) {
-      return mergeData(childData, parentData); // 将2个对象进行合并
-    } else {
-      return parentData; // 如果没有childData 直接返回parentData
-    }
-  };
+    const childData = childVal.call(vm, vm) // 执行data挂的函数得到对象
+    const parentData = parentVal.call(vm, vm)
+    if (childData)
+      return mergeData(childData, parentData) // 将2个对象进行合并
+    else
+      return parentData // 如果没有childData 直接返回parentData
+  }
 }
 
 function mergeData(to, from) {
-  if (!from) return to;
-  var key, toVal, fromVal;
-  var keys = Object.keys(from);
-  for (var i = 0; i < keys.length; i++) {
-    key = keys[i];
-    toVal = to[key];
-    fromVal = from[key];
+  if (!from)
+    return to
+  let key, toVal, fromVal
+  const keys = Object.keys(from)
+  for (let i = 0; i < keys.length; i++) {
+    key = keys[i]
+    toVal = to[key]
+    fromVal = from[key]
     // 如果不存在这个属性，就重新设置
-    if (!to.hasOwnProperty(key)) {
-      set(to, key, fromVal);
-    }
+    if (!to.hasOwnProperty(key))
+      set(to, key, fromVal)
+
     // 存在相同属性，合并对象
-    else if (typeof toVal == 'object' && typeof fromVal == 'object') {
-      mergeData(toVal, fromVal);
-    }
+    else if (typeof toVal == 'object' && typeof fromVal == 'object')
+      mergeData(toVal, fromVal)
   }
-  return to;
+  return to
 }
 ```
 
@@ -360,18 +359,17 @@ strats.watch = function (parentVal, childVal, vm, key) {
 叠加型合并有：`component`、`directives`、`filters`
 
 ```js
-strats.components =
-  strats.directives =
-  strats.filters =
-    function mergeAssets(parentVal, childVal, vm, key) {
-      var res = Object.create(parentVal || null);
-      if (childVal) {
-        for (var key in childVal) {
-          res[key] = childVal[key];
+strats.components
+  = strats.directives
+  = strats.filters
+    = function mergeAssets(parentVal, childVal, vm, key) {
+        const res = Object.create(parentVal || null)
+        if (childVal) {
+          for (var key in childVal)
+            res[key] = childVal[key]
         }
+        return res
       }
-      return res;
-    };
 ```
 
 叠加型主要是通过原型链进行层层的叠加

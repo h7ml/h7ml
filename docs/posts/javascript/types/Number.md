@@ -29,16 +29,16 @@ let floatNum = 3.125e7; // 等于31250000
 - 方法
 
 ```js
-var num = 10;
-num.toString(); // '10'
-num.toString(2); // 2 进制转换
+const num = 10
+num.toString() // '10'
+num.toString(2) // 2 进制转换
 
-num.toFixed(2); // 保留几位小数，最大 20 位小数
-num.toExponential(1); // 1.0e+1 科学计数法
-var num1 = 99;
-num1.toPrecision(1); // 1e+2 向上舍入为 100
-num1.toPrecision(2); // 99
-num1.toPrecision(3); // 99.0
+num.toFixed(2) // 保留几位小数，最大 20 位小数
+num.toExponential(1) // 1.0e+1 科学计数法
+const num1 = 99
+num1.toPrecision(1) // 1e+2 向上舍入为 100
+num1.toPrecision(2) // 99
+num1.toPrecision(3) // 99.0
 ```
 
 - NaN
@@ -46,10 +46,10 @@ num1.toPrecision(3); // 99.0
 分子是非 0 值，分母是有符号 0 或无符号 0，则会返回 Infinity 或-Infinity
 
 ```js
-console.log(0 / 0); // NaN
-console.log(-0 / +0); // NaN
-console.log(5 / 0); // Infinity
-console.log(5 / -0); // -Infinity
+console.log(0 / 0) // NaN
+console.log(-0 / +0) // NaN
+console.log(5 / 0) // Infinity
+console.log(5 / -0) // -Infinity
 ```
 
 isNaN 首先会调用对象的 valueOf() 方法，然后再确定返回的值是否可以转换为数值。如果不能，再调用 toString() 方法，并测试其返回值
@@ -60,9 +60,9 @@ isNaN 首先会调用对象的 valueOf() 方法，然后再确定返回的值是
 - 检查一个数值是否为有限的（ finite ），即不是 Infinity
 
 ```js
-Number.isFinite(1); // true
-Number.isFinite(0.1); // true
-Number.isFinite(NaN); // false 不是有限的
+Number.isFinite(1) // true
+Number.isFinite(0.1) // true
+Number.isFinite(Number.NaN) // false 不是有限的
 ```
 
 ## Number.isInteger()
@@ -70,10 +70,10 @@ Number.isFinite(NaN); // false 不是有限的
 - 判断一个数是不是整数
 
 ```js
-Number.isInteger(0); // true
+Number.isInteger(0) // true
 // JavaScript 内部，整数和浮点数采用的是同样的储存方法,因此 1 与 1.0 被视为相同的值
-Number.isInteger(1); // true
-Number.isInteger(1.0); // true
+Number.isInteger(1) // true
+Number.isInteger(1.0) // true
 ```
 
 ## 数值转换
@@ -87,10 +87,10 @@ Number.isInteger(1.0); // true
 - 对象，调用 valueOf()方法，再执行上面的规则。如果是 NaN，则调用 toString()方法，再按照字符串的规则转换。
 
 ```js
-let num1 = Number('Hello world!'); // NaN
-let num2 = Number(''); // 0
-let num3 = Number('000011'); // 11
-let num4 = Number(true); // 1
+const num1 = Number('Hello world!') // NaN
+const num2 = Number('') // 0
+const num3 = Number('000011') // 11
+const num4 = Number(true) // 1
 ```
 
 - parseInt()
@@ -98,12 +98,12 @@ let num4 = Number(true); // 1
   - 第一个字符不是数值、加号或减号，立即返回 NaN
 
 ```js
-let num1 = parseInt('1234blue'); // 1234
-let num2 = parseInt(''); // NaN
-let num3 = parseInt('0xA'); // 10，解释为十六进制整数
-let num4 = parseInt(22.5); // 22
-let num5 = parseInt('70'); // 70，解释为十进制值
-let num6 = parseInt('0xf'); // 15，解释为十六进制整数
+const num1 = Number.parseInt('1234blue') // 1234
+const num2 = Number.parseInt('') // NaN
+const num3 = Number.parseInt('0xA') // 10，解释为十六进制整数
+const num4 = Number.parseInt(22.5) // 22
+const num5 = Number.parseInt('70') // 70，解释为十进制值
+const num6 = Number.parseInt('0xf') // 15，解释为十六进制整数
 ```
 
 - parseInt()也接收第二个参数，指定进制数
@@ -122,10 +122,10 @@ let num3 = parseInt('10', 10); // 10，按十进制解析
   - 十六进制数值始终会返回 0，因为 parseFloat() 只解析十进制值
 
 ```js
-let num1 = parseFloat('1234blue'); // 1234，按整数解析
-let num2 = parseFloat('0xA'); // 0
-let num3 = parseFloat('22.5'); // 22.5
-let num4 = parseFloat('22.34.5'); // 22.34
-let num5 = parseFloat('0908.5'); // 908.5
-let num6 = parseFloat('3.125e7'); // 31250000
+const num1 = Number.parseFloat('1234blue') // 1234，按整数解析
+const num2 = Number.parseFloat('0xA') // 0
+const num3 = Number.parseFloat('22.5') // 22.5
+const num4 = Number.parseFloat('22.34.5') // 22.34
+const num5 = Number.parseFloat('0908.5') // 908.5
+const num6 = Number.parseFloat('3.125e7') // 31250000
 ```

@@ -53,17 +53,16 @@ head:
 
 ```js
 function binarySearch(arr, l, r, target) {
-  if (l > r) {
-    return -1;
-  }
-  let mid = l + Math.floor((r - l) / 2);
-  if (arr[mid] === target) {
-    return mid;
-  } else if (arr[mid] < target) {
-    return binarySearch(arr, mid + 1, r, target);
-  } else {
-    return binarySearch(arr, l, mid - 1, target);
-  }
+  if (l > r)
+    return -1
+
+  const mid = l + Math.floor((r - l) / 2)
+  if (arr[mid] === target)
+    return mid
+  else if (arr[mid] < target)
+    return binarySearch(arr, mid + 1, r, target)
+  else
+    return binarySearch(arr, l, mid - 1, target)
 }
 ```
 

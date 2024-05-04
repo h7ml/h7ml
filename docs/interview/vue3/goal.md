@@ -77,21 +77,21 @@ head:
 存在一个获取鼠标位置的函数
 
 ```js
-import { toRefs, reactive } from 'vue';
+import { reactive, toRefs } from 'vue'
 function useMouse() {
-  const state = reactive({ x: 0, y: 0 });
+  const state = reactive({ x: 0, y: 0 })
   const update = (e) => {
-    state.x = e.pageX;
-    state.y = e.pageY;
-  };
+    state.x = e.pageX
+    state.y = e.pageY
+  }
   onMounted(() => {
-    window.addEventListener('mousemove', update);
-  });
+    window.addEventListener('mousemove', update)
+  })
   onUnmounted(() => {
-    window.removeEventListener('mousemove', update);
-  });
+    window.removeEventListener('mousemove', update)
+  })
 
-  return toRefs(state);
+  return toRefs(state)
 }
 ```
 
@@ -150,7 +150,7 @@ Object.defineProperty(data, 'a', {
   set() {
     // trigger
   },
-});
+})
 ```
 
 尽管`Vue`为了解决这个问题提供了 `set`和`delete`实例方法，但是对于用户来说，还是增加了一定的心智负担
@@ -199,34 +199,34 @@ default {
 同样是上文的获取鼠标位置的例子
 
 ```js
-import { toRefs, reactive, onUnmounted, onMounted } from 'vue';
+import { onMounted, onUnmounted, reactive, toRefs } from 'vue'
 function useMouse() {
-  const state = reactive({ x: 0, y: 0 });
+  const state = reactive({ x: 0, y: 0 })
   const update = (e) => {
-    state.x = e.pageX;
-    state.y = e.pageY;
-  };
+    state.x = e.pageX
+    state.y = e.pageY
+  }
   onMounted(() => {
-    window.addEventListener('mousemove', update);
-  });
+    window.addEventListener('mousemove', update)
+  })
   onUnmounted(() => {
-    window.removeEventListener('mousemove', update);
-  });
+    window.removeEventListener('mousemove', update)
+  })
 
-  return toRefs(state);
+  return toRefs(state)
 }
 ```
 
 组件使用
 
 ```js
-import useMousePosition from './mouse';
+import useMousePosition from './mouse'
 export default {
   setup() {
-    const { x, y } = useMousePosition();
-    return { x, y };
+    const { x, y } = useMousePosition()
+    return { x, y }
   },
-};
+}
 ```
 
 可以看到，整个数据来源清晰了，即使去编写更多的`hook`函数，也不会出现命名冲突的问题
