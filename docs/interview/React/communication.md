@@ -24,7 +24,7 @@ head:
 
 # React 中组件之间如何通信？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/767a2800-dc9f-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/767a2800-dc9f-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

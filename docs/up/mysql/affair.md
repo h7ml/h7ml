@@ -20,7 +20,7 @@ title: 事物
 
 这些概念不好理解，接下来举例说明，如下图有一张表
 
-![image-20220910095758027](http://static.5ibug.net/vitepress/assets/images/mysql/202209100957062.png)
+![image-20220910095758027](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100957062.png)
 
 张三和李四账户中各有 100 块钱，现李四需要转换 500 块钱给张三，具体的转账操作为
 
@@ -30,7 +30,7 @@ title: 事物
 
 现在假设在转账过程中第二步完成后出现了异常第三步没有执行，就会造成李四账户金额少了 500，而张三金额并没有多 500；这样的系统是有问题的。如果解决呢？使用事务可以解决上述问题
 
-![image-20220910095800626](http://static.5ibug.net/vitepress/assets/images/mysql/202209100958661.png)
+![image-20220910095800626](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100958661.png)
 
 从上图可以看到在转账前开启事务，如果出现了异常回滚事务，三步正常执行就提交事务，这样就可以完美解决问题。
 
@@ -82,7 +82,7 @@ title: 事物
 
   整体执行结果肯定会出问题，我们查询账户表中数据，发现李四账户少了 500。
 
-  ![image-20220910095804689](http://static.5ibug.net/vitepress/assets/images/mysql/202209100958711.png)
+  ![image-20220910095804689](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100958711.png)
 
 - 添加事务 sql 如下：
 

@@ -24,7 +24,7 @@ head:
 
 # 说说 HTTP 常见的请求头有哪些? 作用？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/964abb00-bc69-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/964abb00-bc69-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -96,7 +96,7 @@ Cache-Control: max-age=0
 
 强制缓存与协商缓存的流程图如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a4065b00-bc69-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a4065b00-bc69-11eb-85f6-6fac77c0c9b3.png)
 
 ### 会话状态
 

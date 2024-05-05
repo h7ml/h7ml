@@ -24,7 +24,7 @@ head:
 
 # 说说你对操作系统的理解？核心概念有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0f06bf30-008a-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0f06bf30-008a-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ head:
 
 操作系统的类型非常多样，不同机器安装的操作系统可从简单到复杂，可从移动电话的嵌入式系统到超级电脑的大型操作系统，在计算机与用户之间起接口的作用，如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0ad1b850-009b-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0ad1b850-009b-11ec-8e64-91fdec0f05a1.png)
 
 许多操作系统制造者对它涵盖范畴的定义也不尽一致，例如有些操作系统集成了图形用户界面，而有些仅使用命令行界面，将图形用户界面视为一种非必要的应用程序
 

@@ -14,7 +14,7 @@ title: 数据库设计
 
 - 软件的研发步骤
 
-  ![image-20220910095431929](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954963.png)
+  ![image-20220910095431929](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954963.png)
 
 - 数据库设计概念
 
@@ -30,7 +30,7 @@ title: 数据库设计
 
     如下图就是 ER(Entity/Relation)图：
 
-    ![image-20220910095440504](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954530.png)
+    ![image-20220910095440504](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954530.png)
 
   - 物理设计（根据数据库自身的特点把逻辑设计转换为物理设计）
 
@@ -43,7 +43,7 @@ title: 数据库设计
     - 如：用户 和 用户详情
     - 一对一关系多用于表拆分，将一个实体中经常使用的字段放一张表，不经常使用的字段放另一张表，用于提升查询性能
 
-    ![image-20220910095444549](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954571.png)
+    ![image-20220910095444549](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954571.png)
 
     上图左边是用户的详细信息，而我们真正在展示用户信息时最长用的则是上图右边红框所示，所以我们会将详细信息查分成两周那个表。
 
@@ -53,7 +53,7 @@ title: 数据库设计
 
     - 一个部门对应多个员工，一个员工对应一个部门。如下图：
 
-      ![image-20220910095448786](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954816.png)
+      ![image-20220910095448786](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954816.png)
 
   - 多对多
 
@@ -61,7 +61,7 @@ title: 数据库设计
 
     - 一个商品对应多个订单，一个订单包含多个商品。如下图：
 
-      ![image-20220910095451925](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954953.png)
+      ![image-20220910095451925](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954953.png)
 
 ## 表关系(一对多)
 
@@ -78,11 +78,11 @@ title: 数据库设计
 
   我们还是以 `员工表` 和 `部门表` 举例:
 
-  ![image-20220910095455573](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954593.png)
+  ![image-20220910095455573](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954593.png)
 
   经过分析发现，员工表属于多的一方，而部门表属于一的一方，此时我们会在员工表中添加一列（dep_id），指向于部门表的主键（id）：
 
-  ![image-20220910095458797](http://static.5ibug.net/vitepress/assets/images/mysql/202209100954824.png)
+  ![image-20220910095458797](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100954824.png)
 
   建表语句如下：
 
@@ -111,7 +111,7 @@ title: 数据库设计
 
   查看表结构模型图：
 
-  ![image-20220910095502423](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955443.png)
+  ![image-20220910095502423](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955443.png)
 
 ## 表关系(多对多)
 
@@ -128,11 +128,11 @@ title: 数据库设计
 
   我们以 `订单表` 和 `商品表` 举例：
 
-  ![image-20220910095505739](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955775.png)
+  ![image-20220910095505739](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955775.png)
 
   经过分析发现，订单表和商品表都属于多的一方，此时需要创建一个中间表，在中间表中添加订单表的外键和商品表的外键指向两张表的主键：
 
-  ![image-20220910095509140](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955162.png)
+  ![image-20220910095509140](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955162.png)
 
   建表语句如下：
 
@@ -207,17 +207,17 @@ title: 数据库设计
 查看表结构模型图：
 ```
 
-![image-20220910095514389](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955410.png)
+![image-20220910095514389](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955410.png)
 
 ## 数据库设计案例
 
 根据下图设计表及表和表之间的关系：
 
-![image-20220910095518049](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955077.png)
+![image-20220910095518049](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955077.png)
 
 经过分析，我们分为 `专辑表` `曲目表` `短评表` `用户表` 4 张表。
 
-![image-20220910095522282](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955318.png)
+![image-20220910095522282](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955318.png)
 
 一个专辑可以有多个曲目，一个曲目只能属于某一张专辑，所以专辑表和曲目表的关系是==一对多==。
 
@@ -225,4 +225,4 @@ title: 数据库设计
 
 一个用户可以发多个短评，一个短评只能是某一个人发的，所以用户表和短评表的关系是 ==一对多==。
 
-![image-20220910095531461](http://static.5ibug.net/vitepress/assets/images/mysql/202209100955488.png)
+![image-20220910095531461](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100955488.png)

@@ -24,7 +24,7 @@ head:
 
 # CSS3 新增了哪些新特性？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d58f6df0-9b5e-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d58f6df0-9b5e-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -38,7 +38,7 @@ head:
 
 `css3`中新增了一些选择器，主要为如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/e368cf20-9b5e-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/e368cf20-9b5e-11eb-85f6-6fac77c0c9b3.png)
 
 ## 三、新样式
 

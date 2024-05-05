@@ -24,7 +24,7 @@ head:
 
 # 说说你对闭包的理解？闭包使用场景
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c141a030-6a7a-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c141a030-6a7a-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

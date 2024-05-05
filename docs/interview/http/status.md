@@ -24,7 +24,7 @@ head:
 
 # 说说 HTTP 常见的状态码有哪些，适用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/038831d0-bbc9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/038831d0-bbc9-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

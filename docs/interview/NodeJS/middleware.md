@@ -24,7 +24,7 @@ head:
 
 # 说说对中间件概念的理解，如何封装 node 中间件？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/614ae480-cce4-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/614ae480-cce4-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -34,7 +34,7 @@ head:
 
 例如在`express`、`koa`等`web`框架中，中间件的本质为一个回调函数，参数包含请求对象、响应对象和执行下一个中间件的函数
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/6a6ed3f0-cce4-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/6a6ed3f0-cce4-11eb-85f6-6fac77c0c9b3.png)
 
 在这些中间件函数中，我们可以执行业务逻辑代码，修改请求和响应对象、返回响应数据等操作
 
@@ -47,7 +47,7 @@ head:
 - ctx ：封装了 request 和 response 的变量
 - next ：进入下一个要执行的中间件的函数
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7507b020-cce4-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7507b020-cce4-11eb-ab90-d9ae814b240d.png)
 
 下面就针对`koa`进行中间件的封装：
 

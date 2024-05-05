@@ -24,7 +24,7 @@ head:
 
 # Vue 组件之间的通信方式都有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7de50d20-3aca-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7de50d20-3aca-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、组件间通信的概念
 
@@ -50,7 +50,7 @@ head:
 
 关系图:
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/85b92400-3aca-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/85b92400-3aca-11eb-ab90-d9ae814b240d.png)
 
 ## 三、组件间通信的方案
 
@@ -67,7 +67,7 @@ head:
 
 ### props 传递数据
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8f80a670-3aca-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8f80a670-3aca-11eb-ab90-d9ae814b240d.png)
 
 - 适用场景：父组件传递数据给子组件
 - 子组件设置`props`属性，定义接收父组件传递过来的参数
@@ -234,7 +234,7 @@ inject: ['foo'] // 获取到祖先组件传递过来的值
 ### `vuex`
 
 - 适用场景: 复杂关系的组件数据传递
-- `Vuex`作用相当于一个用来存储共享变量的容器 ![](http://static.5ibug.net/vitepress/assets/images/interview/fa207cd0-3aca-11eb-ab90-d9ae814b240d.png)
+- `Vuex`作用相当于一个用来存储共享变量的容器 ![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fa207cd0-3aca-11eb-ab90-d9ae814b240d.png)
 
 - `state`用来存放共享变量的地方
 - `getter`，可以增加一个`getter`派生状态，\(相当于`store`中的计算属性），用来获得共享变量的值

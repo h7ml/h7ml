@@ -24,7 +24,7 @@ head:
 
 # Vue 项目中你是如何解决跨域的呢？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/db3045b0-4e31-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/db3045b0-4e31-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、跨域是什么
 
@@ -60,7 +60,7 @@ CORS （Cross-Origin Resource Sharing，跨域资源共享）是一个系统，�
 
 只要后端实现了 `CORS`，就实现了跨域
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/140deb80-4e32-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/140deb80-4e32-11eb-ab90-d9ae814b240d.png)
 
 以`koa`框架举例
 

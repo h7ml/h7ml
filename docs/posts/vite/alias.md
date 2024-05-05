@@ -13,7 +13,7 @@ star: true
 
 1. Vite config
 
-![image-20220411165325332](http://static.5ibug.net/vitepress/assets/images/vite/e6c9d24ely1h15vt7vddmj20hc0er0tj.jpg)
+![image-20220411165325332](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/vite/e6c9d24ely1h15vt7vddmj20hc0er0tj.jpg)
 
 ```ts
 import * as path from 'node:path'
@@ -42,7 +42,7 @@ export default defineConfig({
 
 2. Tsconfig.json
 
-​ ![image-20220411165514379](http://static.5ibug.net/vitepress/assets/images/vite/e6c9d24ely1h15vv3ksz3j20fj0i4q3r.jpg)
+​ ![image-20220411165514379](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/vite/e6c9d24ely1h15vv3ksz3j20fj0i4q3r.jpg)
 
 告诉 TS 解析如何解析某些路径
 

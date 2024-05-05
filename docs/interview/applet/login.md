@@ -24,7 +24,7 @@ head:
 
 # 说说微信小程序的登录流程？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/aa3ccbd0-3428-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/aa3ccbd0-3428-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、背景
 
@@ -44,7 +44,7 @@ head:
 
 微信小程序登陆具体实现的逻辑如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b60638c0-3428-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b60638c0-3428-11ec-a752-75723a64e8f5.png)
 
 - 通过 wx.login() 获取到用户的 code 判断用户是否授权读取用户信息，调用 wx.getUserInfo 读取用户数据
 - 由于小程序后台授权域名无法授权微信的域名，所以需要自身后端调用微信服务器获取用户信息
@@ -59,7 +59,7 @@ head:
 
 更加详细的功能图如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c3cfbb70-3428-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c3cfbb70-3428-11ec-8e64-91fdec0f05a1.png)
 
 ## 三、扩展
 
@@ -74,7 +74,7 @@ head:
 
 这种方式的好处是不需要小程序服务端来参与校验，而是在小程序端调用 AP，流程如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8b446d30-349d-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8b446d30-349d-11ec-a752-75723a64e8f5.png)
 
 ## 参考文献
 

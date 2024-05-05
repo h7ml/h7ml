@@ -24,7 +24,7 @@ head:
 
 # 说说你对 git rebase 和 git merge 的理解？区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/77590970-fdd4-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/77590970-fdd4-11eb-bc6f-3f06e1491664.png)
 
 ## 一、是什么
 
@@ -69,7 +69,7 @@ git rebase --continue
 
 举个例子，`bugfix`分支是从`master`分支分叉出来的，如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/88410a30-fdd4-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/88410a30-fdd4-11eb-991d-334fd31f0201.png)
 
 合并`bugfix`分支到`master`分支时，如果`master`分支的状态没有被更改过，即 `bugfix`分支的历史记录包含`master`分支所有的历史记录
 
@@ -77,11 +77,11 @@ git rebase --continue
 
 如果`master`分支的历史记录在创建`bugfix`分支后又有新的提交，如下情况：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/929eb220-fdd4-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/929eb220-fdd4-11eb-991d-334fd31f0201.png)
 
 这时候使用`git merge`的时候，会生成一个新的提交，并且`master`分支的`HEAD`会移动到新的分支上，如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9fdfa3e0-fdd4-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9fdfa3e0-fdd4-11eb-991d-334fd31f0201.png)
 
 从上面可以看到，会把两个分支的最新快照以及二者最近的共同祖先进行三方合并，合并的结果是生成一个新的快照
 
@@ -89,19 +89,19 @@ git rebase --continue
 
 同样，`master`分支的历史记录在创建`bugfix`分支后又有新的提交，如下情况：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ab2d5120-fdd4-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ab2d5120-fdd4-11eb-bc6f-3f06e1491664.png)
 
 通过`git rebase`，会变成如下情况：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b72aed70-fdd4-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b72aed70-fdd4-11eb-991d-334fd31f0201.png)
 
 在移交过程中，如果发生冲突，需要修改各自的冲突，如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c9ba0e80-fdd4-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c9ba0e80-fdd4-11eb-bc6f-3f06e1491664.png)
 
 `rebase`之后，`master`的`HEAD`位置不变。因此，要合并`master`分支和`bugfix`分支
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/dc660660-fdd4-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/dc660660-fdd4-11eb-991d-334fd31f0201.png)
 
 从上面可以看到，`rebase`会找到不同的分支的最近共同祖先，如上图的`B`
 

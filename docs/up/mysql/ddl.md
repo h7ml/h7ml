@@ -22,7 +22,7 @@ SHOW DATABASES;
 
 运行上面语句效果如下：
 
-![image-20220910090812642](http://static.5ibug.net/vitepress/assets/images/mysql/202209100908686.png)
+![image-20220910090812642](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100908686.png)
 
 上述查询到的是的这些数据库是 mysql 安装好自带的数据库，我们以后不要操作这些数据库。
 
@@ -36,11 +36,11 @@ CREATE DATABASE 数据库名称;
 
 运行语句效果如下：
 
-![image-20220910090808988](http://static.5ibug.net/vitepress/assets/images/mysql/202209100908036.png)
+![image-20220910090808988](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100908036.png)
 
 而在创建数据库的时候，我并不知道 db1 数据库有没有创建，直接再次创建名为 db1 的数据库就会出现错误。
 
-![image-20220910090806785](http://static.5ibug.net/vitepress/assets/images/mysql/202209100908835.png)
+![image-20220910090806785](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100908835.png)
 
 为了避免上面的错误，在创建数据库的时候先做判断，如果不存在再创建。
 
@@ -52,7 +52,7 @@ CREATE DATABASE IF NOT EXISTS 数据库名称;
 
 运行语句效果如下：
 
-![image-20220910090801352](http://static.5ibug.net/vitepress/assets/images/mysql/202209100908394.png)
+![image-20220910090801352](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100908394.png)
 
 从上面的效果可以看到虽然 db1 数据库已经存在，再创建 db1 也没有报错，而创建 db2 数据库则创建成功。
 
@@ -72,7 +72,7 @@ DROP DATABASE IF EXISTS 数据库名称;
 
 运行语句效果如下：
 
-![image-20220910090758815](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907863.png)
+![image-20220910090758815](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907863.png)
 
 ## 使用数据库
 
@@ -92,4 +92,4 @@ SELECT DATABASE();
 
 运行语句效果如下：
 
-![image-20220910090753385](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907430.png)
+![image-20220910090753385](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907430.png)

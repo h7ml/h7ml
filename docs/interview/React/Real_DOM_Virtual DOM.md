@@ -24,13 +24,13 @@ head:
 
 # 说说 Real DOM 和 Virtual DOM 的区别？优缺点？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f1d36350-d302-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f1d36350-d302-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
 Real DOM，真实 `DOM`，意思为文档对象模型，是一个结构化文本的抽象，在页面渲染出的每一个结点都是一个真实 `DOM` 结构，如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fc7ba8d0-d302-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fc7ba8d0-d302-11eb-85f6-6fac77c0c9b3.png)
 
 `Virtual Dom`，本质上是以 `JavaScript` 对象形式存在的对 `DOM` 的描述
 
@@ -69,7 +69,7 @@ const vDom = React.createElement(
 
 通过 `console.log(VDOM)`，则能够得到虚拟 `VDOM` 消息
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1716b9a0-d303-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1716b9a0-d303-11eb-ab90-d9ae814b240d.png)
 
 所以可以得到，`JSX` 通过 `babel` 的方式转化成 `React.createElement` 执行，返回值是一个对象，也就是虚拟 `DOM`
 

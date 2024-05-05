@@ -24,7 +24,7 @@ head:
 
 # 你在 React 项目中是如何使用 Redux 的? 项目结构是如何划分的？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/31a4aff0-e7dc-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/31a4aff0-e7dc-11eb-ab90-d9ae814b240d.png)
 
 ## 一、背景
 
@@ -152,7 +152,7 @@ export default Foo
 
 整体流程图大致如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/3e47db10-e7dc-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/3e47db10-e7dc-11eb-85f6-6fac77c0c9b3.png)
 
 ## 三、项目结构
 

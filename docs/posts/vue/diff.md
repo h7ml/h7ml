@@ -22,7 +22,7 @@ lastUpdated: false
 
 下面就拿一副图进行解释。
 
-![](http://static.5ibug.net/vitepress/assets/images/diff1.jpg)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff1.jpg)
 
 从上面的示例图可以看到，`Diff`算法中只会对同一层的元素进行比较，并且必须拥有相同节点元素，才会对其子节点进行比较，其他多余的同层节点都会一律做删除或添加操作。
 
@@ -32,7 +32,7 @@ lastUpdated: false
 
 当数据发生改变时，set 方法会让调用`Dep.notify`通知所有订阅者`Watcher`，订阅者就会调用`patch`给真实的 DOM 打补丁，更新相应的视图。
 
-![](http://static.5ibug.net/vitepress/assets/images/diff8.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff8.png)
 
 ### 从源码角度进行探究
 
@@ -349,27 +349,27 @@ function updateChildren(parentElm, oldCh, newCh, insertedVnodeQueue, removeOnly)
 - 旧数组: `[1, 2, 3, 4, 5]`
 - 新数组: `[1, 4, 6, 1000, 100, 5]`
 
-![](http://static.5ibug.net/vitepress/assets/images/diff2.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff2.png)
 
 首先我们进行头头对比,新旧数组的头部都是`1`,因此将双方的头部指针后移.
 
-![](http://static.5ibug.net/vitepress/assets/images/diff3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff3.png)
 
 我们继续头头对比,但是`2 !== 4`导致对比失败,我进入尾尾对比,`5 === 5`,那么尾部指针则可前移.
 
-![](http://static.5ibug.net/vitepress/assets/images/diff4.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff4.png)
 
 现在进入新的循环,头头对比`2 !== 4`,尾尾对比`4 !== 100`,此时进入交叉对比,先进行旧尾新头对比,即`4 === 4`,旧尾前移且新头后移.
 
-![](http://static.5ibug.net/vitepress/assets/images/diff5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff5.png)
 
 接着再进入一个轮新的循环,头头对比`2 !== 6`,尾尾对比`3 !== 100`,交叉对比`2 != 100 3 != 6`,四种对比方式全部不符合,如果这个时候需要通过`key`去对比,然后将新头指针后移
 
-![](http://static.5ibug.net/vitepress/assets/images/diff6.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff6.png)
 
 继续重复上述对比的循环方式直至任一数组的头指针超过尾指针，循环结束.
 
-![](http://static.5ibug.net/vitepress/assets/images/diff7.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/diff7.png)
 
 在上述循环结束后,两个数组中可能存在未遍历完的情况: 循环结束后，
 

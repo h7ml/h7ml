@@ -24,7 +24,7 @@ head:
 
 # 你有写过自定义指令吗？自定义指令的应用场景有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bd85a970-4345-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bd85a970-4345-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、什么是指令
 

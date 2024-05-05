@@ -24,7 +24,7 @@ head:
 
 # 怎么理解回流跟重绘？什么场景下会触发？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1ed5d340-9cdc-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1ed5d340-9cdc-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ head:
 
 具体的浏览器解析渲染机制如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/2b56a950-9cdc-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/2b56a950-9cdc-11eb-ab90-d9ae814b240d.png)
 
 - 解析 HTML，生成 DOM 树，解析 CSS，生成 CSSOM 树
 

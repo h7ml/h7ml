@@ -24,7 +24,7 @@ head:
 
 # 说一下 GET 和 POST 的区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/6e8d19e0-bc3d-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/6e8d19e0-bc3d-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

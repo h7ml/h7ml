@@ -24,7 +24,7 @@ head:
 
 # React 事件绑定的方式有哪些？区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/e21f5560-d8fa-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/e21f5560-d8fa-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

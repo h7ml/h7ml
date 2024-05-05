@@ -24,17 +24,17 @@ head:
 
 # 双向数据绑定是什么
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/cef7dcc0-3ac9-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/cef7dcc0-3ac9-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、什么是双向绑定
 
 我们先从单向绑定切入单向绑定非常简单，就是把`Model`绑定到`View`，当我们用`JavaScript`代码更新`Model`时，`View`就会自动更新双向绑定就很容易联想到了，在单向绑定的基础上，用户更新了`View`，`Model`的数据也自动被更新了，这种情况就是双向绑定举个栗子
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d65738d0-3ac9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d65738d0-3ac9-11eb-ab90-d9ae814b240d.png)
 
 当用户填写表单时，`View`的状态就被更新了，如果此时可以自动更新`Model`的状态，那就相当于我们把`Model`和`View`做了双向绑定关系图如下
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/dcc1d4a0-3ac9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/dcc1d4a0-3ac9-11eb-ab90-d9ae814b240d.png)
 
 ## 二、双向绑定的原理是什么
 
@@ -70,7 +70,7 @@ head:
 
 流程图如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/e5369850-3ac9-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/e5369850-3ac9-11eb-85f6-6fac77c0c9b3.png)
 
 ### 实现
 
@@ -116,7 +116,7 @@ class Observer {
 
 对每个元素节点的指令进行扫描跟解析,根据指令模板替换数据,以及绑定相应的更新函数
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f27e19c0-3ac9-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f27e19c0-3ac9-11eb-85f6-6fac77c0c9b3.png)
 
 ```js
 class Compile {
@@ -159,7 +159,7 @@ class Compile {
 
 视图中会用到`data`中某`key`，这称为依赖。同⼀个`key`可能出现多次，每次都需要收集出来用⼀个`Watcher`来维护它们，此过程称为依赖收集多个`Watcher`需要⼀个`Dep`来管理，需要更新时由`Dep`统⼀通知
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fa191f40-3ac9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fa191f40-3ac9-11eb-ab90-d9ae814b240d.png)
 
 实现思路
 

@@ -53,7 +53,7 @@ function getProperty(obj, propName) {
 
 ### 原型链示意图
 
-![img](http://static.5ibug.net/vitepress/assets/images/GS5mqO.png)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/GS5mqO.png)
 
 从上图我们可以看出
 
@@ -96,7 +96,7 @@ const car = createCar('red', ['a', 'b'], 'benz')
 
 工厂模式很好理解，实例化一个对象，在把传入的参数放入该对象，再返回。
 
-![img](http://static.5ibug.net/vitepress/assets/images/BUOPMK.png)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/BUOPMK.png)
 
 缺点：无法进行对象识别。由于返回的对象都是由 Object 对象实例化出来的，但是开发过程中，需要创建很多种对象，肯定会有进行对象识别的需求，工厂模式显然无法完成我们这样的诉求。我们继续探索。
 
@@ -120,7 +120,7 @@ console.log(car2 instanceof Object) // true
 console.log(car2 instanceof Car) // true
 ```
 
-![img](http://static.5ibug.net/vitepress/assets/images/9P66Ik.png)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/9P66Ik.png)
 
 从打印中可以看到 `car1` 与 `car` 的区别。
 

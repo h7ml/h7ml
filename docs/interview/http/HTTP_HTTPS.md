@@ -24,13 +24,13 @@ head:
 
 # 什么是 HTTP? HTTP 和 HTTPS 的区别?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f50c71f0-b20b-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f50c71f0-b20b-11eb-ab90-d9ae814b240d.png)
 
 ## 一、HTTP
 
 `HTTP` (HyperText Transfer Protocol)，即超文本运输协议，是实现网络通信的一种规范
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fda119b0-b20b-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fda119b0-b20b-11eb-85f6-6fac77c0c9b3.png)
 
 在计算机和网络世界有，存在不同的协议，如广播协议、寻址协议、路由协议等等......
 
@@ -57,11 +57,11 @@ head:
 
 `SSL` 协议位于`TCP/IP` 协议与各种应用层协议之间，浏览器和服务器在使用 `SSL` 建立连接时需要选择一组恰当的加密算法来实现安全通信，为数据通讯提供安全支持
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/078c50c0-b20c-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/078c50c0-b20c-11eb-ab90-d9ae814b240d.png)
 
 流程图如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0e409fc0-b20c-11eb-85f6-6fac77c0c9b3.png)
 
 - 首先客户端通过 URL 访问服务器建立 SSL 连接
 - 服务端收到客户端请求后，会将网站支持的证书信息（证书中包含公钥）传送一份给客户端

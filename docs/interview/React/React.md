@@ -24,7 +24,7 @@ head:
 
 # 说说对 React 的理解？有哪些特性？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/671f5a90-d265-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/671f5a90-d265-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

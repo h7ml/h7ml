@@ -24,7 +24,7 @@ head:
 
 # css 中，有哪些方式可以隐藏页面元素？区别?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ccf96f50-929a-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ccf96f50-929a-11eb-ab90-d9ae814b240d.png)
 
 ## 一、前言
 

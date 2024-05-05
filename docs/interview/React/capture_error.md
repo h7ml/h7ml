@@ -24,7 +24,7 @@ head:
 
 # 说说你在 React 项目是如何捕获错误的？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8db1b5c0-f288-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8db1b5c0-f288-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -96,7 +96,7 @@ class ErrorBoundary extends React.Component {
 
 除了错误信息和 JavaScript 栈外，React 16 还提供了组件栈追踪。现在你可以准确地查看发生在组件树内的错误信息：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7b2b51d0-f289-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7b2b51d0-f289-11eb-ab90-d9ae814b240d.png)
 
 可以看到在错误信息下方文字中存在一个组件栈，便于我们追踪错误
 

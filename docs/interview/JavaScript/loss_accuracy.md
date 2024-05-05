@@ -24,7 +24,7 @@ head:
 
 # 说说 Javascript 数字精度丢失的问题，如何解决？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/09646a10-86f4-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/09646a10-86f4-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、场景复现
 
@@ -56,7 +56,7 @@ head:
 
 而计算机只能用二进制（0 或 1）表示，二进制转换为科学记数法的公式如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1b4b1620-86f4-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1b4b1620-86f4-11eb-ab90-d9ae814b240d.png)
 
 其中，`a`的值为 0 或者 1，e 为小数点移动的位置
 
@@ -64,7 +64,7 @@ head:
 
 27.0 转化成二进制为 11011.0 ，科学计数法表示为：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/37007090-86f4-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/37007090-86f4-11eb-ab90-d9ae814b240d.png)
 
 前面讲到，`javaScript`存储方式是双精度浮点数，其长度为 8 个字节，即 64 位比特
 
@@ -76,7 +76,7 @@ head:
 
 如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/430d0100-86f4-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/430d0100-86f4-11eb-85f6-6fac77c0c9b3.png)
 
 举个例子：
 

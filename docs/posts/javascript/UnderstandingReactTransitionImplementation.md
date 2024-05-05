@@ -278,11 +278,11 @@ ReactCurrentBatchConfig.transition = {}
 这两种模式，区别在于 fiber tree 的协调过程是否可中断。 Legacy mode，协调过程不可中断；Concurrent mode，协调过程可中断。
 Legacy mode：
 
-![Legacy mode](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/legacy-mode.jpeg)
+![Legacy mode](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/legacy-mode.jpeg)
 
 Concurrent mode：
 
-![Concurrent mode](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/concurrent-mode.jpeg)
+![Concurrent mode](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/concurrent-mode.jpeg)
 
 Concurrent mode 的意义在于：
 
@@ -372,7 +372,7 @@ react 在内部定义了 5 种类型的调度（Scheduler）优先级：
 5 种优先级的顺序为: ImmediatePriority > UserBlockingPriority > NormalPriority > LowPriority > IdlePriority。
 
 react 内部定义了 31 条 lane，lane 可以理解为每个任务所处的赛道。用二进制表示，按优先级从低到高依次为:
-![Lane优先级](http://static.5ibug.net/vitepress/assets/images/MicroFrontend//lanes.png)
+![Lane优先级](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend//lanes.png)
 
 lane 对应的位数越小，优先级最高。如 SyncLane 为 1，优先级最高； OffscreenLane 为 31， 优先级最低。
 

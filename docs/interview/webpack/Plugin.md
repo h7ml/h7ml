@@ -24,7 +24,7 @@ head:
 
 # 说说 webpack 中常见的 Plugin？解决了什么问题？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8d3978a0-a7c2-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8d3978a0-a7c2-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -34,7 +34,7 @@ head:
 
 `webpack`中的`plugin`也是如此，`plugin`赋予其各种灵活的功能，例如打包优化、资源管理、环境变量注入等，它们会运行在 `webpack` 的不同阶段（钩子 / 生命周期），贯穿了`webpack`整个编译周期
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9a04ec40-a7c2-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9a04ec40-a7c2-11eb-ab90-d9ae814b240d.png)
 
 目的在于解决`loader` 无法实现的其他事
 
@@ -93,7 +93,7 @@ module.exports = ConsoleLogOnBuildWebpackPlugin;
 
 常见的`plugin`有如图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bd749400-a7c2-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bd749400-a7c2-11eb-85f6-6fac77c0c9b3.png)
 
 下面介绍几个常用的插件用法：
 

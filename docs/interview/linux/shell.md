@@ -24,7 +24,7 @@ head:
 
 # 说说你对 shell 的理解？常见的命令？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/71003620-0883-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/71003620-0883-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ head:
 
 主要作用是接收用户输入的命令，并对命令进行处理，处理完毕后再将结果反馈给用户，比如输出到显示器、写入到文件等，同样能够调用和组织其他的应用程序，相当于一个领导者的身份，如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/80db0ca0-0883-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/80db0ca0-0883-11ec-8e64-91fdec0f05a1.png)
 
 那么`shell`脚本就是多个 `Shell` 命令的组合并通过 `if` 条件分支控制或循环来组合运算，实现一些复杂功能，文件后缀名为`.sh`
 
@@ -72,7 +72,7 @@ echo "hello world"
 
 - Z Shell（zsh） ，它是一种比较新近的 Shell ，集 bash 、 ksh 和 tcsh 各家之大成
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8e739440-0883-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8e739440-0883-11ec-a752-75723a64e8f5.png)
 
 关于 `Shell` 的几个常见命令：
 

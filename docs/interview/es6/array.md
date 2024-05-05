@@ -24,7 +24,7 @@ head:
 
 # ES6 中数组新增了哪些扩展？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a156b8d0-53c5-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a156b8d0-53c5-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、扩展运算符的应用
 

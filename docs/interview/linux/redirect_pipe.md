@@ -24,7 +24,7 @@ head:
 
 # 说说你对输入输出重定向和管道的理解？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1036dde0-0634-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1036dde0-0634-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ head:
 
 对于任何`linux`命令的执行会有下面的过程：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1a57caf0-0634-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1a57caf0-0634-11ec-8e64-91fdec0f05a1.png)
 
 一条命令的执行需要键盘等的标准输入，命令的执行和正确或错误，其中的每一个双向箭头就是一个通道，所以数据流可以流入到文件端（**重定向或管道**）
 

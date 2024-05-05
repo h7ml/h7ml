@@ -24,7 +24,7 @@ head:
 
 # 说说 flexbox（弹性盒布局模型）,以及适用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ef25b0a0-9837-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ef25b0a0-9837-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -34,7 +34,7 @@ head:
 
 它的所有子元素自动成为容器成员，称为`flex`项目`item`
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fbc5f590-9837-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fbc5f590-9837-11eb-ab90-d9ae814b240d.png)
 
 容器中默认存在两条轴，主轴和交叉轴，呈 90 度关系。项目默认沿主轴排列，通过`flex-direction`来决定主轴的方向
 
@@ -72,7 +72,7 @@ head:
 
 如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0c9abc70-9838-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0c9abc70-9838-11eb-ab90-d9ae814b240d.png)
 
 ### flex-wrap
 
@@ -122,7 +122,7 @@ head:
 
 效果图如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/2d5ca950-9838-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/2d5ca950-9838-11eb-85f6-6fac77c0c9b3.png)
 
 ### align-items
 
@@ -163,7 +163,7 @@ head:
 
 效果图如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/39bcb0f0-9838-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/39bcb0f0-9838-11eb-ab90-d9ae814b240d.png)
 
 容器成员属性如下：
 
@@ -200,11 +200,11 @@ head:
 
 如果所有项目的`flex-grow`属性都为 1，则它们将等分剩余空间（如果有的话）
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/48c8c5c0-9838-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/48c8c5c0-9838-11eb-ab90-d9ae814b240d.png)
 
 如果一个项目的`flex-grow`属性为 2，其他项目都为 1，则前者占据的剩余空间将比其他项多一倍
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/5b822b20-9838-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/5b822b20-9838-11eb-ab90-d9ae814b240d.png)
 
 弹性容器的宽度正好等于元素宽度总和，无多余宽度，此时无论`flex-grow`是什么值都不会生效
 
@@ -222,7 +222,7 @@ head:
 
 如果一个项目的`flex-shrink`属性为 0，其他项目都为 1，则空间不足时，前者不缩小
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/658c5be0-9838-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/658c5be0-9838-11eb-85f6-6fac77c0c9b3.png)
 
 在容器宽度有剩余时，`flex-shrink`也是不会生效的
 
@@ -281,7 +281,7 @@ head:
 
 效果图如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/6f8304a0-9838-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/6f8304a0-9838-11eb-85f6-6fac77c0c9b3.png)
 
 ## 三、应用场景
 

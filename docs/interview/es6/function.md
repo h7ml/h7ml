@@ -24,7 +24,7 @@ head:
 
 # 对象新增了哪些扩展？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/54a04a10-5569-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/54a04a10-5569-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、参数
 

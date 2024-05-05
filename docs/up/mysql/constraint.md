@@ -10,7 +10,7 @@ title: 约束
 
 ## 约束
 
-![image-20220910100133140](http://static.5ibug.net/vitepress/assets/images/mysql/202209101001177.png)
+![image-20220910100133140](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209101001177.png)
 
 上面表中可以看到表中数据存在一些问题：
 
@@ -251,7 +251,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(null,'张三','1999-11-11
 
 执行结果如下：
 
-![image-20220910095026441](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950468.png)
+![image-20220910095026441](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950468.png)
 
 从上面的结果可以看到，字段 `id` 不能为 null。那我们重新添加一条数据，如下：
 
@@ -261,7 +261,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(1,'张三','1999-11-11',8
 
 执行结果如下：
 
-![image-20220910095023930](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950957.png)
+![image-20220910095023930](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950957.png)
 
 从上面结果可以看到，1 这个值重复了。所以主键约束是用来限制数据非空且唯一的。那我们再添加一条符合要求的数据
 
@@ -271,7 +271,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(2,'李四','1999-11-11',8
 
 执行结果如下：
 
-![image-20220910095021461](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950499.png)
+![image-20220910095021461](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950499.png)
 
 - **验证非空约束**
 
@@ -281,7 +281,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(3,null,'1999-11-11',8800,
 
 执行结果如下：
 
-![image-20220910095019017](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950046.png)
+![image-20220910095019017](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950046.png)
 
 从上面结果可以看到，`ename` 字段的非空约束生效了。
 
@@ -293,7 +293,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(3,'李四','1999-11-11',8
 
 执行结果如下：
 
-![image-20220910095016451](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950481.png)
+![image-20220910095016451](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950481.png)
 
 从上面结果可以看到，`ename` 字段的唯一约束生效了。
 
@@ -305,7 +305,7 @@ INSERT INTO emp(id,ename,joindate,salary) values(3,'王五','1999-11-11',8800);
 
 执行完上面语句后查询表中数据，如下图可以看到王五这条数据的 bonus 列就有了默认值 0。
 
-![image-20220910095013431](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950457.png)
+![image-20220910095013431](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950457.png)
 
 \==注意：默认约束只有在不给值时才会采用默认值。如果给了 null，那值就是 null 值。==
 
@@ -317,7 +317,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(4,'赵六','1999-11-11',8
 
 执行完上面语句后查询表中数据，如下图可以看到赵六这条数据的 bonus 列的值是 null。
 
-![image-20220910095009756](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950789.png)
+![image-20220910095009756](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950789.png)
 
 - **验证自动增长： auto_increment 当列是数字类型 并且唯一约束**
 
@@ -350,7 +350,7 @@ INSERT INTO emp(id,ename,joindate,salary,bonus) values(null,'赵六3','1999-11-1
 
 如何理解上面的概念呢？如下图有两张表，员工表和部门表：
 
-![image-20220910095002366](http://static.5ibug.net/vitepress/assets/images/mysql/202209100950395.png)
+![image-20220910095002366](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100950395.png)
 
 员工表中的 dep_id 字段是部门表的 id 字段关联，也就是说 1 号学生张三属于 1 号部门研发部的员工。现在我要删除 1 号部门，就会出现错误的数据（员工表中属于 1 号部门的数据）。而我们上面说的两张表的关系只是我们认为它们有关系，此时需要通过外键让这两张表产生数据库层面的关系，这样你要删除部门表中的 1 号部门的数据将无法删除。
 

@@ -24,7 +24,7 @@ head:
 
 # 说说对 React 中类组件和函数组件的理解？有什么区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/6c196d80-de39-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/6c196d80-de39-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、类组件
 

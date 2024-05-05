@@ -24,7 +24,7 @@ head:
 
 # 说说 Node 中的 EventEmitter? 如何实现一个 EventEmitter?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/16b10390-c83a-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/16b10390-c83a-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

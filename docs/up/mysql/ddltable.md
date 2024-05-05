@@ -18,13 +18,13 @@ title: DDL:操作表
 
 我们创建的数据库中没有任何表，因此我们进入 mysql 自带的 mysql 数据库，执行上述语句查看
 
-![image-20220910090749302](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907344.png)
+![image-20220910090749302](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907344.png)
 
 - **查询表结构**
 
 查看 mysql 数据库中 func 表的结构，运行语句如下：
 
-![image-20220910090745367](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907412.png)
+![image-20220910090745367](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907412.png)
 
 ## 创建表
 
@@ -44,7 +44,7 @@ CREATE TABLE 表名 (
 
 知道了创建表的语句，那么我们创建创建如下结构的表
 
-![image-20220910090741389](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907433.png)
+![image-20220910090741389](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907433.png)
 
 ```sql
 create table tb_user (
@@ -56,7 +56,7 @@ create table tb_user (
 
 运行语句如下：
 
-![image-20220910090737679](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907724.png)
+![image-20220910090737679](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907724.png)
 
 ## 数据类型
 
@@ -133,7 +133,7 @@ create table student (
 
 运行语句效果如下：
 
-![image-20220910090731175](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907228.png)
+![image-20220910090731175](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100907228.png)
 
 ## 修改表
 

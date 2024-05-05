@@ -24,7 +24,7 @@ head:
 
 # 谈谈 JavaScript 中的类型转换机制
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/2abd00a0-6692-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/2abd00a0-6692-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、概述
 
@@ -60,7 +60,7 @@ const x = y ? 1 : a
 
 先给出类型转换规则：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/915b7300-6692-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/915b7300-6692-11eb-ab90-d9ae814b240d.png)
 
 实践一下：
 
@@ -108,7 +108,7 @@ Number.parseInt('32a3') // 32
 
 给出转换规则图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/48dd8eb0-6692-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/48dd8eb0-6692-11eb-85f6-6fac77c0c9b3.png)
 
 实践一下：
 
@@ -137,7 +137,7 @@ String([1, 2, 3]) // "1,2,3"
 
 可以将任意类型的值转为布尔值，转换规则如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/53bdad10-6692-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/53bdad10-6692-11eb-ab90-d9ae814b240d.png)
 
 实践一下：
 

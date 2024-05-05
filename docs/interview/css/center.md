@@ -24,7 +24,7 @@ head:
 
 # 元素水平垂直居中的方法有哪些？如果元素不定宽高呢？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7b64c8d0-95f9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7b64c8d0-95f9-11eb-ab90-d9ae814b240d.png)
 
 ## 一、背景
 
@@ -111,7 +111,7 @@ head:
 
 整个实现思路如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/922dc300-95f9-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/922dc300-95f9-11eb-ab90-d9ae814b240d.png)
 
 - 初始位置为方块 1 的位置
 - 当设置 left、top 为 50%的时候，内部子元素为方块 2 的位置

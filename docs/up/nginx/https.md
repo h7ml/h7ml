@@ -16,7 +16,7 @@ http 在传输的过程中都是**明文**，这导致在客户端到服务器�
 
 ### 对称加密
 
-![image-20220907133558872](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220907133558872.png)
+![image-20220907133558872](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220907133558872.png)
 
 **对称加密**可以通过加密算法给数据进行安全一点的加密，但是这样也很容易破解。
 
@@ -29,7 +29,7 @@ http 在传输的过程中都是**明文**，这导致在客户端到服务器�
 
 ### 非对称加密
 
-![image-20220915153358600](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220915153358600.png)
+![image-20220915153358600](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220915153358600.png)
 
 非对称加密就是在客户端中有一把**公钥**（理解成一窜字符），在服务端有一把**私钥**。
 
@@ -51,7 +51,7 @@ http 在传输的过程中都是**明文**，这导致在客户端到服务器�
 
 ## CA 证书
 
-![image-20221014144324807](http://static.5ibug.net/vitepress/assets/images/nginx/image-20221014144324807.png)
+![image-20221014144324807](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20221014144324807.png)
 
 通过上述的**对称加密**和**非对称加密**，我们知道不管是哪种在网络传输过程中都会被人给拦截篡改，所以都不安全，为了解决这一问题就有了**CA 证书**这么一个认证机构。
 
@@ -68,7 +68,7 @@ http 在传输的过程中都是**明文**，这导致在客户端到服务器�
 
 Windows：cmd 输入 certmgr.msc
 
-![image-20221014144636291](http://static.5ibug.net/vitepress/assets/images/nginx/image-20221014144636291.png)
+![image-20221014144636291](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20221014144636291.png)
 
 这里有你所有的证书包括第三方下载的证书都在这。
 
@@ -108,7 +108,7 @@ cd /usr/local/resource/nginx-1.18.0
 --prefix=/usr/local/nginx
 ```
 
-![image-20221014162914185](http://static.5ibug.net/vitepress/assets/images/nginx/image-20221014162914185.png)
+![image-20221014162914185](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20221014162914185.png)
 
 6、在已有的配置基础上新增 \*\*--with-http_ssl_module，\*\*形成新的配置命令，并在源码目录运行下面的命令
 
@@ -144,7 +144,7 @@ cp ./objs/nginx /usr/local/nginx/sbin/
 configure arguments: --prefix=/usr/local/nginx --with-http_ssl_module
 ```
 
-![image-20221014163203113](http://static.5ibug.net/vitepress/assets/images/nginx/image-20221014163203113.png)
+![image-20221014163203113](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20221014163203113.png)
 
 11、配置 https Server
 

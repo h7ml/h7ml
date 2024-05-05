@@ -23,7 +23,7 @@ title: SQL概述
 
 - SQL 语句可以单行或多行书写，以分号结尾。
 
-  ![image-20220910090836346](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916954.png)
+  ![image-20220910090836346](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916954.png)
 
   如上，以分号结尾才是一个完整的 sql 语句。
 
@@ -31,15 +31,15 @@ title: SQL概述
 
   同样的一条 sql 语句写成下图的样子，一样可以运行处结果。
 
-  ![image-20220910090831935](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916982.png)
+  ![image-20220910090831935](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916982.png)
 
 - 注释
 
   - 单行注释: -- 注释内容 或 #注释内容(MySQL 特有)
 
-    ![image-20220910090829243](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916099.png)
+    ![image-20220910090829243](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916099.png)
 
-    ![image-20220910090824707](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916488.png) GFDWQ 111111111111111111111
+    ![image-20220910090824707](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916488.png) GFDWQ 111111111111111111111
 
     > 注意：使用-- 添加单行注释时，--后面一定要加空格，而#没有要求。
 
@@ -51,13 +51,13 @@ title: SQL概述
 
   DDL 简单理解就是用来操作数据库，表等
 
-  ![image-20220910090818084](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916598.png)
+  ![image-20220910090818084](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916598.png)
 
 - DML(Data Manipulation Language) 数据操作语言，用来对数据库中表的数据进行增删改
 
   DML 简单理解就对表中数据进行增删改
 
-  ![image-20220910090815829](http://static.5ibug.net/vitepress/assets/images/mysql/202209100916681.png)
+  ![image-20220910090815829](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100916681.png)
 
 - DQL(Data Query Language) 数据查询语言，用来查询数据库中表的记录(数据)
 

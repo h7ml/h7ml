@@ -24,7 +24,7 @@ head:
 
 # 说说你对 Git 的理解？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/213eba50-f79c-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/213eba50-f79c-11eb-bc6f-3f06e1491664.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ git，是一个分布式版本控制软件，最初目的是为更好地管理`L
 
 分布式版本控制系统的客户端并不只提取最新版本的文件快照，而是把代码仓库完整地镜像下来。这么一来，任何一处协同工作用的服务器发生故障，事后都可以用任何一个镜像出来的本地仓库恢复
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/29240f40-f79c-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/29240f40-f79c-11eb-991d-334fd31f0201.png)
 
 项目开始，只有一个原始版仓库，别的机器可以`clone`这个原始版本库，那么所有`clone`的机器，它们的版本库其实都是一样的，并没有主次之分
 
@@ -65,7 +65,7 @@ git，是一个分布式版本控制软件，最初目的是为更好地管理`L
 - 本地仓库：提交更新，找到暂存区域的文件，将快照永久性存储到 Git 本地仓库
 - 远程仓库：远程的仓库，如 github
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/3273c9a0-f79c-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/3273c9a0-f79c-11eb-bc6f-3f06e1491664.png)
 
 ## 三、命令
 

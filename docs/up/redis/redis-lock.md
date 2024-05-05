@@ -146,7 +146,7 @@ ReentrantLock 使用的是当前线程内存地址进行对比，那么我们就
 
 ### lua 脚本的加锁流程
 
-![redis-lua.png](http://static.5ibug.net/vitepress/assets/images/redis-lua.png)
+![redis-lua.png](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/redis-lua.png)
 
 #### 1、第一个 if 判断
 

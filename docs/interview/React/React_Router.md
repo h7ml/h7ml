@@ -24,7 +24,7 @@ head:
 
 # 说说你对 React Router 的理解？常用的 Router 组件有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c6635670-e8ac-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c6635670-e8ac-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

@@ -24,7 +24,7 @@ head:
 
 # css 选择器有哪些？优先级？哪些属性可以继承？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f7dcd330-8fe1-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f7dcd330-8fe1-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、选择器
 

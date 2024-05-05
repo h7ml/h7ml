@@ -24,7 +24,7 @@ head:
 
 # 说说你对作用域链的理解
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/16f614a0-718f-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/16f614a0-718f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、作用域
 
@@ -119,7 +119,7 @@ bar()
 
 上述代码改变成一张图
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/29fab3d0-718f-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/29fab3d0-718f-11eb-85f6-6fac77c0c9b3.png)
 
 由于`JavaScript`遵循词法作用域，相同层级的 `foo` 和 `bar` 就没有办法访问到彼此块作用域中的变量，所以输出 2
 
@@ -133,7 +133,7 @@ bar()
 
 把作用域比喻成一个建筑，这份建筑代表程序中的嵌套作用域链，第一层代表当前的执行作用域，顶层代表全局作用域
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/33f9c100-718f-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/33f9c100-718f-11eb-85f6-6fac77c0c9b3.png)
 
 变量的引用会顺着当前楼层进行查找，如果找不到，则会往上一层找，一旦到达顶层，查找的过程都会停止
 

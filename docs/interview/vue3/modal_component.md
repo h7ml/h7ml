@@ -24,7 +24,7 @@ head:
 
 # 用 Vue3.0 写过组件吗？如果想实现一个 Modal 你会怎么设计？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/e294c660-6370-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/e294c660-6370-11eb-ab90-d9ae814b240d.png)
 
 ## 一、组件设计
 

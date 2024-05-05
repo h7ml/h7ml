@@ -24,7 +24,7 @@ head:
 
 # JavaScript 字符串的常用方法有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ceb6ebc0-65c1-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ceb6ebc0-65c1-11eb-ab90-d9ae814b240d.png)
 
 ## 一、操作方法
 

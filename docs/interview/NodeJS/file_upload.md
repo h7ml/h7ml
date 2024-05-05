@@ -24,7 +24,7 @@ head:
 
 # 如何实现文件上传？说说你的思路
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/248a5580-ce60-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/248a5580-ce60-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

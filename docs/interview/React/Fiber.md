@@ -24,7 +24,7 @@ head:
 
 # 说说对 Fiber 架构的理解？解决了什么问题？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/554da6d0-ed24-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/554da6d0-ed24-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、问题
 
@@ -38,7 +38,7 @@ head:
 
 这就会导致一些用户交互、动画等任务无法立即得到处理，导致卡顿的情况
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/5eb3a850-ed24-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/5eb3a850-ed24-11eb-ab90-d9ae814b240d.png)
 
 ## 二、是什么
 

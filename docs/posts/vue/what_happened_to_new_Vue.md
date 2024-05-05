@@ -223,4 +223,4 @@ Vue.prototype._update = function (vnode: VNode, hydrating?: boolean) {
 
 下图更直观地看到从初始化 Vue 到最终渲染的整个过程。
 
-![img](http://static.5ibug.net/vitepress/assets/images/vue.png)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/vue.png)

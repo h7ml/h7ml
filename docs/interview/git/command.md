@@ -24,13 +24,13 @@ head:
 
 # 说说 Git 常用的命令有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f66b3290-f7af-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f66b3290-f7af-11eb-bc6f-3f06e1491664.png)
 
 ## 一、前言
 
 `git`的操作可以通过命令的形式如执行，日常使用就如下图 6 个命令即可
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fe150520-f7af-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fe150520-f7af-11eb-991d-334fd31f0201.png)
 
 实际上，如果想要熟练使用，超过 60 多个命令需要了解，下面则介绍下常见的的`git`命令
 
@@ -140,7 +140,7 @@ head:
 
 `git`常用命令速查表如下所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0a10f3c0-f7b0-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0a10f3c0-f7b0-11eb-991d-334fd31f0201.png)
 
 ## 参考文献
 

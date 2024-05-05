@@ -24,7 +24,7 @@ head:
 
 # Vue.observable 你有了解过吗？说说看
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/193782e0-3e7b-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/193782e0-3e7b-11eb-ab90-d9ae814b240d.png)
 
 ## 一、Observable 是什么
 

@@ -24,7 +24,7 @@ head:
 
 # 说说对 Css 预编语言的理解？有哪些区别?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/81cca1c0-a42c-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/81cca1c0-a42c-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

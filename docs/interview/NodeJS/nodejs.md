@@ -24,7 +24,7 @@ head:
 
 # 说说你对 Node.js 的理解？优缺点？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b565d240-c1e6-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b565d240-c1e6-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -46,7 +46,7 @@ head:
 
 比如读取一个文件，文件读取完毕后，就会触发对应的状态，然后通过对应的回调函数来进行处理
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a7729590-c1e8-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a7729590-c1e8-11eb-ab90-d9ae814b240d.png)
 
 ## 二、优缺点
 

@@ -24,7 +24,7 @@ head:
 
 # 介绍一下 grid 网格布局
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/4d73e3d0-9a94-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/4d73e3d0-9a94-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 擅长将一个页面划分为几个主要区域，以及定义这些区域的大小、位置、层次等关系
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/59680a40-9a94-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/59680a40-9a94-11eb-85f6-6fac77c0c9b3.png)
 
 这与之前讲到的`flex`一维布局不相同
 
@@ -54,7 +54,7 @@ head:
 
 网格线，即划分网格的线，如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/61be7080-9a94-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/61be7080-9a94-11eb-ab90-d9ae814b240d.png)
 
 上图是一个 2 x 3 的网格，共有 3 根水平网格线和 4 根垂直网格线
 
@@ -173,11 +173,11 @@ grid-template-areas:
 
 顺序就是由`grid-auto-flow`决定，默认为行，代表"先行后列"，即先填满第一行，再开始放入第二行
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/70fb3240-9a94-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/70fb3240-9a94-11eb-ab90-d9ae814b240d.png)
 
 当修改成`column`后，放置变为如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7c26ffa0-9a94-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7c26ffa0-9a94-11eb-ab90-d9ae814b240d.png)
 
 ### justify-items 属性， align-items 属性， place-items 属性
 
@@ -218,7 +218,7 @@ grid-template-areas:
 - end - 对齐容器的结束边框
 - center - 容器内部居中
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9d1ec990-9a94-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9d1ec990-9a94-11eb-ab90-d9ae814b240d.png)
 
 - space-around - 每个项目两侧的间隔相等。所以，项目之间的间隔比项目与容器边框的间隔大一倍
 
@@ -228,7 +228,7 @@ grid-template-areas:
 
 - stretch - 项目大小没有指定时，拉伸占据整个网格容器
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a620b210-9a94-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a620b210-9a94-11eb-85f6-6fac77c0c9b3.png)
 
 ### grid-auto-columns 属性和 grid-auto-rows 属性
 
@@ -273,7 +273,7 @@ grid-template-areas:
 
 通过设置`grid-column`属性，指定 1 号项目的左边框是第二根垂直网格线，右边框是第四根垂直网格线
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b7925530-9a94-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b7925530-9a94-11eb-ab90-d9ae814b240d.png)
 
 ### grid-area 属性
 
@@ -315,7 +315,7 @@ grid-template-areas:
 
 关于兼容性问题，结果如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c24a2b10-9a94-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c24a2b10-9a94-11eb-85f6-6fac77c0c9b3.png)
 
 总体兼容性还不错，但在 IE 10 以下不支持
 

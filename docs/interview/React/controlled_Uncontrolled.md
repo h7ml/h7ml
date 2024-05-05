@@ -24,7 +24,7 @@ head:
 
 # 说说对受控组件和非受控组件的理解？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/12990fd0-df2f-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/12990fd0-df2f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、受控组件
 
@@ -96,7 +96,7 @@ export class UnControll extends Component {
 
 针对两者的区别，其应用场景如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f28aed20-df2f-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f28aed20-df2f-11eb-ab90-d9ae814b240d.png)
 
 ## 参考文献
 

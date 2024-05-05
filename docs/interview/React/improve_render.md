@@ -24,7 +24,7 @@ head:
 
 # 说说你是如何提高组件的渲染效率的？在 React 中如何避免不必要的 render？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/de2d7e20-ecf8-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/de2d7e20-ecf8-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

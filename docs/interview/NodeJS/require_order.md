@@ -24,7 +24,7 @@ head:
 
 # 说说 Node 文件查找的优先级以及 Require 方法的文件查找策略?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/15913530-c9ba-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/15913530-c9ba-11eb-ab90-d9ae814b240d.png)
 
 ## 一、模块规范
 
@@ -48,7 +48,7 @@ head:
 
 `require`参数较为简单，但是内部的加载却是十分复杂的，其加载优先级也各自不同，如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/33ae8ef0-c9ba-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/33ae8ef0-c9ba-11eb-85f6-6fac77c0c9b3.png)
 
 从上图可以看见，文件模块存在缓存区，寻找模块路径的时候都会优先从缓存中加载已经存在的模块
 

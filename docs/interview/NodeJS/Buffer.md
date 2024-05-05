@@ -24,7 +24,7 @@ head:
 
 # 说说对 Node 中的 Buffer 的理解？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/176d02b0-c69c-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/176d02b0-c69c-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -48,7 +48,7 @@ const buffer = Buffer.from('why')
 
 其存储过程如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/20371250-c69c-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/20371250-c69c-11eb-ab90-d9ae814b240d.png)
 
 ## 二、使用方法
 

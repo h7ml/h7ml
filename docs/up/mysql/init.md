@@ -48,13 +48,13 @@ title: 数据库相关概念
 
 在电脑上安装了数据库管理系统后，就可以通过数据库管理系统创建数据库来存储数据，也可以通过该系统对数据库中的数据进行数据的增删改查相关的操作。我们平时说的 MySQL 数据库其实是 MySQL 数据库管理系统。
 
-![image-20220910091042576](http://static.5ibug.net/vitepress/assets/images/mysql/202209100910627.png)
+![image-20220910091042576](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100910627.png)
 
 通过上面的描述，大家应该已经知道了 `数据库管理系统` 和 `数据库` 的关系。那么有有哪些常见的数据库管理系统呢？
 
 ## 常见的数据库管理系统
 
-![image-20220910091039354](http://static.5ibug.net/vitepress/assets/images/mysql/202209100910394.png)
+![image-20220910091039354](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100910394.png)
 
 接下来对上面列举的数据库管理系统进行简单的介绍：
 
@@ -68,7 +68,7 @@ title: 数据库相关概念
 
 我们课程上学习的是 MySQL 数据库管理系统，PostgreSQL 在一些公司也有使用，此时大家肯定会想以后在公司中如果使用我们没有学习过程的 PostgreSQL 数据库管理系统怎么办？这点大家大可不必担心，如下图所示：
 
-![image-20220910091035909](http://static.5ibug.net/vitepress/assets/images/mysql/202209100910953.png)
+![image-20220910091035909](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/mysql/202209100910953.png)
 
 我们可以通过数据库管理系统操作数据库，对数据库中的数据进行增删改查操作，而怎么样让用户跟数据库管理系统打交道呢？就可以通过一门编程语言（SQL）来实现。
 

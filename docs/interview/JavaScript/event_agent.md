@@ -24,7 +24,7 @@ head:
 
 # 解释下什么是事件代理？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a33f0ab0-797e-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a33f0ab0-797e-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

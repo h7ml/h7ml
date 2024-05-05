@@ -24,7 +24,7 @@ head:
 
 # 说说 var、let、const 之间的区别
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d2aba2e0-50f7-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d2aba2e0-50f7-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、var
 

@@ -24,7 +24,7 @@ head:
 
 # 说说你对分而治之、动态规划的理解？区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/298437b0-29d0-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/298437b0-29d0-11ec-a752-75723a64e8f5.png)
 
 ## 一、分而治之
 

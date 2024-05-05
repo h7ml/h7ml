@@ -24,7 +24,7 @@ head:
 
 # 说说 React Router 有几种模式？实现原理？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/065f7a80-e978-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/065f7a80-e978-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

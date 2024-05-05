@@ -24,7 +24,7 @@ head:
 
 # 如何实现两栏布局，右侧自适应？三栏布局中间自适应呢？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/f335d400-976e-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/f335d400-976e-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、背景
 
@@ -38,7 +38,7 @@ head:
 
 > 这里称宽度较小的列父元素为次要布局容器，宽度较大的列父元素为主要布局容器
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/fcb8ac50-976e-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/fcb8ac50-976e-11eb-85f6-6fac77c0c9b3.png)
 
 这种布局适用于内容上具有明显主次关系的网页
 
@@ -48,7 +48,7 @@ head:
 
 大家最常见的就是`github`：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/0bf016e0-976f-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/0bf016e0-976f-11eb-ab90-d9ae814b240d.png)
 
 ## 二、两栏布局
 

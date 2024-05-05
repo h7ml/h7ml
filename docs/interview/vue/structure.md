@@ -24,7 +24,7 @@ head:
 
 # 说下你的 vue 项目的目录结构，如果是大型项目你该怎么划分结构和划分组件呢？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b6cd6a60-4aba-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b6cd6a60-4aba-11eb-ab90-d9ae814b240d.png)
 
 ## 一、为什么要划分
 

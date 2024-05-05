@@ -24,7 +24,7 @@ head:
 
 # React 中的 key 有什么作用？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/31677360-dd69-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/31677360-dd69-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -140,7 +140,7 @@ insertMovie() {
 
 `react`判断`key`的流程具体如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/3b9afe10-dd69-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/3b9afe10-dd69-11eb-ab90-d9ae814b240d.png)
 
 ## 参考文献
 

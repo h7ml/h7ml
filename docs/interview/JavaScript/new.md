@@ -24,7 +24,7 @@ head:
 
 # 说说 new 操作符具体干了什么？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/880d0010-7a39-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/880d0010-7a39-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -102,7 +102,7 @@ t.sayName() // 'Tom'
 
 流程图如下：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b429b990-7a39-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b429b990-7a39-11eb-85f6-6fac77c0c9b3.png)
 
 ## 三、手写 new 操作符
 

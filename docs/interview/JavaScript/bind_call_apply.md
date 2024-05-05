@@ -24,7 +24,7 @@ head:
 
 # bind、call、apply 区别？如何实现一个 bind?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a900e460-7be4-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a900e460-7be4-11eb-ab90-d9ae814b240d.png)
 
 ## 一、作用
 

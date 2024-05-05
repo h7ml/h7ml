@@ -24,7 +24,7 @@ head:
 
 # 说说 typescript 的数据类型有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d88f9450-0998-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d88f9450-0998-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 

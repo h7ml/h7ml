@@ -24,7 +24,7 @@ head:
 
 # 说说 React diff 的原理是什么？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/967e6150-ec91-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/967e6150-ec91-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -34,7 +34,7 @@ head:
 
 传统 diff 算法通过循环递归对节点进行依次对比，效率低下，算法复杂度达到 O(n^3)，`react`将算法进行一个优化，复杂度姜维`O(n)`，两者效率差距如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a43c9960-ec91-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a43c9960-ec91-11eb-ab90-d9ae814b240d.png)
 
 ## 二、原理
 
@@ -50,11 +50,11 @@ head:
 
 `DOM`节点跨层级的操作不做优化，只会对相同层级的节点进行比较
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ae71d1c0-ec91-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ae71d1c0-ec91-11eb-85f6-6fac77c0c9b3.png)
 
 只有删除、创建操作，没有移动操作，如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b85f2bb0-ec91-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b85f2bb0-ec91-11eb-ab90-d9ae814b240d.png)
 
 `react`发现新树中，R 节点下没有了 A，那么直接删除 A，在 D 节点下创建 A 以及下属节点
 
@@ -64,7 +64,7 @@ head:
 
 如果是同一个类的组件，则会继续往下`diff`运算，如果不是一个类的组件，那么直接删除这个组件下的所有子节点，创建新的
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c1fcdf00-ec91-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c1fcdf00-ec91-11eb-ab90-d9ae814b240d.png)
 
 当`component D`换成了`component G` 后，即使两者的结构非常类似，也会将`D`删除再重新创建`G`
 
@@ -76,13 +76,13 @@ head:
 
 如下场景：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/cae1c9a0-ec91-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/cae1c9a0-ec91-11eb-ab90-d9ae814b240d.png)
 
 通过`key`可以准确地发现新旧集合中的节点都是相同的节点，因此无需进行节点删除和创建，只需要将旧集合中节点的位置进行移动，更新为新集合中节点的位置
 
 流程如下表：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d34c5420-ec91-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d34c5420-ec91-11eb-85f6-6fac77c0c9b3.png)
 
 - index： 新集合的遍历下标。
 - oldIndex：当前节点在老集合中的下标

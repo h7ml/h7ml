@@ -24,7 +24,7 @@ head:
 
 # 说说对 React Hooks 的理解？解决了什么问题？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/8d357c50-e12e-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/8d357c50-e12e-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

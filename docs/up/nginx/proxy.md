@@ -14,7 +14,7 @@ title: 反向代理与负载均衡
 
 当用户不能直接访问应用服务器时候，这时候就通过`Nginx`去带着你的参数去访问应用服务器，之后在把数据返回给网关（路由器），在由网关把数据传输到用户。
 
-![image-20220909155253447](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909155253447.png)
+![image-20220909155253447](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909155253447.png)
 
 ## 正向代理
 
@@ -22,19 +22,19 @@ title: 反向代理与负载均衡
 
 由于工作环境原因，日常工作只能局限于单位的局域网，如果想要访问互联网，怎么办呢？这就需要用到正向代理，本人经常用正向代理来进行上网。
 
-![image-20220909155954732](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909155954732.png)
+![image-20220909155954732](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909155954732.png)
 
 ## 传统公司系统架构
 
-![image-20220909162133603](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909162133603.png)
+![image-20220909162133603](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909162133603.png)
 
-![image-20220909162405739](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909162405739.png)
+![image-20220909162405739](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909162405739.png)
 
-![image-20220909162157266](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909162157266.png)
+![image-20220909162157266](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909162157266.png)
 
-![image-20220909162405739](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909162405739.png)
+![image-20220909162405739](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909162405739.png)
 
-![image-20220909162246272](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909162246272.png)
+![image-20220909162246272](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/image-20220909162246272.png)
 
 ## 反向代理设置
 
@@ -56,11 +56,11 @@ location / {
 
 `proxy_pass http://www.atguigu.com/`
 
-![image-20220911151833258](http://static.5ibug.net/vitepress/assets/images/nginx/202209111518300.png)
+![image-20220911151833258](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/202209111518300.png)
 
 `proxy_pass http://atguigu.com/`
 
-![image-20220911151541839](http://static.5ibug.net/vitepress/assets/images/nginx/202209111515886.png)
+![image-20220911151541839](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/202209111515886.png)
 
 可以发现设置`proxy_pass http://atguigu.com/`后浏览器的地址拦就变了，不在是我们的 IP 站点而变成了代理的地址。
 
@@ -83,7 +83,7 @@ proxy_pass http://www.baidu.com/
 
 所谓负载均衡，就是 Nginx 把请求均匀的分摊给上游的应用服务器，这样即使某一个服务器宕机也不会影响请求的处理，或者当应用服务器扛不住了，可以随时进行扩容
 
-![image-20220911160604530](http://static.5ibug.net/vitepress/assets/images/nginx/202209111606565.png)
+![image-20220911160604530](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/nginx/202209111606565.png)
 
 ### 基于反向代理的负载均衡
 

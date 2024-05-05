@@ -24,7 +24,7 @@ head:
 
 # Node 性能如何进行监控以及优化？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bb37dae0-d179-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bb37dae0-d179-11eb-ab90-d9ae814b240d.png)
 
 ## 一、 是什么
 

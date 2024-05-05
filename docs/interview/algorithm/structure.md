@@ -24,7 +24,7 @@ head:
 
 # 说说你对数据结构的理解？有哪些？区别？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/3d87b540-1aa6-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/3d87b540-1aa6-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -44,7 +44,7 @@ head:
 - 线性结构：有序数据元素的集合，其中数据元素之间的关系是一对一的关系，除了第一个和最后一个数据元素之外，其它数据元素都是首尾相接的
 - 非线性结构：各个数据元素不再保持在一个线性序列中，每个数据元素可能与零个或者多个其他数据元素发生关联
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9aedc5d0-1aa6-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9aedc5d0-1aa6-11ec-8e64-91fdec0f05a1.png)
 
 ## 二、有哪些
 

@@ -24,7 +24,7 @@ head:
 
 # Vue 实例挂载的过程
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/63194810-3a09-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/63194810-3a09-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、思考
 

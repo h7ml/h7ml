@@ -24,7 +24,7 @@ head:
 
 # 你了解 vue 的 diff 算法吗？说说看
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/5e858e30-4585-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/5e858e30-4585-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

@@ -49,7 +49,7 @@ head:
 
 说到数据可视化，不得不说到**数据科学**：DIKW模型
 
-![DIKW](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/dikw.png)
+![DIKW](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/dikw.png)
 
     D：Data，是对目标观察和记录的结果，数据本身是未经组织的、离散的、客观的观察。如：国家、生日、10月1日
     I：Information，信息是组织好的结构化数据，与某个特定目标和上下文有关联。如：国家的生日：10月1日
@@ -83,7 +83,7 @@ head:
 
 ### 技术栈的区别：
 
-![Compare FE & Visualization](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/visualization.png)
+![Compare FE & Visualization](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/visualization.png)
 
 ### 领域与工具的区别：
 
@@ -91,29 +91,29 @@ head:
 
 **统计数据图表库**：主要为统计数据做可视化展示，主要涉及柱状图、折线图、饼图等，目前开源图表库有 Plotly、G2、Echarts、Chartist、Chart.js 等。
 
-![Statistics](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/statistics.png)
+![Statistics](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/statistics.png)
 
 **GIS地图库**：处理地图地理信息可视化相关的库。常见的有 L7、Mapbox、Leaflet、Deck.gl、CesiumJS 等。
 
-![GIS](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/gis.png)
+![GIS](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/gis.png)
 
 **图可视化绘图库**：主要描述点边关系图，流程图等带有边概念的图。如 G6、cytoscape.js、mxGraph 等。
 
-![Graph](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/graph.png)
+![Graph](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/graph.png)
 
 **通用渲染库**：绘制更加灵活的图形、图像或者物理模型，比如游戏模型、建筑模型、复杂图表等功能，当你在上述领域找不到对应工具时，即可选择此类 js 库，但灵活的同时带来的就是困难度的提升。主要有 Pixi.js、SpriteJS、P5.js、Rough.js、G、ThreeJS、D3.js 等。
 
-![Robot](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/robot.png)
+![Robot](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/robot.png)
 
 ### 可视化技术选型
 
 首先浏览器实现可视化的方式目前有4种，分别是 HTML + CSS、SVG、Canvas2D、WebGL，其中 WebGL 利用了 GPU 并行处理的特性，在大数据场景下，性能大大优于前3种绘图方式。具体渲染流程如下：
 
-![Browser Render](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/render.png)
+![Browser Render](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/render.png)
 
 **选型**
 
-![How to pick a right visualization method](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/pick.png)
+![How to pick a right visualization method](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/pick.png)
 当然，Canvas 和 SVG 的对比不能简单看图形复杂度和性能，在强调操作的准确性以及对字体的清晰度要求较高的场景，或许你该从 SVG 下手。
 
 ### 结尾
@@ -122,11 +122,11 @@ head:
 
 **图形是如何绘制的**
 
-![How does computer draw images](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/draw.png)
+![How does computer draw images](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/draw.png)
 
 **渲染流程（渲染管线）**
 
-![Render pipeline](http://static.5ibug.net/vitepress/assets/images/MicroFrontend/render_pipe.png)
+![Render pipeline](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/MicroFrontend/render_pipe.png)
 
 参考资料：
 

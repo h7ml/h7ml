@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 中高级类型的理解？有哪些？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bda521e0-1065-11ec-8e64-91fdec0f05a1.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bda521e0-1065-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 

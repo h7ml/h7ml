@@ -24,7 +24,7 @@ head:
 
 # 什么是防抖和节流？有什么区别？如何实现？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/912f1a10-8787-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/912f1a10-8787-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -174,7 +174,7 @@ function debounce(func, wait, immediate) {
 
 如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/a2c81b50-8787-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/a2c81b50-8787-11eb-ab90-d9ae814b240d.png)
 
 ## 三、应用场景
 

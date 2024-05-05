@@ -24,7 +24,7 @@ head:
 
 # 说说 em/px/rem/vh/vw 区别?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/51b036e0-9131-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/51b036e0-9131-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、介绍
 

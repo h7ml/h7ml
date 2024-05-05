@@ -24,7 +24,7 @@ head:
 
 # 说说你对栈、队列的理解？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bc57f530-1b99-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bc57f530-1b99-11ec-a752-75723a64e8f5.png)
 
 ## 一、栈
 

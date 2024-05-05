@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 中枚举类型的理解？应用场景？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/76173bf0-0b0c-11ec-a752-75723a64e8f5.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/76173bf0-0b0c-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 

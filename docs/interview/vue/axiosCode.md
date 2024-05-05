@@ -24,7 +24,7 @@ head:
 
 # 你了解 axios 的原理吗？有看过它的源码吗？
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/1564f7d0-4662-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/1564f7d0-4662-11eb-ab90-d9ae814b240d.png)
 
 ## 一、axios 的使用
 
@@ -317,7 +317,7 @@ request(config) {
 
 首先看看目录结构
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9d90eaa0-48b6-11eb-85f6-6fac77c0c9b3.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9d90eaa0-48b6-11eb-85f6-6fac77c0c9b3.png)
 
 `axios`发送请求有很多实现的方法，实现入口文件为`axios.js`
 
@@ -649,7 +649,7 @@ if (config.cancelToken) {
 
 ### 小结
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b1d2ebd0-48b6-11eb-ab90-d9ae814b240d.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b1d2ebd0-48b6-11eb-ab90-d9ae814b240d.png)
 
 ## 参考文献
 

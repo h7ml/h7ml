@@ -16,7 +16,7 @@ Vue 实例有一个完整的生命周期，也就是从开始创建、初始化�
 
 每个 Vue 实例在被创建之前都要经过一系列的初始化过程。例如需要设置数据监听、编译模板、挂载实例到 DOM、在数据变化时更新 DOM 等。同时在这个过程中也会运行一些叫做生命周期钩子的函数，给予用户机会在一些特定的场景下添加他们自己的代码。
 
-![img](http://static.5ibug.net/vitepress/assets/images/life-cycle.png)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/life-cycle.png)
 
 在我们实际项目开发过程中，会非常频繁地和 Vue 组件的生命周期打交道，接下来我们就从源码的角度来看一下这些生命周期的钩子函数是如何被执行的。
 

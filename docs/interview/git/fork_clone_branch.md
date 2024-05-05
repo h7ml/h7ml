@@ -24,7 +24,7 @@ head:
 
 # 说说 Git 中 fork, clone,branch 这三个概念，有什么区别?
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/9c4eb9a0-f7ad-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/9c4eb9a0-f7ad-11eb-bc6f-3f06e1491664.png)
 
 ## 一、是什么
 
@@ -32,11 +32,11 @@ head:
 
 `fork`，英语翻译过来就是叉子，动词形式则是分叉，如下图，从左到右，一条直线变成多条直线
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ad04ade0-f7ad-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ad04ade0-f7ad-11eb-991d-334fd31f0201.png)
 
 转到`git`仓库中，`fork`则可以代表分叉、克隆 出一个（仓库的）新拷贝
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/b4b31450-f7ad-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/b4b31450-f7ad-11eb-991d-334fd31f0201.png)
 
 包含了原来的仓库（即 upstream repository，上游仓库）所有内容，如分支、Tag、提交
 
@@ -58,15 +58,15 @@ head:
 
 在我们开发中，默认只有一条`master`分支，如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/7fa8e9c0-f923-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/7fa8e9c0-f923-11eb-991d-334fd31f0201.png)
 
 通过`git branch`可以创建一个分支，但并不会自动切换到新分支中去
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/89efd560-f923-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/89efd560-f923-11eb-bc6f-3f06e1491664.png)
 
 通过`git checkout`可以切换到另一个`testing`分支
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/91d1cef0-f923-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/91d1cef0-f923-11eb-bc6f-3f06e1491664.png)
 
 ## 二、如何使用
 
@@ -74,7 +74,7 @@ head:
 
 当你在`github`发现感兴趣开源项目的时候，可以通过点击`github`仓库中右上角`fork`标识的按钮，如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/bc4c4510-f7ad-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/bc4c4510-f7ad-11eb-991d-334fd31f0201.png)
 
 点击这个操作后会将这个仓库的文件、提交历史、issues 和其余东西的仓库复制到自己的`github`仓库中，而你本地仓库是不会存在任何更改
 
@@ -84,17 +84,17 @@ head:
 
 如果希望对方接受你的修改，可以通过发送`pull requests`给对方，如果对方接受。则会将你的修改内容更新到仓库中
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/c5265a40-f7ad-11eb-991d-334fd31f0201.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/c5265a40-f7ad-11eb-991d-334fd31f0201.png)
 
 整体流程如下图：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/ced8ce10-f7ad-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/ced8ce10-f7ad-11eb-bc6f-3f06e1491664.png)
 
 ### clone
 
 在`github`中，开源项目右侧存在`code`按钮，点击后则会显示开源项目`url`信息，如下图所示：
 
-![](http://static.5ibug.net/vitepress/assets/images/interview/d8685090-f7ad-11eb-bc6f-3f06e1491664.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/interview/d8685090-f7ad-11eb-bc6f-3f06e1491664.png)
 
 通过`git clone xxx`则能完成远程项目的下载
 
