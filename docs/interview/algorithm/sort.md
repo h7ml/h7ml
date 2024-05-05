@@ -24,7 +24,7 @@ head:
 
 # 说说常见的排序算法有哪些？区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/63eb7920-211c-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/63eb7920-211c-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -132,7 +132,7 @@ head:
 
 区别如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5c3d7b50-2131-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5c3d7b50-2131-11ec-a752-75723a64e8f5.png)
 
 ## 参考文献
 
