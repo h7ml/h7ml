@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 中类的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e4c19060-0cb4-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e4c19060-0cb4-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -123,21 +123,21 @@ class StringPrinter extends PrinterClass {
 
 只能够在该类的内部进行访问，实例对象并不能够访问
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f57365f0-0cb4-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f57365f0-0cb4-11ec-a752-75723a64e8f5.png)
 
 并且继承该类的子类并不能访问，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/0072cc20-0cb5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/0072cc20-0cb5-11ec-8e64-91fdec0f05a1.png)
 
 ### 受保护修饰符
 
 跟私有修饰符很相似，实例对象同样不能访问受保护的属性，如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/09e72580-0cb5-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/09e72580-0cb5-11ec-a752-75723a64e8f5.png)
 
 有一点不同的是 `protected` 成员在子类中仍然可以访问
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/137f81a0-0cb5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/137f81a0-0cb5-11ec-8e64-91fdec0f05a1.png)
 
 除了上述修饰符之外，还有只读**修饰符**
 
@@ -145,7 +145,7 @@ class StringPrinter extends PrinterClass {
 
 通过`readonly`关键字进行声明，只读属性必须在声明时或构造函数里被初始化，如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1e848d20-0cb5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1e848d20-0cb5-11ec-8e64-91fdec0f05a1.png)
 
 除了实例属性之外，同样存在静态属性
 

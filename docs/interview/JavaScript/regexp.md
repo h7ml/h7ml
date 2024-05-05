@@ -24,7 +24,7 @@ head:
 
 # 说说你对正则表达式的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/55388a40-7f1d-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/55388a40-7f1d-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

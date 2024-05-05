@@ -24,7 +24,7 @@ head:
 
 # 说说如何在 Vue 项目中应用 TypeScript？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/cc658c10-1565-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/cc658c10-1565-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、前言
 

@@ -24,7 +24,7 @@ head:
 
 # 说说你对选择排序的理解？如何实现？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/50a05ed0-2671-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/50a05ed0-2671-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -40,19 +40,19 @@ head:
 
 - 第一次遍历时，从下标为 1 的位置即 56 开始，找出关键字值最小的记录 12，同下标为 0 的关键字 56 交换位置。此时数组为 12、56、80、91、20
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/60bd2050-2671-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/60bd2050-2671-11ec-a752-75723a64e8f5.png)
 
 - 第二次遍历时，从下标为 2 的位置即 56 开始，找出最小值 20，同下标为 2 的关键字 56 互换位置，此时数组为 12、20、80、91、56
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6b04cf40-2671-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6b04cf40-2671-11ec-8e64-91fdec0f05a1.png)
 
 - 第三次遍历时，从下标为 3 的位置即 80 开始，找出最小值 56，同下标为 3 的关键字 80 互换位置，此时数组为 12、20、56、91、80
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/757f4e00-2671-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/757f4e00-2671-11ec-a752-75723a64e8f5.png)
 
 - 第四次遍历时，从下标为 4 的位置即 91 开始，找出最小是 80，同下标为 4 的关键字 91 互换位置，此时排序完成，变成有序数组
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/757f4e00-2671-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/757f4e00-2671-11ec-a752-75723a64e8f5.png)
 
 ## 二、如何实现
 

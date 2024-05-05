@@ -93,7 +93,7 @@ update stu set sex = '女';
 
 上面语句的执行完后查询到的结果是：
 
-![image-20220910090812642](https://static.h7ml.cn/vitepress/assets/images/mysql/202209100907602.png)
+![image-20220910090812642](http://static.5ibug.net/vitepress/assets/images/mysql/202209100907602.png)
 
 ## 删除数据
 

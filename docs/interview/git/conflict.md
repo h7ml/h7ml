@@ -24,7 +24,7 @@ head:
 
 # 说说 git 发生冲突的场景？如何解决？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8aeccc40-fdb3-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8aeccc40-fdb3-11eb-bc6f-3f06e1491664.png)
 
 ## 一、是什么
 
@@ -43,7 +43,7 @@ head:
 
 在本地主分值`master`创建一个`a.txt`文件，文件起始位置写上`master commit`，如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/959ade20-fdb3-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/959ade20-fdb3-11eb-991d-334fd31f0201.png)
 
 然后提交到仓库：
 
@@ -75,23 +75,23 @@ git checkout -b featurel1
 
 此时，`master`分支和`feature1`分支各自都分别有新的提交，变成了下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a05488c0-fdb3-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a05488c0-fdb3-11eb-991d-334fd31f0201.png)
 
 这种情况下，无法执行快速合并，只能试图把各自的修改合并起来，但这种合并就可能会有冲突
 
 现在通过`git merge featurel`进行分支合并，如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/b0991d90-fdb3-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/b0991d90-fdb3-11eb-bc6f-3f06e1491664.png)
 
 从冲突信息可以看到，`a.txt`发生冲突，必须手动解决冲突之后再提交
 
 而`git status`同样可以告知我们冲突的文件：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c5823430-fdb3-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c5823430-fdb3-11eb-991d-334fd31f0201.png)
 
 打开`a.txt`文件，可以看到如下内容：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ce7a0a90-fdb3-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ce7a0a90-fdb3-11eb-bc6f-3f06e1491664.png)
 
 `git`用`<<<<<<<`，`=======`，`>>>>>>>`标记出不同分支的内容：
 
@@ -105,11 +105,11 @@ git checkout -b featurel1
 
 此时`master`分支和`feature1`分支变成了下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d7421e60-fdb3-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d7421e60-fdb3-11eb-bc6f-3f06e1491664.png)
 
 使用`git log`命令可以看到合并的信息：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e0dfd1b0-fdb3-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e0dfd1b0-fdb3-11eb-991d-334fd31f0201.png)
 
 ## 三、总结
 

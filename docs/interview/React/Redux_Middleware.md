@@ -24,7 +24,7 @@ head:
 
 # 说说对 Redux 中间件的理解？常用的中间件有哪些？实现原理？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4520bbd0-e699-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4520bbd0-e699-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ head:
 
 `Redux`中，中间件就是放在就是在`dispatch`过程，在分发`action`进行拦截处理，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/57edf750-e699-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/57edf750-e699-11eb-ab90-d9ae814b240d.png)
 
 其本质上一个函数，对`store.dispatch`方法进行了改造，在发出 `Action`和执行 `Reducer`这两步之间，添加了其他功能
 

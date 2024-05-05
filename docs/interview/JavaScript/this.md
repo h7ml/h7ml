@@ -24,7 +24,7 @@ head:
 
 # 谈谈 this 对象的理解
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/46c820d0-74b7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/46c820d0-74b7-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、定义
 

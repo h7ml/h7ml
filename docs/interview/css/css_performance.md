@@ -24,7 +24,7 @@ head:
 
 # 如果要做优化，CSS 提高性能的方法有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c071c820-9fa3-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c071c820-9fa3-11eb-ab90-d9ae814b240d.png)
 
 ## 一、前言
 

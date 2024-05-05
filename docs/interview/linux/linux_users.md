@@ -24,7 +24,7 @@ head:
 
 # 说说你对 linux 用户管理的理解？相关的命令有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8d8d9d70-0417-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8d8d9d70-0417-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -101,7 +101,7 @@ drwxr-xr-x   3  osmond   osmond    4096  05-16 13:32   nobp
 
 `-`代表当前没有，`rwx`对应代表的意思如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/9ac2cf60-0417-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/9ac2cf60-0417-11ec-8e64-91fdec0f05a1.png)
 
 ### 三、用户操作
 

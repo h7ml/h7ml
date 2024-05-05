@@ -24,7 +24,7 @@ head:
 
 # 你是怎么理解 ES6 中 Decorator 的？使用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7df43560-5ba5-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7df43560-5ba5-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、介绍
 

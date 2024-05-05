@@ -24,7 +24,7 @@ head:
 
 # 说说你对函数式编程的理解？优缺点？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ec0f6e80-8534-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ec0f6e80-8534-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -50,7 +50,7 @@ for (let i = 0; i < array.length; i++)
 
 即是一种描述集合和集合之间的转换关系，输入通过函数都会返回有且只有一个输出值
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f9f83900-8534-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f9f83900-8534-11eb-85f6-6fac77c0c9b3.png)
 
 可以看到，函数实际上是一个关系，或者说是一种映射，而这种映射关系是可以组合的，一旦我们知道一个函数的输出类型可以匹配另一个函数的输入，那他们就可以进行组合
 
@@ -62,7 +62,7 @@ for (let i = 0; i < array.length; i++)
 
 纯函数是对给定的输入返还相同输出的函数，并且要求你所有的数据都是不可变的，即纯函数=无状态+数据不可变
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/04f50720-8535-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/04f50720-8535-11eb-ab90-d9ae814b240d.png)
 
 举一个简单的例子
 
@@ -97,7 +97,7 @@ test('double(2) 等于 4', () => {
 
 编程工作也就是在找一种映射关系，一旦关系找到了，问题就解决了，剩下的事情，就是让数据流过这种关系，然后转换成另一个数据，如下图所示
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/104af1c0-8535-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/104af1c0-8535-11eb-ab90-d9ae814b240d.png)
 
 在这里，就是高阶函数的作用。高级函数，就是以函数作为输入或者输出的函数被称为高阶函数
 

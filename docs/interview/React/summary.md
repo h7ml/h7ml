@@ -24,7 +24,7 @@ head:
 
 # 说说你在使用 React 过程中遇到的常见问题？如何解决?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7efcd400-f47d-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7efcd400-f47d-11eb-ab90-d9ae814b240d.png)
 
 ## 一、前言
 
@@ -78,11 +78,11 @@ head:
 
 - 新版生命周期整体流程如下图所示：
 
-  ![](https://static.h7ml.cn/vitepress/assets/images/interview/66c999c0-d373-11eb-85f6-6fac77c0c9b3.png)
+  ![](http://static.5ibug.net/vitepress/assets/images/interview/66c999c0-d373-11eb-85f6-6fac77c0c9b3.png)
 
   旧的生命周期流程图如下：
 
-  ![](https://static.h7ml.cn/vitepress/assets/images/interview/d379e420-d374-11eb-ab90-d9ae814b240d.png)
+  ![](http://static.5ibug.net/vitepress/assets/images/interview/d379e420-d374-11eb-ab90-d9ae814b240d.png)
 
 ### state 和 props 有什么区别？
 
@@ -205,7 +205,7 @@ head:
 
 工作流程图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/27b2e930-e56b-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/27b2e930-e56b-11eb-85f6-6fac77c0c9b3.png)
 
 ### redux 中间件有哪些？
 
@@ -263,4 +263,4 @@ head:
 
 浏览器开始进行渲染和节点对比，然后执行完成组件内事件绑定和一些交互，浏览器重用了服务端输出的 `html` 节点，整个流程结束
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a2894970-f3f7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a2894970-f3f7-11eb-85f6-6fac77c0c9b3.png)

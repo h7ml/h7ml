@@ -24,7 +24,7 @@ head:
 
 # Vue 中的$nextTick 有什么作用？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/76484d30-3aba-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/76484d30-3aba-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、NextTick 是什么
 

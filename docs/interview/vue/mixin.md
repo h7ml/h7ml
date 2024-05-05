@@ -24,7 +24,7 @@ head:
 
 # 说说你对 vue 的 mixin 的理解，有什么应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8a739c90-3b7f-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8a739c90-3b7f-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、mixin 是什么
 

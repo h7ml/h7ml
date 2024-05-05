@@ -24,7 +24,7 @@ head:
 
 # 你是怎么处理 vue 项目中的错误的？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3cafe4f0-4fd9-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3cafe4f0-4fd9-11eb-ab90-d9ae814b240d.png)
 
 ## 一、错误类型
 

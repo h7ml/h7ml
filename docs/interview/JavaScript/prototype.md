@@ -24,7 +24,7 @@ head:
 
 # JavaScript 原型，原型链 ? 有什么特点？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4500e170-725e-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4500e170-725e-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、原型
 
@@ -64,7 +64,7 @@ console.log(doSomething.prototype)
 
 可以看到，原型对象有一个自有属性`constructor`，这个属性指向该函数，如下图关系展示
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/56d87250-725e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/56d87250-725e-11eb-ab90-d9ae814b240d.png)
 
 ## 二、原型链
 
@@ -88,7 +88,7 @@ const person = new Person('person')
 
 根据代码，我们可以得到下图
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/60825aa0-725e-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/60825aa0-725e-11eb-85f6-6fac77c0c9b3.png)
 
 下面分析一下：
 
@@ -106,7 +106,7 @@ const person = new Person('person')
 
 `__proto__`作为不同对象之间的桥梁，用来指向创建它的构造函数的原型对象的
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6a742160-725e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6a742160-725e-11eb-ab90-d9ae814b240d.png)
 
 每个对象的`__proto__`都是指向它的构造函数的原型对象`prototype`的
 

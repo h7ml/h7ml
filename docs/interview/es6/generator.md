@@ -24,7 +24,7 @@ head:
 
 # 你是怎么理解 ES6 中 Generator 的？使用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7db499b0-5947-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7db499b0-5947-11eb-ab90-d9ae814b240d.png)
 
 ## 一、介绍
 

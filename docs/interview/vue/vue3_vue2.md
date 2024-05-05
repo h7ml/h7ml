@@ -24,7 +24,7 @@ head:
 
 # vue3 有了解过吗？能说说跟 vue2 的区别吗？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/774b6950-5087-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/774b6950-5087-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、Vue3 介绍
 
@@ -41,7 +41,7 @@ head:
 
 ## 哪些变化
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/9169a900-5087-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/9169a900-5087-11eb-85f6-6fac77c0c9b3.png)
 
 从上图中，我们可以概览`Vue3`的新特性，如下：
 
@@ -65,7 +65,7 @@ head:
 
 - `SSR`速度提高了 2~3 倍
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ac1d23d0-5087-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ac1d23d0-5087-11eb-ab90-d9ae814b240d.png)
 
 ### 体积更小
 
@@ -79,7 +79,7 @@ head:
 
 `vue`可以开发出更多其他的功能，而不必担忧`vue`打包出来的整体体积过多
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c01af010-5087-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c01af010-5087-11eb-85f6-6fac77c0c9b3.png)
 
 ### 更易维护
 
@@ -89,33 +89,33 @@ head:
 - 灵活的逻辑组合与复用
 - `Vue3`模块可以和其他框架搭配使用
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c5c919b0-5087-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c5c919b0-5087-11eb-ab90-d9ae814b240d.png)
 
 #### 更好的 Typescript 支持
 
 `VUE3`是基于`typescipt`编写的，可以享受到自动的类型定义提示
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/cc688120-5087-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/cc688120-5087-11eb-ab90-d9ae814b240d.png)
 
 #### 编译器重写
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fcd33800-5087-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fcd33800-5087-11eb-85f6-6fac77c0c9b3.png)
 
 ### 更接近原生
 
 可以自定义渲染 API
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/0c7d88a0-5088-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/0c7d88a0-5088-11eb-ab90-d9ae814b240d.png)
 
 ### 更易使用
 
 响应式 `Api` 暴露出来
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/26070260-5088-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/26070260-5088-11eb-ab90-d9ae814b240d.png)
 
 轻松识别组件重新渲染原因
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/43b2fcb0-5088-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/43b2fcb0-5088-11eb-ab90-d9ae814b240d.png)
 
 ## 二、Vue3 新增特性
 
@@ -187,11 +187,11 @@ export * from '@vue/runtime-core'
 
 composition Api，也就是组合式`api`，通过这种形式，我们能够更加容易维护我们的代码，将相同功能的变量进行一个集中式的管理
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5e0bfb70-5088-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5e0bfb70-5088-11eb-ab90-d9ae814b240d.png)
 
 关于`compositon api`的使用，这里以下图展开
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6f67a590-5088-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6f67a590-5088-11eb-85f6-6fac77c0c9b3.png)
 
 简单使用:
 

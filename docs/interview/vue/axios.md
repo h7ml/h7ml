@@ -24,7 +24,7 @@ head:
 
 # Vue 项目中有封装过 axios 吗？主要是封装哪方面的？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/2bf1e460-45a7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/2bf1e460-45a7-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、axios 是什么
 

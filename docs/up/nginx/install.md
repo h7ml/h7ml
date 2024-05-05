@@ -26,7 +26,7 @@ Nginx 的安装可以选择源码编译的方式也可以使用宝塔面板安�
 
 ## 下载 Nginx
 
-![image-20220906163814476](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220906163814476.png)
+![image-20220906163814476](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220906163814476.png)
 
 ## 使用源码编译安装
 
@@ -201,7 +201,7 @@ WantedBy=multi-user.target
 [root@hadoop100 sbin] systemctl status nginx.service
 ```
 
-![image-20220906171209767](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220906171209767.png)
+![image-20220906171209767](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220906171209767.png)
 
 **开机启动**
 

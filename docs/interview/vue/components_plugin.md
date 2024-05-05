@@ -24,7 +24,7 @@ head:
 
 # Vue 中组件和插件有什么区别？
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/683475e0-3acc-11eb-ab90-d9ae814b240d.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/683475e0-3acc-11eb-ab90-d9ae814b240d.png)
 
 ## 一、组件是什么
 

@@ -24,7 +24,7 @@ head:
 
 # 说说你对策略模式的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e4aad950-3cb2-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e4aad950-3cb2-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 

@@ -20,11 +20,11 @@ WARNING
 
 镜像安装完成后会出现这个界面
 
-![image-20220902224634255](https://static.h7ml.cn/vitepress/assets/images/linux/202209022246046.png)
+![image-20220902224634255](http://static.5ibug.net/vitepress/assets/images/linux/202209022246046.png)
 
 按 r 刷新之后会有三个感叹号
 
-![image-20220902224805585](https://static.h7ml.cn/vitepress/assets/images/linux/202209022248613.png)
+![image-20220902224805585](http://static.5ibug.net/vitepress/assets/images/linux/202209022248613.png)
 
 分别是：5 磁盘设置、8 密码设置、9 创建用户
 
@@ -32,11 +32,11 @@ WARNING
 
 之后依次按 c、c、c，之后的界面是这样
 
-![image-20220902225026986](https://static.h7ml.cn/vitepress/assets/images/linux/202209022250019.png)
+![image-20220902225026986](http://static.5ibug.net/vitepress/assets/images/linux/202209022250019.png)
 
 ### 按 8 进行秘密设置
 
-![image-20220902225233917](https://static.h7ml.cn/vitepress/assets/images/linux/202209022252951.png)
+![image-20220902225233917](http://static.5ibug.net/vitepress/assets/images/linux/202209022252951.png)
 
 这里会进行两次密码输入，
 
@@ -47,13 +47,13 @@ WARNING
 
 ### 安装完成
 
-![image-20220902225745585](https://static.h7ml.cn/vitepress/assets/images/linux/202209022257616.png)
+![image-20220902225745585](http://static.5ibug.net/vitepress/assets/images/linux/202209022257616.png)
 
 在此界面按回车键（Enter）完成安装
 
 ### 登录
 
-![image-20220902225857209](https://static.h7ml.cn/vitepress/assets/images/linux/202209022258237.png)
+![image-20220902225857209](http://static.5ibug.net/vitepress/assets/images/linux/202209022258237.png)
 
 输入用户名：root
 
@@ -151,7 +151,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 连 vim 的官方网站 (<http://www.vim.org>) 自己也说 vim 是一个程序开发工具而不是文字处理软件
 
-![](https://static.h7ml.cn/vitepress/assets/images/linux/R-C.png)
+![](http://static.5ibug.net/vitepress/assets/images/linux/R-C.png)
 
 ## 三种使用模式
 
@@ -161,9 +161,9 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 用户刚刚启动 vi/vim，便进入了命令模式。
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/4fd4be4bb88845e0b7f41e867617d7ac.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/4fd4be4bb88845e0b7f41e867617d7ac.png)
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/d5a40e5a140a4cedb7295c6c9c1d711d.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/d5a40e5a140a4cedb7295c6c9c1d711d.png)
 
 此状态下敲击键盘动作会被 Vim 识别为命令，而非输入字符。比如我们此时按下 i，并不会输入一个字符，i 被当作了一个命令。
 
@@ -181,7 +181,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 在命令模式下按下 i 就进入了输入模式。
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/8d56ceca1d32437f993a9b034492d8d3.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/8d56ceca1d32437f993a9b034492d8d3.png)
 
 在输入模式中，可以使用以下按键：
 
@@ -199,7 +199,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 在命令模式下按下:（英文冒号）就进入了底线命令模式。
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/1eb4505e2ce94a289a15ecdd9c564491.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/1eb4505e2ce94a289a15ecdd9c564491.png)
 
 底线命令模式可以输入单个或多个字符的命令，可用的命令非常多。
 
@@ -209,13 +209,13 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 **w 保存文件**
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/c18ef81b791946f095584f4d520e0667.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/c18ef81b791946f095584f4d520e0667.png)
 
 按 ESC 键可随时退出底线命令模式。
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/25286118bf024e4ebcf26cbae5e6d5d5.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/25286118bf024e4ebcf26cbae5e6d5d5.png)
 
-![img](https://static.h7ml.cn/vitepress/assets/images/linux/a4fb10889a3b4c3abf9470addc3606aa.png)
+![img](http://static.5ibug.net/vitepress/assets/images/linux/a4fb10889a3b4c3abf9470addc3606aa.png)
 
 ### 完整的演示
 
@@ -318,19 +318,19 @@ vim 则可以说是程序开发者的一项很好用的工具。
 
 ### 查看虚拟网络编辑器
 
-![image-20220902124633366](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220902124633366.png)
+![image-20220902124633366](http://static.5ibug.net/vitepress/assets/images/linux/image-20220902124633366.png)
 
 ### 修改虚拟网卡 Ip
 
-![image-20220902124802103](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220902124802103.png)
+![image-20220902124802103](http://static.5ibug.net/vitepress/assets/images/linux/image-20220902124802103.png)
 
 ### 查看网关
 
-![image-20220902124941641](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220902124941641.png)
+![image-20220902124941641](http://static.5ibug.net/vitepress/assets/images/linux/image-20220902124941641.png)
 
 ### 查看 windows 环境的中 VMnet8 网络配置
 
-![image-20220902125021997](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220902125021997.png)
+![image-20220902125021997](http://static.5ibug.net/vitepress/assets/images/linux/image-20220902125021997.png)
 
 ## 配置网络 ip 地址
 
@@ -372,7 +372,7 @@ vim 则可以说是程序开发者的一项很好用的工具。
 [root@hadoop100 桌面]#vim /etc/sysconfig/network-scripts/ifcfg-ens3
 ```
 
-![image-20220903123026917](https://static.h7ml.cn/vitepress/assets/images/linux/202209031230958.png)
+![image-20220903123026917](http://static.5ibug.net/vitepress/assets/images/linux/202209031230958.png)
 
 以下标红的项必须修改，有值的按照下面的值修改，没有该项的要增加。
 
@@ -402,13 +402,13 @@ DNS1=192.168.1.2
 
 修改后
 
-![image-20220903122820674](https://static.h7ml.cn/vitepress/assets/images/linux/202209031228706.png)
+![image-20220903122820674](http://static.5ibug.net/vitepress/assets/images/linux/202209031228706.png)
 
 编辑完后，按键盘 `esc` ，然后输入 `:wq` 回车即可。
 
 **2、执行 `service network restart` 重启网络**
 
-![image-20220902123712391](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220902123712391.png)
+![image-20220902123712391](http://static.5ibug.net/vitepress/assets/images/linux/image-20220902123712391.png)
 
 ### 修改 IP 地址后可能会遇到的问题
 
@@ -519,7 +519,7 @@ ip地址    =>  主机名/域名
 
 **x86 架构**
 
-![image-20220914105129045](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220914105129045.png)
+![image-20220914105129045](http://static.5ibug.net/vitepress/assets/images/linux/image-20220914105129045.png)
 
 **让你一步到位的命令**
 
@@ -559,7 +559,7 @@ mv node-v12.16.1-linux-x64.tar.gz Node.js
 
 **进入到/usr/local/temp/Node.js/bin 你会看到**
 
-![image-20220914105914750](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220914105914750.png)
+![image-20220914105914750](http://static.5ibug.net/vitepress/assets/images/linux/image-20220914105914750.png)
 
 ln 指令用于创建关联
 
@@ -573,7 +573,7 @@ ln -s /usr/local/bin/Node.js/bin/npx /usr/bin/npx
 
 最后在终端输入 node -v
 
-![image-20220914110030726](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220914110030726.png)
+![image-20220914110030726](http://static.5ibug.net/vitepress/assets/images/linux/image-20220914110030726.png)
 
 出现这个就完成
 
@@ -600,7 +600,7 @@ curl -sL https://dl.yarnpkg.com/rpm/yarn.repo -o /etc/yum.repos.d/yarn.repo
 
 <https://downloads.mysql.com/archives/community/>
 
-![image-20220924151733781](https://static.h7ml.cn/vitepress/assets/images/linux/202209241517826.png)
+![image-20220924151733781](http://static.5ibug.net/vitepress/assets/images/linux/202209241517826.png)
 
 上传到 Linux
 
@@ -614,7 +614,7 @@ wget https://downloads.mysql.com/archives/get/p/23/file/mysql-8.0.28-1.el7.x86_6
 
 将文件移动到一个目录中
 
-![image-20220924152215578](https://static.h7ml.cn/vitepress/assets/images/linux/202209241522610.png)
+![image-20220924152215578](http://static.5ibug.net/vitepress/assets/images/linux/202209241522610.png)
 
 解包文件
 
@@ -622,7 +622,7 @@ wget https://downloads.mysql.com/archives/get/p/23/file/mysql-8.0.28-1.el7.x86_6
  tar -xvf mysql-8.0.28-1.el7.x86_64.rpm-bundle.tar
 ```
 
-![image-20220924152302390](https://static.h7ml.cn/vitepress/assets/images/linux/202209241523418.png)
+![image-20220924152302390](http://static.5ibug.net/vitepress/assets/images/linux/202209241523418.png)
 
 ## 3、安装
 
@@ -664,7 +664,7 @@ mysqld --initialize --console
 
 如果出现以下报错
 
-![image-20220924152648318](https://static.h7ml.cn/vitepress/assets/images/linux/202209241526354.png)
+![image-20220924152648318](http://static.5ibug.net/vitepress/assets/images/linux/202209241526354.png)
 
 那可能是缺少 openssl10
 
@@ -684,7 +684,7 @@ rpm -ivh compat-openssl10-1.0.2o-3.el8.x86_64.rpm
 
 最终安装过程图
 
-![image-20220924153111079](https://static.h7ml.cn/vitepress/assets/images/linux/202209241531110.png)
+![image-20220924153111079](http://static.5ibug.net/vitepress/assets/images/linux/202209241531110.png)
 
 ## 5、启动
 
@@ -708,7 +708,7 @@ chown -R mysql:mysql /var/lib/mysql
 cat /var/log/mysqld.log | grep localhost
 ```
 
-![image-20220924153531953](https://static.h7ml.cn/vitepress/assets/images/linux/202209241535995.png)
+![image-20220924153531953](http://static.5ibug.net/vitepress/assets/images/linux/202209241535995.png)
 
 ### 登入 Mysql
 
@@ -728,7 +728,7 @@ mysql: error while loading shared libraries: libncurses.so.5: cannot open shared
 find / -name 'libncurses*'
 ```
 
-![image-20220924155547536](https://static.h7ml.cn/vitepress/assets/images/linux/202209241555581.png)
+![image-20220924155547536](http://static.5ibug.net/vitepress/assets/images/linux/202209241555581.png)
 
 之后将`/usr/lib64`下找到的`libncurses.so` 版本和`libncurses.so.5`进行链接
 
@@ -746,7 +746,7 @@ mysql: error while loading shared libraries: libtinfo.so.5: cannot open shared o
 
 最终登录效果
 
-![image-20220924160043962](https://static.h7ml.cn/vitepress/assets/images/linux/202209241600997.png)
+![image-20220924160043962](http://static.5ibug.net/vitepress/assets/images/linux/202209241600997.png)
 
 ### 修改密码
 
@@ -756,17 +756,17 @@ alter user 'root'@'localhost' identified by '*******';
 
 ### 查看数据库
 
-![image-20220924161008432](https://static.h7ml.cn/vitepress/assets/images/linux/202209241610492.png)
+![image-20220924161008432](http://static.5ibug.net/vitepress/assets/images/linux/202209241610492.png)
 
 ## 6、navicat 远程链接
 
 点击新建链接使用 SSH
 
-![image-20220924163623897](https://static.h7ml.cn/vitepress/assets/images/linux/202209241636943.png)
+![image-20220924163623897](http://static.5ibug.net/vitepress/assets/images/linux/202209241636943.png)
 
 ### 链接失败 1130
 
-**1130 - Host ‘xxx.xxx.xxx.xxx’ is not allowed to connect to this MySQL server**![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209241640679.jpeg)
+**1130 - Host ‘xxx.xxx.xxx.xxx’ is not allowed to connect to this MySQL server**![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209241640679.jpeg)
 
 #### a.问题分析
 
@@ -774,7 +774,7 @@ alter user 'root'@'localhost' identified by '*******';
 
 #### b.解决办法
 
-连接远端服务器，登录进去到 MySQL，查看名为 mysql 的数据库中的一个名字叫 user 的表，一般来讲如果出现 1130 代码问题，大概率是 MySQL 登录用户的 host 权限是 localhost 或其他，把登录用户对应的 host 改成%即可，%意为任意 ip 地址 ![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209241637979.png)
+连接远端服务器，登录进去到 MySQL，查看名为 mysql 的数据库中的一个名字叫 user 的表，一般来讲如果出现 1130 代码问题，大概率是 MySQL 登录用户的 host 权限是 localhost 或其他，把登录用户对应的 host 改成%即可，%意为任意 ip 地址 ![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209241637979.png)
 
 #### c.解决步骤
 
@@ -801,7 +801,7 @@ flush privileges;
 
 **2059 - Authentication plugin ‘caching_sha2_password’ cannot be loaded: xxxxxxxxxx**
 
-![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209241639127.jpeg)
+![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209241639127.jpeg)
 
 #### a.问题分析
 
@@ -809,7 +809,7 @@ flush privileges;
 
 #### b.问题解决
 
-修改 MySQL 数据库的密码加密方式，并使用加密方式修改覆盖原来的密码，保证相同密码加密后的一致，密码改成 Navicat 支持的 mysql_native_password 方式 ![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209241639153.png)
+修改 MySQL 数据库的密码加密方式，并使用加密方式修改覆盖原来的密码，保证相同密码加密后的一致，密码改成 Navicat 支持的 mysql_native_password 方式 ![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209241639153.png)
 
 #### c.解决步骤
 
@@ -840,11 +840,11 @@ systemctl restart mysqld flush privileges;
 
 1、找到 MYSQL 的安装路径下的 bin 目录，这里是：C:\\Program Files\\MySQL\\MySQL Server 8.0\\bin，然后在命令行工具进入，如下图
 
-![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209242139725.png)
+![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209242139725.png)
 
 2、登录 mysql 数据库。即继续在命令行工具输入：`mysql -u root -p`。然后输入自己数据库的密码，进入数据库
 
-![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209242139775.png)
+![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209242139775.png)
 
 3、接着输入
 
@@ -856,12 +856,12 @@ ALTER USER '' IDENTIFIED WITH mysql_native_password BY '123456';
 
 这里`root'@'localhost'` 对应的是 `mysql`数据库的`user`表的键和值，我这里的`root`的`host`是`%`，所以为`root'@'%'`
 
-![image-20220924214308072](https://static.h7ml.cn/vitepress/assets/images/linux/202209242143111.png)
+![image-20220924214308072](http://static.5ibug.net/vitepress/assets/images/linux/202209242143111.png)
 
 4、最后在输入下面这个命令，然后回车。
 
 第三步第四步的截图：
 
-![在这里插入图片描述](https://static.h7ml.cn/vitepress/assets/images/linux/202209242139810.png)
+![在这里插入图片描述](http://static.5ibug.net/vitepress/assets/images/linux/202209242139810.png)
 
 然后就可以连上数据库了。

@@ -24,7 +24,7 @@ head:
 
 # 说说你对代理模式的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/899a6ef0-3d6a-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/899a6ef0-3d6a-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 代理模式的关键是，当客户不方便直接访问一个对象或者不满足需要时，提供一个替身对象来控制这个对象的访问，客户实际上访问的是替身对象
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/951c99b0-3d6a-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/951c99b0-3d6a-11ec-a752-75723a64e8f5.png)
 
 在生活中，代理模式的场景是十分常见的，例如我们现在如果有租房、买房的需求，更多的是去找链家等房屋中介机构，而不是直接寻找想卖房或出租房的人谈。此时，链家起到的作用就是代理的作用
 

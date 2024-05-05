@@ -12,7 +12,7 @@ title: 配置与应用场景
 
 ## 域名解析
 
-![image-20220909095951565](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220909095951565.png)
+![image-20220909095951565](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909095951565.png)
 
 ### 浏览器、Nginx 与 HTTP 协议
 
@@ -33,7 +33,7 @@ title: 配置与应用场景
 
 如果将多个域名绑定到一台主机上，在**通过 Nginx 服务器来判断你访问的是哪一个域名**，之后在返回给你对应的资源
 
-![image-20220909111838691](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220909111838691.png)
+![image-20220909111838691](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909111838691.png)
 
 ### 本地域名解析
 
@@ -51,7 +51,7 @@ IP 地址 域名
 
 首先需要一个域名，购买渠道阿里云、腾讯云，这里已阿里云
 
-![image-20220909131341414](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220909131341414.png)
+![image-20220909131341414](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909131341414.png)
 
 **主机记录**
 
@@ -65,7 +65,7 @@ IP 地址 域名
 
 **域名设置**
 
-![image-20220909144630354](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220909144630354.png)
+![image-20220909144630354](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220909144630354.png)
 
 **Nginx 设置**
 
@@ -144,11 +144,11 @@ http {
 
 **未开启`sendfile`**
 
-![image-20220907111843362](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220907111843362.png)
+![image-20220907111843362](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220907111843362.png)
 
 **开启`sendfile`后**
 
-![image-20220907111937461](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220907111937461.png)
+![image-20220907111937461](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220907111937461.png)
 
 #### keepalive_timeout 65
 
@@ -156,7 +156,7 @@ http {
 
 #### server
 
-![image-20220907112032197](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220907112032197.png)
+![image-20220907112032197](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220907112032197.png)
 
 ### 虚拟主机配置
 

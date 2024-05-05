@@ -24,7 +24,7 @@ head:
 
 # 说说对高阶组件的理解？应用场景?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c8901850-e197-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c8901850-e197-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

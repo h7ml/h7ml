@@ -24,7 +24,7 @@ head:
 
 # 说说对 Node 中的 Stream 的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a5df3c60-c76f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a5df3c60-c76f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -38,7 +38,7 @@ head:
 
 在`source`和`dest`之间有一个连接的管道`pipe`,它的基本语法是`source.pipe(dest)`，`source`和`dest`就是通过 pipe 连接，让数据从`source`流向了`dest`，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/aec05670-c76f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/aec05670-c76f-11eb-ab90-d9ae814b240d.png)
 
 ## 二、种类
 
@@ -62,7 +62,7 @@ head:
 
 如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/b7ac6d00-c76f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/b7ac6d00-c76f-11eb-ab90-d9ae814b240d.png)
 
 基本代码如下：
 
@@ -83,7 +83,7 @@ const myDuplex = new Duplex({
 
 双工流的演示图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c02883b0-c76f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c02883b0-c76f-11eb-ab90-d9ae814b240d.png)
 
 除了上述压缩包的例子，还比如一个 `babel`，把`es6`转换为，我们在左边写入 `es6`，从右边读取 `es5`
 

@@ -24,7 +24,7 @@ head:
 
 # 请描述下你对 vue 生命周期的理解？在 created 和 mounted 这两个生命周期中请求数据有什么区别呢？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3a119e10-3aca-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3a119e10-3aca-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、生命周期是什么
 
@@ -52,7 +52,7 @@ Vue 生命周期总共可以分为 8 个阶段：创建前后, 载入前后,更�
 
 `Vue`生命周期流程图
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/44114780-3aca-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/44114780-3aca-11eb-85f6-6fac77c0c9b3.png)
 
 #### 具体分析
 

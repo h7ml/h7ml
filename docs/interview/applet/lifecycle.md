@@ -24,7 +24,7 @@ head:
 
 # 说说微信小程序的生命周期函数有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1df64890-30e0-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1df64890-30e0-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 

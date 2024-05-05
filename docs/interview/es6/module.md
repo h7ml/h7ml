@@ -24,7 +24,7 @@ head:
 
 # 你是怎么理解 ES6 中 Module 的？使用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/b6d19be0-5adb-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/b6d19be0-5adb-11eb-ab90-d9ae814b240d.png)
 
 ## 一、介绍
 

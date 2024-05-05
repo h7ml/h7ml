@@ -24,7 +24,7 @@ head:
 
 # 说说对 Node 中的 process 的理解？有哪些常用方法？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4f7866b0-c2b2-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4f7866b0-c2b2-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

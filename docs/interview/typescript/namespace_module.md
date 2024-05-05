@@ -24,7 +24,7 @@ head:
 
 # 说说对 TypeScript 中命名空间与模块的理解？区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/9378d760-137e-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/9378d760-137e-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、模块
 
@@ -40,7 +40,7 @@ const a = 1
 
 然后在另一个文件同样声明一个变量`a`，这时候会出现错误信息
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a239d970-137e-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a239d970-137e-11ec-a752-75723a64e8f5.png)
 
 提示重复声明`a`变量，但是所处的空间是全局的
 

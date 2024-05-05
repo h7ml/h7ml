@@ -24,7 +24,7 @@ head:
 
 # 如何理解 OSI 七层模型?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e2e1b910-b61e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e2e1b910-b61e-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -36,7 +36,7 @@ OSI （Open System Interconnect）模型全称为开放式通信系统互连参�
 
 `OSI`主要划分了七层，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/eb1b2170-b61e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/eb1b2170-b61e-11eb-ab90-d9ae814b240d.png)
 
 ### 应用层
 
@@ -101,7 +101,7 @@ OSI （Open System Interconnect）模型全称为开放式通信系统互连参�
 
 数据在各层之间的传输如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f3a89d40-b61e-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f3a89d40-b61e-11eb-85f6-6fac77c0c9b3.png)
 
 - 应用层报文被传送到运输层
 - 在最简单的情况下，运输层收取到报文并附上附加信息，该首部将被接收端的运输层使用

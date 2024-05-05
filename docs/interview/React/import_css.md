@@ -24,7 +24,7 @@ head:
 
 # 说说 react 中引入 css 的方式有哪几种？区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7d825230-e217-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7d825230-e217-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

@@ -24,7 +24,7 @@ head:
 
 # 说说对 Nodejs 中的事件循环机制理解?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e0faf3c0-c90e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e0faf3c0-c90e-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 而在`NodeJS`中，事件循环是基于`libuv`实现，`libuv`是一个多平台的专注于异步 IO 的库，如下图最右侧所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ea690b90-c90e-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ea690b90-c90e-11eb-85f6-6fac77c0c9b3.png)
 
 上图`EVENT_QUEUE` 给人看起来只有一个队列，但`EventLoop`存在 6 个阶段，每个阶段都有对应的一个先进先出的回调队列
 
@@ -40,7 +40,7 @@ head:
 
 上节讲到事件循环分成了六个阶段，对应如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f2e34d80-c90e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f2e34d80-c90e-11eb-ab90-d9ae814b240d.png)
 
 - timers 阶段：这个阶段执行 timer（setTimeout、setInterval）的回调
 - 定时器检测阶段(timers)：本阶段执行 timer 的回调，即 setTimeout、setInterval 里面的回调函数
@@ -56,7 +56,7 @@ head:
 
 流程图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fbe731d0-c90e-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fbe731d0-c90e-11eb-ab90-d9ae814b240d.png)
 
 在`Node`中，同样存在宏任务和微任务，与浏览器中的事件循环相似
 

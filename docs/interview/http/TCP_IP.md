@@ -24,7 +24,7 @@ head:
 
 # 如何理解 TCP/IP 协议?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4f69a930-b647-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4f69a930-b647-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -52,7 +52,7 @@ TCP/IP 协议族按层次分别了五层体系或者四层体系
 
 如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5bb93610-b647-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5bb93610-b647-11eb-85f6-6fac77c0c9b3.png)
 
 ### 五层体系
 
@@ -114,7 +114,7 @@ OSI 参考模型与 TCP/IP 参考模型区别如下：
 
 三种模型对应关系如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3fbff4d0-b647-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3fbff4d0-b647-11eb-ab90-d9ae814b240d.png)
 
 ## 参考文献
 

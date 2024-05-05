@@ -24,7 +24,7 @@ head:
 
 # 说说 React 的事件机制？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f054f080-d86f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f054f080-d86f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -143,7 +143,7 @@ React 事件：父元素事件监听！
 
 对应过程如图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/08e22ff0-d870-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/08e22ff0-d870-11eb-ab90-d9ae814b240d.png)
 
 所以想要阻止不同时间段的冒泡行为，对应使用不同的方法，对应如下：
 

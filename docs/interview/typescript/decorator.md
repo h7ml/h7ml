@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 装饰器的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f8905dd0-111c-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f8905dd0-111c-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -145,7 +145,7 @@ xmz.say = function () {
 
 输出如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e96bc1b0-114d-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e96bc1b0-114d-11ec-8e64-91fdec0f05a1.png)
 
 ### 参数装饰
 
@@ -173,7 +173,7 @@ emp.greet('hello');
 
 输入如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f2f32de0-114d-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f2f32de0-114d-11ec-a752-75723a64e8f5.png)
 
 ### 访问器装饰
 

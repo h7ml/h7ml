@@ -24,13 +24,13 @@ head:
 
 # 说说提高微信小程序的应用速度的手段有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f606d530-3278-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f606d530-3278-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
 小程序启动会常常遇到如下图场景：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/03941230-3279-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/03941230-3279-11ec-8e64-91fdec0f05a1.png)
 
 这是因为，小程序首次启动前，微信会在小程序启动前为小程序准备好通用的运行环境，如运行中的线程和一些基础库的初始化
 
@@ -44,7 +44,7 @@ head:
 
 整体流程如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/11c0ea90-3279-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/11c0ea90-3279-11ec-a752-75723a64e8f5.png)
 
 ## 二、手段
 
@@ -63,7 +63,7 @@ head:
 
 当用户点击到子包的目录时，还是有一个代码包下载的过程，这会感觉到明显的卡顿，所以子包也不建议拆的太大，当然我们可以采用子包预加载技术，并不需要等到用户点击到子包页面后在下载子包
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/2034de10-3279-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/2034de10-3279-11ec-8e64-91fdec0f05a1.png)
 
 ### 渲染
 

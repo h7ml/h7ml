@@ -24,13 +24,13 @@ head:
 
 # 如何实现 jwt 鉴权机制？说说你的思路
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/efff62b0-cd88-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/efff62b0-cd88-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
 JWT（JSON Web Token），本质就是一个字符串书写规范，如下图，作用是用来在用户和服务器之间传递安全可靠的信息
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/052904c0-cd89-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/052904c0-cd89-11eb-ab90-d9ae814b240d.png)
 
 在目前前后端分离的开发过程中，使用`token`鉴权机制用于身份验证是最常见的方案，流程如下：
 
@@ -39,7 +39,7 @@ JWT（JSON Web Token），本质就是一个字符串书写规范，如下图，
 
 `Token`，分成了三部分，头部（Header）、载荷（Payload）、签名（Signature），并以`.`进行拼接。其中头部和载荷都是以`JSON`格式存放数据，只是进行了编码
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1175f990-cd89-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1175f990-cd89-11eb-85f6-6fac77c0c9b3.png)
 
 ### header
 

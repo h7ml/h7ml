@@ -24,7 +24,7 @@ head:
 
 # 你是怎么理解 ES6 中 Promise 的？使用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f033b160-5811-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f033b160-5811-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、介绍
 
@@ -92,7 +92,7 @@ doSomething()
 
 认真阅读下图，我们能够轻松了解`promise`整个流程
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1b02ae90-58a9-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1b02ae90-58a9-11eb-85f6-6fac77c0c9b3.png)
 
 ## 二、用法
 

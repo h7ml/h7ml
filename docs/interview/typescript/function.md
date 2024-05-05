@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 中函数的理解？与 JavaScript 函数的区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3f1c1390-0d42-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3f1c1390-0d42-11ec-a752-75723a64e8f5.png)
 
 ## 一、是什么
 
@@ -44,7 +44,7 @@ const add = (a: number, b: number) => a + b;
 
 上述只定义了函数的两个参数类型，这个时候整个函数虽然没有被显式定义，但是实际上`TypeScript` 编译器是能够通过类型推断到这个函数的类型，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4b3415b0-0d42-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4b3415b0-0d42-11ec-8e64-91fdec0f05a1.png)
 
 当鼠标放置在第三行`add`函数名的时候，会出现完整的函数定义类型，通过`:` 的形式来定于参数类型，通过 `=>` 连接参数和返回值类型
 

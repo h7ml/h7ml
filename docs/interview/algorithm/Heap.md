@@ -24,7 +24,7 @@ head:
 
 # 说说你对堆的理解？如何实现？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/dd12c700-1ed7-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/dd12c700-1ed7-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 堆通常是一个可以被看做一棵完全二叉树的数组对象，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ea0fd1f0-1ed7-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ea0fd1f0-1ed7-11ec-8e64-91fdec0f05a1.png)
 
 总是满足下列性质：
 
@@ -48,7 +48,7 @@ head:
 
 堆的元素存储方式，按照完全二叉树的顺序存储方式存储在一个一维数组中，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ea0fd1f0-1ed7-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ea0fd1f0-1ed7-11ec-8e64-91fdec0f05a1.png)
 
 用一维数组存储则如下：
 
@@ -119,7 +119,7 @@ class MinHeap {
 
 如下图所示，22 节点是新插入的元素，然后进行上移操作：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/06893fb0-1ed8-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/06893fb0-1ed8-11ec-8e64-91fdec0f05a1.png)
 
 相关代码如下：
 
@@ -149,7 +149,7 @@ shiftUp(index) {
 
 整体如下图操作：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/12a2a160-1ed8-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/12a2a160-1ed8-11ec-a752-75723a64e8f5.png)
 
 相关代码如下：
 

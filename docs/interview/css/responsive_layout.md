@@ -24,7 +24,7 @@ head:
 
 # 什么是响应式设计？响应式设计的基本原理是什么？如何做？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a57e2e40-9dba-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a57e2e40-9dba-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -42,7 +42,7 @@ head:
 
 - 网站的布局会根据视口来调整模块的大小和位置
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ae68be30-9dba-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ae68be30-9dba-11eb-85f6-6fac77c0c9b3.png)
 
 ## 二、实现方式
 

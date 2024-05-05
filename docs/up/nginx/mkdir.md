@@ -68,4 +68,4 @@ title: 目录
 
 ## 基本运行原理
 
-![image-20220907111607186](https://static.h7ml.cn/vitepress/assets/images/nginx/image-20220907111607186.png)
+![image-20220907111607186](http://static.5ibug.net/vitepress/assets/images/nginx/image-20220907111607186.png)

@@ -24,7 +24,7 @@ head:
 
 # DOM 常见的操作有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a89c99a0-7fdc-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a89c99a0-7fdc-11eb-ab90-d9ae814b240d.png)
 
 ## 一、DOM
 
@@ -161,7 +161,7 @@ document.all['']
 
 除此之外，每个`DOM`元素还有`parentNode`、`childNodes`、`firstChild`、`lastChild`、`nextSibling`、`previousSibling`属性，关系图如下图所示
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c100f450-7fdc-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c100f450-7fdc-11eb-ab90-d9ae814b240d.png)
 
 ### 更新节点
 

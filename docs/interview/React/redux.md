@@ -24,7 +24,7 @@ head:
 
 # 说说你对 Redux 的理解？其工作原理？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/52394be0-e2a5-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/52394be0-e2a5-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -52,7 +52,7 @@ head:
 
 工作流程图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/27b2e930-e56b-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/27b2e930-e56b-11eb-85f6-6fac77c0c9b3.png)
 
 根据流程图，可以想象，`React Components` 是借书的用户， `Action Creactor` 是借书时说的话(借什么书)， `Store` 是图书馆管理员，`Reducer` 是记录本(借什么书，还什么书，在哪儿，需要查一下)， `state` 是书籍信息
 

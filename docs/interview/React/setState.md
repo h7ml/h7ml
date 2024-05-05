@@ -24,7 +24,7 @@ head:
 
 # 说说 React 中的 setState 执行机制
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3acb8ca0-d825-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3acb8ca0-d825-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

@@ -37,13 +37,13 @@ icon: question description: 前端物语|面试物语-Vue3.0 性能提升主要�
 
 # Vue3.0 性能提升主要是通过哪几方面体现的？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/2aac1020-5ed0-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/2aac1020-5ed0-11eb-ab90-d9ae814b240d.png)
 
 ## 一、编译阶段
 
 回顾`Vue2`，我们知道每个组件实例都对应一个 `watcher` 实例，它会在组件渲染的过程中把用到的数据`property`记录为依赖，当依赖发生改变，触发`setter`，则会通知`watcher`，从而使关联的组件重新渲染
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/39066120-5ed0-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/39066120-5ed0-11eb-85f6-6fac77c0c9b3.png)
 
 试想一下，一个组件结构如下图
 
@@ -77,7 +77,7 @@ icon: question description: 前端物语|面试物语-Vue3.0 性能提升主要�
 
 下图这里，已经标记静态节点的`p`标签在`diff`过程中则不会比较，把性能进一步提高
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c732e150-5c58-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c732e150-5c58-11eb-ab90-d9ae814b240d.png)
 
 关于静态类型枚举如下
 

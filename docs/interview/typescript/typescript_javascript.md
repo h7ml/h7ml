@@ -24,7 +24,7 @@ head:
 
 # 说说你对 TypeScript 的理解？与 JavaScript 的区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/58cd3580-0950-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/58cd3580-0950-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 > 超集，不得不说另外一个概念，子集，怎么理解这两个呢，举个例子，如果一个集合 A 里面的的所有元素集合 B 里面都存在，那么我们可以理解集合 B 是集合 A 的超集，集合 A 为集合 B 的子集
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/61c2c1f0-0950-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/61c2c1f0-0950-11ec-a752-75723a64e8f5.png)
 
 其是一种静态类型检查的语言，提供了类型注解，在代码编译阶段就可以检查出数据类型的错误
 
@@ -118,7 +118,7 @@ let tom: Person = {
 
 更多的区别如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6b544040-0950-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6b544040-0950-11ec-8e64-91fdec0f05a1.png)
 
 ## 参考文献
 

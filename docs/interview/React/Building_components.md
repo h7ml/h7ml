@@ -24,7 +24,7 @@ head:
 
 # React 构建组件的方式有哪些？区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/04355cb0-da10-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/04355cb0-da10-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 

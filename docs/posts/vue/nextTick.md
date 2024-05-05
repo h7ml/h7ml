@@ -124,7 +124,7 @@ Vue.nextTick(() => {
 })
 ```
 
-![](https://static.h7ml.cn/vitepress/assets/images/nextTick.png)
+![](http://static.5ibug.net/vitepress/assets/images/nextTick.png)
 
 ### nextTick 源码分析
 
@@ -249,7 +249,7 @@ mo.observe(domTarget, {
 })
 ```
 
-![](https://static.h7ml.cn/vitepress/assets/images/nextTick2.png)
+![](http://static.5ibug.net/vitepress/assets/images/nextTick2.png)
 
 在`nextTick`中`MutationObserver`的作用就如上图所示。在监听到 DOM 更新后，调用回调函数。
 

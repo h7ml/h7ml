@@ -24,7 +24,7 @@ head:
 
 # Javascript 如何实现继承？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5d9c4450-72a3-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5d9c4450-72a3-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -312,7 +312,7 @@ asuna.getName() // 成功访问到父类的方法
 
 下面以一张图作为总结：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/0df74700-731c-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/0df74700-731c-11eb-ab90-d9ae814b240d.png)
 
 通过`Object.create` 来划分不同的继承方式，最后的寄生式组合继承方式是通过组合继承改造之后的最优继承方式，而 `extends` 的语法糖和寄生组合继承的方式基本类似
 

@@ -24,13 +24,13 @@ head:
 
 # 如何判断一个元素是否在可视区域中？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d848c790-8a05-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d848c790-8a05-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、用途
 
 可视区域即我们浏览网页的设备肉眼可见的区域，如下图
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/9c5bbb10-8a56-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/9c5bbb10-8a56-11eb-85f6-6fac77c0c9b3.png)
 
 在日常开发中，我们经常需要判断目标元素是否在视窗之内或者和视窗的距离小于一个值（例如 100 px），从而实现一些常用的功能，例如：
 
@@ -52,7 +52,7 @@ head:
 
 `offsetTop`，元素的上外边框至包含元素的上内边框之间的像素距离，其他`offset`属性如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/b4b63ca0-8a54-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/b4b63ca0-8a54-11eb-85f6-6fac77c0c9b3.png)
 
 下面再来了解下`clientWidth`、`clientHeight`：
 
@@ -118,7 +118,7 @@ console.log(clientRect)
 
 属性对应的关系图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e34ac5d0-8a05-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e34ac5d0-8a05-11eb-85f6-6fac77c0c9b3.png)
 
 当页面发生滚动的时候，`top`与`left`属性值都会随之改变
 

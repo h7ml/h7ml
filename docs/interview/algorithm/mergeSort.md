@@ -24,7 +24,7 @@ head:
 
 # 说说你对归并排序的理解？如何实现？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fa1d5720-26ac-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fa1d5720-26ac-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -42,7 +42,7 @@ head:
 
 如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/05f14b60-26ad-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/05f14b60-26ad-11ec-a752-75723a64e8f5.png)
 
 归并合过程中，每次得到的新的子表本身有序，所以最终得到有序表
 

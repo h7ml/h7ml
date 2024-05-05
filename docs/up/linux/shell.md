@@ -12,7 +12,7 @@ tag: linux
 
 ## Shell 概述
 
-![image-20221026104446000](https://static.h7ml.cn/vitepress/assets/images/linux/image-20221026104446000.png)
+![image-20221026104446000](http://static.5ibug.net/vitepress/assets/images/linux/image-20221026104446000.png)
 
 - Linux 提供的 Shell 解析器有
 

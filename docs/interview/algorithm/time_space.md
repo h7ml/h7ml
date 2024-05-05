@@ -24,7 +24,7 @@ head:
 
 # 说说你对算法中时间复杂度，空间复杂度的理解？如何计算？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/07fd4050-16fc-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/07fd4050-16fc-11ec-a752-75723a64e8f5.png)
 
 ## 一、前言
 
@@ -49,7 +49,7 @@ head:
 
 算法的复杂度通常用大 O 符号表述，定义为`T(n) = O(f(n))`，常见的时间复杂度有：O(1)常数型、O(log n)对数型、O(n)线性型、O(nlogn)线性对数型、O(n^2)平方型、O(n^3)立方型、O(n^k)k 次方型、O(2^n)指数型，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/33d5ebf0-16fc-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/33d5ebf0-16fc-11ec-8e64-91fdec0f05a1.png)
 
 从上述可以看到，随着问题规模`n`的不断增大，上述时间复杂度不断增大，算法的执行效率越低，由小到大排序如下：
 

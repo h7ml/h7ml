@@ -121,7 +121,7 @@ star: true
 
 一旦服务器通过了预检请求，以后每次浏览器正常的 `CORS` 请求，就都跟简单请求一样会有一个 `Origin` 头信息字段。服务器的回应也都会有一个 `Access-Control-Allow-Origin` 头信息字段
 
-::: details CORS 请求过程 ![CORS 请求过程](https://static.h7ml.cn/vitepress/assets/images/cors-process.png) :::
+::: details CORS 请求过程 ![CORS 请求过程](http://static.5ibug.net/vitepress/assets/images/cors-process.png) :::
 
 [参考资料 —— 跨域资源共享 CORS 详解](http://www.ruanyifeng.com/blog/2016/04/cors.html)
 

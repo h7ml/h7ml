@@ -24,7 +24,7 @@ head:
 
 # 数组的常用方法有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5842e560-67b6-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5842e560-67b6-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、操作方法
 

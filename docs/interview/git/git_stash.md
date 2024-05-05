@@ -24,7 +24,7 @@ head:
 
 # 说说你对 git stash 的理解？应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/83ddf210-fd6f-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/83ddf210-fd6f-11eb-bc6f-3f06e1491664.png)
 
 ## 一、是什么
 
@@ -78,7 +78,7 @@ stash，译为存放，在 git 中，可以理解为保存当前工作进度，�
 
 显示保存进度的列表。也就意味着，`git stash`命令可以多次执行，当多次使用`git stash`命令后，栈里会充满未提交的代码，如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/50216dd0-fccf-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/50216dd0-fccf-11eb-bc6f-3f06e1491664.png)
 
 其中，`stash@{0}`、`stash@{1}`就是当前`stash`的名称
 
@@ -106,7 +106,7 @@ stash，译为存放，在 git 中，可以理解为保存当前工作进度，�
 
 通过使用`git stash show stash@{1}`查看指定的`stash`和当前目录差异
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/458620a0-fccf-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/458620a0-fccf-11eb-bc6f-3f06e1491664.png)
 
 ### git stash drop
 

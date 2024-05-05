@@ -24,7 +24,7 @@ head:
 
 # 说说 Loader 和 Plugin 的区别？编写 Loader，Plugin 的思路？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/93042280-a894-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/93042280-a894-11eb-ab90-d9ae814b240d.png)
 
 ## 一、区别
 
@@ -35,7 +35,7 @@ head:
 
 从整个运行时机上来看，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/9a04ec40-a7c2-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/9a04ec40-a7c2-11eb-ab90-d9ae814b240d.png)
 
 可以看到，两者在运行时机上的区别：
 

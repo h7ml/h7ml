@@ -24,7 +24,7 @@ head:
 
 # 说说你对 immutable 的理解？如何应用在 react 项目中？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/797e9470-ea3f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/797e9470-ea3f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

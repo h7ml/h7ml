@@ -24,7 +24,7 @@ head:
 
 # v-if 和 v-for 的优先级是什么？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e8764810-3acb-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e8764810-3acb-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、作用
 

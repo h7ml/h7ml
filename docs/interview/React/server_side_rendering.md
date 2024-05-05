@@ -24,7 +24,7 @@ head:
 
 # 说说 React 服务端渲染怎么做？原理是什么？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8c93cbe0-f3f7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8c93cbe0-f3f7-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 指由服务侧完成页面的 `HTML` 结构拼接的页面处理技术，发送到浏览器，然后为其绑定状态与事件，成为完全可交互页面的过程
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/96dc3e20-f3f7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/96dc3e20-f3f7-11eb-85f6-6fac77c0c9b3.png)
 
 其解决的问题主要有两个：
 
@@ -232,7 +232,7 @@ module.exports = {
 
 这种方法就能够简单实现首页的`react`服务端渲染，过程对应如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a2894970-f3f7-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a2894970-f3f7-11eb-85f6-6fac77c0c9b3.png)
 
 在做完初始渲染的时候，一个应用会存在路由的情况，配置信息如下：
 

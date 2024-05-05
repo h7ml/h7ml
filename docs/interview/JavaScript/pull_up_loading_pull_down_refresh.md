@@ -24,7 +24,7 @@ head:
 
 # 如何实现上拉加载，下拉刷新？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/89cd1850-8adc-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/89cd1850-8adc-11eb-ab90-d9ae814b240d.png)
 
 ## 一、前言
 
@@ -48,7 +48,7 @@ head:
 
 首先可以看一张图
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/df498a00-8ae3-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/df498a00-8ae3-11eb-ab90-d9ae814b240d.png)
 
 上拉加载的本质是页面触底，或者快要触底时的动作
 

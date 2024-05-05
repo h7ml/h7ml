@@ -24,7 +24,7 @@ head:
 
 # SPA 首屏加载速度慢的怎么解决？
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/24617c00-3acc-11eb-ab90-d9ae814b240d.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/24617c00-3acc-11eb-ab90-d9ae814b240d.png)
 
 ## 一、什么是首屏加载
 
@@ -36,7 +36,7 @@ head:
 
 利用`performance.timing`提供的数据：
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/2e2491a0-3acc-11eb-85f6-6fac77c0c9b3.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/2e2491a0-3acc-11eb-85f6-6fac77c0c9b3.png)
 
 通过`DOMContentLoad`或者`performance`来计算出首屏时间
 
@@ -83,7 +83,7 @@ performance.getEntriesByName("first-contentful-paint")[0].startTime
 
 常用的手段是路由懒加载，把不同路由对应的组件分割成不同的代码块，待路由被请求的时候会单独打包路由，使得入口文件变小，加载速度大大增加
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/486cee90-3acc-11eb-ab90-d9ae814b240d.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/486cee90-3acc-11eb-ab90-d9ae814b240d.png)
 
 在`vue-router`配置路由的时候，采用动态加载路由的形式
 
@@ -191,7 +191,7 @@ SSR（Server side ），也就是服务端渲染，组件或页面通过服务�
 
 下图是更为全面的首屏优化的方案
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/4fafe900-3acc-11eb-85f6-6fac77c0c9b3.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/4fafe900-3acc-11eb-85f6-6fac77c0c9b3.png)
 
 大家可以根据自己项目的情况选择各种方式进行首屏渲染的优化
 

@@ -24,7 +24,7 @@ head:
 
 # 说说你对单例模式的理解？如何实现？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7df7d830-3b2b-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7df7d830-3b2b-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -32,7 +32,7 @@ head:
 
 在应用程序运行期间，单例模式只会在全局作用域下创建一次实例对象，让所有需要调用的地方都共享这一单例对象，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fa7898d0-3b2c-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fa7898d0-3b2c-11ec-8e64-91fdec0f05a1.png)
 
 从定义上来看，全局变量好像就是单例模式，但是一般情况我们不认为全局变量是一个单例模式，原因是：
 
@@ -168,7 +168,7 @@ document.getElementById('loginBtn').onclick = function () {
 
 并且`Vuex`、`redux`全局态管理库也应用单例模式的思想，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8be50f80-3b2b-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8be50f80-3b2b-11ec-a752-75723a64e8f5.png)
 
 现在很多第三方库都是单例模式，多次引用只会使用同一个对象，如`jquery`、`lodash`、`moment`...
 

@@ -24,7 +24,7 @@ head:
 
 # css3 动画有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d12e2380-9c0a-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d12e2380-9c0a-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

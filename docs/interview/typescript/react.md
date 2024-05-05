@@ -24,7 +24,7 @@ head:
 
 # 说说如何在 React 项目中应用 TypeScript？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a98974e0-13bc-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a98974e0-13bc-11ec-a752-75723a64e8f5.png)
 
 ## 一、前言
 

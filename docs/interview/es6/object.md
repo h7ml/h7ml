@@ -24,7 +24,7 @@ head:
 
 # 对象新增了哪些扩展？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4da4dd40-5427-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4da4dd40-5427-11eb-ab90-d9ae814b240d.png)
 
 ## 一、属性的简写
 

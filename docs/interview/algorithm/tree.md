@@ -24,7 +24,7 @@ head:
 
 # 说说你对树的理解？相关的操作有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5a7616f0-1dfe-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5a7616f0-1dfe-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -37,17 +37,17 @@ head:
 
 如下图，左侧的为二叉树，而右侧的因为头结点的子结点超过 2，因此不属于二叉树：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/66758800-1dfe-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/66758800-1dfe-11ec-a752-75723a64e8f5.png)
 
 同时，二叉树可以继续进行分类，分成了满二叉树和完成二叉树：
 
 - 满二叉树：如果二叉树中除了叶子结点，每个结点的度都为 2
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/759db050-1dfe-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/759db050-1dfe-11ec-a752-75723a64e8f5.png)
 
 - 完成二叉树：如果二叉树中除去最后一层节点为满二叉树，且最后一层的结点依次从左到右分布
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/84ae31f0-1dfe-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/84ae31f0-1dfe-11ec-8e64-91fdec0f05a1.png)
 
 ## 二、操作
 

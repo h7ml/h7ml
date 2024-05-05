@@ -24,7 +24,7 @@ head:
 
 # Javascript 本地存储的方式有哪些？区别及应用场景？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/68dccf20-849f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/68dccf20-849f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、方式
 

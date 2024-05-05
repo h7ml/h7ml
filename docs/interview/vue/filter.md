@@ -24,7 +24,7 @@ head:
 
 # Vue 中的过滤器了解吗？过滤器的应用场景有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fe68eea0-440f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fe68eea0-440f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

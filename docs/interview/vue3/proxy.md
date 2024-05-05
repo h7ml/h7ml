@@ -24,7 +24,7 @@ head:
 
 # Vue3.0 里为什么要用 Proxy API 替代 defineProperty API ？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/57aa5c80-5f7f-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/57aa5c80-5f7f-11eb-ab90-d9ae814b240d.png)
 
 ## 一、Object.defineProperty
 

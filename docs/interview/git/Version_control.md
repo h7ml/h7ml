@@ -24,7 +24,7 @@ head:
 
 # 说说你对版本管理的理解？常用的版本管理工具有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f0e8a2d0-f5ac-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f0e8a2d0-f5ac-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -50,7 +50,7 @@ head:
 
 结构如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c545ded0-f5ad-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c545ded0-f5ad-11eb-ab90-d9ae814b240d.png)
 
 优点：
 
@@ -65,7 +65,7 @@ head:
 
 结构如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/8b4b3040-f5ad-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/8b4b3040-f5ad-11eb-85f6-6fac77c0c9b3.png)
 
 优点：
 
@@ -95,7 +95,7 @@ head:
 
 结构如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/4301a260-f5ad-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/4301a260-f5ad-11eb-85f6-6fac77c0c9b3.png)
 
 优点：
 

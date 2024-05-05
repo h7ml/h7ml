@@ -24,7 +24,7 @@ head:
 
 # 如何使用 css 完成视差滚动效果?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1b2d33e0-a18d-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1b2d33e0-a18d-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -32,11 +32,11 @@ head:
 
 我们可以把网页解刨成：背景层、内容层、悬浮层
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/57c942a0-a1cc-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/57c942a0-a1cc-11eb-85f6-6fac77c0c9b3.png)
 
 当滚动鼠标滑轮的时候，各个图层以不同的速度移动，形成视觉差的效果
 
-![image.png](https://static.h7ml.cn/vitepress/assets/images/interview/e57ab280-a1dd-11eb-ab90-d9ae814b240d.png)
+![image.png](http://static.5ibug.net/vitepress/assets/images/interview/e57ab280-a1dd-11eb-ab90-d9ae814b240d.png)
 
 ## 二、实现方式
 
@@ -126,7 +126,7 @@ section {
 
 `3D`视角示意图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/24f37dd0-a18d-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/24f37dd0-a18d-11eb-85f6-6fac77c0c9b3.png)
 
 举个例子：
 

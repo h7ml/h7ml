@@ -12,7 +12,7 @@ title: dockerFile
 
 [官网 open in new window](https://docs.docker.com/engine/reference/builder)，Dockerfile 是用来构建 Docker 镜像的文本文件，是由一条条构建镜像所需的指令和参数构成的脚本。
 
-![image-20221025173147579](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221025173147579.png)
+![image-20221025173147579](http://static.5ibug.net/vitepress/assets/images/docker/image-20221025173147579.png)
 
 构建三步骤
 
@@ -47,7 +47,7 @@ title: dockerFile
 
 `Dockerfile`面向开发，`Docker`镜像成为交付标准，`Docker`容器则涉及部署与运维，三者缺一不可，合力充当 Docker 体系的基石。
 
-![image-20221025174124972](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221025174124972.png)
+![image-20221025174124972](http://static.5ibug.net/vitepress/assets/images/docker/image-20221025174124972.png)
 
 1、`Dockerfile`，需要定义一个`Dockerfile`，`Dockerfile`定义了进程需要的一切东西。`Dockerfile`涉及的内容包括执行代码或者是文件、环境变量、依赖包、运行时环境、动态链接库、操作系统的发行版、服务进程和内核进程(当应用进程需要和系统服务和内核进程打交道，这时需要考虑如何设计`namespace`的权限控制)等等;
 
@@ -71,11 +71,11 @@ title: dockerFile
 
 - shell 格式
 
-![image-20221025175142566](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221025175142566.png)
+![image-20221025175142566](http://static.5ibug.net/vitepress/assets/images/docker/image-20221025175142566.png)
 
 - exec 格式
 
-![image-20221025175157422](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221025175157422.png)
+![image-20221025175157422](http://static.5ibug.net/vitepress/assets/images/docker/image-20221025175157422.png)
 
 ### EXPOSE
 
@@ -128,11 +128,11 @@ WARNING
 
 参考官网`Tomcat`的`dockerfile`演示讲解
 
-![image-20221026091950694](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026091950694.png)
+![image-20221026091950694](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026091950694.png)
 
 **我们演示自己的覆盖操作**
 
-![image-20221026092007321](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026092007321.png)
+![image-20221026092007321](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026092007321.png)
 
 **它和前面 RUN 命令的区别**
 
@@ -147,17 +147,17 @@ WARNING
 
 **命令格式和案例说明：**
 
-![image-20221026092602383](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026092602383.png)
+![image-20221026092602383](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026092602383.png)
 
 `ENTRYPOINT`可以和 CMD 一起用，一般是变参才会使用 `CMD` ，这里的 `CMD` 等于是在给 `ENTRYPOINT` 传参。
 
 当指定了`ENTRYPOINT`后，CMD 的含义就发生了变化，不再是直接运行其命令而是将 CMD 的内容作为参数传递给`ENTRYPOINT`指令，他两个组合会变成
 
-![image-20221026092623867](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026092623867.png)
+![image-20221026092623867](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026092623867.png)
 
 \*\*案例如下：\*\*假设已通过 `Dockerfile` 构建了 **`nginx:test`** 镜像：
 
-![image-20221026092655607](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026092655607.png)
+![image-20221026092655607](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026092655607.png)
 
 | 是否传参         | 按照 dockerfile 编写执行       | 传参运行                                     |
 | ---------------- | ------------------------------ | -------------------------------------------- |
@@ -172,7 +172,7 @@ TIP
 
 ### 小总结
 
-![image-20221026093032611](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026093032611.png)
+![image-20221026093032611](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026093032611.png)
 
 ## 案例
 
@@ -184,13 +184,13 @@ TIP
 
 <https://www.oracle.com/java/technologies/downloads/#java8>
 
-![image-20221026102031246](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026102031246.png)
+![image-20221026102031246](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026102031246.png)
 
 <https://mirrors.yangxingzhen.com/jdk/>
 
 准备编写 Dockerfile 文件
 
-![image-20221026102052196](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026102052196.png)
+![image-20221026102052196](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026102052196.png)
 
 ```docker
 FROM centos
@@ -237,7 +237,7 @@ docker run -it 新镜像名字:TAG
 docker run -it centosjava8:1.5 /bin/bash
 ```
 
-![image-20221026102424772](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026102424772.png)
+![image-20221026102424772](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026102424772.png)
 
 ## 虚悬镜像
 
@@ -248,7 +248,7 @@ from ubuntu
 CMD echo 'action is success'
 ```
 
-![image-20221026103459708](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026103459708.png)
+![image-20221026103459708](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026103459708.png)
 
 查看
 
@@ -256,14 +256,14 @@ CMD echo 'action is success'
 docker image ls -f dangling=true
 ```
 
-![image-20221026103518732](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026103518732.png)
+![image-20221026103518732](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026103518732.png)
 
 删除
 
 虚悬镜像已经失去存在价值，可以删除
 
-![image-20221026103545644](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026103545644.png)
+![image-20221026103545644](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026103545644.png)
 
 ## 总结
 
-![image-20221026103626226](https://static.h7ml.cn/vitepress/assets/images/docker/image-20221026103626226.png)
+![image-20221026103626226](http://static.5ibug.net/vitepress/assets/images/docker/image-20221026103626226.png)

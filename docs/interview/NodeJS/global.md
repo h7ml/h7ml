@@ -24,7 +24,7 @@ head:
 
 # 说说 Node. js 有哪些全局对象？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/79c7b100-c2a3-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/79c7b100-c2a3-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -97,7 +97,7 @@ process.argv.forEach((val, index) => {
 
 除此之外，还包括一些其他信息如版本、操作系统等
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/85f473a0-c2a3-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/85f473a0-c2a3-11eb-ab90-d9ae814b240d.png)
 
 #### console
 
@@ -133,7 +133,7 @@ function foo() {
 test()
 ```
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/91b6dbb0-c2a3-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/91b6dbb0-c2a3-11eb-85f6-6fac77c0c9b3.png)
 
 #### clearInterval、setInterval
 

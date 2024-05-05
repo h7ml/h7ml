@@ -24,7 +24,7 @@ head:
 
 # 说说如何借助 webpack 来优化前端性能？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/15e1ace0-aee4-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/15e1ace0-aee4-11eb-ab90-d9ae814b240d.png)
 
 ## 一、背景
 
@@ -225,7 +225,7 @@ module.exports = {
 
 如下面`sum`函数没被用到，`webpack`打包会添加注释，`terser`在优化时，则将该函数去掉
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/21b2e200-aee4-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/21b2e200-aee4-11eb-85f6-6fac77c0c9b3.png)
 
 #### sideEffects
 

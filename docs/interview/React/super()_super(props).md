@@ -24,7 +24,7 @@ head:
 
 # super() 和 super(props) 有什么区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/618abaf0-d71c-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/618abaf0-d71c-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、ES6 类
 
@@ -61,7 +61,7 @@ jack.printAge() // 输出 : 20
 
 如果在子类中不使用 `super`，关键字，则会引发报错，如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6ab40190-d71c-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6ab40190-d71c-11eb-85f6-6fac77c0c9b3.png)
 
 报错的原因是 子类是没有自己的 `this` 对象的，它只能继承父类的 `this` 对象，然后对其进行加工
 

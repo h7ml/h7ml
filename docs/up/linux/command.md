@@ -1157,7 +1157,7 @@ date [OPTION]... [+FORMAT]
 [root@hadoop101 ~]# cat  /etc/passwd
 ```
 
-![image-20220903182240503](https://static.h7ml.cn/vitepress/assets/images/linux/202209031822555.png)
+![image-20220903182240503](http://static.5ibug.net/vitepress/assets/images/linux/202209031822555.png)
 
 ## su 切换用户
 
@@ -1188,11 +1188,11 @@ angseng/bin
 
 **root 超级用户**
 
-![image-20220903182757221](https://static.h7ml.cn/vitepress/assets/images/linux/202209031827268.png)
+![image-20220903182757221](http://static.5ibug.net/vitepress/assets/images/linux/202209031827268.png)
 
 **普通用户**
 
-![image-20220903182828864](https://static.h7ml.cn/vitepress/assets/images/linux/202209031828923.png)
+![image-20220903182828864](http://static.5ibug.net/vitepress/assets/images/linux/202209031828923.png)
 
 ## **userdel** 删除用户
 
@@ -1419,7 +1419,7 @@ atguigu   ALL=(ALL)     NOPASSWD:ALL
 
 **从左到右的 10 个字符表示**
 
-![查看源图像](https://static.h7ml.cn/vitepress/assets/images/linux/202209041105760.png)
+![查看源图像](http://static.5ibug.net/vitepress/assets/images/linux/202209041105760.png)
 
 如果没有权限，就会出现减号`[ - ]`而已。从左至右用 0-9 这些数字来表示:
 
@@ -1455,7 +1455,7 @@ atguigu   ALL=(ALL)     NOPASSWD:ALL
 lrwxrwxrwx. 1 root root 20 1 月 12 14:32 houzi -> xiyou/dssz/houge.tx
 ```
 
-![image-20220904111228091](https://static.h7ml.cn/vitepress/assets/images/linux/202209041112121.png)
+![image-20220904111228091](http://static.5ibug.net/vitepress/assets/images/linux/202209041112121.png)
 
 - 如果查看到是文件:链接数指的是硬链接个数。
 - 如果查看的是文件夹:链接数指的是子文件夹个数。
@@ -1464,7 +1464,7 @@ lrwxrwxrwx. 1 root root 20 1 月 12 14:32 houzi -> xiyou/dssz/houge.tx
 
 **基本语法**
 
-![image-20220904111325854](https://static.h7ml.cn/vitepress/assets/images/linux/202209041113882.png)
+![image-20220904111325854](http://static.5ibug.net/vitepress/assets/images/linux/202209041113882.png)
 
 - 第一种方式变更权限
 
@@ -1487,7 +1487,7 @@ chmod [mode=421 ] [文件或目录]
 
 例如：rwx = 0111 = 7、 r-x = 0101 = 5 、r-x = 0101 = 5 ，所以得 755
 
-![image-20220904113147886](https://static.h7ml.cn/vitepress/assets/images/linux/202209041131915.png)
+![image-20220904113147886](http://static.5ibug.net/vitepress/assets/images/linux/202209041131915.png)
 
 **案例实操**
 
@@ -1768,9 +1768,9 @@ Linux 中每个分区都是用来组成整个文件系统的一部分，它在�
 
 **挂载前准备（必须要有光盘或者已经连接镜像文件）**
 
-![image-20220905141419004](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905141419004.png)
+![image-20220905141419004](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905141419004.png)
 
-![image-20220905141435031](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905141435031.png)
+![image-20220905141435031](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905141435031.png)
 
 **基本语法**
 
@@ -1820,7 +1820,7 @@ UNIX(LINUX) 文件网络共享：nfs | | `-o options` | 主要用来描述设备
 
 添加红框中的内容，保存退出
 
-![image-20220905142329559](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905142329559.png)
+![image-20220905142329559](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905142329559.png)
 
 ## fdisk 分区
 
@@ -1938,13 +1938,13 @@ I/O 大小(最小/最佳)：512 字节 / 512 字节
 [root@hadoop101 datas]# ps aux
 ```
 
-![image-20220905164243982](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905164243982.png)
+![image-20220905164243982](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905164243982.png)
 
 ```crystal
 [root@hadoop101 datas]# ps -ef
 ```
 
-![image-20220905164305340](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905164305340.png)
+![image-20220905164305340](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905164305340.png)
 
 ## kill 终止进程
 
@@ -2294,7 +2294,7 @@ Preparing... ###########################################
 
 YUM（全称为 `Yellow dog Updater, Modified）`是一个在 `Fedora` 和 `RedHat` 以及 `CentOS` 中的 `Shell` 前端软件包管理器。基于 `RPM` 包管理，能够从指定的服务器自动下载 RPM 包 并且安装，**可以自动处理依赖性关系**，并且一次安装所有依赖的软件包，无须繁琐地一次 次下载、安装。
 
-![image-20220905173104955](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905173104955.png)
+![image-20220905173104955](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905173104955.png)
 
 ### 常用命令
 
@@ -2356,7 +2356,7 @@ http://mirrors.aliyun.com/repo/Centos-7.repo //阿里云
 http://mirrors.163.com/.help/CentOS7-Base-163.repo //网易 163
 ```
 
-![image-20220905173807424](https://static.h7ml.cn/vitepress/assets/images/linux/image-20220905173807424.png)
+![image-20220905173807424](http://static.5ibug.net/vitepress/assets/images/linux/image-20220905173807424.png)
 
 - 使用下载好的 `repos` 文件替换默认的 `repos` 文件。例如:用 `CentOS7-Base-163.repo` 替换 `CentOS-Base.rep`
 

@@ -24,19 +24,19 @@ head:
 
 # 说说微信小程序的发布流程？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d5cccdf0-3652-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d5cccdf0-3652-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、背景
 
 在中大型的公司里，人员的分工非常仔细，一般会有不同岗位角色的员工同时参与同一个小程序项目。为此，小程序平台设计了不同的权限管理使得项目管理者可以更加高效管理整个团队的协同工作
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e76aff50-3652-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e76aff50-3652-11ec-8e64-91fdec0f05a1.png)
 
 以往我们在开发完网页之后，需要把网页的代码和资源放在服务器上，让用户通过互联网来访问
 
 在小程序的平台里，开发者完成开发之后，需要在开发者工具提交小程序的代码包，然后在小程序后台发布小程序
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fe5da190-3652-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fe5da190-3652-11ec-8e64-91fdec0f05a1.png)
 
 ## 二、流程
 
@@ -50,11 +50,11 @@ head:
 
 在开发者工具中，可以点击代码上传功能：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/08f19bc0-3653-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/08f19bc0-3653-11ec-a752-75723a64e8f5.png)
 
 然后就可以填写版本信息：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1d02c8f0-3653-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1d02c8f0-3653-11ec-a752-75723a64e8f5.png)
 
 然后点击上传，编译器则会提示上传代码成功
 
@@ -62,25 +62,25 @@ head:
 
 代码上传完毕，就可以登陆微信公众号的官网首页，点击【开发管理】，查看应用详情：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/281038e0-3653-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/281038e0-3653-11ec-8e64-91fdec0f05a1.png)
 
 提交审核过程需要填写审核信息，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/33d97ec0-3653-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/33d97ec0-3653-11ec-a752-75723a64e8f5.png)
 
 提交审核成功之后如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3e4c3550-3653-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3e4c3550-3653-11ec-a752-75723a64e8f5.png)
 
 ### 发布版本
 
 当审核通过之后，即可提交发布
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/495140d0-3653-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/495140d0-3653-11ec-8e64-91fdec0f05a1.png)
 
 发布成功之后则如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5293b4c0-3653-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5293b4c0-3653-11ec-8e64-91fdec0f05a1.png)
 
 ## 三、扩展
 
@@ -98,7 +98,7 @@ head:
 
 因此可以考虑自动化构建部署，就是将从开发到部署的一系列流程变成自动化，衔接连贯，在构建失败时能够告知开发者，构建成功后能够告知测试和实施人员，可参考如下流程图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/602d9bf0-3653-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/602d9bf0-3653-11ec-a752-75723a64e8f5.png)
 
 ## 参考文献
 

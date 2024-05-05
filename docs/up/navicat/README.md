@@ -26,34 +26,34 @@ title: navicat
 
 第一步： 点击连接，选择 MySQL
 
-![image-20220910090726636](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907677.png)
+![image-20220910090726636](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907677.png)
 
 第二步：填写连接数据库必要的信息
 
-![image-20220910090723770](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907813.png)
+![image-20220910090723770](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907813.png)
 
 以上操作没有问题就会出现如下图所示界面：
 
-![image-20220910090720240](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907289.png)
+![image-20220910090720240](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907289.png)
 
 ### 操作
 
 连接成功后就能看到如下图界面：
 
-![image-20220910090716834](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907883.png)
+![image-20220910090716834](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907883.png)
 
 - **修改表结构**
 
 通过下图操作修改表结构：
 
-![image-20220910090713257](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907308.png)
+![image-20220910090713257](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907308.png)
 
 点击了设计表后即出现如下图所示界面，在图中红框中直接修改字段名，类型等信息：
 
-![image-20220910090709631](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907673.png)
+![image-20220910090709631](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907673.png)
 
 - **编写 SQL 语句并执行**
 
 按照如下图所示进行操作即可书写 SQL 语句并执行 sql 语句。
 
-![image-20220910090707027](https://static.h7ml.cn/vitepress/assets/images/navicat/202209100907067.png)
+![image-20220910090707027](http://static.5ibug.net/vitepress/assets/images/navicat/202209100907067.png)

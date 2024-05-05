@@ -24,7 +24,7 @@ head:
 
 # 说说对 git pull 和 git fetch 的理解？有什么区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/cc90c050-fac2-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/cc90c050-fac2-11eb-991d-334fd31f0201.png)
 
 ## 一、是什么
 
@@ -35,7 +35,7 @@ head:
 
 再来看一次`git`的工作流程图，如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d523ba60-fac2-11eb-991d-334fd31f0201.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d523ba60-fac2-11eb-991d-334fd31f0201.png)
 
 可以看到，`git fetch`是将远程主机的最新内容拉到本地，用户在检查了以后决定是否合并到工作本机分支中
 
@@ -52,13 +52,13 @@ head:
 
 这时候我们本地相当于存储了两个代码的版本号，我们还要通过`merge`去合并这两个不同的代码版本
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/fd23ff70-fb12-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/fd23ff70-fb12-11eb-bc6f-3f06e1491664.png)
 
 也就是`fetch`的时候本地的`master`没有变化，但是与远程仓关联的那个版本号被更新了，接下来就是在本地`merge`合并这两个版本号的代码
 
 相比之下，使用`git pull`就更加简单粗暴，会将本地的代码更新至远程仓库里面最新的代码版本，如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/091b8140-fb13-11eb-bc6f-3f06e1491664.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/091b8140-fb13-11eb-bc6f-3f06e1491664.png)
 
 ## 二、用法
 

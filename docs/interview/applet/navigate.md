@@ -24,7 +24,7 @@ head:
 
 # 说说微信小程序中路由跳转的方式有哪些？区别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/52bd3820-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/52bd3820-31a5-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -50,11 +50,11 @@ head:
 
 参数表如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/5e524ea0-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/5e524ea0-31a5-11ec-8e64-91fdec0f05a1.png)
 
 流程图如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/68f033e0-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/68f033e0-31a5-11ec-8e64-91fdec0f05a1.png)
 
 ### wx.redirectTo(Object)
 
@@ -66,11 +66,11 @@ head:
 
 参数表如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/76066c20-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/76066c20-31a5-11ec-8e64-91fdec0f05a1.png)
 
 流程图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/828c4b40-31a5-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/828c4b40-31a5-11ec-a752-75723a64e8f5.png)
 
 ### wx.switchTab(Object)
 
@@ -78,7 +78,7 @@ head:
 
 参数表如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/968869d0-31a5-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/968869d0-31a5-11ec-a752-75723a64e8f5.png)
 
 ### wx.navigateBack(Object)
 
@@ -86,7 +86,7 @@ head:
 
 参数表如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a28d8030-31a5-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a28d8030-31a5-11ec-a752-75723a64e8f5.png)
 
 ### wx.reLaunch(Object)
 
@@ -94,11 +94,11 @@ head:
 
 流程图如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/accca3a0-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/accca3a0-31a5-11ec-8e64-91fdec0f05a1.png)
 
 参数表如下所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/b98c7e80-31a5-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/b98c7e80-31a5-11ec-8e64-91fdec0f05a1.png)
 
 ## 三、总结
 

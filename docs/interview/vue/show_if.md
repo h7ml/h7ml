@@ -24,7 +24,7 @@ head:
 
 # v-show 和 v-if 有什么区别？使用场景分别是什么？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/d21c3c50-3acb-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/d21c3c50-3acb-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、v-show 与 v-if 的共同点
 

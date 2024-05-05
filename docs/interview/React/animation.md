@@ -24,7 +24,7 @@ head:
 
 # 在 react 中组件间过渡动画如何实现？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/294f1e00-e4b0-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/294f1e00-e4b0-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 

@@ -24,7 +24,7 @@ head:
 
 # 你知道 vue 中 key 的原理吗？说说你对它的理解
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/bc6e9540-3f41-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/bc6e9540-3f41-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、Key 是什么
 
@@ -91,7 +91,7 @@ head:
 
 在不使用`key`的情况，`vue`会进行这样的操作：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/c9da6790-3f41-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/c9da6790-3f41-11eb-85f6-6fac77c0c9b3.png)
 
 分析下整体流程：
 

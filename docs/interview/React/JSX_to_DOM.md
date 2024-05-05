@@ -24,7 +24,7 @@ head:
 
 # 说说 React Jsx 转换成真实 DOM 过程？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/1d340620-f00a-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/1d340620-f00a-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -244,7 +244,7 @@ export default {
 
 在`react`源码中，虚拟`Dom`转化成真实`Dom`整体流程如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/28824fa0-f00a-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/28824fa0-f00a-11eb-ab90-d9ae814b240d.png)
 
 其渲染流程如下所示：
 

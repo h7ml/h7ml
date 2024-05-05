@@ -24,7 +24,7 @@ head:
 
 # 说说 JavaScript 中的数据类型？存储上的差别？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6d133f90-6463-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6d133f90-6463-11eb-ab90-d9ae814b240d.png)
 
 ## 前言
 
@@ -247,7 +247,7 @@ console.log(a) // 10值
 
 下图演示了基本类型赋值的过程：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/906ffb90-6463-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/906ffb90-6463-11eb-85f6-6fac77c0c9b3.png)
 
 ### 引用类型
 
@@ -264,7 +264,7 @@ console.log(obj1.name) // xxx
 
 下图演示这个引用类型赋值过程
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/a34bdd10-6463-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/a34bdd10-6463-11eb-ab90-d9ae814b240d.png)
 
 ### 小结
 

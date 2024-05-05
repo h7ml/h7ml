@@ -24,13 +24,13 @@ head:
 
 # 如果让你来设计一个分页功能, 你会怎么设计? 前后端如何交互?
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/54b0a390-cf14-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/54b0a390-cf14-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
 在我们做数据查询的时候，如果数据量很大，比如几万条数据，放在一个页面显示的话显然不友好，这时候就需要采用分页显示的形式，如每次只显示 10 条数据
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6070e8c0-cf14-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6070e8c0-cf14-11eb-85f6-6fac77c0c9b3.png)
 
 要实现分页功能，实际上就是从结果集中显示第 1~10 条记录作为第 1 页，显示第 11~20 条记录作为第 2 页，以此类推
 

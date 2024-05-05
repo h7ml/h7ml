@@ -37,7 +37,7 @@ icon: question description: 前端物语|面试物语-React 中的 key 有什么
 
 # React 中的 key 有什么作用？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/31677360-dd69-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/31677360-dd69-11eb-ab90-d9ae814b240d.png)
 
 ## 一、是什么
 
@@ -153,7 +153,7 @@ insertMovie() {
 
 `react`判断`key`的流程具体如下图：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3b9afe10-dd69-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3b9afe10-dd69-11eb-ab90-d9ae814b240d.png)
 
 ## 参考文献
 

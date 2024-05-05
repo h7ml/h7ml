@@ -24,7 +24,7 @@ head:
 
 # 说说你对 BOM 的理解，常见的 BOM 对象你了解哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/3e191c40-8089-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/3e191c40-8089-11eb-85f6-6fac77c0c9b3.png)
 
 ## 一、是什么
 
@@ -34,7 +34,7 @@ head:
 
 浏览器的全部内容可以看成`DOM`，整个浏览器可以看成`BOM`。区别如下：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/482f33e0-8089-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/482f33e0-8089-11eb-85f6-6fac77c0c9b3.png)
 
 ## 二、window
 
@@ -116,15 +116,15 @@ http://foouser:barpassword@www.wrox.com:80/WileyCDA/?q=javascript#contents
 
 下表列出了`navigator`对象接口定义的属性和方法：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/6797ab40-8089-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/6797ab40-8089-11eb-ab90-d9ae814b240d.png)
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/74096620-8089-11eb-ab90-d9ae814b240d.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/74096620-8089-11eb-ab90-d9ae814b240d.png)
 
 ## 五、screen
 
 保存的纯粹是客户端能力信息，也就是浏览器窗口外面的客户端显示器的信息，比如像素宽度和像素高度
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/7d6b21e0-8089-11eb-85f6-6fac77c0c9b3.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/7d6b21e0-8089-11eb-85f6-6fac77c0c9b3.png)
 
 ## 六、history
 
