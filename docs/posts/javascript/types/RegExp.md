@@ -44,13 +44,13 @@ RegExp.lastParen  // 返回(.)匹配的捕捉组
 - 非全局 返回匹配到的第一个字符串数组，且会返回该字符串的下标及相关信息。
 
 ```js
-var str = 'my name is mark, my age is 18, my sex is male';
-var reg = /is/;
-str.match(reg); // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
+const str = 'my name is mark, my age is 18, my sex is male'
+var reg = /is/
+str.match(reg) // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
 
 // 全局模式
-var reg = /is/g;
-str.match(reg); // ["is", "is", "is"]
+var reg = /is/g
+str.match(reg) // ["is", "is", "is"]
 ```
 
 ### exec()
@@ -59,26 +59,26 @@ str.match(reg); // ["is", "is", "is"]
 - 非全局模式下进行字符串的匹配 结果和 macth 一样
 
 ```js
-var str = 'my name is mark, my age is 18, my sex is male';
-var reg = /is/;
+const str = 'my name is mark, my age is 18, my sex is male'
+var reg = /is/
 
 // 非全局
-reg.exec(str); // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
+reg.exec(str) // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
 
 // 全局
-var reg = /is/g;
-reg.lastIndex; // 0
-reg.exec(str); // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
-reg.lastIndex; // 10
+var reg = /is/g
+reg.lastIndex // 0
+reg.exec(str) // ["is", index: 8, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
+reg.lastIndex // 10
 
-reg.exec(str); // ["is", index: 24, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
-reg.lastIndex; // 26
+reg.exec(str) // ["is", index: 24, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
+reg.lastIndex // 26
 
-reg.exec(str); // ["is", index: 38, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
-reg.lastIndex; // 40
+reg.exec(str) // ["is", index: 38, input: "my name is mark, my age is 18, my sex is male", groups: undefined]
+reg.lastIndex // 40
 
-reg.exec(str); // null
-reg.lastIndex; // 0
+reg.exec(str) // null
+reg.lastIndex // 0
 ```
 
 ### 正则预查询
@@ -98,9 +98,9 @@ reg.lastIndex; // 0
 后面是表达式 2
 
 ```js
-var path1 = 'path/hello.html';
-var reg = /\w+(?=.html)/; // 前面是数字字母_  后面是 .html
-path1.match(reg); // hello
+const path1 = 'path/hello.html'
+const reg = /\w+(?=.html)/ // 前面是数字字母_  后面是 .html
+path1.match(reg) // hello
 ```
 
 - 正向否定
@@ -114,9 +114,9 @@ path1.match(reg); // hello
 后面不是表达式 2
 
 ```js
-var str = 'a,1,b,2,c,3,';
-var reg = /,(?![a-z]|$)/g; // 前面是, 后面不是字母
-str.replace(reg, '='); // 'a=1,b=2,c=3,'
+const str = 'a,1,b,2,c,3,'
+const reg = /,(?![a-z]|$)/g // 前面是, 后面不是字母
+str.replace(reg, '=') // 'a=1,b=2,c=3,'
 ```
 
 - 反向肯定
@@ -130,9 +130,9 @@ str.replace(reg, '='); // 'a=1,b=2,c=3,'
 返回 ---> 后面是表达式 1
 
 ```js
-var path1 = 'path/hello.html';
-var reg = /(?<=path\/)\w+/; // 前面是 path/ 后面是数字字母_
-path1.match(reg); // hello
+const path1 = 'path/hello.html'
+const reg = /(?<=path\/)\w+/ // 前面是 path/ 后面是数字字母_
+path1.match(reg) // hello
 ```
 
 - 反向否定
@@ -146,9 +146,9 @@ path1.match(reg); // hello
 返回 ----> 表达式 1
 
 ```js
-var str = 'a,1,b,2,c,3,';
-var reg1 = /(?<!\d),/g; // 前面不是, 后面是,
-str.replace(reg1, '='); // 'a=1,b=2,c=3,'
+const str = 'a,1,b,2,c,3,'
+const reg1 = /(?<!\d),/g // 前面不是, 后面是,
+str.replace(reg1, '=') // 'a=1,b=2,c=3,'
 ```
 
 ## 元字符
@@ -200,5 +200,5 @@ str.replace(reg1, '='); // 'a=1,b=2,c=3,'
 - 验证字符串是否存中文
 
   ```js
-  /^[\u4e00-\u9fa5]+$/;
+  /^[\u4E00-\u9FA5]+$/
   ```

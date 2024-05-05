@@ -6,14 +6,14 @@
 // 默认参数
 // 使用默认参数时，不能有同名形参
 function fn(name, age = 17) {
-  console.log(name + ',' + age);
+  console.log(`${name},${age}`)
 }
 
 function f(...values) {
   // [1, 2]
-  console.log(values.length); // 2
+  console.log(values.length) // 2
 }
-f(1, 2); // 2
+f(1, 2) // 2
 ```
 
 ## 箭头函数

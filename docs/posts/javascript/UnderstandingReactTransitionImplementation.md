@@ -55,33 +55,32 @@ startTransition(() => {
 ::: react-demo [react] throttle demo
 
 ```js
-const { useCallback, useState, useTransition, Suspense } = React;
+const { useCallback, useState, useTransition, Suspense } = React
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
-  const [isPending, startTransition] = useTransition();
+const currentValue = ''
+export default () => {
+  const [value, setValue] = useState('')
+  const [isPending, startTransition] = useTransition()
 
   const handleChange = (e) => {
-    const newVal = e.target.value;
+    const newVal = e.target.value
     // startTransition(() => setValue(newVal));
-    setValue(newVal);
-  };
+    setValue(newVal)
+  }
 
   return (
-          <div>
-            <input onChange={_.throttle(handleChange, 1000, { leading: false })} />
-            <div className={isPending ? "loading" : ""}>
-              {Array(50000)
-                      .fill("a")
-                      .map((item, index) => {
-                        return <div key={index}>{value}</div>;
-                      })}
-            </div>
-          </div>
-  );
+    <div>
+      <input onChange={_.throttle(handleChange, 1000, { leading: false })} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>
+          })}
+      </div>
+    </div>
+  )
 }
-
 ```
 
 ```css
@@ -100,31 +99,31 @@ export default () =>  {
 ::: react-demo [react] debounce demo
 
 ```js
-const { useCallback, useState, useTransition, Suspense } = React;
+const { useCallback, useState, useTransition, Suspense } = React
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
-  const [isPending, startTransition] = useTransition();
+const currentValue = ''
+export default () => {
+  const [value, setValue] = useState('')
+  const [isPending, startTransition] = useTransition()
 
   const handleChange = (e) => {
-    const newVal = e.target.value;
+    const newVal = e.target.value
     // startTransition(() => setValue(newVal));
-    setValue(newVal);
-  };
+    setValue(newVal)
+  }
 
   return (
-          <div>
-            <input onChange={_.debounce(handleChange, 1000)} />
-            <div className={isPending ? "loading" : ""}>
-              {Array(50000)
-                      .fill("a")
-                      .map((item, index) => {
-                        return <div key={index}>{value}</div>;
-                      })}
-            </div>
-          </div>
-  );
+    <div>
+      <input onChange={_.debounce(handleChange, 1000)} />
+      <div className={isPending ? 'loading' : ''}>
+        {Array(50000)
+          .fill('a')
+          .map((item, index) => {
+            return <div key={index}>{value}</div>
+          })}
+      </div>
+    </div>
+  )
 }
 ```
 
@@ -143,31 +142,31 @@ export default () =>  {
 ::: react-demo [react] useTransition demo
 
 ```js
-const { useCallback, useState, useTransition, Suspense } = React;
+const { useCallback, useState, useTransition, Suspense } = React
 
-let currentValue = "";
-export default () =>  {
-  const [value, setValue] = useState("");
-  const [isPending, startTransition] = useTransition();
+const currentValue = ''
+export default () => {
+  const [value, setValue] = useState('')
+  const [isPending, startTransition] = useTransition()
 
   const handleChange = (e) => {
-    const newVal = e.target.value;
-    startTransition(() => setValue(newVal));
+    const newVal = e.target.value
+    startTransition(() => setValue(newVal))
     // setValue(newVal);
-  };
+  }
 
   return (
-          <div>
-            <input onChange={handleChange} />
-            <div className={isPending ? 'loading' : ''}>
-              {
-                Array(50000).fill("a").map((item, index) => {
-                  return <div key={index}>{value}</div>;
+    <div>
+      <input onChange={handleChange} />
+      <div className={isPending ? 'loading' : ''}>
+        {
+                Array(50000).fill('a').map((item, index) => {
+                  return <div key={index}>{value}</div>
                 })
               }
-            </div>
-          </div>
-  );
+      </div>
+    </div>
+  )
 }
 ```
 

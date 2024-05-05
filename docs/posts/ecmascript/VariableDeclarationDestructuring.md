@@ -11,16 +11,16 @@
 - 可以修改添加属性
 
 ```js
-const car = { color: 'white' };
-car.color = 'red'; // 修改属性:
-car.owner = 'Johnson'; // 添加属性
+const car = { color: 'white' }
+car.color = 'red' // 修改属性:
+car.owner = 'Johnson' // 添加属性
 ```
 
 - 不能赋值
 
 ```js
-const car = {};
-car = {}; // 错误
+const car = {}
+car = {} // 错误
 ```
 
 数组同理
@@ -42,7 +42,7 @@ car = {}; // 错误
 数组解构
 
 ```js
-let [, [x, y], m = 88, ...z] = [2, [3, 4], undefined, 1, 2]; // m 为 88
+const [, [x, y], m = 88, ...z] = [2, [3, 4], undefined, 1, 2] // m 为 88
 ```
 
 1. , 会忽略
@@ -51,21 +51,21 @@ let [, [x, y], m = 88, ...z] = [2, [3, 4], undefined, 1, 2]; // m 为 88
 4. ...z 剩余运算符 收集对象/数组/值 或 展开数组/对象/值
 
 ```js
-let [x, ...arr] = [1, 2, 3]; // arr = [2,3]
-let { a, ...obj } = { a: 'aa', b: 'bb', c: 'cc' }; // obj = {b : "bb" , "c" : "cc"}
+const [x, ...arr] = [1, 2, 3] // arr = [2,3]
+const { a, ...obj } = { a: 'aa', b: 'bb', c: 'cc' } // obj = {b : "bb" , "c" : "cc"}
 ```
 
 - 字符串
 
 ```js
-let [a, b, c] = 'hel'; // 'h' 'e' 'l'
+const [a, b, c] = 'hel' // 'h' 'e' 'l'
 ```
 
 - 对象
 
 ```js
 // 剩余运算符
-let { a, ...obj } = { a: 10, c: 30, d: 40 }; // 10,{c: 30, d: 40}
+const { a, ...obj } = { a: 10, c: 30, d: 40 } // 10,{c: 30, d: 40}
 ```
 
 - 解构默认值
@@ -73,28 +73,28 @@ let { a, ...obj } = { a: 10, c: 30, d: 40 }; // 10,{c: 30, d: 40}
 ```js
 let { a = 10, b = 5 } = { a: 3 }; // a = 3; b = 5;
 
-({ a } = { a: '1' }); // 变量已经被声明需要用括
+({ a } = { a: '1' }) // 变量已经被声明需要用括
 ```
 
 - 对象 = 数组
 
 ```js
-let { 0: first, [arr.length - 1]: last } = [1, 2, 3, 4, 5, 6, 7];
+const { 0: first, [arr.length - 1]: last } = [1, 2, 3, 4, 5, 6, 7]
 
-console.log(first); // 输出1
-console.log(last); // 输出7
+console.log(first) // 输出1
+console.log(last) // 输出7
 ```
 
 ### 运用
 
 ```js
 var [x, y] = [10, 20]; // 交换值
-[x, y] = [y, x];
+[x, y] = [y, x]
 
 // 函数可以返回多个值
-var [x, y, z] = show();
+var [x, y, z] = show()
 function show() {
-  return ['结果1', '结果2', '结果3'];
+  return ['结果1', '结果2', '结果3']
 }
 ```
 
@@ -103,10 +103,10 @@ function show() {
 ```js
 function showSelf({ name, age = 18 }) {
   // 可以
-  console.log(`我叫${name}今年${age}`); // 我叫aa 今年18
+  console.log(`我叫${name}今年${age}`) // 我叫aa 今年18
 }
-showSelf({ name: 'aa' });
+showSelf({ name: 'aa' })
 
 // 取出数组中的值
-var { 0: first, 3: last } = [10, 20, 30]; // first等于10 last是30
+const { 0: first, 3: last } = [10, 20, 30] // first等于10 last是30
 ```

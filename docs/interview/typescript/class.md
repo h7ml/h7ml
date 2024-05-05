@@ -155,10 +155,10 @@ class StringPrinter extends PrinterClass {
 
 ```ts
 class Square {
-  static width = '100px';
+  static width = '100px'
 }
 
-console.log(Square.width); // 100px
+console.log(Square.width) // 100px
 ```
 
 上述的类都能发现一个特点就是，都能够被实例化，在 `typescript`中，还存在一种抽象类
@@ -183,14 +183,14 @@ abstract class Animal {
 ```ts
 class Cat extends Animal {
   makeSound() {
-    console.log('miao miao');
+    console.log('miao miao')
   }
 }
 
-const cat = new Cat();
+const cat = new Cat()
 
-cat.makeSound(); // miao miao
-cat.move(); // roaming the earch...
+cat.makeSound() // miao miao
+cat.move() // roaming the earch...
 ```
 
 ## 三、应用场景

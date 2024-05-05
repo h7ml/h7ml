@@ -3,24 +3,24 @@
 ## 最大最小值
 
 ```js
-Math.max(1, 3, 4, 5, 9); // 最大值
-Math.min(1, 3, 4, 5, 9); // 最小值
-Math.max.apply(Math, [2, 3, 6]); // 最大值
-Math.min.apply(Math, [2, 3, 6]); // 最小值
+Math.max(1, 3, 4, 5, 9) // 最大值
+Math.min(1, 3, 4, 5, 9) // 最小值
+Math.max.apply(Math, [2, 3, 6]) // 最大值
+Math.min.apply(Math, [2, 3, 6]) // 最小值
 ```
 
 ## 舍入
 
 ```js
-Math.ceil(1.3); // 向上舍入
-Math.floor(1.9); // 向下舍入
-Math.round(1.49); // 1 四舍五入（只看小数点后一位数）
-Math.floor(Math.random() * 10 + 1);
+Math.ceil(1.3) // 向上舍入
+Math.floor(1.9) // 向下舍入
+Math.round(1.49) // 1 四舍五入（只看小数点后一位数）
+Math.floor(Math.random() * 10 + 1)
 // 随机一个 [A - B] 之间的随机数
 function selectFrom(A, B) {
-  return Math.floor(Math.random() * (B - A + 1) + A);
+  return Math.floor(Math.random() * (B - A + 1) + A)
 }
-selectFrom(2, 9); // 生成 2-9（包括 2 和 9）的随机数
+selectFrom(2, 9) // 生成 2-9（包括 2 和 9）的随机数
 ```
 
 ## 其他方法
@@ -53,11 +53,11 @@ Math.imul(1, 2);  // 2 大多数情况下，与 a*b 相同
 ```js
 // Math.trunc 方法用于去除一个数的小数部分，返回整数部分。
 // 隐式调用 Number 方法
-Math.trunc(4.1); // 4
-Math.trunc(-4.9); // -4
-Math.trunc('123.456'); // 123
-Math.trunc(false); // 0
-Math.trunc(null); // 0
+Math.trunc(4.1) // 4
+Math.trunc(-4.9) // -4
+Math.trunc('123.456') // 123
+Math.trunc(false) // 0
+Math.trunc(null) // 0
 // Math.sign 方法用来判断一个数到底是正数、负数、还是零。
 /* 参数为正数，返回 +1；
  * 参数为负数，返回 -1；
@@ -65,8 +65,8 @@ Math.trunc(null); // 0
  * 参数为 -0，返回 -0;
  * 其他值，返回 NaN。
  */
-Math.sign(5); // +1
-Math.sign(0); // +0
-Math.sign(-0); // -0
-Math.sign(NaN); // NaN
+Math.sign(5) // +1
+Math.sign(0) // +0
+Math.sign(-0) // -0
+Math.sign(Number.NaN) // NaN
 ```

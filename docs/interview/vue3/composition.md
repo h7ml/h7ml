@@ -89,22 +89,22 @@ head:
 
 ```js
 function useCount() {
-  let count = ref(10);
-  let double = computed(() => {
-    return count.value * 2;
-  });
+  const count = ref(10)
+  const double = computed(() => {
+    return count.value * 2
+  })
 
   const handleConut = () => {
-    count.value = count.value * 2;
-  };
+    count.value = count.value * 2
+  }
 
-  console.log(count);
+  console.log(count)
 
   return {
     count,
     double,
     handleConut,
-  };
+  }
 }
 ```
 
@@ -113,14 +113,14 @@ function useCount() {
 ```js
 export default defineComponent({
   setup() {
-    const { count, double, handleConut } = useCount();
+    const { count, double, handleConut } = useCount()
     return {
       count,
       double,
       handleConut,
-    };
+    }
   },
-});
+})
 ```
 
 再来一张图进行对比，可以很直观地感受到 `Composition API`在逻辑组织方面的优势，以后修改一个属性功能的时候，只需要跳到控制该属性的方法中即可
@@ -139,38 +139,38 @@ export const MoveMixin = {
     return {
       x: 0,
       y: 0,
-    };
+    }
   },
 
   methods: {
     handleKeyup(e) {
-      console.log(e.code);
+      console.log(e.code)
       // 上下左右 x y
       switch (e.code) {
         case 'ArrowUp':
-          this.y--;
-          break;
+          this.y--
+          break
         case 'ArrowDown':
-          this.y++;
-          break;
+          this.y++
+          break
         case 'ArrowLeft':
-          this.x--;
-          break;
+          this.x--
+          break
         case 'ArrowRight':
-          this.x++;
-          break;
+          this.x++
+          break
       }
     },
   },
 
   mounted() {
-    window.addEventListener('keyup', this.handleKeyup);
+    window.addEventListener('keyup', this.handleKeyup)
   },
 
   unmounted() {
-    window.removeEventListener('keyup', this.handleKeyup);
+    window.removeEventListener('keyup', this.handleKeyup)
   },
-};
+}
 ```
 
 然后在组件中使用
@@ -192,7 +192,7 @@ export default {
 使用单个`mixin`似乎问题不大，但是当我们一个组件混入大量不同的 `mixins` 的时候
 
 ```js
-mixins: [mousePositionMixin, fooMixin, barMixin, otherMixin];
+mixins: [mousePositionMixin, fooMixin, barMixin, otherMixin]
 ```
 
 会存在两个非常明显的问题：
@@ -203,45 +203,45 @@ mixins: [mousePositionMixin, fooMixin, barMixin, otherMixin];
 现在通过`Compositon API`这种方式改写上面的代码
 
 ```js
-import { onMounted, onUnmounted, reactive } from 'vue';
+import { onMounted, onUnmounted, reactive } from 'vue'
 export function useMove() {
   const position = reactive({
     x: 0,
     y: 0,
-  });
+  })
 
   const handleKeyup = (e) => {
-    console.log(e.code);
+    console.log(e.code)
     // 上下左右 x y
     switch (e.code) {
       case 'ArrowUp':
         // y.value--;
-        position.y--;
-        break;
+        position.y--
+        break
       case 'ArrowDown':
         // y.value++;
-        position.y++;
-        break;
+        position.y++
+        break
       case 'ArrowLeft':
         // x.value--;
-        position.x--;
-        break;
+        position.x--
+        break
       case 'ArrowRight':
         // x.value++;
-        position.x++;
-        break;
+        position.x++
+        break
     }
-  };
+  }
 
   onMounted(() => {
-    window.addEventListener('keyup', handleKeyup);
-  });
+    window.addEventListener('keyup', handleKeyup)
+  })
 
   onUnmounted(() => {
-    window.removeEventListener('keyup', handleKeyup);
-  });
+    window.removeEventListener('keyup', handleKeyup)
+  })
 
-  return { position };
+  return { position }
 }
 ```
 

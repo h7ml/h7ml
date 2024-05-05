@@ -70,35 +70,34 @@ head:
 根据遍历特性，递归版本用代码表示则如下：
 
 ```js
-const preOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  console.log(root);
-  preOrder(root.left);
-  preOrder(root.right);
-};
+function preOrder(root) {
+  if (!root)
+    return
+
+  console.log(root)
+  preOrder(root.left)
+  preOrder(root.right)
+}
 ```
 
 如果不使用递归版本，可以借助栈先进后出的特性实现，先将根节点压入栈，再分别压入右节点和左节点，直到栈中没有元素，如下：
 
 ```js
-const preOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  const stack = [root];
+function preOrder(root) {
+  if (!root)
+    return
+
+  const stack = [root]
   while (stack.length) {
-    const n = stack.pop();
-    console.log(n.val);
-    if (n.right) {
-      stack.push(n.right);
-    }
-    if (n.left) {
-      stack.push(n.left);
-    }
+    const n = stack.pop()
+    console.log(n.val)
+    if (n.right)
+      stack.push(n.right)
+
+    if (n.left)
+      stack.push(n.left)
   }
-};
+}
 ```
 
 ### 中序遍历
@@ -112,35 +111,35 @@ const preOrder = (root) => {
 递归版本很好理解，用代码表示则如下：
 
 ```js
-const inOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  inOrder(root.left);
-  console.log(root.val);
-  inOrder(root.right);
-};
+function inOrder(root) {
+  if (!root)
+    return
+
+  inOrder(root.left)
+  console.log(root.val)
+  inOrder(root.right)
+}
 ```
 
 非递归版本也是借助栈先进后出的特性，可以一直首先一直压入节点的左元素，当左节点没有后，才开始进行出栈操作，压入右节点，然后有依次压入左节点，如下：
 
 ```js
-const inOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  const stack = [root];
-  let p = root;
+function inOrder(root) {
+  if (!root)
+    return
+
+  const stack = [root]
+  let p = root
   while (stack.length || p) {
     while (p) {
-      stack.push(p);
-      p = p.left;
+      stack.push(p)
+      p = p.left
     }
-    const n = stack.pop();
-    console.log(n.val);
-    p = n.right;
+    const n = stack.pop()
+    console.log(n.val)
+    p = n.right
   }
-};
+}
 ```
 
 ### 后序遍历
@@ -154,40 +153,39 @@ const inOrder = (root) => {
 递归版本，用代码表示则如下：
 
 ```js
-const postOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  postOrder(root.left);
-  postOrder(root.right);
-  console.log(n.val);
-};
+function postOrder(root) {
+  if (!root)
+    return
+
+  postOrder(root.left)
+  postOrder(root.right)
+  console.log(n.val)
+}
 ```
 
 后序遍历非递归版本实际根全序遍历是逆序关系，可以再多创建一个栈用来进行输出，如下：
 
 ```js
-const preOrder = (root) => {
-  if (!root) {
-    return;
-  }
-  const stack = [root];
-  const outPut = [];
+function preOrder(root) {
+  if (!root)
+    return
+
+  const stack = [root]
+  const outPut = []
   while (stack.length) {
-    const n = stack.pop();
-    outPut.push(n.val);
-    if (n.right) {
-      stack.push(n.right);
-    }
-    if (n.left) {
-      stack.push(n.left);
-    }
+    const n = stack.pop()
+    outPut.push(n.val)
+    if (n.right)
+      stack.push(n.right)
+
+    if (n.left)
+      stack.push(n.left)
   }
   while (outPut.length) {
-    const n = outPut.pop();
-    console.log(n.val);
+    const n = outPut.pop()
+    console.log(n.val)
   }
-};
+}
 ```
 
 ### 层序遍历
@@ -199,29 +197,28 @@ const preOrder = (root) => {
 用代码表示则如下：
 
 ```js
-const levelOrder = (root) => {
-  if (!root) {
-    return [];
-  }
-  const queue = [[root, 0]];
-  const res = [];
+function levelOrder(root) {
+  if (!root)
+    return []
+
+  const queue = [[root, 0]]
+  const res = []
   while (queue.length) {
-    const n = queue.shift();
-    const [node, leval] = n;
-    if (!res[leval]) {
-      res[leval] = [node.val];
-    } else {
-      res[leval].push(node.val);
-    }
-    if (node.left) {
-      queue.push([node.left, leval + 1]);
-    }
-    if (node.right) {
-      queue.push([node.right, leval + 1]);
-    }
+    const n = queue.shift()
+    const [node, leval] = n
+    if (!res[leval])
+      res[leval] = [node.val]
+    else
+      res[leval].push(node.val)
+
+    if (node.left)
+      queue.push([node.left, leval + 1])
+
+    if (node.right)
+      queue.push([node.right, leval + 1])
   }
-  return res;
-};
+  return res
+}
 ```
 
 ## 三、总结

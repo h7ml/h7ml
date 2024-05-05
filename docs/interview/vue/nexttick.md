@@ -52,21 +52,21 @@ const vm = new Vue({
   data: {
     message: '原始值',
   },
-});
+})
 ```
 
 修改`message`
 
 ```js
-this.message = '修改后的值1';
-this.message = '修改后的值2';
-this.message = '修改后的值3';
+this.message = '修改后的值1'
+this.message = '修改后的值2'
+this.message = '修改后的值3'
 ```
 
 这时候想获取页面最新的`DOM`节点，却发现获取到的是旧值
 
 ```js
-console.log(vm.$el.textContent); // 原始值
+console.log(vm.$el.textContent) // 原始值
 ```
 
 这是因为`message`数据在发现变化的时候，`vue`并不会立刻去更新`Dom`，而是将修改数据的操作放在了一个异步操作队列中
@@ -82,12 +82,11 @@ console.log(vm.$el.textContent); // 原始值
 ```js
 {
   {
-    num;
+    num
   }
 }
-for (let i = 0; i < 100000; i++) {
-  num = i;
-}
+for (let i = 0; i < 100000; i++)
+  num = i
 ```
 
 如果没有 `nextTick` 更新机制，那么 `num` 每次更新值都会触发视图更新(上面这段代码也就是会更新 10 万次视图)，有了`nextTick`机制，只需要更新一次，所以`nextTick`本质是一种优化策略
@@ -102,32 +101,32 @@ for (let i = 0; i < 100000; i++) {
 
 ```js
 // 修改数据
-vm.message = '修改后的值';
+vm.message = '修改后的值'
 // DOM 还没有更新
-console.log(vm.$el.textContent); // 原始的值
-Vue.nextTick(function () {
+console.log(vm.$el.textContent) // 原始的值
+Vue.nextTick(() => {
   // DOM 更新了
-  console.log(vm.$el.textContent); // 修改后的值
-});
+  console.log(vm.$el.textContent) // 修改后的值
+})
 ```
 
 组件内使用 `vm.$nextTick()` 实例方法只需要通过`this.$nextTick()`，并且回调函数中的 `this` 将自动绑定到当前的 `Vue` 实例上
 
 ```js
-this.message = '修改后的值';
-console.log(this.$el.textContent); // => '原始的值'
+this.message = '修改后的值'
+console.log(this.$el.textContent) // => '原始的值'
 this.$nextTick(function () {
-  console.log(this.$el.textContent); // => '修改后的值'
-});
+  console.log(this.$el.textContent) // => '修改后的值'
+})
 ```
 
 `$nextTick()` 会返回一个 `Promise` 对象，可以是用`async/await`完成相同作用的事情
 
 ```js
-this.message = '修改后的值';
-console.log(this.$el.textContent); // => '原始的值'
-await this.$nextTick();
-console.log(this.$el.textContent); // => '修改后的值'
+this.message = '修改后的值'
+console.log(this.$el.textContent) // => '原始的值'
+await this.$nextTick()
+console.log(this.$el.textContent) // => '修改后的值'
 ```
 
 ## 三、实现原理
@@ -178,42 +177,46 @@ export function nextTick(cb?: Function, ctx?: Object) {
 通过上面任意一种方法，进行降级操作
 
 ```js
-export let isUsingMicroTask = false;
+export let isUsingMicroTask = false
 if (typeof Promise !== 'undefined' && isNative(Promise)) {
-  //判断1：是否原生支持Promise
-  const p = Promise.resolve();
+  // 判断1：是否原生支持Promise
+  const p = Promise.resolve()
   timerFunc = () => {
-    p.then(flushCallbacks);
-    if (isIOS) setTimeout(noop);
-  };
-  isUsingMicroTask = true;
-} else if (
-  !isIE &&
-  typeof MutationObserver !== 'undefined' &&
-  (isNative(MutationObserver) || MutationObserver.toString() === '[object MutationObserverConstructor]')
+    p.then(flushCallbacks)
+    if (isIOS)
+      setTimeout(noop)
+  }
+  isUsingMicroTask = true
+}
+else if (
+  !isIE
+  && typeof MutationObserver !== 'undefined'
+  && (isNative(MutationObserver) || MutationObserver.toString() === '[object MutationObserverConstructor]')
 ) {
-  //判断2：是否原生支持MutationObserver
-  let counter = 1;
-  const observer = new MutationObserver(flushCallbacks);
-  const textNode = document.createTextNode(String(counter));
+  // 判断2：是否原生支持MutationObserver
+  let counter = 1
+  const observer = new MutationObserver(flushCallbacks)
+  const textNode = document.createTextNode(String(counter))
   observer.observe(textNode, {
     characterData: true,
-  });
+  })
   timerFunc = () => {
-    counter = (counter + 1) % 2;
-    textNode.data = String(counter);
-  };
-  isUsingMicroTask = true;
-} else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
-  //判断3：是否原生支持setImmediate
+    counter = (counter + 1) % 2
+    textNode.data = String(counter)
+  }
+  isUsingMicroTask = true
+}
+else if (typeof setImmediate !== 'undefined' && isNative(setImmediate)) {
+  // 判断3：是否原生支持setImmediate
   timerFunc = () => {
-    setImmediate(flushCallbacks);
-  };
-} else {
-  //判断4：上面都不行，直接用setTimeout
+    setImmediate(flushCallbacks)
+  }
+}
+else {
+  // 判断4：上面都不行，直接用setTimeout
   timerFunc = () => {
-    setTimeout(flushCallbacks, 0);
-  };
+    setTimeout(flushCallbacks, 0)
+  }
 }
 ```
 
@@ -225,12 +228,11 @@ if (typeof Promise !== 'undefined' && isNative(Promise)) {
 
 ```js
 function flushCallbacks() {
-  pending = false;
-  const copies = callbacks.slice(0);
-  callbacks.length = 0;
-  for (let i = 0; i < copies.length; i++) {
-    copies[i]();
-  }
+  pending = false
+  const copies = callbacks.slice(0)
+  callbacks.length = 0
+  for (let i = 0; i < copies.length; i++)
+    copies[i]()
 }
 ```
 

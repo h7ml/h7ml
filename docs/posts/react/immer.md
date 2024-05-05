@@ -22,24 +22,24 @@ lastUpdated: false
 ### 为什么强调不可变数据
 
 ```jsx
-import React from 'react';
+import React from 'react'
 
 export default () => {
-  const [obj, setObj] = useState({ name: 'alvin', others: { age: 18 } });
-  const [count, setCount] = useState(0);
+  const [obj, setObj] = useState({ name: 'alvin', others: { age: 18 } })
+  const [count, setCount] = useState(0)
 
   const hanleClick = () => {
-    obj.others.age = 99;
-    setCount((prev) => prev + 1);
-  };
+    obj.others.age = 99
+    setCount(prev => prev + 1)
+  }
 
   return (
     <>
       <button onClick={hanleClick}>click</button>
       {JSON.stringify(obj, null, 2)}
     </>
-  );
-};
+  )
+}
 ```
 
 如上，点击后就会发现 obj 引用没变，但是 `obj.others.age` 修改了，然后也被重新渲染了，这是由于这就是引用类型的副作用导致的。
@@ -58,72 +58,78 @@ export default () => {
 ```js
 /** 浅复制 */
 function shallowCopy(value) {
-  if (Array.isArray(value)) return value.slice();
-  if (value.__proto__ === undefined) return Object.assign(Object.create(null), value);
-  return Object.assign({}, value);
+  if (Array.isArray(value))
+    return value.slice()
+  if (value.__proto__ === undefined)
+    return Object.assign(Object.create(null), value)
+  return Object.assign({}, value)
 }
 
 function createState(target) {
-  this.modified = false; // 是否被修改
-  this.target = target; // 目标对象
-  this.copy = undefined; // 拷贝的对象
+  this.modified = false // 是否被修改
+  this.target = target // 目标对象
+  this.copy = undefined // 拷贝的对象
 }
 
 createState.prototype = {
   // 对于get操作,如果目标对象没有被修改直接返回原对象,否则返回拷贝对象
-  get: function (key) {
-    if (!this.modified) return this.target[key];
-    return this.copy[key];
+  get(key) {
+    if (!this.modified)
+      return this.target[key]
+    return this.copy[key]
   },
 
   // 对于set操作,如果目标对象没被修改那么进行修改操作,否则修改拷贝对象
-  set: function (key, value) {
-    if (!this.modified) this.markChanged();
-    return (this.copy[key] = value);
+  set(key, value) {
+    if (!this.modified)
+      this.markChanged()
+    return (this.copy[key] = value)
   },
 
   // 标记状态为已修改,并拷贝
-  markChanged: function () {
+  markChanged() {
     if (!this.modified) {
-      this.modified = true;
-      this.copy = shallowCopy(this.target);
+      this.modified = true
+      this.copy = shallowCopy(this.target)
     }
   },
-};
+}
 
-const PROXY_STATE = Symbol('proxy-state');
+const PROXY_STATE = Symbol('proxy-state')
 
 // 接受一个目标对象和一个操作目标对象的函数
 function produce(state, producer) {
-  const store = new createState(state);
+  const store = new createState(state)
   const proxy = new Proxy(store, {
     get(target, key) {
-      if (key === PROXY_STATE) return target;
-      return target.get(key);
+      if (key === PROXY_STATE)
+        return target
+      return target.get(key)
     },
     set(target, key, value) {
-      return target.set(key, value);
+      return target.set(key, value)
     },
-  });
+  })
 
-  producer(proxy);
+  producer(proxy)
 
-  const newState = proxy[PROXY_STATE];
-  if (newState.modified) return newState.copy;
-  return newState.target;
+  const newState = proxy[PROXY_STATE]
+  if (newState.modified)
+    return newState.copy
+  return newState.target
 }
 
 const baseState = [
   { todo: 'Learn typescript', done: true },
   { todo: 'Try immer', done: false },
-];
+]
 
 const nextState = produce(baseState, (draft) => {
-  draft.push({ todo: 'Tweet about it', done: false });
-  draft[1].done = true; // 这里会改到原属性
-});
+  draft.push({ todo: 'Tweet about it', done: false })
+  draft[1].done = true // 这里会改到原属性
+})
 
-console.log(baseState, nextState);
+console.log(baseState, nextState)
 ```
 
 执行结果：
@@ -134,7 +140,7 @@ console.log(baseState, nextState);
   { todo: 'Try immer', done: true },
 ][
   ({ todo: 'Learn typescript', done: true }, { todo: 'Try immer', done: true }, { todo: 'Tweet about it', done: false })
-];
+]
 ```
 
 ### defineProperty vs Proxy

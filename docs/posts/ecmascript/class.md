@@ -10,47 +10,49 @@
 
 ```js
 class Person {
-  name; // 成员属性
-  static age = 2; // 静态属性
+  name // 成员属性
+  static age = 2 // 静态属性
   constructor(name, age) {
-    this.name = name;
-    this.age = age; // 这里 this.age 指向实例的 age
+    this.name = name
+    this.age = age // 这里 this.age 指向实例的 age
   }
 
   fn() {
     // 成员方法(原型上)
-    console.log(this.age + Person.age);
+    console.log(this.age + Person.age)
   }
+
   static fn1() {
     // 静态方法 只能使用 Person.fn1()来调用
-    console.log(this.age === Person.age); // true
+    console.log(this.age === Person.age) // true
   }
 }
 
 class Son extends Person {
   constructor(name, age, sex) {
-    super(name, age); // this之前调用super
-    super.fn(); // 调用父类方法
-    this.sex = sex;
+    super(name, age) // this之前调用super
+    super.fn() // 调用父类方法
+    this.sex = sex
   }
 
   fn() {
     // 重写父类方法
   }
+
   static ff() {
-    super.fn1(); // 调用父类静态方法
+    super.fn1() // 调用父类静态方法
   }
 }
 
 // 不可继承常规对象。
-var Father = {
+const Father = {
   // ...
-};
+}
 class Child extends Father {
   // ...
 }
 // Uncaught TypeError: Class extends value #<Object> is not a constructor or null
 
 // 解决方案
-Object.setPrototypeOf(Child.prototype, Father);
+Object.setPrototypeOf(Child.prototype, Father)
 ```

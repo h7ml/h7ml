@@ -41,7 +41,7 @@ head:
 在`ES6`中，存在`proxy`构建函数能够让我们轻松使用代理模式：
 
 ```js
-const proxy = new Proxy(target, handler);
+const proxy = new Proxy(target, handler)
 ```
 
 关于`Proxy`的使用可以翻看以前的文章
@@ -59,32 +59,32 @@ const proxy = new Proxy(target, handler);
 如实现一个求积乘的函数，如下：
 
 ```js
-var muti = function () {
-  console.log('开始计算乘积');
-  var a = 1;
-  for (var i = 0, l = arguments.length; i < l; i++) {
-    a = a * arguments[i];
-  }
-  return a;
-};
+const muti = function () {
+  console.log('开始计算乘积')
+  let a = 1
+  for (let i = 0, l = arguments.length; i < l; i++)
+    a = a * arguments[i]
+
+  return a
+}
 ```
 
 现在加入缓存代理，如下：
 
 ```js
-var proxyMult = (function () {
-  var cache = {};
+const proxyMult = (function () {
+  const cache = {}
   return function () {
-    var args = Array.prototype.join.call(arguments, ',');
-    if (args in cache) {
-      return cache[args];
-    }
-    return (cache[args] = mult.apply(this, arguments));
-  };
-})();
+    const args = Array.prototype.join.call(arguments, ',')
+    if (args in cache)
+      return cache[args]
 
-proxyMult(1, 2, 3, 4); // 输出:24
-proxyMult(1, 2, 3, 4); // 输出:24
+    return (cache[args] = mult.apply(this, arguments))
+  }
+})()
+
+proxyMult(1, 2, 3, 4) // 输出:24
+proxyMult(1, 2, 3, 4) // 输出:24
 ```
 
 当第二次调用 `proxyMult(1, 2, 3, 4)` 时，本体 `mult` 函数并没有被计算，`proxyMult` 直接返回了之前缓存好的计算结果
@@ -98,28 +98,28 @@ proxyMult(1, 2, 3, 4); // 输出:24
 未使用代理模式如下：
 
 ```js
-let MyImage = (function () {
-  let imgNode = document.createElement('img');
-  document.body.appendChild(imgNode);
+const MyImage = (function () {
+  const imgNode = document.createElement('img')
+  document.body.appendChild(imgNode)
   // 创建一个Image对象，用于加载需要设置的图片
-  let img = new Image();
+  const img = new Image()
 
   img.onload = function () {
     // 监听到图片加载完成后，设置src为加载完成后的图片
-    imgNode.src = img.src;
-  };
+    imgNode.src = img.src
+  }
 
   return {
-    setSrc: function (src) {
+    setSrc(src) {
       // 设置图片的时候，设置为默认的loading图
-      imgNode.src = 'https://img.zcool.cn/community/01deed576019060000018c1bd2352d.gif';
+      imgNode.src = 'https://img.zcool.cn/community/01deed576019060000018c1bd2352d.gif'
       // 把真正需要设置的图片传给Image对象的src属性
-      img.src = src;
+      img.src = src
     },
-  };
-})();
+  }
+})()
 
-MyImage.setSrc('https://xxx.jpg');
+MyImage.setSrc('https://xxx.jpg')
 ```
 
 `MyImage`对象除了负责给`img`节点设置`src`外，还要负责预加载图片，违反了面向对象设计的原则——单一职责原则
@@ -130,35 +130,35 @@ MyImage.setSrc('https://xxx.jpg');
 
 ```js
 // 图片本地对象，负责往页面中创建一个img标签，并且提供一个对外的setSrc接口
-let myImage = (function () {
-  let imgNode = document.createElement('img');
-  document.body.appendChild(imgNode);
+const myImage = (function () {
+  const imgNode = document.createElement('img')
+  document.body.appendChild(imgNode)
 
   return {
-    //setSrc接口，外界调用这个接口，便可以给该img标签设置src属性
-    setSrc: function (src) {
-      imgNode.src = src;
+    // setSrc接口，外界调用这个接口，便可以给该img标签设置src属性
+    setSrc(src) {
+      imgNode.src = src
     },
-  };
-})();
+  }
+})()
 // 代理对象，负责图片预加载功能
-let proxyImage = (function () {
+const proxyImage = (function () {
   // 创建一个Image对象，用于加载需要设置的图片
-  let img = new Image();
+  const img = new Image()
   img.onload = function () {
     // 监听到图片加载完成后，给被代理的图片本地对象设置src为加载完成后的图片
-    myImage.setSrc(this.src);
-  };
+    myImage.setSrc(this.src)
+  }
   return {
-    setSrc: function (src) {
+    setSrc(src) {
       // 设置图片时，在图片未被真正加载好时，以这张图作为loading，提示用户图片正在加载
-      myImage.setSrc('https://img.zcool.cn/community/01deed576019060000018c1bd2352d.gif');
-      img.src = src;
+      myImage.setSrc('https://img.zcool.cn/community/01deed576019060000018c1bd2352d.gif')
+      img.src = src
     },
-  };
-})();
+  }
+})()
 
-proxyImage.setSrc('https://xxx.jpg');
+proxyImage.setSrc('https://xxx.jpg')
 ```
 
 使用代理模式后，图片本地对象负责往页面中创建一个`img`标签，并且提供一个对外的`setSrc`接口；

@@ -99,7 +99,6 @@ public class MarioStateMachine {
   }
 }
 
-
 public class ApplicationDemo {
   public static void main(String[] args) {
     MarioStateMachine mario = new MarioStateMachine();

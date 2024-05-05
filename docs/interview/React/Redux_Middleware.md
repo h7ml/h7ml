@@ -52,7 +52,7 @@ head:
 然后作为第二个参数传入到`createStore`中
 
 ```js
-const store = createStore(reducer, applyMiddleware(thunk, logger));
+const store = createStore(reducer, applyMiddleware(thunk, logger))
 ```
 
 ### redux-thunk
@@ -69,15 +69,15 @@ const store = createStore(reducer, applyMiddleware(thunk, logger));
 所以`dispatch`可以写成下述函数的形式：
 
 ```js
-const getHomeMultidataAction = () => {
+function getHomeMultidataAction() {
   return (dispatch) => {
     axios.get('http://xxx.xx.xx.xx/test').then((res) => {
-      const data = res.data.data;
-      dispatch(changeBannersAction(data.banner.list));
-      dispatch(changeRecommendsAction(data.recommend.list));
-    });
-  };
-};
+      const data = res.data.data
+      dispatch(changeBannersAction(data.banner.list))
+      dispatch(changeRecommendsAction(data.recommend.list))
+    })
+  }
+}
 ```
 
 ### redux-logger
@@ -85,11 +85,11 @@ const getHomeMultidataAction = () => {
 如果想要实现一个日志功能，则可以使用现成的`redux-logger`
 
 ```js
-import { applyMiddleware, createStore } from 'redux';
-import createLogger from 'redux-logger';
-const logger = createLogger();
+import { applyMiddleware, createStore } from 'redux'
+import createLogger from 'redux-logger'
+const logger = createLogger()
 
-const store = createStore(reducer, applyMiddleware(logger));
+const store = createStore(reducer, applyMiddleware(logger))
 ```
 
 这样我们就能简单通过中间件函数实现日志记录的信息
@@ -100,20 +100,20 @@ const store = createStore(reducer, applyMiddleware(logger));
 
 ```js
 export default function applyMiddleware(...middlewares) {
-  return (createStore) => (reducer, preloadedState, enhancer) => {
-    var store = createStore(reducer, preloadedState, enhancer);
-    var dispatch = store.dispatch;
-    var chain = [];
+  return createStore => (reducer, preloadedState, enhancer) => {
+    const store = createStore(reducer, preloadedState, enhancer)
+    let dispatch = store.dispatch
+    let chain = []
 
-    var middlewareAPI = {
+    const middlewareAPI = {
       getState: store.getState,
-      dispatch: (action) => dispatch(action),
-    };
-    chain = middlewares.map((middleware) => middleware(middlewareAPI));
-    dispatch = compose(...chain)(store.dispatch);
+      dispatch: action => dispatch(action),
+    }
+    chain = middlewares.map(middleware => middleware(middlewareAPI))
+    dispatch = compose(...chain)(store.dispatch)
 
-    return { ...store, dispatch };
-  };
+    return { ...store, dispatch }
+  }
 }
 ```
 
@@ -125,32 +125,31 @@ export default function applyMiddleware(...middlewares) {
 
 ```js
 function patchThunk(store) {
-  let next = store.dispatch;
+  const next = store.dispatch
 
   function dispatchAndThunk(action) {
-    if (typeof action === 'function') {
-      action(store.dispatch, store.getState);
-    } else {
-      next(action);
-    }
+    if (typeof action === 'function')
+      action(store.dispatch, store.getState)
+    else
+      next(action)
   }
 
-  store.dispatch = dispatchAndThunk;
+  store.dispatch = dispatchAndThunk
 }
 ```
 
 实现一个日志输出的原理也非常简单，如下：
 
 ```js
-let next = store.dispatch;
+const next = store.dispatch
 
 function dispatchAndLog(action) {
-  console.log('dispatching:', addAction(10));
-  next(addAction(5));
-  console.log('新的state:', store.getState());
+  console.log('dispatching:', addAction(10))
+  next(addAction(5))
+  console.log('新的state:', store.getState())
 }
 
-store.dispatch = dispatchAndLog;
+store.dispatch = dispatchAndLog
 ```
 
 ## 参考文献

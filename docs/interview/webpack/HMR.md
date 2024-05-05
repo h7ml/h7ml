@@ -37,7 +37,7 @@ head:
 在`webpack`中配置开启热模块也非常的简单，如下代码：
 
 ```js
-const webpack = require('webpack');
+const webpack = require('webpack')
 module.exports = {
   // ...
   devServer: {
@@ -45,7 +45,7 @@ module.exports = {
     hot: true,
     // hotOnly: true
   },
-};
+}
 ```
 
 通过上述这种配置，如果我们修改并保存`css`文件，确实能够以不刷新的形式更新到页面中
@@ -59,8 +59,8 @@ module.exports = {
 ```js
 if (module.hot) {
   module.hot.accept('./util.js', () => {
-    console.log('util.js更新了');
-  });
+    console.log('util.js更新了')
+  })
 }
 ```
 

@@ -61,7 +61,7 @@ head:
 使用两者作为最顶层组件包裹其他组件
 
 ```jsx
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom'
 
 export default function App() {
   return (
@@ -82,7 +82,7 @@ export default function App() {
         </nav>
       </main>
     </Router>
-  );
+  )
 }
 ```
 
@@ -96,7 +96,7 @@ export default function App() {
 - exact 属性：开启精准匹配，只有精准匹配到完全一致的路径，才会渲染对应的组件
 
 ```jsx
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { Route, BrowserRouter as Router } from 'react-router-dom'
 
 export default function App() {
   return (
@@ -118,7 +118,7 @@ export default function App() {
         <Route path="/" render={() => <h1>Welcome!</h1>} />
       </main>
     </Router>
-  );
+  )
 }
 ```
 
@@ -144,13 +144,15 @@ export default function App() {
 通过`Route`作为顶层组件包裹其他组件后,页面组件就可以接收到一些路由相关的东西，比如`props.history`
 
 ```jsx
-const Contact = ({ history }) => (
-  <Fragment>
-    <h1>Contact</h1>
-    <button onClick={() => history.push('/')}>Go to home</button>
-    <FakeText />
-  </Fragment>
-);
+function Contact({ history }) {
+  return (
+    <Fragment>
+      <h1>Contact</h1>
+      <button onClick={() => history.push('/')}>Go to home</button>
+      <FakeText />
+    </Fragment>
+  )
+}
 ```
 
 `props`中接收到的`history`对象具有一些方便的方法，如`goBack`，`goForward`,`push`
@@ -160,18 +162,22 @@ const Contact = ({ history }) => (
 用于路由的重定向，当这个组件出现时，就会执行跳转到对应的`to`路径中，如下例子：
 
 ```js
-const About = ({
+function About({
   match: {
     params: { name },
   },
-}) => (
-  // props.match.params.name
-  <Fragment>
-    {name !== 'tom' ? <Redirect to="/" /> : null}
-    <h1>About {name}</h1>
-    <FakeText />
-  </Fragment>
-);
+}) {
+  return (
+    <Fragment>
+      {name !== 'tom' ? <Redirect to="/" /> : null}
+      <h1>
+        About
+        {name}
+      </h1>
+      <FakeText />
+    </Fragment>
+  )
+}
 ```
 
 上述组件当接收到的路由参数`name` 不等于 `tom` 的时候，将会自动重定向到首页
@@ -205,33 +211,36 @@ const About = ({
 `useHistory`可以让组件内部直接访问`history`，无须通过`props`获取
 
 ```js
-import { useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom'
 
-const Contact = () => {
-  const history = useHistory();
+function Contact() {
+  const history = useHistory()
   return (
     <Fragment>
       <h1>Contact</h1>
       <button onClick={() => history.push('/')}>Go to home</button>
     </Fragment>
-  );
-};
+  )
+}
 ```
 
 ### useParams
 
 ```jsx
-const About = () => {
-  const { name } = useParams();
+function About() {
+  const { name } = useParams()
   return (
     // props.match.params.name
     <Fragment>
       {name !== 'John Doe' ? <Redirect to="/" /> : null}
-      <h1>About {name}</h1>
+      <h1>
+        About
+        {name}
+      </h1>
       <Route component={Contact} />
     </Fragment>
-  );
-};
+  )
+}
 ```
 
 ### useLocation
@@ -239,18 +248,21 @@ const About = () => {
 `useLocation` 会返回当前 `URL`的 `location`对象
 
 ```jsx
-import { useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom'
 
-const Contact = () => {
-  const { pathname } = useLocation();
+function Contact() {
+  const { pathname } = useLocation()
 
   return (
     <Fragment>
       <h1>Contact</h1>
-      <p>Current URL: {pathname}</p>
+      <p>
+        Current URL:
+        {pathname}
+      </p>
     </Fragment>
-  );
-};
+  )
+}
 ```
 
 ## 三、参数传递
@@ -280,7 +292,7 @@ const Contact = () => {
 获取参数方式如下：
 
 ```jsx
-console.log(props.match.params.xxx);
+console.log(props.match.params.xxx)
 ```
 
 ### search 传递参数
@@ -298,7 +310,7 @@ console.log(props.match.params.xxx);
 获取形式如下：
 
 ```js
-console.log(props.location.search);
+console.log(props.location.search)
 ```
 
 ### to 传入对象
@@ -321,7 +333,7 @@ console.log(props.location.search);
 获取参数的形式如下：
 
 ```js
-console.log(props.location);
+console.log(props.location)
 ```
 
 ## 参考文献

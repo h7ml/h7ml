@@ -53,9 +53,8 @@ head:
 跟`shouldComponentUpdate`原理基本一致，通过对 `props` 和 `state`的浅比较结果来实现 `shouldComponentUpdate`，源码大致如下：
 
 ```js
-if (this._compositeType === CompositeTypes.PureClass) {
-  shouldUpdate = !shallowEqual(prevProps, nextProps) || !shallowEqual(inst.state, nextState);
-}
+if (this._compositeType === CompositeTypes.PureClass)
+  shouldUpdate = !shallowEqual(prevProps, nextProps) || !shallowEqual(inst.state, nextState)
 ```
 
 `shallowEqual`对应方法大致如下：
@@ -113,13 +112,13 @@ function shallowEqual(objA: mixed, objB: mixed): boolean {
 `React.memo`用来缓存组件的渲染，避免不必要的更新，其实也是一个高阶组件，与 `PureComponent` 十分类似。但不同的是， `React.memo` 只能用于函数组件
 
 ```jsx
-import { memo } from 'react';
+import { memo } from 'react'
 
 function Button(props) {
   // Component code
 }
 
-export default memo(Button);
+export default memo(Button)
 ```
 
 如果需要深层次比较，这时候可以给`memo`第二个参数传递比较函数
@@ -127,10 +126,10 @@ export default memo(Button);
 ```jsx
 function arePropsEqual(prevProps, nextProps) {
   // your code
-  return prevProps === nextProps;
+  return prevProps === nextProps
 }
 
-export default memo(Button, arePropsEqual);
+export default memo(Button, arePropsEqual)
 ```
 
 ## 三、总结

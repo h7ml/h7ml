@@ -110,14 +110,14 @@ export function render(_ctx, _cache, $props, $setup, $data, $options) {
       [_createVNode('span', null, '你好'), _createVNode('div', null, _toDisplayString(_ctx.message), 1 /* TEXT */)],
       64 /* STABLE_FRAGMENT */
     )
-  );
+  )
 }
 ```
 
 做了静态提升之后
 
 ```js
-const _hoisted_1 = /*#__PURE__*/ _createVNode('span', null, '你好', -1 /* HOISTED */);
+const _hoisted_1 = /* #__PURE__ */ _createVNode('span', null, '你好', -1 /* HOISTED */)
 
 export function render(_ctx, _cache, $props, $setup, $data, $options) {
   return (
@@ -128,7 +128,7 @@ export function render(_ctx, _cache, $props, $setup, $data, $options) {
       [_hoisted_1, _createVNode('div', null, _toDisplayString(_ctx.message), 1 /* TEXT */)],
       64 /* STABLE_FRAGMENT */
     )
-  );
+  )
 }
 
 // Check the console for the AST
@@ -151,15 +151,15 @@ export function render(_ctx, _cache, $props, $setup, $data, $options) {
 没开启事件监听器缓存
 
 ```js
-export const render = /*#__PURE__*/ _withId(function render(_ctx, _cache, $props, $setup, $data, $options) {
+export const render = /* #__PURE__ */ _withId((_ctx, _cache, $props, $setup, $data, $options) => {
   return (
     _openBlock(),
     _createBlock('div', null, [
       _createVNode('button', { onClick: _ctx.onClick }, '点我', 8 /* PROPS */, ['onClick']),
       // PROPS=1<<3,// 8 //动态属性，但不包含类名和样式
     ])
-  );
-});
+  )
+})
 ```
 
 开启事件侦听器缓存后
@@ -177,7 +177,7 @@ export function render(_ctx, _cache, $props, $setup, $data, $options) {
         '点我'
       ),
     ])
-  );
+  )
 }
 ```
 
@@ -202,16 +202,16 @@ div>
 编译后
 
 ```js
-import { mergeProps as _mergeProps } from 'vue';
-import { ssrRenderAttrs as _ssrRenderAttrs, ssrInterpolate as _ssrInterpolate } from '@vue/server-renderer';
+import { mergeProps as _mergeProps } from 'vue'
+import { ssrInterpolate as _ssrInterpolate, ssrRenderAttrs as _ssrRenderAttrs } from '@vue/server-renderer'
 
 export function ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $options) {
-  const _cssVars = { style: { color: _ctx.color } };
+  const _cssVars = { style: { color: _ctx.color } }
   _push(
     `<div${_ssrRenderAttrs(
       _mergeProps(_attrs, _cssVars)
     )}><div><span>你好</span>...<div><span>你好</span><div><span>${_ssrInterpolate(_ctx.message)}</span></div></div>`
-  );
+  )
 }
 ```
 
@@ -222,24 +222,24 @@ export function ssrRender(_ctx, _push, _parent, _attrs, $props, $setup, $data, $
 任何一个函数，如`ref`、`reavtived`、`computed`等，仅仅在用到的时候才打包，没用到的模块都被摇掉，打包的整体体积变小
 
 ```js
-import { computed, defineComponent, ref } from 'vue';
+import { computed, defineComponent, ref } from 'vue'
 export default defineComponent({
   setup(props, context) {
-    const age = ref(18);
+    const age = ref(18)
 
-    let state = reactive({
+    const state = reactive({
       name: 'test',
-    });
+    })
 
-    const readOnlyAge = computed(() => age.value++); // 19
+    const readOnlyAge = computed(() => age.value++) // 19
 
     return {
       age,
       state,
       readOnlyAge,
-    };
+    }
   },
-});
+})
 ```
 
 ## 三、响应式系统

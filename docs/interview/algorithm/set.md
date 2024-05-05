@@ -24,7 +24,7 @@ head:
 
 # 说说你对集合的理解？常见的操作有哪些？
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/e3de7810-1d36-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/e3de7810-1d36-11ec-8e64-91fdec0f05a1.png)
 
 ## 一、是什么
 
@@ -46,7 +46,7 @@ head:
 在`ES6`中，集合本身是一个构建函数`Set`，用来生成 `Set` 数据结构，如下：
 
 ```js
-const s = new Set();
+const s = new Set()
 ```
 
 关于集合常见的方法有：
@@ -63,7 +63,7 @@ const s = new Set();
 当添加实例中已经存在的元素，`set`不会进行处理添加
 
 ```js
-s.add(1).add(2).add(2); // 2只被添加了一次
+s.add(1).add(2).add(2) // 2只被添加了一次
 ```
 
 体现了集合的互异性特性
@@ -73,7 +73,7 @@ s.add(1).add(2).add(2); // 2只被添加了一次
 删除某个值，返回一个布尔值，表示删除是否成功
 
 ```js
-s.delete(1);
+s.delete(1)
 ```
 
 ### has()
@@ -81,7 +81,7 @@ s.delete(1);
 返回一个布尔值，判断该值是否为`Set`的成员
 
 ```js
-s.has(2);
+s.has(2)
 ```
 
 ### clear()
@@ -89,7 +89,7 @@ s.has(2);
 清除所有成员，没有返回值
 
 ```js
-s.clear();
+s.clear()
 ```
 
 关于多个集合常见的操作有：
@@ -102,16 +102,16 @@ s.clear();
 
 两个集合的共同元素，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/ed96df50-1d36-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/ed96df50-1d36-11ec-a752-75723a64e8f5.png)
 
 代码实现方式如下：
 
 ```js
-let a = new Set([1, 2, 3]);
-let b = new Set([4, 3, 2]);
+const a = new Set([1, 2, 3])
+const b = new Set([4, 3, 2])
 
 // 并集
-let union = new Set([...a, ...b]);
+const union = new Set([...a, ...b])
 // Set {1, 2, 3, 4}
 ```
 
@@ -119,16 +119,16 @@ let union = new Set([...a, ...b]);
 
 两个集合`A` 和 `B`，即属于`A`又属于`B`的元素，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/f8a9cd80-1d36-11ec-a752-75723a64e8f5.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/f8a9cd80-1d36-11ec-a752-75723a64e8f5.png)
 
 用代码标识则如下：
 
 ```js
-let a = new Set([1, 2, 3]);
-let b = new Set([4, 3, 2]);
+const a = new Set([1, 2, 3])
+const b = new Set([4, 3, 2])
 
 // 交集
-let intersect = new Set([...a].filter((x) => b.has(x)));
+const intersect = new Set([...a].filter(x => b.has(x)))
 // set {2, 3}
 ```
 
@@ -136,16 +136,16 @@ let intersect = new Set([...a].filter((x) => b.has(x)));
 
 两个集合`A` 和 `B`，属于`A`的元素但不属于`B`的元素称为`A`相对于`B`的差集，如下图所示：
 
-![](https://static.h7ml.cn/vitepress/assets/images/interview/0191c560-1d37-11ec-8e64-91fdec0f05a1.png)
+![](http://static.5ibug.net/vitepress/assets/images/interview/0191c560-1d37-11ec-8e64-91fdec0f05a1.png)
 
 代码标识则如下：
 
 ```js
-let a = new Set([1, 2, 3]);
-let b = new Set([4, 3, 2]);
+const a = new Set([1, 2, 3])
+const b = new Set([4, 3, 2])
 
 // （a 相对于 b 的）差集
-let difference = new Set([...a].filter((x) => !b.has(x)));
+const difference = new Set([...a].filter(x => !b.has(x)))
 // Set {1}
 ```
 

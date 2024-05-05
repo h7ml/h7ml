@@ -37,16 +37,16 @@ head:
 1. 字面量创建，其由包含在斜杠之间的模式组成
 
 ```js
-const re = /\d+/g;
+const re = /\d+/g
 ```
 
 2. 调用`RegExp`对象的构造函数
 
 ```js
-const re = new RegExp('\\d+', 'g');
+const re = new RegExp('\\d+', 'g')
 
-const rul = '\\d+';
-const re1 = new RegExp(rul, 'g');
+const rul = '\\d+'
+const re1 = new RegExp(rul, 'g')
 ```
 
 使用构建函数创建，第一个参数可以是一个变量，遇到特殊字符`\`需要使用`\\`进行转义
@@ -111,7 +111,7 @@ var re = new RegExp("pattern", "flags");
 在了解贪婪模式前，首先举个例子：
 
 ```js
-const reg = /ab{1,3}c/;
+const reg = /ab{1,3}c/
 ```
 
 在匹配过程中，尝试可能的顺序是从多往少的方向去尝试。首先会尝试`bbb`，然后再看整个正则是否能匹配。不能匹配时，吐出一个`b`，即在`bb`的基础上，再继续尝试，以此重复
@@ -119,9 +119,9 @@ const reg = /ab{1,3}c/;
 如果多个贪婪量词挨着，则深度优先搜索
 
 ```js
-const string = '12345';
-const regx = /(\d{1,3})(\d{1,3})/;
-console.log(string.match(reg));
+const string = '12345'
+const regx = /(\d{1,3})(\d{1,3})/
+console.log(string.match(reg))
 // => ["12345", "123", "45", index: 0, input: "12345"]
 ```
 
@@ -132,9 +132,9 @@ console.log(string.match(reg));
 惰性量词就是在贪婪量词后面加个问号。表示尽可能少的匹配
 
 ```js
-var string = '12345';
-var regex = /(\d{1,3}?)(\d{1,3})/;
-console.log(string.match(regex));
+const string = '12345'
+const regex = /(\d{1,3}?)(\d{1,3})/
+console.log(string.match(regex))
 // => ["1234", "1", "234", index: 0, input: "12345"]
 ```
 
@@ -149,10 +149,10 @@ console.log(string.match(regex));
 反向引用，巧用`$`分组捕获
 
 ```js
-let str = 'John Smith';
+const str = 'John Smith'
 
 // 交换名字和姓氏
-console.log(str.replace(/(john) (smith)/i, '$2, $1')); // Smith, John
+console.log(str.replace(/(john) (smith)/i, '$2, $1')) // Smith, John
 ```
 
 ## 三、匹配方法
@@ -179,38 +179,38 @@ console.log(str.replace(/(john) (smith)/i, '$2, $1')); // Smith, John
 如果 `regexp` 不带有 `g` 标记，则它以数组的形式返回第一个匹配项，其中包含分组和属性 `index`（匹配项的位置）、`input`（输入字符串，等于 `str`）
 
 ```js
-let str = 'I love JavaScript';
+const str = 'I love JavaScript'
 
-let result = str.match(/Java(Script)/);
+const result = str.match(/Java(Script)/)
 
-console.log(result[0]); // JavaScript（完全匹配）
-console.log(result[1]); // Script（第一个分组）
-console.log(result.length); // 2
+console.log(result[0]) // JavaScript（完全匹配）
+console.log(result[1]) // Script（第一个分组）
+console.log(result.length) // 2
 
 // 其他信息：
-console.log(result.index); // 7（匹配位置）
-console.log(result.input); // I love JavaScript（源字符串）
+console.log(result.index) // 7（匹配位置）
+console.log(result.input) // I love JavaScript（源字符串）
 ```
 
 如果 `regexp` 带有 `g` 标记，则它将所有匹配项的数组作为字符串返回，而不包含分组和其他详细信息
 
 ```js
-let str = 'I love JavaScript';
+const str = 'I love JavaScript'
 
-let result = str.match(/Java(Script)/g);
+const result = str.match(/Java(Script)/g)
 
-console.log(result[0]); // JavaScript
-console.log(result.length); // 1
+console.log(result[0]) // JavaScript
+console.log(result.length) // 1
 ```
 
 如果没有匹配项，则无论是否带有标记 `g` ，都将返回 `null`
 
 ```js
-let str = 'I love JavaScript';
+const str = 'I love JavaScript'
 
-let result = str.match(/HTML/);
+const result = str.match(/HTML/)
 
-console.log(result); // null
+console.log(result) // null
 ```
 
 ### str.matchAll(regexp)
@@ -218,15 +218,15 @@ console.log(result); // null
 返回一个包含所有匹配正则表达式的结果及分组捕获组的迭代器
 
 ```js
-const regexp = /t(e)(st(\d?))/g;
-const str = 'test1test2';
+const regexp = /t(e)(st(\d?))/g
+const str = 'test1test2'
 
-const array = [...str.matchAll(regexp)];
+const array = [...str.matchAll(regexp)]
 
-console.log(array[0]);
+console.log(array[0])
 // expected output: Array ["test1", "e", "st1", "1"]
 
-console.log(array[1]);
+console.log(array[1])
 // expected output: Array ["test2", "e", "st2", "2"]
 ```
 
@@ -235,9 +235,9 @@ console.log(array[1]);
 返回第一个匹配项的位置，如果未找到，则返回 `-1`
 
 ```js
-let str = 'A drop of ink may make a million think';
+const str = 'A drop of ink may make a million think'
 
-console.log(str.search(/ink/i)); // 10（第一个匹配位置）
+console.log(str.search(/ink/i)) // 10（第一个匹配位置）
 ```
 
 这里需要注意的是，`search` 仅查找第一个匹配项
@@ -247,12 +247,12 @@ console.log(str.search(/ink/i)); // 10（第一个匹配位置）
 替换与正则表达式匹配的子串，并返回替换后的字符串。在不设置全局匹配`g`的时候，只替换第一个匹配成功的字符串片段
 
 ```js
-const reg1 = /javascript/i;
-const reg2 = /javascript/gi;
-console.log('hello Javascript Javascript Javascript'.replace(reg1, 'js'));
-//hello js Javascript Javascript
-console.log('hello Javascript Javascript Javascript'.replace(reg2, 'js'));
-//hello js js js
+const reg1 = /javascript/i
+const reg2 = /javascript/gi
+console.log('hello Javascript Javascript Javascript'.replace(reg1, 'js'))
+// hello js Javascript Javascript
+console.log('hello Javascript Javascript Javascript'.replace(reg2, 'js'))
+// hello js js js
 ```
 
 ### str.split(regexp)
@@ -260,7 +260,7 @@ console.log('hello Javascript Javascript Javascript'.replace(reg2, 'js'));
 使用正则表达式（或子字符串）作为分隔符来分割字符串
 
 ```js
-console.log('12, 34, 56'.split(/,\s*/)); // 数组 ['12', '34', '56']
+console.log('12, 34, 56'.split(/,\s*/)) // 数组 ['12', '34', '56']
 ```
 
 ### regexp.exec(str)
@@ -274,16 +274,15 @@ console.log('12, 34, 56'.split(/,\s*/)); // 数组 ['12', '34', '56']
 如果有标记 `g`，调用 `regexp.exec(str)` 会返回第一个匹配项，并将紧随其后的位置保存在属性`regexp.lastIndex` 中。 下一次同样的调用会从位置 `regexp.lastIndex` 开始搜索，返回下一个匹配项，并将其后的位置保存在 `regexp.lastIndex` 中
 
 ```js
-let str = 'More about JavaScript at https://javascript.info';
-let regexp = /javascript/gi;
+const str = 'More about JavaScript at https://javascript.info'
+const regexp = /javascript/gi
 
-let result;
+let result
 
-while ((result = regexp.exec(str))) {
-  console.log(`Found ${result[0]} at position ${result.index}`);
+while ((result = regexp.exec(str)))
+  console.log(`Found ${result[0]} at position ${result.index}`)
   // Found JavaScript at position 11
   // Found javascript at position 33
-}
 ```
 
 ### regexp.test(str)
@@ -291,10 +290,10 @@ while ((result = regexp.exec(str))) {
 查找匹配项，然后返回 `true/false` 表示是否存在
 
 ```js
-let str = 'I love JavaScript';
+const str = 'I love JavaScript'
 
 // 这两个测试相同
-console.log(/love/i.test(str)); // true
+console.log(/love/i.test(str)) // true
 ```
 
 ## 四、应用场景
@@ -306,31 +305,31 @@ console.log(/love/i.test(str)); // true
 验证 QQ 合法性（5~15 位、全是数字、不以 0 开头）：
 
 ```js
-const reg = /^[1-9][0-9]{4,14}$/;
-const isvalid = patrn.exec(s);
+const reg = /^[1-9][0-9]{4,14}$/
+const isvalid = patrn.exec(s)
 ```
 
 校验用户账号合法性（只能输入 5-20 个以字母开头、可带数字、“\_”、“.”的字串）：
 
 ```js
-var patrn = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/;
-const isvalid = patrn.exec(s);
+const patrn = /^[a-zA-Z]{1}([a-zA-Z0-9]|[._]){4,19}$/
+const isvalid = patrn.exec(s)
 ```
 
 将`url`参数解析为对象
 
 ```js
-const protocol = '(?<protocol>https?:)';
-const host = '(?<host>(?<hostname>[^/#?:]+)(?::(?<port>\\d+))?)';
-const path = '(?<pathname>(?:\\/[^/#?]+)*\\/?)';
-const search = '(?<search>(?:\\?[^#]*)?)';
-const hash = '(?<hash>(?:#.*)?)';
-const reg = new RegExp(`^${protocol}\/\/${host}${path}${search}${hash}$`);
+const protocol = '(?<protocol>https?:)'
+const host = '(?<host>(?<hostname>[^/#?:]+)(?::(?<port>\\d+))?)'
+const path = '(?<pathname>(?:\\/[^/#?]+)*\\/?)'
+const search = '(?<search>(?:\\?[^#]*)?)'
+const hash = '(?<hash>(?:#.*)?)'
+const reg = new RegExp(`^${protocol}\/\/${host}${path}${search}${hash}$`)
 function execURL(url) {
-  const result = reg.exec(url);
+  const result = reg.exec(url)
   if (result) {
-    result.groups.port = result.groups.port || '';
-    return result.groups;
+    result.groups.port = result.groups.port || ''
+    return result.groups
   }
   return {
     protocol: '',
@@ -340,41 +339,41 @@ function execURL(url) {
     pathname: '',
     search: '',
     hash: '',
-  };
+  }
 }
 
-console.log(execURL('https://localhost:8080/?a=b#xxxx'));
-protocol: 'https:';
-host: 'localhost:8080';
-hostname: 'localhost';
-port: '8080';
-pathname: '/';
-search: '?a=b';
-hash: '#xxxx';
+console.log(execURL('https://localhost:8080/?a=b#xxxx'))
+protocol: 'https:'
+host: 'localhost:8080'
+hostname: 'localhost'
+port: '8080'
+pathname: '/'
+search: '?a=b'
+hash: '#xxxx'
 ```
 
 再将上面的`search`和`hash`进行解析
 
 ```js
 function execUrlParams(str) {
-  str = str.replace(/^[#?&]/, '');
-  const result = {};
+  str = str.replace(/^[#?&]/, '')
+  const result = {}
   if (!str) {
-    //如果正则可能配到空字符串，极有可能造成死循环，判断很重要
-    return result;
+    // 如果正则可能配到空字符串，极有可能造成死循环，判断很重要
+    return result
   }
-  const reg = /(?:^|&)([^&=]*)=?([^&]*?)(?=&|$)/y;
-  let exec = reg.exec(str);
+  const reg = /(?:^|&)([^&=]*)=?([^&]*?)(?=&|$)/y
+  let exec = reg.exec(str)
   while (exec) {
-    result[exec[1]] = exec[2];
-    exec = reg.exec(str);
+    result[exec[1]] = exec[2]
+    exec = reg.exec(str)
   }
-  return result;
+  return result
 }
-console.log(execUrlParams('#')); // {}
-console.log(execUrlParams('##')); //{'#':''}
-console.log(execUrlParams('?q=3606&src=srp')); //{q: "3606", src: "srp"}
-console.log(execUrlParams('test=a=b=c&&==&a=')); //{test: "a=b=c", "": "=", a: ""}
+console.log(execUrlParams('#')) // {}
+console.log(execUrlParams('##')) // {'#':''}
+console.log(execUrlParams('?q=3606&src=srp')) // {q: "3606", src: "srp"}
+console.log(execUrlParams('test=a=b=c&&==&a=')) // {test: "a=b=c", "": "=", a: ""}
 ```
 
 ## 参考文献

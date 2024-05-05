@@ -111,17 +111,17 @@ util.log()
 /* 先通过 script 加载 RequireJS */
 
 /* 定义模块 utils.js */
-define(['utils'], function () {
+define(['utils'], () => {
   function log() {}
   return {
-    log: log,
-  };
-});
+    log,
+  }
+})
 
 /* 调用模块 */
-require(['./utils'], function (utils) {
-  utils.log();
-});
+require(['./utils'], (utils) => {
+  utils.log()
+})
 ```
 
 ## CMD
@@ -139,17 +139,17 @@ require(['./utils'], function (utils) {
 /* 先通过 script 加载 SeaJS */
 
 /* 定义模块 utils.js */
-define(function (require, exports, module) {
+define((require, exports, module) => {
   function log() {}
   return {
-    log: log,
-  };
-});
+    log,
+  }
+})
 
 /* 调用模块 */
-seajs.use(['./utils.js'], function (utils) {
-  utils.log();
-});
+seajs.use(['./utils.js'], (utils) => {
+  utils.log()
+})
 ```
 
 ::: tip AMD 和 CMD 的区别
@@ -172,20 +172,19 @@ seajs.use(['./utils.js'], function (utils) {
 ```js
 (function (root, factory) {
   // CommonJs 模块规范 Node 环境
-  if (typeof module === 'object') {
-    module.exports = factory(require('jquery'));
-  }
+  if (typeof module === 'object')
+    module.exports = factory(require('jquery'))
+
   // AMD 模块规范
-  else if (typeof define === 'function' && define.amd) {
-    define(['jquery'], factory);
-  }
+  else if (typeof define === 'function' && define.amd)
+    define(['jquery'], factory)
+
   // 挂载全局变量(global 即全局对象)
-  else {
-    root.returnExports = factory(root.jQuery);
-  }
-})(this, function ($) {
+  else
+    root.returnExports = factory(root.jQuery)
+})(this, ($) => {
   // 定义属性
-  const name = 'jquery';
+  const name = 'jquery'
 
   // 定义方法
   function log() {}
@@ -194,8 +193,8 @@ seajs.use(['./utils.js'], function (utils) {
   return {
     name,
     log,
-  };
-});
+  }
+})
 ```
 
 ## 相关文章

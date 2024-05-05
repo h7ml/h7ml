@@ -168,7 +168,7 @@ Vue 3 中需要关注的一些新功能包括：
 关于`createRenderer`，我们了解下基本使用，就不展开讲述了
 
 ```js
-import { createRenderer } from '@vue/runtime-core';
+import { createRenderer } from '@vue/runtime-core'
 
 const { render, createApp } = createRenderer({
   patchProp,
@@ -176,11 +176,11 @@ const { render, createApp } = createRenderer({
   remove,
   createElement,
   // ...
-});
+})
 
-export { render, createApp };
+export { render, createApp }
 
-export * from '@vue/runtime-core';
+export * from '@vue/runtime-core'
 ```
 
 ### composition Api
@@ -198,19 +198,19 @@ composition Api，也就是组合式`api`，通过这种形式，我们能够更
 ```js
 export default {
   setup() {
-    const count = ref(0);
-    const double = computed(() => count.value * 2);
+    const count = ref(0)
+    const double = computed(() => count.value * 2)
     function increment() {
-      count.value++;
+      count.value++
     }
-    onMounted(() => console.log('component mounted!'));
+    onMounted(() => console.log('component mounted!'))
     return {
       count,
       double,
       increment,
-    };
+    }
   },
-};
+}
 ```
 
 ### 三、非兼容变更

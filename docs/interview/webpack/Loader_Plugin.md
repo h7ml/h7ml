@@ -63,13 +63,13 @@ head:
 ```js
 // 导出一个函数，source为webpack传递给loader的文件源内容
 module.exports = function (source) {
-  const content = doSomeThing2JsString(source);
+  const content = doSomeThing2JsString(source)
 
   // 如果 loader 配置了 options 对象，那么this.query将指向 options
-  const options = this.query;
+  const options = this.query
 
   // 可以用作解析其他模块路径的上下文
-  console.log('this.context');
+  console.log('this.context')
 
   /*
    * this.callback 参数：
@@ -78,9 +78,9 @@ module.exports = function (source) {
    * sourceMap：为方便调试生成的编译后内容的 source map
    * ast：本次编译生成的 AST 静态语法树，之后执行的 loader 可以直接使用这个 AST，进而省去重复生成 AST 的过程
    */
-  this.callback(null, content); // 异步
-  return content; // 同步
-};
+  this.callback(null, content) // 异步
+  return content // 同步
+}
 ```
 
 一般在编写`loader`的过程中，保持功能单一，避免做多种功能
@@ -111,10 +111,10 @@ class MyPlugin {
     // 找到合适的事件钩子，实现自己的插件功能
     compiler.hooks.emit.tap('MyPlugin', (compilation) => {
       // compilation: 当前打包构建流程的上下文
-      console.log(compilation);
+      console.log(compilation)
 
       // do something...
-    });
+    })
   }
 }
 ```

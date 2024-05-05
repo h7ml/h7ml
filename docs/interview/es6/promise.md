@@ -33,21 +33,21 @@ head:
 在以往我们如果处理多层异步操作，我们往往会像下面那样编写我们的代码
 
 ```js
-doSomething(function (result) {
+doSomething((result) => {
   doSomethingElse(
     result,
-    function (newResult) {
+    (newResult) => {
       doThirdThing(
         newResult,
-        function (finalResult) {
-          console.log('得到最终结果: ' + finalResult);
+        (finalResult) => {
+          console.log(`得到最终结果: ${finalResult}`)
         },
         failureCallback
-      );
+      )
     },
     failureCallback
-  );
-}, failureCallback);
+  )
+}, failureCallback)
 ```
 
 阅读上面代码，是不是很难受，上述形成了经典的回调地狱
@@ -56,16 +56,16 @@ doSomething(function (result) {
 
 ```js
 doSomething()
-  .then(function (result) {
-    return doSomethingElse(result);
+  .then((result) => {
+    return doSomethingElse(result)
   })
-  .then(function (newResult) {
-    return doThirdThing(newResult);
+  .then((newResult) => {
+    return doThirdThing(newResult)
   })
-  .then(function (finalResult) {
-    console.log('得到最终结果: ' + finalResult);
+  .then((finalResult) => {
+    console.log(`得到最终结果: ${finalResult}`)
   })
-  .catch(failureCallback);
+  .catch(failureCallback)
 ```
 
 瞬间感受到`promise`解决异步操作的优点：
@@ -167,11 +167,11 @@ getJSON('/post/1.json')
 
 ```js
 const someAsyncThing = function () {
-  return new Promise(function (resolve, reject) {
+  return new Promise((resolve, reject) => {
     // 下面一行会报错，因为x没有声明
-    resolve(x + 2);
-  });
-};
+    resolve(x + 2)
+  })
+}
 ```
 
 浏览器运行到这一行，会打印出错误提示`ReferenceError: x is not defined`，但是不会退出进程
@@ -351,23 +351,23 @@ const preloadImage = function (path) {
 // 各司其职
 getInfo()
   .then((res) => {
-    let { bannerList } = res;
-    //渲染轮播图
-    console.log(bannerList);
-    return res;
+    const { bannerList } = res
+    // 渲染轮播图
+    console.log(bannerList)
+    return res
   })
   .then((res) => {
-    let { storeList } = res;
-    //渲染店铺列表
-    console.log(storeList);
-    return res;
+    const { storeList } = res
+    // 渲染店铺列表
+    console.log(storeList)
+    return res
   })
   .then((res) => {
-    let { categoryList } = res;
-    console.log(categoryList);
-    //渲染分类列表
-    return res;
-  });
+    const { categoryList } = res
+    console.log(categoryList)
+    // 渲染分类列表
+    return res
+  })
 ```
 
 通过`all()`实现多个请求合并在一起，汇总所有请求结果，只需设置一个`loading`即可
@@ -377,51 +377,51 @@ function initLoad() {
   // loading.show() //加载loading
   Promise.all([getBannerList(), getStoreList(), getCategoryList()])
     .then((res) => {
-      console.log(res);
-      loading.hide(); //关闭loading
+      console.log(res)
+      loading.hide() // 关闭loading
     })
     .catch((err) => {
-      console.log(err);
-      loading.hide(); //关闭loading
-    });
+      console.log(err)
+      loading.hide() // 关闭loading
+    })
 }
-//数据初始化
-initLoad();
+// 数据初始化
+initLoad()
 ```
 
 通过`race`可以设置图片请求超时
 
 ```js
-//请求某个图片资源
+// 请求某个图片资源
 function requestImg() {
-  var p = new Promise(function (resolve, reject) {
-    var img = new Image();
+  const p = new Promise((resolve, reject) => {
+    const img = new Image()
     img.onload = function () {
-      resolve(img);
-    };
-    //img.src = "https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"; 正确的
-    img.src = 'https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg1';
-  });
-  return p;
+      resolve(img)
+    }
+    // img.src = "https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg"; 正确的
+    img.src = 'https://b-gold-cdn.xitu.io/v3/static/img/logo.a7995ad.svg1'
+  })
+  return p
 }
 
-//延时函数，用于给请求计时
+// 延时函数，用于给请求计时
 function timeout() {
-  var p = new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      reject('图片请求超时');
-    }, 5000);
-  });
-  return p;
+  const p = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      reject('图片请求超时')
+    }, 5000)
+  })
+  return p
 }
 
 Promise.race([requestImg(), timeout()])
-  .then(function (results) {
-    console.log(results);
+  .then((results) => {
+    console.log(results)
   })
-  .catch(function (reason) {
-    console.log(reason);
-  });
+  .catch((reason) => {
+    console.log(reason)
+  })
 ```
 
 ## 参考文献

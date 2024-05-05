@@ -68,14 +68,14 @@ const app = new Vue({
   data() {
     return {
       items: [{ title: 'foo' }, { title: 'baz' }],
-    };
+    }
   },
   computed: {
     isShow() {
-      return this.items && this.items.length > 0;
+      return this.items && this.items.length > 0
     },
   },
-});
+})
 ```
 
 模板指令的代码都会生成在`render`函数中，通过`app.$options.render`就能得到渲染函数

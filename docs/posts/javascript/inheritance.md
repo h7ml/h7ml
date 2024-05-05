@@ -35,20 +35,19 @@ Array 类型、Function 类型、Object 类型、Date 类型、RegExp 类型等�
 `__proto__`属性虽然在 ECMAScript 6 语言规范中标准化，但是不推荐被使用，现在更推荐使用 `Object.getPrototypeOf`，
 
 ```js
-Object.getPrototypeOf(person) === person.__proto__;
+Object.getPrototypeOf(person) === person.__proto__
 ```
 
 - 模拟原型链的查找
 
 ```js
 function getProperty(obj, propName) {
-  if (obj.hasOwnProperty(propName)) {
-    return obj[propName];
-  } else if (obj.__proto__ !== null) {
-    return getProperty(obj.__proto__, propName);
-  } else {
-    return undefined;
-  }
+  if (obj.hasOwnProperty(propName))
+    return obj[propName]
+  else if (obj.__proto__ !== null)
+    return getProperty(obj.__proto__, propName)
+  else
+    return undefined
 }
 ```
 
@@ -82,17 +81,17 @@ function getProperty(obj, propName) {
 
 ```js
 function createCar(color, passengers, brand) {
-  var car = new Object();
-  car.color = color;
-  car.passengers = passengers;
-  car.brand = brand;
+  const car = new Object()
+  car.color = color
+  car.passengers = passengers
+  car.brand = brand
   car.printBrand = function () {
-    console.log(this.brand);
-  };
-  return car;
+    console.log(this.brand)
+  }
+  return car
 }
 
-const car = createCar('red', ['a', 'b'], 'benz');
+const car = createCar('red', ['a', 'b'], 'benz')
 ```
 
 工厂模式很好理解，实例化一个对象，在把传入的参数放入该对象，再返回。
@@ -105,20 +104,20 @@ const car = createCar('red', ['a', 'b'], 'benz');
 
 ```js
 function Car(color, passengers, brand) {
-  this.color = color;
-  this.passengers = passengers;
-  this.brand = brand;
+  this.color = color
+  this.passengers = passengers
+  this.brand = brand
   this.printBrand = function () {
-    console.log(this.brand);
-  };
+    console.log(this.brand)
+  }
 }
-const car1 = new Car('red', ['a', 'b'], 'benz');
-const car2 = new Car('black', ['c', 'd'], 'BMW');
+const car1 = new Car('red', ['a', 'b'], 'benz')
+const car2 = new Car('black', ['c', 'd'], 'BMW')
 
-console.log(car1 instanceof Object); //true
-console.log(car1 instanceof Car); //true
-console.log(car2 instanceof Object); //true
-console.log(car2 instanceof Car); //true
+console.log(car1 instanceof Object) // true
+console.log(car1 instanceof Car) // true
+console.log(car2 instanceof Object) // true
+console.log(car2 instanceof Car) // true
 ```
 
 ![img](https://static.h7ml.cn/vitepress/assets/images/9P66Ik.png)
@@ -138,14 +137,15 @@ instanceof 主要用来判断对象是否属于某构造函数
 
 ```js
 function myInstanceOf(left, right) {
-  const prototype = right.prototype;
-  left = left.__proto__;
+  const prototype = right.prototype
+  left = left.__proto__
   while (true) {
-    if (left == undefined || left == null) return false;
-    if (left == prototype) {
-      return true;
-    }
-    left = left.__proto__;
+    if (left == undefined || left == null)
+      return false
+    if (left == prototype)
+      return true
+
+    left = left.__proto__
   }
 }
 ```
@@ -154,21 +154,21 @@ function myInstanceOf(left, right) {
 
 ```js
 function Car() {}
-car.prototype.color = 'red';
-car.prototype.passengers = ['a', 'b', 'c'];
-car.prototype.brand = 'benz';
+car.prototype.color = 'red'
+car.prototype.passengers = ['a', 'b', 'c']
+car.prototype.brand = 'benz'
 car.prototype.printBrand = function () {
-  console.log(this.brand);
-};
+  console.log(this.brand)
+}
 
-var car1 = new Car();
-var car2 = new Car();
-car1.color = 'blue';
-car1.passengers.push('d');
-console.log(car1.brand); //["a","b","c","d"]
-console.log(car2.brand); //["a","b","c","d"]
-console.log(car1.color); // "bule"
-console.log(car2.color); // "red"
+const car1 = new Car()
+const car2 = new Car()
+car1.color = 'blue'
+car1.passengers.push('d')
+console.log(car1.brand) // ["a","b","c","d"]
+console.log(car2.brand) // ["a","b","c","d"]
+console.log(car1.color) // "bule"
+console.log(car2.color) // "red"
 ```
 
 这个模式利用了对象的原型,将基本参数挂载在原型上面。
@@ -179,22 +179,22 @@ console.log(car2.color); // "red"
 
 ```js
 function Car(color, brand) {
-  this.color = color;
-  this.brand = brand;
-  this.passengers = ['a', 'b', 'c'];
+  this.color = color
+  this.brand = brand
+  this.passengers = ['a', 'b', 'c']
 }
 Car.prototype = {
   constructor: Car,
-  printBrand: function () {
-    console.log(this.brand);
+  printBrand() {
+    console.log(this.brand)
   },
-};
-var car1 = new Car('red', 'benz');
-var car2 = new Car('blue', 'BMW');
-car1.color = 'blue';
-car1.passengers('d');
-console.log(car1.brand); //["a","b","c"]
-console.log(car2.brand); //["a","b","c","d"]
+}
+const car1 = new Car('red', 'benz')
+const car2 = new Car('blue', 'BMW')
+car1.color = 'blue'
+car1.passengers('d')
+console.log(car1.brand) // ["a","b","c"]
+console.log(car2.brand) // ["a","b","c","d"]
 ```
 
 利用原型自定义构造函数，每个实例都会存在一份实例的副本，同时利用原型方法共享的特性，最大程度节省了内存，也提供了向构造函数中传递参数的功能。为最佳实践。
@@ -212,22 +212,22 @@ console.log(car2.brand); //["a","b","c","d"]
 
 ```js
 function OldCar() {
-  this.color = 'red';
-  this.passengers = ['a', 'b', 'c'];
+  this.color = 'red'
+  this.passengers = ['a', 'b', 'c']
 }
 OldCar.prototype.getOldColor = function () {
-  return this.color;
-};
-function NewCar() {
-  this.color = 'blue';
+  return this.color
 }
-NewCar.prototype = new OldCar();
+function NewCar() {
+  this.color = 'blue'
+}
+NewCar.prototype = new OldCar()
 
-var car = new NewCar();
-var car2 = new OldCar();
-console.log(car.getOldColor()); //"blue"
-console.log(car.passengers); // [ 'a', 'b', 'c' ]
-console.log(car2.getOldColor()); //"red"
+const car = new NewCar()
+const car2 = new OldCar()
+console.log(car.getOldColor()) // "blue"
+console.log(car.passengers) // [ 'a', 'b', 'c' ]
+console.log(car2.getOldColor()) // "red"
 ```
 
 原型链继承通俗易懂，利用原型链将两个类串起来。
@@ -242,11 +242,11 @@ console.log(car2.getOldColor()); //"red"
 
 ```js
 function OldCar(name = 'default name') {
-  this.passengers = ['a', 'b', 'c'];
-  this.name = name;
+  this.passengers = ['a', 'b', 'c']
+  this.name = name
 }
 function NewCar(name) {
-  OldCar.call(this, name);
+  OldCar.call(this, name)
 }
 ```
 
@@ -258,21 +258,21 @@ function NewCar(name) {
 
 ```js
 function OldCar(brand) {
-  this.brand = brand;
-  this.passengers = ['a', 'b', 'c'];
+  this.brand = brand
+  this.passengers = ['a', 'b', 'c']
 }
 OldCar.prototype.getBrand = function () {
-  return this.brand;
-};
-function NewCar(name, color) {
-  OldCar.call(this, name); //第一次调用
-  this.color = color;
+  return this.brand
 }
-NewCar.prototype = new OldCar(); //第二次调用
-NewCar.prototype.constructor = NewCar; //增强
+function NewCar(name, color) {
+  OldCar.call(this, name) // 第一次调用
+  this.color = color
+}
+NewCar.prototype = new OldCar() // 第二次调用
+NewCar.prototype.constructor = NewCar // 增强
 NewCar.prototype.getColor = function () {
-  return this.color;
-};
+  return this.color
+}
 ```
 
 组合继承集借用构造函数方法和原型链继承两者之长，复用了方法，也解决了引用类型的问题。
@@ -302,26 +302,26 @@ A.prototype.constructor = A
 
 ```js
 function OldCar(brand) {
-  this.brand = brand;
-  this.passengers = ['a', 'b', 'c'];
+  this.brand = brand
+  this.passengers = ['a', 'b', 'c']
 }
 OldCar.prototype.getBrand = function () {
-  return this.brand;
-};
+  return this.brand
+}
 function NewCar(name, color) {
-  OldCar.call(this, name);
-  this.color = color;
+  OldCar.call(this, name)
+  this.color = color
 }
 
-//继承开始
-var middleObj = Object.create(OldCar.prototype);
-middleObj.constructor = NewCar;
-NewCar.prototype = middleObj;
-//继承结束
+// 继承开始
+const middleObj = Object.create(OldCar.prototype)
+middleObj.constructor = NewCar
+NewCar.prototype = middleObj
+// 继承结束
 
 NewCar.prototype.getColor = function () {
-  return this.color;
-};
+  return this.color
+}
 ```
 
 ```js

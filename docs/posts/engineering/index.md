@@ -92,7 +92,7 @@ yarn add -D husky lint-staged @commitlint/cli @commitlint/config-conventional co
 ```js
 module.exports = {
   extends: ['@commitlint/config-conventional'],
-};
+}
 ```
 
 ### `@commitlint/config-conventional` type 说明
@@ -285,7 +285,7 @@ module.exports = {
           'EVENTS',
           'CONTENT',
         ],
-        alphabetical: true, //字母顺序
+        alphabetical: true, // 字母顺序
       },
     ],
   },
@@ -297,7 +297,7 @@ module.exports = {
       },
     },
   ],
-};
+}
 ```
 
 [.eslintrc.js 配置项说明](https://cn.eslint.org/docs/user-guide/configuring)

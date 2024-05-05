@@ -52,13 +52,13 @@ head:
 
 ```js
 // /app/lib/memory.js
-const os = require('os');
+const os = require('node:os')
 // 获取当前Node内存堆栈情况
-const { rss, heapUsed, heapTotal } = process.memoryUsage();
+const { rss, heapUsed, heapTotal } = process.memoryUsage()
 // 获取系统空闲内存
-const sysFree = os.freemem();
+const sysFree = os.freemem()
 // 获取系统总内存
-const sysTotal = os.totalmem();
+const sysTotal = os.totalmem()
 
 module.exports = {
   memory: () => {
@@ -66,9 +66,9 @@ module.exports = {
       sys: 1 - sysFree / sysTotal, // 系统内存占用率
       heap: heapUsed / headTotal, // Node堆内存占用率
       node: rss / sysTotal, // Node占用系统内存的比例
-    };
+    }
   },
-};
+}
 ```
 
 - rss：表示 node 进程占用的内存总量。
@@ -97,8 +97,8 @@ module.exports = {
 在你的项目入口文件中按照如下方式引入，当然请传入你的项目名称：
 
 ```js
-const easyMonitor = require('easy-monitor');
-easyMonitor('你的项目名称');
+const easyMonitor = require('easy-monitor')
+easyMonitor('你的项目名称')
 ```
 
 打开你的浏览器，访问 `http://localhost:12333` ，即可看到进程界面
@@ -126,21 +126,21 @@ easyMonitor('你的项目名称');
 在`Node`中，很多对象都实现了流，对于一个大文件可以通过流的形式发送，不需要将其完全读入内存
 
 ```js
-const http = require('http');
-const fs = require('fs');
+const http = require('node:http')
+const fs = require('node:fs')
 
 // bad
-http.createServer(function (req, res) {
-  fs.readFile(__dirname + '/data.txt', function (err, data) {
-    res.end(data);
-  });
-});
+http.createServer((req, res) => {
+  fs.readFile(`${__dirname}/data.txt`, (err, data) => {
+    res.end(data)
+  })
+})
 
 // good
-http.createServer(function (req, res) {
-  const stream = fs.createReadStream(__dirname + '/data.txt');
-  stream.pipe(res);
-});
+http.createServer((req, res) => {
+  const stream = fs.createReadStream(`${__dirname}/data.txt`)
+  stream.pipe(res)
+})
 ```
 
 ### 代码层面优化
@@ -175,18 +175,18 @@ for user_id in userIds
 如下面情况：
 
 ```js
-const buffer = fs.readFileSync(__dirname + '/source/index.htm');
+const buffer = fs.readFileSync(`${__dirname}/source/index.htm`)
 
 app.use(
   mount('/', async (ctx) => {
-    ctx.status = 200;
-    ctx.type = 'html';
-    ctx.body = buffer;
-    leak.push(fs.readFileSync(__dirname + '/source/index.htm'));
+    ctx.status = 200
+    ctx.type = 'html'
+    ctx.body = buffer
+    leak.push(fs.readFileSync(`${__dirname}/source/index.htm`))
   })
-);
+)
 
-const leak = [];
+const leak = []
 ```
 
 `leak`的内存非常大，造成内存泄露，应当避免这样的操作，通过减少内存使用，是提高服务性能的手段之一

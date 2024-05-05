@@ -80,7 +80,7 @@ head:
 创建新元素，接受一个参数，即要创建元素的标签名
 
 ```js
-const divEl = document.createElement('div');
+const divEl = document.createElement('div')
 ```
 
 #### createTextNode
@@ -88,7 +88,7 @@ const divEl = document.createElement('div');
 创建一个文本节点
 
 ```js
-const textEl = document.createTextNode('content');
+const textEl = document.createTextNode('content')
 ```
 
 #### createDocumentFragment
@@ -96,7 +96,7 @@ const textEl = document.createTextNode('content');
 用来创建一个文档碎片，它表示一种轻量级的文档，主要是用来存储临时节点，然后把文档碎片的内容一次性添加到`DOM`中
 
 ```js
-const fragment = document.createDocumentFragment();
+const fragment = document.createDocumentFragment()
 ```
 
 当请求把一个`DocumentFragment` 节点插入文档树时，插入的不是 `DocumentFragment`自身，而是它的所有子孙节点
@@ -106,8 +106,8 @@ const fragment = document.createDocumentFragment();
 创建属性节点，可以是自定义属性
 
 ```js
-const dataAttribute = document.createAttribute('custom');
-consle.log(dataAttribute);
+const dataAttribute = document.createAttribute('custom')
+consle.log(dataAttribute)
 ```
 
 ### 获取节点
@@ -117,11 +117,11 @@ consle.log(dataAttribute);
 传入任何有效的`css` 选择器，即可选中单个 `DOM`元素（首个）：
 
 ```js
-document.querySelector('.element');
-document.querySelector('#element');
-document.querySelector('div');
-document.querySelector('[name="username"]');
-document.querySelector('div + p > span');
+document.querySelector('.element')
+document.querySelector('#element')
+document.querySelector('div')
+document.querySelector('[name="username"]')
+document.querySelector('div + p > span')
 ```
 
 如果页面上没有指定的元素时，返回 `null`
@@ -131,7 +131,7 @@ document.querySelector('div + p > span');
 返回一个包含节点子树内所有与之相匹配的`Element`节点列表，如果没有相匹配的，则返回一个空节点列表
 
 ```js
-const notLive = document.querySelectorAll('p');
+const notLive = document.querySelectorAll('p')
 ```
 
 需要注意的是，该方法返回的是一个 `NodeList`的静态实例，它是一个静态的“快照”，而非“实时”的查询
@@ -139,24 +139,24 @@ const notLive = document.querySelectorAll('p');
 关于获取`DOM`元素的方法还有如下，就不一一述说
 
 ```js
-document.getElementById('id属性值');
-返回拥有指定id的对象的引用;
-document.getElementsByClassName('class属性值');
-返回拥有指定class的对象集合;
-document.getElementsByTagName('标签名');
-返回拥有指定标签名的对象集合;
-document.getElementsByName('name属性值');
-返回拥有指定名称的对象结合;
-document / element.querySelector('CSS选择器');
-仅返回第一个匹配的元素;
-document / element.querySelectorAll('CSS选择器');
-返回所有匹配的元素;
-document.documentElement;
-获取页面中的HTML标签;
-document.body;
-获取页面中的BODY标签;
-document.all[''];
-获取页面中的所有元素节点的对象集合型;
+document.getElementById('id属性值')
+返回拥有指定id的对象的引用
+document.getElementsByClassName('class属性值')
+返回拥有指定class的对象集合
+document.getElementsByTagName('标签名')
+返回拥有指定标签名的对象集合
+document.getElementsByName('name属性值')
+返回拥有指定名称的对象结合
+document / element.querySelector('CSS选择器')
+仅返回第一个匹配的元素
+document / element.querySelectorAll('CSS选择器')
+返回所有匹配的元素
+document.documentElement
+获取页面中的HTML标签
+document.body
+获取页面中的BODY标签
+document.all['']
+获取页面中的所有元素节点的对象集合型
 ```
 
 除此之外，每个`DOM`元素还有`parentNode`、`childNodes`、`firstChild`、`lastChild`、`nextSibling`、`previousSibling`属性，关系图如下图所示
@@ -171,11 +171,11 @@ document.all[''];
 
 ```js
 // 获取<p id="p">...</p >
-var p = document.getElementById('p');
+const p = document.getElementById('p')
 // 设置文本为abc:
-p.innerHTML = 'ABC'; // <p id="p">ABC</p >
+p.innerHTML = 'ABC' // <p id="p">ABC</p >
 // 设置HTML:
-p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ';
+p.innerHTML = 'ABC <span style="color:red">RED</span> XYZ'
 // <p>...</p >的内部结构已修改
 ```
 
@@ -200,11 +200,11 @@ p.innerText = '<script>alert("Hi")</script>';
 
 ```js
 // 获取<p id="p-id">...</p >
-const p = document.getElementById('p-id');
+const p = document.getElementById('p-id')
 // 设置CSS:
-p.style.color = '#ff0000';
-p.style.fontSize = '20px'; // 驼峰命名
-p.style.paddingTop = '2em';
+p.style.color = '#ff0000'
+p.style.fontSize = '20px' // 驼峰命名
+p.style.paddingTop = '2em'
 ```
 
 ### 添加节点
@@ -234,10 +234,10 @@ p.style.paddingTop = '2em';
 添加一个`p`元素
 
 ```js
-const js = document.getElementById('js');
-js.innerHTML = 'JavaScript';
-const list = document.getElementById('list');
-list.appendChild(js);
+const js = document.getElementById('js')
+js.innerHTML = 'JavaScript'
+const list = document.getElementById('list')
+list.appendChild(js)
 ```
 
 现在`HTML`结构变成了下面
@@ -269,7 +269,7 @@ list.appendChild(haskell);
 把子节点插入到指定的位置，使用方法如下：
 
 ```js
-parentElement.insertBefore(newElement, referenceElement);
+parentElement.insertBefore(newElement, referenceElement)
 ```
 
 子节点会插入到`referenceElement`之前
@@ -279,8 +279,8 @@ parentElement.insertBefore(newElement, referenceElement);
 在指定元素中添加一个属性节点，如果元素中已有该属性改变属性值
 
 ```js
-const div = document.getElementById('id');
-div.setAttribute('class', 'white'); //第一个参数属性名，第二个参数属性值。
+const div = document.getElementById('id')
+div.setAttribute('class', 'white') // 第一个参数属性名，第二个参数属性值。
 ```
 
 ### 删除节点
@@ -289,12 +289,12 @@ div.setAttribute('class', 'white'); //第一个参数属性名，第二个参数
 
 ```js
 // 拿到待删除节点:
-const self = document.getElementById('to-be-removed');
+const self = document.getElementById('to-be-removed')
 // 拿到父节点:
-const parent = self.parentElement;
+const parent = self.parentElement
 // 删除:
-const removed = parent.removeChild(self);
-removed === self; // true
+const removed = parent.removeChild(self)
+removed === self // true
 ```
 
 删除后的节点虽然不在文档树中了，但其实它还在内存中，可以随时再次被添加到别的位置

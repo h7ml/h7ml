@@ -15,16 +15,16 @@ star: true
 用过 Canvas 的都知道它的 API 比较多，使用起来也很麻烦，比如我想绘制一个圆形就要调一堆 API，对开发算不上友好。
 
 ```js
-const canvas = document.querySelector('canvas');
-const context = canvas.getContext('2d');
+const canvas = document.querySelector('canvas')
+const context = canvas.getContext('2d')
 // 设置字体样式
-context.font = '24px SimSun, Songti SC';
-context.fillText('24px的宋体呈现', 20, 50);
+context.font = '24px SimSun, Songti SC'
+context.fillText('24px的宋体呈现', 20, 50)
 // 绘制完整圆
-context.fillStyle = 'RGB(255, 0, 0)';
-context.beginPath();
-context.arc(150, 75, 50, 0, Math.PI * 2);
-context.stroke();
+context.fillStyle = 'RGB(255, 0, 0)'
+context.beginPath()
+context.arc(150, 75, 50, 0, Math.PI * 2)
+context.stroke()
 ```
 
 为了解决这个痛点，诞生了例如 PIXI、ZRender、Fabric 等 Canvas 库。今天要讲的 Konva 也是一个很优秀的 Canvas 框架，API 封装简洁易懂，基于 TypeScript 实现，有 React 和 Vue 版本。
@@ -34,14 +34,14 @@ const stage = new Konva.Stage({
   container: 'root',
   width: 1000,
   height: 1000,
-});
-const layer = new Konva.Layer();
-const group = new Konva.Group();
+})
+const layer = new Konva.Layer()
+const group = new Konva.Group()
 
 const text = new Konva.Text({
   text: 'Hello, this is some good text',
   fontSize: 30,
-});
+})
 
 const circle = new Konva.Circle({
   x: stage.width() / 2,
@@ -50,11 +50,11 @@ const circle = new Konva.Circle({
   fill: 'red',
   stroke: 'black',
   strokeWidth: 4,
-});
-group.add(text);
-group.add(circle);
-layer.add(group);
-stage.add(layer);
+})
+group.add(text)
+group.add(circle)
+layer.add(group)
+stage.add(layer)
 ```
 
 ## 架构设计
@@ -257,17 +257,17 @@ Stage 创建的时候会去创建两个 Canvas 节点以及 content 容器节点
 Canvas 在绘制 stroke 和 fill 的时候，如果遇到透明度的时候，stroke 会和 fill 的一部分重合到一起，就不符合我们的预期了。比如下面这段代码：
 
 ```js
-const canvas = document.getElementById('canvas');
-const bufferCanvas = document.createElement('canvas');
-const bufferCtx = bufferCanvas.getContext('2d');
-const ctx = canvas.getContext('2d');
+const canvas = document.getElementById('canvas')
+const bufferCanvas = document.createElement('canvas')
+const bufferCtx = bufferCanvas.getContext('2d')
+const ctx = canvas.getContext('2d')
 
-ctx.strokeStyle = 'green';
-ctx.lineWidth = 10;
-ctx.strokeRect(30, 30, 50, 50);
-ctx.globalAlpha = 0.5;
-ctx.fillStyle = 'RGB(255, 0, 0)';
-ctx.fillRect(30, 30, 50, 50);
+ctx.strokeStyle = 'green'
+ctx.lineWidth = 10
+ctx.strokeRect(30, 30, 50, 50)
+ctx.globalAlpha = 0.5
+ctx.fillStyle = 'RGB(255, 0, 0)'
+ctx.fillRect(30, 30, 50, 50)
 ```
 
 它的实际展示效果是这样的，中间的 stroke 和 fill 有一部分重叠。 ![](https://camo.githubusercontent.com/4828d368c32e74643cbb46d198154e8d11830dc3610a082b9eca3f624f09449f/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f343537372f30343531323865362d303637332d343535662d383739302d6335336437346365353662622e706e67) 在这种情况下，KonvaJS 实现了一个 perfectDrawEnabled 功能，它会这样做：
@@ -280,30 +280,30 @@ ctx.fillRect(30, 30, 50, 50);
 ```js
 // if buffer canvas is needed
 if (this._useBufferCanvas() && !skipBuffer) {
-  stage = this.getStage();
-  bufferCanvas = stage.bufferCanvas;
-  bufferContext = bufferCanvas.getContext();
-  bufferContext.clear();
-  bufferContext.save();
-  bufferContext._applyLineJoin(this);
+  stage = this.getStage()
+  bufferCanvas = stage.bufferCanvas
+  bufferContext = bufferCanvas.getContext()
+  bufferContext.clear()
+  bufferContext.save()
+  bufferContext._applyLineJoin(this)
   // layer might be undefined if we are using cache before adding to layer
-  var o = this.getAbsoluteTransform(top).getMatrix();
-  bufferContext.transform(o[0], o[1], o[2], o[3], o[4], o[5]);
+  const o = this.getAbsoluteTransform(top).getMatrix()
+  bufferContext.transform(o[0], o[1], o[2], o[3], o[4], o[5])
 
   // 在 bufferCanvas 绘制 fill 和 stroke
-  drawFunc.call(this, bufferContext, this);
-  bufferContext.restore();
+  drawFunc.call(this, bufferContext, this)
+  bufferContext.restore()
 
-  var ratio = bufferCanvas.pixelRatio;
+  const ratio = bufferCanvas.pixelRatio
 
-  if (hasShadow) {
-    context._applyShadow(this);
-  }
+  if (hasShadow)
+    context._applyShadow(this)
+
   // 在 sceneCanvas 应用透明度
-  context._applyOpacity(this);
-  context._applyGlobalCompositeOperation(this);
+  context._applyOpacity(this)
+  context._applyGlobalCompositeOperation(this)
   // 将 bufferCanvas 绘制到 sceneCanvas
-  context.drawImage(bufferCanvas._canvas, 0, 0, bufferCanvas.width / ratio, bufferCanvas.height / ratio);
+  context.drawImage(bufferCanvas._canvas, 0, 0, bufferCanvas.width / ratio, bufferCanvas.height / ratio)
 }
 ```
 
@@ -356,10 +356,10 @@ EVENTS = [
 那么 Layer 是怎么根据点击坐标获取到对应的 Shape 呢？如果是规则的图形（矩形、圆形）还比较容易计算，要是下面这种不规则图形呢？ ![](https://camo.githubusercontent.com/56f41e90923fd22589829ba27314071b45fccabf3584bd84fef6096769120833/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f343537372f33353666323635322d663831332d343434362d393265612d3563383735363035303631342e706e67) 众所周知，在 Canvas 里面有个 `getImageData` 方法，它会根据传入的坐标来返回一个 ImageData 信息，里面有当前坐标对应的色值。那么我们能不能根据这个色值来获取到对应的 Shape 呢？ ![](https://camo.githubusercontent.com/e975ab71150c628666949ce3803e1e6d50e6045bd370850de3e2ae65f495aa20/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f343537372f36396264363065342d306335302d346465662d613564372d3665303531393761323663392e706e67) 因此，Konva 在创建 Layer 的时候会创建两个 Canvas，一个用于 sceneCanvas 用于绘制 Shape，另一个 hitCanvas 在内存里面，用于判断是否被打击。
 
 ```js
-canvas = new SceneCanvas();
+canvas = new SceneCanvas()
 hitCanvas = new HitCanvas({
   pixelRatio: 1,
-});
+})
 ```
 
 ![](https://camo.githubusercontent.com/352ea8233908db8e9464a7b814deb15ebf770b61c171ca4067da513109f29deb/68747470733a2f2f66696c65732e6d646e6963652e636f6d2f757365722f343537372f35333735653761642d393835332d343236302d613265312d6631633263643738366662642e706e67) 当 Shape 初始化的时候，会生成一个随机的颜色，以这个颜色作为 key 存入到 shapes 数组里面。
@@ -630,44 +630,42 @@ react-konva 的主要实现就在 ReactKonvaHostConfig.js 里面，它利用 Kon
 ```js
 // 创建一个实例
 export function createInstance(type, props, internalInstanceHandle) {
-  let NodeClass = Konva[type];
+  const NodeClass = Konva[type]
 
-  const propsWithoutEvents = {};
-  const propsWithOnlyEvents = {};
+  const propsWithoutEvents = {}
+  const propsWithOnlyEvents = {}
 
-  for (var key in props) {
-    var isEvent = key.slice(0, 2) === 'on';
-    if (isEvent) {
-      propsWithOnlyEvents[key] = props[key];
-    } else {
-      propsWithoutEvents[key] = props[key];
-    }
+  for (const key in props) {
+    const isEvent = key.slice(0, 2) === 'on'
+    if (isEvent)
+      propsWithOnlyEvents[key] = props[key]
+    else
+      propsWithoutEvents[key] = props[key]
   }
   // 根据传入的 type 来创建一个实例，相当于 new Layer、new Rect 等
-  const instance = new NodeClass(propsWithoutEvents);
+  const instance = new NodeClass(propsWithoutEvents)
   // 将传入的 props 设置到实例上面
   // 如果是普通的 prop，就直接通过 instance.setAttr 更新
   // 如果是 onClick 之类的事件，就通过 instance.on 来绑定
-  applyNodeProps(instance, propsWithOnlyEvents);
+  applyNodeProps(instance, propsWithOnlyEvents)
 
-  return instance;
+  return instance
 }
 // 插入子节点，直接调用 konva 的 add 方法
 export function appendChild(parentInstance, child) {
-  if (child.parent === parentInstance) {
-    child.moveToTop();
-  } else {
-    parentInstance.add(child);
-  }
+  if (child.parent === parentInstance)
+    child.moveToTop()
+  else
+    parentInstance.add(child)
 
-  updatePicture(parentInstance);
+  updatePicture(parentInstance)
 }
 
 // 移除子节点，直接调用 destroy 方法
 export function removeChild(parentInstance, child) {
-  child.destroy();
-  child.off(EVENTS_NAMESPACE);
-  updatePicture(parentInstance);
+  child.destroy()
+  child.off(EVENTS_NAMESPACE)
+  updatePicture(parentInstance)
 }
 
 // 通过设置 zIndex 实现 insertBefore
@@ -675,10 +673,10 @@ export function insertBefore(parentInstance, child, beforeChild) {
   // child._remove() will not stop dragging
   // but child.remove() will stop it, but we don't need it
   // removing will reset zIndexes
-  child._remove();
-  parentInstance.add(child);
-  child.setZIndex(beforeChild.getZIndex());
-  updatePicture(parentInstance);
+  child._remove()
+  parentInstance.add(child)
+  child.setZIndex(beforeChild.getZIndex())
+  updatePicture(parentInstance)
 }
 ```
 

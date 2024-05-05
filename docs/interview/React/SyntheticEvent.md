@@ -39,14 +39,14 @@ head:
 根据 `W3C`规范来定义合成事件，兼容所有浏览器，拥有与浏览器原生事件相同的接口，例如：
 
 ```jsx
-const button = <button onClick={handleClick}>按钮</button>;
+const button = <button onClick={handleClick}>按钮</button>
 ```
 
 如果想要获得原生`DOM`事件，可以通过`e.nativeEvent`属性获取
 
 ```js
-const handleClick = (e) => console.log(e.nativeEvent);
-const button = <button onClick={handleClick}>按钮</button>;
+const handleClick = e => console.log(e.nativeEvent)
+const button = <button onClick={handleClick}>按钮</button>
 ```
 
 从上面可以看到`React`事件和原生事件也非常的相似，但也有一定的区别：
@@ -55,20 +55,20 @@ const button = <button onClick={handleClick}>按钮</button>;
 
 ```jsx
 // 原生事件绑定方式
-<button onclick="handleClick()">按钮命名</button>;
+<button onclick="handleClick()">按钮命名</button>
 
 // React 合成事件绑定方式
-const button = <button onClick={handleClick}>按钮命名</button>;
+const button = <button onClick={handleClick}>按钮命名</button>
 ```
 
 - 事件处理函数书写不同
 
 ```jsx
 // 原生事件 事件处理函数写法
-<button onclick="handleClick()">按钮命名</button>;
+<button onclick="handleClick()">按钮命名</button>
 
 // React 合成事件 事件处理函数写法
-const button = <button onClick={handleClick}>按钮命名</button>;
+const button = <button onClick={handleClick}>按钮命名</button>
 ```
 
 虽然`onclick`看似绑定到`DOM`元素上，但实际并不会把事件代理函数直接绑定到真实的节点上，而是把所有的事件绑定到结构的最外层，使用一个统一的事件去监听
@@ -82,31 +82,35 @@ const button = <button onClick={handleClick}>按钮命名</button>;
 关于`React`合成事件与原生事件执行顺序，可以看看下面一个例子：
 
 ```jsx
-import React from 'react';
+import React from 'react'
 class App extends React.Component {
   constructor(props) {
-    super(props);
-    this.parentRef = React.createRef();
-    this.childRef = React.createRef();
+    super(props)
+    this.parentRef = React.createRef()
+    this.childRef = React.createRef()
   }
+
   componentDidMount() {
-    console.log('React componentDidMount！');
+    console.log('React componentDidMount！')
     this.parentRef.current?.addEventListener('click', () => {
-      console.log('原生事件：父元素 DOM 事件监听！');
-    });
+      console.log('原生事件：父元素 DOM 事件监听！')
+    })
     this.childRef.current?.addEventListener('click', () => {
-      console.log('原生事件：子元素 DOM 事件监听！');
-    });
+      console.log('原生事件：子元素 DOM 事件监听！')
+    })
     document.addEventListener('click', (e) => {
-      console.log('原生事件：document DOM 事件监听！');
-    });
+      console.log('原生事件：document DOM 事件监听！')
+    })
   }
+
   parentClickFun = () => {
-    console.log('React 事件：父元素事件监听！');
-  };
+    console.log('React 事件：父元素事件监听！')
+  }
+
   childClickFun = () => {
-    console.log('React 事件：子元素事件监听！');
-  };
+    console.log('React 事件：子元素事件监听！')
+  }
+
   render() {
     return (
       <div ref={this.parentRef} onClick={this.parentClickFun}>
@@ -114,10 +118,10 @@ class App extends React.Component {
           分析事件执行顺序
         </div>
       </div>
-    );
+    )
   }
 }
-export default App;
+export default App
 ```
 
 输出顺序为：

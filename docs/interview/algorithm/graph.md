@@ -65,7 +65,7 @@ const graph = {
   E: [6],
   F: [0, 6],
   G: [4, 5],
-};
+}
 ```
 
 图的数据结构还可能包含和每条边相关联的数值（edge value），例如一个标号或一个数值（即权重，weight；表示花费、容量、长度等）
@@ -90,7 +90,7 @@ const graph = {
   2: [2, 3],
   3: [],
   4: [3],
-};
+}
 ```
 
 ### 深度优先遍历
@@ -104,17 +104,17 @@ const graph = {
 用代码表示则如下：
 
 ```js
-const visited = new Set();
-const dfs = (n) => {
-  console.log(n);
-  visited.add(n); // 访问过添加记录
+const visited = new Set()
+function dfs(n) {
+  console.log(n)
+  visited.add(n) // 访问过添加记录
   graph[n].forEach((c) => {
     if (!visited.has(c)) {
       // 判断是否访问呢过
-      dfs(c);
+      dfs(c)
     }
-  });
-};
+  })
+}
 ```
 
 ### 广度优先遍历
@@ -129,21 +129,21 @@ const dfs = (n) => {
 用代码标识则如下：
 
 ```js
-const visited = new Set();
-const dfs = (n) => {
-  visited.add(n);
-  const q = [n];
+const visited = new Set()
+function dfs(n) {
+  visited.add(n)
+  const q = [n]
   while (q.length) {
-    const n = q.shift();
-    console.log(n);
+    const n = q.shift()
+    console.log(n)
     graph[n].forEach((c) => {
       if (!visited.has(c)) {
-        q.push(c);
-        visited.add(c);
+        q.push(c)
+        visited.add(c)
       }
-    });
+    })
   }
-};
+}
 ```
 
 ## 三、总结

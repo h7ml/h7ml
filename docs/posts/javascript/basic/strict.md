@@ -13,7 +13,7 @@ star: true
 ## 严格模式
 
 ```js
-'use strict';
+'use strict'
 // 函数体 告诉支持 JavaScript 引擎切换到严格模式
 // 这样写即使低版本的浏览器不支持严格模式也不会报错，他只是个字符串
 ```
@@ -64,7 +64,7 @@ script 这个元素是由网景公司创造出来，最早在 Netscape Navigator
 - 解决方法 通过转义字符 \ 解决这个问题
 
 ```js
-alert('</script>');
+alert('</script>')
 ```
 
 ### 异步脚本
@@ -86,9 +86,9 @@ alert('</script>');
 ## 动态脚本
 
 ```js
-let script = document.createElement('script');
-script.src = 'gibberish.js';
-document.head.appendChild(script);
+const script = document.createElement('script')
+script.src = 'gibberish.js'
+document.head.appendChild(script)
 // 元素添加到DOM之前不会发送请求，默认异步加载（相当于添加了async属性）
 ```
 

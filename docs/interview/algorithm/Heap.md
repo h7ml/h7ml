@@ -53,7 +53,7 @@ head:
 用一维数组存储则如下：
 
 ```js
-[0, 1, 2, 3, 4, 5, 6, 7, 8];
+[0, 1, 2, 3, 4, 5, 6, 7, 8]
 ```
 
 根据完全二叉树的特性，可以得到如下特性：
@@ -69,38 +69,39 @@ head:
 class MinHeap {
   constructor() {
     // 存储堆元素
-    this.heap = [];
+    this.heap = []
   }
+
   // 获取父元素坐标
   getParentIndex(i) {
-    return (i - 1) >> 1;
+    return (i - 1) >> 1
   }
 
   // 获取左节点元素坐标
   getLeftIndex(i) {
-    return i * 2 + 1;
+    return i * 2 + 1
   }
 
   // 获取右节点元素坐标
   getRightIndex(i) {
-    return i * 2 + 2;
+    return i * 2 + 2
   }
 
   // 交换元素
   swap(i1, i2) {
-    const temp = this.heap[i1];
-    this.heap[i1] = this.heap[i2];
-    this.heap[i2] = temp;
+    const temp = this.heap[i1]
+    this.heap[i1] = this.heap[i2]
+    this.heap[i2] = temp
   }
 
   // 查看堆顶元素
   peek() {
-    return this.heap[0];
+    return this.heap[0]
   }
 
   // 获取堆元素的大小
   size() {
-    return this.heap.length;
+    return this.heap.length
   }
 }
 ```

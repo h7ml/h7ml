@@ -45,17 +45,17 @@ head:
 基本代码如下所示：
 
 ```js
-const EventEmitter = require('events');
+const EventEmitter = require('node:events')
 
 class MyEmitter extends EventEmitter {}
-const myEmitter = new MyEmitter();
+const myEmitter = new MyEmitter()
 
 function callback() {
-  console.log('触发了event事件！');
+  console.log('触发了event事件！')
 }
-myEmitter.on('event', callback);
-myEmitter.emit('event');
-myEmitter.removeListener('event', callback);
+myEmitter.on('event', callback)
+myEmitter.emit('event')
+myEmitter.removeListener('event', callback)
 ```
 
 通过实例对象的`on`方法注册一个名为`event`的事件，通过`emit`方法触发该事件，而`removeListener`用于取消事件的监听
@@ -76,7 +76,7 @@ myEmitter.removeListener('event', callback);
 ```js
 class EventEmitter {
   constructor() {
-    this.events = {};
+    this.events = {}
   }
 }
 ```
@@ -166,60 +166,60 @@ once(type, handler) {
 ```js
 class EventEmitter {
   constructor() {
-    this.events = {};
+    this.events = {}
   }
 
   on(type, handler) {
-    if (!this.events[type]) {
-      this.events[type] = [];
-    }
-    this.events[type].push(handler);
+    if (!this.events[type])
+      this.events[type] = []
+
+    this.events[type].push(handler)
   }
 
   addListener(type, handler) {
-    this.on(type, handler);
+    this.on(type, handler)
   }
 
   prependListener(type, handler) {
-    if (!this.events[type]) {
-      this.events[type] = [];
-    }
-    this.events[type].unshift(handler);
+    if (!this.events[type])
+      this.events[type] = []
+
+    this.events[type].unshift(handler)
   }
 
   removeListener(type, handler) {
-    if (!this.events[type]) {
-      return;
-    }
-    this.events[type] = this.events[type].filter((item) => item !== handler);
+    if (!this.events[type])
+      return
+
+    this.events[type] = this.events[type].filter(item => item !== handler)
   }
 
   off(type, handler) {
-    this.removeListener(type, handler);
+    this.removeListener(type, handler)
   }
 
   emit(type, ...args) {
     this.events[type].forEach((item) => {
-      Reflect.apply(item, this, args);
-    });
+      Reflect.apply(item, this, args)
+    })
   }
 
   once(type, handler) {
-    this.on(type, this._onceWrap(type, handler, this));
+    this.on(type, this._onceWrap(type, handler, this))
   }
 
   _onceWrap(type, handler, target) {
-    const state = { fired: false, handler, type, target };
-    const wrapFn = this._onceWrapper.bind(state);
-    state.wrapFn = wrapFn;
-    return wrapFn;
+    const state = { fired: false, handler, type, target }
+    const wrapFn = this._onceWrapper.bind(state)
+    state.wrapFn = wrapFn
+    return wrapFn
   }
 
   _onceWrapper(...args) {
     if (!this.fired) {
-      this.fired = true;
-      Reflect.apply(this.handler, this.target, args);
-      this.target.off(this.type, this.wrapFn);
+      this.fired = true
+      Reflect.apply(this.handler, this.target, args)
+      this.target.off(this.type, this.wrapFn)
     }
   }
 }
@@ -228,32 +228,32 @@ class EventEmitter {
 测试代码如下：
 
 ```js
-const ee = new EventEmitter();
+const ee = new EventEmitter()
 
 // 注册所有事件
 ee.once('wakeUp', (name) => {
-  console.log(`${name} 1`);
-});
+  console.log(`${name} 1`)
+})
 ee.on('eat', (name) => {
-  console.log(`${name} 2`);
-});
+  console.log(`${name} 2`)
+})
 ee.on('eat', (name) => {
-  console.log(`${name} 3`);
-});
-const meetingFn = (name) => {
-  console.log(`${name} 4`);
-};
-ee.on('work', meetingFn);
+  console.log(`${name} 3`)
+})
+function meetingFn(name) {
+  console.log(`${name} 4`)
+}
+ee.on('work', meetingFn)
 ee.on('work', (name) => {
-  console.log(`${name} 5`);
-});
+  console.log(`${name} 5`)
+})
 
-ee.emit('wakeUp', 'xx');
-ee.emit('wakeUp', 'xx'); // 第二次没有触发
-ee.emit('eat', 'xx');
-ee.emit('work', 'xx');
-ee.off('work', meetingFn); // 移除事件
-ee.emit('work', 'xx'); // 再次工作
+ee.emit('wakeUp', 'xx')
+ee.emit('wakeUp', 'xx') // 第二次没有触发
+ee.emit('eat', 'xx')
+ee.emit('work', 'xx')
+ee.off('work', meetingFn) // 移除事件
+ee.emit('work', 'xx') // 再次工作
 ```
 
 ## 参考文献

@@ -76,25 +76,25 @@ function createWatcher (vm, expOrFn, handler, options) {
 
 ```js
 Vue.prototype.$watch = function (expOrFn, cb, options = {}) {
-  const vm = this;
+  const vm = this
   if (isPlainObject(cb)) {
     // 如果cb是对象，当手动创建监听属性时
-    return createWatcher(vm, expOrFn, cb, options);
+    return createWatcher(vm, expOrFn, cb, options)
   }
 
-  options.user = true; // user-watcher的标志位，传入Watcher类中
-  const watcher = new Watcher(vm, expOrFn, cb, options); // 实例化user-watcher
+  options.user = true // user-watcher的标志位，传入Watcher类中
+  const watcher = new Watcher(vm, expOrFn, cb, options) // 实例化user-watcher
 
   if (options.immediate) {
     // 立即执行
-    cb.call(vm, watcher.value); // 以当前值立即执行一次回调函数
+    cb.call(vm, watcher.value) // 以当前值立即执行一次回调函数
   } // watcher.value为实例化后返回的值
 
   return function unwatchFn() {
     // 返回一个函数，执行取消监听
-    watcher.teardown();
-  };
-};
+    watcher.teardown()
+  }
+}
 ```
 
 虽然`watch`内部是使用`this.$watch`，但是我们也是可以手动调用`this.$watch`来创建监听属性的，所以第二个参数`cb`会出现是对象的情况。接下来设置一个标记位`options.user`为`true`，表明这是一个`user-watcher`。
@@ -131,21 +131,23 @@ class Watcher {
 当是`user-watcher`时，`Watcher`内部是以上方式实例化的，通常情况下我们是使用字符串的形式创建监听属性，所以首先来看下`parsePath`方法是干什么的：
 
 ```js
-const bailRE = /[^\w.$]/; // 得是对象路径形式，如info.name
+const bailRE = /[^\w.$]/ // 得是对象路径形式，如info.name
 
 function parsePath(path) {
-  if (bailRE.test(path)) return; // 不匹配对象路径形式，再见
+  if (bailRE.test(path))
+    return // 不匹配对象路径形式，再见
 
-  const segments = path.split('.'); // 按照点分割为数组
+  const segments = path.split('.') // 按照点分割为数组
 
   return function (obj) {
     // 闭包返回一个函数
     for (let i = 0; i < segments.length; i++) {
-      if (!obj) return;
-      obj = obj[segments[i]]; // 依次读取到实例下对象末端的值
+      if (!obj)
+        return
+      obj = obj[segments[i]] // 依次读取到实例下对象末端的值
     }
-    return obj;
-  };
+    return obj
+  }
 }
 ```
 

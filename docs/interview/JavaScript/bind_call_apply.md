@@ -33,15 +33,15 @@ head:
 那么什么情况下需要改变`this`的指向呢？下面举个例子
 
 ```js
-var name = 'lucy';
-var obj = {
+const name = 'lucy'
+const obj = {
   name: 'martin',
-  say: function () {
-    console.log(this.name);
+  say() {
+    console.log(this.name)
   },
-};
-obj.say(); // martin，this 指向 obj 对象
-setTimeout(obj.say, 0); // lucy，this 指向 window 对象
+}
+obj.say() // martin，this 指向 obj 对象
+setTimeout(obj.say, 0) // lucy，this 指向 window 对象
 ```
 
 从上面可以看到，正常情况`say`方法输出`martin`
@@ -51,7 +51,7 @@ setTimeout(obj.say, 0); // lucy，this 指向 window 对象
 我们实际需要的是`this`指向`obj`对象，这时候就需要该改变`this`指向了
 
 ```js
-setTimeout(obj.say.bind(obj), 0); //martin，this指向obj对象
+setTimeout(obj.say.bind(obj), 0) // martin，this指向obj对象
 ```
 
 ## 二、区别
@@ -66,21 +66,21 @@ setTimeout(obj.say.bind(obj), 0); //martin，this指向obj对象
 
 ```js
 function fn(...args) {
-  console.log(this, args);
+  console.log(this, args)
 }
-let obj = {
+const obj = {
   myname: '张三',
-};
+}
 
-fn.apply(obj, [1, 2]); // this会变成传入的obj，传入的参数必须是一个数组；
-fn(1, 2); // this指向window
+fn.apply(obj, [1, 2]) // this会变成传入的obj，传入的参数必须是一个数组；
+fn(1, 2) // this指向window
 ```
 
 当第一个参数为`null`、`undefined`的时候，默认指向`window`(在浏览器中)
 
 ```js
-fn.apply(null, [1, 2]); // this指向window
-fn.apply(undefined, [1, 2]); // this指向window
+fn.apply(null, [1, 2]) // this指向window
+fn.apply(undefined, [1, 2]) // this指向window
 ```
 
 ### call
@@ -91,21 +91,21 @@ fn.apply(undefined, [1, 2]); // this指向window
 
 ```js
 function fn(...args) {
-  console.log(this, args);
+  console.log(this, args)
 }
-let obj = {
+const obj = {
   myname: '张三',
-};
+}
 
-fn.call(obj, 1, 2); // this会变成传入的obj，传入的参数必须是一个数组；
-fn(1, 2); // this指向window
+fn.call(obj, 1, 2) // this会变成传入的obj，传入的参数必须是一个数组；
+fn(1, 2) // this指向window
 ```
 
 同样的，当第一个参数为`null`、`undefined`的时候，默认指向`window`(在浏览器中)
 
 ```js
-fn.call(null, [1, 2]); // this指向window
-fn.call(undefined, [1, 2]); // this指向window
+fn.call(null, [1, 2]) // this指向window
+fn.call(undefined, [1, 2]) // this指向window
 ```
 
 ### bind
@@ -116,15 +116,15 @@ bind 方法和 call 很相似，第一参数也是`this`的指向，后面传入
 
 ```js
 function fn(...args) {
-  console.log(this, args);
+  console.log(this, args)
 }
-let obj = {
+const obj = {
   myname: '张三',
-};
+}
 
-const bindFn = fn.bind(obj); // this 也会变成传入的obj ，bind不是立即执行需要执行一次
-bindFn(1, 2); // this指向obj
-fn(1, 2); // this指向window
+const bindFn = fn.bind(obj) // this 也会变成传入的obj ，bind不是立即执行需要执行一次
+bindFn(1, 2) // this指向obj
+fn(1, 2) // this指向window
 ```
 
 ### 小结
@@ -145,10 +145,10 @@ fn(1, 2); // this指向window
 
 ```js
 // 方式一：只在bind中传递函数参数
-fn.bind(obj, 1, 2)();
+fn.bind(obj, 1, 2)()
 
 // 方式二：在bind中传递函数参数，也在返回函数中传递参数
-fn.bind(obj, 1)(2);
+fn.bind(obj, 1)(2)
 ```
 
 - 兼容`new`关键字
@@ -158,17 +158,16 @@ fn.bind(obj, 1)(2);
 ```js
 Function.prototype.myBind = function (context) {
   // 判断调用对象是否为函数
-  if (typeof this !== 'function') {
-    throw new TypeError('Error');
-  }
+  if (typeof this !== 'function')
+    throw new TypeError('Error')
 
   // 获取参数
-  const args = [...arguments].slice(1),
-    fn = this;
+  const args = [...arguments].slice(1)
+  const fn = this
 
   return function Fn() {
     // 根据调用方式，传入不同绑定值
-    return fn.apply(this instanceof Fn ? new fn(...arguments) : context, args.concat(...arguments));
-  };
-};
+    return fn.apply(this instanceof Fn ? new fn(...arguments) : context, args.concat(...arguments))
+  }
+}
 ```

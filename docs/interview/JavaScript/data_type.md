@@ -59,17 +59,17 @@ let hexNum1 = 0xa; //16进制的10
 浮点类型则在数值汇总必须包含小数点，还可通过科学计数法表示
 
 ```js
-let floatNum1 = 1.1;
-let floatNum2 = 0.1;
-let floatNum3 = 0.1; // 有效，但不推荐
-let floatNum = 3.125e7; // 等于 31250000
+const floatNum1 = 1.1
+const floatNum2 = 0.1
+const floatNum3 = 0.1 // 有效，但不推荐
+const floatNum = 3.125e7 // 等于 31250000
 ```
 
 在数值类型中，存在一个特殊数值`NaN`，意为“不是数值”，用于表示本来要返回数值的操作失败了（而不是抛出错误）
 
 ```js
-console.log(0 / 0); // NaN
-console.log(-0 / +0); // NaN
+console.log(0 / 0) // NaN
+console.log(-0 / +0) // NaN
 ```
 
 ### Undefined
@@ -77,17 +77,17 @@ console.log(-0 / +0); // NaN
 `Undefined` 类型只有一个值，就是特殊值 `undefined`。当使用 `var`或 `let`声明了变量但没有初始化时，就相当于给变量赋予了 `undefined`值
 
 ```js
-let message;
-console.log(message == undefined); // true
+let message
+console.log(message == undefined) // true
 ```
 
 包含`undefined` 值的变量跟未定义变量是有区别的
 
 ```js
-let message; // 这个变量被声明了，只是值为 undefined
+let message // 这个变量被声明了，只是值为 undefined
 
-console.log(message); // "undefined"
-console.log(age); // 没有声明过这个变量，报错
+console.log(message) // "undefined"
+console.log(age) // 没有声明过这个变量，报错
 ```
 
 ### String
@@ -103,8 +103,8 @@ let lastName = `Jingleheimerschmidt`;
 字符串是不可变的，意思是一旦创建，它们的值就不能变了
 
 ```js
-let lang = 'Java';
-lang = lang + 'Script'; // 先销毁再创建
+let lang = 'Java'
+lang = `${lang}Script` // 先销毁再创建
 ```
 
 ### Null
@@ -114,14 +114,14 @@ lang = lang + 'Script'; // 先销毁再创建
 逻辑上讲， null 值表示一个空对象指针，这也是给`typeof`传一个 `null` 会返回 `"object"` 的原因
 
 ```js
-let car = null;
-console.log(typeof car); // "object"
+const car = null
+console.log(typeof car) // "object"
 ```
 
 `undefined` 值是由 `null`值派生而来
 
 ```js
-console.log(null == undefined); // true
+console.log(undefined == null) // true
 ```
 
 只要变量要保存对象，而当时又没有那个对象可保存，就可用 `null`来填充该变量
@@ -147,13 +147,13 @@ Undefined      N/A （不存在）       undefined
 Symbol （符号）是原始值，且符号实例是唯一、不可变的。符号的用途是确保对象属性使用唯一标识符，不会发生属性冲突的危险
 
 ```js
-let genericSymbol = Symbol();
-let otherGenericSymbol = Symbol();
-console.log(genericSymbol == otherGenericSymbol); // false
+const genericSymbol = Symbol()
+const otherGenericSymbol = Symbol()
+console.log(genericSymbol == otherGenericSymbol) // false
 
-let fooSymbol = Symbol('foo');
-let otherFooSymbol = Symbol('foo');
-console.log(fooSymbol == otherFooSymbol); // false
+const fooSymbol = Symbol('foo')
+const otherFooSymbol = Symbol('foo')
+console.log(fooSymbol == otherFooSymbol) // false
 ```
 
 ## 二、引用类型
@@ -169,11 +169,11 @@ console.log(fooSymbol == otherFooSymbol); // false
 创建`object`常用方式为对象字面量表示法，属性名可以是字符串或数值
 
 ```js
-let person = {
+const person = {
   name: 'Nicholas',
   age: 29,
   5: true,
-};
+}
 ```
 
 ### Array
@@ -181,8 +181,8 @@ let person = {
 `JavaScript`数组是一组有序的数据，但跟其他语言不同的是，数组中每个槽位可以存储任意类型的数据。并且，数组也是动态大小的，会随着数据添加而自动增长
 
 ```js
-let colors = ['red', 2, { age: 20 }];
-colors.push(2);
+const colors = ['red', 2, { age: 20 }]
+colors.push(2)
 ```
 
 ### Function
@@ -196,16 +196,16 @@ colors.push(2);
 ```js
 // 函数声明
 function sum(num1, num2) {
-  return num1 + num2;
+  return num1 + num2
 }
 ```
 
 - 函数表达式
 
 ```js
-let sum = function (num1, num2) {
-  return num1 + num2;
-};
+const sum = function (num1, num2) {
+  return num1 + num2
+}
 ```
 
 - 箭头函数
@@ -213,9 +213,9 @@ let sum = function (num1, num2) {
 函数声明和函数表达式两种方式
 
 ```js
-let sum = (num1, num2) => {
-  return num1 + num2;
-};
+function sum(num1, num2) {
+  return num1 + num2
+}
 ```
 
 ### 其他引用类型
@@ -237,10 +237,10 @@ let sum = (num1, num2) => {
 ### 基本类型
 
 ```js
-let a = 10;
-let b = a; // 赋值操作
-b = 20;
-console.log(a); // 10值
+const a = 10
+let b = a // 赋值操作
+b = 20
+console.log(a) // 10值
 ```
 
 `a`的值为一个基本类型，是存储在栈中，将`a`的值赋给`b`，虽然两个变量的值相等，但是两个变量保存了两个不同的内存地址
@@ -252,10 +252,10 @@ console.log(a); // 10值
 ### 引用类型
 
 ```js
-var obj1 = {};
-var obj2 = obj1;
-obj2.name = 'Xxx';
-console.log(obj1.name); // xxx
+const obj1 = {}
+const obj2 = obj1
+obj2.name = 'Xxx'
+console.log(obj1.name) // xxx
 ```
 
 引用类型数据存放在堆中，每个堆内存对象都有对应的引用地址指向它，引用地址存放在栈中。

@@ -32,12 +32,12 @@ head:
 
 ```js
 function log(x, y = 'World') {
-  console.log(x, y);
+  console.log(x, y)
 }
 
-console.log('Hello'); // Hello World
-console.log('Hello', 'China'); // Hello China
-console.log('Hello', ''); // Hello
+console.log('Hello') // Hello World
+console.log('Hello', 'China') // Hello China
+console.log('Hello', '') // Hello
 ```
 
 函数的形参是默认声明的，不能使用`let`或`const`再次声明
@@ -53,23 +53,23 @@ function foo(x = 5) {
 
 ```js
 function foo({ x, y = 5 }) {
-  console.log(x, y);
+  console.log(x, y)
 }
 
-foo({}); // undefined 5
-foo({ x: 1 }); // 1 5
-foo({ x: 1, y: 2 }); // 1 2
-foo(); // TypeError: Cannot read property 'x' of undefined
+foo({}) // undefined 5
+foo({ x: 1 }) // 1 5
+foo({ x: 1, y: 2 }) // 1 2
+foo() // TypeError: Cannot read property 'x' of undefined
 ```
 
 上面的`foo`函数，当参数为对象的时候才能进行解构，如果没有提供参数的时候，变量`x`和`y`就不会生成，从而报错，这里设置默认值避免
 
 ```js
 function foo({ x, y = 5 } = {}) {
-  console.log(x, y);
+  console.log(x, y)
 }
 
-foo(); // undefined 5
+foo() // undefined 5
 ```
 
 参数默认值应该是函数的尾参数，如果不是非尾部的参数设置默认值，实际上这个参数是没发省略的
@@ -95,18 +95,18 @@ f(undefined, 1) // [1, 1]
 (function (a) {})
   .length(
     // 1
-    function (a = 5) {}
+    (a = 5) => {}
   )
   .length(
     // 0
-    function (a, b, c = 5) {}
-  ).length; // 2
+    (a, b, c = 5) => {}
+  ).length // 2
 ```
 
 `rest` 参数也不会计入`length`属性
 
 ```js
-(function (...args) {}).length; // 0
+(function (...args) {}).length // 0
 ```
 
 如果设置了默认值的参数不是尾参数，那么`length`属性也不再计入后面的参数了
@@ -114,8 +114,8 @@ f(undefined, 1) // [1, 1]
 ```js
 (function (a = 0, b, c) {}).length(
   // 0
-  function (a, b = 1, c) {}
-).length; // 1
+  (a, b = 1, c) => {}
+).length // 1
 ```
 
 ### name 属性
@@ -123,20 +123,20 @@ f(undefined, 1) // [1, 1]
 返回该函数的函数名
 
 ```js
-var f = function () {};
+const f = function () {}
 
 // ES5
-f.name; // ""
+f.name // ""
 
 // ES6
-f.name; // "f"
+f.name // "f"
 ```
 
 如果将一个具名函数赋值给一个变量，则 `name`属性都返回这个具名函数原本的名字
 
 ```js
-const bar = function baz() {};
-bar.name; // "baz"
+const bar = function baz() {}
+bar.name // "baz"
 ```
 
 `Function`构造函数返回的函数实例，`name`属性的值为`anonymous`
@@ -168,15 +168,15 @@ foo
 下面例子中，`y=x`会形成一个单独作用域，`x`没有被定义，所以指向全局变量`x`
 
 ```js
-let x = 1;
+const x = 1
 
 function f(y = x) {
   // 等同于 let y = x
-  let x = 2;
-  console.log(y);
+  const x = 2
+  console.log(y)
 }
 
-f(); // 1
+f() // 1
 ```
 
 ## 四、严格模式
@@ -216,42 +216,42 @@ const obj = {
 使用“箭头”（`=>`）定义函数
 
 ```js
-var f = (v) => v;
+var f = v => v
 
 // 等同于
 var f = function (v) {
-  return v;
-};
+  return v
+}
 ```
 
 如果箭头函数不需要参数或需要多个参数，就使用一个圆括号代表参数部分
 
 ```js
-var f = () => 5;
+var f = () => 5
 // 等同于
 var f = function () {
-  return 5;
-};
+  return 5
+}
 
-var sum = (num1, num2) => num1 + num2;
+var sum = (num1, num2) => num1 + num2
 // 等同于
 var sum = function (num1, num2) {
-  return num1 + num2;
-};
+  return num1 + num2
+}
 ```
 
 如果箭头函数的代码块部分多于一条语句，就要使用大括号将它们括起来，并且使用`return`语句返回
 
 ```js
-var sum = (num1, num2) => {
-  return num1 + num2;
-};
+function sum(num1, num2) {
+  return num1 + num2
+}
 ```
 
 如果返回对象，需要加括号将对象包裹
 
 ```js
-let getTempItem = (id) => ({ id: id, name: 'Temp' });
+const getTempItem = id => ({ id, name: 'Temp' })
 ```
 
 注意点：

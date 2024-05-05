@@ -43,7 +43,7 @@ head:
 例如：
 
 ```js
-const buffer = Buffer.from('why');
+const buffer = Buffer.from('why')
 ```
 
 其存储过程如下图所示：
@@ -63,55 +63,55 @@ const buffer = Buffer.from('why');
 ### Buffer.from()
 
 ```js
-const b1 = Buffer.from('10');
-const b2 = Buffer.from('10', 'utf8');
-const b3 = Buffer.from([10]);
-const b4 = Buffer.from(b3);
+const b1 = Buffer.from('10')
+const b2 = Buffer.from('10', 'utf8')
+const b3 = Buffer.from([10])
+const b4 = Buffer.from(b3)
 
-console.log(b1, b2, b3, b4); // <Buffer 31 30> <Buffer 31 30> <Buffer 0a> <Buffer 0a>
+console.log(b1, b2, b3, b4) // <Buffer 31 30> <Buffer 31 30> <Buffer 0a> <Buffer 0a>
 ```
 
 ### Buffer.alloc()
 
 ```js
-const bAlloc1 = Buffer.alloc(10); // 创建一个大小为 10 个字节的缓冲区
-const bAlloc2 = Buffer.alloc(10, 1); // 建一个长度为 10 的 Buffer,其中全部填充了值为 `1` 的字节
-console.log(bAlloc1); // <Buffer 00 00 00 00 00 00 00 00 00 00>
-console.log(bAlloc2); // <Buffer 01 01 01 01 01 01 01 01 01 01>
+const bAlloc1 = Buffer.alloc(10) // 创建一个大小为 10 个字节的缓冲区
+const bAlloc2 = Buffer.alloc(10, 1) // 建一个长度为 10 的 Buffer,其中全部填充了值为 `1` 的字节
+console.log(bAlloc1) // <Buffer 00 00 00 00 00 00 00 00 00 00>
+console.log(bAlloc2) // <Buffer 01 01 01 01 01 01 01 01 01 01>
 ```
 
 在上面创建`buffer`后，则能够`toString`的形式进行交互，默认情况下采取`utf8`字符编码形式，如下
 
 ```js
-const buffer = Buffer.from('你好');
-console.log(buffer);
+const buffer = Buffer.from('你好')
+console.log(buffer)
 // <Buffer e4 bd a0 e5 a5 bd>
-const str = buffer.toString();
-console.log(str);
+const str = buffer.toString()
+console.log(str)
 // 你好
 ```
 
 如果编码与解码不是相同的格式则会出现乱码的情况，如下：
 
 ```js
-const buffer = Buffer.from('你好', 'utf-8 ');
-console.log(buffer);
+const buffer = Buffer.from('你好', 'utf-8 ')
+console.log(buffer)
 // <Buffer e4 bd a0 e5 a5 bd>
-const str = buffer.toString('ascii');
-console.log(str);
+const str = buffer.toString('ascii')
+console.log(str)
 // d= e%=
 ```
 
 当设定的范围导致字符串被截断的时候，也会存在乱码情况，如下：
 
 ```js
-const buf = Buffer.from('Node.js 技术栈', 'UTF-8');
+const buf = Buffer.from('Node.js 技术栈', 'UTF-8')
 
-console.log(buf); // <Buffer 4e 6f 64 65 2e 6a 73 20 e6 8a 80 e6 9c af e6 a0 88>
-console.log(buf.length); // 17
+console.log(buf) // <Buffer 4e 6f 64 65 2e 6a 73 20 e6 8a 80 e6 9c af e6 a0 88>
+console.log(buf.length) // 17
 
-console.log(buf.toString('UTF-8', 0, 9)); // Node.js �
-console.log(buf.toString('UTF-8', 0, 11)); // Node.js 技
+console.log(buf.toString('UTF-8', 0, 9)) // Node.js �
+console.log(buf.toString('UTF-8', 0, 11)) // Node.js 技
 ```
 
 所支持的字符集有如下：
@@ -138,12 +138,12 @@ console.log(buf.toString('UTF-8', 0, 11)); // Node.js 技
 通过流的形式，将一个文件的内容读取到另外一个文件
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
-const inputStream = fs.createReadStream('input.txt'); // 创建可读流
-const outputStream = fs.createWriteStream('output.txt'); // 创建可写流
+const inputStream = fs.createReadStream('input.txt') // 创建可读流
+const outputStream = fs.createWriteStream('output.txt') // 创建可写流
 
-inputStream.pipe(outputStream); // 管道读写
+inputStream.pipe(outputStream) // 管道读写
 ```
 
 ### 加解密

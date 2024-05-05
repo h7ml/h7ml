@@ -38,14 +38,14 @@ head:
 
 ```js
 function init() {
-  var name = 'Mozilla'; // name 是一个被 init 创建的局部变量
+  const name = 'Mozilla' // name 是一个被 init 创建的局部变量
   function displayName() {
     // displayName() 是内部函数，一个闭包
-    alert(name); // 使用了父函数中声明的变量
+    alert(name) // 使用了父函数中声明的变量
   }
-  displayName();
+  displayName()
 }
-init();
+init()
 ```
 
 `displayName()` 没有自己的局部变量。然而，由于闭包的特性，它可以访问到外部函数的变量
@@ -66,17 +66,17 @@ init();
 ```js
 function makeSizer(size) {
   return function () {
-    document.body.style.fontSize = size + 'px';
-  };
+    document.body.style.fontSize = `${size}px`
+  }
 }
 
-var size12 = makeSizer(12);
-var size14 = makeSizer(14);
-var size16 = makeSizer(16);
+const size12 = makeSizer(12)
+const size14 = makeSizer(14)
+const size16 = makeSizer(16)
 
-document.getElementById('size-12').onclick = size12;
-document.getElementById('size-14').onclick = size14;
-document.getElementById('size-16').onclick = size16;
+document.getElementById('size-12').onclick = size12
+document.getElementById('size-14').onclick = size14
+document.getElementById('size-16').onclick = size16
 ```
 
 ### 柯里化函数
@@ -115,33 +115,33 @@ const getTwentyWidthArea = getArea(20);
 下面举个例子：
 
 ```js
-var Counter = (function () {
-  var privateCounter = 0;
+const Counter = (function () {
+  let privateCounter = 0
   function changeBy(val) {
-    privateCounter += val;
+    privateCounter += val
   }
   return {
-    increment: function () {
-      changeBy(1);
+    increment() {
+      changeBy(1)
     },
-    decrement: function () {
-      changeBy(-1);
+    decrement() {
+      changeBy(-1)
     },
-    value: function () {
-      return privateCounter;
+    value() {
+      return privateCounter
     },
-  };
-})();
+  }
+})()
 
-var Counter1 = makeCounter();
-var Counter2 = makeCounter();
-console.log(Counter1.value()); /* logs 0 */
-Counter1.increment();
-Counter1.increment();
-console.log(Counter1.value()); /* logs 2 */
-Counter1.decrement();
-console.log(Counter1.value()); /* logs 1 */
-console.log(Counter2.value()); /* logs 0 */
+const Counter1 = makeCounter()
+const Counter2 = makeCounter()
+console.log(Counter1.value()) /* logs 0 */
+Counter1.increment()
+Counter1.increment()
+console.log(Counter1.value()) /* logs 2 */
+Counter1.decrement()
+console.log(Counter1.value()) /* logs 1 */
+console.log(Counter2.value()) /* logs 0 */
 ```
 
 上述通过使用闭包来定义公共函数，并令其可以访问私有函数和变量，这种方式也叫模块方式
@@ -162,15 +162,15 @@ console.log(Counter2.value()); /* logs 0 */
 
 ```js
 function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
+  this.name = name.toString()
+  this.message = message.toString()
   this.getName = function () {
-    return this.name;
-  };
+    return this.name
+  }
 
   this.getMessage = function () {
-    return this.message;
-  };
+    return this.message
+  }
 }
 ```
 
@@ -178,13 +178,13 @@ function MyObject(name, message) {
 
 ```js
 function MyObject(name, message) {
-  this.name = name.toString();
-  this.message = message.toString();
+  this.name = name.toString()
+  this.message = message.toString()
 }
 MyObject.prototype.getName = function () {
-  return this.name;
-};
+  return this.name
+}
 MyObject.prototype.getMessage = function () {
-  return this.message;
-};
+  return this.message
+}
 ```

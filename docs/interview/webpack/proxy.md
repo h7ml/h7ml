@@ -46,7 +46,7 @@ head:
 
 ```js
 // ./webpack.config.js
-const path = require('path');
+const path = require('node:path')
 
 module.exports = {
   // ...
@@ -61,7 +61,7 @@ module.exports = {
     },
     // ...
   },
-};
+}
 ```
 
 `devServetr`里面`proxy`则是关于代理的配置，该属性为对象的形式，对象中每一个属性就是一个代理的规则匹配
@@ -82,13 +82,13 @@ module.exports = {
 在开发阶段，本地地址为`http://localhost:3000`，该浏览器发送一个前缀带有`/api`标识的请求到服务端获取数据，但响应这个请求的服务器只是将请求转发到另一台服务器中
 
 ```js
-const express = require('express');
-const proxy = require('http-proxy-middleware');
+const express = require('express')
+const proxy = require('http-proxy-middleware')
 
-const app = express();
+const app = express()
 
-app.use('/api', proxy({ target: 'http://www.example.org', changeOrigin: true }));
-app.listen(3000);
+app.use('/api', proxy({ target: 'http://www.example.org', changeOrigin: true }))
+app.listen(3000)
 
 // http://localhost:3000/api/foo/bar -> http://www.example.org/api/foo/bar
 ```

@@ -18,14 +18,14 @@
 
 ```js
 // 设置键 值
-localStorage.setItem('key', 'value'); // 设置键，值（必须 json 字符串）
-localStorage.key = 'value';
+localStorage.setItem('key', 'value') // 设置键，值（必须 json 字符串）
+localStorage.key = 'value'
 
 // 获取对应键值
-localStorage.getItem('key');
-localStorage.key;
+localStorage.getItem('key')
+localStorage.key
 
 // 删除键值
-localStorage.removeItem(name); // 删除对应键
-localstorage.clear(); // 清除所有
+localStorage.removeItem(name) // 删除对应键
+localstorage.clear() // 清除所有
 ```

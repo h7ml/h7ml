@@ -3,7 +3,7 @@
 ## Object.create()
 
 ```js
-Object.create(prototype, [descriptors]);
+Object.create(prototype, [descriptors])
 ```
 
 - 返回一个新对象
@@ -11,7 +11,7 @@ Object.create(prototype, [descriptors]);
 - 要添加的属性以及配置
 
 ```js
-var newObj = Object.create(obj, {
+const newObj = Object.create(obj, {
   sex: {
     // 键名
     value: '男', // 键值，默认 undefined
@@ -19,13 +19,13 @@ var newObj = Object.create(obj, {
     configurable: true, // 是否可以被删除。默认 false
     enumerable: true, // 是否支持可枚举(for in 访问)。默认值是 false
   },
-});
+})
 ```
 
 ## Object.defineProperty()
 
 ```js
-Object.defineProperty(obj, [propName], descriptor);
+Object.defineProperty(obj, [propName], descriptor)
 ```
 
 - 直接操作参数 1 obj 地址
@@ -33,21 +33,21 @@ Object.defineProperty(obj, [propName], descriptor);
 - descriptor: 配置选项
 
 ```js
-var obj = { sex1: '' };
+const obj = { sex1: '' }
 
 Object.defineProperties(obj, {
   sex: {
     // 也可以有 Object.create() 的配置
     set(value) {
       // 赋值时调用
-      this.sex1 = value;
+      this.sex1 = value
     },
     get() {
       // 获取值时调用
-      return this.sex1;
+      return this.sex1
     },
   },
-});
+})
 ```
 
 1. 可以多次调用 Object.defineProperty() 方法修改同一个属性，但把 configurable 设置为 false 之后就会报错。
@@ -61,7 +61,7 @@ Object.defineProperties(obj, props)
 - props：属性值
 
 ```js
-var obj = {};
+const obj = {}
 Object.defineProperties(obj, {
   property1: {
     value: true,
@@ -71,25 +71,25 @@ Object.defineProperties(obj, {
     value: 'Hello',
     writable: false,
   },
-});
+})
 ```
 
 ## Object.assign()
 
 ```js
-Object.assign(target, ...sources);
+Object.assign(target, ...sources)
 ```
 
 - 后面的 sources 源对象 拷贝到 target 目标对象上
 - 返回 target 对象
 
 ```js
-const target = { a: 1, b: 2 };
-const source = { b: 4, c: 5 };
-const returned = Object.assign(target, source);
+const target = { a: 1, b: 2 }
+const source = { b: 4, c: 5 }
+const returned = Object.assign(target, source)
 
-console.log(target); // Object { a: 1, b: 4, c: 5 }
-console.log(returned); // Object { a: 1, b: 4, c: 5 }
+console.log(target) // Object { a: 1, b: 4, c: 5 }
+console.log(returned) // Object { a: 1, b: 4, c: 5 }
 ```
 
 - 会调用源对象的 [[Get]]
@@ -98,33 +98,31 @@ console.log(returned); // Object { a: 1, b: 4, c: 5 }
 ## Object.keys()
 
 ```js
-var user = {
+const user = {
   name: 'tom',
   age: 25,
-};
+}
 
-var keys = Object.keys(user); // ['name','age'] 返回键的数组，参数可以是原型对象
+const keys = Object.keys(user) // ['name','age'] 返回键的数组，参数可以是原型对象
 
 // 只遍历键
-for (let key of Object.keys(obj)) {
-  console.log(key);
-}
+for (const key of Object.keys(obj))
+  console.log(key)
 ```
 
 ## Object.values()
 
 ```js
-var user = {
+const user = {
   name: 'tom',
   age: 25,
-};
-var keys = Object.values(user); // ["tom", 25]
+}
+const keys = Object.values(user) // ["tom", 25]
 
 // 只遍历值
 
-for (let item of Object.values(obj)) {
-  console.log(item);
-}
+for (const item of Object.values(obj))
+  console.log(item)
 ```
 
 ## Object.entries()
@@ -134,15 +132,14 @@ for (let item of Object.values(obj)) {
 - 以二维数组的形式，将对象中的每个键名和键值，进行数组分解。
 
 ```js
-for (let [key, item] of Object.entries(obj)) {
-  console.log(item, key);
-}
+for (const [key, item] of Object.entries(obj))
+  console.log(item, key)
 ```
 
 ## Object.getOwnPropertyNames()
 
 ```js
-Object.getOwnPropertyNames(Person.prototype); // ["constructor", "name", "job", "sayName"] 返回键的数
+Object.getOwnPropertyNames(Person.prototype) // ["constructor", "name", "job", "sayName"] 返回键的数
 ```
 
 包含 constructor
@@ -152,21 +149,21 @@ Object.getOwnPropertyNames(Person.prototype); // ["constructor", "name", "job", 
 ## Object.getOwnPropertySymbols()
 
 ```js
-Object.getOwnPropertySymbols(obj);
+Object.getOwnPropertySymbols(obj)
 // 参数：要返回 Symbol 属性的对象。
 // 返回值：对象自身上找到的所有 Symbol 属性的数组。
 
-var obj = {};
-var a = Symbol('a');
-var b = Symbol.for('b');
+var obj = {}
+const a = Symbol('a')
+const b = Symbol.for('b')
 
-obj[a] = 'localSymbol';
-obj[b] = 'globalSymbol';
+obj[a] = 'localSymbol'
+obj[b] = 'globalSymbol'
 
-var objectSymbols = Object.getOwnPropertySymbols(obj);
-console.log(objectSymbols.length); // 2
-console.log(objectSymbols); // [Symbol(a), Symbol(b)]
-console.log(objectSymbols[0]); // Symbol(a)
+const objectSymbols = Object.getOwnPropertySymbols(obj)
+console.log(objectSymbols.length) // 2
+console.log(objectSymbols) // [Symbol(a), Symbol(b)]
+console.log(objectSymbols[0]) // Symbol(a)
 ```
 
 ## Object.getOwnPropertyDescriptors()
@@ -174,7 +171,7 @@ console.log(objectSymbols[0]); // Symbol(a)
 返回同时包含常规和符号(symbol)属性描述符的对象，都没有则返回空对象
 
 ```js
-Object.getOwnPropertyDescriptors({ a: 1 });
+Object.getOwnPropertyDescriptors({ a: 1 })
 /* {
   a:{
     configurable: true
@@ -188,50 +185,50 @@ Object.getOwnPropertyDescriptors({ a: 1 });
 ## Object.is()
 
 ```js
-Object.is(value1, value2);
+Object.is(value1, value2)
 // 比较两个值是否相等，与 == 和 === 不一样。返回 true/false
 
-Object.is('foo', 'foo'); // true
-Object.is(window, window); // true
-Object.is([], []); // false
+Object.is('foo', 'foo') // true
+Object.is(window, window) // true
+Object.is([], []) // false
 
-var foo = { a: 1 };
-var bar = { a: 1 };
-Object.is(foo, foo); // true
-Object.is(foo, bar); // false
-Object.is(null, null); // true
+const foo = { a: 1 }
+const bar = { a: 1 }
+Object.is(foo, foo) // true
+Object.is(foo, bar) // false
+Object.is(null, null) // true
 
 // 特例
-Object.is(0, -0); // false
-Object.is(0, +0); // true
-Object.is(-0, -0); // true
-Object.is(NaN, 0 / 0); // true
+Object.is(0, -0) // false
+Object.is(0, +0) // true
+Object.is(-0, -0) // true
+Object.is(Number.NaN, 0 / 0) // true
 ```
 
 ## Object.getPrototypeOf()
 
 ```js
-Object.getPrototypeOf(object); // 返回参数的原型对象，没有继承属性则返回 null
-Object.getPrototypeOf(Object); // ƒ () { [native code] }
-Object.getPrototypeOf(Function); // ƒ () { [native code] }
-Object.getPrototypeOf(Object) === Function.prototype; // true
+Object.getPrototypeOf(object) // 返回参数的原型对象，没有继承属性则返回 null
+Object.getPrototypeOf(Object) // ƒ () { [native code] }
+Object.getPrototypeOf(Function) // ƒ () { [native code] }
+Object.getPrototypeOf(Object) === Function.prototype // true
 
-var obj = new Object();
-Object.prototype === Object.getPrototypeOf(obj); // true
-Object.prototype === Object.getPrototypeOf({}); // true
+const obj = new Object()
+Object.prototype === Object.getPrototypeOf(obj) // true
+Object.prototype === Object.getPrototypeOf({}) // true
 ```
 
 ## Object.freeze()
 
 ```js
-Object.freeze(obj); // 返回被冻结的对象; 返回传递的对象，不是创建一个被冻结的副本
+Object.freeze(obj) // 返回被冻结的对象; 返回传递的对象，不是创建一个被冻结的副本
 // 冻结一个对象，冻结后不能添加删除，包括配置，可枚举，可写性等;也包括原型上的属性
 ```
 
 ## Object.seal()
 
 ```js
-Object.seal(obj); // 返回被封闭的对象的引用
+Object.seal(obj) // 返回被封闭的对象的引用
 // 阻止添加新属性并将所有现有属性标记为不可配置。当前属性的值只要原来是可写的就可以改变。
 // 不会影响从原型链上继承的属性。但 __proto__ 属性的值也会不能修改。
 ```
@@ -241,8 +238,8 @@ Object.seal(obj); // 返回被封闭的对象的引用
 返回属性名是否在实例属性上
 
 ```js
-const obj = {};
-obj.prop = 42;
-console.log(obj.hasOwnProperty('prop')); // true
-console.log(obj.hasOwnProperty('toString')); // false
+const obj = {}
+obj.prop = 42
+console.log(obj.hasOwnProperty('prop')) // true
+console.log(obj.hasOwnProperty('toString')) // false
 ```

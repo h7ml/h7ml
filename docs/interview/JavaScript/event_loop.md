@@ -47,20 +47,20 @@ head:
 如果将任务划分为同步任务和异步任务并不是那么的准确，举个例子：
 
 ```js
-console.log(1);
+console.log(1)
 
 setTimeout(() => {
-  console.log(2);
-}, 0);
+  console.log(2)
+}, 0)
 
 new Promise((resolve, reject) => {
-  console.log('new Promise');
-  resolve();
+  console.log('new Promise')
+  resolve()
 }).then(() => {
-  console.log('then');
-});
+  console.log('then')
+})
 
-console.log(3);
+console.log(3)
 ```
 
 如果按照上面流程图来分析代码，我们会得到下面的执行步骤：
@@ -119,17 +119,17 @@ console.log(3);
 回到上面的题目
 
 ```js
-console.log(1);
+console.log(1)
 setTimeout(() => {
-  console.log(2);
-}, 0);
+  console.log(2)
+}, 0)
 new Promise((resolve, reject) => {
-  console.log('new Promise');
-  resolve();
+  console.log('new Promise')
+  resolve()
 }).then(() => {
-  console.log('then');
-});
-console.log(3);
+  console.log('then')
+})
+console.log(3)
 ```
 
 流程如下
@@ -154,12 +154,12 @@ console.log(3);
 
 ```js
 function f() {
-  return Promise.resolve('TEST');
+  return Promise.resolve('TEST')
 }
 
 // asyncF is equivalent to f!
 async function asyncF() {
-  return 'TEST';
+  return 'TEST'
 }
 ```
 
@@ -171,26 +171,26 @@ async function asyncF() {
 async function f() {
   // 等同于
   // return 123
-  return await 123;
+  return await 123
 }
-f().then((v) => console.log(v)); // 123
+f().then(v => console.log(v)) // 123
 ```
 
 不管`await`后面跟着的是什么，`await`都会阻塞后面的代码
 
 ```js
 async function fn1() {
-  console.log(1);
-  await fn2();
-  console.log(2); // 阻塞
+  console.log(1)
+  await fn2()
+  console.log(2) // 阻塞
 }
 
 async function fn2() {
-  console.log('fn2');
+  console.log('fn2')
 }
 
-fn1();
-console.log(3);
+fn1()
+console.log(3)
 ```
 
 上面的例子中，`await` 会阻塞下面的代码（即加入微任务队列），先执行 `async`外面的同步代码，同步代码执行完，再回到 `async` 函数中，再执行之前阻塞的代码
@@ -205,25 +205,25 @@ console.log(3);
 
 ```js
 async function async1() {
-  console.log('async1 start');
-  await async2();
-  console.log('async1 end');
+  console.log('async1 start')
+  await async2()
+  console.log('async1 end')
 }
 async function async2() {
-  console.log('async2');
+  console.log('async2')
 }
-console.log('script start');
-setTimeout(function () {
-  console.log('settimeout');
-});
-async1();
-new Promise(function (resolve) {
-  console.log('promise1');
-  resolve();
-}).then(function () {
-  console.log('promise2');
-});
-console.log('script end');
+console.log('script start')
+setTimeout(() => {
+  console.log('settimeout')
+})
+async1()
+new Promise((resolve) => {
+  console.log('promise1')
+  resolve()
+}).then(() => {
+  console.log('promise2')
+})
+console.log('script end')
 ```
 
 分析过程：

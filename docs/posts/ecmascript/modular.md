@@ -21,7 +21,7 @@ export {属性名，属性名 as 别名，方法名}
 暴露所有
 
 ```js
-export default {};
+export default {}
 ```
 
 使用模块：导入单个对应 export

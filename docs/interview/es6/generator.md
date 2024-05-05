@@ -200,25 +200,26 @@ fs.readFile('/etc/fstab', function (err, data) {
 `Promise`就是为了解决回调地狱而产生的，将回调函数的嵌套，改成链式调用
 
 ```js
-const fs = require('fs');
+const fs = require('node:fs')
 
 const readFile = function (fileName) {
-  return new Promise(function (resolve, reject) {
-    fs.readFile(fileName, function (error, data) {
-      if (error) return reject(error);
-      resolve(data);
-    });
-  });
-};
+  return new Promise((resolve, reject) => {
+    fs.readFile(fileName, (error, data) => {
+      if (error)
+        return reject(error)
+      resolve(data)
+    })
+  })
+}
 
 readFile('/etc/fstab')
   .then((data) => {
-    console.log(data);
-    return readFile('/etc/shells');
+    console.log(data)
+    return readFile('/etc/shells')
   })
   .then((data) => {
-    console.log(data);
-  });
+    console.log(data)
+  })
 ```
 
 这种链式操作形式，使异步任务的两段执行更清楚了，但是也存在了很明显的问题，代码变得冗杂了，语义化并不强
@@ -242,11 +243,11 @@ const gen = function* () {
 
 ```js
 const asyncReadFile = async function () {
-  const f1 = await readFile('/etc/fstab');
-  const f2 = await readFile('/etc/shells');
-  console.log(f1.toString());
-  console.log(f2.toString());
-};
+  const f1 = await readFile('/etc/fstab')
+  const f2 = await readFile('/etc/shells')
+  console.log(f1.toString())
+  console.log(f2.toString())
+}
 ```
 
 ### 区别
@@ -267,16 +268,16 @@ const asyncReadFile = async function () {
 
 ```js
 function* loadUI() {
-  showLoadingScreen();
-  yield loadUIDataAsynchronously();
-  hideLoadingScreen();
+  showLoadingScreen()
+  yield loadUIDataAsynchronously()
+  hideLoadingScreen()
 }
-var loader = loadUI();
+const loader = loadUI()
 // 加载UI
-loader.next();
+loader.next()
 
 // 卸载UI
-loader.next();
+loader.next()
 ```
 
 包括`redux-saga`中间件也充分利用了`Generator`特性
@@ -309,18 +310,17 @@ export default mySaga;
 
 ```js
 function* iterEntries(obj) {
-  let keys = Object.keys(obj);
+  const keys = Object.keys(obj)
   for (let i = 0; i < keys.length; i++) {
-    let key = keys[i];
-    yield [key, obj[key]];
+    const key = keys[i]
+    yield [key, obj[key]]
   }
 }
 
-let myObj = { foo: 3, bar: 7 };
+const myObj = { foo: 3, bar: 7 }
 
-for (let [key, value] of iterEntries(myObj)) {
-  console.log(key, value);
-}
+for (const [key, value] of iterEntries(myObj))
+  console.log(key, value)
 
 // foo 3
 // bar 7

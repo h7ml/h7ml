@@ -23,12 +23,12 @@ axios
       ID: '123',
     },
   })
-  .then(function (response) {
-    console.log(response);
+  .then((response) => {
+    console.log(response)
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  .catch((error) => {
+    console.log(error)
+  })
 
 axios
   .post(
@@ -41,12 +41,12 @@ axios
       headers: { 'Content-Type': 'application/json' },
     }
   )
-  .then(function (response) {
-    console.log(response);
+  .then((response) => {
+    console.log(response)
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  .catch((error) => {
+    console.log(error)
+  })
 ```
 
 可以看到上边的 `get` 和 `post` 传参并不统一，使用起来会比较繁琐，`post` 还需要手动传递 `headers` 。
@@ -119,41 +119,41 @@ class You {
 
 ```js
 // request.js
-import axios from 'axios';
+import axios from 'axios'
 export const get = function (url, params) {
-  return axios.get(url, { params });
-};
+  return axios.get(url, { params })
+}
 
 export const post = function (url, params) {
-  return axios.post(url, { ...params }, { headers: { 'Content-Type': 'application/json' } });
-};
+  return axios.post(url, { ...params }, { headers: { 'Content-Type': 'application/json' } })
+}
 ```
 
 然后引用 `request.js` 进行调用。
 
 ```js
-import { get, post } from './request';
+import { get, post } from './request'
 
 get('/api/user', {
   ID: '123',
 })
-  .then(function (response) {
-    console.log(response);
+  .then((response) => {
+    console.log(response)
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  .catch((error) => {
+    console.log(error)
+  })
 
 post('/api/user', {
   firstName: 'wind',
   lastName: 'liang',
 })
-  .then(function (response) {
-    console.log(response);
+  .then((response) => {
+    console.log(response)
   })
-  .catch(function (error) {
-    console.log(error);
-  });
+  .catch((error) => {
+    console.log(error)
+  })
 ```
 
 _补充一句：上边的封装只是为了演示外观模式的使用，实际项目中封装的会更加全面_

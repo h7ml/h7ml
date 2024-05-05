@@ -42,10 +42,10 @@ head:
 
 ```js
 function Vue(options) {
-  if (process.env.NODE_ENV !== 'production' && !(this instanceof Vue)) {
-    warn('Vue is a constructor and should be called with the `new` keyword');
-  }
-  this._init(options);
+  if (process.env.NODE_ENV !== 'production' && !(this instanceof Vue))
+    warn('Vue is a constructor and should be called with the `new` keyword')
+
+  this._init(options)
 }
 ```
 
@@ -54,11 +54,11 @@ function Vue(options) {
 `vue`构建函数调用`_init`方法，但我们发现本文件中并没有此方法，但仔细可以看到文件下方定定义了很多初始化方法
 
 ```js
-initMixin(Vue); // 定义 _init
-stateMixin(Vue); // 定义 $set $get $delete $watch 等
-eventsMixin(Vue); // 定义事件  $on  $once $off $emit
-lifecycleMixin(Vue); // 定义 _update  $forceUpdate  $destroy
-renderMixin(Vue); // 定义 _render 返回虚拟dom
+initMixin(Vue) // 定义 _init
+stateMixin(Vue) // 定义 $set $get $delete $watch 等
+eventsMixin(Vue) // 定义事件  $on  $once $off $emit
+lifecycleMixin(Vue) // 定义 _update  $forceUpdate  $destroy
+renderMixin(Vue) // 定义 _render 返回虚拟dom
 ```
 
 首先可以看`initMixin`方法，发现该方法在`Vue`原型上定义了`_init`方法

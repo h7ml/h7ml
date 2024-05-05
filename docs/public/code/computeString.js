@@ -4,15 +4,14 @@
  * @returns {{}}
  */
 function computeString(str) {
-  const obj = {};
+  const obj = {}
   for (let i = 0; i < str.length; i++) {
-    const key = str[i];
-    if (obj[key]) {
-      obj[key]++;
-    } else {
-      obj[key] = 1;
-    }
+    const key = str[i]
+    if (obj[key])
+      obj[key]++
+    else
+      obj[key] = 1
   }
-  return obj;
+  return obj
 }
-computeString('12121111');
+computeString('12121111')

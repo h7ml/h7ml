@@ -95,7 +95,6 @@ public class Main {
   电脑传统耳机孔  电脑传统耳机孔 = new 电脑传统耳机孔(传统耳机);
   电脑传统耳机孔.插入耳机(); // 插入到传统耳机孔成功
 
-
   Lightning耳机 Lightning耳机 = new Lightning耳机();
   电脑传统耳机孔  电脑传统耳机孔2 = new 电脑传统耳机孔(new Lightning耳机到传统耳机适配器(Lightning耳机));
   电脑传统耳机孔2.插入耳机(); // 插入到Lighting耳机接口成功
@@ -108,32 +107,32 @@ public class Main {
 ```js
 const Lightning耳机 = {
   插入Lighting接口() {
-    console.log('插入到Lighting耳机接口成功');
+    console.log('插入到Lighting耳机接口成功')
   },
-};
+}
 
 const 传统耳机 = {
   插入到传统耳机孔() {
-    console.log('插入到传统耳机孔成功');
+    console.log('插入到传统耳机孔成功')
   },
-};
+}
 
 const 电脑传统耳机孔 = {
   插入耳机(耳机) {
-    耳机.插入到传统耳机孔();
+    耳机.插入到传统耳机孔()
   },
-};
+}
 
 const Lightning耳机到传统耳机适配器 = function (Lightning耳机) {
   return {
     插入到传统耳机孔() {
-      Lightning耳机.插入Lighting接口();
+      Lightning耳机.插入Lighting接口()
     },
-  };
-};
+  }
+}
 
-电脑传统耳机孔.插入耳机(传统耳机); // 插入到传统耳机孔成功
-电脑传统耳机孔.插入耳机(Lightning耳机到传统耳机适配器(Lightning耳机)); // 插入到Lighting耳机接口成功
+电脑传统耳机孔.插入耳机(传统耳机) // 插入到传统耳机孔成功
+电脑传统耳机孔.插入耳机(Lightning耳机到传统耳机适配器(Lightning耳机)) // 插入到Lighting耳机接口成功
 ```
 
 # 代码实现
@@ -165,35 +164,33 @@ const Lightning耳机到传统耳机适配器 = function (Lightning耳机) {
 ```js
 // Create the request object
 // (This is still attached to ajaxSettings for backward compatibility)
-jQuery.ajaxSettings.xhr =
-  window.ActiveXObject !== undefined
+jQuery.ajaxSettings.xhr
+  = window.ActiveXObject !== undefined
     ? // Support: IE6-IE8
-      function () {
-        // XHR cannot access local files, always use ActiveX for that case
-        if (this.isLocal) {
-          return createActiveXHR();
-        }
+    function () {
+      // XHR cannot access local files, always use ActiveX for that case
+      if (this.isLocal)
+        return createActiveXHR()
 
-        // Support: IE 9-11
-        // IE seems to error on cross-domain PATCH requests when ActiveX XHR
-        // is used. In IE 9+ always use the native XHR.
-        // Note: this condition won't catch Edge as it doesn't define
-        // document.documentMode but it also doesn't support ActiveX so it won't
-        // reach this code.
-        if (document.documentMode > 8) {
-          return createStandardXHR();
-        }
+      // Support: IE 9-11
+      // IE seems to error on cross-domain PATCH requests when ActiveX XHR
+      // is used. In IE 9+ always use the native XHR.
+      // Note: this condition won't catch Edge as it doesn't define
+      // document.documentMode but it also doesn't support ActiveX so it won't
+      // reach this code.
+      if (document.documentMode > 8)
+        return createStandardXHR()
 
-        // Support: IE<9
-        // oldIE XHR does not support non-RFC2616 methods (#13240)
-        // See http://msdn.microsoft.com/en-us/library/ie/ms536648(v=vs.85).aspx
-        // and http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9
-        // Although this check for six methods instead of eight
-        // since IE also does not support "trace" and "connect"
-        return (/^(get|post|head|put|delete|options)$/i.test(this.type) && createStandardXHR()) || createActiveXHR();
-      }
+      // Support: IE<9
+      // oldIE XHR does not support non-RFC2616 methods (#13240)
+      // See http://msdn.microsoft.com/en-us/library/ie/ms536648(v=vs.85).aspx
+      // and http://www.w3.org/Protocols/rfc2616/rfc2616-sec9.html#sec9
+      // Although this check for six methods instead of eight
+      // since IE also does not support "trace" and "connect"
+      return (/^(get|post|head|put|delete|options)$/i.test(this.type) && createStandardXHR()) || createActiveXHR()
+    }
     : // For all other browsers, use the standard XMLHttpRequest object
-      createStandardXHR;
+    createStandardXHR
 ```
 
 # 易混设计模式

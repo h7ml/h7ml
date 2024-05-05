@@ -50,11 +50,12 @@ head:
 ```jsx
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
+    super(props)
+    this.myRef = React.createRef()
   }
+
   render() {
-    return <div ref="myref" />;
+    return <div ref="myref" />
   }
 }
 ```
@@ -62,7 +63,7 @@ class MyComponent extends React.Component {
 访问当前节点的方式如下：
 
 ```js
-this.refs.myref.innerHTML = 'hello';
+this.refs.myref.innerHTML = 'hello'
 ```
 
 ### 传入对象
@@ -72,11 +73,12 @@ this.refs.myref.innerHTML = 'hello';
 ```jsx
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
+    super(props)
+    this.myRef = React.createRef()
   }
+
   render() {
-    return <div ref={this.myRef} />;
+    return <div ref={this.myRef} />
   }
 }
 ```
@@ -84,7 +86,7 @@ class MyComponent extends React.Component {
 当 `ref` 被传递给 `render` 中的元素时，对该节点的引用可以在 `ref` 的 `current` 属性中访问
 
 ```js
-const node = this.myRef.current;
+const node = this.myRef.current
 ```
 
 ### 传入函数
@@ -94,11 +96,12 @@ const node = this.myRef.current;
 ```jsx
 class MyComponent extends React.Component {
   constructor(props) {
-    super(props);
-    this.myRef = React.createRef();
+    super(props)
+    this.myRef = React.createRef()
   }
+
   render() {
-    return <div ref={(element) => (this.myref = element)} />;
+    return <div ref={element => (this.myref = element)} />
   }
 }
 ```
@@ -106,7 +109,7 @@ class MyComponent extends React.Component {
 获取`ref`对象只需要通过先前存储的对象即可
 
 ```js
-const node = this.myref;
+const node = this.myref
 ```
 
 ### 传入 hook
@@ -115,19 +118,19 @@ const node = this.myref;
 
 ```jsx
 function App(props) {
-  const myref = useRef();
+  const myref = useRef()
   return (
     <>
       <div ref={myref}></div>
     </>
-  );
+  )
 }
 ```
 
 获取`ref`属性也是通过`hook`对象的`current`属性
 
 ```js
-const node = myref.current;
+const node = myref.current
 ```
 
 上述三种情况都是`ref`属性用于原生`HTML`元素上，如果`ref`设置的组件为一个类组件的时候，`ref`对象接收到的是组件的挂载实例

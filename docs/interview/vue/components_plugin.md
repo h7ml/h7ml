@@ -134,7 +134,7 @@ MyPlugin.install = function (Vue, options) {
 ```js
 Vue.component('my-component-name', {
   /* ... */
-});
+})
 ```
 
 局部注册只需在用到的地方通过`components`属性注册一个组件
@@ -156,7 +156,7 @@ export default {
 ```js
 Vue.use(插件名字, {
   /* ... */
-});
+})
 ```
 
 注意的是：

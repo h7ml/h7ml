@@ -73,29 +73,29 @@ console.log(a === b);
 
 ```js
 function Singleton(name) {
-  this.name = name;
+  this.name = name
 }
 // 原型扩展类的一个方法getName()
 Singleton.prototype.getName = function () {
-  console.log(this.name);
-};
+  console.log(this.name)
+}
 // 获取类的实例
 Singleton.getInstance = (function () {
-  var instance = null;
+  const instance = null
   return function (name) {
-    if (!this.instance) {
-      this.instance = new Singleton(name);
-    }
-    return this.instance;
-  };
-})();
+    if (!this.instance)
+      this.instance = new Singleton(name)
+
+    return this.instance
+  }
+})()
 
 // 获取对象1
-const a = Singleton.getInstance('a');
+const a = Singleton.getInstance('a')
 // 获取对象2
-const b = Singleton.getInstance('b');
+const b = Singleton.getInstance('b')
 // 进行比较
-console.log(a === b);
+console.log(a === b)
 ```
 
 也可以将上述的方法稍作修改，变成构造函数的形式，如下：
@@ -103,31 +103,31 @@ console.log(a === b);
 ```js
 // 单例构造函数
 function CreateSingleton(name) {
-  this.name = name;
-  this.getName();
+  this.name = name
+  this.getName()
 }
 
 // 获取实例的名字
 CreateSingleton.prototype.getName = function () {
-  console.log(this.name);
-};
+  console.log(this.name)
+}
 // 单例对象
 const Singleton = (function () {
-  var instance;
+  let instance
   return function (name) {
-    if (!instance) {
-      instance = new CreateSingleton(name);
-    }
-    return instance;
-  };
-})();
+    if (!instance)
+      instance = new CreateSingleton(name)
+
+    return instance
+  }
+})()
 
 // 创建实例对象1
-const a = new Singleton('a');
+const a = new Singleton('a')
 // 创建实例对象2
-const b = new Singleton('b');
+const b = new Singleton('b')
 
-console.log(a === b); // true
+console.log(a === b) // true
 ```
 
 ## 三、使用场景
@@ -138,30 +138,30 @@ console.log(a === b); // true
 
 ```js
 const getSingle = function (fn) {
-  let result;
+  let result
   return function () {
-    return result || (result = fn.apply(this, arguments));
-  };
-};
+    return result || (result = fn.apply(this, arguments))
+  }
+}
 ```
 
 创建弹窗的代码如下：
 
 ```js
 const createLoginLayer = function () {
-  var div = document.createElement('div');
-  div.innerHTML = '我是浮窗';
-  div.style.display = 'none';
-  document.body.appendChild(div);
-  return div;
-};
+  const div = document.createElement('div')
+  div.innerHTML = '我是浮窗'
+  div.style.display = 'none'
+  document.body.appendChild(div)
+  return div
+}
 
-const createSingleLoginLayer = getSingle(createLoginLayer);
+const createSingleLoginLayer = getSingle(createLoginLayer)
 
 document.getElementById('loginBtn').onclick = function () {
-  var loginLayer = createSingleLoginLayer();
-  loginLayer.style.display = 'block';
-};
+  const loginLayer = createSingleLoginLayer()
+  loginLayer.style.display = 'block'
+}
 ```
 
 上述这种实现称为惰性单例，意图解决需要时才创建类实例对象

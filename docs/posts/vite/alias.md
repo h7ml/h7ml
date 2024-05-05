@@ -16,9 +16,9 @@ star: true
 ![image-20220411165325332](https://static.h7ml.cn/vitepress/assets/images/vite/e6c9d24ely1h15vt7vddmj20hc0er0tj.jpg)
 
 ```ts
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import * as path from 'path';
+import * as path from 'node:path'
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
@@ -33,11 +33,11 @@ export default defineConfig({
       '/api': {
         target: 'http://xuanyuan.jinuo.fun:8080/',
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: path => path.replace(/^\/api/, ''),
       },
     },
   },
-});
+})
 ```
 
 2. Tsconfig.json

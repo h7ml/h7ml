@@ -41,13 +41,13 @@ trigger = (isBatchedUpdate: boolean) => {
 function scheduleUpdateOnFiber(fiber, lane, eventTime) {
   if (lane === SyncLane) {
     // 同步操作
-    ensureRootIsScheduled(root, eventTime);
+    ensureRootIsScheduled(root, eventTime)
     // 判断当前是否还在 React 事件流中
     // 如果不在，直接调用 flushSyncCallbackQueue 更新
-    if (executionContext === NoContext) {
-      flushSyncCallbackQueue();
-    }
-  } else {
+    if (executionContext === NoContext)
+      flushSyncCallbackQueue()
+  }
+  else {
     // 异步操作
   }
 }
@@ -59,18 +59,18 @@ function scheduleUpdateOnFiber(fiber, lane, eventTime) {
 
 ```js
 // executionContext 的默认状态
-var executionContext = NoContext;
+let executionContext = NoContext
 function batchedEventUpdates$1(fn, a) {
-  var prevExecutionContext = executionContext;
-  executionContext |= EventContext; // 修改状态
+  const prevExecutionContext = executionContext
+  executionContext |= EventContext // 修改状态
   try {
-    return fn(a);
-  } finally {
-    executionContext = prevExecutionContext;
+    return fn(a)
+  }
+  finally {
+    executionContext = prevExecutionContext
     // 调用结束后，调用 flushSyncCallbackQueue
-    if (executionContext === NoContext) {
-      flushSyncCallbackQueue();
-    }
+    if (executionContext === NoContext)
+      flushSyncCallbackQueue()
   }
 }
 ```

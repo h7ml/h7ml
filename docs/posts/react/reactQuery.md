@@ -51,19 +51,22 @@ React Query 通过提供 useQuery、useMutation 等 hooks，使得开发者能�
 #### 1. 缓存
 
 ```tsx
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 function App() {
   const { isLoading, error, data } = useQuery('todo', () =>
-    fetch('https://jsonplaceholder.typicode.com/todos/1').then((res) => res.json())
-  );
+    fetch('https://jsonplaceholder.typicode.com/todos/1').then(res => res.json()))
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading)
+    return <div>Loading...</div>
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    )
   }
 
   return (
@@ -71,112 +74,123 @@ function App() {
       <h1>Todo</h1>
       <div>{data.title}</div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 #### 2. 将对同一数据的多个请求简化为一个请求
 
 ```tsx
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 function App() {
   const { isLoading, error, data } = useQuery('todos', () =>
-    fetch('https://jsonplaceholder.typicode.com/todos').then((res) => res.json())
-  );
+    fetch('https://jsonplaceholder.typicode.com/todos').then(res => res.json()))
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading)
+    return <div>Loading...</div>
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    )
   }
 
   return (
     <ul>
-      {data.map((todo) => (
+      {data.map(todo => (
         <li key={todo.id}>{todo.title}</li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 #### 3. 在后台更新”过期”数据
 
 ```tsx
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 function App() {
   const { isLoading, error, data } = useQuery(
     'todos',
-    () => fetch('https://jsonplaceholder.typicode.com/todos').then((res) => res.json()),
+    () => fetch('https://jsonplaceholder.typicode.com/todos').then(res => res.json()),
     {
       refetchOnWindowFocus: false,
       staleTime: 10000, // 10 秒后数据过期，但仍会在后台更新
     }
-  );
+  )
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading)
+    return <div>Loading...</div>
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    )
   }
 
   return (
     <ul>
-      {data.map((todo) => (
+      {data.map(todo => (
         <li key={todo.id}>{todo.title}</li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 #### 4. 知道数据何时”过期”
 
 ```tsx
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 function App() {
   const { isLoading, error, data, isStale } = useQuery(
     'todos',
-    () => fetch('https://jsonplaceholder.typicode.com/todos').then((res) => res.json()),
+    () => fetch('https://jsonplaceholder.typicode.com/todos').then(res => res.json()),
     {
       staleTime: 10000, // 10 秒后数据过期
     }
-  );
+  )
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading)
+    return <div>Loading...</div>
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    )
   }
 
   return (
     <div>
       <ul>
-        {data.map((todo) => (
+        {data.map(todo => (
           <li key={todo.id}>{todo.title}</li>
         ))}
       </ul>
       {isStale && <div>Data is stale</div>}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 #### 5. 尽可能快地反映数据的更新
@@ -293,31 +307,34 @@ export default Todos;
 #### 7. 管理内存
 
 ```tsx
-import { useQuery } from 'react-query';
+import { useQuery } from 'react-query'
 
 function App() {
   const { isLoading, error, data } = useQuery('todos', () =>
-    fetch('https://jsonplaceholder.typicode.com/todos').then((res) => res.json())
-  );
+    fetch('https://jsonplaceholder.typicode.com/todos').then(res => res.json()))
 
-  if (isLoading) {
-    return <div>Loading...</div>;
-  }
+  if (isLoading)
+    return <div>Loading...</div>
 
   if (error) {
-    return <div>Error: {error.message}</div>;
+    return (
+      <div>
+        Error:
+        {error.message}
+      </div>
+    )
   }
 
   return (
     <ul>
-      {data.map((todo) => (
+      {data.map(todo => (
         <li key={todo.id}>{todo.title}</li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default App;
+export default App
 ```
 
 #### 8. 共享数据
@@ -398,15 +415,15 @@ npm install react-query
 安装完成后，在项目的根组件中引入 <code>QueryClient</code> 和 <code>QueryClientProvider</code>：
 
 ```jsx
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 function App() {
-  return <QueryClientProvider client={queryClient}>{/* 应用的其他部分 */}</QueryClientProvider>;
+  return <QueryClientProvider client={queryClient}>{/* 应用的其他部分 */}</QueryClientProvider>
 }
 
-export default App;
+export default App
 ```
 
 ### 2. 使用 useQuery 获取数据
@@ -414,35 +431,39 @@ export default App;
 React Query 提供了一个名为 <code>useQuery</code> 的 hook，可以用于获取远程数据。这是一个简单的示例：
 
 ```jsx
-import { useQuery } from 'react-query';
-import axios from 'axios';
+import { useQuery } from 'react-query'
+import axios from 'axios'
 
 async function fetchUsers() {
-  const response = await axios.get('https://api.example.com/users');
-  return response.data;
+  const response = await axios.get('https://api.example.com/users')
+  return response.data
 }
 
 function Users() {
-  const { data, isLoading, error } = useQuery('users', fetchUsers);
+  const { data, isLoading, error } = useQuery('users', fetchUsers)
 
-  if (isLoading) {
-    return <div>加载中...</div>;
-  }
+  if (isLoading)
+    return <div>加载中...</div>
 
   if (error) {
-    return <div>发生错误：{error.message}</div>;
+    return (
+      <div>
+        发生错误：
+        {error.message}
+      </div>
+    )
   }
 
   return (
     <ul>
-      {data.map((user) => (
+      {data.map(user => (
         <li key={user.id}>{user.name}</li>
       ))}
     </ul>
-  );
+  )
 }
 
-export default Users;
+export default Users
 ```
 
 ### 3. 优雅地处理错误和重试
@@ -452,8 +473,8 @@ React Query 默认会在请求失败时尝试重试 3 次。你还可以自定�
 ```jsx
 const { data, isLoading, error } = useQuery('users', fetchUsers, {
   retry: 5,
-  retryDelay: (attempt) => attempt * 1000,
-});
+  retryDelay: attempt => attempt * 1000,
+})
 ```
 
 ### 4. 缓存和自动更新
@@ -463,7 +484,7 @@ React Query 默认会缓存数据，减少不必要的请求。当组件卸载�
 ```jsx
 const { data, isLoading, error } = useQuery('users', fetchUsers, {
   refetchOnWindowFocus: true,
-});
+})
 ```
 
 ### 5. 使用 useMutation 发送数据
@@ -471,42 +492,42 @@ const { data, isLoading, error } = useQuery('users', fetchUsers, {
 React Query 还提供了 <code>useMutation</code> hook，用于处理数据的更改（如添加、修改、删除）。这是一个简单的示例：
 
 ```jsx
-import { useMutation } from 'react-query';
-import axios from 'axios';
+import { useMutation } from 'react-query'
+import axios from 'axios'
 async function addUser(newUser) {
-  const response = await axios.post('https://api.example.com/users', newUser);
-  return response.data;
+  const response = await axios.post('https://api.example.com/users', newUser)
+  return response.data
 }
 
 function CreateUser() {
   const mutation = useMutation(addUser, {
     onSuccess: () => {
       // 通知用户添加成功
-      alert('用户添加成功！');
+      alert('用户添加成功！')
     },
     onError: () => {
       // 通知用户添加失败
-      alert('用户添加失败，请重试。');
+      alert('用户添加失败，请重试。')
     },
-  });
+  })
 
   const handleSubmit = (e) => {
-    e.preventDefault();
+    e.preventDefault()
     const newUser = {
       name: e.target.name.value,
-    };
-    mutation.mutate(newUser);
-  };
+    }
+    mutation.mutate(newUser)
+  }
 
   return (
     <form onSubmit={handleSubmit}>
       <input type="text" name="name" placeholder="请输入用户名" />
       <button type="submit">添加用户</button>
     </form>
-  );
+  )
 }
 
-export default CreateUser;
+export default CreateUser
 ```
 
 在上面的示例中，`useMutation` hook 用于处理添加用户的操作。当添加成功时，会显示成功提示；如果添加失败，则显示失败提示。
@@ -516,23 +537,23 @@ export default CreateUser;
 使用 `QueryClient` 可以让你更好地控制 React Query 的行为。例如，你可以在添加用户成功后，使用户列表的缓存失效，以便立即获取更新后的数据：
 
 ```jsx
-import { useQueryClient } from 'react-query';
+import { useQueryClient } from 'react-query'
 
 function CreateUser() {
-  const queryClient = useQueryClient();
+  const queryClient = useQueryClient()
 
   const mutation = useMutation(addUser, {
     onSuccess: () => {
       // 使用户列表缓存失效
-      queryClient.invalidateQueries('users');
+      queryClient.invalidateQueries('users')
       // 通知用户添加成功
-      alert('用户添加成功！');
+      alert('用户添加成功！')
     },
     onError: () => {
       // 通知用户添加失败
-      alert('用户添加失败，请重试。');
+      alert('用户添加失败，请重试。')
     },
-  });
+  })
 
   // ... 其他代码
 }
@@ -547,8 +568,8 @@ function CreateUser() {
 创建一个 QueryClient 实例的方法如下：
 
 ```jsx
-import { QueryClient } from 'react-query';
-const queryClient = new QueryClient();
+import { QueryClient } from 'react-query'
+const queryClient = new QueryClient()
 ```
 
 在创建 QueryClient 时，你还可以传入配置选项来自定义其行为。例如：
@@ -561,7 +582,7 @@ const queryClient = new QueryClient({
       cacheTime: 1000 * 60 * 5, // 缓存数据的时长（毫秒）
     },
   },
-});
+})
 ```
 
 ## QueryClientProvider
@@ -569,15 +590,15 @@ const queryClient = new QueryClient({
 `QueryClientProvider` 是一个 React 组件，它的作用是将创建好的 QueryClient 实例传递给应用程序中的其他组件。你可以将它视为 React Query 的上下文提供者，它使得 React Query 可以在整个应用程序范围内工作。使用 QueryClientProvider 的方法如下：
 
 ```jsx
-import { QueryClient, QueryClientProvider } from 'react-query';
+import { QueryClient, QueryClientProvider } from 'react-query'
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient()
 
 function App() {
-  return <QueryClientProvider client={queryClient}>{/* 应用的其他部分 */}</QueryClientProvider>;
+  return <QueryClientProvider client={queryClient}>{/* 应用的其他部分 */}</QueryClientProvider>
 }
 
-export default App;
+export default App
 ```
 
 在项目的根组件中引入 QueryClientProvider 并传入 QueryClient 实例，这样你就可以在应用的任何地方使用 React Query 提供的 hooks，例如 useQuery 和 useMutation 等。
@@ -593,17 +614,17 @@ function CreateUser({ onStatusChange }) {
   // ...
   const mutation = useMutation(addUser, {
     onMutate: () => {
-      onStatusChange('pending');
+      onStatusChange('pending')
     },
     onSuccess: () => {
-      onStatusChange('success');
+      onStatusChange('success')
       // ...
     },
     onError: () => {
-      onStatusChange('error');
+      onStatusChange('error')
       // ...
     },
-  });
+  })
   // ...
 }
 ```
@@ -612,11 +633,11 @@ function CreateUser({ onStatusChange }) {
 
 ```jsx
 function App() {
-  const [status, setStatus] = useState('');
+  const [status, setStatus] = useState('')
 
   const handleStatusChange = (newStatus) => {
-    setStatus(newStatus);
-  };
+    setStatus(newStatus)
+  }
 
   return (
     <div>
@@ -625,7 +646,7 @@ function App() {
       {status === 'success' && <p>用户添加成功！</p>}
       {status === 'error' && <p>用户添加失败，请重试。</p>}
     </div>
-  );
+  )
 }
 ```
 

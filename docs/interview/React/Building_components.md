@@ -56,7 +56,12 @@ head:
 
 ```jsx
 function HelloComponent(props /* context */) {
-  return <div>Hello {props.name}</div>;
+  return (
+    <div>
+      Hello
+      {props.name}
+    </div>
+  )
 }
 ```
 
@@ -68,7 +73,7 @@ function HelloComponent(props /* context */) {
 
 ```jsx
 function HelloComponent(props) /* context */ {
-  return React.createElement('div', null, 'Hello ', props.name);
+  return React.createElement('div', null, 'Hello ', props.name)
 }
 ```
 
@@ -87,26 +92,31 @@ function HelloComponent(props) /* context */ {
 ```jsx
 class Timer extends React.Component {
   constructor(props) {
-    super(props);
-    this.state = { seconds: 0 };
+    super(props)
+    this.state = { seconds: 0 }
   }
 
   tick() {
-    this.setState((state) => ({
+    this.setState(state => ({
       seconds: state.seconds + 1,
-    }));
+    }))
   }
 
   componentDidMount() {
-    this.interval = setInterval(() => this.tick(), 1000);
+    this.interval = setInterval(() => this.tick(), 1000)
   }
 
   componentWillUnmount() {
-    clearInterval(this.interval);
+    clearInterval(this.interval)
   }
 
   render() {
-    return <div>Seconds: {this.state.seconds}</div>;
+    return (
+      <div>
+        Seconds:
+        {this.state.seconds}
+      </div>
+    )
   }
 }
 ```

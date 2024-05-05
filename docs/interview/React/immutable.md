@@ -66,19 +66,19 @@ immutable.js 是一个完全独立的库，无论基于什么框架都可以用�
 - fromJS()：将一个 js 数据转换为 Immutable 类型的数据
 
 ```js
-const obj = Immutable.fromJS({ a: '123', b: '234' });
+const obj = Immutable.fromJS({ a: '123', b: '234' })
 ```
 
 - toJS()：将一个 Immutable 数据转换为 JS 类型的数据
 - is()：对两个对象进行比较
 
 ```js
-import { Map, is } from 'immutable';
-const map1 = Map({ a: 1, b: 1, c: 1 });
-const map2 = Map({ a: 1, b: 1, c: 1 });
-map1 === map2; //false
-Object.is(map1, map2); // false
-is(map1, map2); // true
+import { Map, is } from 'immutable'
+const map1 = Map({ a: 1, b: 1, c: 1 })
+const map2 = Map({ a: 1, b: 1, c: 1 })
+map1 === map2 // false
+Object.is(map1, map2) // false
+is(map1, map2) // true
 ```
 
 - get(key)：对数据或对象取值
@@ -86,13 +86,13 @@ is(map1, map2); // true
 - getIn([]) ：对嵌套对象或数组取值，传参为数组，表示位置
 
 ```js
-let abs = Immutable.fromJS({ a: { b: 2 } });
-abs.getIn(['a', 'b']); // 2
-abs.getIn(['a', 'c']); // 子级没有值
+const abs = Immutable.fromJS({ a: { b: 2 } })
+abs.getIn(['a', 'b']) // 2
+abs.getIn(['a', 'c']) // 子级没有值
 
-let arr = Immutable.fromJS([1, 2, 3, { a: 5 }]);
-arr.getIn([3, 'a']); // 5
-arr.getIn([3, 'c']); // 子级没有值
+const arr = Immutable.fromJS([1, 2, 3, { a: 5 }])
+arr.getIn([3, 'a']) // 5
+arr.getIn([3, 'c']) // 子级没有值
 ```
 
 -
@@ -100,21 +100,21 @@ arr.getIn([3, 'c']); // 子级没有值
 如下例子：使用方法如下：
 
 ```js
-import Immutable from 'immutable';
-foo = Immutable.fromJS({ a: { b: 1 } });
-bar = foo.setIn(['a', 'b'], 2); // 使用 setIn 赋值
-console.log(foo.getIn(['a', 'b'])); // 使用 getIn 取值，打印 1
-console.log(foo === bar); //  打印 false
+import Immutable from 'immutable'
+foo = Immutable.fromJS({ a: { b: 1 } })
+bar = foo.setIn(['a', 'b'], 2) // 使用 setIn 赋值
+console.log(foo.getIn(['a', 'b'])) // 使用 getIn 取值，打印 1
+console.log(foo === bar) //  打印 false
 ```
 
 如果换到原生的`js`，则对应如下：
 
 ```js
-let foo = { a: { b: 1 } };
-let bar = foo;
-bar.a.b = 2;
-console.log(foo.a.b); // 打印 2
-console.log(foo === bar); //  打印 true
+const foo = { a: { b: 1 } }
+const bar = foo
+bar.a.b = 2
+console.log(foo.a.b) // 打印 2
+console.log(foo === bar) //  打印 true
 ```
 
 ## 三、在 React 中应用
@@ -162,42 +162,42 @@ getInitialState() {
 同理，在`redux`中也可以将数据进行`fromJS`处理
 
 ```js
-import * as constants from './constants';
-import { fromJS } from 'immutable';
+import { fromJS } from 'immutable'
+import * as constants from './constants'
 const defaultState = fromJS({
-  //将数据转化成immutable数据
+  // 将数据转化成immutable数据
   home: true,
   focused: false,
   mouseIn: false,
   list: [],
   page: 1,
   totalPage: 1,
-});
+})
 export default (state = defaultState, action) => {
   switch (action.type) {
     case constants.SEARCH_FOCUS:
-      return state.set('focused', true); //更改immutable数据
+      return state.set('focused', true) // 更改immutable数据
     case constants.CHANGE_HOME_ACTIVE:
-      return state.set('home', action.value);
+      return state.set('home', action.value)
     case constants.SEARCH_BLUR:
-      return state.set('focused', false);
+      return state.set('focused', false)
     case constants.CHANGE_LIST:
       // return state.set('list',action.data).set('totalPage',action.totalPage)
-      //merge效率更高，执行一次改变多个数据
+      // merge效率更高，执行一次改变多个数据
       return state.merge({
         list: action.data,
         totalPage: action.totalPage,
-      });
+      })
     case constants.MOUSE_ENTER:
-      return state.set('mouseIn', true);
+      return state.set('mouseIn', true)
     case constants.MOUSE_LEAVE:
-      return state.set('mouseIn', false);
+      return state.set('mouseIn', false)
     case constants.CHANGE_PAGE:
-      return state.set('page', action.page);
+      return state.set('page', action.page)
     default:
-      return state;
+      return state
   }
-};
+}
 ```
 
 ## 参考文献

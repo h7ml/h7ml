@@ -51,7 +51,7 @@ head:
 语法如下：
 
 ```ts
-T & U;
+T & U
 ```
 
 适用于对象合并场景，如下将声明一个函数，将两个对象合并成一个对象并返回：
@@ -78,7 +78,7 @@ function extend<T , U>(first: T, second: U) : T & U {
 语法如下：
 
 ```ts
-T | U;
+T | U
 ```
 
 例如 `number` | `string` | `boolean` 的类型只能是这三个的一种，不能共存

@@ -41,17 +41,17 @@ head:
 在`Vue2`中，无论我们使用什么功能，它们最终都会出现在生产代码中。主要原因是`Vue`实例在项目中是单例的，捆绑程序无法检测到该对象的哪些属性在代码中被使用到
 
 ```js
-import Vue from 'vue';
+import Vue from 'vue'
 
-Vue.nextTick(() => {});
+Vue.nextTick(() => {})
 ```
 
 而`Vue3`源码引入`tree shaking`特性，将全局 API 进行分块。如果您不使用其某些功能，它们将不会包含在您的基础包中
 
 ```js
-import { nextTick, observable } from 'vue';
+import { nextTick, observable } from 'vue'
 
-nextTick(() => {});
+nextTick(() => {})
 ```
 
 ## 二、如何做
@@ -118,17 +118,17 @@ export default {
 组件中简单使用
 
 ```js
-import { reactive, defineComponent } from 'vue';
+import { defineComponent, reactive } from 'vue'
 export default defineComponent({
   setup() {
     const state = reactive({
       count: 1,
-    });
+    })
     return {
       state,
-    };
+    }
   },
-});
+})
 ```
 
 将项目进行打包
@@ -138,29 +138,29 @@ export default defineComponent({
 在组件中引入`computed`和`watch`
 
 ```js
-import { reactive, defineComponent, computed, watch } from 'vue';
+import { computed, defineComponent, reactive, watch } from 'vue'
 export default defineComponent({
   setup() {
     const state = reactive({
       count: 1,
-    });
+    })
     const double = computed(() => {
-      return state.count * 2;
-    });
+      return state.count * 2
+    })
 
     watch(
       () => state.count,
       (count, preCount) => {
-        console.log(count);
-        console.log(preCount);
+        console.log(count)
+        console.log(preCount)
       }
-    );
+    )
     return {
       state,
       double,
-    };
+    }
   },
-});
+})
 ```
 
 再次对项目进行打包，可以看到在引入`computer`和`watch`之后，项目整体体积变大了

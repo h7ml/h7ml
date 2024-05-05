@@ -4,12 +4,11 @@
  * @returns {*[]}
  */
 function uniqueArray(arr) {
-  const newArr = [];
+  const newArr = []
   for (let i = 0; i < arr.length; i++) {
-    if (newArr.indexOf(arr[i]) === -1) {
-      newArr.push(arr[i]);
-    }
+    if (!newArr.includes(arr[i]))
+      newArr.push(arr[i])
   }
-  return newArr;
+  return newArr
 }
-uniqueArray([1, 2, 1, 2, 3, 1, 2]);
+uniqueArray([1, 2, 1, 2, 3, 1, 2])

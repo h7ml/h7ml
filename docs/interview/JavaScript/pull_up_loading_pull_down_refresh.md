@@ -62,21 +62,20 @@ head:
 综上我们得出一个触底公式：
 
 ```js
-scrollTop + clientHeight >= scrollHeight;
+scrollTop + clientHeight >= scrollHeight
 ```
 
 简单实现
 
 ```js
-let clientHeight = document.documentElement.clientHeight; //浏览器高度
-let scrollHeight = document.body.scrollHeight;
-let scrollTop = document.documentElement.scrollTop;
+const clientHeight = document.documentElement.clientHeight // 浏览器高度
+const scrollHeight = document.body.scrollHeight
+const scrollTop = document.documentElement.scrollTop
 
-let distance = 50; //距离视窗还用50的时候，开始触发；
+const distance = 50 // 距离视窗还用50的时候，开始触发；
 
-if (scrollTop + clientHeight >= scrollHeight - distance) {
-  console.log('开始加载数据');
-}
+if (scrollTop + clientHeight >= scrollHeight - distance)
+  console.log('开始加载数据')
 ```
 
 ### 下拉刷新
@@ -110,20 +109,20 @@ if (scrollTop + clientHeight >= scrollHeight - distance) {
 监听`touchstart`事件，记录初始的值
 
 ```js
-var _element = document.getElementById('refreshContainer'),
-  _refreshText = document.querySelector('.refreshText'),
-  _startPos = 0, // 初始的值
-  _transitionHeight = 0; // 移动的距离
+const _element = document.getElementById('refreshContainer')
+const _refreshText = document.querySelector('.refreshText')
+let _startPos = 0 // 初始的值
+const _transitionHeight = 0 // 移动的距离
 
 _element.addEventListener(
   'touchstart',
-  function (e) {
-    _startPos = e.touches[0].pageY; // 记录初始位置
-    _element.style.position = 'relative';
-    _element.style.transition = 'transform 0s';
+  (e) => {
+    _startPos = e.touches[0].pageY // 记录初始位置
+    _element.style.position = 'relative'
+    _element.style.transition = 'transform 0s'
   },
   false
-);
+)
 ```
 
 监听`touchmove`移动事件，记录滑动差值
@@ -131,21 +130,20 @@ _element.addEventListener(
 ```js
 _element.addEventListener(
   'touchmove',
-  function (e) {
+  (e) => {
     // e.touches[0].pageY 当前位置
-    _transitionHeight = e.touches[0].pageY - _startPos; // 记录差值
+    _transitionHeight = e.touches[0].pageY - _startPos // 记录差值
 
     if (_transitionHeight > 0 && _transitionHeight < 60) {
-      _refreshText.innerText = '下拉刷新';
-      _element.style.transform = 'translateY(' + _transitionHeight + 'px)';
+      _refreshText.innerText = '下拉刷新'
+      _element.style.transform = `translateY(${_transitionHeight}px)`
 
-      if (_transitionHeight > 55) {
-        _refreshText.innerText = '释放更新';
-      }
+      if (_transitionHeight > 55)
+        _refreshText.innerText = '释放更新'
     }
   },
   false
-);
+)
 ```
 
 最后，就是监听`touchend`离开的事件
@@ -153,14 +151,14 @@ _element.addEventListener(
 ```js
 _element.addEventListener(
   'touchend',
-  function (e) {
-    _element.style.transition = 'transform 0.5s ease 1s';
-    _element.style.transform = 'translateY(0px)';
-    _refreshText.innerText = '更新中...';
+  (e) => {
+    _element.style.transition = 'transform 0.5s ease 1s'
+    _element.style.transform = 'translateY(0px)'
+    _refreshText.innerText = '更新中...'
     // todo...
   },
   false
-);
+)
 ```
 
 从上面可以看到，在下拉到松手的过程中，经历了三个阶段：
@@ -190,11 +188,11 @@ HTML 结构
 实例化上拉下拉插件，通过`use`来注册插件
 
 ```js
-import BScroll from '@better-scroll/core';
-import PullDown from '@better-scroll/pull-down';
-import PullUp from '@better-scroll/pull-up';
-BScroll.use(PullDown);
-BScroll.use(PullUp);
+import BScroll from '@better-scroll/core'
+import PullDown from '@better-scroll/pull-down'
+import PullUp from '@better-scroll/pull-up'
+BScroll.use(PullDown)
+BScroll.use(PullUp)
 ```
 
 实例化`BetterScroll`，并传入相关的参数

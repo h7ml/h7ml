@@ -67,7 +67,7 @@ module.exports = {
       },
     ],
   },
-};
+}
 ```
 
 ### 合理使用 resolve.extensions
@@ -180,7 +180,7 @@ module.exports = {
       },
     ],
   },
-};
+}
 ```
 
 ### terser 启动多线程
@@ -196,7 +196,7 @@ module.exports = {
       }),
     ],
   },
-};
+}
 ```
 
 ### 合理使用 sourceMap

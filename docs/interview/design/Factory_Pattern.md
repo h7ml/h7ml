@@ -57,33 +57,33 @@ head:
 ```js
 function Factory(career) {
   function User(career, work) {
-    this.career = career;
-    this.work = work;
+    this.career = career
+    this.work = work
   }
-  let work;
+  let work
   switch (career) {
     case 'coder':
-      work = ['写代码', '修Bug'];
-      return new User(career, work);
-      break;
+      work = ['写代码', '修Bug']
+      return new User(career, work)
+      break
     case 'hr':
-      work = ['招聘', '员工信息管理'];
-      return new User(career, work);
-      break;
+      work = ['招聘', '员工信息管理']
+      return new User(career, work)
+      break
     case 'driver':
-      work = ['开车'];
-      return new User(career, work);
-      break;
+      work = ['开车']
+      return new User(career, work)
+      break
     case 'boss':
-      work = ['喝茶', '开会', '审批文件'];
-      return new User(career, work);
-      break;
+      work = ['喝茶', '开会', '审批文件']
+      return new User(career, work)
+      break
   }
 }
-let coder = new Factory('coder');
-console.log(coder);
-let boss = new Factory('boss');
-console.log(boss);
+const coder = new Factory('coder')
+console.log(coder)
+const boss = new Factory('boss')
+console.log(boss)
 ```
 
 `Factory`就是一个简单工厂。当我们调用工厂函数时，只需要传递 name、age、career 就可以获取到包含用户工作内容的实例对象
@@ -102,35 +102,36 @@ console.log(boss);
 // 工厂方法
 function Factory(career) {
   if (this instanceof Factory) {
-    var a = new this[career]();
-    return a;
-  } else {
-    return new Factory(career);
+    const a = new this[career]()
+    return a
+  }
+  else {
+    return new Factory(career)
   }
 }
 // 工厂方法函数的原型中设置所有对象的构造函数
 Factory.prototype = {
-  coder: function () {
-    this.careerName = '程序员';
-    this.work = ['写代码', '修Bug'];
+  coder() {
+    this.careerName = '程序员'
+    this.work = ['写代码', '修Bug']
   },
-  hr: function () {
-    this.careerName = 'HR';
-    this.work = ['招聘', '员工信息管理'];
+  hr() {
+    this.careerName = 'HR'
+    this.work = ['招聘', '员工信息管理']
   },
-  driver: function () {
-    this.careerName = '司机';
-    this.work = ['开车'];
+  driver() {
+    this.careerName = '司机'
+    this.work = ['开车']
   },
-  boss: function () {
-    this.careerName = '老板';
-    this.work = ['喝茶', '开会', '审批文件'];
+  boss() {
+    this.careerName = '老板'
+    this.work = ['喝茶', '开会', '审批文件']
   },
-};
-let coder = new Factory('coder');
-console.log(coder);
-let hr = new Factory('hr');
-console.log(hr);
+}
+const coder = new Factory('coder')
+console.log(coder)
+const hr = new Factory('hr')
+console.log(hr)
 ```
 
 工厂方法关键核心代码是工厂里面的判断 this 是否属于工厂，也就是做了分支判断，这个工厂只做我能做的产品
@@ -153,21 +154,22 @@ console.log(hr);
 示例代码如下：
 
 ```js
-let CareerAbstractFactory = function (subType, superType) {
+const CareerAbstractFactory = function (subType, superType) {
   // 判断抽象工厂中是否有该抽象类
   if (typeof CareerAbstractFactory[superType] === 'function') {
     // 缓存类
     function F() {}
     // 继承父类属性和方法
-    F.prototype = new CareerAbstractFactory[superType]();
+    F.prototype = new CareerAbstractFactory[superType]()
     // 将子类的constructor指向父类
-    subType.constructor = subType;
+    subType.constructor = subType
     // 子类原型继承父类
-    subType.prototype = new F();
-  } else {
-    throw new Error('抽象类不存在');
+    subType.prototype = new F()
   }
-};
+  else {
+    throw new TypeError('抽象类不存在')
+  }
+}
 ```
 
 上面代码中`CareerAbstractFactory`就是一个抽象工厂方法，该方法在参数中传递子类和父类，在方法体内部实现了子类对父类的继承

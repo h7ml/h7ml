@@ -212,41 +212,41 @@ function reconcileChildrenArray(
 // 1. 第一次循环: 遍历最长公共序列(key相同), 公共序列的节点都视为可复用
 for (; oldFiber !== null && newIdx < newChildren.length; newIdx++) {
   if (oldFiber.index > newIdx) {
-    nextOldFiber = oldFiber;
-    oldFiber = null;
-  } else {
-    nextOldFiber = oldFiber.sibling;
+    nextOldFiber = oldFiber
+    oldFiber = null
+  }
+  else {
+    nextOldFiber = oldFiber.sibling
   }
   // new槽位和old槽位进行比较, 如果key不同, 返回null
   // key相同, 比较type是否一致. type一致则执行useFiber(update逻辑), type不一致则运行createXXX(insert逻辑)
-  const newFiber = updateSlot(returnFiber, oldFiber, newChildren[newIdx], lanes);
+  const newFiber = updateSlot(returnFiber, oldFiber, newChildren[newIdx], lanes)
 
   if (newFiber === null) {
     // 如果返回null, 表明key不同. 无法满足公共序列条件, 退出循环
-    if (oldFiber === null) {
-      oldFiber = nextOldFiber;
-    }
-    break;
+    if (oldFiber === null)
+      oldFiber = nextOldFiber
+
+    break
   }
   if (shouldTrackSideEffects) {
     // 若是新增节点, 则给老节点打上Deletion标记
-    if (oldFiber && newFiber.alternate === null) {
-      deleteChild(returnFiber, oldFiber);
-    }
+    if (oldFiber && newFiber.alternate === null)
+      deleteChild(returnFiber, oldFiber)
   }
 
   // lastPlacedIndex 记录被移动的节点索引
   // 如果当前节点可复用, 则要判断位置是否移动.
-  lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx);
+  lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx)
 
   // 更新resultingFirstChild结果序列
-  if (previousNewFiber === null) {
-    resultingFirstChild = newFiber;
-  } else {
-    previousNewFiber.sibling = newFiber;
-  }
-  previousNewFiber = newFiber;
-  oldFiber = nextOldFiber;
+  if (previousNewFiber === null)
+    resultingFirstChild = newFiber
+  else
+    previousNewFiber.sibling = newFiber
+
+  previousNewFiber = newFiber
+  oldFiber = nextOldFiber
 }
 ```
 
@@ -254,32 +254,31 @@ for (; oldFiber !== null && newIdx < newChildren.length; newIdx++) {
 
 ```js
 // 1. 将第一次循环后, oldFiber剩余序列加入到一个map中. 目的是为了第二次循环能顺利的找到可复用节点
-const existingChildren = mapRemainingChildren(returnFiber, oldFiber);
+const existingChildren = mapRemainingChildren(returnFiber, oldFiber)
 
 // 2. 第二次循环: 遍历剩余非公共序列, 优先复用oldFiber序列中的节点
 for (; newIdx < newChildren.length; newIdx++) {
-  const newFiber = updateFromMap(existingChildren, returnFiber, newIdx, newChildren[newIdx], lanes);
+  const newFiber = updateFromMap(existingChildren, returnFiber, newIdx, newChildren[newIdx], lanes)
   if (newFiber !== null) {
     if (shouldTrackSideEffects) {
       if (newFiber.alternate !== null) {
         // 如果newFiber是通过复用创建的, 则清理map中对应的老节点
-        existingChildren.delete(newFiber.key === null ? newIdx : newFiber.key);
+        existingChildren.delete(newFiber.key === null ? newIdx : newFiber.key)
       }
     }
-    lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx);
+    lastPlacedIndex = placeChild(newFiber, lastPlacedIndex, newIdx)
     // 更新resultingFirstChild结果序列
-    if (previousNewFiber === null) {
-      resultingFirstChild = newFiber;
-    } else {
-      previousNewFiber.sibling = newFiber;
-    }
-    previousNewFiber = newFiber;
+    if (previousNewFiber === null)
+      resultingFirstChild = newFiber
+    else
+      previousNewFiber.sibling = newFiber
+
+    previousNewFiber = newFiber
   }
 }
 // 3. 善后工作, 第二次循环完成之后, existingChildren中剩余的fiber节点就是将要被删除的节点, 打上Deletion标记
-if (shouldTrackSideEffects) {
-  existingChildren.forEach((child) => deleteChild(returnFiber, child));
-}
+if (shouldTrackSideEffects)
+  existingChildren.forEach(child => deleteChild(returnFiber, child))
 ```
 
 ### 结果

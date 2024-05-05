@@ -11,8 +11,48 @@
     "items": [
       {
         "text": "rust",
-        "link": "/up/rust",
-        "activeMatch": "/up/rust"
+        "link": "/up/rust/index",
+        "activeMatch": "/up/rust/index"
+      },
+      {
+        "text": "linux",
+        "link": "/up/linux/command",
+        "activeMatch": "/up/linux/command"
+      },
+      {
+        "text": "docker",
+        "link": "/up/docker/docker",
+        "activeMatch": "/up/docker/docker"
+      },
+      {
+        "text": "mysql",
+        "link": "/up/mysql/init",
+        "activeMatch": "/up/mysql/init"
+      },
+      {
+        "text": "navicat",
+        "link": "/up/navicat/README",
+        "activeMatch": "/up/navicat/README"
+      },
+      {
+        "text": "nginx",
+        "link": "/up/nginx/install",
+        "activeMatch": "/up/nginx/install"
+      },
+      {
+        "text": "PostgreSQL",
+        "link": "/up/PostgreSQL/PostgreSQL",
+        "activeMatch": "/up/PostgreSQL/PostgreSQL"
+      },
+      {
+        "text": "redis",
+        "link": "/up/redis/index",
+        "activeMatch": "/up/redis/index"
+      },
+      {
+        "text": "Python",
+        "link": "/up/Python/Xpath",
+        "activeMatch": "/up/Python/Xpath"
       }
     ]
   }

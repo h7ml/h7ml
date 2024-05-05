@@ -25,17 +25,17 @@ date: 2022-01-30 11:04:52
 ```js
 // 页面里有三个模块 A，B，C 需要拿到地址后再进行下一步
 // A、B、C 三个模块都是不同人写的，提供了不同的方法供我们调用
-const observers = [];
+const observers = []
 // 注册观察者
-observers.push(A.update);
-observers.push(B.next);
-obervers.push(C.change);
+observers.push(A.update)
+observers.push(B.next)
+obervers.push(C.change)
 
 // getAddress 异步请求
 getAddress().then((res) => {
-  const address = res.address;
-  observers.forEach((update) => update(address));
-});
+  const address = res.address
+  observers.forEach(update => update(address))
+})
 ```
 
 `getAddress` 模块和其他 `A` 、`B`、`C` 三个模块已经实现了解耦，但仍需要维护 `observers` 这个数组来注册观察者，同时还需要知道各个模块提供了什么方法用于回调。
@@ -62,43 +62,42 @@ getAddress().then((res) => {
 
 ```js
 // event.js
-const observersMap = {};
+const observersMap = {}
 const listen = function (key, fn) {
-  if (!observersMap[key]) {
-    observersMap[key] = [];
-  }
-  observersMap[key].push(fn);
-};
+  if (!observersMap[key])
+    observersMap[key] = []
+
+  observersMap[key].push(fn)
+}
 const trigger = function () {
-  const key = Array.prototype.shift.call(arguments),
-    fns = observersMap[key];
-  if (!fns || fns.length === 0) {
-    return false;
-  }
-  for (let i = 0, fn; (fn = fns[i]); i++) {
-    fn.apply(this, arguments);
-  }
-};
+  const key = Array.prototype.shift.call(arguments)
+  const fns = observersMap[key]
+  if (!fns || fns.length === 0)
+    return false
+
+  for (let i = 0, fn; (fn = fns[i]); i++)
+    fn.apply(this, arguments)
+}
 const remove = function (key, fn) {
-  const fns = observersMap[key];
-  if (!fns) {
-    return false;
-  }
+  const fns = observersMap[key]
+  if (!fns)
+    return false
+
   if (!fn) {
-    fns && (fns.length = 0); // 全部清空
-  } else {
-    let findIndex = -1;
+    fns && (fns.length = 0) // 全部清空
+  }
+  else {
+    let findIndex = -1
     for (let i = 0; i < fns.length; i++) {
       if (fns[i] === fn) {
-        findIndex = i;
-        break;
+        findIndex = i
+        break
       }
     }
-    if (findIndex !== -1) {
-      fns.splice(findIndex, 1);
-    }
+    if (findIndex !== -1)
+      fns.splice(findIndex, 1)
   }
-};
+}
 
 // 同一种功能可能会见到不同名字，这里都导出去
 export const EventBus = {
@@ -111,43 +110,43 @@ export const EventBus = {
 
   trigger,
   emit: trigger,
-};
+}
 ```
 
 我们通过 `observersMap` 将不同的事件保存为不同的数组，`emit` 的时候得到对应的数组去调用即可。看下例子：
 
 ```js
-import { EventBus } from './event.js';
+import { EventBus } from './event.js'
 
 const WindLiang = {
   writePost(p) {
-    EventBus.emit('windliang', p);
+    EventBus.emit('windliang', p)
   },
-};
+}
 
 const XiaoMing = {
   update(post) {
-    console.log('我收到了' + post + ' 并且点了个赞');
+    console.log(`我收到了${post} 并且点了个赞`)
   },
-};
+}
 
 const XiaoYang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且转发了');
+    console.log(`我收到了${post} 并且转发了`)
   },
-};
+}
 
 const XiaoGang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且收藏');
+    console.log(`我收到了${post} 并且收藏`)
   },
-};
+}
 
-EventBus.on('windliang', XiaoMing.update);
-EventBus.on('windliang', XiaoYang.update);
-EventBus.on('windliang', XiaoGang.update);
+EventBus.on('windliang', XiaoMing.update)
+EventBus.on('windliang', XiaoYang.update)
+EventBus.on('windliang', XiaoGang.update)
 
-WindLiang.writePost('新文章-观察者模式，balabala');
+WindLiang.writePost('新文章-观察者模式，balabala')
 ```
 
 # 代码实现
@@ -157,49 +156,49 @@ WindLiang.writePost('新文章-观察者模式，balabala');
 地址模块：
 
 ```js
-import { EventBus } from './event.js';
+import { EventBus } from './event.js'
 
 // getAddress 异步请求
 getAddress().then((res) => {
-  const address = res.address;
-  EventBus.emit('ADDRESS', address);
-});
+  const address = res.address
+  EventBus.emit('ADDRESS', address)
+})
 ```
 
 `A` 模块
 
 ```js
-import { EventBus } from './event.js';
+import { EventBus } from './event.js'
 
-const update = (address) => {
+function update(address) {
   // 自己的逻辑
-};
+}
 
-EventBus.on('ADDRESS', (address) => update(address));
+EventBus.on('ADDRESS', address => update(address))
 ```
 
 `B` 模块
 
 ```js
-import { EventBus } from './event.js';
+import { EventBus } from './event.js'
 
-const next = (address) => {
+function next(address) {
   // 自己的逻辑
-};
+}
 
-EventBus.on('ADDRESS', (address) => next(address));
+EventBus.on('ADDRESS', address => next(address))
 ```
 
 `C` 模块
 
 ```js
-import { EventBus } from './event.js';
+import { EventBus } from './event.js'
 
-const change = (address) => {
+function change(address) {
   // 自己的逻辑
-};
+}
 
-EventBus.on('ADDRESS', (address) => change(address));
+EventBus.on('ADDRESS', address => change(address))
 ```
 
 可以看到 `getAddress` 模块不再需要关心观察者有谁，它只需要向 `EventBus` 发射更新事件即可。
@@ -217,34 +216,34 @@ EventBus.on('ADDRESS', (address) => change(address));
 ```js
 // eventProxy.js
 
-import { EventBus as EventBusOriginal } from './event.js';
+import { EventBus as EventBusOriginal } from './event.js'
 
-let offlineStack = []; // listen 之前的 emit 事件进行缓存
+let offlineStack = [] // listen 之前的 emit 事件进行缓存
 
 const triggerProxy = function () {
-  const _self = this;
-  const args = arguments;
+  const _self = this
+  const args = arguments
   const fn = function () {
-    return EventBusOriginal.trigger.apply(_self, args);
-  };
-  if (offlineStack) {
-    return offlineStack.push(fn);
+    return EventBusOriginal.trigger.apply(_self, args)
   }
-  return fn();
-};
-const listenProxy = function (key, fn) {
-  EventBusOriginal.listen(key, fn);
-  if (!offlineStack) {
-    return;
-  }
-  for (let i = 0, fn; (fn = offlineStack[i]); i++) {
-    fn();
-  }
-  offlineStack = null;
-};
+  if (offlineStack)
+    return offlineStack.push(fn)
 
-const listen = listenProxy || EventBus.listen;
-const trigger = triggerProxy || EventBus.trigger;
+  return fn()
+}
+const listenProxy = function (key, fn) {
+  EventBusOriginal.listen(key, fn)
+  if (!offlineStack)
+    return
+
+  for (let i = 0, fn; (fn = offlineStack[i]); i++)
+    fn()
+
+  offlineStack = null
+}
+
+const listen = listenProxy || EventBus.listen
+const trigger = triggerProxy || EventBus.trigger
 
 export const EventBus = {
   ...EventBusOriginal,
@@ -254,7 +253,7 @@ export const EventBus = {
 
   trigger,
   emit: trigger,
-};
+}
 ```
 
 在 `trigger` 的时候，如果 `offlineStack` 不为 `null`，说明还没有调用过 `listen`，此时将当前事件保存起来。
@@ -264,35 +263,35 @@ export const EventBus = {
 看一下效果：
 
 ```js
-import { EventBus } from './eventProxy.mjs';
+import { EventBus } from './eventProxy.mjs'
 
 const WindLiang = {
   writePost(p) {
-    EventBus.emit('windliang', p);
+    EventBus.emit('windliang', p)
   },
-};
+}
 
 const XiaoMing = {
   update(post) {
-    console.log('我收到了' + post + ' 并且点了个赞');
+    console.log(`我收到了${post} 并且点了个赞`)
   },
-};
+}
 
 const XiaoYang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且转发了');
+    console.log(`我收到了${post} 并且转发了`)
   },
-};
+}
 
 const XiaoGang = {
   update(post) {
-    console.log('我收到了' + post + ' 并且收藏');
+    console.log(`我收到了${post} 并且收藏`)
   },
-};
+}
 
-WindLiang.writePost('新文章-观察者模式，balabala');
+WindLiang.writePost('新文章-观察者模式，balabala')
 
-EventBus.on('windliang', XiaoYang.update); // 我收到了新文章-观察者模式，balabala 并且转发了
+EventBus.on('windliang', XiaoYang.update) // 我收到了新文章-观察者模式，balabala 并且转发了
 ```
 
 虽然是先进行的 `emit` 后进行的 `on` 的，但依旧会正常执行。
@@ -300,11 +299,11 @@ EventBus.on('windliang', XiaoYang.update); // 我收到了新文章-观察者模
 上边的解决方案很粗略，只适用于有一个事件并且只有一个 `on` 的场景，不然的话比如下边的情况：
 
 ```js
-WindLiang.writePost('新文章-观察者模式，balabala');
+WindLiang.writePost('新文章-观察者模式，balabala')
 
-EventBus.on('windliang', XiaoMing.update);
-EventBus.on('windliang', XiaoYang.update);
-EventBus.on('windliang', XiaoGang.update);
+EventBus.on('windliang', XiaoMing.update)
+EventBus.on('windliang', XiaoYang.update)
+EventBus.on('windliang', XiaoGang.update)
 ```
 
 只有 `XiaoMing.update` 会执行，后边两句就会错过第一次的 `emit` ，因为执行一次 `listen` 就把缓存清空了。
@@ -312,11 +311,11 @@ EventBus.on('windliang', XiaoGang.update);
 或者在 `writePost` 之前有了一次 `on` 了：
 
 ```js
-EventBus.on('windliang', XiaoMing.update);
-WindLiang.writePost('新文章-观察者模式，balabala');
+EventBus.on('windliang', XiaoMing.update)
+WindLiang.writePost('新文章-观察者模式，balabala')
 
-EventBus.on('windliang', XiaoYang.update);
-EventBus.on('windliang', XiaoGang.update);
+EventBus.on('windliang', XiaoYang.update)
+EventBus.on('windliang', XiaoGang.update)
 ```
 
 同样只有 `XiaoMing.update` 会执行，后边两句就会错过第一次的 `emit` 了，因为执行一次 `listen` 就把缓存清空了。

@@ -67,7 +67,7 @@ head:
 通过`XMLHttpRequest()` 构造函数用于初始化一个 `XMLHttpRequest` 实例对象
 
 ```js
-const xhr = new XMLHttpRequest();
+const xhr = new XMLHttpRequest()
 ```
 
 ### 与服务器建立连接
@@ -95,7 +95,7 @@ xhr.open(method, url, [async][, user][, password])
 通过 `XMLHttpRequest` 对象的 `send()` 方法，将客户端页面的数据发送给服务端
 
 ```js
-xhr.send([body]);
+xhr.send([body])
 ```
 
 `body`: 在 `XHR` 请求中要发送的数据体，如果不传递数据则为 `null`
@@ -120,19 +120,18 @@ xhr.send([body]);
 举个例子：
 
 ```js
-const request = new XMLHttpRequest();
+const request = new XMLHttpRequest()
 request.onreadystatechange = function (e) {
   if (request.readyState === 4) {
     // 整个请求过程完毕
-    if (request.status >= 200 && request.status <= 300) {
-      console.log(request.responseText); // 服务端返回的结果
-    } else if (request.status >= 400) {
-      console.log('错误信息：' + request.status);
-    }
+    if (request.status >= 200 && request.status <= 300)
+      console.log(request.responseText) // 服务端返回的结果
+    else if (request.status >= 400)
+      console.log(`错误信息：${request.status}`)
   }
-};
-request.open('POST', 'http://xxxx');
-request.send();
+}
+request.open('POST', 'http://xxxx')
+request.send()
 ```
 
 ## 三、封装
@@ -144,7 +143,6 @@ request.send();
 function ajax(options) {
     //创建XMLHttpRequest对象
     const xhr = new XMLHttpRequest()
-
 
     //初始化参数的内容
     options = options || {}
@@ -182,13 +180,13 @@ ajax({
   dataType: 'json',
   data: {},
   url: 'https://xxxx',
-  success: function (text, xml) {
-    //请求成功后的回调函数
-    console.log(text);
+  success(text, xml) {
+    // 请求成功后的回调函数
+    console.log(text)
   },
-  fail: function (status) {
-    ////请求失败后的回调函数
-    console.log(status);
+  fail(status) {
+    /// /请求失败后的回调函数
+    console.log(status)
   },
-});
+})
 ```

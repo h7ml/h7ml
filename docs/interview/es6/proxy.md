@@ -118,23 +118,23 @@ proxy.name; // "张三"
 
 ```js
 function createArray(...elements) {
-  let handler = {
+  const handler = {
     get(target, propKey, receiver) {
-      let index = Number(propKey);
-      if (index < 0) {
-        propKey = String(target.length + index);
-      }
-      return Reflect.get(target, propKey, receiver);
-    },
-  };
+      const index = Number(propKey)
+      if (index < 0)
+        propKey = String(target.length + index)
 
-  let target = [];
-  target.push(...elements);
-  return new Proxy(target, handler);
+      return Reflect.get(target, propKey, receiver)
+    },
+  }
+
+  const target = []
+  target.push(...elements)
+  return new Proxy(target, handler)
 }
 
-let arr = createArray('a', 'b', 'c');
-arr[-1]; // c
+const arr = createArray('a', 'b', 'c')
+arr[-1] // c
 ```
 
 注意：如果一个属性不可配置（configurable）且不可写（writable），则 Proxy 不能修改该属性，否则会报错
@@ -149,17 +149,17 @@ const target = Object.defineProperties(
       configurable: false,
     },
   }
-);
+)
 
 const handler = {
   get(target, propKey) {
-    return 'abc';
+    return 'abc'
   },
-};
+}
 
-const proxy = new Proxy(target, handler);
+const proxy = new Proxy(target, handler)
 
-proxy.foo;
+proxy.foo
 // TypeError: Invariant check failed
 ```
 
@@ -170,29 +170,28 @@ proxy.foo;
 假定`Person`对象有一个`age`属性，该属性应该是一个不大于 200 的整数，那么可以使用`Proxy`保证`age`的属性值符合要求
 
 ```js
-let validator = {
-  set: function (obj, prop, value) {
+const validator = {
+  set(obj, prop, value) {
     if (prop === 'age') {
-      if (!Number.isInteger(value)) {
-        throw new TypeError('The age is not an integer');
-      }
-      if (value > 200) {
-        throw new RangeError('The age seems invalid');
-      }
+      if (!Number.isInteger(value))
+        throw new TypeError('The age is not an integer')
+
+      if (value > 200)
+        throw new RangeError('The age seems invalid')
     }
 
     // 对于满足条件的 age 属性以及其他属性，直接保存
-    obj[prop] = value;
+    obj[prop] = value
   },
-};
+}
 
-let person = new Proxy({}, validator);
+const person = new Proxy({}, validator)
 
-person.age = 100;
+person.age = 100
 
-person.age; // 100
-person.age = 'young'; // 报错
-person.age = 300; // 报错
+person.age // 100
+person.age = 'young' // 报错
+person.age = 300 // 报错
 ```
 
 如果目标对象自身的某个属性，不可写且不可配置，那么`set`方法将不起作用
@@ -274,20 +273,20 @@ Proxy.revocable(target, handler);
 使用 `Proxy` 保障数据类型的准确性
 
 ```js
-let numericDataStore = { count: 0, amount: 1234, total: 14 };
+let numericDataStore = { count: 0, amount: 1234, total: 14 }
 numericDataStore = new Proxy(numericDataStore, {
   set(target, key, value, proxy) {
-    if (typeof value !== 'number') {
-      throw Error('属性只能是number类型');
-    }
-    return Reflect.set(target, key, value, proxy);
-  },
-});
+    if (typeof value !== 'number')
+      throw new Error('属性只能是number类型')
 
-numericDataStore.count = 'foo';
+    return Reflect.set(target, key, value, proxy)
+  },
+})
+
+numericDataStore.count = 'foo'
 // Error: 属性只能是number类型
 
-numericDataStore.count = 333;
+numericDataStore.count = 333
 // 赋值成功
 ```
 
@@ -296,28 +295,28 @@ numericDataStore.count = 333;
 ```js
 let api = {
   _apiKey: '123abc456def',
-  getUsers: function () {},
-  getUser: function (userId) {},
-  setUser: function (userId, config) {},
-};
-const RESTRICTED = ['_apiKey'];
+  getUsers() {},
+  getUser(userId) {},
+  setUser(userId, config) {},
+}
+const RESTRICTED = ['_apiKey']
 api = new Proxy(api, {
   get(target, key, proxy) {
-    if (RESTRICTED.indexOf(key) > -1) {
-      throw Error(`${key} 不可访问.`);
-    }
-    return Reflect.get(target, key, proxy);
+    if (RESTRICTED.includes(key))
+      throw new Error(`${key} 不可访问.`)
+
+    return Reflect.get(target, key, proxy)
   },
   set(target, key, value, proxy) {
-    if (RESTRICTED.indexOf(key) > -1) {
-      throw Error(`${key} 不可修改`);
-    }
-    return Reflect.get(target, key, value, proxy);
-  },
-});
+    if (RESTRICTED.includes(key))
+      throw new Error(`${key} 不可修改`)
 
-console.log(api._apiKey);
-api._apiKey = '987654321';
+    return Reflect.get(target, key, value, proxy)
+  },
+})
+
+console.log(api._apiKey)
+api._apiKey = '987654321'
 // 上述都抛出错误
 ```
 

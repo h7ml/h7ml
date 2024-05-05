@@ -13,24 +13,24 @@ star: true
 ## var 关键字
 
 ```js
-var message; // 默认 undefined
+let message // 默认 undefined
 ```
 
 声明后可以改变类型，但不推荐
 
 ```js
-var message = 'hi';
-message = 100; // 合法，但不推荐
+let message = 'hi'
+message = 100 // 合法，但不推荐
 ```
 
 var 声明作用域，一个函数内部定义一个变量，在函数退出时被销毁
 
 ```js
 function test() {
-  var message = 'hi'; // 局部变量
+  const message = 'hi' // 局部变量
 }
-test();
-console.log(message); // 出错！
+test()
+console.log(message) // 出错！
 ```
 
 在函数内定义变量时省略 var 操作符，可以创建一个全局变量：
@@ -47,43 +47,43 @@ console.log(message); // "hi"
 定义多个变量
 
 ```js
-var message = 'hi',
-  found = false,
-  age = 29;
-//在严格模式下，不能定义名为eval 和arguments 的变量，否则会导致语法错误。
+const message = 'hi'
+const found = false
+const age = 29
+// 在严格模式下，不能定义名为eval 和arguments 的变量，否则会导致语法错误。
 ```
 
 var 声明提升
 
 ```js
 function foo() {
-  console.log(age);
-  var age = 26;
+  console.log(age)
+  var age = 26
 }
-foo(); // undefined
+foo() // undefined
 ```
 
 关键字声明的变量会自动提升到函数作用域顶部，相当于：
 
 ```js
 function foo() {
-  var age;
-  console.log(age);
-  age = 26;
+  let age
+  console.log(age)
+  age = 26
 }
-foo(); // undefined
+foo() // undefined
 ```
 
 反复多次使用 var 声明同一个变量也没有问题
 
 ```js
 function foo() {
-  var age = 16;
-  var age = 26;
-  var age = 36;
-  console.log(age);
+  var age = 16
+  var age = 26
+  var age = 36
+  console.log(age)
 }
-foo(); // 36
+foo() // 36
 ```
 
 ## let 声明
@@ -92,16 +92,16 @@ let 声明的范围是块作用域：
 
 ```js
 if (true) {
-  var name = 'Matt';
-  console.log(name); // Matt
+  var name = 'Matt'
+  console.log(name) // Matt
 }
-console.log(name); // Matt
+console.log(name) // Matt
 
 if (true) {
-  let age = 26;
-  console.log(age); // 26
+  const age = 26
+  console.log(age) // 26
 }
-console.log(age); // ReferenceError: age 没有定义
+console.log(age) // ReferenceError: age 没有定义
 ```
 
 不能重复声明
@@ -114,17 +114,17 @@ let age; // SyntaxError；标识符age 已经声明过了
 块作用域没有重复声明则使用相同标识符则不会报错
 
 ```js
-var name = 'Nicholas';
-console.log(name); // 'Nicholas'
+var name = 'Nicholas'
+console.log(name) // 'Nicholas'
 if (true) {
-  var name = 'Matt';
-  console.log(name); // 'Matt'
+  var name = 'Matt'
+  console.log(name) // 'Matt'
 }
-let age = 30;
-console.log(age); // 30
+const age = 30
+console.log(age) // 30
 if (true) {
-  let age = 26;
-  console.log(age); // 26
+  const age = 26
+  console.log(age) // 26
 }
 ```
 
@@ -141,11 +141,11 @@ var age; // SyntaxError
 
 ```js
 // name 会被提升
-console.log(name); // undefined
-var name = 'Matt';
+console.log(name) // undefined
+var name = 'Matt'
 // age 不会被提升
-console.log(age); // ReferenceError：age 没有定义
-let age = 26;
+console.log(age) // ReferenceError：age 没有定义
+let age = 26
 ```
 
 ### 全局声明
@@ -153,10 +153,10 @@ let age = 26;
 let 在全局作用域中声明的变量不会成为 window 对象的属性（var 声明的变量则会）
 
 ```js
-var name = 'Matt';
-console.log(window.name); // 'Matt'
-let age = 26;
-console.log(window.age); // undefined
+const name = 'Matt'
+console.log(window.name) // 'Matt'
+const age = 26
+console.log(window.age) // undefined
 ```
 
 :::tip 注意
@@ -225,7 +225,7 @@ try/catch 语句或 typeof 操作符也不能解决
 for (var i = 0; i < 5; ++i) {
   // 循环逻辑
 }
-console.log(i); // 5
+console.log(i) // 5
 ```
 
 let 之后则不会，因为遇到 {} 就会形成作用域块
@@ -234,15 +234,15 @@ let 之后则不会，因为遇到 {} 就会形成作用域块
 for (let i = 0; i < 5; ++i) {
   // 循环逻辑
 }
-console.log(i); // ReferenceError: i 没有定义
+console.log(i) // ReferenceError: i 没有定义
 ```
 
 常见的异步循环问题
 
 ```js
-for (var i = 0; i < 5; ++i) {
-  setTimeout(() => console.log(i), 0);
-}
+for (var i = 0; i < 5; ++i)
+  setTimeout(() => console.log(i), 0)
+
 // 你可能以为会输出0、1、2、3、4
 // 实际上会输出5、5、5、5、5
 ```
@@ -252,9 +252,9 @@ for (var i = 0; i < 5; ++i) {
 使用 let 才是期望的值
 
 ```js
-for (let i = 0; i < 5; ++i) {
-  setTimeout(() => console.log(i), 0);
-}
+for (let i = 0; i < 5; ++i)
+  setTimeout(() => console.log(i), 0)
+
 // 会输出0、1、2、3、4
 ```
 
@@ -283,16 +283,16 @@ console.log(name); // Matt
 但是 const 声明只限制声明的**引用**：
 
 ```js
-const person = {};
-person.name = 'Matt'; // ok
+const person = {}
+person.name = 'Matt' // ok
 ```
 
 如果想让整个对象都不能修改，可以使用 `Object.freeze()`
 
 ```js
-const obj = Object.freeze({});
-obj.name = 'Jake'; // 不会报错，但会静默失败
-console.log(obj.name); // undefined
+const obj = Object.freeze({})
+obj.name = 'Jake' // 不会报错，但会静默失败
+console.log(obj.name) // undefined
 ```
 
 在 for 中 const 与 let 一样分别独立创建变量的实例，但是不能用 const 来迭代变量（因为变量 i 要自增）
@@ -304,18 +304,18 @@ for (const i = 0; i < 10; ++i) {} // TypeError：给常量赋值
 只想用 const 声明一个不会被修改的 for 循环变量，那也是可以的
 
 ```js
-let i = 0;
-for (const j = 7; i < 5; ++i) {
-  console.log(j);
-}
+let i = 0
+for (const j = 7; i < 5; ++i)
+  console.log(j)
+
 // 7, 7, 7, 7, 7
-for (const key in { a: 1, b: 2 }) {
-  console.log(key);
-}
+for (const key in { a: 1, b: 2 })
+  console.log(key)
+
 // a, b
-for (const value of [1, 2, 3, 4, 5]) {
-  console.log(value);
-}
+for (const value of [1, 2, 3, 4, 5])
+  console.log(value)
+
 // 1, 2, 3, 4, 5
 ```
 

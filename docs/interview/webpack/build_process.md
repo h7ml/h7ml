@@ -124,7 +124,7 @@ function webpack(options) {
 ```js
 module.exports = {
   entry: './src/file.js',
-};
+}
 ```
 
 初始化完成后会调用`Compiler`的`run`来真正启动`webpack`编译构建流程，主要流程如下：

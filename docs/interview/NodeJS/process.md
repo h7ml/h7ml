@@ -70,7 +70,7 @@ head:
 所以，我们只要从 `process.argv[2]` 开始获取就好了
 
 ```js
-const args = process.argv.slice(2);
+const args = process.argv.slice(2)
 ```
 
 ### process.env
@@ -91,11 +91,11 @@ const args = process.argv.slice(2);
 
 ```js
 function foo() {
-  console.error('foo');
+  console.error('foo')
 }
 
-process.nextTick(foo);
-console.error('bar');
+process.nextTick(foo)
+console.error('bar')
 ```
 
 输出结果为`bar`、`foo`
@@ -103,8 +103,8 @@ console.error('bar');
 虽然下述方式也能实现同样效果：
 
 ```js
-setTimeout(foo, 0);
-console.log('bar');
+setTimeout(foo, 0)
+console.log('bar')
 ```
 
 两者区别在于：

@@ -67,15 +67,16 @@ filters: {
 定义全局过滤器：
 
 ```js
-Vue.filter('capitalize', function (value) {
-  if (!value) return '';
-  value = value.toString();
-  return value.charAt(0).toUpperCase() + value.slice(1);
-});
+Vue.filter('capitalize', (value) => {
+  if (!value)
+    return ''
+  value = value.toString()
+  return value.charAt(0).toUpperCase() + value.slice(1)
+})
 
 new Vue({
   // ...
-});
+})
 ```
 
 注意：当全局过滤器和局部过滤器重名时，会采用局部过滤器
@@ -142,7 +143,7 @@ Vue.filter('toThousandFilter', function (value) {
 ```js
 {
   {
-    message | capitalize;
+    message | capitalize
   }
 }
 ```
@@ -150,7 +151,7 @@ Vue.filter('toThousandFilter', function (value) {
 在模板编译阶段过滤器表达式将会被编译为过滤器函数，主要是用过`parseFilters`，我们放到最后讲
 
 ```js
-_s(_f('filterFormat')(message));
+_s(_f('filterFormat')(message))
 ```
 
 首先分析一下`_f`：
@@ -159,16 +160,16 @@ _s(_f('filterFormat')(message));
 
 ```js
 // 变为
-this.$options.filters['filterFormat'](message); // message为参数
+this.$options.filters.filterFormat(message) // message为参数
 ```
 
 关于`resolveFilter`
 
 ```js
-import { indentity, resolveAsset } from 'core/util/index';
+import { indentity, resolveAsset } from 'core/util/index'
 
 export function resolveFilter(id) {
-  return resolveAsset(this.$options, 'filters', id, true) || identity;
+  return resolveAsset(this.$options, 'filters', id, true) || identity
 }
 ```
 
@@ -181,25 +182,28 @@ export function resolveAsset(options, type, id, warnMissing) {
   // 因为我们找的是过滤器，所以在 resolveFilter函数中调用时 type 的值直接给的 'filters',实际这个函数还可以拿到其他很多东西
   if (typeof id !== 'string') {
     // 判断传递的过滤器id 是不是字符串，不是则直接返回
-    return;
+    return
   }
-  const assets = options[type]; // 将我们注册的所有过滤器保存在变量中
+  const assets = options[type] // 将我们注册的所有过滤器保存在变量中
   // 接下来的逻辑便是判断id是否在assets中存在，即进行匹配
-  if (hasOwn(assets, id)) return assets[id]; // 如找到，直接返回过滤器
+  if (hasOwn(assets, id))
+    return assets[id] // 如找到，直接返回过滤器
   // 没有找到，代码继续执行
-  const camelizedId = camelize(id); // 万一你是驼峰的呢
-  if (hasOwn(assets, camelizedId)) return assets[camelizedId];
+  const camelizedId = camelize(id) // 万一你是驼峰的呢
+  if (hasOwn(assets, camelizedId))
+    return assets[camelizedId]
   // 没找到，继续执行
-  const PascalCaseId = capitalize(camelizedId); // 万一你是首字母大写的驼峰呢
-  if (hasOwn(assets, PascalCaseId)) return assets[PascalCaseId];
+  const PascalCaseId = capitalize(camelizedId) // 万一你是首字母大写的驼峰呢
+  if (hasOwn(assets, PascalCaseId))
+    return assets[PascalCaseId]
   // 如果还是没找到，则检查原型链(即访问属性)
-  const result = assets[id] || assets[camelizedId] || assets[PascalCaseId];
+  const result = assets[id] || assets[camelizedId] || assets[PascalCaseId]
   // 如果依然没找到，则在非生产环境的控制台打印警告
-  if (process.env.NODE_ENV !== 'production' && warnMissing && !result) {
-    warn('Failed to resolve ' + type.slice(0, -1) + ': ' + id, options);
-  }
+  if (process.env.NODE_ENV !== 'production' && warnMissing && !result)
+    warn(`Failed to resolve ${type.slice(0, -1)}: ${id}`, options)
+
   // 无论是否找到，都返回查找结果
-  return result;
+  return result
 }
 ```
 
@@ -212,8 +216,8 @@ function toString(value) {
   return value == null
     ? ''
     : typeof value === 'object'
-    ? JSON.stringify(value, null, 2) // JSON.stringify()第三个参数可用来控制字符串里面的间距
-    : String(value);
+      ? JSON.stringify(value, null, 2) // JSON.stringify()第三个参数可用来控制字符串里面的间距
+      : String(value)
 }
 ```
 
@@ -221,27 +225,27 @@ function toString(value) {
 
 ```js
 function parseFilters(filter) {
-  let filters = filter.split('|');
-  let expression = filters.shift().trim(); // shift()删除数组第一个元素并将其返回，该方法会更改原数组
-  let i;
+  const filters = filter.split('|')
+  const expression = filters.shift().trim() // shift()删除数组第一个元素并将其返回，该方法会更改原数组
+  let i
   if (filters) {
-    for (i = 0; i < filters.length; i++) {
-      experssion = warpFilter(expression, filters[i].trim()); // 这里传进去的expression实际上是管道符号前面的字符串，即过滤器的第一个参数
-    }
+    for (i = 0; i < filters.length; i++)
+      experssion = warpFilter(expression, filters[i].trim()) // 这里传进去的expression实际上是管道符号前面的字符串，即过滤器的第一个参数
   }
-  return expression;
+  return expression
 }
 // warpFilter函数实现
 function warpFilter(exp, filter) {
   // 首先判断过滤器是否有其他参数
-  const i = filter.indexof('(');
+  const i = filter.indexof('(')
   if (i < 0) {
     // 不含其他参数，直接进行过滤器表达式字符串的拼接
-    return `_f("${filter}")(${exp})`;
-  } else {
-    const name = filter.slice(0, i); // 过滤器名称
-    const args = filter.slice(i + 1); // 参数，但还多了 ‘)’
-    return `_f('${name}')(${exp},${args}`; // 注意这一步少给了一个 ')'
+    return `_f("${filter}")(${exp})`
+  }
+  else {
+    const name = filter.slice(0, i) // 过滤器名称
+    const args = filter.slice(i + 1) // 参数，但还多了 ‘)’
+    return `_f('${name}')(${exp},${args}` // 注意这一步少给了一个 ')'
   }
 }
 ```

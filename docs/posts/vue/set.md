@@ -18,13 +18,13 @@ lastUpdated: false
 对于使用 `Object.defineProperty` 实现响应式的对象，当我们去给这个对象添加一个新的属性的时候，是不能够触发它的 `setter` 的，比如：
 
 ```js
-var vm = new Vue({
+const vm = new Vue({
   data: {
     a: 1,
   },
-});
+})
 // vm.b 是非响应的
-vm.b = 2;
+vm.b = 2
 ```
 
 但是添加新属性的场景我们在平时开发中会经常遇到，那么 `Vue` 为了解决这个问题，定义了一个全局 `API Vue.set` 方法
@@ -169,38 +169,39 @@ function copyAugment(target: Object, src: Object, keys: Array<string>) {
 `protoAugment` 方法是直接把 `target.__proto__` 原型直接修改为 `src`，而 `copyAugment` 方法是遍历 `keys`，通过 `def`，也就是 `Object.defineProperty` 去定义它自身的属性值。对于大部分现代浏览器都会走到 `protoAugment`，那么它实际上就把 `value` 的原型指向了 `arrayMethods`
 
 ```js
-import { def } from '../util/index';
+import { def } from '../util/index'
 
-const arrayProto = Array.prototype;
-export const arrayMethods = Object.create(arrayProto);
+const arrayProto = Array.prototype
+export const arrayMethods = Object.create(arrayProto)
 
-const methodsToPatch = ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse'];
+const methodsToPatch = ['push', 'pop', 'shift', 'unshift', 'splice', 'sort', 'reverse']
 
 /**
  * Intercept mutating methods and emit events
  */
-methodsToPatch.forEach(function (method) {
+methodsToPatch.forEach((method) => {
   // cache original method
-  const original = arrayProto[method];
+  const original = arrayProto[method]
   def(arrayMethods, method, function mutator(...args) {
-    const result = original.apply(this, args);
-    const ob = this.__ob__;
-    let inserted;
+    const result = original.apply(this, args)
+    const ob = this.__ob__
+    let inserted
     switch (method) {
       case 'push':
       case 'unshift':
-        inserted = args;
-        break;
+        inserted = args
+        break
       case 'splice':
-        inserted = args.slice(2);
-        break;
+        inserted = args.slice(2)
+        break
     }
-    if (inserted) ob.observeArray(inserted);
+    if (inserted)
+      ob.observeArray(inserted)
     // notify change
-    ob.dep.notify();
-    return result;
-  });
-});
+    ob.dep.notify()
+    return result
+  })
+})
 ```
 
 可以看到，`arrayMethods` 首先继承了 `Array`，然后对数组中所有能改变数组自身的方法，如 `push、pop` 等这些方法进行重写。

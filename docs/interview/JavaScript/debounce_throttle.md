@@ -59,14 +59,14 @@ head:
 
 ```js
 function throttled1(fn, delay = 500) {
-  let oldtime = Date.now();
+  let oldtime = Date.now()
   return function (...args) {
-    let newtime = Date.now();
+    const newtime = Date.now()
     if (newtime - oldtime >= delay) {
-      fn.apply(null, args);
-      oldtime = Date.now();
+      fn.apply(null, args)
+      oldtime = Date.now()
     }
-  };
+  }
 }
 ```
 
@@ -74,15 +74,15 @@ function throttled1(fn, delay = 500) {
 
 ```js
 function throttled2(fn, delay = 500) {
-  let timer = null;
+  let timer = null
   return function (...args) {
     if (!timer) {
       timer = setTimeout(() => {
-        fn.apply(this, args);
-        timer = null;
-      }, delay);
+        fn.apply(this, args)
+        timer = null
+      }, delay)
     }
-  };
+  }
 }
 ```
 
@@ -90,21 +90,22 @@ function throttled2(fn, delay = 500) {
 
 ```js
 function throttled(fn, delay) {
-  let timer = null;
-  let starttime = Date.now();
+  let timer = null
+  let starttime = Date.now()
   return function () {
-    let curTime = Date.now(); // 当前时间
-    let remaining = delay - (curTime - starttime); // 从上一次到现在，还剩下多少多余时间
-    let context = this;
-    let args = arguments;
-    clearTimeout(timer);
+    const curTime = Date.now() // 当前时间
+    const remaining = delay - (curTime - starttime) // 从上一次到现在，还剩下多少多余时间
+    const context = this
+    const args = arguments
+    clearTimeout(timer)
     if (remaining <= 0) {
-      fn.apply(context, args);
-      starttime = Date.now();
-    } else {
-      timer = setTimeout(fn, remaining);
+      fn.apply(context, args)
+      starttime = Date.now()
     }
-  };
+    else {
+      timer = setTimeout(fn, remaining)
+    }
+  }
 }
 ```
 
@@ -114,17 +115,17 @@ function throttled(fn, delay) {
 
 ```js
 function debounce(func, wait) {
-  let timeout;
+  let timeout
 
   return function () {
-    let context = this; // 保存this指向
-    let args = arguments; // 拿到event对象
+    const context = this // 保存this指向
+    const args = arguments // 拿到event对象
 
-    clearTimeout(timeout);
-    timeout = setTimeout(function () {
-      func.apply(context, args);
-    }, wait);
-  };
+    clearTimeout(timeout)
+    timeout = setTimeout(() => {
+      func.apply(context, args)
+    }, wait)
+  }
 }
 ```
 
@@ -132,27 +133,28 @@ function debounce(func, wait) {
 
 ```js
 function debounce(func, wait, immediate) {
-  let timeout;
+  let timeout
 
   return function () {
-    let context = this;
-    let args = arguments;
+    const context = this
+    const args = arguments
 
-    if (timeout) clearTimeout(timeout); // timeout 不为null
+    if (timeout)
+      clearTimeout(timeout) // timeout 不为null
     if (immediate) {
-      let callNow = !timeout; // 第一次会立即执行，以后只有事件执行后才会再次触发
-      timeout = setTimeout(function () {
-        timeout = null;
-      }, wait);
-      if (callNow) {
-        func.apply(context, args);
-      }
-    } else {
-      timeout = setTimeout(function () {
-        func.apply(context, args);
-      }, wait);
+      const callNow = !timeout // 第一次会立即执行，以后只有事件执行后才会再次触发
+      timeout = setTimeout(() => {
+        timeout = null
+      }, wait)
+      if (callNow)
+        func.apply(context, args)
     }
-  };
+    else {
+      timeout = setTimeout(() => {
+        func.apply(context, args)
+      }, wait)
+    }
+  }
 }
 ```
 

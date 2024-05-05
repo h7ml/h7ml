@@ -3,5 +3,45 @@
     "type": "dir",
     "name": "rust",
     "label": "rust"
+  },
+  {
+    "type": "dir",
+    "name": "linux",
+    "label": "linux"
+  },
+  {
+    "type": "dir",
+    "name": "docker",
+    "label": "docker"
+  },
+  {
+    "type": "dir",
+    "name": "mysql",
+    "label": "mysql"
+  },
+  {
+    "type": "dir",
+    "name": "navicat",
+    "label": "navicat"
+  },
+  {
+    "type": "dir",
+    "name": "nginx",
+    "label": "nginx"
+  },
+  {
+    "type": "dir",
+    "name": "PostgreSQL",
+    "label": "PostgreSQL"
+  },
+  {
+    "type": "dir",
+    "name": "redis",
+    "label": "redis"
+  },
+  {
+    "type": "dir",
+    "name": "Python",
+    "label": "Python"
   }
 ]

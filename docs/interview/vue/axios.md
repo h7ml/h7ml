@@ -57,7 +57,7 @@ npm install axios --S
 导入
 
 ```js
-import axios from 'axios';
+import axios from 'axios'
 ```
 
 发送请求
@@ -73,27 +73,27 @@ axios({
   },
 }).then((res) => {
   // res为后端返回的数据
-  console.log(res);
-});
+  console.log(res)
+})
 ```
 
 并发请求`axios.all([])`
 
 ```js
 function getUserAccount() {
-  return axios.get('/user/12345');
+  return axios.get('/user/12345')
 }
 
 function getUserPermissions() {
-  return axios.get('/user/12345/permissions');
+  return axios.get('/user/12345/permissions')
 }
 
 axios.all([getUserAccount(), getUserPermissions()]).then(
-  axios.spread(function (res1, res2) {
+  axios.spread((res1, res2) => {
     // res1第一个请求的返回的内容，res2第二个请求返回的内容
     // 两个请求都执行完成才会执行
   })
-);
+)
 ```
 
 ## 二、为什么要封装
@@ -114,18 +114,18 @@ axios('http://localhost:3000/data', {
   withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
-    Authorization: 'xxx',
+    'Authorization': 'xxx',
   },
   transformRequest: [
     function (data, headers) {
-      return data;
+      return data
     },
   ],
   // 其他请求配置...
 }).then(
   (data) => {
     // todo: 真正业务逻辑代码
-    console.log(data);
+    console.log(data)
   },
   (err) => {
     // 错误处理代码
@@ -136,9 +136,9 @@ axios('http://localhost:3000/data', {
       // handle server forbidden error
     }
     // 其他错误处理.....
-    console.log(err);
+    console.log(err)
   }
-);
+)
 ```
 
 如果每个页面都发送类似的请求，都要写一堆的配置与错误处理，就显得过于繁琐了
@@ -166,11 +166,10 @@ axios('http://localhost:3000/data', {
 利用`node`环境变量来作判断，用来区分开发、测试、生产环境
 
 ```js
-if (process.env.NODE_ENV === 'development') {
-  axios.defaults.baseURL = 'http://dev.xxx.com';
-} else if (process.env.NODE_ENV === 'production') {
-  axios.defaults.baseURL = 'http://prod.xxx.com';
-}
+if (process.env.NODE_ENV === 'development')
+  axios.defaults.baseURL = 'http://dev.xxx.com'
+else if (process.env.NODE_ENV === 'production')
+  axios.defaults.baseURL = 'http://prod.xxx.com'
 ```
 
 在本地调试的时候，还需要在`vue.config.js`文件中配置`devServer`实现代理转发，从而实现跨域
@@ -223,12 +222,12 @@ export function httpGet({ url, params = {} }) {
         params,
       })
       .then((res) => {
-        resolve(res.data);
+        resolve(res.data)
       })
       .catch((err) => {
-        reject(err);
-      });
-  });
+        reject(err)
+      })
+  })
 }
 
 // post
@@ -240,11 +239,11 @@ export function httpPost({ url, data = {}, params = {} }) {
       method: 'post',
       transformRequest: [
         function (data) {
-          let ret = '';
-          for (let it in data) {
-            ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&';
-          }
-          return ret;
+          let ret = ''
+          for (const it in data)
+            ret += `${encodeURIComponent(it)}=${encodeURIComponent(data[it])}&`
+
+          return ret
         },
       ],
       // 发送的数据
@@ -252,28 +251,28 @@ export function httpPost({ url, data = {}, params = {} }) {
       // url参数
       params,
     }).then((res) => {
-      resolve(res.data);
-    });
-  });
+      resolve(res.data)
+    })
+  })
 }
 ```
 
 把封装的方法放在一个`api.js`文件中
 
 ```js
-import { httpGet, httpPost } from './http';
-export const getorglist = (params = {}) => httpGet({ url: 'apps/api/org/list', params });
+import { httpGet, httpPost } from './http'
+export const getorglist = (params = {}) => httpGet({ url: 'apps/api/org/list', params })
 ```
 
 页面中就能直接调用
 
 ```js
 // .vue
-import { getorglist } from '@/assets/js/api';
+import { getorglist } from '@/assets/js/api'
 
 getorglist({ id: 200 }).then((res) => {
-  console.log(res);
-});
+  console.log(res)
+})
 ```
 
 这样可以把`api`统一管理起来，以后维护修改只需要在`api.js`文件操作即可
@@ -288,13 +287,13 @@ axios.interceptors.request.use(
   (config) => {
     // 每次发送请求之前判断是否存在token
     // 如果存在，则统一在http请求的header都加上token，这样后台根据token判断你的登录情况，此处token一般是用户完成登录后储存到localstorage里的
-    token && (config.headers.Authorization = token);
-    return config;
+    token && (config.headers.Authorization = token)
+    return config
   },
   (error) => {
-    return Promise.error(error);
+    return Promise.error(error)
   }
-);
+)
 ```
 
 ### 响应拦截器
@@ -310,13 +309,16 @@ axios.interceptors.response.use(
     if (response.status === 200) {
       if (response.data.code === 511) {
         // 未授权调取授权接口
-      } else if (response.data.code === 510) {
-        // 未登录跳转登录页
-      } else {
-        return Promise.resolve(response);
       }
-    } else {
-      return Promise.reject(response);
+      else if (response.data.code === 510) {
+        // 未登录跳转登录页
+      }
+      else {
+        return Promise.resolve(response)
+      }
+    }
+    else {
+      return Promise.reject(response)
     }
   },
   (error) => {
@@ -324,10 +326,10 @@ axios.interceptors.response.use(
     if (error.response.status) {
       // 处理请求失败的情况
       // 对不同返回码对相应处理
-      return Promise.reject(error.response);
+      return Promise.reject(error.response)
     }
   }
-);
+)
 ```
 
 ### 小结

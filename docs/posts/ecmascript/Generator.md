@@ -10,12 +10,12 @@
 
 ```js
 function* fnc() {
-  console.log('开始');
-  let a = yield '返回给next'; // next 没有传参 a 默认 undefined
-  console.log(a, '结束'); // next传入 '结束'
-  return '2';
+  console.log('开始')
+  const a = yield '返回给next' // next 没有传参 a 默认 undefined
+  console.log(a, '结束') // next传入 '结束'
+  return '2'
 }
-let f = fnc();
-f.next('next传入'); // {value: "返回给 next", done: false}
-f.next(); // {value: undefined, done: true}
+const f = fnc()
+f.next('next传入') // {value: "返回给 next", done: false}
+f.next() // {value: undefined, done: true}
 ```

@@ -93,27 +93,28 @@ function backtrack(路径, 选择列表):
 用代码表示则如下：
 
 ```js
-var permute = function (nums) {
-  const res = [],
-    path = [];
-  backtracking(nums, nums.length, []);
-  return res;
+const permute = function (nums) {
+  const res = []
+  const path = []
+  backtracking(nums, nums.length, [])
+  return res
 
   function backtracking(n, k, used) {
     if (path.length === k) {
-      res.push(Array.from(path));
-      return;
+      res.push(Array.from(path))
+      return
     }
     for (let i = 0; i < k; i++) {
-      if (used[i]) continue;
-      path.push(n[i]);
-      used[i] = true; // 同支
-      backtracking(n, k, used);
-      path.pop();
-      used[i] = false;
+      if (used[i])
+        continue
+      path.push(n[i])
+      used[i] = true // 同支
+      backtracking(n, k, used)
+      path.pop()
+      used[i] = false
     }
   }
-};
+}
 ```
 
 ## 三、总结

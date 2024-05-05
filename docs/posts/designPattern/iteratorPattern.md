@@ -89,12 +89,12 @@ public class Demo {
 迭代器对象包含一个 `next` 方法用来获取元素，同时获取到的元素除了本身的 `value` 外，还返回一个布尔型变量代表是否有下一个元素。
 
 ```js
-const container = (arr) => {
-  let nextIndex = 0;
+function container(arr) {
+  let nextIndex = 0
   return {
     [Symbol.iterator]() {
       return {
-        next: function () {
+        next() {
           return nextIndex < arr.length
             ? {
                 value: arr[nextIndex++],
@@ -103,55 +103,52 @@ const container = (arr) => {
             : {
                 value: undefined,
                 done: true,
-              };
+              }
         },
-      };
+      }
     },
-  };
-};
+  }
+}
 
-const list = container(['wind', 'liang', '亮']);
-const iterator = list[Symbol.iterator]();
+const list = container(['wind', 'liang', '亮'])
+const iterator = list[Symbol.iterator]()
 
 while (true) {
-  const data = iterator.next();
-  if (data.done) {
-    break;
-  } else {
-    console.log(data.value);
-  }
+  const data = iterator.next()
+  if (data.done)
+    break
+  else
+    console.log(data.value)
 }
 ```
 
 事实上，数组已经为我们提前实现了迭代器，我们直接通过 `Symbol.iterator` 方法拿到，不需要自己再实现了。
 
 ```js
-const array = ['wind', 'liang', '亮'];
-const iteratorArray = array[Symbol.iterator]();
+const array = ['wind', 'liang', '亮']
+const iteratorArray = array[Symbol.iterator]()
 
 while (true) {
-  const data = iteratorArray.next();
-  if (data.done) {
-    break;
-  } else {
-    console.log(data.value);
-  }
+  const data = iteratorArray.next()
+  if (data.done)
+    break
+  else
+    console.log(data.value)
 }
 ```
 
 还有字符串也为我们内置了迭代器。
 
 ```js
-const string = 'windliang';
-const iteratorString = string[Symbol.iterator]();
+const string = 'windliang'
+const iteratorString = string[Symbol.iterator]()
 
 while (true) {
-  const data = iteratorString.next();
-  if (data.done) {
-    break;
-  } else {
-    console.log(data.value);
-  }
+  const data = iteratorString.next()
+  if (data.done)
+    break
+  else
+    console.log(data.value)
 }
 ```
 
@@ -160,15 +157,13 @@ while (true) {
 此外，我们也不需要每次都去 `while` 循环、然后判断是否结束循环了，直接使用 `for...of...` 即可。
 
 ```js
-const array = ['wind', 'liang', '亮'];
-for (const a of array) {
-  console.log(a);
-}
+const array = ['wind', 'liang', '亮']
+for (const a of array)
+  console.log(a)
 
-const string = 'windliang';
-for (const s of string) {
-  console.log(s);
-}
+const string = 'windliang'
+for (const s of string)
+  console.log(s)
 ```
 
 # 注意
@@ -176,21 +171,20 @@ for (const s of string) {
 因为数组是通过 `index` 来获取元素的，如果在遍历过程中删除元素，可能会产生非预期内的事情。
 
 ```js
-const array = ['wind', 'liang', '亮'];
+const array = ['wind', 'liang', '亮']
 for (const a of array) {
-  console.log(a);
-  if (a === 'wind') {
-    array.splice(0, 1);
-  }
+  console.log(a)
+  if (a === 'wind')
+    array.splice(0, 1)
 }
-console.log(array);
+console.log(array)
 ```
 
 可以先思考下会怎么输出，然后看下结果：
 
 ```js
-wind;
-亮[('liang', '亮')];
+wind
+亮[('liang', '亮')]
 ```
 
 我们是成功删除了 `wind` ，但是原数组中 `liang` 就不会遍历到了，也比较好理解。

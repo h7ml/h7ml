@@ -35,10 +35,10 @@ head:
 常用于缓存数据计算结果和缓存对象
 
 ```js
-const add = (a, b) => a + b;
-const calc = memoize(add); // 函数缓存
-calc(10, 20); // 30
-calc(10, 20); // 30 缓存
+const add = (a, b) => a + b
+const calc = memoize(add) // 函数缓存
+calc(10, 20) // 30
+calc(10, 20) // 30 缓存
 ```
 
 缓存只是一个临时的数据存储，它保存数据，以便将来对该数据的请求能够更快地得到处理
@@ -53,14 +53,14 @@ calc(10, 20); // 30 缓存
 
 ```js
 (function () {
-  var a = 1;
+  const a = 1
   function add() {
-    const b = 2;
-    let sum = b + a;
-    console.log(sum); // 3
+    const b = 2
+    const sum = b + a
+    console.log(sum) // 3
   }
-  add();
-})();
+  add()
+})()
 ```
 
 `add`函数本身，以及其内部可访问的变量，即 `a = 1`，这两个组合在⼀起就形成了闭包
@@ -71,19 +71,19 @@ calc(10, 20); // 30 缓存
 
 ```js
 // 非函数柯里化
-var add = function (x, y) {
-  return x + y;
-};
-add(3, 4); //7
+const add = function (x, y) {
+  return x + y
+}
+add(3, 4) // 7
 
 // 函数柯里化
-var add2 = function (x) {
-  //**返回函数**
+const add2 = function (x) {
+  //* *返回函数**
   return function (y) {
-    return x + y;
-  };
-};
-add2(3)(4); //7
+    return x + y
+  }
+}
+add2(3)(4) // 7
 ```
 
 将一个二元函数拆分成两个一元函数
@@ -94,15 +94,15 @@ add2(3)(4); //7
 
 ```js
 function foo() {
-  var a = 2;
+  const a = 2
 
   function bar() {
-    console.log(a);
+    console.log(a)
   }
-  return bar;
+  return bar
 }
-var baz = foo();
-baz(); //2
+const baz = foo()
+baz() // 2
 ```
 
 函数 `foo` 如何返回另一个函数 `bar`，`baz` 现在持有对 `foo` 中定义的`bar` 函数的引用。由于闭包特性，`a`的值能够得到
@@ -113,23 +113,23 @@ baz(); //2
 
 ```js
 const memoize = function (func, content) {
-  let cache = Object.create(null);
-  content = content || this;
+  const cache = Object.create(null)
+  content = content || this
   return (...key) => {
-    if (!cache[key]) {
-      cache[key] = func.apply(content, key);
-    }
-    return cache[key];
-  };
-};
+    if (!cache[key])
+      cache[key] = func.apply(content, key)
+
+    return cache[key]
+  }
+}
 ```
 
 调用方式也很简单
 
 ```js
-const calc = memoize(add);
-const num1 = calc(100, 200);
-const num2 = calc(100, 200); // 缓存得到的结果
+const calc = memoize(add)
+const num1 = calc(100, 200)
+const num2 = calc(100, 200) // 缓存得到的结果
 ```
 
 过程分析：

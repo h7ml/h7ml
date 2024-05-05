@@ -44,7 +44,7 @@ class soldier {}
 
 ```js
 function strong(target) {
-  target.AK = true;
+  target.AK = true
 }
 ```
 
@@ -58,7 +58,7 @@ class soldier {}
 这时候士兵就有武器了
 
 ```js
-soldier.AK; // true
+soldier.AK // true
 ```
 
 上述代码虽然简单，但也能够清晰看到了使用`Decorator`两大优点：
@@ -134,8 +134,8 @@ MyClass.isTestable; // false
 
 ```js
 function readonly(target, name, descriptor) {
-  descriptor.writable = false; // 将可写属性设为false
-  return descriptor;
+  descriptor.writable = false // 将可写属性设为false
+  return descriptor
 }
 ```
 
@@ -153,7 +153,7 @@ class Person {
 相当于以下调用
 
 ```js
-readonly(Person.prototype, 'name', descriptor);
+readonly(Person.prototype, 'name', descriptor)
 ```
 
 如果一个方法有多个装饰器，就像洋葱一样，先从外到内进入，再由内到外执行
@@ -221,7 +221,7 @@ add = function () {
 ```js
 class MyReactComponent extends React.Component {}
 
-export default connect(mapStateToProps, mapDispatchToProps)(MyReactComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(MyReactComponent)
 ```
 
 通过装饰器就变得简洁多了

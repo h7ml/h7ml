@@ -14,12 +14,11 @@ Promise 状态
 
 ```js
 const p1 = new Promise((resolve, reject) => {
-  if (1) {
-    resolve('成功');
-  } else {
-    reject('失败');
-  }
-});
+  if (1)
+    resolve('成功')
+  else
+    reject('失败')
+})
 ```
 
 3. 返回 Pormise 对象调用 then 方法，第一个参数对象 resolve 成功后的回调，第二个参数对应 reject 失败时回调。then 方法也会返回 Promise 对象
@@ -27,12 +26,12 @@ const p1 = new Promise((resolve, reject) => {
 ```js
 p1.then(
   (value) => {
-    console.log(value);
+    console.log(value)
   },
   (err) => {
-    console.log(err);
+    console.log(err)
   }
-);
+)
 ```
 
 4. then 方法执行成功的回调时，如果发生错误，不会被第二个参数对应 reject 失败时回调捕捉到。
@@ -40,10 +39,10 @@ p1.then(
 
 ```js
 p1.then((val) => {
-  代码块有发生错误;
+  代码块有发生错误
 }).catch((e) => {
-  console.log(e);
-});
+  console.log(e)
+})
 ```
 
 ## Promise.all()与 Promise.race()

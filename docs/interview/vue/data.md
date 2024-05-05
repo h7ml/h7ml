@@ -41,9 +41,9 @@ const app = new Vue({
   data() {
     return {
       foo: 'foo',
-    };
+    }
   },
-});
+})
 ```
 
 组件中定义`data`属性，只能是一个函数
@@ -56,7 +56,7 @@ Vue.component('component1', {
   data: {
     foo: 'foo',
   },
-});
+})
 ```
 
 则会得到警告信息
@@ -77,7 +77,7 @@ Vue.component('component1', {
 function Component() {}
 Component.prototype.data = {
   count: 0,
-};
+}
 ```
 
 创建两个组件实例
@@ -90,9 +90,9 @@ const componentB = new Component()
 修改`componentA`组件`data`属性的值，`componentB`中的值也发生了改变
 
 ```js
-console.log(componentB.data.count); // 0
-componentA.data.count = 1;
-console.log(componentB.data.count); // 1
+console.log(componentB.data.count) // 0
+componentA.data.count = 1
+console.log(componentB.data.count) // 1
 ```
 
 产生这样的原因这是两者共用了同一个内存地址，`componentA`修改的内容，同样对`componentB`产生了影响
@@ -101,21 +101,21 @@ console.log(componentB.data.count); // 1
 
 ```js
 function Component() {
-  this.data = this.data();
+  this.data = this.data()
 }
 Component.prototype.data = function () {
   return {
     count: 0,
-  };
-};
+  }
+}
 ```
 
 修改`componentA`组件`data`属性的值，`componentB`中的值不受影响
 
 ```js
-console.log(componentB.data.count); // 0
-componentA.data.count = 1;
-console.log(componentB.data.count); // 0
+console.log(componentB.data.count) // 0
+componentA.data.count = 1
+console.log(componentB.data.count) // 0
 ```
 
 `vue`组件可能会有很多个实例，采用函数返回一个全新`data`形式，使每个实例对象的数据不会受到其他实例对象数据的污染

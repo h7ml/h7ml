@@ -59,12 +59,12 @@ const o = {
 
 ```js
 function getPoint() {
-  const x = 1;
-  const y = 10;
-  return { x, y };
+  const x = 1
+  const y = 10
+  return { x, y }
 }
 
-getPoint();
+getPoint()
 // {x:1, y:10}
 ```
 
@@ -73,11 +73,11 @@ getPoint();
 ```js
 const obj = {
   f() {
-    this.foo = 'bar';
+    this.foo = 'bar'
   },
-};
+}
 
-new obj.f(); // 报错
+new obj.f() // 报错
 ```
 
 ## 二、属性名表达式
@@ -85,28 +85,28 @@ new obj.f(); // 报错
 ES6 允许字面量定义对象时，将表达式放在括号内
 
 ```js
-let lastWord = 'last word';
+const lastWord = 'last word'
 
 const a = {
   'first word': 'hello',
   [lastWord]: 'world',
-};
+}
 
-a['first word']; // "hello"
-a[lastWord]; // "world"
-a['last word']; // "world"
+a['first word'] // "hello"
+a[lastWord] // "world"
+a['last word'] // "world"
 ```
 
 表达式还可以用于定义方法名
 
 ```js
-let obj = {
+const obj = {
   ['h' + 'ello']() {
-    return 'hi';
+    return 'hi'
   },
-};
+}
 
-obj.hello(); // hi
+obj.hello() // hi
 ```
 
 注意，属性名表达式与简洁表示法，不能同时使用，会报错
@@ -125,15 +125,15 @@ const baz = { [foo]: 'abc'};
 注意，属性名表达式如果是一个对象，默认情况下会自动将对象转为字符串`[object Object]`
 
 ```js
-const keyA = { a: 1 };
-const keyB = { b: 2 };
+const keyA = { a: 1 }
+const keyB = { b: 2 }
 
 const myObject = {
   [keyA]: 'valueA',
   [keyB]: 'valueB',
-};
+}
 
-myObject; // Object {[object Object]: "valueB"}
+myObject // Object {[object Object]: "valueB"}
 ```
 
 ## 三、super 关键字
@@ -161,10 +161,10 @@ obj.find(); // "hello"
 在解构赋值中，未被读取的可遍历的属性，分配到指定的对象上面
 
 ```js
-let { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 };
-x; // 1
-y; // 2
-z; // { a: 3, b: 4 }
+const { x, y, ...z } = { x: 1, y: 2, a: 3, b: 4 }
+x // 1
+y // 2
+z // { a: 3, b: 4 }
 ```
 
 注意：解构赋值必须是最后一个参数，否则会报错
@@ -172,10 +172,10 @@ z; // { a: 3, b: 4 }
 解构赋值是浅拷贝
 
 ```js
-let obj = { a: { b: 1 } };
-let { ...x } = obj;
-obj.a.b = 2; // 修改obj里面a属性中键值
-x.a.b; // 2，影响到了结构出来x的值
+const obj = { a: { b: 1 } }
+const { ...x } = obj
+obj.a.b = 2 // 修改obj里面a属性中键值
+x.a.b // 2，影响到了结构出来x的值
 ```
 
 对象的扩展运算符等同于使用`Object.assign()`方法
@@ -201,7 +201,7 @@ ES6 一共有 5 种方法可以遍历对象的属性。
 - 最后遍历所有 Symbol 键，按照加入时间升序排
 
 ```js
-Reflect.ownKeys({ [Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0 });
+Reflect.ownKeys({ [Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0 })
 // ['2', '10', 'b', 'a', Symbol()]
 ```
 
@@ -221,11 +221,11 @@ Reflect.ownKeys({ [Symbol()]: 0, b: 0, 10: 0, 2: 0, a: 0 });
 严格判断两个值是否相等，与严格比较运算符（===）的行为基本一致，不同之处只有两个：一是`+0`不等于`-0`，二是`NaN`等于自身
 
 ```js
-+0 === -0; //true
-NaN === NaN; // false
++0 === -0 // true
+Number.NaN === Number.NaN // false
 
-Object.is(+0, -0); // false
-Object.is(NaN, NaN); // true
+Object.is(+0, -0) // false
+Object.is(Number.NaN, Number.NaN) // true
 ```
 
 ### Object.assign()
@@ -254,11 +254,11 @@ target; // {a:1, b:2, c:3}
 const obj = {
   foo: 123,
   get bar() {
-    return 'abc';
+    return 'abc'
   },
-};
+}
 
-Object.getOwnPropertyDescriptors(obj);
+Object.getOwnPropertyDescriptors(obj)
 // { foo:
 //    { value: 123,
 //      writable: true,
@@ -276,10 +276,10 @@ Object.getOwnPropertyDescriptors(obj);
 `Object.setPrototypeOf`方法用来设置一个对象的原型对象
 
 ```js
-Object.setPrototypeOf(object, prototype);
+Object.setPrototypeOf(object, prototype)
 
 // 用法
-const o = Object.setPrototypeOf({}, null);
+const o = Object.setPrototypeOf({}, null)
 ```
 
 ### Object.getPrototypeOf()
@@ -287,7 +287,7 @@ const o = Object.setPrototypeOf({}, null);
 用于读取一个对象的原型对象
 
 ```js
-Object.getPrototypeOf(obj);
+Object.getPrototypeOf(obj)
 ```
 
 ### Object.keys()
@@ -295,8 +295,8 @@ Object.getPrototypeOf(obj);
 返回自身的（不含继承的）所有可遍历（enumerable）属性的键名的数组
 
 ```js
-var obj = { foo: 'bar', baz: 42 };
-Object.keys(obj);
+const obj = { foo: 'bar', baz: 42 }
+Object.keys(obj)
 // ["foo", "baz"]
 ```
 
@@ -305,8 +305,8 @@ Object.keys(obj);
 返回自身的（不含继承的）所有可遍历（enumerable）属性的键对应值的数组
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
-Object.values(obj);
+const obj = { foo: 'bar', baz: 42 }
+Object.values(obj)
 // ["bar", 42]
 ```
 
@@ -315,8 +315,8 @@ Object.values(obj);
 返回一个对象自身的（不含继承的）所有可遍历（enumerable）属性的键值对的数组
 
 ```js
-const obj = { foo: 'bar', baz: 42 };
-Object.entries(obj);
+const obj = { foo: 'bar', baz: 42 }
+Object.entries(obj)
 // [ ["foo", "bar"], ["baz", 42] ]
 ```
 
@@ -328,7 +328,7 @@ Object.entries(obj);
 Object.fromEntries([
   ['foo', 'bar'],
   ['baz', 42],
-]);
+])
 // { foo: "bar", baz: 42 }
 ```
 
