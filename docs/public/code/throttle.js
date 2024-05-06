@@ -20,4 +20,3 @@ function task() {
   console.log('run task')
 }
 const throttleTask = throttle(task, 1000)
-window.addEventListener('scroll', throttleTask)

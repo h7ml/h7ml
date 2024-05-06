@@ -14,4 +14,3 @@ function computeString(str) {
   }
   return obj
 }
-computeString('12121111')

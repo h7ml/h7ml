@@ -25,10 +25,10 @@ features:
     link: /posts/ecmascript/Array.html
     icon: 🎨
   - title: mysql
-    link: /posts/mysql/affair.html
+    link: /up/mysql/affair.html
     icon: 🌍
   - title: linux
-    link: /posts/linux/command.html
+    link: /up/linux/command.html
     icon: 🌈
   - title: JavaScript
     link: /posts/javascript/basic/basic.html

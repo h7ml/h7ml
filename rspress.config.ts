@@ -11,10 +11,17 @@ export default defineConfig({
     light: 'https://www.h7ml.cn/logo.png',
     dark: 'https://www.h7ml.cn/logo.png'
   },
+  logoText: '前端物语',
   route: {
-    exclude: ['**/fragments/**']
+    exclude: ['**/fragments/**'],
+    cleanUrls: true
+  },
+  ssg: true,
+  markdown: {
+      showLineNumbers: true
   },
   themeConfig: {
+    searchPlaceholderText: '搜索',
     enableContentAnimation: true,
     footer: {
       message: '© 2024 h7ml Inc. All Rights Reserved.'
@@ -25,6 +32,8 @@ export default defineConfig({
     ],
     outlineTitle: '本文目录',
     prevPageText: '上一页',
-    nextPageText: '下一页'
+    nextPageText: '下一页',
+    enableScrollToTop: true,
+    sourceCodeText: '源代码',
   }
 })

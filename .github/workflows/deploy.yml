@@ -11,19 +11,19 @@ on:
   workflow_dispatch:
     inputs:
       branch:
-        description: 'Branch to deploy'
+        description: Branch to deploy
         required: true
-        default: 'rspress'
+        default: rspress
       clean:
-        description: 'Clean the old deployment'
+        description: Clean the old deployment
         required: false
         default: 'false'
       surge:
-        description: 'Deploy to surge'
+        description: Deploy to surge
         required: false
         default: 'false'
       tencent:
-        description: 'Deploy to Tencent'
+        description: Deploy to Tencent
         required: false
         default: 'false'
   watch:
