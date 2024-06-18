@@ -112,7 +112,7 @@ export default function UserList() {
 
 效果就是下边的样子：
 
-![](http://static.h7ml.cn/vitepress/assets/images/designPattern/loadingtemplate2.gif)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/loadingtemplate2.gif)
 
 事实上，可能会有很多组件都需要这个过程，`loading` -> 展示数据 -> `loading` 消失、错误展示，每一个组件单独维护这一套逻辑就太麻烦了，此时就可以用到模版模式了。
 
@@ -126,7 +126,7 @@ export default function UserList() {
 
 简单来说，模版模式就是抽象父类提供一个骨架方法，里边会调用一些抽象方法或者空方法，抽象方法/空方法由子类自行去实现，可以看一下 `UML` 类图。
 
-![image-20220210212704745](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220210212704745.png)
+![image-20220210212704745](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220210212704745.png)
 
 举一个做饭的简单例子，看一下代码示例：
 

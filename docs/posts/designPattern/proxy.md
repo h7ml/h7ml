@@ -129,7 +129,7 @@ async generateShareImage() {
 
 不管起了什么新名字，它们的本质都是一样的，如果用类图表示就是下边的样子：
 
-![image-20220108105835662](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220108105835662.png)
+![image-20220108105835662](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220108105835662.png)
 
 原对象 `RealSubject` 和 `Proxy` 对象都继承了 `Subject` 这个接口，客户端 `Client` 调用 `DoAction()` 方法，先经过代理对象 `Proxy` ，然后由 `Proxy` 做一些额外的操作，最终再委托给 `RealSubject` 进行执行。
 

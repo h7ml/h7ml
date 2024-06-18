@@ -24,7 +24,7 @@ date: 2022-02-26 09:09:00
 
 说白了就是有个容器类，有一个迭代器类，容器类持有一个迭代器类的对象，然后我们不需要知道容器中元素的具体结构，通过迭代器对象就能够进行遍历。
 
-![image-20220226101825545](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220226101825545.png)
+![image-20220226101825545](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220226101825545.png)
 
 不妨可以看下 `java` 的具体实现：
 

@@ -224,7 +224,7 @@ const rule = {
 
 首先是 `validator` 文件夹，会定义很多校验规则，`date` 类型、`number` 类型等等，相当于很多策略。
 
-![image-20220106090411041](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220106090411041.png)
+![image-20220106090411041](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220106090411041.png)
 
 然后是上边截图中的 `validator/index.ts` 文件，将这些策略导出。
 

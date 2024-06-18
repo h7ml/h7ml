@@ -16,7 +16,7 @@ date: 2022-02-04 10:10:46
 
 [leetcode 65 题](https://leetcode.wang/leetCode-65-Valid-Number.html) 判断是否是合法的数字：
 
-![image-20220204102426236](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204102426236.png)
+![image-20220204102426236](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204102426236.png)
 
 部分有效数字列举如下：`["2", "0089", "-0.1", "+3.14", "4.", "-.9", "2e10", "-90E3", "3e+7", "+6e-1", "53.5e93", "-123.456e789"]` 部分无效数字列举如下：`["abc", "1a", "1e", "e3", "99e2.5", "--6", "-+3", "95a54e53"]`
 
@@ -82,7 +82,7 @@ const isNumber = function (s) {
 
 看一下 `UML` 类图和时序图：
 
-![image-20220204151213707](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204151213707.png)
+![image-20220204151213707](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204151213707.png)
 
 `Sender` 无需关心哪一个 `Receiver` 去处理它，只需要通过 `Handler` 接口在 `Receiver` 链条中进行处理，每一个 `Receiver` 处理结束后继续传给下一个 `Receiver` 。
 
@@ -189,7 +189,7 @@ Sending to stderr: An error has occurred.
 
 每个 `logger` 都继承了 `message` 方法，并且拥有的 `next` 也指向一个 `logger` 对象，通过 `next` 去调用下一个的 `message` 方法。
 
-![image-20220204152750255](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204152750255.png)
+![image-20220204152750255](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204152750255.png)
 
 让我们用 `js` 再来改写一下：
 
@@ -467,9 +467,9 @@ const isNumber = function (s) {
 
 # 易混设计模式
 
-说到沿着「链」执行，应该会想到 [装饰器模式](https://www.h7ml.cn/designPattern/decorator.html) 。
+说到沿着「链」执行，应该会想到 [装饰器模式](https://www.h7ml.cn/posts/designPattern/decorator.html) 。
 
-![image-20220204202859919](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204202859919.png)
+![image-20220204202859919](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220204202859919.png)
 
 它和责任链模式看起来结构上是一致的，我的理解上主要有两点不同：
 

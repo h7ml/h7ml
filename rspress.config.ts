@@ -1,5 +1,6 @@
 import * as path from 'path'
 import { defineConfig } from 'rspress/config'
+import { pluginRss } from '@rspress/plugin-rss';
 
 export default defineConfig({
   root: path.join(__dirname, 'docs'),
@@ -11,9 +12,16 @@ export default defineConfig({
     light: 'https://www.h7ml.cn/logo.png',
     dark: 'https://www.h7ml.cn/logo.png'
   },
+  plugins: [
+    pluginRss({
+      siteUrl: 'https://www.h7ml.cn'
+    }),
+  ],
   logoText: '前端物语',
   route: {
-    exclude: ['**/fragments/**'],
+    exclude: [
+      '**/fragments/**'
+    ],
     cleanUrls: true
   },
   ssg: true,
@@ -27,9 +35,6 @@ export default defineConfig({
       message: '© 2024 h7ml Inc. All Rights Reserved.'
     },
     hideNavbar: 'auto',
-    socialLinks: [
-      { icon: 'github', mode: 'link', content: 'https://github.com/h7ml/h7ml' }
-    ],
     outlineTitle: '本文目录',
     prevPageText: '上一页',
     nextPageText: '下一页',

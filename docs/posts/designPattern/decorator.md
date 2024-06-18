@@ -40,7 +40,7 @@ Page({
 
 看一下 `UML` 类图和次序图。
 
-![image-20220117093402007](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220117093402007.png)
+![image-20220117093402007](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220117093402007.png)
 
 当访问 `Component1` 中的 `operation` 方法时，会先调用预先定义的两个装饰器 `Decorator1` 和 `Decorator2` 中的 `operation` 方法，执行一些额外操作，最后再执行原始的 `operation` 方法。
 
@@ -314,7 +314,7 @@ Page(Base(Log(Ce({
 
 # 易混设计模式
 
-如果之前看过 [代理模式](https://www.h7ml.cn/designPattern/proxy.html)，到这里可能会有一些困惑，因为和代理模式的作用很像，都是对原有对象进行包装，增强原有对象。
+如果之前看过 [代理模式](https://www.h7ml.cn/posts/designPattern/proxy.html)，到这里可能会有一些困惑，因为和代理模式的作用很像，都是对原有对象进行包装，增强原有对象。
 
 但还是有很大的不同点：
 

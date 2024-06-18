@@ -2,7 +2,64 @@
   {
     "text": "前端物语",
     "link": "/posts",
-    "activeMatch": "/posts"
+    "activeMatch": "/posts",
+    "items": [
+      {
+        "text": "browser",
+        "link": "/posts/browser",
+        "activeMatch": "/posts/browser"
+      },
+      {
+        "text": "javascript",
+        "link": "/posts/javascript/basic/basic",
+        "activeMatch": "/posts/javascript/basic/basic"
+      },
+      {
+        "text": "designPattern",
+        "link": "/posts/designPattern/adapter",
+        "activeMatch": "/posts/designPattern/adapter"
+      },
+      {
+        "text": "ecmascript",
+        "link": "/posts/ecmascript/Array",
+        "activeMatch": "/posts/ecmascript/Array"
+      },
+      {
+        "text": "es6",
+        "link": "/posts/es6",
+        "activeMatch": "/posts/es6"
+      },
+      {
+        "text": "graphics",
+        "link": "/posts/graphics/svg",
+        "activeMatch": "/posts/graphics/svg"
+      },
+      {
+        "text": "Nestjs",
+        "link": "/posts/Nestjs/IOC-DL",
+        "activeMatch": "/posts/Nestjs/IOC-DL"
+      },
+      {
+        "text": "rxjava",
+        "link": "/posts/rxjava/note",
+        "activeMatch": "/rxjava/react/note"
+      },
+      {
+        "text": "react",
+        "link": "/posts/react/diff",
+        "activeMatch": "/posts/react/diff"
+      },
+      {
+        "text": "vite",
+        "link": "/posts/vite/alias",
+        "activeMatch": "/posts/vite/alias"
+      },
+      {
+        "text": "vue",
+        "link": "/posts/vue/computed_and_watch",
+        "activeMatch": "/posts/vue/computed_and_watch"
+      }
+    ]
   },
   {
     "text": "积微成著",
@@ -55,5 +112,9 @@
         "activeMatch": "/up/Python/Xpath"
       }
     ]
+  },
+  {
+    "text": "编程速查",
+    "link": "https://ref.h7ml.cn/"
   }
 ]

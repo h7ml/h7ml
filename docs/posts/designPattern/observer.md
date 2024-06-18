@@ -59,7 +59,7 @@ getAddress().then((res) => {
 
 再看一下 `UML` 图和时序图：
 
-![image-20220127110751274](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220127110751274.png)
+![image-20220127110751274](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220127110751274.png)
 
 每一个观察者都实现了 `update` 方法，并且调用 `Subject` 对象的 `attach` 方法订阅变化。当 `Subject` 变化时，调用 `Observer` 的 `update` 方法去通知观察者。
 
@@ -163,7 +163,7 @@ public class Main {
 
 输出结果如下：
 
-![](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220129125814418.png)
+![](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220129125814418.png)
 
 上边的实现主要是为了符合最原始的定义，调用 `update` 的时候没有传参。如果观察者需要的参数是一致的，其实这里也可以直接把更新后的数据传过去，这样观察者就不需要向上边一样再去调用 `subject.getPost()` 手动拿更新后的数据了。
 

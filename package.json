@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@antfu/eslint-config": "^2.16.1",
+    "@rspress/plugin-rss": "^1.19.1",
     "@types/node": "^20",
     "@types/react": "^18.3.1",
     "eslint": "^9.2.0"

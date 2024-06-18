@@ -12,7 +12,7 @@ tag:
 date: 2022-01-30 11:04:52
 ---
 
-**建议先看一下上篇** [观察者模式](https://www.h7ml.cn/designPattern/observer.html) ，发布订阅模式和观察者模式本质上还是一样的，并且发布订阅模式也没有在经典的设计模式书 `GoF` 中出现，很多地方也直接把两者看成一种设计模式了。
+**建议先看一下上篇** [观察者模式](https://www.h7ml.cn/posts/designPattern/observer.html) ，发布订阅模式和观察者模式本质上还是一样的，并且发布订阅模式也没有在经典的设计模式书 `GoF` 中出现，很多地方也直接把两者看成一种设计模式了。
 
 `GoF` 的名字也有个有趣的故事，[这里](http://wiki.c2.com/?GangOfFour) 贴过来：
 
@@ -50,11 +50,11 @@ getAddress().then((res) => {
 
 观察者模式中，`Subject` 自己维护观察者列表进行注册和通知。
 
-![image-20220130170413954](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220130170413954.png)
+![image-20220130170413954](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220130170413954.png)
 
 发布订阅模式的话，引入一个中间平台进行注册和通知，相当于从 `Subject` 中解耦出来。
 
-![image-20220130171806687](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220130171806687.png)
+![image-20220130171806687](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220130171806687.png)
 
 观察者通过 `on` 向 `EventBus` 注册事件，然后 `Subject` 通过 `emit` 向 `EventBus` 发射事件，由 `EventBus` 来向观察者更新。
 
@@ -211,7 +211,7 @@ EventBus.on('ADDRESS', address => change(address))
 
 此时我们可以对 `EventBus` 进行一定的改写，使得先订阅事件，后触发事件成为可能。
 
-为了不改动原有逻辑，我们可以通过 [代理模式](https://www.h7ml.cn/designPattern/proxy.html) 进行改写。
+为了不改动原有逻辑，我们可以通过 [代理模式](https://www.h7ml.cn/posts/designPattern/proxy.html) 进行改写。
 
 ```js
 // eventProxy.js

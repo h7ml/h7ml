@@ -18,7 +18,7 @@ date: 2022-03-03 08:12:19
 
 ![img](https://static001.geekbang.org/resource/image/43/9f/4376d541bf17a029f37aa76009ef3a9f.jpg)
 
-和 [观察者](https://www.h7ml.cn/designPattern/observer.html) 模式有些像，区别在于观察模式中的 `EventBus` 不处理业务逻辑，只是单纯的转发消息。
+和 [观察者](https://www.h7ml.cn/posts/designPattern/observer.html) 模式有些像，区别在于观察模式中的 `EventBus` 不处理业务逻辑，只是单纯的转发消息。
 
 但中介者对象需要知道各个对象的功能，处理相关逻辑。
 

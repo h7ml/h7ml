@@ -54,7 +54,7 @@ function getPhone(size, type, screen, price=100, discount, mode='test') {
 
 `GoF` 书中提供的做法就是新创建一个 `Builder` 类，对象的创建委托给 `Builder` 类，原始的类不做操作，只负责调用即可。
 
-![image-20220225075740520](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220225075740520.png)
+![image-20220225075740520](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220225075740520.png)
 
 `Director` 类在构造函数中持有一个 `Builder` 实例，然后调用 `Builder` 类的 `buildPart` 和 `getResult` 即可创建对象。未来有新的对象需要创建的话，只需要实现新的 `Builder` 类即可，无需修改 `Director` 实例。
 
@@ -245,7 +245,7 @@ function getPhone({ size, type = 'iOS', screen = 'OLED', price = 100, discount }
 getPhone()
 ```
 
-![image-20220225083640409](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220225083640409.png)
+![image-20220225083640409](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220225083640409.png)
 
 # 更多场景
 

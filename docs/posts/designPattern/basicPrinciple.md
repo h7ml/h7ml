@@ -12,7 +12,7 @@ banner: https://www.h7ml.cn/logo.png
 date: 2022-03-08 07:27:19
 ---
 
-二十三个经典的 [设计模式](https://www.h7ml.cn/designPattern/) 已经过完了 ，这里再把一些基本原则过一下，以便平时开发中可以更好的体会。
+二十三个经典的 [设计模式](https://www.h7ml.cn/posts/designPattern/) 已经过完了 ，这里再把一些基本原则过一下，以便平时开发中可以更好的体会。
 
 # 单一职责原则 SRP(Single Responsibility Principle)
 
@@ -22,7 +22,7 @@ date: 2022-03-08 07:27:19
 
 最难的地方就在于结合具体场景对单一职责的判定了，为了应用这个原则把一个模块拆的太细其实也不太好，所以需要我们在方便性和稳定性之间做一个权衡。
 
-之前讲的 [代理模式](https://www.h7ml.cn/designPattern/)、[装饰器模式](https://www.h7ml.cn/designPattern/decorator.html) 都有体现。
+之前讲的 [代理模式](https://www.h7ml.cn/posts/designPattern/)、[装饰器模式](https://www.h7ml.cn/posts/designPattern/decorator.html) 都有体现。
 
 # 开闭原则 OCP(open–closed principle)
 
@@ -34,7 +34,7 @@ date: 2022-03-08 07:27:19
 
 可以通过放置 `hook` 、使用回调函数的方式达到扩展的目的。
 
-之前讲的 [发布订阅模式](https://www.h7ml.cn/designPattern/publishSubscribe.html)、[模版方法模式](https://www.h7ml.cn/designPattern/template.html)、[策略模式](https://www.h7ml.cn/designPattern/strategy.html)、[职责链模式](https://www.h7ml.cn/designPattern/chainofresponsibility.html) 都有体现。
+之前讲的 [发布订阅模式](https://www.h7ml.cn/posts/designPattern/publishSubscribe.html)、[模版方法模式](https://www.h7ml.cn/posts/designPattern/template.html)、[策略模式](https://www.h7ml.cn/posts/designPattern/strategy.html)、[职责链模式](https://www.h7ml.cn/posts/designPattern/chainofresponsibility.html) 都有体现。
 
 # 里氏替换原则 LSP(Liskov substitution principle)
 
@@ -74,7 +74,7 @@ date: 2022-03-08 07:27:19
 
 定义：一个软件实体应当尽可能少的与其他实体发生相互作用。每一个软件单位对其他的单位都只有最少的知识，而且局限于那些与本单位密切相关的软件单位。
 
-实体的话在前端中更多的对应对象、函数，[门面模式](https://www.h7ml.cn/designPattern/appearance.html) 可以看作该原则的应用。
+实体的话在前端中更多的对应对象、函数，[门面模式](https://www.h7ml.cn/posts/designPattern/appearance.html) 可以看作该原则的应用。
 
 最小知道原则又叫做迪米特法则 LOD(Law of Demeter)，迪米特其实是宙斯(Zeus) 的姐姐，名字来源的话这里截取下[维基百科](https://en.wikipedia.org/wiki/Law_of_Demeter)。
 
@@ -88,7 +88,7 @@ date: 2022-03-08 07:27:19
 
 大意就是当时是用一个叫做 `Zeus` 的硬件语言，然后找到了一个优化 `Zens` 的工具，为了让它们产生联系，就起了 `Demeter` 这个名字。
 
-![img](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.com25_29914_743225_ccd123bf574133ea11e60e85e7057014_38a998_301.jpg)
+![img](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.com25_29914_743225_ccd123bf574133ea11e60e85e7057014_38a998_301.jpg)
 
 另外截取一下 「JavaScript 设计开发与实现」书里提到的关于两个名字之间的建议：
 

@@ -16,11 +16,11 @@ date: 2022-02-06 17:31:00
 
 如果需要实现一个全局的 `loading` 遮罩层，正常展示是这样的：
 
-![image-20220206173318902](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206173318902.png)
+![image-20220206173318902](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206173318902.png)
 
 但如果用户连续调用 `loaing` 两次，第二个遮罩层就会覆盖掉第一个：
 
-![image-20220206173534676](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206173534676.png)
+![image-20220206173534676](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206173534676.png)
 
 看起来就像出了 `bug` 一样，因此我们需要采用单例模式，限制用户同一时刻只能调用一个全局 `loading` 。
 
@@ -32,7 +32,7 @@ date: 2022-02-06 17:31:00
 
 可以说是最简单的设计模式了，就是保证类的实例只有一个即可。
 
-![image-20220206181649135](http://static.h7ml.cn/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206181649135.png)
+![image-20220206181649135](https://nakoruru.h7ml.cn/httpproxy/static.5ibug.net/vitepress/assets/images/designPattern/windliangblog.oss-cn-beijing.aliyuncs.comimage-20220206181649135.png)
 
 看一下 `java` 的示例：
 
@@ -253,7 +253,7 @@ mounted() {
 
 如果使用了 `ES6` 的模块，其实就不用考虑单不单例的问题了，但如果我们使用的第三方库，它没有 `export` 一个实例对象，而是 `export` 一个 `function/class` 呢？
 
-比如之前介绍的 [发布-订阅模式](https://www.h7ml.cn/designPattern/publishSubscribe.html) 的 `Event` 对象，这个肯定需要是全局单例的，如果我们使用 `eventemitter3` 这个 `node` 包，看一下它的导出：
+比如之前介绍的 [发布-订阅模式](https://www.h7ml.cn/posts/designPattern/publishSubscribe.html) 的 `Event` 对象，这个肯定需要是全局单例的，如果我们使用 `eventemitter3` 这个 `node` 包，看一下它的导出：
 
 ```js
 'use strict';
