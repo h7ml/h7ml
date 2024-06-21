@@ -119,7 +119,52 @@
     ]
   },
   {
-    "text": "编程速查",
-    "link": "https://ref.h7ml.cn/"
+    "text": "慧思泉涌",
+    "items":[
+      {
+        "text": "编程速查",
+        "link": "https://ref.h7ml.cn/"
+      },
+      {
+        "text":"命名神器",
+        "link":"https://var.h7ml.cn/"
+      },
+      {
+        "text": "clip-path生成器",
+        "link": "https://clippy.h7ml.cn/"
+      },
+      {
+        "text": "前端ide",
+        "link": "https://ide.h7ml.cn/"
+      },
+      {
+        "text": "ai中转",
+        "link": "https://ai.h7ml.cn/"
+      },
+      {
+        "text": "hooks相关",
+        "link": "https://hooks.h7ml.cn/hooks"
+      },
+      {
+        "text": "shark 鲨鱼数据可视化",
+        "link": "https://shark.h7ml.cn/"
+      },
+      {
+        "text": "amis-adapter amis适配器",
+        "link": "https://amis-adapter.h7ml.cn/"
+      },
+      {
+        "text": "nest server",
+        "link": "https://nest.h7ml.cn/"
+      },
+      {
+        "text": "react-flow 流程图",
+        "link": "https://react-flow.h7ml.cn/"
+      },
+      {
+        "text": "打字练习",
+        "link": "https://en.h7ml.cn/"
+      }
+    ]
   }
 ]
