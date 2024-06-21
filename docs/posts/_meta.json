@@ -2,6 +2,11 @@
   "browser",
   {
     "type": "dir",
+    "name": "2024",
+    "label": "2024"
+  },
+  {
+    "type": "dir",
     "name": "designPattern",
     "label": "设计模式"
   },
