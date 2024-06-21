@@ -126,11 +126,11 @@
         "link": "https://ref.h7ml.cn/"
       },
       {
-        "text":"命名神器",
+        "text":"变量命名神器",
         "link":"https://var.h7ml.cn/"
       },
       {
-        "text": "clip-path生成器",
+        "text": "剪裁效果生成器",
         "link": "https://clippy.h7ml.cn/"
       },
       {
@@ -142,7 +142,7 @@
         "link": "https://ai.h7ml.cn/"
       },
       {
-        "text": "hooks相关",
+        "text": "hooks",
         "link": "https://hooks.h7ml.cn/hooks"
       },
       {
@@ -162,7 +162,7 @@
         "link": "https://react-flow.h7ml.cn/"
       },
       {
-        "text": "打字练习",
+        "text": "英文打字练习",
         "link": "https://en.h7ml.cn/"
       }
     ]
