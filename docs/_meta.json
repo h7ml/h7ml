@@ -5,6 +5,11 @@
     "activeMatch": "/posts",
     "items": [
       {
+        "text": "2024",
+        "link": "/posts/2024/react-skill",
+        "activeMatch": "/posts/2024/react-skill"
+      },
+      {
         "text": "browser",
         "link": "/posts/browser",
         "activeMatch": "/posts/browser"
