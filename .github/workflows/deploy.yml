@@ -1,4 +1,4 @@
-name: Website
+name: deploy
 
 on:
   push:
@@ -106,6 +106,22 @@ jobs:
           git-config-email: h7ml@qq.com
           commit-message: ${{github.event.head_commit.message}}
           token: ${{ secrets.ACCESS_TOKEN  }}
+      - name: Commit comment
+        uses: dext7r/commit-comment@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            - domain: [h7ml](https://www.h7ml.cn)
+            - repo: [h7ml](https://github.com/h7ml/h7ml)
+            - commit: ${{ github.sha }}
+            - branch: ${{ github.ref }}
+            - status: ${{ job.status }}
+            - actor: ${{ github.actor }}
+            - message: ${{ github.event.head_commit.message }}
+            - repository: ${{ github.repository }}
+            - repository_owner: ${{ github.repository_owner }}
+            - domain: https://www.h7ml.cn?commit=${{ github.sha }}
+           
   surge:
     runs-on: ubuntu-latest
     steps:
